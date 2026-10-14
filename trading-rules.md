@@ -1,56 +1,47 @@
 
-# Trading Rules
+## Trade management: 3 targets
 
-Follow these rules in order. Analyze the market and its moves, show your work, and explain the thought process behind every move.
+Each target is about $60 per contract from the one before it.
 
-## Entry rules
-1. Trade the New York session and the Asia session daily.
-2. Be active and ready 15-30 minutes before market open.
-3. Mark the highs and lows of the previous session. These are your key levels.
-4. Wait for a breakout.
-5. Once the market closes above or below a key level, enter the trade.
-6. Use a 3:1 risk-to-reward ratio.
-7. If the market is choppy and not volatile, do not force a trade.
+### Target spacing
+- **Nasdaq (micro):** 30 points apart
+- **Gold (micro):** 6 points apart
+- **Long:** Target 1 = entry + 1 spacing, Target 2 = entry + 2 spacings, Target 3 = entry + 3 spacings
+- **Short:** the same distances below the entry
 
-### Contract size
-1. 1-3 contracts on XAUSD during Asia session. 
-2. 5-6 contracts on NASDAQ during New York. 
-3. Decide the contract size based on the volume in the market. 
-
-## Trade management: 4 targets
-
-Targets are spaced 30 points apart from the entry price. Sell 2 contracts at each target. This plan assumes the trade starts with 8 contracts.
-
-### Target levels
-- **Long:** Target 1 = entry + 30, Target 2 = entry + 60, Target 3 = entry + 90, Target 4 = entry + 120
-- **Short:** Target 1 = entry - 30, Target 2 = entry - 60, Target 3 = entry - 90, Target 4 = entry - 120
+### Contracts to sell
+- **Nasdaq:** always 5 contracts. Sell 1 at Target 1, 2 at Target 2, and the last 2 at Target 3.
+- **Gold:** before entering, choose 1 to 3 contracts to sell at each target, based on market conditions. Explain the choice in the journal. The total number of contracts is the sum of the three numbers.
 
 ### What to do at each target
-1. **Target 1 is hit:** sell 2 contracts. Leave the stop loss where it is.
-2. **Target 2 is hit:** sell 2 contracts and move the stop loss to **breakeven** (the entry price).
-3. **Target 3 is hit:** sell 2 contracts and move the stop loss to **Target 1** (30 points above entry on a long, 30 points below entry on a short).
-4. **Target 4 is hit:** sell the last 2 contracts. This is the take profit, and the trade is finished.
+1. **Target 1 is hit:** sell the planned contracts. Leave the stop loss where it is.
+2. **Target 2 is hit:** sell the planned contracts and move the stop loss to **Target 1**.
+3. **Target 3 is hit:** sell everything that is left. This is the take profit, and the trade is finished.
 
 ### Other rules
 - The trade also ends if the stop loss is hit. Sell all remaining contracts.
 - The stop loss only ever moves in the trade's favor, never back.
-- A target counts as hit when price touches the level (the high of a candle for a long, the low for a short), not only when a candle closes there.
-- If price passes several targets in one candle, apply each one in order (Target 1, then 2, then 3, and so on).
-- If one candle touches both the stop loss and a target, assume the stop loss was hit first, unless tick data clearly shows otherwise.
+- Never sell the last contract before Target 3.
+- A target counts as hit when price touches the level, not only when a candle closes there.
+- If price passes several targets in one candle, apply each one in order.
+- If one candle touches both the stop loss and a target, assume the stop loss was hit first.
 - Explain each action in the trade journal.
-- Sell partials based on quantity of contracts per order, may be different based on market conditions or the session being traded.
-- For XAUSD sell one contract per target reached. 
+  
+  ## Choosing gold contract sizes
 
-### Example (long, entry 30150)
-| Event | Price | Action | Stop loss after |
-|---|---|---|---|
-| Entry | 30150 | Buy 8 contracts | initial stop |
-| Target 1 | 30180 | Sell 2 (6 left) | unchanged |
-| Target 2 | 30210 | Sell 2 (4 left) | 30150 (breakeven) |
-| Target 3 | 30240 | Sell 2 (2 left) | 30180 (Target 1) |
-| Target 4 | 30270 | Sell last 2, trade done | n/a |
+Before entering a gold trade, read the market and pick one of these four sell plans. The three numbers are the contracts sold at Target 1, Target 2, and Target 3. Write which plan you chose, and why, in the trade journal.
 
-## Explain and journal
-10. Before each trade, explain in detail why you are about to take it.
-11. After each trade, explain in detail how it went and what could have gone better.
-12. Keep a trade journal: entry time, exit time, profit or loss, what you traded, and why.
+| Market condition | What it looks like | Sell plan | Contracts | If every target is reached |
+|---|---|---|---|---|
+| **Strong trend** | The breakout candle is large and closes near its high (long) or low (short). Price moves away from the key level with little pullback. | 1, 1, 3 | 5 | $720 |
+| **Normal** | A clean breakout, but nothing exceptional. | 1, 2, 2 | 5 | $660 |
+| **Weak or slowing** | The breakout candle is small, has long wicks, or price keeps drifting back toward the key level. | 3, 2, 1 | 6 | $600 |
+| **Uncertain** | A major news release is within 30 minutes, or conditions are unusually thin or jumpy. | 1, 1, 1 | 3 | $360 |
+
+### Guidelines
+- In a strong trend, keep more contracts for Target 3, because each contract earns the most there ($180 versus $60 at Target 1).
+- In a weak market, take profit earlier. Selling 3 contracts at Target 1 locks in $180 right away.
+- When conditions are uncertain, trade the smallest size.
+- If the market is choppy and not volatile, do not force a trade at all. That rule still comes first.
+- Never sell more than 3 contracts at one target, and never trade more than 9 contracts in total.
+- Choose the plan before entering. Do not change it once the trade is open.
