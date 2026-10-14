@@ -1,76 +1,93 @@
 """
-risk.py - Scale out and ratchet the stop as a trade moves in your favor.
+risk.py - Manage a trade across 4 profit targets, 30 points apart.
 
-How it works (all numbers can be changed in the SETTINGS block):
+Rules (these match trading-rules.md):
 
-1. The trade starts with its normal stop loss. No take-profit is active yet.
-2. A "step" is a favorable price move equal to your initial risk
-   (the distance from entry to the starting stop).
-3. At step 1: sell partial contracts worth about $50 of profit, and move
-   the stop loss to breakeven (the entry price).
-4. At step 2: move the stop loss so about $50 of profit is locked in on the
-   contracts still open.
-5. At every further step: lock in another $50 on the open contracts.
-   The stop only ever moves in your favor, never back.
-6. The final take-profit only becomes active once the stop loss has moved
-   into profit (above your entry on a long, below it on a short).
-7. The trade ends when the stop is hit (after moving it) or the take-profit
-   is reached. The last contract is never sold early.
+- Targets sit 30 points from the entry price, in the trade's direction:
+    Long:  entry + 30, +60, +90, +120
+    Short: entry - 30, -60, -90, -120
+- Every time price touches a target, sell a partial (2 contracts on Nasdaq,
+  1 to 3 on gold, chosen by the agent).
+- Target 2 hit: move the stop loss to breakeven (the entry price).
+- Target 3 hit: move the stop loss to Target 1.
+- Target 4 is the take profit: sell everything that is left.
+- The trade also ends if the stop loss is touched.
+- The stop only ever moves in your favor.
+- The last contract is never sold before Target 4.
 
-Nothing here places orders. It looks at an open trade and returns a list of
-actions the agent should take.
+A target counts as hit when a candle's high (long) or low (short) touches it.
+If one candle touches both the stop and a target, the stop is assumed to
+have been hit first. If one candle passes several targets, they are applied
+in order.
+
+Nothing here places orders. It returns a list of actions for the agent.
 """
 
-import math
-
 # ---------------- SETTINGS ----------------
-PARTIAL_DOLLARS = 50.0           # profit to bank when selling a partial
-LOCK_DOLLARS = 50.0              # extra profit to lock in per step (from step 2)
-STEP_MULTIPLE = 1.0              # 1.0 = one step equals the initial risk
-SELL_PARTIAL_EVERY_STEP = False  # False = only sell partials at step 1
-MIN_ROOM_STEPS = 0.5             # stop is never placed closer than this many
-                                 # steps to the current price
+TARGET_SPACING = 30   # points between targets (same for Nasdaq and gold)
+NUMBER_OF_TARGETS = 4
+
+INSTRUMENTS = {
+    # point_value = dollars per 1.0 point per contract. Confirm with your broker.
+    "nasdaq": {"point_value": 2.0, "min_per_target": 2, "max_per_target": 2},
+    "gold": {"point_value": 10.0, "min_per_target": 1, "max_per_target": 3},
+}
 # ------------------------------------------
 
 
-def new_trade(direction, entry, stop_loss, take_profit, contracts):
+def partial_size(instrument, wanted=None):
+    """How many contracts to sell at each target.
+
+    Nasdaq is fixed at 2. For gold the agent picks 1 to 3 based on market
+    conditions; anything outside that range is pulled back into it.
+    """
+    rules = INSTRUMENTS[instrument]
+    if wanted is None:
+        wanted = rules["max_per_target"]
+    return max(rules["min_per_target"], min(wanted, rules["max_per_target"]))
+
+
+def new_trade(direction, entry, stop_loss, contracts, per_target):
     """Create the trade record that manage_trade() keeps updating."""
     return {
         "direction": direction,
         "entry": entry,
-        "initial_stop": stop_loss,
         "stop_loss": stop_loss,
-        "take_profit": take_profit,
-        "contracts": contracts,   # contracts still open
-        "level": 0,               # how many steps price has moved in favor
-        "banked": 0.0,            # profit already locked in from partials
+        "contracts": contracts,     # contracts still open
+        "per_target": per_target,   # contracts sold at each target
+        "targets_hit": 0,
+        "banked": 0.0,              # profit already taken
     }
 
 
-def _favorable_move(trade, price):
-    """Points moved in your favor (negative if against you)."""
+def target_price(trade, number):
+    """Price of target 1, 2, 3 or 4."""
+    distance = TARGET_SPACING * number
     if trade["direction"] == "long":
-        return price - trade["entry"]
-    return trade["entry"] - price
+        return trade["entry"] + distance
+    return trade["entry"] - distance
 
 
-def _is_beyond(direction, price, level, above_is_hit):
-    if above_is_hit:  # for a long, hit means price is at/below the level
-        return price <= level if direction == "long" else price >= level
-    return price >= level if direction == "long" else price <= level
+def _profit(trade, exit_price, contracts, point_value):
+    if trade["direction"] == "long":
+        points = exit_price - trade["entry"]
+    else:
+        points = trade["entry"] - exit_price
+    return round(points * point_value * contracts, 2)
 
 
-def manage_trade(trade, price, point_value):
-    """Look at an open trade at the latest price.
-
-    point_value: dollars per 1.0 price move per contract
-                 (check with your broker for your micro contract).
+def manage_trade(trade, high, low, point_value):
+    """Look at one candle's high and low for an open trade.
 
     Returns (actions, updated_trade). Each action is a dictionary like:
-      {"action": "sell_partial", "contracts": 3, "price": ..., "profit": ...}
-      {"action": "move_stop", "new_stop": ...}
-      {"action": "exit_stop" or "exit_target", "contracts": ..., "profit": ...}
+      {"action": "sell_partial", "target": 1, "contracts": 2, "price": ..., "profit": ...}
+      {"action": "move_stop", "new_stop": ..., "reason": ...}
+      {"action": "exit_target", "target": 4, "contracts": ..., "price": ..., "profit": ...}
+      {"action": "exit_stop", "contracts": ..., "price": ..., "profit": ...}
     An empty list means: do nothing.
+
+    Fills are assumed to happen exactly at the target or stop price. Real
+    fills can be worse, especially in fast markets.
     """
     t = dict(trade)
     actions = []
@@ -79,78 +96,77 @@ def manage_trade(trade, price, point_value):
 
     is_long = t["direction"] == "long"
 
-    # 1. Stop loss hit?
-    if _is_beyond(t["direction"], price, t["stop_loss"], above_is_hit=True):
-        profit = round(_favorable_move(t, price) * point_value * t["contracts"], 2)
+    # 1. Stop loss touched? The stop is checked first (worst case).
+    stop_touched = low <= t["stop_loss"] if is_long else high >= t["stop_loss"]
+    if stop_touched:
+        profit = _profit(t, t["stop_loss"], t["contracts"], point_value)
         actions.append({"action": "exit_stop", "contracts": t["contracts"],
-                        "price": price, "profit": profit})
+                        "price": t["stop_loss"], "profit": profit})
         t["banked"] = round(t["banked"] + profit, 2)
         t["contracts"] = 0
         return actions, t
 
-    # 2. Take-profit reached? Only counts once the stop is in profit.
-    target_hit = price >= t["take_profit"] if is_long else price <= t["take_profit"]
-    stop_in_profit = t["stop_loss"] > t["entry"] if is_long else t["stop_loss"] < t["entry"]
-    if stop_in_profit and target_hit:
-        profit = round(_favorable_move(t, price) * point_value * t["contracts"], 2)
-        actions.append({"action": "exit_target", "contracts": t["contracts"],
-                        "price": price, "profit": profit})
-        t["banked"] = round(t["banked"] + profit, 2)
-        t["contracts"] = 0
-        return actions, t
+    # 2. Work through the targets in order
+    while t["targets_hit"] < NUMBER_OF_TARGETS:
+        number = t["targets_hit"] + 1
+        price = target_price(t, number)
+        touched = high >= price if is_long else low <= price
+        if not touched:
+            break
+        t["targets_hit"] = number
 
-    # 3. Has price moved another step in our favor?
-    step = abs(t["entry"] - t["initial_stop"]) * STEP_MULTIPLE
-    move = _favorable_move(t, price)
-    reached = int(move // step) if move > 0 else 0
-
-    while t["level"] < reached:
-        t["level"] += 1
-        level = t["level"]
-
-        # Sell a partial (never the last contract)
-        if (level == 1 or SELL_PARTIAL_EVERY_STEP) and t["contracts"] > 1:
-            per_contract = move * point_value
-            n = min(math.ceil(PARTIAL_DOLLARS / per_contract), t["contracts"] - 1)
-            profit = round(per_contract * n, 2)
-            t["contracts"] -= n
+        if number == NUMBER_OF_TARGETS:
+            # Final target = take profit: sell everything left
+            profit = _profit(t, price, t["contracts"], point_value)
+            actions.append({"action": "exit_target", "target": number,
+                            "contracts": t["contracts"], "price": price,
+                            "profit": profit})
             t["banked"] = round(t["banked"] + profit, 2)
-            actions.append({"action": "sell_partial", "contracts": n,
-                            "price": price, "profit": profit})
+            t["contracts"] = 0
+            return actions, t
+
+        # Sell a partial, but always keep at least one contract
+        sell = min(t["per_target"], t["contracts"] - 1)
+        if sell > 0:
+            profit = _profit(t, price, sell, point_value)
+            t["contracts"] -= sell
+            t["banked"] = round(t["banked"] + profit, 2)
+            actions.append({"action": "sell_partial", "target": number,
+                            "contracts": sell, "price": price,
+                            "profit": profit})
 
         # Move the stop
-        if level == 1:
-            new_stop = t["entry"]  # breakeven
-        else:
-            locked = LOCK_DOLLARS * (level - 1)
-            points = locked / (point_value * t["contracts"])
-            new_stop = t["entry"] + points if is_long else t["entry"] - points
-
-        # Keep some room so the stop is not right on top of the price
-        room = step * MIN_ROOM_STEPS
-        if level > 1:
-            if is_long:
-                new_stop = min(new_stop, price - room)
-            else:
-                new_stop = max(new_stop, price + room)
-
-        better = new_stop > t["stop_loss"] if is_long else new_stop < t["stop_loss"]
-        if better:
-            t["stop_loss"] = round(new_stop, 2)
-            actions.append({"action": "move_stop", "new_stop": t["stop_loss"]})
+        new_stop = None
+        if number == 2:
+            new_stop, reason = t["entry"], "breakeven"
+        elif number == 3:
+            new_stop, reason = target_price(t, 1), "Target 1"
+        if new_stop is not None:
+            better = new_stop > t["stop_loss"] if is_long else new_stop < t["stop_loss"]
+            if better:
+                t["stop_loss"] = new_stop
+                actions.append({"action": "move_stop", "new_stop": new_stop,
+                                "reason": reason})
 
     return actions, t
 
 
 if __name__ == "__main__":
-    # Sample: 5 micro Nasdaq contracts (MNQ), $2 per point
+    # Sample: 8 micro Nasdaq contracts, long from 30150, stop at 30140
+    size = partial_size("nasdaq")
     trade = new_trade("long", entry=30150.0, stop_loss=30140.0,
-                      take_profit=30200.0, contracts=5)
+                      contracts=8, per_target=size)
+    point_value = INSTRUMENTS["nasdaq"]["point_value"]
 
-    for price in [30155.0, 30160.0, 30170.0, 30180.0, 30172.0]:
-        actions, trade = manage_trade(trade, price, point_value=2)
-        print(f"\nPrice {price}  (open: {trade['contracts']}, "
-              f"stop: {trade['stop_loss']}, banked: ${trade['banked']})")
+    # (high, low) of each 5-minute candle
+    candles = [(30160, 30145), (30182, 30158), (30212, 30175),
+               (30241, 30205), (30275, 30230)]
+
+    for number, (high, low) in enumerate(candles, start=1):
+        actions, trade = manage_trade(trade, high, low, point_value)
+        print(f"\nCandle {number}: high {high}, low {low}  "
+              f"(open: {trade['contracts']}, stop: {trade['stop_loss']}, "
+              f"banked: ${trade['banked']})")
         if not actions:
             print("  hold")
         for a in actions:
