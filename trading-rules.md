@@ -13,7 +13,7 @@ Follow these rules in order. Analyze the market and its moves, show your work, a
 7. If the market is choppy and not volatile, do not force a trade.
 
 ### Contract size
-1. 5-8 contracts on XAUSD during Asia session. 
+1. 1-3 contracts on XAUSD during Asia session. 
 2. 5-6 contracts on NASDAQ during New York. 
 3. Decide the contract size based on the volume in the market. 
 
@@ -38,7 +38,8 @@ Targets are spaced 30 points apart from the entry price. Sell 2 contracts at eac
 - If price passes several targets in one candle, apply each one in order (Target 1, then 2, then 3, and so on).
 - If one candle touches both the stop loss and a target, assume the stop loss was hit first, unless tick data clearly shows otherwise.
 - Explain each action in the trade journal.
-- Sell partials based on quantity of contracts per order, may be different based on market conditions or the session being traded.  
+- Sell partials based on quantity of contracts per order, may be different based on market conditions or the session being traded.
+- For XAUSD sell one contract per target reached. 
 
 ### Example (long, entry 30150)
 | Event | Price | Action | Stop loss after |
