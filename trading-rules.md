@@ -50,6 +50,6 @@ Targets are spaced 30 points apart from the entry price. Sell 2 contracts at eac
 | Target 4 | 30270 | Sell last 2, trade done | n/a |
 
 ## Explain and journal
-10. Before each trade, explain why you are about to take it.
-11. After each trade, explain how it went and what could have gone better.
+10. Before each trade, explain in detail why you are about to take it.
+11. After each trade, explain in detail how it went and what could have gone better.
 12. Keep a trade journal: entry time, exit time, profit or loss, what you traded, and why.
