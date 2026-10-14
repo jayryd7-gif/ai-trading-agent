@@ -42,7 +42,7 @@ def log_trade(trade, path=JOURNAL_FILE):
     what_could_improve
     """
     number = _next_trade_number(path)
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = trade.get("date") or datetime.now().strftime("%Y-%m-%d")
 
     entry = f"""
 ### Trade #{number} | {today}
