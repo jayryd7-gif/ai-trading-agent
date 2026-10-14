@@ -1,4 +1,4 @@
-markdown
+
 # Trading Rules
 
 Follow these rules in order. Analyze the market and its moves, show your work, and explain the thought process behind every move.
