@@ -26,6 +26,8 @@ Each target is about $60 per contract from the one before it.
 - If price passes several targets in one candle, apply each one in order.
 - If one candle touches both the stop loss and a target, assume the stop loss was hit first.
 - Explain each action in the trade journal.
+- 9pm for gold/Asia session
+- 9:30am for Nasdaq/New York
   
   ## Choosing gold contract sizes
 
