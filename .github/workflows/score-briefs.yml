@@ -1,0 +1,39 @@
+name: Score Briefs
+
+on:
+  schedule:
+    # Times are UTC. After the Nasdaq session ends (about 4:30-5:30 PM New York)
+    # and after the Asia session ends (about 5:30-6:30 AM New York).
+    - cron: "30 21 * * 1-5"
+    - cron: "30 10 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install yfinance
+
+      - name: Score the briefs
+        run: python agents/scorer.py
+
+      - name: Save the results in the repo
+        run: |
+          git config user.name "scorer"
+          git config user.email "scorer@users.noreply.github.com"
+          git add reports
+          git commit -m "Update brief scores" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
