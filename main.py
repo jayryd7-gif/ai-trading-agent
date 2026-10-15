@@ -50,7 +50,7 @@ ENTRY_WINDOW_MINUTES = 15              # only look for breakouts this long
 SESSIONS = {
     "nasdaq": {"label": "New York", "open": (9, 30), "minutes": 390,
                "name": "Nasdaq (MNQ)"},
-    "gold": {"label": "Asia", "open": (19, 0), "minutes": 480,
+    "gold": {"label": "Asia", "open": (21, 0), "minutes": 480,
              "name": "Gold (MGC)"},
 }
 GOLD_SELL_PLAN = [1, 2, 2]   # stand-in for the agent's choice (1 to 3 each)
