@@ -1,10 +1,26 @@
-name: Test API
+name: Market Brief
 
 on:
+  schedule:
+    # Times are UTC. These run about 7-8 AM and 7-8 PM New York time,
+    # which is before the 9:30 AM and 9:00 PM sessions in summer and winter.
+    - cron: "0 12 * * 1-5"   # morning brief for Nasdaq (Mon-Fri)
+    - cron: "0 0 * * 1-5"    # evening brief for gold (Sun-Thu evenings NY)
   workflow_dispatch:
+    inputs:
+      instrument:
+        description: "Which brief to write"
+        type: choice
+        options:
+          - nasdaq
+          - gold
+        default: nasdaq
+
+permissions:
+  contents: write
 
 jobs:
-  test:
+  brief:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,10 +29,30 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install the Anthropic tool
-        run: pip install anthropic
+      - name: Install tools
+        run: pip install anthropic yfinance
 
-      - name: Run the test
-        run: python test_api.py
+      - name: Decide which brief to write
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "instrument=${{ inputs.instrument }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 12 * * 1-5" ]; then
+            echo "instrument=nasdaq" >> "$GITHUB_OUTPUT"
+          else
+            echo "instrument=gold" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Write the brief
+        run: python agents/market_brief.py ${{ steps.pick.outputs.instrument }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the report in the repo
+        run: |
+          git config user.name "market-brief-agent"
+          git config user.email "agent@users.noreply.github.com"
+          git add reports
+          git commit -m "Add ${{ steps.pick.outputs.instrument }} brief $(date -u +%F)" || echo "Nothing to commit"
+          git pull --rebase
+          git push
