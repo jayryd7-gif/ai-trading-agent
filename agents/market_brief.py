@@ -101,7 +101,7 @@ def build_report(client, instrument, facts, today):
             break
         messages.append({"role": "assistant", "content": response.content})
 
-    text = "\n".join(b.text for b in response.content if b.type == "text").strip()
+    text = "".join(b.text for b in response.content if b.type == "text").strip()
     return text, input_tokens, output_tokens
 
 
