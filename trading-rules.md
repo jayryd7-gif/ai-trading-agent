@@ -45,3 +45,4 @@ Before entering a gold trade, read the market and pick one of these four sell pl
 - If the market is choppy and not volatile, do not force a trade at all. That rule still comes first.
 - Never sell more than 3 contracts at one target, and never trade more than 9 contracts in total.
 - Choose the plan before entering. Do not change it once the trade is open.
+- Asia session (gold):** opens at 9:00 PM New York time. Only look for breakouts in the first 15 minutes after the open.
