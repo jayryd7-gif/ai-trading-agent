@@ -1,3 +1,20 @@
+# Trading Rules
+
+Follow these rules in order. Analyze the market and its moves, show your work, and explain the thought process behind every move.
+
+## Sessions
+- **Nasdaq (New York session):** opens at 9:30 AM New York time.
+- **Gold (Asia session):** opens at 9:00 PM New York time.
+- Be active and ready 15-30 minutes before the open.
+- Only look for breakouts in the first 15 minutes after the open.
+- Take at most one trade per session.
+
+## Entry rules
+1. Mark the high and low of the previous session of the same kind. These are your key levels.
+2. Wait for a breakout.
+3. Enter when a 5-minute candle closes above the previous high (long) or below the previous low (short).
+4. Initial stop loss: the other end of the breakout candle (its low for a long, its high for a short).
+5. If the market is choppy and not volatile, do not force a trade.
 
 ## Trade management: 3 targets
 
@@ -25,11 +42,8 @@ Each target is about $60 per contract from the one before it.
 - A target counts as hit when price touches the level, not only when a candle closes there.
 - If price passes several targets in one candle, apply each one in order.
 - If one candle touches both the stop loss and a target, assume the stop loss was hit first.
-- Explain each action in the trade journal.
-- 9pm for gold/Asia session
-- 9:30am for Nasdaq/New York
-  
-  ## Choosing gold contract sizes
+
+## Choosing gold contract sizes
 
 Before entering a gold trade, read the market and pick one of these four sell plans. The three numbers are the contracts sold at Target 1, Target 2, and Target 3. Write which plan you chose, and why, in the trade journal.
 
@@ -47,4 +61,9 @@ Before entering a gold trade, read the market and pick one of these four sell pl
 - If the market is choppy and not volatile, do not force a trade at all. That rule still comes first.
 - Never sell more than 3 contracts at one target, and never trade more than 9 contracts in total.
 - Choose the plan before entering. Do not change it once the trade is open.
-- Asia session (gold):** opens at 9:00 PM New York time. Only look for breakouts in the first 15 minutes after the open.
+
+## Explain and journal
+- Before each trade, explain why you are about to take it.
+- After each trade, explain how it went and what could have gone better.
+- Keep a trade journal: entry time, exit time, profit or loss, what you traded, and why.
+- Explain each action (sells and stop moves) in the journal.
