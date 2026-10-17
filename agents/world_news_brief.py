@@ -10,12 +10,14 @@ It covers what happened overnight and what is scheduled today:
   - economics (data released and due, with times)
   - government meetings and hearings
   - President Trump: what he said, and his schedule (what, when, where)
-  - stock and crypto markets
-  - US crypto legislation and regulation
   - war and conflict
   - trade and tariffs
-  - a short brief for each country in COUNTRIES, including crypto bills
+  - a short brief for each country in COUNTRIES
   - political developments abroad that could affect the economy
+
+Stocks and crypto have their own agents (stock_research.py and
+crypto_research.py), so this brief leaves them out and has more room for
+everything else.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
 It makes three AI calls: two research calls (with web search) and one short
@@ -26,16 +28,16 @@ The API key comes from the environment (GitHub supplies it as a secret).
 """
 
 import os
-import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import anthropic
 
+from research_tools import research_parts, write_summary
+
 # ---------------- SETTINGS ----------------
-MODEL = "claude-sonnet-5-5"
 SEARCHES_PER_PART = 5   # cap on web searches for each research call (cost control)
-MAX_TOKENS = 3500         # cap on the length of each answer
+MAX_TOKENS = 5000         # cap on the length of each answer
 NEWS_FOLDER = os.path.join("reports", "news")
 
 # Countries to give a short brief for. More countries = more cost and time.
@@ -54,7 +56,7 @@ SHARED_RULES = """Rules:
 - Paraphrase in your own words. Do not copy long passages from articles.
 - Name the source of each important item briefly, like (Reuters).
 - For important items add a short "Why it matters:" phrase naming the market
-  link (rates, inflation, risk appetite, energy, crypto, and so on). Do not
+  link (rates, inflation, risk appetite, energy, the dollar, and so on). Do not
   predict price moves and do not tell the trader to buy or sell.
 - Use plain language and short sentences."""
 
@@ -65,12 +67,14 @@ current information."""
 
 PART_A = INTRO + """
 
-Cover these sections, in this order. Keep the whole answer under 900 words.
+Cover these sections, in this order. Keep the whole answer under 1000 words.
+Do not cover stock or crypto markets; other briefs handle those.
 
 ## 1. Politics and policy that could move markets
 Overnight developments and today's scheduled items: the White House, Congress,
 Treasury, the Federal Reserve (which speakers today, when, and the topic if
-known), and the SEC and CFTC (statements, meetings, rulings).
+known), and regulators. Include bills moving in Congress that could affect the
+economy, and executive orders.
 
 ## 2. Economics
 Data released overnight, and data due today with the time, the previous
@@ -78,41 +82,33 @@ reading, and the forecast if available (inflation, jobs, GDP, PMI, retail
 sales, and so on). Any central bank decisions or speakers.
 
 ## 3. Government meetings and hearings today
-Congressional hearings, central bank meetings, SEC open meetings, and other
-official meetings.
+Congressional hearings, central bank meetings, and other official meetings,
+with times.
 
 ## 4. President Trump
 What he said or announced overnight that could matter for markets. His
 schedule today: each speech, rally, or press event with the time, the place,
 and the topics if announced. If no schedule has been announced, say so.
 
-## 5. Stock and crypto markets
-Overnight moves in US index futures, Asian and European markets, bitcoin and
-ether, and the main reasons given. Major earnings today, with times.
-
-## 6. US crypto legislation and regulation
-Bills moving in Congress, SEC or CFTC actions, and anything scheduled today.
-
 """ + SHARED_RULES
 
 PART_B = INTRO + """
 
-Cover these sections, in this order. Keep the whole answer under 900 words.
+Cover these sections, in this order. Keep the whole answer under 1100 words.
+Do not cover stock or crypto markets; other briefs handle those.
 
-## 7. War and conflict
+## 5. War and conflict
 Latest developments in active conflicts and anything that could affect energy,
 shipping, or markets.
 
-## 8. Trade and tariffs
+## 6. Trade and tariffs
 New tariffs, negotiations, deadlines, and trade deals.
 
-## 9. Country briefs
-For each of these countries: {countries}. Give 2 to 3 short bullets on the
-biggest political or economic news in the last day. Then add one line on
-crypto: any bill or regulation being passed or scheduled there, or "No new
-crypto legislation found."
+## 7. Country briefs
+For each of these countries: {countries}. Give 3 to 4 short bullets on the
+biggest political or economic news in the last day.
 
-## 10. Other political developments abroad
+## 8. Other political developments abroad
 Elections, leadership changes, sanctions, central bank moves, or energy
 decisions elsewhere that could affect the global economy.
 
@@ -147,64 +143,21 @@ SECTIONS FOLLOW
 """
 
 
-def run_call(client, prompt, use_search):
-    """One AI call. Returns (text, input_tokens, output_tokens, was_cut_off)."""
-    messages = [{"role": "user", "content": prompt}]
-    extra = {}
-    if use_search:
-        extra["tools"] = [{
-            "type": "web_search_20250305",
-            "name": "web_search",
-            "max_uses": SEARCHES_PER_PART,
-        }]
-
-    tokens_in = tokens_out = 0
-    response = None
-    for _ in range(5):   # a long search session can pause; keep going
-        response = client.messages.create(
-            model=MODEL, max_tokens=MAX_TOKENS, messages=messages, **extra)
-        tokens_in += response.usage.input_tokens
-        tokens_out += response.usage.output_tokens
-        if response.stop_reason != "pause_turn":
-            break
-        messages.append({"role": "assistant", "content": response.content})
-
-    text = "".join(b.text for b in response.content if b.type == "text").strip()
-    return text, tokens_in, tokens_out, response.stop_reason == "max_tokens"
-
-
 def build_briefing(client, now):
     """Run the three calls. Returns (markdown_body, total_in, total_out)."""
-    values = {"weekday": now.strftime("%A"), "date": now.strftime("%Y-%m-%d")}
-    total_in = total_out = 0
+    values = {"weekday": now.strftime("%A"), "date": now.strftime("%Y-%m-%d"),
+              "countries": ", ".join(COUNTRIES)}
+    parts, total_in, total_out = research_parts(
+        client, [("Part A", PART_A), ("Part B", PART_B)], values,
+        SEARCHES_PER_PART, MAX_TOKENS)
 
-    parts = []
-    for label, template in (("Part A", PART_A), ("Part B", PART_B)):
-        prompt = template.format(countries=", ".join(COUNTRIES), **values)
-        text, t_in, t_out, cut = run_call(client, prompt, use_search=True)
-        total_in += t_in
-        total_out += t_out
-        if not text:
-            text = f"(This part could not be written: no text came back for {label}.)"
-        elif cut:
-            text += "\n\n(This part was cut off because it hit the length limit.)"
-        parts.append(text)
+    summary, t_in, t_out = write_summary(
+        client, SUMMARY_PROMPT.format(part_a=parts[0], part_b=parts[1], **values),
+        MAX_TOKENS)
+    total_in += t_in
+    total_out += t_out
 
-    if all(p.startswith("(This part could not be written") for p in parts):
-        raise SystemExit("Neither research call returned any text, so nothing was saved.")
-
-    try:
-        summary, t_in, t_out, _ = run_call(
-            client, SUMMARY_PROMPT.format(part_a=parts[0], part_b=parts[1], **values),
-            use_search=False)
-        total_in += t_in
-        total_out += t_out
-        if not summary:
-            summary = "(The summary could not be written. See the details below.)"
-    except Exception as error:
-        summary = f"(The summary could not be written: {error}. See the details below.)"
-
-    body = (summary + "\n\n---\n\n# Details: US, politics, and markets\n\n" + parts[0]
+    body = (summary + "\n\n---\n\n# Details: US politics and the economy\n\n" + parts[0]
             + "\n\n---\n\n# Details: the world\n\n" + parts[1] + "\n")
     return body, total_in, total_out
 

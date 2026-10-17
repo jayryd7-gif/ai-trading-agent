@@ -1,0 +1,45 @@
+name: Stock Brief
+
+on:
+  schedule:
+    # Time is UTC. 10:40 UTC is about 5:40-6:40 AM New York time, before the open.
+    # Weekdays only. To run every day, change "1-5" to "*".
+    - cron: "40 10 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stocks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install anthropic yfinance
+
+      - name: Write the stock research brief
+        shell: bash
+        run: |
+          mkdir -p reports/stocks
+          python agents/stock_research.py 2>&1 | tee reports/stocks/last-run-log.txt
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the brief and the run log in the repo
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "stock-agent"
+          git config user.email "stock-agent@users.noreply.github.com"
+          git add reports/stocks
+          git commit -m "Add stock brief $(date -u +%F)" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done

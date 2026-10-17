@@ -5,8 +5,8 @@ This is plain code, not an AI agent, so it costs nothing in API credits.
 It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
-It shows: your reminders, how each agent is doing, the latest world news
-brief, the latest lean for each market, the session reviews, scorecard summary,
+It shows: your reminders, how each agent is doing, the latest world news,
+crypto, and stock briefs, the latest lean for each market, the session reviews, scorecard summary,
 charts, recent results, and the agents still to be built.
 """
 
@@ -32,8 +32,6 @@ LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
 LEAN_ICON = {"Bullish": "▲", "Bearish": "▼", "Neutral": "◆", "Unknown": "?"}
 
 PLANNED = [
-    ("Stock research agent", "Looks for promising companies early"),
-    ("Crypto research agent", "Watches the crypto market for opportunities"),
     ("Business research agent", "Finds fast-growing products worth selling"),
     ("Paper trading agent", "Places practice trades through your broker, behind a risk gatekeeper, and logs every trade in your journal automatically"),
 ]
@@ -115,14 +113,15 @@ def latest_review(name):
     return session_date, f"{REPORT_FOLDER}/reviews/{newest}", written
 
 
-def latest_news():
-    """Newest world news brief: (date, path, written time, event risk) or None."""
-    folder = os.path.join(REPORT_FOLDER, "news")
+def latest_news(subfolder="news", kind="world"):
+    """Newest research brief in reports/<subfolder>/ named <date>-<kind>-brief.md:
+    (date, path, written time, event risk) or None."""
+    folder = os.path.join(REPORT_FOLDER, subfolder)
     try:
         files = os.listdir(folder)
     except OSError:
         return None
-    pattern = re.compile(r"^(\d{4}-\d{2}-\d{2})-world-brief\.md$")
+    pattern = re.compile(rf"^(\d{{4}}-\d{{2}}-\d{{2}})-{kind}-brief\.md$")
     found = sorted(f for f in files if pattern.match(f))
     if not found:
         return None
@@ -138,7 +137,7 @@ def latest_news():
             risk = match.group(1)
     except OSError:
         pass
-    return pattern.match(newest).group(1), f"{REPORT_FOLDER}/news/{newest}", written, risk
+    return pattern.match(newest).group(1), f"{REPORT_FOLDER}/{subfolder}/{newest}", written, risk
 
 
 def open_reminders():
@@ -184,9 +183,20 @@ def build_dashboard(now):
     news = latest_news()
     news_when = news[2] if news else None
     out.append(f"| {status_icon(news_when, now)} | World news brief | Overnight news and "
-               f"today's events: politics, economy, war, trade, crypto | "
+               f"today's events: politics, economy, war, trade | "
                f"{age_text(news_when, now) if news_when else 'never'} | "
                f"daily about 5-6 AM New York time |")
+    research = {"crypto": latest_news("crypto", "crypto"),
+                "stocks": latest_news("stocks", "stock")}
+    for label, key, purpose, runs in (
+            ("Crypto research brief", "crypto",
+             "Pumping coins, whales, government and adoption news", "daily about 5:30-6:30 AM"),
+            ("Stock research brief", "stocks",
+             "Movers, AI, nuclear, minerals, earnings dates and estimates",
+             "weekdays about 6-7 AM")):
+        when = research[key][2] if research[key] else None
+        out.append(f"| {status_icon(when, now)} | {label} | {purpose} | "
+                   f"{age_text(when, now) if when else 'never'} | {runs} New York time |")
     updated = scorecard_updated()
     out.append(f"| {status_icon(updated, now)} | Scorer | Checks each lean against "
                f"what price did | {age_text(updated, now) if updated else 'never'} | "
@@ -209,6 +219,17 @@ def build_dashboard(now):
                 f"[All world news briefs]({REPORT_FOLDER}/news/)", ""]
     else:
         out += ["No world news brief yet.", ""]
+
+    # ---- Latest crypto and stock briefs ----
+    out += ["## Latest research briefs", "", "| Brief | Date | Read it |", "|---|---|---|"]
+    for label, key in (("Crypto", "crypto"), ("Stocks", "stocks")):
+        brief = research[key]
+        if brief:
+            out.append(f"| {label} | {brief[0]} | [read it]({brief[1]}) "
+                       f"([all]({REPORT_FOLDER}/{key}/)) |")
+        else:
+            out.append(f"| {label} | none yet | |")
+    out.append("")
 
     # ---- Latest lean ----
     out += ["## Latest lean for each market", "",

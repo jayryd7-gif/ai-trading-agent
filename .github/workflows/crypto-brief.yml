@@ -1,0 +1,45 @@
+name: Crypto Brief
+
+on:
+  schedule:
+    # Time is UTC. 10:20 UTC is about 5:20-6:20 AM New York time, right after the
+    # world news brief. Crypto trades all week, so this runs every day.
+    - cron: "20 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crypto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install anthropic
+
+      - name: Write the crypto research brief
+        shell: bash
+        run: |
+          mkdir -p reports/crypto
+          python agents/crypto_research.py 2>&1 | tee reports/crypto/last-run-log.txt
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the brief and the run log in the repo
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "crypto-agent"
+          git config user.email "crypto-agent@users.noreply.github.com"
+          git add reports/crypto
+          git commit -m "Add crypto brief $(date -u +%F)" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
