@@ -152,7 +152,8 @@ SHARED_RULES = """Rules:
 - Paraphrase in your own words. Do not copy long passages from articles.
 - Report what happened. Do not tell the reader to buy or sell, and do not
   predict prices.
-- Use plain language and short sentences."""
+- Use plain language and short sentences.
+- Start directly with the first section heading. Do not add a title."""
 
 INTRO = """You are a stock market researcher writing a daily brief for an
 active trader who wants to find opportunities early. Today is {weekday},
