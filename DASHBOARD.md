@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-17 19:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 19:30 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -10,8 +10,8 @@ Last updated 2026-10-17 19:15 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 47 hours ago | Sun-Thu evenings about 7-8 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| ⚪ | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | never | weekdays about 6-7 AM New York time |
-| 🟢 | Scorer | Checks each lean against what price did | 25 hours ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | weekdays about 6-7 AM New York time |
+| 🟢 | Scorer | Checks each lean against what price did | 26 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 11 hours ago | after each session ends |
 | 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 11 hours ago | after each session ends |
 
@@ -30,7 +30,7 @@ Last updated 2026-10-17 19:15 New York time. Everything here is written by softw
 | Brief | Date | Read it |
 |---|---|---|
 | Crypto | 2026-10-17 | [read it](reports/crypto/2026-10-17-crypto-brief.md) ([all](reports/crypto/)) |
-| Stocks | none yet | |
+| Stocks | 2026-10-17 | [read it](reports/stocks/2026-10-17-stock-brief.md) ([all](reports/stocks/)) |
 
 ## Latest lean for each market
 
