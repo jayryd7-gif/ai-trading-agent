@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-17 08:45 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 08:46 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -69,7 +69,7 @@ By confidence:
 ## Your journals
 
 - Trades logged: **0**. [Open the trade journal](trade-journal.md)
-- No-trade sessions explained: **1**. [Open the no-trade journal](no-trade-journal.md)
+- No-trade sessions explained: **2**. [Open the no-trade journal](no-trade-journal.md)
 
 ## Still to build
 
