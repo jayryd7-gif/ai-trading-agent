@@ -1,0 +1,60 @@
+name: Post-Session Review
+
+on:
+  schedule:
+    # Times are UTC. Shortly after the scorer, once each session has ended.
+    - cron: "45 21 * * 1-5"   # Nasdaq session just ended (about 4:45-5:45 PM NY)
+    - cron: "45 10 * * 1-5"   # Asia session just ended (about 5:45-6:45 AM NY)
+  workflow_dispatch:
+    inputs:
+      instrument:
+        description: "Which session to review"
+        type: choice
+        options:
+          - nasdaq
+          - gold
+        default: nasdaq
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install anthropic yfinance
+
+      - name: Decide which session to review
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "instrument=${{ inputs.instrument }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "45 21 * * 1-5" ]; then
+            echo "instrument=nasdaq" >> "$GITHUB_OUTPUT"
+          else
+            echo "instrument=gold" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Write the review
+        run: python agents/post_session_review.py ${{ steps.pick.outputs.instrument }}
+        env:
+          PYTHONPATH: .
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the review in the repo
+        run: |
+          git config user.name "review-agent"
+          git config user.email "review-agent@users.noreply.github.com"
+          git add reports/reviews
+          git commit -m "Add ${{ steps.pick.outputs.instrument }} review" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
