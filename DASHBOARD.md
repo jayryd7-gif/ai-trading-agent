@@ -1,14 +1,16 @@
 # Agent dashboard
 
-Last updated 2026-10-16 20:16 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 08:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 12 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 24 hours ago | Sun-Thu evenings about 7-8 PM New York time |
-| 🟢 | Scorer | Checks each lean against what price did | 2 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 24 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 36 hours ago | Sun-Thu evenings about 7-8 PM New York time |
+| 🟢 | Scorer | Checks each lean against what price did | 15 hours ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | under an hour ago | after each session ends |
+| ⚪ | Post-session review: gold | Reviews the Asia session after it ends | never | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -20,6 +22,15 @@ Last updated 2026-10-16 20:16 New York time. Everything here is written by softw
 | gold | 2026-10-15 20:22 | ◆ Neutral | Low | High | 4175.00 | [read it](reports/2026-10-15-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
+
+## Latest session reviews
+
+| Market | Session | Review |
+|---|---|---|
+| nasdaq | 2026-10-16 | [read it](reports/reviews/2026-10-16-nasdaq-review.md) |
+| gold | none yet | |
+
+[All reviews](reports/reviews/)
 
 ## Scorecard
 
@@ -57,13 +68,12 @@ By confidence:
 
 ## Your trade journal
 
-Trades logged: **1**. [Open the journal](trade-journal.md)
+Trades logged: **0**. [Open the journal](trade-journal.md)
 
 ## Still to build
 
 | Agent | Purpose | Status |
 |---|---|---|
-| Post-session review agent | Reads your journal and the day's brief, writes what went well and what to improve | ⚪ not built yet |
 | Stock research agent | Looks for promising companies early | ⚪ not built yet |
 | Crypto research agent | Watches the crypto market for opportunities | ⚪ not built yet |
 | Business research agent | Finds fast-growing products worth selling | ⚪ not built yet |
