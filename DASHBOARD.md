@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-17 17:34 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 17:45 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -8,7 +8,7 @@ Last updated 2026-10-17 17:34 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 33 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 45 hours ago | Sun-Thu evenings about 7-8 PM New York time |
-| ⚪ | World news brief | Overnight news and today's events: politics, economy, war, trade, crypto | never | daily about 5-6 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade, crypto | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Scorer | Checks each lean against what price did | 24 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 9 hours ago | after each session ends |
 | 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 9 hours ago | after each session ends |
@@ -17,7 +17,11 @@ Last updated 2026-10-17 17:34 New York time. Everything here is written by softw
 
 ## Latest world news brief
 
-No world news brief yet.
+- Date: **2026-10-17**
+- Event risk today: **Medium**
+- [Read the full brief](reports/news/2026-10-17-world-brief.md)
+
+[All world news briefs](reports/news/)
 
 ## Latest lean for each market
 
