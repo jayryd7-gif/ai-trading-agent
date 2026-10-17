@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-17 08:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 08:24 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -10,7 +10,7 @@ Last updated 2026-10-17 08:23 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 36 hours ago | Sun-Thu evenings about 7-8 PM New York time |
 | 🟢 | Scorer | Checks each lean against what price did | 15 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | under an hour ago | after each session ends |
-| ⚪ | Post-session review: gold | Reviews the Asia session after it ends | never | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -28,7 +28,7 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 | Market | Session | Review |
 |---|---|---|
 | nasdaq | 2026-10-16 | [read it](reports/reviews/2026-10-16-nasdaq-review.md) |
-| gold | none yet | |
+| gold | 2026-10-15 | [read it](reports/reviews/2026-10-15-gold-review.md) |
 
 [All reviews](reports/reviews/)
 
