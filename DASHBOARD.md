@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-17 08:24 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 08:45 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -66,9 +66,10 @@ By confidence:
 | 2026-10-15 | gold | ◆ Neutral | Low | Up (0.81%) | Moved |
 | 2026-10-15 | nasdaq | ◆ Neutral | Low | Down (-2.14%) | Moved |
 
-## Your trade journal
+## Your journals
 
-Trades logged: **0**. [Open the journal](trade-journal.md)
+- Trades logged: **0**. [Open the trade journal](trade-journal.md)
+- No-trade sessions explained: **1**. [Open the no-trade journal](no-trade-journal.md)
 
 ## Still to build
 
@@ -77,7 +78,7 @@ Trades logged: **0**. [Open the journal](trade-journal.md)
 | Stock research agent | Looks for promising companies early | ⚪ not built yet |
 | Crypto research agent | Watches the crypto market for opportunities | ⚪ not built yet |
 | Business research agent | Finds fast-growing products worth selling | ⚪ not built yet |
-| Paper trading agent | Places practice trades through your broker, behind a risk gatekeeper | ⚪ not built yet |
+| Paper trading agent | Places practice trades through your broker, behind a risk gatekeeper, and logs every trade in your journal automatically | ⚪ not built yet |
 
 ## Links
 
