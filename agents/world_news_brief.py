@@ -34,7 +34,7 @@ import anthropic
 
 # ---------------- SETTINGS ----------------
 MODEL = "claude-sonnet-5-5"
-SEARCHES_PER_PART = 10    # cap on web searches for each research call (cost control)
+SEARCHES_PER_PART = 5   # cap on web searches for each research call (cost control)
 MAX_TOKENS = 3500         # cap on the length of each answer
 NEWS_FOLDER = os.path.join("reports", "news")
 
