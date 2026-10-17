@@ -25,11 +25,15 @@ jobs:
         run: pip install anthropic
 
       - name: Write the world news brief
-        run: python agents/world_news_brief.py
+        shell: bash
+        run: |
+          mkdir -p reports/news
+          python agents/world_news_brief.py 2>&1 | tee reports/news/last-run-log.txt
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: Save the brief in the repo
+      - name: Save the brief and the run log in the repo
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "news-agent"
           git config user.email "news-agent@users.noreply.github.com"
