@@ -6,7 +6,7 @@ It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
 It shows: how each agent is doing, the latest lean for each market, the
-scorecard summary, recent results, and the agents still to be built.
+scorecard summary, charts, recent results, and the agents still to be built.
 """
 
 import os
@@ -14,6 +14,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+from charts import make_charts
 from scorer import ENOUGH_CALLS, _rate, read_csv
 from market_data import INSTRUMENTS
 
@@ -157,6 +158,11 @@ def build_dashboard(now):
         r, w, f, h = _rate([x for x in directional if x["confidence"] == level])
         out.append(f"| {level} | {r} | {w} | {f} | {h} |")
     out += ["", f"[Full scorecard]({REPORT_FOLDER}/scorecard.md)", ""]
+
+    # ---- Charts ----
+    out += ["## Charts", ""]
+    for alt, path in make_charts(scores):
+        out += [f"![{alt}]({path})", ""]
 
     # ---- Recent results ----
     out += ["## Recent results", "",
