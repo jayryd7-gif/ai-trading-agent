@@ -1,0 +1,6 @@
+# Reminders
+
+Anything written as `- [ ] your reminder` shows at the top of the dashboard. Change `[ ]` to `[x]` when it is done and it disappears from the dashboard.
+
+- [ ] When your broker is connected: log every trade in trade-journal.md with a heading like `### Trade #1 | 2026-10-16` (swap the `__` in the template for the trade number) and keep the `- **Session:**` line, so the post-session reviewer can see your trades. Or ask Claude to build automatic trade logging into the paper trading agent.
+- [x] Example of a finished reminder (this one is hidden from the dashboard).
