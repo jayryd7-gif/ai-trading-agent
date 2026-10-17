@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-16 19:58 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-16 20:16 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
@@ -38,6 +38,14 @@ By confidence:
 | Low | 0 | 0 | 0 | n/a |
 
 [Full scorecard](reports/scorecard.md)
+
+## Charts
+
+![Results by confidence](reports/charts/results-by-confidence.svg)
+
+![Running hit rate](reports/charts/running-hit-rate.svg)
+
+![Recent sessions](reports/charts/recent-sessions.svg)
 
 ## Recent results
 
