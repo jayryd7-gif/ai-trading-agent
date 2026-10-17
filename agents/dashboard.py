@@ -5,8 +5,8 @@ This is plain code, not an AI agent, so it costs nothing in API credits.
 It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
-It shows: how each agent is doing, the latest lean for each market, the
-session reviews, scorecard summary, charts, recent results, and the agents
+It shows: your reminders, how each agent is doing, the latest lean for each
+market, the session reviews, scorecard summary, charts, recent results, and the agents
 still to be built.
 """
 
@@ -23,6 +23,8 @@ from market_data import INSTRUMENTS
 REPORT_FOLDER = "reports"
 DASHBOARD = "DASHBOARD.md"
 JOURNAL = "trade-journal.md"
+NO_TRADE_JOURNAL = "no-trade-journal.md"
+REMINDERS = "REMINDERS.md"
 GOOD_WITHIN_HOURS = 72     # green if an agent ran within this long (covers weekends)
 LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
 # ------------------------------------------
@@ -33,7 +35,7 @@ PLANNED = [
     ("Stock research agent", "Looks for promising companies early"),
     ("Crypto research agent", "Watches the crypto market for opportunities"),
     ("Business research agent", "Finds fast-growing products worth selling"),
-    ("Paper trading agent", "Places practice trades through your broker, behind a risk gatekeeper"),
+    ("Paper trading agent", "Places practice trades through your broker, behind a risk gatekeeper, and logs every trade in your journal automatically"),
 ]
 
 
@@ -113,6 +115,15 @@ def latest_review(name):
     return session_date, f"{REPORT_FOLDER}/reviews/{newest}", written
 
 
+def open_reminders():
+    """Reminders written as '- [ ] text' in REMINDERS.md (done ones are '- [x]')."""
+    try:
+        text = open(REMINDERS).read()
+    except OSError:
+        return []
+    return [m.group(1).strip() for m in re.finditer(r"^\s*- \[ \]\s+(.+)$", text, re.M)]
+
+
 def build_dashboard(now):
     briefs = read_csv(os.path.join(REPORT_FOLDER, "bias-log.csv"))
     scores = read_csv(os.path.join(REPORT_FOLDER, "scores.csv"))
@@ -121,6 +132,13 @@ def build_dashboard(now):
            f"Last updated {now:%Y-%m-%d %H:%M} New York time. "
            "Everything here is written by software and AI agents. "
            "It can be wrong, so check anything you plan to act on.", ""]
+
+    # ---- Reminders ----
+    reminders = open_reminders()
+    if reminders:
+        out += ["## Reminders", ""]
+        out += [f"- ⏰ {text}" for text in reminders]
+        out += ["", f"[Edit reminders]({REMINDERS})", ""]
 
     # ---- Agent status ----
     out += ["## Agent status", "",
@@ -219,13 +237,19 @@ def build_dashboard(now):
         out.append("| none scored yet | | | | | |")
     out.append("")
 
-    # ---- Your journal ----
+    # ---- Your journals ----
     try:
         trades = len(re.findall(r"^### Trade #\d+", open(JOURNAL).read(), re.M))
     except OSError:
         trades = 0
-    out += ["## Your trade journal", "",
-            f"Trades logged: **{trades}**. [Open the journal]({JOURNAL})", ""]
+    try:
+        skipped = len(re.findall(r"^### No-trade session \|", open(NO_TRADE_JOURNAL).read(), re.M))
+    except OSError:
+        skipped = 0
+    out += ["## Your journals", "",
+            f"- Trades logged: **{trades}**. [Open the trade journal]({JOURNAL})",
+            f"- No-trade sessions explained: **{skipped}**. "
+            f"[Open the no-trade journal]({NO_TRADE_JOURNAL})", ""]
 
     # ---- Planned ----
     out += ["## Still to build", "", "| Agent | Purpose | Status |", "|---|---|---|"]
