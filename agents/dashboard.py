@@ -6,7 +6,8 @@ It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
 It shows: how each agent is doing, the latest lean for each market, the
-scorecard summary, charts, recent results, and the agents still to be built.
+session reviews, scorecard summary, charts, recent results, and the agents
+still to be built.
 """
 
 import os
@@ -29,7 +30,6 @@ LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
 LEAN_ICON = {"Bullish": "▲", "Bearish": "▼", "Neutral": "◆", "Unknown": "?"}
 
 PLANNED = [
-    ("Post-session review agent", "Reads your journal and the day's brief, writes what went well and what to improve"),
     ("Stock research agent", "Looks for promising companies early"),
     ("Crypto research agent", "Watches the crypto market for opportunities"),
     ("Business research agent", "Finds fast-growing products worth selling"),
@@ -89,6 +89,30 @@ def scorecard_updated():
     return parse_time(match.group(1), match.group(2)) if match else None
 
 
+def latest_review(name):
+    """Newest review file for a market: (session date, path, written time) or None."""
+    folder = os.path.join(REPORT_FOLDER, "reviews")
+    try:
+        files = os.listdir(folder)
+    except OSError:
+        return None
+    pattern = re.compile(rf"^(\d{{4}}-\d{{2}}-\d{{2}})-{name}-review\.md$")
+    found = sorted(f for f in files if pattern.match(f))
+    if not found:
+        return None
+    newest = found[-1]
+    session_date = pattern.match(newest).group(1)
+    written = None
+    try:
+        match = re.search(r"Written (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})",
+                          open(os.path.join(folder, newest)).read())
+        if match:
+            written = parse_time(match.group(1), match.group(2))
+    except OSError:
+        pass
+    return session_date, f"{REPORT_FOLDER}/reviews/{newest}", written
+
+
 def build_dashboard(now):
     briefs = read_csv(os.path.join(REPORT_FOLDER, "bias-log.csv"))
     scores = read_csv(os.path.join(REPORT_FOLDER, "scores.csv"))
@@ -117,6 +141,13 @@ def build_dashboard(now):
     out.append(f"| {status_icon(updated, now)} | Scorer | Checks each lean against "
                f"what price did | {age_text(updated, now) if updated else 'never'} | "
                f"after each session ends |")
+    for name, config in INSTRUMENTS.items():
+        review = latest_review(name)
+        when = review[2] if review else None
+        out.append(f"| {status_icon(when, now)} | Post-session review: {name} | "
+                   f"Reviews the {config['label']} session after it ends | "
+                   f"{age_text(when, now) if when else 'never'} | "
+                   f"after each session ends |")
     out += ["", "🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran", ""]
 
     # ---- Latest lean ----
@@ -135,6 +166,17 @@ def build_dashboard(now):
                    f"{row['confidence']} | {event_risk(brief_file)} | "
                    f"{row['price_at_brief'] or 'n/a'} | {link} |")
     out += ["", "A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral", ""]
+
+    # ---- Latest reviews ----
+    out += ["## Latest session reviews", "",
+            "| Market | Session | Review |", "|---|---|---|"]
+    for name in INSTRUMENTS:
+        review = latest_review(name)
+        if review:
+            out.append(f"| {name} | {review[0]} | [read it]({review[1]}) |")
+        else:
+            out.append(f"| {name} | none yet | |")
+    out += ["", f"[All reviews]({REPORT_FOLDER}/reviews/)", ""]
 
     # ---- Scorecard ----
     directional = [r for r in scores if r["bias"] in ("Bullish", "Bearish")]
@@ -179,7 +221,7 @@ def build_dashboard(now):
 
     # ---- Your journal ----
     try:
-        trades = open(JOURNAL).read().count("### Trade #")
+        trades = len(re.findall(r"^### Trade #\d+", open(JOURNAL).read(), re.M))
     except OSError:
         trades = 0
     out += ["## Your trade journal", "",
