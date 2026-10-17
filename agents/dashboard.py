@@ -5,9 +5,9 @@ This is plain code, not an AI agent, so it costs nothing in API credits.
 It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
-It shows: your reminders, how each agent is doing, the latest lean for each
-market, the session reviews, scorecard summary, charts, recent results, and the agents
-still to be built.
+It shows: your reminders, how each agent is doing, the latest world news
+brief, the latest lean for each market, the session reviews, scorecard summary,
+charts, recent results, and the agents still to be built.
 """
 
 import os
@@ -115,6 +115,32 @@ def latest_review(name):
     return session_date, f"{REPORT_FOLDER}/reviews/{newest}", written
 
 
+def latest_news():
+    """Newest world news brief: (date, path, written time, event risk) or None."""
+    folder = os.path.join(REPORT_FOLDER, "news")
+    try:
+        files = os.listdir(folder)
+    except OSError:
+        return None
+    pattern = re.compile(r"^(\d{4}-\d{2}-\d{2})-world-brief\.md$")
+    found = sorted(f for f in files if pattern.match(f))
+    if not found:
+        return None
+    newest = found[-1]
+    written, risk = None, "n/a"
+    try:
+        text = open(os.path.join(folder, newest)).read()
+        match = re.search(r"Written (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})", text)
+        if match:
+            written = parse_time(match.group(1), match.group(2))
+        match = re.search(r"Event risk today.{0,60}?\b(Low|Medium|High)\b", text, re.S)
+        if match:
+            risk = match.group(1)
+    except OSError:
+        pass
+    return pattern.match(newest).group(1), f"{REPORT_FOLDER}/news/{newest}", written, risk
+
+
 def open_reminders():
     """Reminders written as '- [ ] text' in REMINDERS.md (done ones are '- [x]')."""
     try:
@@ -155,6 +181,12 @@ def build_dashboard(now):
         out.append(f"| {status_icon(when, now)} | Market brief: {name} | "
                    f"Writes the brief before the {config['label']} session | "
                    f"{age_text(when, now) if when else 'never'} | {runs} |")
+    news = latest_news()
+    news_when = news[2] if news else None
+    out.append(f"| {status_icon(news_when, now)} | World news brief | Overnight news and "
+               f"today's events: politics, economy, war, trade, crypto | "
+               f"{age_text(news_when, now) if news_when else 'never'} | "
+               f"daily about 5-6 AM New York time |")
     updated = scorecard_updated()
     out.append(f"| {status_icon(updated, now)} | Scorer | Checks each lean against "
                f"what price did | {age_text(updated, now) if updated else 'never'} | "
@@ -167,6 +199,16 @@ def build_dashboard(now):
                    f"{age_text(when, now) if when else 'never'} | "
                    f"after each session ends |")
     out += ["", "🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran", ""]
+
+    # ---- Latest world news brief ----
+    out += ["## Latest world news brief", ""]
+    if news:
+        out += [f"- Date: **{news[0]}**",
+                f"- Event risk today: **{news[3]}**",
+                f"- [Read the full brief]({news[1]})", "",
+                f"[All world news briefs]({REPORT_FOLDER}/news/)", ""]
+    else:
+        out += ["No world news brief yet.", ""]
 
     # ---- Latest lean ----
     out += ["## Latest lean for each market", "",
