@@ -48,12 +48,20 @@ jobs:
           PYTHONPATH: .
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: Save the review in the repo
+      - name: Write the no-trade journal entry
+        if: ${{ !cancelled() }}
+        run: python agents/no_trade_journal.py ${{ steps.pick.outputs.instrument }}
+        env:
+          PYTHONPATH: .
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the results in the repo
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "review-agent"
           git config user.email "review-agent@users.noreply.github.com"
-          git add reports/reviews
-          git commit -m "Add ${{ steps.pick.outputs.instrument }} review" || echo "Nothing to commit"
+          git add reports/reviews no-trade-journal.md
+          git commit -m "Add ${{ steps.pick.outputs.instrument }} review and journal entry" || echo "Nothing to commit"
           for attempt in 1 2 3; do
             git pull --rebase && git push && break
             sleep 5
