@@ -57,7 +57,7 @@ THE BRIEF written before the session by another AI agent:
 
 WHAT THE TRADER'S RULES WOULD HAVE DONE (a software replay. It assumes
 perfect fills at target and stop prices, takes at most one trade in the first
-15 minutes, and closes anything still open when the session ends):
+{window} minutes{confirm}, and closes anything still open when the session ends):
 {replay}
 
 THE TRADER'S ACTUAL JOURNAL ENTRIES FOR THIS SESSION:
@@ -150,10 +150,13 @@ def session_facts(candles, previous):
     return "\n".join(lines)
 
 
-def describe_replay(result):
+def describe_replay(result, instrument):
     if result is None:
         return ("The rules would NOT have taken a trade: no candle closed above "
-                "the previous high or below the previous low in the first 15 minutes.")
+                f"the previous high or below the previous low in the first "
+                f"{replay.ENTRY_WINDOW_MINUTES} minutes"
+                + (", or the next candle did not confirm the breakout."
+                   if replay.CONFIRM_BREAKOUT.get(instrument) else "."))
     lines = [
         f"{result['direction'].capitalize()} at {result['entry']} "
         f"({result['entry_time']:%H:%M}), stop {result['stop']}, "
@@ -202,7 +205,10 @@ def build_review(client, instrument, start, candles, previous, brief_row,
     prompt = PROMPT.format(
         name=config["name"], label=config["label"], start=f"{start:%Y-%m-%d %H:%M}",
         facts=session_facts(candles, previous), brief=brief,
-        replay=describe_replay(replay_result),
+        replay=describe_replay(replay_result, instrument),
+        window=replay.ENTRY_WINDOW_MINUTES,
+        confirm=(", waits for a second candle to confirm the breakout"
+                 if replay.CONFIRM_BREAKOUT.get(instrument) else ""),
         journal=("\n\n".join(journal) if journal
                  else "No trades were logged for this session."),
         rules=rules)

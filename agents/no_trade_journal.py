@@ -77,7 +77,7 @@ def candle_line(c, key_high, key_low):
 
 
 def closest_call(window, key_high, key_low):
-    """One sentence about how near the first 15 minutes came to a signal."""
+    """One sentence about how near the entry window came to a signal."""
     best_high = max(c["high"] for c in window)
     best_low = min(c["low"] for c in window)
     poke_up = best_high - key_high
@@ -106,7 +106,7 @@ def closest_call(window, key_high, key_low):
 
 
 def after_window(session, start, key_high, key_low):
-    """What happened after the 15-minute entry window ended."""
+    """What happened after the entry window ended."""
     cutoff = start + timedelta(minutes=replay.ENTRY_WINDOW_MINUTES)
     for c in session:
         if c["time"] < cutoff:
@@ -156,12 +156,19 @@ def build_entry(instrument, start, session, previous, earlier, replay_result, br
              f"- **Instrument:** {config['name']}"]
 
     if replay_result is None:
+        broke = [c for c in window if c["close"] > key_high or c["close"] < key_low]
+        if broke and replay.CONFIRM_BREAKOUT.get(instrument):
+            why = (f"A candle closed beyond a level at {broke[0]['time']:%H:%M}, but "
+                   "the next candle did not also close beyond it, so the breakout "
+                   "was not confirmed. The previous high was "
+                   f"{key_high:.2f} and the previous low {key_low:.2f}.")
+        else:
+            why = (f"No 5-minute candle closed above the previous high "
+                   f"({key_high:.2f}) or below the previous low ({key_low:.2f}) in the "
+                   f"first {replay.ENTRY_WINDOW_MINUTES} minutes after the {open_time} open.")
         lines += [
             "- **What happened:** No signal. The rules gave no entry.",
-            f"- **Why:** No 5-minute candle closed above the previous high "
-            f"({key_high:.2f}) or below the previous low ({key_low:.2f}) in the "
-            f"first {replay.ENTRY_WINDOW_MINUTES} minutes after the {open_time} open. "
-            f"(Previous {config['label']} session was {prev_date}.)",
+            f"- **Why:** {why} (Previous {config['label']} session was {prev_date}.)",
             f"- **First {replay.ENTRY_WINDOW_MINUTES} minutes, candle by candle:**",
         ]
         lines += [candle_line(c, key_high, key_low) for c in window]

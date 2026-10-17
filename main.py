@@ -19,10 +19,13 @@ How to run (in a terminal, inside your project folder):
 Assumptions made by this replay (change them in the SETTINGS block):
 - Candle times are New York time (Yahoo data from data.py is).
 - Key levels = the high and low of the previous session of the same kind.
-- Only the first 15 minutes of a session are scanned for a breakout, and
+- Only the first 30 minutes of a session are scanned for a breakout, and
   at most one trade is taken per session.
 - Entry is at the close of the breakout candle. The stop is the other end
   of that candle (low for a long, high for a short).
+- For markets in CONFIRM_BREAKOUT, the next candle must also close beyond
+  the level. Entry is then at that second candle's close, and the stop is
+  the far end of the two candles.
 - If a trade is still open when the session ends, it is closed at the last
   candle's close. (Your rules don't say what to do here, so this is a guess.)
 - Gold uses the default sell plan 1, 2, 2. In real use the agent chooses.
@@ -38,12 +41,16 @@ from risk import INSTRUMENTS, manage_trade, new_trade, target_price
 
 # ---------------- SETTINGS ----------------
 DATA_SOURCE = "yahoo"    # "yahoo" or "csv"
-YAHOO_PERIOD = "30d"     # how far back (5-minute data goes back ~60 days)
+YAHOO_PERIOD = "60d"     # how far back (5-minute data goes back ~60 days)
 CSV_FILES = {"nasdaq": "nasdaq.csv", "gold": "gold.csv"}  # used if "csv"
 # CSV note: the "time" column must already be in New York time.
 
 JOURNAL_PATH = "backtest-journal.md"   # kept separate from your real journal
-ENTRY_WINDOW_MINUTES = 15              # only look for breakouts this long
+ENTRY_WINDOW_MINUTES = 30              # only look for breakouts this long
+
+# Wait for a second candle to close beyond the level before entering.
+# Tested in experiments/gold_variations.py.
+CONFIRM_BREAKOUT = {"nasdaq": False, "gold": True}
 
 # Session times are New York time. Asia has no daylight saving, so you may
 # need to shift the gold open by an hour when the US clocks change.
@@ -112,6 +119,16 @@ def play_session(instrument, config, start, session, key_high, key_low):
 
         plan = build_trade_plan(candle, direction)
         entry, stop = plan["entry"], plan["stop_loss"]
+        if CONFIRM_BREAKOUT.get(instrument):
+            if index + 1 >= len(session):
+                break
+            moment, second = session[index + 1]
+            if check_breakout(second, key_high, key_low) != direction:
+                continue  # the breakout did not hold; keep watching
+            index += 1
+            entry = round(second.close, 2)
+            stop = round(min(candle.low, second.low) if direction == "long"
+                         else max(candle.high, second.high), 2)
         if abs(entry - stop) <= 0:
             continue  # no room for a stop; skip this candle
 
