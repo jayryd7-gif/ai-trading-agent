@@ -58,9 +58,9 @@ def closes(coin):
 
 
 class Market:
-    def __init__(self, coins):
-        self.data = {c: closes(c) for c in coins}
-        self.dates = sorted(d for d in self.data["BTC"] if d >= START)
+    def __init__(self, coins, data=None, start=None):
+        self.data = data or {c: closes(c) for c in coins}
+        self.dates = sorted(d for d in self.data["BTC"] if d >= (start or START))
 
     def price(self, coin, day):
         return self.data[coin].get(day)
@@ -148,9 +148,12 @@ def rotation(coins, lookback=60, top=3, every=7, trend_days=50):
     state = {"last": None, "weights": {}}
     def rule(m, day, weights):
         if state["last"] and (day - state["last"]).days < every:
-            # between rebalances: only sell a coin whose uptrend breaks
-            return {c: w for c, w in state["weights"].items()
-                    if above_average(m, c, day, trend_days) and above_average(m, "BTC", day, trend_days)}
+            # between rebalances: only sell a coin whose uptrend breaks, and
+            # do not buy it back until the next weekly check
+            state["weights"] = {c: w for c, w in state["weights"].items()
+                                if above_average(m, c, day, trend_days)
+                                and above_average(m, "BTC", day, trend_days)}
+            return dict(state["weights"])
         state["last"] = day
         if not above_average(m, "BTC", day, trend_days):
             state["weights"] = {}
