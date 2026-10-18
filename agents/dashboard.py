@@ -5,8 +5,9 @@ This is plain code, not an AI agent, so it costs nothing in API credits.
 It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
-It shows: your reminders, how each agent is doing, the latest world news,
-crypto, and stock briefs, the latest lean for each market, the session reviews, scorecard summary,
+It shows: your reminders, how each agent is doing, any problems in the last
+runs, the latest briefs and reviews (readable right on the page, in
+expandable sections), the latest lean for each market, the session reviews, scorecard summary,
 charts, recent results, and the agents still to be built.
 """
 
@@ -140,6 +141,77 @@ def latest_news(subfolder="news", kind="world"):
     return pattern.match(newest).group(1), f"{REPORT_FOLDER}/{subfolder}/{newest}", written, risk
 
 
+def demote_headings(text):
+    """Push headings down two levels so a brief fits under a dashboard section."""
+    return re.sub(r"^(#{1,4}) ", lambda m: "#" * (len(m.group(1)) + 2) + " ", text, flags=re.M)
+
+
+def read_body(path, summary_only=False, drop_section=None):
+    """A report file without its title and disclaimer lines, ready to embed.
+
+    summary_only keeps just the part before the first '---' line.
+    drop_section removes one '## <name>' section (like a block of raw numbers).
+    """
+    try:
+        text = open(path).read()
+    except OSError:
+        return None
+    lines = text.strip().splitlines()
+    if lines and lines[0].startswith("# "):
+        lines = lines[1:]
+    while lines and (not lines[0].strip() or lines[0].startswith("*")):
+        lines = lines[1:]   # blank lines and the italic disclaimer
+    text = "\n".join(lines)
+    if summary_only:
+        text = text.split("\n---\n")[0]
+    if drop_section:
+        text = re.sub(rf"^## {re.escape(drop_section)}\n.*?(?=^#{{1,2}} )", "",
+                      text, count=1, flags=re.M | re.S)
+    return demote_headings(text.strip())
+
+
+def details(title, body):
+    """A section that is closed until you click it (GitHub shows these)."""
+    if not body:
+        return []
+    return ["<details>", f"<summary><b>{title}</b></summary>", "", body, "", "</details>", ""]
+
+
+def journal_entries(path, heading, how_many):
+    """The newest entries in a journal, newest first."""
+    try:
+        text = open(path).read()
+    except OSError:
+        return []
+    starts = [m.start() for m in re.finditer(rf"^### {heading}", text, re.M)]
+    blocks = [text[a:b].strip().rstrip("-").strip()
+              for a, b in zip(starts, starts[1:] + [len(text)])]
+    if heading == "Trade #":
+        blocks = [b for b in blocks if not b.startswith("### Trade #__")]   # template
+
+    def entry_date(block):
+        found = re.search(r"\d{4}-\d{2}-\d{2}", block.splitlines()[0])
+        return found.group(0) if found else ""
+    return sorted(blocks, key=entry_date, reverse=True)[:how_many]
+
+
+def run_problems():
+    """Research agents whose last run log shows a failure."""
+    problems = []
+    for folder, label in (("news", "World news brief"), ("crypto", "Crypto brief"),
+                          ("stocks", "Stock brief")):
+        path = os.path.join(REPORT_FOLDER, folder, "last-run-log.txt")
+        try:
+            text = open(path).read()
+        except OSError:
+            continue
+        if "Traceback" in text or "Saved " not in text:
+            last = [line for line in text.strip().splitlines() if line.strip()][-1:] or ["(empty log)"]
+            problems.append(f"- ❌ **{label}** failed on its last run: `{last[0][:200]}` "
+                            f"([full log]({path}))")
+    return problems
+
+
 def open_reminders():
     """Reminders written as '- [ ] text' in REMINDERS.md (done ones are '- [x]')."""
     try:
@@ -210,26 +282,33 @@ def build_dashboard(now):
                    f"after each session ends |")
     out += ["", "🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran", ""]
 
-    # ---- Latest world news brief ----
-    out += ["## Latest world news brief", ""]
-    if news:
-        out += [f"- Date: **{news[0]}**",
-                f"- Event risk today: **{news[3]}**",
-                f"- [Read the full brief]({news[1]})", "",
-                f"[All world news briefs]({REPORT_FOLDER}/news/)", ""]
-    else:
-        out += ["No world news brief yet.", ""]
+    # ---- Problems ----
+    problems = run_problems()
+    if problems:
+        out += ["## ⚠️ Problems", ""] + problems + [
+            "", "Open the repo's Actions tab on GitHub for more detail.", ""]
 
-    # ---- Latest crypto and stock briefs ----
-    out += ["## Latest research briefs", "", "| Brief | Date | Read it |", "|---|---|---|"]
-    for label, key in (("Crypto", "crypto"), ("Stocks", "stocks")):
-        brief = research[key]
-        if brief:
-            out.append(f"| {label} | {brief[0]} | [read it]({brief[1]}) "
-                       f"([all]({REPORT_FOLDER}/{key}/)) |")
-        else:
-            out.append(f"| {label} | none yet | |")
-    out.append("")
+    # ---- Today's briefs, readable right here ----
+    out += ["## Latest briefs", "",
+            "Click a brief to read it here. The summary is at the top of each.", ""]
+    for title, brief, folder in (("🌍 World news", news, "news"),
+                                 ("🪙 Crypto", research["crypto"], "crypto"),
+                                 ("📈 Stocks", research["stocks"], "stocks")):
+        if not brief:
+            out += [f"**{title}:** none yet", ""]
+            continue
+        risk = f", event risk {brief[3]}" if brief[3] != "n/a" else ""
+        out += details(f"{title} brief, {brief[0]}{risk}",
+                       read_body(brief[1], summary_only=True)
+                       + f"\n\n[Read the full brief with all the details]({brief[1]}) · "
+                       f"[All {title.split()[-1].lower()} briefs]({REPORT_FOLDER}/{folder}/)")
+    for name in INSTRUMENTS:
+        row = latest.get(name)
+        path = f"{REPORT_FOLDER}/{row['date']}-{name}-brief.md" if row else None
+        if path and os.path.exists(path):
+            out += details(f"📊 {INSTRUMENTS[name]['name']} market brief, {row['date']}",
+                           read_body(path, drop_section="Price data used")
+                           + f"\n\n[Open the file]({path})")
 
     # ---- Latest lean ----
     out += ["## Latest lean for each market", "",
@@ -257,7 +336,13 @@ def build_dashboard(now):
             out.append(f"| {name} | {review[0]} | [read it]({review[1]}) |")
         else:
             out.append(f"| {name} | none yet | |")
-    out += ["", f"[All reviews]({REPORT_FOLDER}/reviews/)", ""]
+    out += [""]
+    for name in INSTRUMENTS:
+        review = latest_review(name)
+        if review:
+            out += details(f"📝 {name} review, session {review[0]}",
+                           read_body(review[1], drop_section="Facts used"))
+    out += [f"[All reviews]({REPORT_FOLDER}/reviews/)", ""]
 
     # ---- Scorecard ----
     directional = [r for r in scores if r["bias"] in ("Bullish", "Bearish")]
@@ -313,6 +398,10 @@ def build_dashboard(now):
             f"- Trades logged: **{trades}**. [Open the trade journal]({JOURNAL})",
             f"- No-trade sessions explained: **{skipped}**. "
             f"[Open the no-trade journal]({NO_TRADE_JOURNAL})", ""]
+    trades_text = "\n\n".join(journal_entries(JOURNAL, "Trade #", 3))
+    out += details("Your latest trades", demote_headings(trades_text))
+    skipped_text = "\n\n".join(journal_entries(NO_TRADE_JOURNAL, "No-trade session", 3))
+    out += details("Latest no-trade sessions", demote_headings(skipped_text))
 
     # ---- Planned ----
     out += ["## Still to build", "", "| Agent | Purpose | Status |", "|---|---|---|"]
