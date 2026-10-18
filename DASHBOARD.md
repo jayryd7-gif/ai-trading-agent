@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 06:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 06:54 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -11,12 +11,12 @@ Last updated 2026-10-18 06:47 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 12 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 11 hours ago | weekdays about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 37 hours ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 22 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 22 hours ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 23 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 23 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -84,39 +84,45 @@ Medium - No scheduled events were confirmed, but the research was incomplete, th
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-17</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-18</b></summary>
 
 #### Top things today
 
-1. Bitcoin is at $81,254 (‑2.0% in 7d), ether at $2,390.62 and solana at $102.98, even though Fear and Greed rose to 55 (Greed) from 49 on Oct 15. The weak week is blamed on a hotter-than-expected US inflation report on Oct 14, which revived fears of delayed Fed rate cuts. Why it matters: inflation and rate expectations are driving prices.
-2. US spot bitcoin and ether ETFs had about $391M of net outflows on Oct 14, and CryptoTicker said US spot ETFs lost $82.39M on Oct 16 (split unconfirmed). Why it matters: fund outflows added to the selling pressure.
-3. The CLARITY Act is stalled after a Senate vote to move forward failed 49–50 in mid-September. In early October the CFTC proposed a federal framework for crypto trading, with a public comment period open (deadline not found). Why it matters: US crypto rules are now being shaped by agencies rather than Congress.
-4. On Oct 1–2 the SEC proposed rules for how investment advisers hold crypto. It also cut its quorum rule from three commissioners to two. Why it matters: it changes how the SEC can act on crypto.
-5. Charles Schwab began bitcoin purchases for clients on Oct 16 (eligibility and fees not verified). Why it matters: it widens client access to bitcoin.
-6. The biggest movers today, such as Quack AI (+121.0%) and GRX Chain (+2,428.9%), have no news behind them. The GRX figure may be bad data. Why it matters: unexplained moves carry high risk.
+1. **Bitcoin is at $82,094 (+0.7% in 24h, -1.1% in 7d) after pulling back from a recovery attempt toward $87,333.** The Fear and Greed Index reads 53 (Neutral). Why it matters: it shows the overall market mood and where bitcoin sits against recent highs.
+2. **Spot bitcoin ETFs had net outflows of about $82.4M on Friday, Oct 16.** IBIT lost $71.8M and FBTC about $10.6M, reversing a $5.1M inflow the day before. Why it matters: it is a direct read on fund demand for bitcoin.
+3. **Whale Alert flagged about $307M in two Bitcoin moves before 2:30 AM ET today.** One was 2,878 BTC between unidentified wallets, and the other was 888 BTC leaving Kraken. Why it matters: the moves are large, but the purpose of each is unknown.
+4. **The CLARITY Act (crypto market structure) is stalled.** The Senate cloture vote failed 49-50 on Sept 15, and the Senate is not due back until Nov 9. Why it matters: a federal market-structure framework is on hold.
+5. **France's National Assembly adopted an amendment 38-37 to tax crypto-to-stablecoin swaps at capital gains rates (reported as 31.4%) from 2027.** It still needs further parliamentary votes. Why it matters: it could change tax treatment of stablecoin swaps for French users.
+6. **Quack AI (Q) rose 33.5% in 24h and 300% in 7d with no news found for today's move.** CoinMarketCap flagged token unlocks. Why it matters: it is a very large move with no clear catalyst and several red flags.
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Quack AI (Q) | +121.0% (+297.0% 7d) | No news found. CMC's AI analysis on Oct 9 pointed to a volume spike with no clear catalyst. #3 trending on CoinGecko. | Pump with no news, huge weekly gain, token unlocks mentioned (unconfirmed) |
-| GRX Chain (GRX) | +2,428.9% (+6.0% 7d) | No news found. | Trades on only one market, very small float, and the 24h figure may be a bad data point because it doesn't fit the 7d change |
-| Bitway (BTW) | +30.7% (+59.6% 7d) | No news found. | About 22% of supply was circulating at launch, fully diluted value is roughly $25B (my arithmetic), and a different "Bitway Token" on Base means you should check the contract |
-| Anvil (ANVL) | +27.9% (+58.5% 7d) | Nothing found. | Volume is only about 0.15% of market cap, so liquidity is very low, and there is no news |
-| The Sandbox (SAND) | +10.5% (‑11.4% 7d) | Cause not found. | No cause found |
-| Pearl (PRL) | +8.0% (+31.6% 7d) | Top trending search on CoinGecko. No reason found. | No news found |
-| Derive (DRV) | +5.0% (‑24.4% 7d) | Cause not found. It was trending. | Down sharply over 7 days, and no cause found |
-| Starknet (STRK) | ‑11.9% | Cause not found. It was trending. | Falling despite the trending status, and no cause found |
+| Quack AI (Q) | +33.5% (+300% 7d) | No news found for today. CoinMarketCap's AI analysis of an earlier leg (Oct 9) cited a big jump in volume and a wider small-cap recovery. | Pump with no news, very large 7-day gain, token unlocks flagged by CoinMarketCap |
+| Monero (XMR) | +5.8% (+10.3% 7d) | Rotation into privacy coins (CoinOtag). Small 0.18.5.4 software update as price hit a weekly high (CryptoTicker). An Indonesian outlet said US authorities withdrew two crypto proposals (unconfirmed). | None obvious. Six large venues no longer serve German customers (CryptoTicker). |
+| Pearl (PRL) | +8.4% (+37.4% 7d) | No news found. Trending on CoinGecko at rank 99. | Pump with no news found, thin volume ($6.5M) against market cap ($642.3M) |
+| Bitway (BTW) | +19.0% (+59.0% 7d) | No news found. | Pump with no news found, volume under 1% of market cap |
+| Anvil (ANVL) | +39.0% (+78.5% 7d) | No news found. | Very low liquidity ($305.2K volume vs $178.4M market cap), pump with no news found |
+| Backpack (BP) | +5.6% | No news found. Also trending. | None listed. No news found. |
+| Hedera (HBAR) | +6.0% | No news found. | None listed. No news found. |
+| GRX Chain (GRX) | +9.5% | No news found. | Pump with no news found, thin volume ($3.0M) |
 
 #### Whale watch
 
-No whale moves found.
+| When | Coin | Amount (USD) | Who | Direction |
+|---|---|---|---|---|
+| Hours before 2:30 AM ET, Oct 18 (no exact time given) | BTC (2,878 BTC) | Not given (about $307M combined with the row below) | Unidentified wallets | Unclear |
+| Hours before 2:30 AM ET, Oct 18 (no exact time given) | BTC (888 BTC) | Not given (about $307M combined with the row above) | Kraken | Out of exchange (withdrawal, purpose unknown) |
 
 #### Next 7 days
 
-No scheduled events found.
+| Date | Event | Coin or topic |
+|---|---|---|
+| Oct 19 (Mon) | Comment deadline for Treasury's GENIUS Act proposed rule (docket TREAS-DO-2026-0496) | Stablecoin regulation |
+| Oct 19 (Mon), likely, unconfirmed | Strategy's weekly bitcoin purchase filing | Bitcoin (Strategy, MSTR) |
 
-[Read the full brief with all the details](reports/crypto/2026-10-17-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-18-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
