@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 02:56 UTC with prices up to the close on 2026-10-17. Each bot started with $1,000 on 2022-10-19. Before 2026-10-19 the results are a backtest (what the rules would have done on real prices); from 2026-10-19 on they are paper trades. **No real money is used.** Prices are daily closes, after a 0.4% fee per trade. This is research, not financial advice.*
+*Updated 2026-10-18 03:07 UTC with prices up to the close on 2026-10-17. Each bot started with $1,000 on 2022-10-19. Before 2026-10-19 the results are a backtest (what the rules would have done on real prices); from 2026-10-19 on they are paper trades. **No real money is used.** Prices are daily closes, after a 0.4% fee per trade. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
