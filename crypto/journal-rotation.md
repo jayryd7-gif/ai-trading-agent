@@ -19,11 +19,6 @@ Every trade, oldest first. No real money.
 - **Amount:** $200.00 for 0.00244444 BTC, fee $0.80
 - **Why:** weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend
 
-### 2026-10-17 | Buy DOT
-- **Price:** $1.12 (that day's close)
-- **Amount:** $200.00 for 178.495 DOT, fee $0.80
-- **Why:** weekly check: #5 by 120-day gain (+16%), in an uptrend, with bitcoin in an uptrend
-
 ### 2026-10-17 | Buy SUI
 - **Price:** $0.9764 (that day's close)
 - **Amount:** $200.00 for 204.015 SUI, fee $0.80
@@ -34,9 +29,9 @@ Every trade, oldest first. No real money.
 ## Total
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-17:** $996.00
-- **Total profit / loss:** **-$4.00 (-0.4%)**
+- **Value on 2026-10-17:** $996.80
+- **Total profit / loss:** **-$3.20 (-0.3%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: -$4.00
-- **Fees paid (included above):** $4.00
-- **Trades:** 5 buys, 0 sells
+  - On coins still held: -$3.20
+- **Fees paid (included above):** $3.20
+- **Trades:** 4 buys, 0 sells

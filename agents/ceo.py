@@ -235,10 +235,15 @@ def check_alpaca(r):
         r.add(OK, "No Alpaca orders yet.")
         return
     try:
-        from crypto_bots import COINS
+        from crypto_bots import COINS, NEVER_OWN
     except Exception:
-        COINS = None
-    strange = [o for o in orders if COINS and o["coin"] not in COINS]
+        COINS, NEVER_OWN = None, []
+    strange = [o for o in orders if COINS and o["coin"] not in COINS
+               and not (o["coin"] in NEVER_OWN and o["side"] == "sell")]
+    banned = [o for o in orders if o["coin"] in NEVER_OWN and o["side"] == "buy"
+              and o["time_utc"] >= "2026-10-18 12:00"]
+    for o in banned:
+        r.add(BAD, f"Alpaca bought {o['coin']}, which is on the never-own list.")
     for o in strange:
         r.add(BAD, f"Alpaca order for {o['coin']}, which is not one of the bot's coins.")
     days = {}

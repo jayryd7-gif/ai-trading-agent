@@ -5,7 +5,6 @@ paper,Buy-and-hold bot,2026-10-17,Buy,SOL,103.47,3.2086595,333.33,1.33,,"day one
 paper,Rotation bot,2026-10-17,Buy,AVAX,9.767,20.395208,200.00,0.80,,"weekly check: #1 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend"
 paper,Rotation bot,2026-10-17,Buy,BCH,275.5,0.723049,200.00,0.80,,"weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
 paper,Rotation bot,2026-10-17,Buy,BTC,81491,0.0024444405,200.00,0.80,,"weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
-paper,Rotation bot,2026-10-17,Buy,DOT,1.116,178.49462,200.00,0.80,,"weekly check: #5 by 120-day gain (+16%), in an uptrend, with bitcoin in an uptrend"
 paper,Rotation bot,2026-10-17,Buy,SUI,0.9764,204.01475,200.00,0.80,,"weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend"
 backtest,Buy-and-hold bot,2022-10-19,Buy,BTC,19124,0.017360412,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
 backtest,Buy-and-hold bot,2022-10-19,Buy,ETH,1285.09,0.25834766,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
@@ -129,272 +128,267 @@ backtest,Rotation bot,2023-11-29,Sell,ADA,0.3816,538.69722,205.57,0.82,-1.05,no 
 backtest,Rotation bot,2023-11-29,Buy,TRX,0.10343,1971.6292,204.74,0.82,,"weekly check: #4 by 120-day gain (+31%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2023-12-06,Sell,TRX,0.10476,1971.6292,206.55,0.83,0.98,no longer one of the top 5 at the weekly check
 backtest,Rotation bot,2023-12-06,Buy,ADA,0.4429,462.62994,205.72,0.82,,"weekly check: #4 by 120-day gain (+49%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2023-12-13,Sell,BTC,42869,0.0059639008,255.67,1.02,27.95,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2023-12-13,Buy,DOT,7.603,33.358595,254.64,1.02,,"weekly check: #5 by 120-day gain (+58%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2023-12-17,Sell,LINK,14.013,23.667024,331.65,1.33,147.97,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2023-12-20,Buy,BTC,43668.9,0.0075339181,330.32,1.32,,"weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2023-12-27,Sell,BTC,43428.8,0.0075339181,327.19,1.31,-4.44,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2023-12-27,Buy,LINK,16.709,19.425287,325.88,1.30,,"weekly check: #3 by 120-day gain (+170%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2023-12-31,Sell,LINK,14.941,19.425287,290.23,1.16,-36.81,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-01-03,Buy,SUI,0.8437,341.25399,289.07,1.16,,"weekly check: #5 by 120-day gain (+72%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2023-12-20,Buy,DOGE,0.0915,3595.6081,330.32,1.32,,"weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2023-12-27,Sell,DOGE,0.09365,3595.6081,336.73,1.35,5.06,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2023-12-27,Buy,LINK,16.709,19.991637,335.38,1.34,,"weekly check: #3 by 120-day gain (+170%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2023-12-31,Sell,LINK,14.941,19.991637,298.70,1.19,-37.88,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-01-03,Buy,SUI,0.8437,351.20334,297.50,1.19,,"weekly check: #4 by 120-day gain (+72%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2024-01-07,Sell,ADA,0.4945,462.62994,228.77,0.92,22.13,ADA closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-01-10,Sell,SUI,0.842,341.25399,287.34,1.15,-2.89,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-01-10,Buy,ADA,0.566,453.29551,257.60,1.03,,"weekly check: #4 by 120-day gain (+131%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-01-10,Buy,LINK,15.072,16.94669,256.45,1.03,,"weekly check: #3 by 120-day gain (+153%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-01-12,Sell,LINK,14.151,16.94669,239.81,0.96,-17.59,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-01-10,Sell,BTC,46654,0.0059639008,278.24,1.11,50.44,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-01-10,Buy,ADA,0.566,445.29223,253.05,1.01,,"weekly check: #4 by 120-day gain (+131%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-01-10,Buy,LINK,15.072,16.648547,251.93,1.01,,"weekly check: #3 by 120-day gain (+153%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-01-12,Sell,LINK,14.151,16.648547,235.59,0.94,-17.28,LINK closed below its 50-day average (its uptrend broke)
 backtest,Rotation bot,2024-01-14,Sell,SOL,93.81,7.852172,736.61,2.95,551.32,"bitcoin closed below its 50-day average, so the bot moved to cash"
 backtest,Rotation bot,2024-01-14,Sell,AVAX,35.29,10.995332,388.03,1.55,157.96,AVAX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-01-14,Sell,DOT,7.319,33.358595,244.15,0.98,-11.47,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-01-14,Sell,ADA,0.5251,453.29551,238.03,0.95,-20.52,ADA closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-02-07,Buy,BTC,44349.6,0.0082611058,367.85,1.47,,"weekly check: #4 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-07,Buy,ETH,2425.1,0.15107696,367.85,1.47,,"weekly check: #5 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-07,Buy,LINK,18.817,19.470518,367.85,1.47,,"weekly check: #3 by 120-day gain (+159%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-07,Buy,SOL,101.14,3.6224712,367.85,1.47,,"weekly check: #1 by 120-day gain (+357%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-07,Buy,SUI,1.5411,237.73716,367.85,1.47,,"weekly check: #2 by 120-day gain (+271%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-14,Sell,BTC,51795.2,0.0082611058,427.89,1.71,58.33,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-02-14,Sell,ETH,2774.81,0.15107696,419.21,1.68,49.68,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-02-14,Buy,ADA,0.5768,731.36864,423.55,1.69,,"weekly check: #5 by 120-day gain (+134%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-14,Buy,AVAX,42.22,9.911857,420.16,1.68,,"weekly check: #3 by 120-day gain (+364%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-23,Sell,AVAX,35.92,9.911857,356.03,1.42,-65.55,AVAX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-02-28,Sell,LINK,19.43,19.470518,378.31,1.51,8.95,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-02-28,Buy,AVAX,40.33,9.0502138,366.46,1.47,,"weekly check: #2 by 120-day gain (+256%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-02-28,Buy,UNI,10.927,33.265117,364.95,1.46,,"weekly check: #4 by 120-day gain (+163%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-04,Sell,SUI,1.4868,237.73716,353.47,1.41,-15.79,SUI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-03-06,Sell,ADA,0.7349,731.36864,537.48,2.15,111.79,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-03-06,Buy,DOGE,0.15784,2806.5712,444.77,1.78,,"weekly check: #4 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-06,Buy,DOT,10.544,41.810307,442.62,1.77,,"weekly check: #5 by 120-day gain (+114%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-13,Sell,DOGE,0.16897,2806.5712,474.23,1.90,27.56,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-03-13,Sell,DOT,11.374,41.810307,475.55,1.90,31.03,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-03-13,Buy,BNB,630.5,0.75018054,474.89,1.90,,"weekly check: #5 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-13,Buy,SUI,1.6212,289.41828,471.09,1.88,,"weekly check: #3 by 120-day gain (+186%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-14,Sell,SUI,1.5672,289.41828,453.58,1.81,-19.33,SUI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-03-20,Buy,SUI,1.7537,256.57466,451.76,1.81,,"weekly check: #2 by 120-day gain (+249%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-03-27,Sell,UNI,12.246,33.265117,407.36,1.63,40.79,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-03-27,Buy,BCH,539.1,0.7496053,405.74,1.62,,"weekly check: #5 by 120-day gain (+141%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-04-03,Sell,AVAX,45.89,9.0502138,415.31,1.66,47.19,AVAX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-04-03,Sell,SUI,1.6681,256.57466,427.99,1.71,-25.48,SUI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-04-03,Buy,BTC,65963.3,0.0063666731,421.65,1.69,,"weekly check: #5 by 120-day gain (+50%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-04-03,Buy,DOGE,0.17522,2377.6219,418.28,1.67,,"weekly check: #4 by 120-day gain (+86%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-04-12,Sell,SOL,153.16,3.6224712,554.82,2.22,184.75,SOL closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-04-13,Sell,BNB,553.1,0.75018054,414.92,1.66,-61.62,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-04-13,Sell,BCH,479.6,0.7496053,359.51,1.44,-47.66,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-04-13,Sell,BTC,63924.5,0.0063666731,406.99,1.63,-16.29,BTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-04-13,Sell,DOGE,0.15254,2377.6219,362.68,1.45,-57.05,DOGE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-05-15,Buy,BTC,66206.5,0.0062899092,418.11,1.67,,"weekly check: #2 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-15,Buy,SOL,158.52,2.6270052,418.11,1.67,,"weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-15,Buy,TRX,0.12633,3296.3894,418.11,1.67,,"weekly check: #3 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-22,Sell,TRX,0.12007,3296.3894,395.80,1.58,-23.89,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-05-22,Buy,BNB,614.8,0.66530038,410.67,1.64,,"weekly check: #3 by 120-day gain (+106%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-22,Buy,DOGE,0.16628,2459.8669,410.67,1.64,,"weekly check: #1 by 120-day gain (+113%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-22,Buy,ETH,3737.73,0.10900997,409.09,1.64,,"weekly check: #5 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-05-29,Sell,BTC,67652.4,0.0062899092,425.53,1.70,5.72,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-05-29,Buy,UNI,10.443,39.633718,415.56,1.66,,"weekly check: #3 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-06-05,Sell,ETH,3865.99,0.10900997,421.43,1.69,10.66,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-06-05,Buy,BCH,495.2,0.86086828,428.01,1.71,,"weekly check: #2 by 120-day gain (+111%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-06-07,Sell,DOGE,0.1482,2459.8669,364.55,1.46,-47.58,DOGE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-08,Sell,BCH,469.5,0.86086828,404.18,1.62,-25.45,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-11,Sell,SOL,149.31,2.6270052,392.24,1.57,-27.44,SOL closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-11,Sell,BNB,602.5,0.66530038,400.84,1.60,-11.43,BNB closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-12,Buy,BNB,619.4,0.6287415,391.01,1.56,,"weekly check: #1 by 120-day gain (+91%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-06-12,Buy,BTC,68264,0.0057049476,391.01,1.56,,"weekly check: #3 by 120-day gain (+37%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-06-12,Buy,ETH,3560.12,0.10939027,391.01,1.56,,"weekly check: #4 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-06-13,Sell,BNB,599.8,0.6287415,377.12,1.51,-15.40,BNB closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-18,Sell,UNI,9.766,39.633718,387.06,1.55,-30.04,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-06-18,Sell,BTC,65175.3,0.0057049476,371.82,1.49,-20.67,BTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-06-18,Sell,ETH,3483.42,0.10939027,381.05,1.52,-11.48,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-07-17,Buy,BTC,64088,0.0058855287,378.71,1.51,,"weekly check: #3 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-07-17,Buy,TRX,0.13358,2823.7139,378.71,1.51,,"weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-07-17,Buy,XRP,0.626,602.54266,378.71,1.51,,"weekly check: #2 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-07-24,Sell,BTC,65376,0.0058855287,384.77,1.54,4.53,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-07-24,Sell,XRP,0.6179,602.54266,372.31,1.49,-7.88,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-07-31,Buy,BNB,576.5,0.64783369,374.98,1.50,,"weekly check: #3 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-07-31,Buy,XRP,0.623,599.48013,374.98,1.50,,"weekly check: #2 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-08-02,Sell,TRX,0.1236,2823.7139,349.01,1.40,-31.09,TRX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-08-02,Sell,BNB,542.9,0.64783369,351.71,1.41,-24.67,BNB closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-08-02,Sell,XRP,0.5607,599.48013,336.13,1.34,-40.19,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-09-18,Buy,SUI,1.3141,271.97935,358.84,1.44,,"weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-09-18,Buy,TRX,0.1496,2389.0913,358.84,1.44,,"weekly check: #1 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-09-18,Buy,XRP,0.5852,610.74515,358.84,1.44,,"weekly check: #3 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-02,Sell,XRP,0.5383,610.74515,328.76,1.32,-31.39,XRP closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-10-09,Sell,SUI,1.8755,271.97935,510.10,2.04,149.21,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-10-09,Sell,TRX,0.1605,2389.0913,383.45,1.53,23.07,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-10-16,Buy,AVAX,28.02,13.757086,387.02,1.55,,"weekly check: #4 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-16,Buy,SOL,154.28,2.4985322,387.02,1.55,,"weekly check: #3 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-16,Buy,SUI,2.0828,185.07468,387.02,1.55,,"weekly check: #1 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-16,Buy,TRX,0.1601,2407.7048,387.02,1.55,,"weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-16,Buy,XLM,0.0956,4032.1501,387.02,1.55,,"weekly check: #5 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-23,Sell,AVAX,26.75,13.757086,368.00,1.47,-20.49,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-10-23,Sell,XLM,0.0944,4032.1501,380.63,1.52,-7.91,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-10-23,Buy,BTC,66668.6,0.0055921521,374.32,1.50,,"weekly check: #5 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-10-23,Buy,DOGE,0.13997,2642.2709,371.32,1.49,,"weekly check: #4 by 120-day gain (+11%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-11-20,Sell,SOL,235.48,2.4985322,588.35,2.35,198.98,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-11-20,Sell,TRX,0.1947,2407.7048,468.78,1.88,79.88,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-11-20,Sell,BTC,94286.6,0.0055921521,527.26,2.11,150.84,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2024-11-20,Buy,ADA,0.8003,657.27922,528.13,2.11,,"weekly check: #4 by 120-day gain (+95%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-11-20,Buy,XLM,0.2474,2126.1947,528.13,2.11,,"weekly check: #3 by 120-day gain (+145%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-11-20,Buy,XRP,1.1041,470.70765,521.80,2.09,,"weekly check: #5 by 120-day gain (+85%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-12-19,Sell,DOGE,0.31431,2642.2709,830.49,3.32,455.85,DOGE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-12-25,Buy,UNI,13.911,59.223746,827.17,3.31,,"weekly check: #5 by 120-day gain (+143%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2024-12-26,Sell,ADA,0.8611,657.27922,565.98,2.26,35.59,ADA closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-12-26,Sell,XLM,0.3547,2126.1947,754.16,3.02,223.01,XLM closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2024-12-27,Sell,SUI,4.0847,185.07468,755.97,3.02,365.93,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-12-27,Sell,XRP,2.1466,470.70765,1010.42,4.04,484.58,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2024-12-27,Sell,UNI,13.353,59.223746,790.81,3.16,-39.52,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-01-15,Buy,ADA,1.0755,715.27621,772.37,3.09,,"weekly check: #5 by 120-day gain (+222%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-15,Buy,DOGE,0.38537,1996.2103,772.37,3.09,,"weekly check: #4 by 120-day gain (+281%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-15,Buy,SUI,4.8359,159.07681,772.37,3.09,,"weekly check: #3 by 120-day gain (+314%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-15,Buy,XLM,0.4881,1576.0696,772.37,3.09,,"weekly check: #2 by 120-day gain (+416%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-15,Buy,XRP,3.1429,244.76743,772.37,3.09,,"weekly check: #1 by 120-day gain (+438%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-19,Sell,ADA,0.993,715.27621,710.27,2.84,-64.94,ADA closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-19,Sell,DOGE,0.3584,1996.2103,715.44,2.86,-59.79,DOGE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-20,Sell,SUI,4.4181,159.07681,702.82,2.81,-72.36,SUI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-22,Buy,LINK,25.3,27.819949,706.67,2.83,,"weekly check: #3 by 120-day gain (+108%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-22,Buy,LTC,115.38,6.1002316,706.67,2.83,,"weekly check: #4 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-22,Buy,SOL,257.36,2.7348645,706.67,2.83,,"weekly check: #5 by 120-day gain (+69%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-25,Sell,XLM,0.4172,1576.0696,657.54,2.63,-117.46,XLM closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-28,Sell,LINK,22.61,27.819949,629.01,2.52,-80.18,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-28,Sell,LTC,109.92,6.1002316,670.54,2.68,-38.82,LTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-01-29,Buy,BTC,103733,0.0062386219,649.75,2.60,,"weekly check: #4 by 120-day gain (+71%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-29,Buy,LINK,23.66,27.352175,649.75,2.60,,"weekly check: #2 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-01-29,Buy,LTC,115.9,5.5837141,649.75,2.60,,"weekly check: #3 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-02-01,Sell,LINK,22.98,27.352175,628.55,2.51,-23.71,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-02-02,Sell,XRP,2.58,244.76743,631.50,2.53,-143.40,XRP closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-02-02,Sell,SOL,203.51,2.7348645,556.57,2.23,-152.33,SOL closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-02-02,Sell,BTC,97700.6,0.0062386219,609.52,2.44,-42.67,BTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-02-02,Sell,LTC,109.12,5.5837141,609.29,2.44,-42.89,LTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-04-30,Buy,BTC,94172,0.0063951116,604.66,2.42,,"weekly check: #1 by 120-day gain (+1%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-05-14,Buy,HYPE,25.189,24.361889,616.12,2.46,,"weekly check: #2 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-05-14,Buy,TRX,0.2746,2234.7109,616.12,2.46,,"weekly check: #1 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-05-28,Buy,BCH,424.8,1.3908411,593.20,2.37,,"weekly check: #5 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-05-28,Buy,BNB,686.89,0.86015123,593.20,2.37,,"weekly check: #4 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-05,Sell,BCH,385,1.3908411,535.47,2.14,-59.87,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-06-05,Sell,BNB,633.32,0.86015123,544.75,2.18,-50.63,BNB closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-06-11,Buy,BCH,428.9,1.2492426,537.95,2.15,,"weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-11,Buy,ETH,2771.61,0.19331729,537.95,2.15,,"weekly check: #5 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-18,Sell,ETH,2525,0.19331729,488.13,1.95,-51.78,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-06-20,Sell,BTC,103298,0.0063951116,660.60,2.64,53.30,BTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-06-20,Sell,HYPE,33.365,24.361889,812.83,3.25,193.47,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-06-20,Sell,TRX,0.2722,2234.7109,608.29,2.43,-10.26,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-06-20,Sell,BCH,473.7,1.2492426,591.77,2.37,51.45,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-06-25,Buy,BCH,482.8,1.299244,629.79,2.52,,"weekly check: #2 by 120-day gain (+65%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-25,Buy,BTC,107341,0.0058437823,629.79,2.52,,"weekly check: #3 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-25,Buy,HYPE,37.02,16.944219,629.79,2.52,,"weekly check: #1 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-25,Buy,TRX,0.2731,2296.8692,629.79,2.52,,"weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-06-26,Sell,TRX,0.271,2296.8692,622.45,2.49,-9.83,TRX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-07-01,Sell,BCH,500.2,1.299244,649.88,2.60,17.49,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-07-01,Sell,BTC,105681,0.0058437823,617.58,2.47,-14.69,BTC closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-07-01,Sell,HYPE,36.918,16.944219,625.55,2.50,-6.75,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-07-02,Buy,BCH,510.9,1.2224111,627.04,2.51,,"weekly check: #2 by 120-day gain (+59%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-02,Buy,BTC,108850,0.0057375483,627.04,2.51,,"weekly check: #3 by 120-day gain (+25%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-02,Buy,ETH,2570.41,0.24296896,627.04,2.51,,"weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-02,Buy,HYPE,39.884,15.658656,627.04,2.51,,"weekly check: #1 by 120-day gain (+133%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-02,Buy,TRX,0.2844,2195.9558,627.04,2.51,,"weekly check: #5 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-04,Sell,ETH,2508.04,0.24296896,609.38,2.44,-20.10,ETH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-07-09,Sell,TRX,0.2899,2195.9558,636.61,2.55,7.02,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-07-09,Buy,ETH,2768.74,0.22367065,621.77,2.49,,"weekly check: #3 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-09,Buy,UNI,8.301,74.298234,619.23,2.48,,"weekly check: #4 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-16,Sell,BTC,118630,0.0057375483,680.65,2.72,50.89,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-07-16,Sell,UNI,8.901,74.298234,661.33,2.65,39.46,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-07-16,Buy,SUI,3.9424,169.51711,670.99,2.68,,"weekly check: #3 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-16,Buy,XLM,0.4533,1462.5145,665.62,2.66,,"weekly check: #4 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-23,Sell,XLM,0.4278,1462.5145,625.66,2.50,-42.46,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-07-23,Buy,UNI,10.178,60.981371,623.16,2.49,,"weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-07-31,Sell,HYPE,40.826,15.658656,639.28,2.56,9.69,HYPE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-08-06,Buy,XLM,0.4001,1585.0444,636.72,2.55,,"weekly check: #5 by 120-day gain (+81%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-08-13,Sell,SUI,4.0049,169.51711,678.90,2.72,5.20,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-08-13,Sell,XLM,0.4519,1585.0444,716.28,2.87,76.69,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2025-08-13,Buy,HYPE,47.654,14.580097,697.59,2.79,,"weekly check: #1 by 120-day gain (+217%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-08-13,Buy,LINK,23.98,28.74235,692.01,2.77,,"weekly check: #4 by 120-day gain (+96%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-08-19,Sell,BCH,548.5,1.2224111,670.49,2.68,40.77,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-08-19,Sell,ETH,4075.59,0.22367065,911.59,3.65,286.17,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-08-19,Sell,UNI,9.95,60.981371,606.76,2.43,-18.82,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-08-19,Sell,HYPE,41.298,14.580097,602.13,2.41,-97.87,HYPE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-08-19,Sell,LINK,23.56,28.74235,677.17,2.71,-17.55,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-09-17,Buy,BCH,616.7,1.1157633,690.85,2.76,,"weekly check: #3 by 120-day gain (+56%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-09-17,Buy,BNB,989.98,0.69505565,690.85,2.76,,"weekly check: #5 by 120-day gain (+52%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-09-17,Buy,ETH,4590.53,0.14989363,690.85,2.76,,"weekly check: #2 by 120-day gain (+82%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-09-17,Buy,HYPE,57.754,11.914174,690.85,2.76,,"weekly check: #1 by 120-day gain (+118%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-09-17,Buy,LINK,23.99,28.682418,690.85,2.76,,"weekly check: #4 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-09-21,Sell,LINK,22.96,28.682418,658.55,2.63,-34.94,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-09-22,Sell,BCH,567.1,1.1157633,632.75,2.53,-60.64,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-09-22,Sell,BNB,992.9,0.69505565,690.12,2.76,-3.49,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-09-22,Sell,ETH,4199.08,0.14989363,629.42,2.52,-63.96,ETH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-09-22,Sell,HYPE,47.269,11.914174,563.17,2.25,-129.94,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-10-01,Buy,AVAX,30.73,20.492441,632.26,2.53,,"weekly check: #4 by 120-day gain (+45%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-01,Buy,BCH,592.8,1.0623021,632.26,2.53,,"weekly check: #2 by 120-day gain (+48%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-01,Buy,BNB,1026.5,0.61347561,632.26,2.53,,"weekly check: #1 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-01,Buy,SOL,222.04,2.8361228,632.26,2.53,,"weekly check: #5 by 120-day gain (+43%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-01,Buy,XLM,0.3982,1581.4483,632.26,2.53,,"weekly check: #3 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-07,Sell,AVAX,27.93,20.492441,572.35,2.29,-62.20,AVAX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-10-07,Sell,BCH,576.2,1.0623021,612.10,2.45,-22.61,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-10-08,Buy,BCH,583.1,1.0075422,589.86,2.36,,"weekly check: #5 by 120-day gain (+33%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-08,Buy,ETH,4525.72,0.12981312,589.86,2.36,,"weekly check: #2 by 120-day gain (+61%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2025-10-09,Sell,XLM,0.3794,1581.4483,600.00,2.40,-34.66,XLM closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-10-09,Sell,ETH,4368.09,0.12981312,567.04,2.27,-25.09,ETH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-10-10,Sell,BNB,1102.47,0.61347561,676.34,2.71,41.37,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2025-10-10,Sell,SOL,188.43,2.8361228,534.41,2.14,-99.99,SOL closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2025-10-10,Sell,BCH,513.5,1.0075422,517.37,2.07,-74.55,BCH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-01-07,Buy,BCH,629.2,0.91291925,576.72,2.31,,"weekly check: #1 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-01-07,Buy,BNB,900.3,0.63801932,576.72,2.31,,"weekly check: #2 by 120-day gain (+2%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-01-14,Sell,BCH,597.4,0.91291925,545.38,2.18,-33.52,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-01-14,Sell,BNB,948.47,0.63801932,605.14,2.42,26.01,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-03-18,Buy,HYPE,42.107,13.606102,575.21,2.30,,"weekly check: #1 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-03-18,Buy,TRX,0.3045,1881.4849,575.21,2.30,,"weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-03-19,Sell,HYPE,39.348,13.606102,535.37,2.14,-41.98,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-03-19,Sell,TRX,0.3036,1881.4849,571.22,2.28,-6.28,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-03-25,Buy,HYPE,40.324,13.969314,565.56,2.26,,"weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-03-25,Buy,TRX,0.3146,1790.5233,565.56,2.26,,"weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-03-26,Sell,HYPE,39.151,13.969314,546.91,2.19,-20.84,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-03-26,Sell,TRX,0.3115,1790.5233,557.75,2.23,-10.04,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-04-08,Buy,HYPE,38.759,14.374658,559.38,2.24,,"weekly check: #1 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-04-08,Buy,TRX,0.318,1752.0358,559.38,2.24,,"weekly check: #2 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-04-30,Sell,HYPE,39.691,14.374658,570.54,2.28,8.88,HYPE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-05-06,Buy,HYPE,43.125,13.179059,570.63,2.28,,"weekly check: #1 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-05-06,Buy,TON,2.453,231.69462,570.63,2.28,,"weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-05-12,Sell,HYPE,40.256,13.179059,530.54,2.12,-42.22,HYPE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-05-20,Buy,HYPE,54.836,9.9432262,547.44,2.19,,"weekly check: #1 by 120-day gain (+161%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-05-22,Sell,TRX,0.3623,1752.0358,634.76,2.54,72.84,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-05-22,Sell,TON,1.836,231.69462,425.39,1.70,-146.94,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-05-22,Sell,HYPE,54.579,9.9432262,542.69,2.17,-6.92,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-07-15,Buy,HYPE,66.862,7.9921014,536.51,2.15,,"weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-07-16,Sell,HYPE,60.705,7.9921014,485.16,1.94,-53.29,HYPE closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-07-22,Buy,TRX,0.3289,1592.4345,525.86,2.10,,"weekly check: #1 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-07-22,Buy,UNI,3.782,138.48538,525.86,2.10,,"weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-07-28,Sell,TRX,0.3248,1592.4345,517.22,2.07,-10.70,TRX closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-07-29,Buy,TRX,0.3258,1617.4541,529.08,2.12,,"weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-07-31,Sell,UNI,4.349,138.48538,602.27,2.41,74.01,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-07-31,Sell,TRX,0.3261,1617.4541,527.45,2.11,-3.74,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-08-05,Buy,TRX,0.3274,1635.9724,537.77,2.15,,"weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-05,Buy,UNI,4.047,132.34924,537.77,2.15,,"weekly check: #1 by 120-day gain (+23%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-13,Sell,UNI,3.479,132.34924,460.44,1.84,-79.17,UNI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-08-14,Sell,TRX,0.3327,1635.9724,544.29,2.18,4.34,"bitcoin closed below its 50-day average, so the bot moved to cash"
-backtest,Rotation bot,2026-08-19,Buy,HYPE,69.748,7.4656228,522.80,2.09,,"weekly check: #1 by 120-day gain (+75%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-19,Buy,LINK,10.557,49.323885,522.80,2.09,,"weekly check: #2 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-19,Buy,TRX,0.3344,1557.1539,522.80,2.09,,"weekly check: #3 by 120-day gain (+0%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-26,Sell,TRX,0.336,1557.1539,523.20,2.09,-1.69,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-08-26,Buy,SOL,102.07,5.1028229,522.94,2.09,,"weekly check: #4 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-26,Buy,UNI,4.38,118.91441,522.94,2.09,,"weekly check: #2 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-26,Buy,XLM,0.1853,2799.572,520.84,2.08,,"weekly check: #5 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-08-30,Sell,XLM,0.1746,2799.572,488.81,1.96,-33.99,XLM closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-09-02,Buy,XLM,0.1756,2761.4046,486.85,1.95,,"weekly check: #5 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-09-09,Sell,SOL,101.57,5.1028229,518.29,2.07,-6.72,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-09-09,Buy,BNB,722.64,0.71149627,516.22,2.06,,"weekly check: #5 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-09-10,Sell,XLM,0.1746,2761.4046,482.14,1.93,-6.64,XLM closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-09-16,Sell,BNB,725.92,0.71149627,516.49,2.07,-1.80,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-09-16,Buy,SOL,98.66,5.0309915,498.35,1.99,,"weekly check: #4 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-09-16,Buy,XLM,0.1839,2687.8735,496.29,1.99,,"weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-09-30,Sell,HYPE,90.945,7.4656228,678.96,2.72,153.44,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-09-30,Sell,XLM,0.2263,2687.8735,608.27,2.43,109.55,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-09-30,Buy,ETH,2686.01,0.23865844,643.61,2.57,,"weekly check: #4 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-09-30,Buy,SUI,1.1643,546.17422,638.46,2.55,,"weekly check: #5 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-07,Sell,SUI,1.1283,546.17422,616.25,2.46,-24.68,no longer one of the top 5 at the weekly check
-backtest,Rotation bot,2026-10-07,Buy,AVAX,11.13,54.926168,613.78,2.46,,"weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-08,Sell,ETH,2474.8,0.23865844,590.63,2.36,-55.34,ETH closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-10-12,Sell,UNI,6.973,118.91441,829.19,3.32,302.94,UNI closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-10-12,Sell,SOL,105.76,5.0309915,532.08,2.13,31.60,SOL closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-10-14,Sell,LINK,12.435,49.323885,613.34,2.45,88.09,LINK closed below its 50-day average (its uptrend broke)
-backtest,Rotation bot,2026-10-14,Buy,ADA,0.2302,2689.1395,621.53,2.49,,"weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-14,Buy,BTC,81682,0.0075786568,621.53,2.49,,"weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-14,Buy,DOT,1.147,539.70351,621.53,2.49,,"weekly check: #5 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-14,Buy,SUI,1.0227,605.29962,621.53,2.49,,"weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
-backtest,Rotation bot,2026-10-16,Sell,ADA,0.2257,2689.1395,606.94,2.43,-17.01,ADA closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-01-14,Sell,SUI,1.2506,351.20334,439.21,1.76,139.96,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-01-14,Sell,ADA,0.5251,445.29223,233.82,0.94,-20.16,ADA closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-02-07,Buy,BTC,44349.6,0.0090960701,405.03,1.62,,"weekly check: #4 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-07,Buy,ETH,2425.1,0.16634657,405.03,1.62,,"weekly check: #5 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-07,Buy,LINK,18.817,21.438437,405.03,1.62,,"weekly check: #3 by 120-day gain (+159%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-07,Buy,SOL,101.14,3.9886007,405.03,1.62,,"weekly check: #1 by 120-day gain (+357%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-07,Buy,SUI,1.5411,261.76567,405.03,1.62,,"weekly check: #2 by 120-day gain (+271%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-14,Sell,BTC,51795.2,0.0090960701,471.13,1.88,64.22,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-02-14,Sell,ETH,2774.81,0.16634657,461.58,1.85,54.71,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-02-14,Buy,ADA,0.5768,805.28933,466.36,1.87,,"weekly check: #5 by 120-day gain (+134%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-14,Buy,AVAX,42.22,10.913666,462.63,1.85,,"weekly check: #3 by 120-day gain (+364%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-23,Sell,AVAX,35.92,10.913666,392.02,1.57,-72.17,AVAX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-02-28,Sell,LINK,19.43,21.438437,416.55,1.67,9.86,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-02-28,Buy,AVAX,40.33,9.9649346,403.50,1.61,,"weekly check: #2 by 120-day gain (+256%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-02-28,Buy,UNI,10.927,36.627279,401.83,1.61,,"weekly check: #4 by 120-day gain (+163%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-03-04,Sell,SUI,1.4868,261.76567,389.19,1.56,-17.39,SUI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-03-06,Buy,DOGE,0.15784,2446.0585,387.64,1.55,,"weekly check: #4 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-03-13,Sell,ADA,0.7638,805.28933,615.08,2.46,146.26,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-03-13,Sell,DOGE,0.16897,2446.0585,413.31,1.65,24.02,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-03-13,Buy,BNB,630.5,0.81227354,514.20,2.06,,"weekly check: #5 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-03-13,Buy,SUI,1.6212,313.37365,510.08,2.04,,"weekly check: #3 by 120-day gain (+186%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-03-14,Sell,SUI,1.5672,313.37365,491.12,1.96,-20.93,SUI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-03-20,Buy,SUI,1.7537,277.81153,489.15,1.96,,"weekly check: #2 by 120-day gain (+249%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-03-27,Sell,UNI,12.246,36.627279,448.54,1.79,44.91,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-03-27,Buy,BCH,539.1,0.82536921,446.74,1.79,,"weekly check: #5 by 120-day gain (+141%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-04-03,Sell,AVAX,45.89,9.9649346,457.29,1.83,51.96,AVAX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-04-03,Sell,SUI,1.6681,277.81153,463.42,1.85,-27.59,SUI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-04-03,Buy,BTC,65963.3,0.0069510297,460.35,1.84,,"weekly check: #5 by 120-day gain (+50%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-04-03,Buy,DOGE,0.17522,2595.8487,456.67,1.83,,"weekly check: #4 by 120-day gain (+86%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-04-12,Sell,SOL,153.16,3.9886007,610.89,2.44,203.42,SOL closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-04-13,Sell,BNB,553.1,0.81227354,449.27,1.80,-66.72,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-04-13,Sell,BCH,479.6,0.82536921,395.85,1.58,-52.48,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-04-13,Sell,BTC,63924.5,0.0069510297,444.34,1.78,-17.79,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-04-13,Sell,DOGE,0.15254,2595.8487,395.97,1.58,-62.28,DOGE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-05-15,Buy,BTC,66206.5,0.0068814625,457.43,1.83,,"weekly check: #2 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-15,Buy,SOL,158.52,2.8740698,457.43,1.83,,"weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-15,Buy,TRX,0.12633,3606.4082,457.43,1.83,,"weekly check: #3 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-22,Sell,TRX,0.12007,3606.4082,433.02,1.73,-26.14,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-05-22,Buy,BNB,614.8,0.72787055,449.29,1.80,,"weekly check: #3 by 120-day gain (+106%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-22,Buy,DOGE,0.16628,2691.2125,449.29,1.80,,"weekly check: #1 by 120-day gain (+113%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-22,Buy,ETH,3737.73,0.11926213,447.56,1.79,,"weekly check: #5 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-05-29,Sell,BTC,67652.4,0.0068814625,465.55,1.86,6.26,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-05-29,Buy,UNI,10.443,43.36119,454.64,1.82,,"weekly check: #3 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-06-05,Sell,ETH,3865.99,0.11926213,461.07,1.84,11.66,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-06-05,Buy,BCH,495.2,0.94183122,468.27,1.87,,"weekly check: #2 by 120-day gain (+111%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-06-07,Sell,DOGE,0.1482,2691.2125,398.84,1.60,-52.05,DOGE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-08,Sell,BCH,469.5,0.94183122,442.19,1.77,-27.85,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-11,Sell,SOL,149.31,2.8740698,429.13,1.72,-30.02,SOL closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-11,Sell,BNB,602.5,0.72787055,438.54,1.75,-12.50,BNB closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-12,Buy,BNB,619.4,0.68787339,427.78,1.71,,"weekly check: #1 by 120-day gain (+91%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-06-12,Buy,BTC,68264,0.0062414865,427.78,1.71,,"weekly check: #3 by 120-day gain (+37%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-06-12,Buy,ETH,3560.12,0.11967821,427.78,1.71,,"weekly check: #4 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-06-13,Sell,BNB,599.8,0.68787339,412.59,1.65,-16.84,BNB closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-18,Sell,UNI,9.766,43.36119,423.47,1.69,-32.87,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-06-18,Sell,BTC,65175.3,0.0062414865,406.79,1.63,-22.62,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-06-18,Sell,ETH,3483.42,0.11967821,416.89,1.67,-12.56,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-07-17,Buy,BTC,64088,0.0064390509,414.32,1.66,,"weekly check: #3 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-07-17,Buy,TRX,0.13358,3089.2785,414.32,1.66,,"weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-07-17,Buy,XRP,0.626,659.21059,414.32,1.66,,"weekly check: #2 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-07-24,Sell,BTC,65376,0.0064390509,420.96,1.68,4.95,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-07-24,Sell,XRP,0.6179,659.21059,407.33,1.63,-8.63,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-07-31,Buy,BNB,576.5,0.70876115,410.24,1.64,,"weekly check: #3 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-07-31,Buy,XRP,0.623,655.86004,410.24,1.64,,"weekly check: #2 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-08-02,Sell,TRX,0.1236,3089.2785,381.83,1.53,-34.02,TRX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-08-02,Sell,BNB,542.9,0.70876115,384.79,1.54,-26.99,BNB closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-08-02,Sell,XRP,0.5607,655.86004,367.74,1.47,-43.97,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-09-18,Buy,SUI,1.3141,297.55846,392.59,1.57,,"weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-09-18,Buy,TRX,0.1496,2613.7806,392.59,1.57,,"weekly check: #1 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-09-18,Buy,XRP,0.5852,668.18451,392.59,1.57,,"weekly check: #3 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-02,Sell,XRP,0.5383,668.18451,359.68,1.44,-34.35,XRP closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-10-09,Sell,SUI,1.8755,297.55846,558.07,2.23,163.25,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-10-09,Sell,TRX,0.1605,2613.7806,419.51,1.68,25.24,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-10-16,Buy,AVAX,28.02,15.050912,423.42,1.69,,"weekly check: #4 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-16,Buy,SOL,154.28,2.7335141,423.42,1.69,,"weekly check: #3 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-16,Buy,SUI,2.0828,202.48058,423.42,1.69,,"weekly check: #1 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-16,Buy,TRX,0.1601,2634.1447,423.42,1.69,,"weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-16,Buy,XLM,0.0956,4411.3657,423.42,1.69,,"weekly check: #5 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-23,Sell,AVAX,26.75,15.050912,402.61,1.61,-22.42,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-10-23,Sell,XLM,0.0944,4411.3657,416.43,1.67,-8.65,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-10-23,Buy,BTC,66668.6,0.0061180828,409.52,1.64,,"weekly check: #5 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-10-23,Buy,DOGE,0.13997,2890.7712,406.25,1.62,,"weekly check: #4 by 120-day gain (+11%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-11-20,Sell,SOL,235.48,2.7335141,643.69,2.57,217.69,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-11-20,Sell,TRX,0.1947,2634.1447,512.87,2.05,87.40,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-11-20,Sell,BTC,94286.6,0.0061180828,576.85,2.31,165.02,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2024-11-20,Buy,ADA,0.8003,719.09502,577.80,2.31,,"weekly check: #4 by 120-day gain (+95%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-11-20,Buy,XLM,0.2474,2326.159,577.80,2.31,,"weekly check: #3 by 120-day gain (+145%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-11-20,Buy,XRP,1.1041,514.97676,570.87,2.28,,"weekly check: #5 by 120-day gain (+85%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-12-19,Sell,DOGE,0.31431,2890.7712,908.60,3.63,498.72,DOGE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-12-25,Buy,UNI,13.911,64.79362,904.96,3.62,,"weekly check: #5 by 120-day gain (+143%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2024-12-26,Sell,ADA,0.8611,719.09502,619.21,2.48,38.93,ADA closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-12-26,Sell,XLM,0.3547,2326.159,825.09,3.30,243.99,XLM closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2024-12-27,Sell,SUI,4.0847,202.48058,827.07,3.31,400.34,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-12-27,Sell,XRP,2.1466,514.97676,1105.45,4.42,530.16,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2024-12-27,Sell,UNI,13.353,64.79362,865.19,3.46,-43.24,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-01-15,Buy,ADA,1.0755,782.54651,845.01,3.38,,"weekly check: #5 by 120-day gain (+222%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-15,Buy,DOGE,0.38537,2183.9499,845.01,3.38,,"weekly check: #4 by 120-day gain (+281%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-15,Buy,SUI,4.8359,174.03767,845.01,3.38,,"weekly check: #3 by 120-day gain (+314%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-15,Buy,XLM,0.4881,1724.2958,845.01,3.38,,"weekly check: #2 by 120-day gain (+416%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-15,Buy,XRP,3.1429,267.78732,845.01,3.38,,"weekly check: #1 by 120-day gain (+438%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-19,Sell,ADA,0.993,782.54651,777.07,3.11,-71.05,ADA closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-19,Sell,DOGE,0.3584,2183.9499,782.73,3.13,-65.41,DOGE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-20,Sell,SUI,4.4181,174.03767,768.92,3.08,-79.17,SUI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-22,Buy,LINK,25.3,30.43636,773.13,3.09,,"weekly check: #3 by 120-day gain (+108%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-22,Buy,LTC,115.38,6.6739462,773.13,3.09,,"weekly check: #4 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-22,Buy,SOL,257.36,2.992073,773.13,3.09,,"weekly check: #5 by 120-day gain (+69%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-25,Sell,XLM,0.4172,1724.2958,719.38,2.88,-128.51,XLM closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-28,Sell,LINK,22.61,30.43636,688.17,2.75,-87.72,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-28,Sell,LTC,109.92,6.6739462,733.60,2.93,-42.47,LTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-01-29,Buy,BTC,103733,0.0068253518,710.86,2.84,,"weekly check: #4 by 120-day gain (+71%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-29,Buy,LINK,23.66,29.924593,710.86,2.84,,"weekly check: #2 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-01-29,Buy,LTC,115.9,6.1088513,710.86,2.84,,"weekly check: #3 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-02-01,Sell,LINK,22.98,29.924593,687.67,2.75,-25.94,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-02-02,Sell,XRP,2.58,267.78732,690.89,2.76,-156.88,XRP closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-02-02,Sell,SOL,203.51,2.992073,608.92,2.44,-166.65,SOL closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-02-02,Sell,BTC,97700.6,0.0068253518,666.84,2.67,-46.69,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-02-02,Sell,LTC,109.12,6.1088513,666.60,2.67,-46.93,LTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-04-30,Buy,BTC,94172,0.006996559,661.53,2.65,,"weekly check: #1 by 120-day gain (+1%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-05-14,Buy,HYPE,25.189,26.653076,674.06,2.70,,"weekly check: #2 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-05-14,Buy,TRX,0.2746,2444.881,674.06,2.70,,"weekly check: #1 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-05-28,Buy,BCH,424.8,1.5216469,648.99,2.60,,"weekly check: #5 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-05-28,Buy,BNB,686.89,0.94104673,648.99,2.60,,"weekly check: #4 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-05,Sell,BCH,385,1.5216469,585.83,2.34,-65.50,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-06-05,Sell,BNB,633.32,0.94104673,595.98,2.38,-55.39,BNB closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-06-11,Buy,BCH,428.9,1.3667313,588.55,2.35,,"weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-11,Buy,ETH,2771.61,0.21149839,588.55,2.35,,"weekly check: #5 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-18,Sell,ETH,2525,0.21149839,534.03,2.14,-56.65,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-06-20,Sell,BTC,103298,0.006996559,722.73,2.89,58.31,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-06-20,Sell,HYPE,33.365,26.653076,889.28,3.56,211.66,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-06-20,Sell,TRX,0.2722,2444.881,665.50,2.66,-11.23,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-06-20,Sell,BCH,473.7,1.3667313,647.42,2.59,56.29,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-06-25,Buy,BCH,482.8,1.4214352,689.03,2.76,,"weekly check: #2 by 120-day gain (+65%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-25,Buy,BTC,107341,0.0063933783,689.03,2.76,,"weekly check: #3 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-25,Buy,HYPE,37.02,18.537789,689.03,2.76,,"weekly check: #1 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-25,Buy,TRX,0.2731,2512.8852,689.03,2.76,,"weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-06-26,Sell,TRX,0.271,2512.8852,680.99,2.72,-10.76,TRX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-07-01,Sell,BCH,500.2,1.4214352,711.00,2.84,19.13,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-07-01,Sell,BTC,105681,0.0063933783,675.66,2.70,-16.07,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-07-01,Sell,HYPE,36.918,18.537789,684.38,2.74,-7.38,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-07-02,Buy,BCH,510.9,1.3373764,686.01,2.74,,"weekly check: #2 by 120-day gain (+59%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-02,Buy,BTC,108850,0.0062771532,686.01,2.74,,"weekly check: #3 by 120-day gain (+25%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-02,Buy,ETH,2570.41,0.2658197,686.01,2.74,,"weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-02,Buy,HYPE,39.884,17.131321,686.01,2.74,,"weekly check: #1 by 120-day gain (+133%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-02,Buy,TRX,0.2844,2402.4811,686.01,2.74,,"weekly check: #5 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-04,Sell,ETH,2508.04,0.2658197,666.69,2.67,-21.99,ETH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-07-09,Sell,TRX,0.2899,2402.4811,696.48,2.79,7.68,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-07-09,Buy,ETH,2768.74,0.24470643,680.25,2.72,,"weekly check: #3 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-09,Buy,UNI,8.301,81.285834,677.46,2.71,,"weekly check: #4 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-16,Sell,BTC,118630,0.0062771532,744.66,2.98,55.67,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-07-16,Sell,UNI,8.901,81.285834,723.53,2.89,43.17,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-07-16,Buy,SUI,3.9424,185.45985,734.09,2.94,,"weekly check: #3 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-16,Buy,XLM,0.4533,1600.061,728.22,2.91,,"weekly check: #4 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-23,Sell,XLM,0.4278,1600.061,684.51,2.74,-46.45,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-07-23,Buy,UNI,10.178,66.716547,681.77,2.73,,"weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-07-31,Sell,HYPE,40.826,17.131321,699.40,2.80,10.60,HYPE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-08-06,Buy,XLM,0.4001,1734.1147,696.61,2.79,,"weekly check: #5 by 120-day gain (+81%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-08-13,Sell,SUI,4.0049,185.45985,742.75,2.97,5.68,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-08-13,Sell,XLM,0.4519,1734.1147,783.65,3.13,83.91,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2025-08-13,Buy,HYPE,47.654,15.951326,763.20,3.05,,"weekly check: #1 by 120-day gain (+217%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-08-13,Buy,LINK,23.98,31.445511,757.09,3.03,,"weekly check: #4 by 120-day gain (+96%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-08-19,Sell,BCH,548.5,1.3373764,733.55,2.93,44.61,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-08-19,Sell,ETH,4075.59,0.24470643,997.32,3.99,313.08,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-08-19,Sell,UNI,9.95,66.716547,663.83,2.66,-20.59,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-08-19,Sell,HYPE,41.298,15.951326,658.76,2.64,-107.07,HYPE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-08-19,Sell,LINK,23.56,31.445511,740.86,2.96,-19.20,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-09-17,Buy,BCH,616.7,1.2206986,755.83,3.02,,"weekly check: #3 by 120-day gain (+56%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-09-17,Buy,BNB,989.98,0.76042425,755.83,3.02,,"weekly check: #5 by 120-day gain (+52%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-09-17,Buy,ETH,4590.53,0.16399082,755.83,3.02,,"weekly check: #2 by 120-day gain (+82%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-09-17,Buy,HYPE,57.754,13.034678,755.83,3.02,,"weekly check: #1 by 120-day gain (+118%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-09-17,Buy,LINK,23.99,31.379942,755.83,3.02,,"weekly check: #4 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-09-21,Sell,LINK,22.96,31.379942,720.48,2.88,-38.23,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-09-22,Sell,BCH,567.1,1.2206986,692.26,2.77,-66.34,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-09-22,Sell,BNB,992.9,0.76042425,755.03,3.02,-3.82,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-09-22,Sell,ETH,4199.08,0.16399082,688.61,2.75,-69.97,ETH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-09-22,Sell,HYPE,47.269,13.034678,616.14,2.46,-142.16,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-10-01,Buy,AVAX,30.73,22.419714,691.72,2.77,,"weekly check: #4 by 120-day gain (+45%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-01,Buy,BCH,592.8,1.1622095,691.72,2.77,,"weekly check: #2 by 120-day gain (+48%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-01,Buy,BNB,1026.5,0.67117176,691.72,2.77,,"weekly check: #1 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-01,Buy,SOL,222.04,3.1028545,691.72,2.77,,"weekly check: #5 by 120-day gain (+43%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-01,Buy,XLM,0.3982,1730.1804,691.72,2.77,,"weekly check: #3 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-07,Sell,AVAX,27.93,22.419714,626.18,2.50,-68.05,AVAX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-10-07,Sell,BCH,576.2,1.1622095,669.67,2.68,-24.74,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-10-08,Buy,BCH,583.1,1.1022995,645.33,2.58,,"weekly check: #5 by 120-day gain (+33%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-08,Buy,ETH,4525.72,0.14202179,645.33,2.58,,"weekly check: #2 by 120-day gain (+61%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2025-10-09,Sell,XLM,0.3794,1730.1804,656.43,2.63,-37.92,XLM closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-10-09,Sell,ETH,4368.09,0.14202179,620.36,2.48,-27.45,ETH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-10-10,Sell,BNB,1102.47,0.67117176,739.95,2.96,45.26,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2025-10-10,Sell,SOL,188.43,3.1028545,584.67,2.34,-109.39,SOL closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2025-10-10,Sell,BCH,513.5,1.1022995,566.03,2.26,-81.57,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-01-07,Buy,BCH,629.2,0.99877748,630.95,2.52,,"weekly check: #1 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-01-07,Buy,BNB,900.3,0.69802376,630.95,2.52,,"weekly check: #2 by 120-day gain (+2%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-01-14,Sell,BCH,597.4,0.99877748,596.67,2.39,-36.67,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-01-14,Sell,BNB,948.47,0.69802376,662.05,2.65,28.45,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-03-18,Buy,HYPE,42.107,14.885729,629.31,2.52,,"weekly check: #1 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-03-18,Buy,TRX,0.3045,2058.4348,629.31,2.52,,"weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-03-19,Sell,HYPE,39.348,14.885729,585.72,2.34,-45.93,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-03-19,Sell,TRX,0.3036,2058.4348,624.94,2.50,-6.87,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-03-25,Buy,HYPE,40.324,15.2831,618.75,2.48,,"weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-03-25,Buy,TRX,0.3146,1958.9184,618.75,2.48,,"weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-03-26,Sell,HYPE,39.151,15.2831,598.35,2.39,-22.80,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-03-26,Sell,TRX,0.3115,1958.9184,610.20,2.44,-10.99,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-04-08,Buy,HYPE,38.759,15.726566,611.99,2.45,,"weekly check: #1 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-04-08,Buy,TRX,0.318,1916.8113,611.99,2.45,,"weekly check: #2 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-04-30,Sell,HYPE,39.691,15.726566,624.20,2.50,9.71,HYPE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-05-06,Buy,HYPE,43.125,14.418523,624.30,2.50,,"weekly check: #1 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-05-06,Buy,TON,2.453,253.48504,624.30,2.50,,"weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-05-12,Sell,HYPE,40.256,14.418523,580.43,2.32,-46.19,HYPE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-05-20,Buy,HYPE,54.836,10.878367,598.92,2.40,,"weekly check: #1 by 120-day gain (+161%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-05-22,Sell,TRX,0.3623,1916.8113,694.46,2.78,79.69,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-05-22,Sell,TON,1.836,253.48504,465.40,1.86,-160.76,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-05-22,Sell,HYPE,54.579,10.878367,593.73,2.37,-7.57,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-07-15,Buy,HYPE,66.862,8.7437426,586.97,2.35,,"weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-07-16,Sell,HYPE,60.705,8.7437426,530.79,2.12,-58.31,HYPE closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-07-22,Buy,TRX,0.3289,1742.1998,575.31,2.30,,"weekly check: #1 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-07-22,Buy,UNI,3.782,151.50965,575.31,2.30,,"weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-07-28,Sell,TRX,0.3248,1742.1998,565.87,2.26,-11.71,TRX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-07-29,Buy,TRX,0.3258,1769.5724,578.84,2.32,,"weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-07-31,Sell,UNI,4.349,151.50965,658.92,2.64,80.97,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-07-31,Sell,TRX,0.3261,1769.5724,577.06,2.31,-4.09,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-08-05,Buy,TRX,0.3274,1789.8323,588.34,2.35,,"weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-05,Buy,UNI,4.047,144.79642,588.34,2.35,,"weekly check: #1 by 120-day gain (+23%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-13,Sell,UNI,3.479,144.79642,503.75,2.01,-86.61,UNI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-08-14,Sell,TRX,0.3327,1789.8323,595.48,2.38,4.75,"bitcoin closed below its 50-day average, so the bot moved to cash"
+backtest,Rotation bot,2026-08-19,Buy,HYPE,69.748,8.1677497,571.97,2.29,,"weekly check: #1 by 120-day gain (+75%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-19,Buy,LINK,10.557,53.962698,571.97,2.29,,"weekly check: #2 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-19,Buy,TRX,0.3344,1703.6011,571.97,2.29,,"weekly check: #3 by 120-day gain (+0%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-26,Sell,TRX,0.336,1703.6011,572.41,2.29,-1.85,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-08-26,Buy,SOL,102.07,5.5827332,572.12,2.29,,"weekly check: #4 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-26,Buy,UNI,4.38,130.09808,572.12,2.29,,"weekly check: #2 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-26,Buy,XLM,0.1853,3062.8661,569.83,2.28,,"weekly check: #5 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-08-30,Sell,XLM,0.1746,3062.8661,534.78,2.14,-37.19,XLM closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-09-02,Buy,XLM,0.1756,3021.1092,532.64,2.13,,"weekly check: #5 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-09-09,Sell,SOL,101.57,5.5827332,567.04,2.27,-7.35,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-09-09,Buy,BNB,722.64,0.77841107,564.77,2.26,,"weekly check: #5 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-09-10,Sell,XLM,0.1746,3021.1092,527.49,2.11,-7.26,XLM closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-09-16,Sell,BNB,725.92,0.77841107,565.06,2.26,-1.97,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-09-16,Buy,SOL,98.66,5.5041462,545.22,2.18,,"weekly check: #4 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-09-16,Buy,XLM,0.1839,2940.6626,542.96,2.17,,"weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-09-30,Sell,HYPE,90.945,8.1677497,742.82,2.97,167.87,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-09-30,Sell,XLM,0.2263,2940.6626,665.47,2.66,119.85,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-09-30,Buy,ETH,2686.01,0.26110379,704.14,2.82,,"weekly check: #4 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-09-30,Buy,SUI,1.1643,597.54082,698.51,2.79,,"weekly check: #5 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-07,Sell,SUI,1.1283,597.54082,674.21,2.70,-27.00,no longer one of the top 5 at the weekly check
+backtest,Rotation bot,2026-10-07,Buy,AVAX,11.13,60.091864,671.51,2.69,,"weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-08,Sell,ETH,2474.8,0.26110379,646.18,2.58,-60.55,ETH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-12,Sell,UNI,6.973,130.09808,907.17,3.63,331.43,UNI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-12,Sell,SOL,105.76,5.5041462,582.12,2.33,34.57,SOL closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-14,Sell,LINK,12.435,53.962698,671.03,2.68,96.37,LINK closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-14,Buy,ADA,0.2302,2942.0477,679.98,2.72,,"weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-14,Buy,BTC,81682,0.0082914143,679.98,2.72,,"weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-14,Buy,SUI,1.0227,662.22684,679.98,2.72,,"weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-16,Sell,ADA,0.2257,2942.0477,664.02,2.66,-18.62,ADA closed below its 50-day average (its uptrend broke)

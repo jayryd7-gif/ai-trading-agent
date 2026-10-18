@@ -53,7 +53,10 @@ PAPER_START = date(2026, 10, 17)     # the paper accounts' first day (buys at it
 BACKTEST_START = date(2022, 10, 19)  # four years of history
 FEE = 0.4                        # percent per dollar bought or sold
 COINS = ["BTC", "ETH", "XRP", "BNB", "SOL", "DOGE", "ADA", "TRX", "LINK", "AVAX",
-         "XLM", "SUI", "HYPE", "LTC", "BCH", "DOT", "TON", "UNI"]
+         "XLM", "SUI", "HYPE", "LTC", "BCH", "TON", "UNI"]
+# Coins the bots must never own. They are left out of every pick, and the
+# Alpaca copy sells any it still holds.
+NEVER_OWN = ["DOT"]
 HOLD_COINS = ["BTC", "ETH", "SOL"]
 TOP, LOOKBACK, EVERY, TREND_DAYS = 5, 120, 7, 50
 DASHBOARD = "CRYPTO-DASHBOARD.md"

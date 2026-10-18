@@ -32,7 +32,7 @@ from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from crypto_bots import COINS, DASHBOARD
+from crypto_bots import COINS, DASHBOARD, NEVER_OWN
 
 # ---------------- SETTINGS ----------------
 BASE = "https://paper-api.alpaca.markets"     # paper only, on purpose
@@ -116,14 +116,14 @@ def main():
     positions = {p["symbol"].replace("/", "").removesuffix("USD"): p
                  for p in request("GET", "/v2/positions") if p.get("asset_class") == "crypto"}
 
-    wanted = {c: v for c, v in targets["holdings"].items() if c in tradable}
+    wanted = {c: v for c, v in targets["holdings"].items() if c in tradable and c not in NEVER_OWN}
     skipped = sorted(c for c in targets["holdings"] if c not in tradable)
     scale = min(1.0, MAX_SLICE / max(1.0, sum(wanted.values())))
     wanted = {c: v * scale for c, v in wanted.items()}
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     orders, problems = [], []
-    for coin in sorted(set(wanted) | {c for c in positions if c in COINS}):
+    for coin in sorted(set(wanted) | {c for c in positions if c in COINS or c in NEVER_OWN}):
         held = float(positions[coin]["market_value"]) if coin in positions else 0.0
         target = wanted.get(coin, 0.0)
         diff = target - held
@@ -158,7 +158,7 @@ def main():
         lines += ["**Orders sent today:** none needed.", ""]
     after = {p["symbol"].replace("/", "").removesuffix("USD"): p
              for p in request("GET", "/v2/positions") if p.get("asset_class") == "crypto"}
-    mine = {c: p for c, p in after.items() if c in COINS}
+    mine = {c: p for c, p in after.items() if c in COINS or c in NEVER_OWN}
     if mine:
         lines += ["| Coin | Value in Alpaca | Bot's target | Profit / loss in Alpaca |", "|---|---|---|---|"]
         for c, p in sorted(mine.items()):

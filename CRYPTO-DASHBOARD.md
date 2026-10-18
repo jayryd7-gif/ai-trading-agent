@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 12:33 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-18 16:20 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -8,7 +8,7 @@
 
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
-| **Rotation bot** | $1,000 | **$996.00** | -$4.00 (-0.4%) | 0% | 5 | AVAX, BCH, BTC, DOT, SUI |
+| **Rotation bot** | $1,000 | **$996.80** | -$3.20 (-0.3%) | 0% | 4 | AVAX, BCH, BTC, SUI |
 | **Buy-and-hold bot** | $1,000 | **$996.00** | -$4.00 (-0.4%) | 0% | 3 | BTC, ETH, SOL |
 
 <!-- ALPACA -->
@@ -24,9 +24,8 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 | AVAX | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
 | BCH | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
 | BTC | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
-| DOT | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
 | SUI | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
-| Cash | $0.00 | | | 0% |
+| Cash | $200.00 | | | 20% |
 
 **Latest trades**
 
@@ -35,18 +34,17 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 | 2026-10-17 | 🟢 Buy | AVAX | $9.77 | $200.00 |  | weekly check: #1 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend |
 | 2026-10-17 | 🟢 Buy | BCH | $275.50 | $200.00 |  | weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
 | 2026-10-17 | 🟢 Buy | BTC | $81,491.04 | $200.00 |  | weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-17 | 🟢 Buy | DOT | $1.12 | $200.00 |  | weekly check: #5 by 120-day gain (+16%), in an uptrend, with bitcoin in an uptrend |
 | 2026-10-17 | 🟢 Buy | SUI | $0.9764 | $200.00 |  | weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend |
 
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-17:** $996.00
-- **Total profit / loss:** **-$4.00 (-0.4%)**
+- **Value on 2026-10-17:** $996.80
+- **Total profit / loss:** **-$3.20 (-0.3%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: -$4.00
-- **Fees paid (included above):** $4.00
-- **Trades:** 5 buys, 0 sells
+  - On coins still held: -$3.20
+- **Fees paid (included above):** $3.20
+- **Trades:** 4 buys, 0 sells
 
 [Journal](crypto/journal-rotation.md)
 
@@ -89,7 +87,7 @@ What the rules would have done with $1,000 each on real past prices. It keeps ru
 
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
-| **Rotation bot** | $1,000 | **$3,020.77** | $2,020.77 (+202.1%) | 49% | 388 | BTC, DOT, SUI, AVAX |
+| **Rotation bot** | $1,000 | **$3,325.89** | $2,325.89 (+232.6%) | 49% | 383 | BTC, SUI, AVAX |
 | **Buy-and-hold bot** | $1,000 | **$3,225.78** | $2,225.78 (+222.6%) | 64% | 3 | BTC, SOL, ETH |
 
 ![Value of each bot](crypto/charts/value.svg)
@@ -106,301 +104,295 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $617.59 | $621.53 | -$3.93 (-0.6%) | 20% |
-| DOT | $602.31 | $621.53 | -$19.22 (-3.1%) | 20% |
-| SUI | $591.01 | $621.53 | -$30.51 (-4.9%) | 20% |
-| AVAX | $536.46 | $613.78 | -$77.32 (-12.6%) | 18% |
-| Cash | $673.39 | | | 22% |
+| BTC | $675.68 | $679.98 | -$4.30 (-0.6%) | 20% |
+| SUI | $646.60 | $679.98 | -$33.38 (-4.9%) | 19% |
+| AVAX | $586.92 | $671.51 | -$84.59 (-12.6%) | 18% |
+| Cash | $1,416.70 | | | 43% |
 
 **Latest trades**
 
 | Date | | Coin | Price | Amount | Profit / loss | Why |
 |---|---|---|---|---|---|---|
-| 2026-10-16 | 🔴 Sell | ADA | $0.2257 | $606.94 | -$17.01 | ADA closed below its 50-day average (its uptrend broke) |
-| 2026-10-14 | 🔴 Sell | LINK | $12.44 | $613.34 | $88.09 | LINK closed below its 50-day average (its uptrend broke) |
-| 2026-10-14 | 🟢 Buy | ADA | $0.2302 | $621.53 |  | weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | BTC | $81,682.01 | $621.53 |  | weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | DOT | $1.15 | $621.53 |  | weekly check: #5 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | SUI | $1.02 | $621.53 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-12 | 🔴 Sell | UNI | $6.97 | $829.19 | $302.94 | UNI closed below its 50-day average (its uptrend broke) |
-| 2026-10-12 | 🔴 Sell | SOL | $105.76 | $532.08 | $31.60 | SOL closed below its 50-day average (its uptrend broke) |
-| 2026-10-08 | 🔴 Sell | ETH | $2,474.80 | $590.63 | -$55.34 | ETH closed below its 50-day average (its uptrend broke) |
-| 2026-10-07 | 🔴 Sell | SUI | $1.13 | $616.25 | -$24.68 | no longer one of the top 5 at the weekly check |
+| 2026-10-16 | 🔴 Sell | ADA | $0.2257 | $664.02 | -$18.62 | ADA closed below its 50-day average (its uptrend broke) |
+| 2026-10-14 | 🔴 Sell | LINK | $12.44 | $671.03 | $96.37 | LINK closed below its 50-day average (its uptrend broke) |
+| 2026-10-14 | 🟢 Buy | ADA | $0.2302 | $679.98 |  | weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-14 | 🟢 Buy | BTC | $81,682.01 | $679.98 |  | weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-14 | 🟢 Buy | SUI | $1.02 | $679.98 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-12 | 🔴 Sell | UNI | $6.97 | $907.17 | $331.43 | UNI closed below its 50-day average (its uptrend broke) |
+| 2026-10-12 | 🔴 Sell | SOL | $105.76 | $582.12 | $34.57 | SOL closed below its 50-day average (its uptrend broke) |
+| 2026-10-08 | 🔴 Sell | ETH | $2,474.80 | $646.18 | -$60.55 | ETH closed below its 50-day average (its uptrend broke) |
+| 2026-10-07 | 🔴 Sell | SUI | $1.13 | $674.21 | -$27.00 | no longer one of the top 5 at the weekly check |
+| 2026-10-07 | 🟢 Buy | AVAX | $11.13 | $671.51 |  | weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend |
 
 <details>
-<summary><b>All 388 trades</b></summary>
+<summary><b>All 383 trades</b></summary>
 
 | Date | | Coin | Price | Amount | Profit / loss | Why |
 |---|---|---|---|---|---|---|
-| 2026-10-16 | 🔴 Sell | ADA | $0.2257 | $606.94 | -$17.01 | ADA closed below its 50-day average (its uptrend broke) |
-| 2026-10-14 | 🔴 Sell | LINK | $12.44 | $613.34 | $88.09 | LINK closed below its 50-day average (its uptrend broke) |
-| 2026-10-14 | 🟢 Buy | ADA | $0.2302 | $621.53 |  | weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | BTC | $81,682.01 | $621.53 |  | weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | DOT | $1.15 | $621.53 |  | weekly check: #5 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-14 | 🟢 Buy | SUI | $1.02 | $621.53 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
-| 2026-10-12 | 🔴 Sell | UNI | $6.97 | $829.19 | $302.94 | UNI closed below its 50-day average (its uptrend broke) |
-| 2026-10-12 | 🔴 Sell | SOL | $105.76 | $532.08 | $31.60 | SOL closed below its 50-day average (its uptrend broke) |
-| 2026-10-08 | 🔴 Sell | ETH | $2,474.80 | $590.63 | -$55.34 | ETH closed below its 50-day average (its uptrend broke) |
-| 2026-10-07 | 🔴 Sell | SUI | $1.13 | $616.25 | -$24.68 | no longer one of the top 5 at the weekly check |
-| 2026-10-07 | 🟢 Buy | AVAX | $11.13 | $613.78 |  | weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-30 | 🔴 Sell | HYPE | $90.94 | $678.96 | $153.44 | no longer one of the top 5 at the weekly check |
-| 2026-09-30 | 🔴 Sell | XLM | $0.2263 | $608.27 | $109.55 | no longer one of the top 5 at the weekly check |
-| 2026-09-30 | 🟢 Buy | ETH | $2,686.01 | $643.61 |  | weekly check: #4 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-30 | 🟢 Buy | SUI | $1.16 | $638.46 |  | weekly check: #5 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-16 | 🔴 Sell | BNB | $725.92 | $516.49 | -$1.80 | no longer one of the top 5 at the weekly check |
-| 2026-09-16 | 🟢 Buy | SOL | $98.66 | $498.35 |  | weekly check: #4 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-16 | 🟢 Buy | XLM | $0.1839 | $496.29 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-10 | 🔴 Sell | XLM | $0.1746 | $482.14 | -$6.64 | XLM closed below its 50-day average (its uptrend broke) |
-| 2026-09-09 | 🔴 Sell | SOL | $101.57 | $518.29 | -$6.72 | no longer one of the top 5 at the weekly check |
-| 2026-09-09 | 🟢 Buy | BNB | $722.64 | $516.22 |  | weekly check: #5 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
-| 2026-09-02 | 🟢 Buy | XLM | $0.1756 | $486.85 |  | weekly check: #5 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-30 | 🔴 Sell | XLM | $0.1746 | $488.81 | -$33.99 | XLM closed below its 50-day average (its uptrend broke) |
-| 2026-08-26 | 🔴 Sell | TRX | $0.3360 | $523.20 | -$1.69 | no longer one of the top 5 at the weekly check |
-| 2026-08-26 | 🟢 Buy | SOL | $102.07 | $522.94 |  | weekly check: #4 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-26 | 🟢 Buy | UNI | $4.38 | $522.94 |  | weekly check: #2 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-26 | 🟢 Buy | XLM | $0.1853 | $520.84 |  | weekly check: #5 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-19 | 🟢 Buy | HYPE | $69.75 | $522.80 |  | weekly check: #1 by 120-day gain (+75%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-19 | 🟢 Buy | LINK | $10.56 | $522.80 |  | weekly check: #2 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-19 | 🟢 Buy | TRX | $0.3344 | $522.80 |  | weekly check: #3 by 120-day gain (+0%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-14 | 🔴 Sell | TRX | $0.3327 | $544.29 | $4.34 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-08-13 | 🔴 Sell | UNI | $3.48 | $460.44 | -$79.17 | UNI closed below its 50-day average (its uptrend broke) |
-| 2026-08-05 | 🟢 Buy | TRX | $0.3274 | $537.77 |  | weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
-| 2026-08-05 | 🟢 Buy | UNI | $4.05 | $537.77 |  | weekly check: #1 by 120-day gain (+23%), in an uptrend, with bitcoin in an uptrend |
-| 2026-07-31 | 🔴 Sell | UNI | $4.35 | $602.27 | $74.01 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-07-31 | 🔴 Sell | TRX | $0.3261 | $527.45 | -$3.74 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-07-29 | 🟢 Buy | TRX | $0.3258 | $529.08 |  | weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
-| 2026-07-28 | 🔴 Sell | TRX | $0.3248 | $517.22 | -$10.70 | TRX closed below its 50-day average (its uptrend broke) |
-| 2026-07-22 | 🟢 Buy | TRX | $0.3289 | $525.86 |  | weekly check: #1 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend |
-| 2026-07-22 | 🟢 Buy | UNI | $3.78 | $525.86 |  | weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
-| 2026-07-16 | 🔴 Sell | HYPE | $60.70 | $485.16 | -$53.29 | HYPE closed below its 50-day average (its uptrend broke) |
-| 2026-07-15 | 🟢 Buy | HYPE | $66.86 | $536.51 |  | weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
-| 2026-05-22 | 🔴 Sell | TRX | $0.3623 | $634.76 | $72.84 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-05-22 | 🔴 Sell | TON | $1.84 | $425.39 | -$146.94 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-05-22 | 🔴 Sell | HYPE | $54.58 | $542.69 | -$6.92 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-05-20 | 🟢 Buy | HYPE | $54.84 | $547.44 |  | weekly check: #1 by 120-day gain (+161%), in an uptrend, with bitcoin in an uptrend |
-| 2026-05-12 | 🔴 Sell | HYPE | $40.26 | $530.54 | -$42.22 | HYPE closed below its 50-day average (its uptrend broke) |
-| 2026-05-06 | 🟢 Buy | HYPE | $43.12 | $570.63 |  | weekly check: #1 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
-| 2026-05-06 | 🟢 Buy | TON | $2.45 | $570.63 |  | weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend |
-| 2026-04-30 | 🔴 Sell | HYPE | $39.69 | $570.54 | $8.88 | HYPE closed below its 50-day average (its uptrend broke) |
-| 2026-04-08 | 🟢 Buy | HYPE | $38.76 | $559.38 |  | weekly check: #1 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
-| 2026-04-08 | 🟢 Buy | TRX | $0.3180 | $559.38 |  | weekly check: #2 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend |
-| 2026-03-26 | 🔴 Sell | HYPE | $39.15 | $546.91 | -$20.84 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-03-26 | 🔴 Sell | TRX | $0.3115 | $557.75 | -$10.04 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-03-25 | 🟢 Buy | HYPE | $40.32 | $565.56 |  | weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend |
-| 2026-03-25 | 🟢 Buy | TRX | $0.3146 | $565.56 |  | weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
-| 2026-03-19 | 🔴 Sell | HYPE | $39.35 | $535.37 | -$41.98 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-03-19 | 🔴 Sell | TRX | $0.3036 | $571.22 | -$6.28 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2026-03-18 | 🟢 Buy | HYPE | $42.11 | $575.21 |  | weekly check: #1 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
-| 2026-03-18 | 🟢 Buy | TRX | $0.3045 | $575.21 |  | weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
-| 2026-01-14 | 🔴 Sell | BCH | $597.40 | $545.38 | -$33.52 | no longer one of the top 5 at the weekly check |
-| 2026-01-14 | 🔴 Sell | BNB | $948.47 | $605.14 | $26.01 | no longer one of the top 5 at the weekly check |
-| 2026-01-07 | 🟢 Buy | BCH | $629.20 | $576.72 |  | weekly check: #1 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend |
-| 2026-01-07 | 🟢 Buy | BNB | $900.30 | $576.72 |  | weekly check: #2 by 120-day gain (+2%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-10 | 🔴 Sell | BNB | $1,102.47 | $676.34 | $41.37 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-10-10 | 🔴 Sell | SOL | $188.43 | $534.41 | -$99.99 | SOL closed below its 50-day average (its uptrend broke) |
-| 2025-10-10 | 🔴 Sell | BCH | $513.50 | $517.37 | -$74.55 | BCH closed below its 50-day average (its uptrend broke) |
-| 2025-10-09 | 🔴 Sell | XLM | $0.3794 | $600.00 | -$34.66 | XLM closed below its 50-day average (its uptrend broke) |
-| 2025-10-09 | 🔴 Sell | ETH | $4,368.09 | $567.04 | -$25.09 | ETH closed below its 50-day average (its uptrend broke) |
-| 2025-10-08 | 🟢 Buy | BCH | $583.10 | $589.86 |  | weekly check: #5 by 120-day gain (+33%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-08 | 🟢 Buy | ETH | $4,525.72 | $589.86 |  | weekly check: #2 by 120-day gain (+61%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-07 | 🔴 Sell | AVAX | $27.93 | $572.35 | -$62.20 | AVAX closed below its 50-day average (its uptrend broke) |
-| 2025-10-07 | 🔴 Sell | BCH | $576.20 | $612.10 | -$22.61 | BCH closed below its 50-day average (its uptrend broke) |
-| 2025-10-01 | 🟢 Buy | AVAX | $30.73 | $632.26 |  | weekly check: #4 by 120-day gain (+45%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-01 | 🟢 Buy | BCH | $592.80 | $632.26 |  | weekly check: #2 by 120-day gain (+48%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-01 | 🟢 Buy | BNB | $1,026.50 | $632.26 |  | weekly check: #1 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-01 | 🟢 Buy | SOL | $222.04 | $632.26 |  | weekly check: #5 by 120-day gain (+43%), in an uptrend, with bitcoin in an uptrend |
-| 2025-10-01 | 🟢 Buy | XLM | $0.3982 | $632.26 |  | weekly check: #3 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend |
-| 2025-09-22 | 🔴 Sell | BCH | $567.10 | $632.75 | -$60.64 | BCH closed below its 50-day average (its uptrend broke) |
-| 2025-09-22 | 🔴 Sell | BNB | $992.90 | $690.12 | -$3.49 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-09-22 | 🔴 Sell | ETH | $4,199.08 | $629.42 | -$63.96 | ETH closed below its 50-day average (its uptrend broke) |
-| 2025-09-22 | 🔴 Sell | HYPE | $47.27 | $563.17 | -$129.94 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-09-21 | 🔴 Sell | LINK | $22.96 | $658.55 | -$34.94 | LINK closed below its 50-day average (its uptrend broke) |
-| 2025-09-17 | 🟢 Buy | BCH | $616.70 | $690.85 |  | weekly check: #3 by 120-day gain (+56%), in an uptrend, with bitcoin in an uptrend |
-| 2025-09-17 | 🟢 Buy | BNB | $989.98 | $690.85 |  | weekly check: #5 by 120-day gain (+52%), in an uptrend, with bitcoin in an uptrend |
-| 2025-09-17 | 🟢 Buy | ETH | $4,590.53 | $690.85 |  | weekly check: #2 by 120-day gain (+82%), in an uptrend, with bitcoin in an uptrend |
-| 2025-09-17 | 🟢 Buy | HYPE | $57.75 | $690.85 |  | weekly check: #1 by 120-day gain (+118%), in an uptrend, with bitcoin in an uptrend |
-| 2025-09-17 | 🟢 Buy | LINK | $23.99 | $690.85 |  | weekly check: #4 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
-| 2025-08-19 | 🔴 Sell | BCH | $548.50 | $670.49 | $40.77 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-08-19 | 🔴 Sell | ETH | $4,075.59 | $911.59 | $286.17 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-08-19 | 🔴 Sell | UNI | $9.95 | $606.76 | -$18.82 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-08-19 | 🔴 Sell | HYPE | $41.30 | $602.13 | -$97.87 | HYPE closed below its 50-day average (its uptrend broke) |
-| 2025-08-19 | 🔴 Sell | LINK | $23.56 | $677.17 | -$17.55 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-08-13 | 🔴 Sell | SUI | $4.00 | $678.90 | $5.20 | no longer one of the top 5 at the weekly check |
-| 2025-08-13 | 🔴 Sell | XLM | $0.4519 | $716.28 | $76.69 | no longer one of the top 5 at the weekly check |
-| 2025-08-13 | 🟢 Buy | HYPE | $47.65 | $697.59 |  | weekly check: #1 by 120-day gain (+217%), in an uptrend, with bitcoin in an uptrend |
-| 2025-08-13 | 🟢 Buy | LINK | $23.98 | $692.01 |  | weekly check: #4 by 120-day gain (+96%), in an uptrend, with bitcoin in an uptrend |
-| 2025-08-06 | 🟢 Buy | XLM | $0.4001 | $636.72 |  | weekly check: #5 by 120-day gain (+81%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-31 | 🔴 Sell | HYPE | $40.83 | $639.28 | $9.69 | HYPE closed below its 50-day average (its uptrend broke) |
-| 2025-07-23 | 🔴 Sell | XLM | $0.4278 | $625.66 | -$42.46 | no longer one of the top 5 at the weekly check |
-| 2025-07-23 | 🟢 Buy | UNI | $10.18 | $623.16 |  | weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-16 | 🔴 Sell | BTC | $118,630.43 | $680.65 | $50.89 | no longer one of the top 5 at the weekly check |
-| 2025-07-16 | 🔴 Sell | UNI | $8.90 | $661.33 | $39.46 | no longer one of the top 5 at the weekly check |
-| 2025-07-16 | 🟢 Buy | SUI | $3.94 | $670.99 |  | weekly check: #3 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-16 | 🟢 Buy | XLM | $0.4533 | $665.62 |  | weekly check: #4 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-09 | 🔴 Sell | TRX | $0.2899 | $636.61 | $7.02 | no longer one of the top 5 at the weekly check |
-| 2025-07-09 | 🟢 Buy | ETH | $2,768.74 | $621.77 |  | weekly check: #3 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-09 | 🟢 Buy | UNI | $8.30 | $619.23 |  | weekly check: #4 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-04 | 🔴 Sell | ETH | $2,508.04 | $609.38 | -$20.10 | ETH closed below its 50-day average (its uptrend broke) |
-| 2025-07-02 | 🟢 Buy | BCH | $510.90 | $627.04 |  | weekly check: #2 by 120-day gain (+59%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-02 | 🟢 Buy | BTC | $108,849.60 | $627.04 |  | weekly check: #3 by 120-day gain (+25%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-02 | 🟢 Buy | ETH | $2,570.41 | $627.04 |  | weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-02 | 🟢 Buy | HYPE | $39.88 | $627.04 |  | weekly check: #1 by 120-day gain (+133%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-02 | 🟢 Buy | TRX | $0.2844 | $627.04 |  | weekly check: #5 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
-| 2025-07-01 | 🔴 Sell | BCH | $500.20 | $649.88 | $17.49 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-07-01 | 🔴 Sell | BTC | $105,681.14 | $617.58 | -$14.69 | BTC closed below its 50-day average (its uptrend broke) |
-| 2025-07-01 | 🔴 Sell | HYPE | $36.92 | $625.55 | -$6.75 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-06-26 | 🔴 Sell | TRX | $0.2710 | $622.45 | -$9.83 | TRX closed below its 50-day average (its uptrend broke) |
-| 2025-06-25 | 🟢 Buy | BCH | $482.80 | $629.79 |  | weekly check: #2 by 120-day gain (+65%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-25 | 🟢 Buy | BTC | $107,340.58 | $629.79 |  | weekly check: #3 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-25 | 🟢 Buy | HYPE | $37.02 | $629.79 |  | weekly check: #1 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-25 | 🟢 Buy | TRX | $0.2731 | $629.79 |  | weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-20 | 🔴 Sell | BTC | $103,297.99 | $660.60 | $53.30 | BTC closed below its 50-day average (its uptrend broke) |
-| 2025-06-20 | 🔴 Sell | HYPE | $33.37 | $812.83 | $193.47 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-06-20 | 🔴 Sell | TRX | $0.2722 | $608.29 | -$10.26 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-06-20 | 🔴 Sell | BCH | $473.70 | $591.77 | $51.45 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2025-06-18 | 🔴 Sell | ETH | $2,525.00 | $488.13 | -$51.78 | no longer one of the top 5 at the weekly check |
-| 2025-06-11 | 🟢 Buy | BCH | $428.90 | $537.95 |  | weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-11 | 🟢 Buy | ETH | $2,771.61 | $537.95 |  | weekly check: #5 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend |
-| 2025-06-05 | 🔴 Sell | BCH | $385.00 | $535.47 | -$59.87 | BCH closed below its 50-day average (its uptrend broke) |
-| 2025-06-05 | 🔴 Sell | BNB | $633.32 | $544.75 | -$50.63 | BNB closed below its 50-day average (its uptrend broke) |
-| 2025-05-28 | 🟢 Buy | BCH | $424.80 | $593.20 |  | weekly check: #5 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend |
-| 2025-05-28 | 🟢 Buy | BNB | $686.89 | $593.20 |  | weekly check: #4 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
-| 2025-05-14 | 🟢 Buy | HYPE | $25.19 | $616.12 |  | weekly check: #2 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend |
-| 2025-05-14 | 🟢 Buy | TRX | $0.2746 | $616.12 |  | weekly check: #1 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
-| 2025-04-30 | 🟢 Buy | BTC | $94,172.00 | $604.66 |  | weekly check: #1 by 120-day gain (+1%), in an uptrend, with bitcoin in an uptrend |
-| 2025-02-02 | 🔴 Sell | XRP | $2.58 | $631.50 | -$143.40 | XRP closed below its 50-day average (its uptrend broke) |
-| 2025-02-02 | 🔴 Sell | SOL | $203.51 | $556.57 | -$152.33 | SOL closed below its 50-day average (its uptrend broke) |
-| 2025-02-02 | 🔴 Sell | BTC | $97,700.59 | $609.52 | -$42.67 | BTC closed below its 50-day average (its uptrend broke) |
-| 2025-02-02 | 🔴 Sell | LTC | $109.12 | $609.29 | -$42.89 | LTC closed below its 50-day average (its uptrend broke) |
-| 2025-02-01 | 🔴 Sell | LINK | $22.98 | $628.55 | -$23.71 | LINK closed below its 50-day average (its uptrend broke) |
-| 2025-01-29 | 🟢 Buy | BTC | $103,733.24 | $649.75 |  | weekly check: #4 by 120-day gain (+71%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-29 | 🟢 Buy | LINK | $23.66 | $649.75 |  | weekly check: #2 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-29 | 🟢 Buy | LTC | $115.90 | $649.75 |  | weekly check: #3 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-28 | 🔴 Sell | LINK | $22.61 | $629.01 | -$80.18 | LINK closed below its 50-day average (its uptrend broke) |
-| 2025-01-28 | 🔴 Sell | LTC | $109.92 | $670.54 | -$38.82 | LTC closed below its 50-day average (its uptrend broke) |
-| 2025-01-25 | 🔴 Sell | XLM | $0.4172 | $657.54 | -$117.46 | XLM closed below its 50-day average (its uptrend broke) |
-| 2025-01-22 | 🟢 Buy | LINK | $25.30 | $706.67 |  | weekly check: #3 by 120-day gain (+108%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-22 | 🟢 Buy | LTC | $115.38 | $706.67 |  | weekly check: #4 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-22 | 🟢 Buy | SOL | $257.36 | $706.67 |  | weekly check: #5 by 120-day gain (+69%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-20 | 🔴 Sell | SUI | $4.42 | $702.82 | -$72.36 | SUI closed below its 50-day average (its uptrend broke) |
-| 2025-01-19 | 🔴 Sell | ADA | $0.9930 | $710.27 | -$64.94 | ADA closed below its 50-day average (its uptrend broke) |
-| 2025-01-19 | 🔴 Sell | DOGE | $0.3584 | $715.44 | -$59.79 | DOGE closed below its 50-day average (its uptrend broke) |
-| 2025-01-15 | 🟢 Buy | ADA | $1.08 | $772.37 |  | weekly check: #5 by 120-day gain (+222%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-15 | 🟢 Buy | DOGE | $0.3854 | $772.37 |  | weekly check: #4 by 120-day gain (+281%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-15 | 🟢 Buy | SUI | $4.84 | $772.37 |  | weekly check: #3 by 120-day gain (+314%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-15 | 🟢 Buy | XLM | $0.4881 | $772.37 |  | weekly check: #2 by 120-day gain (+416%), in an uptrend, with bitcoin in an uptrend |
-| 2025-01-15 | 🟢 Buy | XRP | $3.14 | $772.37 |  | weekly check: #1 by 120-day gain (+438%), in an uptrend, with bitcoin in an uptrend |
-| 2024-12-27 | 🔴 Sell | SUI | $4.08 | $755.97 | $365.93 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-12-27 | 🔴 Sell | XRP | $2.15 | $1,010.42 | $484.58 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-12-27 | 🔴 Sell | UNI | $13.35 | $790.81 | -$39.52 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-12-26 | 🔴 Sell | ADA | $0.8611 | $565.98 | $35.59 | ADA closed below its 50-day average (its uptrend broke) |
-| 2024-12-26 | 🔴 Sell | XLM | $0.3547 | $754.16 | $223.01 | XLM closed below its 50-day average (its uptrend broke) |
-| 2024-12-25 | 🟢 Buy | UNI | $13.91 | $827.17 |  | weekly check: #5 by 120-day gain (+143%), in an uptrend, with bitcoin in an uptrend |
-| 2024-12-19 | 🔴 Sell | DOGE | $0.3143 | $830.49 | $455.85 | DOGE closed below its 50-day average (its uptrend broke) |
-| 2024-11-20 | 🔴 Sell | SOL | $235.48 | $588.35 | $198.98 | no longer one of the top 5 at the weekly check |
-| 2024-11-20 | 🔴 Sell | TRX | $0.1947 | $468.78 | $79.88 | no longer one of the top 5 at the weekly check |
-| 2024-11-20 | 🔴 Sell | BTC | $94,286.56 | $527.26 | $150.84 | no longer one of the top 5 at the weekly check |
-| 2024-11-20 | 🟢 Buy | ADA | $0.8003 | $528.13 |  | weekly check: #4 by 120-day gain (+95%), in an uptrend, with bitcoin in an uptrend |
-| 2024-11-20 | 🟢 Buy | XLM | $0.2474 | $528.13 |  | weekly check: #3 by 120-day gain (+145%), in an uptrend, with bitcoin in an uptrend |
-| 2024-11-20 | 🟢 Buy | XRP | $1.10 | $521.80 |  | weekly check: #5 by 120-day gain (+85%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-23 | 🔴 Sell | AVAX | $26.75 | $368.00 | -$20.49 | no longer one of the top 5 at the weekly check |
-| 2024-10-23 | 🔴 Sell | XLM | $0.0944 | $380.63 | -$7.91 | no longer one of the top 5 at the weekly check |
-| 2024-10-23 | 🟢 Buy | BTC | $66,668.65 | $374.32 |  | weekly check: #5 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-23 | 🟢 Buy | DOGE | $0.1400 | $371.32 |  | weekly check: #4 by 120-day gain (+11%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-16 | 🟢 Buy | AVAX | $28.02 | $387.02 |  | weekly check: #4 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-16 | 🟢 Buy | SOL | $154.28 | $387.02 |  | weekly check: #3 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-16 | 🟢 Buy | SUI | $2.08 | $387.02 |  | weekly check: #1 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-16 | 🟢 Buy | TRX | $0.1601 | $387.02 |  | weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-16 | 🟢 Buy | XLM | $0.0956 | $387.02 |  | weekly check: #5 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
-| 2024-10-09 | 🔴 Sell | SUI | $1.88 | $510.10 | $149.21 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-10-09 | 🔴 Sell | TRX | $0.1605 | $383.45 | $23.07 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-10-02 | 🔴 Sell | XRP | $0.5383 | $328.76 | -$31.39 | XRP closed below its 50-day average (its uptrend broke) |
-| 2024-09-18 | 🟢 Buy | SUI | $1.31 | $358.84 |  | weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
-| 2024-09-18 | 🟢 Buy | TRX | $0.1496 | $358.84 |  | weekly check: #1 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
-| 2024-09-18 | 🟢 Buy | XRP | $0.5852 | $358.84 |  | weekly check: #3 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
-| 2024-08-02 | 🔴 Sell | TRX | $0.1236 | $349.01 | -$31.09 | TRX closed below its 50-day average (its uptrend broke) |
-| 2024-08-02 | 🔴 Sell | BNB | $542.90 | $351.71 | -$24.67 | BNB closed below its 50-day average (its uptrend broke) |
-| 2024-08-02 | 🔴 Sell | XRP | $0.5607 | $336.13 | -$40.19 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-07-31 | 🟢 Buy | BNB | $576.50 | $374.98 |  | weekly check: #3 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
-| 2024-07-31 | 🟢 Buy | XRP | $0.6230 | $374.98 |  | weekly check: #2 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend |
-| 2024-07-24 | 🔴 Sell | BTC | $65,376.00 | $384.77 | $4.53 | no longer one of the top 5 at the weekly check |
-| 2024-07-24 | 🔴 Sell | XRP | $0.6179 | $372.31 | -$7.88 | no longer one of the top 5 at the weekly check |
-| 2024-07-17 | 🟢 Buy | BTC | $64,087.99 | $378.71 |  | weekly check: #3 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend |
-| 2024-07-17 | 🟢 Buy | TRX | $0.1336 | $378.71 |  | weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend |
-| 2024-07-17 | 🟢 Buy | XRP | $0.6260 | $378.71 |  | weekly check: #2 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend |
-| 2024-06-18 | 🔴 Sell | UNI | $9.77 | $387.06 | -$30.04 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-06-18 | 🔴 Sell | BTC | $65,175.32 | $371.82 | -$20.67 | BTC closed below its 50-day average (its uptrend broke) |
-| 2024-06-18 | 🔴 Sell | ETH | $3,483.42 | $381.05 | -$11.48 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-06-13 | 🔴 Sell | BNB | $599.80 | $377.12 | -$15.40 | BNB closed below its 50-day average (its uptrend broke) |
-| 2024-06-12 | 🟢 Buy | BNB | $619.40 | $391.01 |  | weekly check: #1 by 120-day gain (+91%), in an uptrend, with bitcoin in an uptrend |
-| 2024-06-12 | 🟢 Buy | BTC | $68,263.99 | $391.01 |  | weekly check: #3 by 120-day gain (+37%), in an uptrend, with bitcoin in an uptrend |
-| 2024-06-12 | 🟢 Buy | ETH | $3,560.12 | $391.01 |  | weekly check: #4 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend |
-| 2024-06-11 | 🔴 Sell | SOL | $149.31 | $392.24 | -$27.44 | SOL closed below its 50-day average (its uptrend broke) |
-| 2024-06-11 | 🔴 Sell | BNB | $602.50 | $400.84 | -$11.43 | BNB closed below its 50-day average (its uptrend broke) |
-| 2024-06-08 | 🔴 Sell | BCH | $469.50 | $404.18 | -$25.45 | BCH closed below its 50-day average (its uptrend broke) |
-| 2024-06-07 | 🔴 Sell | DOGE | $0.1482 | $364.55 | -$47.58 | DOGE closed below its 50-day average (its uptrend broke) |
-| 2024-06-05 | 🔴 Sell | ETH | $3,865.99 | $421.43 | $10.66 | no longer one of the top 5 at the weekly check |
-| 2024-06-05 | 🟢 Buy | BCH | $495.20 | $428.01 |  | weekly check: #2 by 120-day gain (+111%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-29 | 🔴 Sell | BTC | $67,652.42 | $425.53 | $5.72 | no longer one of the top 5 at the weekly check |
-| 2024-05-29 | 🟢 Buy | UNI | $10.44 | $415.56 |  | weekly check: #3 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-22 | 🔴 Sell | TRX | $0.1201 | $395.80 | -$23.89 | no longer one of the top 5 at the weekly check |
-| 2024-05-22 | 🟢 Buy | BNB | $614.80 | $410.67 |  | weekly check: #3 by 120-day gain (+106%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-22 | 🟢 Buy | DOGE | $0.1663 | $410.67 |  | weekly check: #1 by 120-day gain (+113%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-22 | 🟢 Buy | ETH | $3,737.73 | $409.09 |  | weekly check: #5 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-15 | 🟢 Buy | BTC | $66,206.50 | $418.11 |  | weekly check: #2 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-15 | 🟢 Buy | SOL | $158.52 | $418.11 |  | weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
-| 2024-05-15 | 🟢 Buy | TRX | $0.1263 | $418.11 |  | weekly check: #3 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
-| 2024-04-13 | 🔴 Sell | BNB | $553.10 | $414.92 | -$61.62 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-04-13 | 🔴 Sell | BCH | $479.60 | $359.51 | -$47.66 | BCH closed below its 50-day average (its uptrend broke) |
-| 2024-04-13 | 🔴 Sell | BTC | $63,924.51 | $406.99 | -$16.29 | BTC closed below its 50-day average (its uptrend broke) |
-| 2024-04-13 | 🔴 Sell | DOGE | $0.1525 | $362.68 | -$57.05 | DOGE closed below its 50-day average (its uptrend broke) |
-| 2024-04-12 | 🔴 Sell | SOL | $153.16 | $554.82 | $184.75 | SOL closed below its 50-day average (its uptrend broke) |
-| 2024-04-03 | 🔴 Sell | AVAX | $45.89 | $415.31 | $47.19 | AVAX closed below its 50-day average (its uptrend broke) |
-| 2024-04-03 | 🔴 Sell | SUI | $1.67 | $427.99 | -$25.48 | SUI closed below its 50-day average (its uptrend broke) |
-| 2024-04-03 | 🟢 Buy | BTC | $65,963.28 | $421.65 |  | weekly check: #5 by 120-day gain (+50%), in an uptrend, with bitcoin in an uptrend |
-| 2024-04-03 | 🟢 Buy | DOGE | $0.1752 | $418.28 |  | weekly check: #4 by 120-day gain (+86%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-27 | 🔴 Sell | UNI | $12.25 | $407.36 | $40.79 | no longer one of the top 5 at the weekly check |
-| 2024-03-27 | 🟢 Buy | BCH | $539.10 | $405.74 |  | weekly check: #5 by 120-day gain (+141%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-20 | 🟢 Buy | SUI | $1.75 | $451.76 |  | weekly check: #2 by 120-day gain (+249%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-14 | 🔴 Sell | SUI | $1.57 | $453.58 | -$19.33 | SUI closed below its 50-day average (its uptrend broke) |
-| 2024-03-13 | 🔴 Sell | DOGE | $0.1690 | $474.23 | $27.56 | no longer one of the top 5 at the weekly check |
-| 2024-03-13 | 🔴 Sell | DOT | $11.37 | $475.55 | $31.03 | no longer one of the top 5 at the weekly check |
-| 2024-03-13 | 🟢 Buy | BNB | $630.50 | $474.89 |  | weekly check: #5 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-13 | 🟢 Buy | SUI | $1.62 | $471.09 |  | weekly check: #3 by 120-day gain (+186%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-06 | 🔴 Sell | ADA | $0.7349 | $537.48 | $111.79 | no longer one of the top 5 at the weekly check |
-| 2024-03-06 | 🟢 Buy | DOGE | $0.1578 | $444.77 |  | weekly check: #4 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-06 | 🟢 Buy | DOT | $10.54 | $442.62 |  | weekly check: #5 by 120-day gain (+114%), in an uptrend, with bitcoin in an uptrend |
-| 2024-03-04 | 🔴 Sell | SUI | $1.49 | $353.47 | -$15.79 | SUI closed below its 50-day average (its uptrend broke) |
-| 2024-02-28 | 🔴 Sell | LINK | $19.43 | $378.31 | $8.95 | no longer one of the top 5 at the weekly check |
-| 2024-02-28 | 🟢 Buy | AVAX | $40.33 | $366.46 |  | weekly check: #2 by 120-day gain (+256%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-28 | 🟢 Buy | UNI | $10.93 | $364.95 |  | weekly check: #4 by 120-day gain (+163%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-23 | 🔴 Sell | AVAX | $35.92 | $356.03 | -$65.55 | AVAX closed below its 50-day average (its uptrend broke) |
-| 2024-02-14 | 🔴 Sell | BTC | $51,795.17 | $427.89 | $58.33 | no longer one of the top 5 at the weekly check |
-| 2024-02-14 | 🔴 Sell | ETH | $2,774.81 | $419.21 | $49.68 | no longer one of the top 5 at the weekly check |
-| 2024-02-14 | 🟢 Buy | ADA | $0.5768 | $423.55 |  | weekly check: #5 by 120-day gain (+134%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-14 | 🟢 Buy | AVAX | $42.22 | $420.16 |  | weekly check: #3 by 120-day gain (+364%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-07 | 🟢 Buy | BTC | $44,349.60 | $367.85 |  | weekly check: #4 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-07 | 🟢 Buy | ETH | $2,425.10 | $367.85 |  | weekly check: #5 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-07 | 🟢 Buy | LINK | $18.82 | $367.85 |  | weekly check: #3 by 120-day gain (+159%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-07 | 🟢 Buy | SOL | $101.14 | $367.85 |  | weekly check: #1 by 120-day gain (+357%), in an uptrend, with bitcoin in an uptrend |
-| 2024-02-07 | 🟢 Buy | SUI | $1.54 | $367.85 |  | weekly check: #2 by 120-day gain (+271%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-16 | 🔴 Sell | ADA | $0.2257 | $664.02 | -$18.62 | ADA closed below its 50-day average (its uptrend broke) |
+| 2026-10-14 | 🔴 Sell | LINK | $12.44 | $671.03 | $96.37 | LINK closed below its 50-day average (its uptrend broke) |
+| 2026-10-14 | 🟢 Buy | ADA | $0.2302 | $679.98 |  | weekly check: #2 by 120-day gain (+34%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-14 | 🟢 Buy | BTC | $81,682.01 | $679.98 |  | weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-14 | 🟢 Buy | SUI | $1.02 | $679.98 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-12 | 🔴 Sell | UNI | $6.97 | $907.17 | $331.43 | UNI closed below its 50-day average (its uptrend broke) |
+| 2026-10-12 | 🔴 Sell | SOL | $105.76 | $582.12 | $34.57 | SOL closed below its 50-day average (its uptrend broke) |
+| 2026-10-08 | 🔴 Sell | ETH | $2,474.80 | $646.18 | -$60.55 | ETH closed below its 50-day average (its uptrend broke) |
+| 2026-10-07 | 🔴 Sell | SUI | $1.13 | $674.21 | -$27.00 | no longer one of the top 5 at the weekly check |
+| 2026-10-07 | 🟢 Buy | AVAX | $11.13 | $671.51 |  | weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-30 | 🔴 Sell | HYPE | $90.94 | $742.82 | $167.87 | no longer one of the top 5 at the weekly check |
+| 2026-09-30 | 🔴 Sell | XLM | $0.2263 | $665.47 | $119.85 | no longer one of the top 5 at the weekly check |
+| 2026-09-30 | 🟢 Buy | ETH | $2,686.01 | $704.14 |  | weekly check: #4 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-30 | 🟢 Buy | SUI | $1.16 | $698.51 |  | weekly check: #5 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-16 | 🔴 Sell | BNB | $725.92 | $565.06 | -$1.97 | no longer one of the top 5 at the weekly check |
+| 2026-09-16 | 🟢 Buy | SOL | $98.66 | $545.22 |  | weekly check: #4 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-16 | 🟢 Buy | XLM | $0.1839 | $542.96 |  | weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-10 | 🔴 Sell | XLM | $0.1746 | $527.49 | -$7.26 | XLM closed below its 50-day average (its uptrend broke) |
+| 2026-09-09 | 🔴 Sell | SOL | $101.57 | $567.04 | -$7.35 | no longer one of the top 5 at the weekly check |
+| 2026-09-09 | 🟢 Buy | BNB | $722.64 | $564.77 |  | weekly check: #5 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
+| 2026-09-02 | 🟢 Buy | XLM | $0.1756 | $532.64 |  | weekly check: #5 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-30 | 🔴 Sell | XLM | $0.1746 | $534.78 | -$37.19 | XLM closed below its 50-day average (its uptrend broke) |
+| 2026-08-26 | 🔴 Sell | TRX | $0.3360 | $572.41 | -$1.85 | no longer one of the top 5 at the weekly check |
+| 2026-08-26 | 🟢 Buy | SOL | $102.07 | $572.12 |  | weekly check: #4 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-26 | 🟢 Buy | UNI | $4.38 | $572.12 |  | weekly check: #2 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-26 | 🟢 Buy | XLM | $0.1853 | $569.83 |  | weekly check: #5 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-19 | 🟢 Buy | HYPE | $69.75 | $571.97 |  | weekly check: #1 by 120-day gain (+75%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-19 | 🟢 Buy | LINK | $10.56 | $571.97 |  | weekly check: #2 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-19 | 🟢 Buy | TRX | $0.3344 | $571.97 |  | weekly check: #3 by 120-day gain (+0%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-14 | 🔴 Sell | TRX | $0.3327 | $595.48 | $4.75 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-08-13 | 🔴 Sell | UNI | $3.48 | $503.75 | -$86.61 | UNI closed below its 50-day average (its uptrend broke) |
+| 2026-08-05 | 🟢 Buy | TRX | $0.3274 | $588.34 |  | weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
+| 2026-08-05 | 🟢 Buy | UNI | $4.05 | $588.34 |  | weekly check: #1 by 120-day gain (+23%), in an uptrend, with bitcoin in an uptrend |
+| 2026-07-31 | 🔴 Sell | UNI | $4.35 | $658.92 | $80.97 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-07-31 | 🔴 Sell | TRX | $0.3261 | $577.06 | -$4.09 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-07-29 | 🟢 Buy | TRX | $0.3258 | $578.84 |  | weekly check: #2 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
+| 2026-07-28 | 🔴 Sell | TRX | $0.3248 | $565.87 | -$11.71 | TRX closed below its 50-day average (its uptrend broke) |
+| 2026-07-22 | 🟢 Buy | TRX | $0.3289 | $575.31 |  | weekly check: #1 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend |
+| 2026-07-22 | 🟢 Buy | UNI | $3.78 | $575.31 |  | weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
+| 2026-07-16 | 🔴 Sell | HYPE | $60.70 | $530.79 | -$58.31 | HYPE closed below its 50-day average (its uptrend broke) |
+| 2026-07-15 | 🟢 Buy | HYPE | $66.86 | $586.97 |  | weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
+| 2026-05-22 | 🔴 Sell | TRX | $0.3623 | $694.46 | $79.69 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-05-22 | 🔴 Sell | TON | $1.84 | $465.40 | -$160.76 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-05-22 | 🔴 Sell | HYPE | $54.58 | $593.73 | -$7.57 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-05-20 | 🟢 Buy | HYPE | $54.84 | $598.92 |  | weekly check: #1 by 120-day gain (+161%), in an uptrend, with bitcoin in an uptrend |
+| 2026-05-12 | 🔴 Sell | HYPE | $40.26 | $580.43 | -$46.19 | HYPE closed below its 50-day average (its uptrend broke) |
+| 2026-05-06 | 🟢 Buy | HYPE | $43.12 | $624.30 |  | weekly check: #1 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
+| 2026-05-06 | 🟢 Buy | TON | $2.45 | $624.30 |  | weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend |
+| 2026-04-30 | 🔴 Sell | HYPE | $39.69 | $624.20 | $9.71 | HYPE closed below its 50-day average (its uptrend broke) |
+| 2026-04-08 | 🟢 Buy | HYPE | $38.76 | $611.99 |  | weekly check: #1 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
+| 2026-04-08 | 🟢 Buy | TRX | $0.3180 | $611.99 |  | weekly check: #2 by 120-day gain (+13%), in an uptrend, with bitcoin in an uptrend |
+| 2026-03-26 | 🔴 Sell | HYPE | $39.15 | $598.35 | -$22.80 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-03-26 | 🔴 Sell | TRX | $0.3115 | $610.20 | -$10.99 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-03-25 | 🟢 Buy | HYPE | $40.32 | $618.75 |  | weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend |
+| 2026-03-25 | 🟢 Buy | TRX | $0.3146 | $618.75 |  | weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
+| 2026-03-19 | 🔴 Sell | HYPE | $39.35 | $585.72 | -$45.93 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-03-19 | 🔴 Sell | TRX | $0.3036 | $624.94 | -$6.87 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2026-03-18 | 🟢 Buy | HYPE | $42.11 | $629.31 |  | weekly check: #1 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
+| 2026-03-18 | 🟢 Buy | TRX | $0.3045 | $629.31 |  | weekly check: #2 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
+| 2026-01-14 | 🔴 Sell | BCH | $597.40 | $596.67 | -$36.67 | no longer one of the top 5 at the weekly check |
+| 2026-01-14 | 🔴 Sell | BNB | $948.47 | $662.05 | $28.45 | no longer one of the top 5 at the weekly check |
+| 2026-01-07 | 🟢 Buy | BCH | $629.20 | $630.95 |  | weekly check: #1 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend |
+| 2026-01-07 | 🟢 Buy | BNB | $900.30 | $630.95 |  | weekly check: #2 by 120-day gain (+2%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-10 | 🔴 Sell | BNB | $1,102.47 | $739.95 | $45.26 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-10-10 | 🔴 Sell | SOL | $188.43 | $584.67 | -$109.39 | SOL closed below its 50-day average (its uptrend broke) |
+| 2025-10-10 | 🔴 Sell | BCH | $513.50 | $566.03 | -$81.57 | BCH closed below its 50-day average (its uptrend broke) |
+| 2025-10-09 | 🔴 Sell | XLM | $0.3794 | $656.43 | -$37.92 | XLM closed below its 50-day average (its uptrend broke) |
+| 2025-10-09 | 🔴 Sell | ETH | $4,368.09 | $620.36 | -$27.45 | ETH closed below its 50-day average (its uptrend broke) |
+| 2025-10-08 | 🟢 Buy | BCH | $583.10 | $645.33 |  | weekly check: #5 by 120-day gain (+33%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-08 | 🟢 Buy | ETH | $4,525.72 | $645.33 |  | weekly check: #2 by 120-day gain (+61%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-07 | 🔴 Sell | AVAX | $27.93 | $626.18 | -$68.05 | AVAX closed below its 50-day average (its uptrend broke) |
+| 2025-10-07 | 🔴 Sell | BCH | $576.20 | $669.67 | -$24.74 | BCH closed below its 50-day average (its uptrend broke) |
+| 2025-10-01 | 🟢 Buy | AVAX | $30.73 | $691.72 |  | weekly check: #4 by 120-day gain (+45%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-01 | 🟢 Buy | BCH | $592.80 | $691.72 |  | weekly check: #2 by 120-day gain (+48%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-01 | 🟢 Buy | BNB | $1,026.50 | $691.72 |  | weekly check: #1 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-01 | 🟢 Buy | SOL | $222.04 | $691.72 |  | weekly check: #5 by 120-day gain (+43%), in an uptrend, with bitcoin in an uptrend |
+| 2025-10-01 | 🟢 Buy | XLM | $0.3982 | $691.72 |  | weekly check: #3 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend |
+| 2025-09-22 | 🔴 Sell | BCH | $567.10 | $692.26 | -$66.34 | BCH closed below its 50-day average (its uptrend broke) |
+| 2025-09-22 | 🔴 Sell | BNB | $992.90 | $755.03 | -$3.82 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-09-22 | 🔴 Sell | ETH | $4,199.08 | $688.61 | -$69.97 | ETH closed below its 50-day average (its uptrend broke) |
+| 2025-09-22 | 🔴 Sell | HYPE | $47.27 | $616.14 | -$142.16 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-09-21 | 🔴 Sell | LINK | $22.96 | $720.48 | -$38.23 | LINK closed below its 50-day average (its uptrend broke) |
+| 2025-09-17 | 🟢 Buy | BCH | $616.70 | $755.83 |  | weekly check: #3 by 120-day gain (+56%), in an uptrend, with bitcoin in an uptrend |
+| 2025-09-17 | 🟢 Buy | BNB | $989.98 | $755.83 |  | weekly check: #5 by 120-day gain (+52%), in an uptrend, with bitcoin in an uptrend |
+| 2025-09-17 | 🟢 Buy | ETH | $4,590.53 | $755.83 |  | weekly check: #2 by 120-day gain (+82%), in an uptrend, with bitcoin in an uptrend |
+| 2025-09-17 | 🟢 Buy | HYPE | $57.75 | $755.83 |  | weekly check: #1 by 120-day gain (+118%), in an uptrend, with bitcoin in an uptrend |
+| 2025-09-17 | 🟢 Buy | LINK | $23.99 | $755.83 |  | weekly check: #4 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
+| 2025-08-19 | 🔴 Sell | BCH | $548.50 | $733.55 | $44.61 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-08-19 | 🔴 Sell | ETH | $4,075.59 | $997.32 | $313.08 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-08-19 | 🔴 Sell | UNI | $9.95 | $663.83 | -$20.59 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-08-19 | 🔴 Sell | HYPE | $41.30 | $658.76 | -$107.07 | HYPE closed below its 50-day average (its uptrend broke) |
+| 2025-08-19 | 🔴 Sell | LINK | $23.56 | $740.86 | -$19.20 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-08-13 | 🔴 Sell | SUI | $4.00 | $742.75 | $5.68 | no longer one of the top 5 at the weekly check |
+| 2025-08-13 | 🔴 Sell | XLM | $0.4519 | $783.65 | $83.91 | no longer one of the top 5 at the weekly check |
+| 2025-08-13 | 🟢 Buy | HYPE | $47.65 | $763.20 |  | weekly check: #1 by 120-day gain (+217%), in an uptrend, with bitcoin in an uptrend |
+| 2025-08-13 | 🟢 Buy | LINK | $23.98 | $757.09 |  | weekly check: #4 by 120-day gain (+96%), in an uptrend, with bitcoin in an uptrend |
+| 2025-08-06 | 🟢 Buy | XLM | $0.4001 | $696.61 |  | weekly check: #5 by 120-day gain (+81%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-31 | 🔴 Sell | HYPE | $40.83 | $699.40 | $10.60 | HYPE closed below its 50-day average (its uptrend broke) |
+| 2025-07-23 | 🔴 Sell | XLM | $0.4278 | $684.51 | -$46.45 | no longer one of the top 5 at the weekly check |
+| 2025-07-23 | 🟢 Buy | UNI | $10.18 | $681.77 |  | weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-16 | 🔴 Sell | BTC | $118,630.43 | $744.66 | $55.67 | no longer one of the top 5 at the weekly check |
+| 2025-07-16 | 🔴 Sell | UNI | $8.90 | $723.53 | $43.17 | no longer one of the top 5 at the weekly check |
+| 2025-07-16 | 🟢 Buy | SUI | $3.94 | $734.09 |  | weekly check: #3 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-16 | 🟢 Buy | XLM | $0.4533 | $728.22 |  | weekly check: #4 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-09 | 🔴 Sell | TRX | $0.2899 | $696.48 | $7.68 | no longer one of the top 5 at the weekly check |
+| 2025-07-09 | 🟢 Buy | ETH | $2,768.74 | $680.25 |  | weekly check: #3 by 120-day gain (+44%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-09 | 🟢 Buy | UNI | $8.30 | $677.46 |  | weekly check: #4 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-04 | 🔴 Sell | ETH | $2,508.04 | $666.69 | -$21.99 | ETH closed below its 50-day average (its uptrend broke) |
+| 2025-07-02 | 🟢 Buy | BCH | $510.90 | $686.01 |  | weekly check: #2 by 120-day gain (+59%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-02 | 🟢 Buy | BTC | $108,849.60 | $686.01 |  | weekly check: #3 by 120-day gain (+25%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-02 | 🟢 Buy | ETH | $2,570.41 | $686.01 |  | weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-02 | 🟢 Buy | HYPE | $39.88 | $686.01 |  | weekly check: #1 by 120-day gain (+133%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-02 | 🟢 Buy | TRX | $0.2844 | $686.01 |  | weekly check: #5 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
+| 2025-07-01 | 🔴 Sell | BCH | $500.20 | $711.00 | $19.13 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-07-01 | 🔴 Sell | BTC | $105,681.14 | $675.66 | -$16.07 | BTC closed below its 50-day average (its uptrend broke) |
+| 2025-07-01 | 🔴 Sell | HYPE | $36.92 | $684.38 | -$7.38 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-06-26 | 🔴 Sell | TRX | $0.2710 | $680.99 | -$10.76 | TRX closed below its 50-day average (its uptrend broke) |
+| 2025-06-25 | 🟢 Buy | BCH | $482.80 | $689.03 |  | weekly check: #2 by 120-day gain (+65%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-25 | 🟢 Buy | BTC | $107,340.58 | $689.03 |  | weekly check: #3 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-25 | 🟢 Buy | HYPE | $37.02 | $689.03 |  | weekly check: #1 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-25 | 🟢 Buy | TRX | $0.2731 | $689.03 |  | weekly check: #4 by 120-day gain (+18%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-20 | 🔴 Sell | BTC | $103,297.99 | $722.73 | $58.31 | BTC closed below its 50-day average (its uptrend broke) |
+| 2025-06-20 | 🔴 Sell | HYPE | $33.37 | $889.28 | $211.66 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-06-20 | 🔴 Sell | TRX | $0.2722 | $665.50 | -$11.23 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-06-20 | 🔴 Sell | BCH | $473.70 | $647.42 | $56.29 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2025-06-18 | 🔴 Sell | ETH | $2,525.00 | $534.03 | -$56.65 | no longer one of the top 5 at the weekly check |
+| 2025-06-11 | 🟢 Buy | BCH | $428.90 | $588.55 |  | weekly check: #2 by 120-day gain (+29%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-11 | 🟢 Buy | ETH | $2,771.61 | $588.55 |  | weekly check: #5 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend |
+| 2025-06-05 | 🔴 Sell | BCH | $385.00 | $585.83 | -$65.50 | BCH closed below its 50-day average (its uptrend broke) |
+| 2025-06-05 | 🔴 Sell | BNB | $633.32 | $595.98 | -$55.39 | BNB closed below its 50-day average (its uptrend broke) |
+| 2025-05-28 | 🟢 Buy | BCH | $424.80 | $648.99 |  | weekly check: #5 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend |
+| 2025-05-28 | 🟢 Buy | BNB | $686.89 | $648.99 |  | weekly check: #4 by 120-day gain (+4%), in an uptrend, with bitcoin in an uptrend |
+| 2025-05-14 | 🟢 Buy | HYPE | $25.19 | $674.06 |  | weekly check: #2 by 120-day gain (+10%), in an uptrend, with bitcoin in an uptrend |
+| 2025-05-14 | 🟢 Buy | TRX | $0.2746 | $674.06 |  | weekly check: #1 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend |
+| 2025-04-30 | 🟢 Buy | BTC | $94,172.00 | $661.53 |  | weekly check: #1 by 120-day gain (+1%), in an uptrend, with bitcoin in an uptrend |
+| 2025-02-02 | 🔴 Sell | XRP | $2.58 | $690.89 | -$156.88 | XRP closed below its 50-day average (its uptrend broke) |
+| 2025-02-02 | 🔴 Sell | SOL | $203.51 | $608.92 | -$166.65 | SOL closed below its 50-day average (its uptrend broke) |
+| 2025-02-02 | 🔴 Sell | BTC | $97,700.59 | $666.84 | -$46.69 | BTC closed below its 50-day average (its uptrend broke) |
+| 2025-02-02 | 🔴 Sell | LTC | $109.12 | $666.60 | -$46.93 | LTC closed below its 50-day average (its uptrend broke) |
+| 2025-02-01 | 🔴 Sell | LINK | $22.98 | $687.67 | -$25.94 | LINK closed below its 50-day average (its uptrend broke) |
+| 2025-01-29 | 🟢 Buy | BTC | $103,733.24 | $710.86 |  | weekly check: #4 by 120-day gain (+71%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-29 | 🟢 Buy | LINK | $23.66 | $710.86 |  | weekly check: #2 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-29 | 🟢 Buy | LTC | $115.90 | $710.86 |  | weekly check: #3 by 120-day gain (+83%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-28 | 🔴 Sell | LINK | $22.61 | $688.17 | -$87.72 | LINK closed below its 50-day average (its uptrend broke) |
+| 2025-01-28 | 🔴 Sell | LTC | $109.92 | $733.60 | -$42.47 | LTC closed below its 50-day average (its uptrend broke) |
+| 2025-01-25 | 🔴 Sell | XLM | $0.4172 | $719.38 | -$128.51 | XLM closed below its 50-day average (its uptrend broke) |
+| 2025-01-22 | 🟢 Buy | LINK | $25.30 | $773.13 |  | weekly check: #3 by 120-day gain (+108%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-22 | 🟢 Buy | LTC | $115.38 | $773.13 |  | weekly check: #4 by 120-day gain (+73%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-22 | 🟢 Buy | SOL | $257.36 | $773.13 |  | weekly check: #5 by 120-day gain (+69%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-20 | 🔴 Sell | SUI | $4.42 | $768.92 | -$79.17 | SUI closed below its 50-day average (its uptrend broke) |
+| 2025-01-19 | 🔴 Sell | ADA | $0.9930 | $777.07 | -$71.05 | ADA closed below its 50-day average (its uptrend broke) |
+| 2025-01-19 | 🔴 Sell | DOGE | $0.3584 | $782.73 | -$65.41 | DOGE closed below its 50-day average (its uptrend broke) |
+| 2025-01-15 | 🟢 Buy | ADA | $1.08 | $845.01 |  | weekly check: #5 by 120-day gain (+222%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-15 | 🟢 Buy | DOGE | $0.3854 | $845.01 |  | weekly check: #4 by 120-day gain (+281%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-15 | 🟢 Buy | SUI | $4.84 | $845.01 |  | weekly check: #3 by 120-day gain (+314%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-15 | 🟢 Buy | XLM | $0.4881 | $845.01 |  | weekly check: #2 by 120-day gain (+416%), in an uptrend, with bitcoin in an uptrend |
+| 2025-01-15 | 🟢 Buy | XRP | $3.14 | $845.01 |  | weekly check: #1 by 120-day gain (+438%), in an uptrend, with bitcoin in an uptrend |
+| 2024-12-27 | 🔴 Sell | SUI | $4.08 | $827.07 | $400.34 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-12-27 | 🔴 Sell | XRP | $2.15 | $1,105.45 | $530.16 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-12-27 | 🔴 Sell | UNI | $13.35 | $865.19 | -$43.24 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-12-26 | 🔴 Sell | ADA | $0.8611 | $619.21 | $38.93 | ADA closed below its 50-day average (its uptrend broke) |
+| 2024-12-26 | 🔴 Sell | XLM | $0.3547 | $825.09 | $243.99 | XLM closed below its 50-day average (its uptrend broke) |
+| 2024-12-25 | 🟢 Buy | UNI | $13.91 | $904.96 |  | weekly check: #5 by 120-day gain (+143%), in an uptrend, with bitcoin in an uptrend |
+| 2024-12-19 | 🔴 Sell | DOGE | $0.3143 | $908.60 | $498.72 | DOGE closed below its 50-day average (its uptrend broke) |
+| 2024-11-20 | 🔴 Sell | SOL | $235.48 | $643.69 | $217.69 | no longer one of the top 5 at the weekly check |
+| 2024-11-20 | 🔴 Sell | TRX | $0.1947 | $512.87 | $87.40 | no longer one of the top 5 at the weekly check |
+| 2024-11-20 | 🔴 Sell | BTC | $94,286.56 | $576.85 | $165.02 | no longer one of the top 5 at the weekly check |
+| 2024-11-20 | 🟢 Buy | ADA | $0.8003 | $577.80 |  | weekly check: #4 by 120-day gain (+95%), in an uptrend, with bitcoin in an uptrend |
+| 2024-11-20 | 🟢 Buy | XLM | $0.2474 | $577.80 |  | weekly check: #3 by 120-day gain (+145%), in an uptrend, with bitcoin in an uptrend |
+| 2024-11-20 | 🟢 Buy | XRP | $1.10 | $570.87 |  | weekly check: #5 by 120-day gain (+85%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-23 | 🔴 Sell | AVAX | $26.75 | $402.61 | -$22.42 | no longer one of the top 5 at the weekly check |
+| 2024-10-23 | 🔴 Sell | XLM | $0.0944 | $416.43 | -$8.65 | no longer one of the top 5 at the weekly check |
+| 2024-10-23 | 🟢 Buy | BTC | $66,668.65 | $409.52 |  | weekly check: #5 by 120-day gain (+8%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-23 | 🟢 Buy | DOGE | $0.1400 | $406.25 |  | weekly check: #4 by 120-day gain (+11%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-16 | 🟢 Buy | AVAX | $28.02 | $423.42 |  | weekly check: #4 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-16 | 🟢 Buy | SOL | $154.28 | $423.42 |  | weekly check: #3 by 120-day gain (+12%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-16 | 🟢 Buy | SUI | $2.08 | $423.42 |  | weekly check: #1 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-16 | 🟢 Buy | TRX | $0.1601 | $423.42 |  | weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-16 | 🟢 Buy | XLM | $0.0956 | $423.42 |  | weekly check: #5 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
+| 2024-10-09 | 🔴 Sell | SUI | $1.88 | $558.07 | $163.25 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-10-09 | 🔴 Sell | TRX | $0.1605 | $419.51 | $25.24 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-10-02 | 🔴 Sell | XRP | $0.5383 | $359.68 | -$34.35 | XRP closed below its 50-day average (its uptrend broke) |
+| 2024-09-18 | 🟢 Buy | SUI | $1.31 | $392.59 |  | weekly check: #2 by 120-day gain (+15%), in an uptrend, with bitcoin in an uptrend |
+| 2024-09-18 | 🟢 Buy | TRX | $0.1496 | $392.59 |  | weekly check: #1 by 120-day gain (+21%), in an uptrend, with bitcoin in an uptrend |
+| 2024-09-18 | 🟢 Buy | XRP | $0.5852 | $392.59 |  | weekly check: #3 by 120-day gain (+9%), in an uptrend, with bitcoin in an uptrend |
+| 2024-08-02 | 🔴 Sell | TRX | $0.1236 | $381.83 | -$34.02 | TRX closed below its 50-day average (its uptrend broke) |
+| 2024-08-02 | 🔴 Sell | BNB | $542.90 | $384.79 | -$26.99 | BNB closed below its 50-day average (its uptrend broke) |
+| 2024-08-02 | 🔴 Sell | XRP | $0.5607 | $367.74 | -$43.97 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-07-31 | 🟢 Buy | BNB | $576.50 | $410.24 |  | weekly check: #3 by 120-day gain (+5%), in an uptrend, with bitcoin in an uptrend |
+| 2024-07-31 | 🟢 Buy | XRP | $0.6230 | $410.24 |  | weekly check: #2 by 120-day gain (+6%), in an uptrend, with bitcoin in an uptrend |
+| 2024-07-24 | 🔴 Sell | BTC | $65,376.00 | $420.96 | $4.95 | no longer one of the top 5 at the weekly check |
+| 2024-07-24 | 🔴 Sell | XRP | $0.6179 | $407.33 | -$8.63 | no longer one of the top 5 at the weekly check |
+| 2024-07-17 | 🟢 Buy | BTC | $64,087.99 | $414.32 |  | weekly check: #3 by 120-day gain (+3%), in an uptrend, with bitcoin in an uptrend |
+| 2024-07-17 | 🟢 Buy | TRX | $0.1336 | $414.32 |  | weekly check: #1 by 120-day gain (+19%), in an uptrend, with bitcoin in an uptrend |
+| 2024-07-17 | 🟢 Buy | XRP | $0.6260 | $414.32 |  | weekly check: #2 by 120-day gain (+7%), in an uptrend, with bitcoin in an uptrend |
+| 2024-06-18 | 🔴 Sell | UNI | $9.77 | $423.47 | -$32.87 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-06-18 | 🔴 Sell | BTC | $65,175.32 | $406.79 | -$22.62 | BTC closed below its 50-day average (its uptrend broke) |
+| 2024-06-18 | 🔴 Sell | ETH | $3,483.42 | $416.89 | -$12.56 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-06-13 | 🔴 Sell | BNB | $599.80 | $412.59 | -$16.84 | BNB closed below its 50-day average (its uptrend broke) |
+| 2024-06-12 | 🟢 Buy | BNB | $619.40 | $427.78 |  | weekly check: #1 by 120-day gain (+91%), in an uptrend, with bitcoin in an uptrend |
+| 2024-06-12 | 🟢 Buy | BTC | $68,263.99 | $427.78 |  | weekly check: #3 by 120-day gain (+37%), in an uptrend, with bitcoin in an uptrend |
+| 2024-06-12 | 🟢 Buy | ETH | $3,560.12 | $427.78 |  | weekly check: #4 by 120-day gain (+35%), in an uptrend, with bitcoin in an uptrend |
+| 2024-06-11 | 🔴 Sell | SOL | $149.31 | $429.13 | -$30.02 | SOL closed below its 50-day average (its uptrend broke) |
+| 2024-06-11 | 🔴 Sell | BNB | $602.50 | $438.54 | -$12.50 | BNB closed below its 50-day average (its uptrend broke) |
+| 2024-06-08 | 🔴 Sell | BCH | $469.50 | $442.19 | -$27.85 | BCH closed below its 50-day average (its uptrend broke) |
+| 2024-06-07 | 🔴 Sell | DOGE | $0.1482 | $398.84 | -$52.05 | DOGE closed below its 50-day average (its uptrend broke) |
+| 2024-06-05 | 🔴 Sell | ETH | $3,865.99 | $461.07 | $11.66 | no longer one of the top 5 at the weekly check |
+| 2024-06-05 | 🟢 Buy | BCH | $495.20 | $468.27 |  | weekly check: #2 by 120-day gain (+111%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-29 | 🔴 Sell | BTC | $67,652.42 | $465.55 | $6.26 | no longer one of the top 5 at the weekly check |
+| 2024-05-29 | 🟢 Buy | UNI | $10.44 | $454.64 |  | weekly check: #3 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-22 | 🔴 Sell | TRX | $0.1201 | $433.02 | -$26.14 | no longer one of the top 5 at the weekly check |
+| 2024-05-22 | 🟢 Buy | BNB | $614.80 | $449.29 |  | weekly check: #3 by 120-day gain (+106%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-22 | 🟢 Buy | DOGE | $0.1663 | $449.29 |  | weekly check: #1 by 120-day gain (+113%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-22 | 🟢 Buy | ETH | $3,737.73 | $447.56 |  | weekly check: #5 by 120-day gain (+67%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-15 | 🟢 Buy | BTC | $66,206.50 | $457.43 |  | weekly check: #2 by 120-day gain (+53%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-15 | 🟢 Buy | SOL | $158.52 | $457.43 |  | weekly check: #1 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
+| 2024-05-15 | 🟢 Buy | TRX | $0.1263 | $457.43 |  | weekly check: #3 by 120-day gain (+17%), in an uptrend, with bitcoin in an uptrend |
+| 2024-04-13 | 🔴 Sell | BNB | $553.10 | $449.27 | -$66.72 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-04-13 | 🔴 Sell | BCH | $479.60 | $395.85 | -$52.48 | BCH closed below its 50-day average (its uptrend broke) |
+| 2024-04-13 | 🔴 Sell | BTC | $63,924.51 | $444.34 | -$17.79 | BTC closed below its 50-day average (its uptrend broke) |
+| 2024-04-13 | 🔴 Sell | DOGE | $0.1525 | $395.97 | -$62.28 | DOGE closed below its 50-day average (its uptrend broke) |
+| 2024-04-12 | 🔴 Sell | SOL | $153.16 | $610.89 | $203.42 | SOL closed below its 50-day average (its uptrend broke) |
+| 2024-04-03 | 🔴 Sell | AVAX | $45.89 | $457.29 | $51.96 | AVAX closed below its 50-day average (its uptrend broke) |
+| 2024-04-03 | 🔴 Sell | SUI | $1.67 | $463.42 | -$27.59 | SUI closed below its 50-day average (its uptrend broke) |
+| 2024-04-03 | 🟢 Buy | BTC | $65,963.28 | $460.35 |  | weekly check: #5 by 120-day gain (+50%), in an uptrend, with bitcoin in an uptrend |
+| 2024-04-03 | 🟢 Buy | DOGE | $0.1752 | $456.67 |  | weekly check: #4 by 120-day gain (+86%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-27 | 🔴 Sell | UNI | $12.25 | $448.54 | $44.91 | no longer one of the top 5 at the weekly check |
+| 2024-03-27 | 🟢 Buy | BCH | $539.10 | $446.74 |  | weekly check: #5 by 120-day gain (+141%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-20 | 🟢 Buy | SUI | $1.75 | $489.15 |  | weekly check: #2 by 120-day gain (+249%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-14 | 🔴 Sell | SUI | $1.57 | $491.12 | -$20.93 | SUI closed below its 50-day average (its uptrend broke) |
+| 2024-03-13 | 🔴 Sell | ADA | $0.7638 | $615.08 | $146.26 | no longer one of the top 5 at the weekly check |
+| 2024-03-13 | 🔴 Sell | DOGE | $0.1690 | $413.31 | $24.02 | no longer one of the top 5 at the weekly check |
+| 2024-03-13 | 🟢 Buy | BNB | $630.50 | $514.20 |  | weekly check: #5 by 120-day gain (+160%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-13 | 🟢 Buy | SUI | $1.62 | $510.08 |  | weekly check: #3 by 120-day gain (+186%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-06 | 🟢 Buy | DOGE | $0.1578 | $387.64 |  | weekly check: #4 by 120-day gain (+115%), in an uptrend, with bitcoin in an uptrend |
+| 2024-03-04 | 🔴 Sell | SUI | $1.49 | $389.19 | -$17.39 | SUI closed below its 50-day average (its uptrend broke) |
+| 2024-02-28 | 🔴 Sell | LINK | $19.43 | $416.55 | $9.86 | no longer one of the top 5 at the weekly check |
+| 2024-02-28 | 🟢 Buy | AVAX | $40.33 | $403.50 |  | weekly check: #2 by 120-day gain (+256%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-28 | 🟢 Buy | UNI | $10.93 | $401.83 |  | weekly check: #4 by 120-day gain (+163%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-23 | 🔴 Sell | AVAX | $35.92 | $392.02 | -$72.17 | AVAX closed below its 50-day average (its uptrend broke) |
+| 2024-02-14 | 🔴 Sell | BTC | $51,795.17 | $471.13 | $64.22 | no longer one of the top 5 at the weekly check |
+| 2024-02-14 | 🔴 Sell | ETH | $2,774.81 | $461.58 | $54.71 | no longer one of the top 5 at the weekly check |
+| 2024-02-14 | 🟢 Buy | ADA | $0.5768 | $466.36 |  | weekly check: #5 by 120-day gain (+134%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-14 | 🟢 Buy | AVAX | $42.22 | $462.63 |  | weekly check: #3 by 120-day gain (+364%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-07 | 🟢 Buy | BTC | $44,349.60 | $405.03 |  | weekly check: #4 by 120-day gain (+62%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-07 | 🟢 Buy | ETH | $2,425.10 | $405.03 |  | weekly check: #5 by 120-day gain (+55%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-07 | 🟢 Buy | LINK | $18.82 | $405.03 |  | weekly check: #3 by 120-day gain (+159%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-07 | 🟢 Buy | SOL | $101.14 | $405.03 |  | weekly check: #1 by 120-day gain (+357%), in an uptrend, with bitcoin in an uptrend |
+| 2024-02-07 | 🟢 Buy | SUI | $1.54 | $405.03 |  | weekly check: #2 by 120-day gain (+271%), in an uptrend, with bitcoin in an uptrend |
 | 2024-01-14 | 🔴 Sell | SOL | $93.81 | $736.61 | $551.32 | bitcoin closed below its 50-day average, so the bot moved to cash |
 | 2024-01-14 | 🔴 Sell | AVAX | $35.29 | $388.03 | $157.96 | AVAX closed below its 50-day average (its uptrend broke) |
-| 2024-01-14 | 🔴 Sell | DOT | $7.32 | $244.15 | -$11.47 | bitcoin closed below its 50-day average, so the bot moved to cash |
-| 2024-01-14 | 🔴 Sell | ADA | $0.5251 | $238.03 | -$20.52 | ADA closed below its 50-day average (its uptrend broke) |
-| 2024-01-12 | 🔴 Sell | LINK | $14.15 | $239.81 | -$17.59 | LINK closed below its 50-day average (its uptrend broke) |
-| 2024-01-10 | 🔴 Sell | SUI | $0.8420 | $287.34 | -$2.89 | no longer one of the top 5 at the weekly check |
-| 2024-01-10 | 🟢 Buy | ADA | $0.5660 | $257.60 |  | weekly check: #4 by 120-day gain (+131%), in an uptrend, with bitcoin in an uptrend |
-| 2024-01-10 | 🟢 Buy | LINK | $15.07 | $256.45 |  | weekly check: #3 by 120-day gain (+153%), in an uptrend, with bitcoin in an uptrend |
+| 2024-01-14 | 🔴 Sell | SUI | $1.25 | $439.21 | $139.96 | bitcoin closed below its 50-day average, so the bot moved to cash |
+| 2024-01-14 | 🔴 Sell | ADA | $0.5251 | $233.82 | -$20.16 | ADA closed below its 50-day average (its uptrend broke) |
+| 2024-01-12 | 🔴 Sell | LINK | $14.15 | $235.59 | -$17.28 | LINK closed below its 50-day average (its uptrend broke) |
+| 2024-01-10 | 🔴 Sell | BTC | $46,653.99 | $278.24 | $50.44 | no longer one of the top 5 at the weekly check |
+| 2024-01-10 | 🟢 Buy | ADA | $0.5660 | $253.05 |  | weekly check: #4 by 120-day gain (+131%), in an uptrend, with bitcoin in an uptrend |
+| 2024-01-10 | 🟢 Buy | LINK | $15.07 | $251.93 |  | weekly check: #3 by 120-day gain (+153%), in an uptrend, with bitcoin in an uptrend |
 | 2024-01-07 | 🔴 Sell | ADA | $0.4945 | $228.77 | $22.13 | ADA closed below its 50-day average (its uptrend broke) |
-| 2024-01-03 | 🟢 Buy | SUI | $0.8437 | $289.07 |  | weekly check: #5 by 120-day gain (+72%), in an uptrend, with bitcoin in an uptrend |
-| 2023-12-31 | 🔴 Sell | LINK | $14.94 | $290.23 | -$36.81 | LINK closed below its 50-day average (its uptrend broke) |
-| 2023-12-27 | 🔴 Sell | BTC | $43,428.85 | $327.19 | -$4.44 | no longer one of the top 5 at the weekly check |
-| 2023-12-27 | 🟢 Buy | LINK | $16.71 | $325.88 |  | weekly check: #3 by 120-day gain (+170%), in an uptrend, with bitcoin in an uptrend |
-| 2023-12-20 | 🟢 Buy | BTC | $43,668.93 | $330.32 |  | weekly check: #4 by 120-day gain (+68%), in an uptrend, with bitcoin in an uptrend |
+| 2024-01-03 | 🟢 Buy | SUI | $0.8437 | $297.50 |  | weekly check: #4 by 120-day gain (+72%), in an uptrend, with bitcoin in an uptrend |
+| 2023-12-31 | 🔴 Sell | LINK | $14.94 | $298.70 | -$37.88 | LINK closed below its 50-day average (its uptrend broke) |
+| 2023-12-27 | 🔴 Sell | DOGE | $0.0936 | $336.73 | $5.06 | no longer one of the top 5 at the weekly check |
+| 2023-12-27 | 🟢 Buy | LINK | $16.71 | $335.38 |  | weekly check: #3 by 120-day gain (+170%), in an uptrend, with bitcoin in an uptrend |
+| 2023-12-20 | 🟢 Buy | DOGE | $0.0915 | $330.32 |  | weekly check: #5 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend |
 | 2023-12-17 | 🔴 Sell | LINK | $14.01 | $331.65 | $147.97 | LINK closed below its 50-day average (its uptrend broke) |
-| 2023-12-13 | 🔴 Sell | BTC | $42,869.03 | $255.67 | $27.95 | no longer one of the top 5 at the weekly check |
-| 2023-12-13 | 🟢 Buy | DOT | $7.60 | $254.64 |  | weekly check: #5 by 120-day gain (+58%), in an uptrend, with bitcoin in an uptrend |
 | 2023-12-06 | 🔴 Sell | TRX | $0.1048 | $206.55 | $0.98 | no longer one of the top 5 at the weekly check |
 | 2023-12-06 | 🟢 Buy | ADA | $0.4429 | $205.72 |  | weekly check: #4 by 120-day gain (+49%), in an uptrend, with bitcoin in an uptrend |
 | 2023-11-29 | 🔴 Sell | ADA | $0.3816 | $205.57 | -$1.05 | no longer one of the top 5 at the weekly check |
@@ -526,12 +518,12 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-17:** $3,020.77
-- **Total profit / loss:** **$2,020.77 (+202.1%)**
-  - From coins already sold: $2,151.75 (72 of 192 sells made money)
-  - On coins still held: -$130.98
-- **Fees paid (included above):** $665.14
-- **Trades:** 196 buys, 192 sells
+- **Value on 2026-10-17:** $3,325.89
+- **Total profit / loss:** **$2,325.89 (+232.6%)**
+  - From coins already sold: $2,448.17 (73 of 190 sells made money)
+  - On coins still held: -$122.28
+- **Fees paid (included above):** $708.24
+- **Trades:** 193 buys, 190 sells
 
 [Journal](crypto/backtest/journal-rotation.md)
 
@@ -574,41 +566,41 @@ Each bot's value at the end of each month.
 
 | Month end | Rotation bot | Buy-and-hold bot |
 |---|---|---|
-| 2026-10 | $3,021 | $3,226 |
-| 2026-09 | $3,636 | $3,504 |
-| 2026-08 | $2,822 | $3,187 |
-| 2026-07 | $2,689 | $2,411 |
-| 2026-06 | $2,683 | $2,271 |
-| 2026-05 | $2,683 | $2,746 |
-| 2026-04 | $2,819 | $2,864 |
-| 2026-03 | $2,797 | $2,686 |
-| 2026-02 | $2,876 | $2,641 |
-| 2026-01 | $2,876 | $3,215 |
-| 2025-12 | $2,884 | $3,723 |
-| 2025-11 | $2,884 | $3,877 |
-| 2025-10 | $2,884 | $5,051 |
-| 2025-09 | $3,161 | $5,451 |
-| 2025-08 | $3,454 | $5,322 |
-| 2025-07 | $3,333 | $4,946 |
-| 2025-06 | $3,203 | $4,283 |
-| 2025-05 | $3,202 | $4,269 |
-| 2025-04 | $3,021 | $3,796 |
-| 2025-03 | $3,023 | $3,337 |
-| 2025-02 | $3,023 | $3,747 |
-| 2025-01 | $3,420 | $5,297 |
-| 2024-12 | $3,862 | $4,665 |
-| 2024-11 | $4,501 | $5,364 |
-| 2024-10 | $2,012 | $3,812 |
-| 2024-09 | $1,946 | $3,526 |
-| 2024-08 | $1,794 | $3,230 |
-| 2024-07 | $1,872 | $3,932 |
-| 2024-06 | $1,894 | $3,665 |
-| 2024-05 | $2,034 | $4,050 |
-| 2024-04 | $2,091 | $3,290 |
-| 2024-03 | $2,678 | $4,508 |
-| 2024-02 | $2,074 | $3,370 |
-| 2024-01 | $1,839 | $2,444 |
-| 2023-12 | $2,060 | $2,494 |
+| 2026-10 | $3,326 | $3,226 |
+| 2026-09 | $3,978 | $3,504 |
+| 2026-08 | $3,087 | $3,187 |
+| 2026-07 | $2,942 | $2,411 |
+| 2026-06 | $2,935 | $2,271 |
+| 2026-05 | $2,935 | $2,746 |
+| 2026-04 | $3,084 | $2,864 |
+| 2026-03 | $3,060 | $2,686 |
+| 2026-02 | $3,147 | $2,641 |
+| 2026-01 | $3,147 | $3,215 |
+| 2025-12 | $3,155 | $3,723 |
+| 2025-11 | $3,155 | $3,877 |
+| 2025-10 | $3,155 | $5,051 |
+| 2025-09 | $3,459 | $5,451 |
+| 2025-08 | $3,779 | $5,322 |
+| 2025-07 | $3,646 | $4,946 |
+| 2025-06 | $3,505 | $4,283 |
+| 2025-05 | $3,504 | $4,269 |
+| 2025-04 | $3,305 | $3,796 |
+| 2025-03 | $3,308 | $3,337 |
+| 2025-02 | $3,308 | $3,747 |
+| 2025-01 | $3,741 | $5,297 |
+| 2024-12 | $4,225 | $4,665 |
+| 2024-11 | $4,924 | $5,364 |
+| 2024-10 | $2,201 | $3,812 |
+| 2024-09 | $2,129 | $3,526 |
+| 2024-08 | $1,963 | $3,230 |
+| 2024-07 | $2,048 | $3,932 |
+| 2024-06 | $2,072 | $3,665 |
+| 2024-05 | $2,226 | $4,050 |
+| 2024-04 | $2,287 | $3,290 |
+| 2024-03 | $2,931 | $4,508 |
+| 2024-02 | $2,283 | $3,370 |
+| 2024-01 | $2,025 | $2,444 |
+| 2023-12 | $2,047 | $2,494 |
 | 2023-11 | $1,471 | $1,867 |
 | 2023-10 | $1,207 | $1,512 |
 | 2023-09 | $912 | $1,146 |
