@@ -8,11 +8,26 @@ This file is not an agent and does nothing on its own.
 
 MODEL = "claude-sonnet-5-5"
 
+# Prices used to estimate each run's cost (dollars). Check anthropic.com/pricing.
+PRICE_IN, PRICE_OUT = 2.00 / 1e6, 10.00 / 1e6    # per token, Claude Sonnet 5.5
+PRICE_SEARCH = 10.00 / 1000                       # per web search
 
-def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=MODEL):
-    """One AI call. Returns (text, input_tokens, output_tokens, was_cut_off)."""
+SPENT = {"in": 0, "out": 0, "searches": 0}        # running total for this run
+
+
+def estimated_cost():
+    """Dollars spent so far in this run, from the token and search counts."""
+    return (SPENT["in"] * PRICE_IN + SPENT["out"] * PRICE_OUT
+            + SPENT["searches"] * PRICE_SEARCH)
+
+
+def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=MODEL,
+             effort=None):
+    """One AI call. Returns (text, input_tokens, output_tokens, was_cut_off).
+    effort: "low", "medium" or "high" (None = the model's default). Lower
+    effort means less thinking and fewer searches, so it costs less."""
     messages = [{"role": "user", "content": prompt}]
-    extra = {}
+    extra = {"output_config": {"effort": effort}} if effort else {}
     if use_search:
         extra["tools"] = [{
             "type": "web_search_20260209",
@@ -27,10 +42,14 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
             model=model, max_tokens=max_tokens, messages=messages, **extra)
         tokens_in += response.usage.input_tokens
         tokens_out += response.usage.output_tokens
+        tool_use = getattr(response.usage, "server_tool_use", None)
+        SPENT["searches"] += getattr(tool_use, "web_search_requests", 0) or 0
         if response.stop_reason != "pause_turn":
             break
         messages.append({"role": "assistant", "content": response.content})
 
+    SPENT["in"] += tokens_in
+    SPENT["out"] += tokens_out
     text = "".join(b.text for b in response.content if b.type == "text").strip()
     if response.stop_reason == "refusal":
         text = text or "(The AI declined to write this part.)"

@@ -5,14 +5,11 @@ Run it like this:
     python agents/stock_research.py
 
 It covers:
-  - what is pumping: the day's top gainers, small caps, and new stocks (IPOs)
-  - three themes: AI and tech, nuclear and uranium, and critical minerals
+  - top things today and stocks to research (big movers, new stocks)
+  - AI and tech, and nuclear and critical minerals
   - earnings: results since yesterday versus estimates, and upcoming dates
-    with the EPS and revenue estimates
-  - analyst upgrades and downgrades on the theme stocks
-  - insider buying and trades disclosed by members of Congress
-  - government contracts and policy that affect the themes
-  - company events coming up in the next 7 days
+    with the EPS and revenue estimates (from Yahoo Finance)
+  - smart money: analyst moves, insider buying, and Congress trades
 
 Before the AI starts, it pulls free live numbers with yfinance (no API key
 needed): moves for every stock in WATCHLIST, the day's top gainers and most
@@ -20,8 +17,9 @@ active stocks, and upcoming earnings dates with analyst estimates. The AI is
 told to treat these numbers as facts and to research why things are moving.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
-It makes three AI calls: two research calls (with web search) and one short
-call that writes the summary at the top. The brief is saved in reports/stocks/.
+It makes ONE AI call with at most SEARCHES web searches, to keep each run
+under about $1 (the log shows the estimated cost). The brief is saved in
+reports/stocks/.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 """
@@ -32,11 +30,13 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 
-from research_tools import research_parts, write_summary
+from research_tools import estimated_cost, run_call
 
 # ---------------- SETTINGS ----------------
-SEARCHES_PER_PART = 8     # cap on web searches for each research call (cost control)
-MAX_TOKENS = 6000         # cap on the length of each answer
+SEARCHES = 5              # cap on web searches per run (the main cost control)
+MAX_TOKENS = 8000         # cap on the length of the answer
+EFFORT = "medium"         # less thinking than the default, to keep the cost down
+BUDGET = 1.00             # warn in the log if a run costs more than this (dollars)
 STOCK_FOLDER = os.path.join("reports", "stocks")
 EARNINGS_WITHIN_DAYS = 14 # list watchlist earnings due within this many days
 SCREEN_COUNT = 10         # how many stocks to take from each Yahoo screen
@@ -155,130 +155,61 @@ SHARED_RULES = """Rules:
 - Use plain language and short sentences.
 - Start directly with the first section heading. Do not add a title."""
 
-INTRO = """You are a stock market researcher writing a daily brief for an
-active trader who wants to find opportunities early. Today is {weekday},
-{date}. Use web search to find current information.
+PROMPT = """You are a stock market researcher writing a short daily brief for
+an active trader who wants to find opportunities early. Today is {weekday},
+{date}. Use web search for current news. Search efficiently: one search can
+cover several topics, so combine them.
 
 LIVE DATA pulled a few minutes ago (treat these numbers as facts; the moves
-are from the last completed trading day):
+are from the last completed trading day, and the earnings dates and
+estimates come from Yahoo Finance, so you do not need to search for them):
 {snapshot}
-"""
 
-PART_A = INTRO + """
-Cover these sections, in this order. Keep the whole answer under 1400 words.
-
-## 1. Market overview
-Two or three sentences: how the major US indexes and futures are doing and
-the main reasons given.
-
-## 2. What is pumping
-For the biggest movers in the live data screens, and any other stock you find
-up sharply on news: what the company does, why it moved (earnings, a deal, a
-contract, an upgrade, a short squeeze, social media hype), and its market cap.
-Add a "Red flags:" note for very small companies, stocks with heavy share
-dilution, or moves with no news. Cover at most 8 stocks. Then list recent IPOs
-(last 2 weeks) and IPOs expected in the next 2 weeks, with dates.
-
-## 3. AI and tech
-The most important news for AI and tech stocks: chip demand, data center
-spending, new AI models and products, big deals and partnerships, export
-controls, and any big move in the watchlist and why.
-
-## 4. Nuclear and uranium
-Reactor approvals and restarts, small modular reactor news, power deals with
-tech companies, uranium prices and supply, and government support.
-
-## 5. Critical minerals and mining
-Rare earths, lithium, copper, nickel, cobalt, and gold: prices, supply deals,
-export limits (especially from China), US government stakes or funding, and
-new mines.
-
-""" + SHARED_RULES
-
-PART_B = INTRO + """
-Cover these sections, in this order. Keep the whole answer under 1400 words.
-
-## 6. Earnings results since yesterday
-Notable companies that reported since yesterday morning: earnings per share
-and revenue versus estimates, guidance, and how the stock reacted. Focus on
-the three themes and on large companies.
-
-## 7. Earnings calendar for the next 7 days
-Companies in the three themes, plus the largest US companies, that report in
-the next 7 days: date, before the open or after the close, EPS estimate, and
-revenue estimate. Use the estimates in the live data when they are there.
-Add what the market will watch most in each report, in a few words.
-
-## 8. Analyst moves
-Upgrades, downgrades, initiations, and big price target changes on stocks in
-the three themes in the last day.
-
-## 9. Insider and Congress trades
-Notable insider buying or selling (Form 4 filings) in the three themes, and
-stock trades disclosed by members of Congress in the last few days. Give who,
-what, how much, and when.
-
-## 10. Government and policy
-Government contracts, funding, stakes, export controls, tariffs, and
-regulation that affect AI, chips, nuclear, or minerals.
-
-## 11. Coming up
-Company events in the next 7 days, such as product launches, investor days,
-and big conferences, with dates.
-
-""" + SHARED_RULES
-
-SUMMARY_PROMPT = """Below are two research sections written today for a stock
-trader. Today is {weekday}, {date}.
-
-Write four short parts, using only the information below. Do not add any new
-facts.
+Write these sections, in this order. Keep the whole brief under 1,100 words.
 
 ## Top things today
-At most 6 items, most important first. One or two sentences each, ending with
+At most 5 items, most important first. One or two sentences each, ending with
 "Why it matters:" and a short phrase.
 
 ## Stocks to research
-A table with columns: Ticker | Theme | Move | Why | Red flags. At most 8 rows.
-If there are none, write "No stocks stood out today."
+A table with columns: Ticker | Theme | Move | Why | Red flags. Up to 6 stocks
+from the live data's big movers and watchlist, plus any IPO or new stock
+making a big move. Red flags: very small company, heavy dilution, or a move
+with no news.
 
-## Earnings this week
-A table with columns: Date | Ticker | Before open or after close | EPS estimate |
-Revenue estimate. Sorted by date. If there are none, write "No earnings found."
+## AI and tech
+The 2 to 4 most important news items for AI and chip stocks.
+
+## Nuclear and critical minerals
+The 2 to 4 most important news items for nuclear, uranium, rare earths,
+lithium, copper and gold miners, including government deals and export limits.
+
+## Earnings
+First, notable results since yesterday versus estimates and how the stock
+reacted. Then a table of the watchlist earnings in the live data: Date |
+Ticker | Before open or after close (if known) | EPS estimate | Revenue estimate.
 
 ## Smart money
-At most 5 bullets on notable insider, Congress, or analyst moves.
+At most 4 bullets on notable analyst upgrades or downgrades, insider buying,
+or trades disclosed by members of Congress in the three themes.
 
-Do not tell the reader to buy or sell, and do not predict prices.
-
-SECTIONS FOLLOW
-
-{part_a}
-
-{part_b}
-"""
+""" + SHARED_RULES
 
 
 def build_brief(client, now):
-    """Run the three calls. Returns (markdown_body, total_in, total_out)."""
+    """One research call. Returns (markdown_body, total_in, total_out)."""
     snapshot = market_snapshot(now.date())
-    values = {"weekday": now.strftime("%A"), "date": now.strftime("%Y-%m-%d"),
-              "snapshot": snapshot}
-    parts, total_in, total_out = research_parts(
-        client, [("Part A", PART_A), ("Part B", PART_B)], values,
-        SEARCHES_PER_PART, MAX_TOKENS)
-
-    summary, t_in, t_out = write_summary(
-        client, SUMMARY_PROMPT.format(part_a=parts[0], part_b=parts[1], **values),
-        MAX_TOKENS)
-    total_in += t_in
-    total_out += t_out
-
-    body = (summary
-            + "\n\n---\n\n# Details: movers and themes\n\n" + parts[0]
-            + "\n\n---\n\n# Details: earnings, smart money, and policy\n\n" + parts[1]
-            + "\n\n---\n\n# Live data used\n\n```\n" + snapshot + "\n```\n")
-    return body, total_in, total_out
+    prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
+                           snapshot=snapshot)
+    text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
+                                                max_searches=SEARCHES, max_tokens=MAX_TOKENS,
+                                                effort=EFFORT)
+    if not text:
+        raise SystemExit("The research call returned no text, so nothing was saved.")
+    if cut:
+        text += "\n\n(The brief was cut off because it hit the length limit.)"
+    body = text + "\n\n---\n\n# Live data used\n\n```\n" + snapshot + "\n```\n"
+    return body, tokens_in, tokens_out
 
 
 def main(now=None):
@@ -298,7 +229,9 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    cost = estimated_cost()
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
+    print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))
     return path
 
 

@@ -5,14 +5,12 @@ Run it like this:
     python agents/crypto_research.py
 
 It covers:
-  - what is pumping: top gainers, trending coins, new alt coins and meme coins
-  - whale activity: large buys, sells, and transfers, and who made them
-  - money flows: bitcoin and ether ETF flows, stablecoin supply
-  - government and regulation: US bills (including low-profile ones), SEC and
-    CFTC actions, and crypto laws in other countries
-  - adoption: countries and companies buying bitcoin, and companies adding
-    crypto or stablecoin payments
-  - risks and catalysts: hacks, token unlocks, and scheduled events
+  - top things today
+  - coins to research: gainers, trending coins, new alt and meme coins
+  - whale watch: large buys, sells, and transfers, and who made them
+  - government and regulation: US bills, SEC and CFTC, other countries
+  - who is buying bitcoin and adopting crypto payments
+  - the next 7 days: unlocks, upgrades, hearings
 
 Before the AI starts, it pulls free live numbers (no API key needed) from
 CoinGecko (trending coins, biggest movers) and alternative.me (the Fear and
@@ -20,9 +18,9 @@ Greed Index). The AI is told to treat these numbers as facts and to research
 why each coin is moving.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no exchange or
-wallet access. It makes three AI calls: two research calls (with web search)
-and one short call that writes the summary at the top. The brief is saved in
-reports/crypto/.
+wallet access. It makes ONE AI call with at most SEARCHES web searches, to
+keep each run under about $1 (the log shows the estimated cost). The brief
+is saved in reports/crypto/.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 """
@@ -35,11 +33,13 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 
-from research_tools import research_parts, write_summary
+from research_tools import estimated_cost, run_call
 
 # ---------------- SETTINGS ----------------
-SEARCHES_PER_PART = 8     # cap on web searches for each research call (cost control)
-MAX_TOKENS = 6000         # cap on the length of each answer
+SEARCHES = 5              # cap on web searches per run (the main cost control)
+MAX_TOKENS = 8000         # cap on the length of the answer
+EFFORT = "medium"         # less thinking than the default, to keep the cost down
+BUDGET = 1.00             # warn in the log if a run costs more than this (dollars)
 CRYPTO_FOLDER = os.path.join("reports", "crypto")
 MOVERS_TO_LIST = 12       # how many top gainers to hand the AI
 WHALE_MIN_USD = "$10 million"   # what counts as a whale move
@@ -131,138 +131,63 @@ SHARED_RULES = """Rules:
 - Use plain language and short sentences.
 - Start directly with the first section heading. Do not add a title."""
 
-INTRO = """You are a crypto market researcher writing a daily brief for an
-active trader who wants to spot moves early. Today is {weekday}, {date}.
-"Last day" means the last 24 hours. Use web search to find current information.
+PROMPT = """You are a crypto market researcher writing a short daily brief for
+an active trader who wants to spot moves early. Today is {weekday}, {date}.
+Use web search for current news. Search efficiently: one search can cover
+several topics, so combine them.
 
-LIVE DATA pulled a few minutes ago (treat these numbers as facts):
+LIVE DATA pulled a few minutes ago (treat these numbers as facts; you do not
+need to search for prices):
 {snapshot}
-"""
 
-PART_A = INTRO + """
-Cover these sections, in this order. Keep the whole answer under 1300 words.
-
-## 1. Market overview
-Two or three sentences: how bitcoin, ether, and the overall market moved, the
-Fear and Greed reading, and the main reasons given.
-
-## 2. What is pumping
-For the biggest gainers and trending coins in the live data, and any other alt
-coin or meme coin you find pumping hard in the last day (including brand-new
-launches on Solana, Base, or other chains): what the coin is, why it is
-moving (news, listing, partnership, social media hype, a famous account
-posting about it), how long it has existed, and its market cap and volume.
-Add a "Red flags:" note when you see any: very new, very small market cap,
-low liquidity, a few wallets holding most of the supply, anonymous team,
-unlocked team tokens, or a pump with no news. Cover at most 8 coins, most
-notable first.
-
-## 3. Whale activity
-Large purchases, sales, and transfers worth at least {whale_min} in the last
-day, from sources such as Whale Alert, Lookonchain, Arkham, Santiment, or
-on-chain news. For each: the coin, the amount and its dollar value, when it
-happened, who it was if known (a fund, an exchange, a known trader, a
-government, or an unknown wallet), and the direction (bought, sold, moved to
-an exchange, or moved off an exchange). Note when a whale bought a small coin
-early, before it pumped. Note that moves onto exchanges often come before
-selling and moves off exchanges often mean holding, but do not treat this as
-certain.
-
-## 4. Money flows
-Spot bitcoin and ether ETF net flows from the last trading day, any large
-stablecoin minting or burning, and any notable fund or treasury flows.
-
-""" + SHARED_RULES
-
-PART_B = INTRO + """
-Cover these sections, in this order. Keep the whole answer under 1300 words.
-
-## 5. US government and regulation
-What Congress, the White House, the Treasury, the SEC, and the CFTC said or did
-about crypto in the last day, and what is scheduled. For each bill: its name
-and number, what it would do, and where it stands (introduced, in committee,
-passed one chamber, signed). Look for low-profile bills, amendments added to
-larger bills, and quiet rule changes that got little news coverage, and say
-where you found them (for example congress.gov or the Federal Register). Also
-cover state-level bitcoin reserve bills.
-
-## 6. Other countries
-Crypto laws, bans, approvals, central bank digital currency news, and tax
-changes in other countries in the last few days.
-
-## 7. Who is buying bitcoin
-Countries, governments, and public companies buying bitcoin or adding it to
-reserves or treasuries: who, how much, when, and their total holdings if
-reported. Include sovereign wealth funds and pension funds.
-
-## 8. Adoption and payments
-Companies adding crypto or stablecoin payments, banks and payment firms
-launching crypto services, and big partnerships or exchange listings.
-
-## 9. Risks
-Hacks, exploits, rug pulls, exchange problems, lawsuits, and enforcement
-actions in the last day.
-
-## 10. Coming up
-Scheduled events in the next 7 days that could move crypto: large token
-unlocks (coin, amount, dollar value, date), network upgrades, votes or
-hearings, ETF decision deadlines, and big conferences. Give dates.
-
-""" + SHARED_RULES
-
-SUMMARY_PROMPT = """Below are two research sections written today for a crypto
-trader. Today is {weekday}, {date}.
-
-Write four short parts, using only the information below. Do not add any new
-facts.
+Write these sections, in this order. Keep the whole brief under 1,100 words.
 
 ## Top things today
-At most 6 items, most important first. One or two sentences each, ending with
+At most 5 items, most important first. One or two sentences each, ending with
 "Why it matters:" and a short phrase.
 
 ## Coins to research
-A table with columns: Coin | 24h move | Why it is moving | Red flags. Include at
-most 8 coins from the "What is pumping" section. If there are none, write
-"No coins stood out today."
+A table with columns: Coin | 24h move | Why it is moving | Red flags. Up to 6
+coins from the live data's gainers and trending lists, plus any new alt coin
+or meme coin pumping hard. Red flags: very new, tiny market cap, low volume,
+a few wallets holding most of the supply, or a pump with no news.
 
 ## Whale watch
-A table with columns: When | Coin | Amount (USD) | Who | Direction. At most 8
-rows, largest first. If there are none, write "No whale moves found."
+A table with columns: When | Coin | Amount (USD) | Who | Direction. Moves of
+at least {whale_min} in the last day (Whale Alert, Lookonchain, Arkham and
+similar). Direction: bought, sold, onto an exchange, or off an exchange.
+If none were found, write "No whale moves found."
+
+## Government and regulation
+US bills (name, what it does, where it stands), SEC and CFTC actions, and
+crypto laws in other countries, in the last few days. Include low-profile
+bills or amendments if you find them.
+
+## Who is buying and adopting
+Countries, governments and companies buying bitcoin, and companies adding
+crypto or stablecoin payments.
 
 ## Next 7 days
-A table with columns: Date | Event | Coin or topic. Sorted by date. If there
-are none, write "No scheduled events found."
+A table with columns: Date | Event | Coin or topic. Token unlocks, upgrades,
+hearings, ETF deadlines. If none, write "No scheduled events found."
 
-Do not tell the reader to buy or sell, and do not predict prices.
-
-SECTIONS FOLLOW
-
-{part_a}
-
-{part_b}
-"""
+""" + SHARED_RULES
 
 
 def build_brief(client, now):
-    """Run the three calls. Returns (markdown_body, total_in, total_out)."""
+    """One research call. Returns (markdown_body, total_in, total_out)."""
     snapshot = market_snapshot()
-    values = {"weekday": now.strftime("%A"), "date": now.strftime("%Y-%m-%d"),
-              "snapshot": snapshot, "whale_min": WHALE_MIN_USD}
-    parts, total_in, total_out = research_parts(
-        client, [("Part A", PART_A), ("Part B", PART_B)], values,
-        SEARCHES_PER_PART, MAX_TOKENS)
-
-    summary, t_in, t_out = write_summary(
-        client, SUMMARY_PROMPT.format(part_a=parts[0], part_b=parts[1], **values),
-        MAX_TOKENS)
-    total_in += t_in
-    total_out += t_out
-
-    body = (summary
-            + "\n\n---\n\n# Details: market, coins, and whales\n\n" + parts[0]
-            + "\n\n---\n\n# Details: government, adoption, and what is coming\n\n" + parts[1]
-            + "\n\n---\n\n# Live data used\n\n```\n" + snapshot + "\n```\n")
-    return body, total_in, total_out
+    prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
+                           snapshot=snapshot, whale_min=WHALE_MIN_USD)
+    text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
+                                                max_searches=SEARCHES, max_tokens=MAX_TOKENS,
+                                                effort=EFFORT)
+    if not text:
+        raise SystemExit("The research call returned no text, so nothing was saved.")
+    if cut:
+        text += "\n\n(The brief was cut off because it hit the length limit.)"
+    body = text + "\n\n---\n\n# Live data used\n\n```\n" + snapshot + "\n```\n"
+    return body, tokens_in, tokens_out
 
 
 def main(now=None):
@@ -282,7 +207,9 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    cost = estimated_cost()
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
+    print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))
     return path
 
 
