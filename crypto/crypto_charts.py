@@ -59,7 +59,7 @@ def _x_axis(dates, x_of, base, left, right):
 
 
 def _go_live_marker(go_live, dates, x_of, top, base):
-    if not dates or not (dates[0] <= go_live <= dates[-1]):
+    if go_live is None or not dates or not (dates[0] <= go_live <= dates[-1]):
         return ""
     x = x_of(go_live)
     return (f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{base}" stroke="{LIVE}" '

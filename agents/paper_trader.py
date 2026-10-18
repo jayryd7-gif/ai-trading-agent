@@ -177,6 +177,33 @@ def journal_entry(row):
         "", "---", ""])
 
 
+def build_journal(rows, stopped_on=None):
+    """The whole journal, rebuilt from trades.csv each run, ending with totals."""
+    trades = [r for r in rows if r["signal"] == "yes"]
+    out = ["# Paper trading journal", "",
+           "Written automatically by paper_trader.py as each paper trade closes. "
+           "Nothing here is a real trade.", "", "---", ""]
+    out += [journal_entry(r) for r in trades]
+    nets = [float(r["net"]) for r in trades]
+    wins = [n for n in nets if n > 0]
+    out += ["## Total", ""]
+    if not trades:
+        out += [f"No paper trades yet. The record starts on {START_DAY}.", ""]
+        return "\n".join(out)
+    out += [f"- **Total profit / loss after fees:** **{money(sum(nets))}** "
+            f"over {len(trades)} trades",
+            f"- **Winners:** {len(wins)} ({len(wins) / len(nets):.0%}), "
+            f"**losers:** {len(nets) - len(wins)}",
+            f"- **Before fees:** {money(sum(float(r['gross']) for r in trades))}, "
+            f"fees paid: {money(sum(float(r['fees']) for r in trades))}"]
+    for name in rules.SESSIONS:
+        mine = [float(r["net"]) for r in trades if r["instrument"] == name]
+        out.append(f"- **{rules.SESSIONS[name]['name']}:** {money(sum(mine))} over {len(mine)} trades")
+    if stopped_on:
+        out.append(f"- ⛔ The ${rules.MAX_DRAWDOWN:,} max drawdown was hit on {stopped_on}.")
+    return "\n".join(out + [""])
+
+
 def by_day(rows):
     days = {}
     for r in sorted(rows, key=lambda r: r["session_start"]):
@@ -330,14 +357,9 @@ def main(argv=None, now=None):
         writer.writeheader()
         writer.writerows(rows)
 
-    new_trades = sorted((r for r in added if r["signal"] == "yes"),
-                        key=lambda r: r["session_start"])
-    if new_trades or not os.path.exists(JOURNAL):
-        existing = open(JOURNAL).read() if os.path.exists(JOURNAL) else (
-            "# Paper trading journal\n\nWritten automatically by paper_trader.py "
-            "after each session. Nothing here is a real trade.\n\n---\n\n")
-        with open(JOURNAL, "w") as f:
-            f.write(existing + "".join(journal_entry(r) for r in new_trades))
+    new_trades = [r for r in added if r["signal"] == "yes"]
+    with open(JOURNAL, "w") as f:
+        f.write(build_journal(rows, stopped_on))
 
     with open(SUMMARY, "w") as f:
         f.write(build_summary(rows, now, stopped_on))
