@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 16:20 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-18 17:29 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -11,7 +11,22 @@
 | **Rotation bot** | $1,000 | **$996.80** | -$3.20 (-0.3%) | 0% | 4 | AVAX, BCH, BTC, SUI |
 | **Buy-and-hold bot** | $1,000 | **$996.00** | -$4.00 (-0.4%) | 0% | 3 | BTC, ETH, SOL |
 
-<!-- ALPACA -->
+### 🦙 Alpaca paper account (the rotation bot, copied)
+
+Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-18 17:29 UTC.
+
+**Orders sent today:** buy AVAX $10.87, buy BCH $10.45, sell DOT $188.16
+
+| Coin | Value in Alpaca | Bot's target | Profit / loss in Alpaca |
+|---|---|---|---|
+| AVAX | $198.96 | $199.20 | -$6.05 |
+| BCH | $198.92 | $199.20 | -$5.60 |
+| BTC | $193.05 | $199.20 | -$1.80 |
+
+Alpaca does not list SUI, so those stay as cash in Alpaca. This is why Alpaca can differ from the bot.
+
+[Every Alpaca order (CSV)](crypto/alpaca-orders.csv)
+
 
 ### 🔄 Rotation bot
 
