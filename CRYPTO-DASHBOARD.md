@@ -1,15 +1,15 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 03:50 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-18 03:53 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
-## 📄 Paper trading: started 2026-10-18 with $1,000 each
+## 📄 Paper trading: started 2026-10-17 with $1,000 each
 
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
-| **Rotation bot** | $1,000 | $1,000 | $0.00 | | 0 | first buys at the next daily close |
-| **Buy-and-hold bot** | $1,000 | $1,000 | $0.00 | | 0 | first buys at the next daily close |
+| **Rotation bot** | $1,000 | **$996.00** | -$4.00 (-0.4%) | 0% | 5 | AVAX, BCH, BTC, DOT, SUI |
+| **Buy-and-hold bot** | $1,000 | **$996.00** | -$4.00 (-0.4%) | 0% | 3 | BTC, ETH, SOL |
 
 ### 🦙 Alpaca paper account (the rotation bot, copied)
 
@@ -22,11 +22,34 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 
 **Holding now**
 
-Nothing yet: the first buys happen at the first daily close.
+| Coin | Value now | Paid | Profit / loss | Share of the bot |
+|---|---|---|---|---|
+| AVAX | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
+| BCH | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
+| BTC | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
+| DOT | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
+| SUI | $199.20 | $200.00 | -$0.80 (-0.4%) | 20% |
+| Cash | $0.00 | | | 0% |
+
+**Latest trades**
+
+| Date | | Coin | Price | Amount | Profit / loss | Why |
+|---|---|---|---|---|---|---|
+| 2026-10-17 | 🟢 Buy | AVAX | $9.77 | $200.00 |  | weekly check: #1 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-17 | 🟢 Buy | BCH | $275.50 | $200.00 |  | weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-17 | 🟢 Buy | BTC | $81,491.04 | $200.00 |  | weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-17 | 🟢 Buy | DOT | $1.12 | $200.00 |  | weekly check: #5 by 120-day gain (+16%), in an uptrend, with bitcoin in an uptrend |
+| 2026-10-17 | 🟢 Buy | SUI | $0.9764 | $200.00 |  | weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend |
 
 **Total**
 
-No trades yet. The first buys happen at the first daily close.
+- **Started with:** $1,000.00
+- **Value on 2026-10-17:** $996.00
+- **Total profit / loss:** **-$4.00 (-0.4%)**
+  - From coins already sold: $0.00 (0 of 0 sells made money)
+  - On coins still held: -$4.00
+- **Fees paid (included above):** $4.00
+- **Trades:** 5 buys, 0 sells
 
 [Journal](crypto/journal-rotation.md)
 
@@ -36,11 +59,30 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 
 **Holding now**
 
-Nothing yet: the first buys happen at the first daily close.
+| Coin | Value now | Paid | Profit / loss | Share of the bot |
+|---|---|---|---|---|
+| BTC | $332.00 | $333.33 | -$1.33 (-0.4%) | 33% |
+| ETH | $332.00 | $333.33 | -$1.33 (-0.4%) | 33% |
+| SOL | $332.00 | $333.33 | -$1.33 (-0.4%) | 33% |
+| Cash | $0.00 | | | 0% |
+
+**Latest trades**
+
+| Date | | Coin | Price | Amount | Profit / loss | Why |
+|---|---|---|---|---|---|---|
+| 2026-10-17 | 🟢 Buy | BTC | $81,491.04 | $333.33 |  | day one: equal thirds of BTC, ETH and SOL, held for good |
+| 2026-10-17 | 🟢 Buy | ETH | $2,402.82 | $333.33 |  | day one: equal thirds of BTC, ETH and SOL, held for good |
+| 2026-10-17 | 🟢 Buy | SOL | $103.47 | $333.33 |  | day one: equal thirds of BTC, ETH and SOL, held for good |
 
 **Total**
 
-No trades yet. The first buys happen at the first daily close.
+- **Started with:** $1,000.00
+- **Value on 2026-10-17:** $996.00
+- **Total profit / loss:** **-$4.00 (-0.4%)**
+  - From coins already sold: $0.00 (0 of 0 sells made money)
+  - On coins still held: -$4.00
+- **Fees paid (included above):** $4.00
+- **Trades:** 3 buys, 0 sells
 
 [Journal](crypto/journal-hold.md)
 

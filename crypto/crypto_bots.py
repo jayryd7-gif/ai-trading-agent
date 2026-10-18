@@ -49,7 +49,7 @@ from crypto_charts import holdings_chart, value_chart, drawdown_chart
 
 # ---------------- SETTINGS ----------------
 START_CASH = 1000.0
-PAPER_START = date(2026, 10, 18)     # the paper accounts' first day (buys at its close)
+PAPER_START = date(2026, 10, 17)     # the paper accounts' first day (buys at its close)
 BACKTEST_START = date(2022, 10, 19)  # four years of history
 FEE = 0.4                        # percent per dollar bought or sold
 COINS = ["BTC", "ETH", "XRP", "BNB", "SOL", "DOGE", "ADA", "TRX", "LINK", "AVAX",

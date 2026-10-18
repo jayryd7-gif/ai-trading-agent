@@ -1,4 +1,12 @@
 account,bot,date,action,coin,price,units,dollars,fee,profit,reason
+paper,Buy-and-hold bot,2026-10-17,Buy,BTC,81491,0.0040740675,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
+paper,Buy-and-hold bot,2026-10-17,Buy,ETH,2402.82,0.13817098,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
+paper,Buy-and-hold bot,2026-10-17,Buy,SOL,103.47,3.2086595,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
+paper,Rotation bot,2026-10-17,Buy,AVAX,9.767,20.395208,200.00,0.80,,"weekly check: #1 by 120-day gain (+66%), in an uptrend, with bitcoin in an uptrend"
+paper,Rotation bot,2026-10-17,Buy,BCH,275.5,0.723049,200.00,0.80,,"weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
+paper,Rotation bot,2026-10-17,Buy,BTC,81491,0.0024444405,200.00,0.80,,"weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
+paper,Rotation bot,2026-10-17,Buy,DOT,1.116,178.49462,200.00,0.80,,"weekly check: #5 by 120-day gain (+16%), in an uptrend, with bitcoin in an uptrend"
+paper,Rotation bot,2026-10-17,Buy,SUI,0.9764,204.01475,200.00,0.80,,"weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend"
 backtest,Buy-and-hold bot,2022-10-19,Buy,BTC,19124,0.017360412,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
 backtest,Buy-and-hold bot,2022-10-19,Buy,ETH,1285.09,0.25834766,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
 backtest,Buy-and-hold bot,2022-10-19,Buy,SOL,28.86,11.503812,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
