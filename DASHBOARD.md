@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 06:19 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 06:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -11,10 +11,10 @@ Last updated 2026-10-18 06:19 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 12 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 11 hours ago | weekdays about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 36 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 37 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 22 hours ago | after each session ends |
 | 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 22 hours ago | after each session ends |
 
@@ -32,9 +32,9 @@ From the latest **List of trades** export of each chart. One trade = one entry (
 
 | Market | Export date | Trades | Wins / losses | Win rate | Total | Profit factor | Max drawdown | Forward test |
 |---|---|---|---|---|---|---|---|---|
-| Nasdaq (MNQ) | 2026-10-17 (trades since 2026-08-25) | 27 | 15 / 12 | 56% | **$3,506** | 1.82 | $1,066 | 0 trades, $0 |
-| Gold (MGC) | 2026-10-17 (trades since 2026-08-24) | 22 | 7 / 15 | 32% | **$699** | 1.30 | $1,559 | 0 trades, $0 |
-| **Both** | | 49 | 22 / 27 | 45% | **$4,206** | 1.63 | | |
+| Nasdaq (MNQ) | 2026-10-18 (trades since 2026-08-25) | 25 | 14 / 11 | 56% | **$3,684** | 1.99 | $1,066 | 0 trades, $0 |
+| Gold (MGC) | 2026-10-18 (trades since 2026-08-24) | 22 | 7 / 15 | 32% | **$699** | 1.30 | $1,559 | 0 trades, $0 |
+| **Both** | | 47 | 21 / 26 | 45% | **$4,384** | 1.72 | | |
 
 <details>
 <summary><b>Latest 10 TradingView trades</b></summary>
