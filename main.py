@@ -62,6 +62,9 @@ SESSIONS = {
     "gold": {"label": "Asia", "open": (9, 0), "zone": "Asia/Tokyo", "minutes": 480,
              "name": "Gold (MGC)"},
 }
+# A session counts as the "previous session" only if it ran at least this
+# share of its normal length. This skips holiday half-days (like Labor Day).
+FULL_SESSION_SHARE = 0.75
 GOLD_SELL_PLAN = [1, 2, 2]   # stand-in for the agent's choice (1 to 3 each)
 # ------------------------------------------
 
@@ -255,6 +258,21 @@ def write_to_journal(result, path):
     }, path=path)
 
 
+def previous_full_session(sessions, starts, i, config):
+    """Start of the last full-length session before starts[i], or None.
+
+    Holiday half-days are skipped, and a gap of more than 4 days means there
+    is no usable previous session.
+    """
+    full = FULL_SESSION_SHARE * config["minutes"] / 5
+    for j in range(i - 1, -1, -1):
+        if (starts[i] - starts[j]).days > 4:
+            return None
+        if len(sessions[starts[j]]) >= full:
+            return starts[j]
+    return None
+
+
 def run_replay(candles, instrument, journal_path=JOURNAL_PATH):
     """Replay every session in the candles. Returns a list of results."""
     config = SESSIONS[instrument]
@@ -263,9 +281,10 @@ def run_replay(candles, instrument, journal_path=JOURNAL_PATH):
     results = []
 
     for i in range(1, len(starts)):
-        previous_start, start = starts[i - 1], starts[i]
-        if (start - previous_start).days > 4:
-            continue  # too big a gap to count as the "previous" session
+        start = starts[i]
+        previous_start = previous_full_session(sessions, starts, i, config)
+        if previous_start is None:
+            continue  # no usable previous session
         key_high, key_low = find_key_levels(
             [c for _, c in sessions[previous_start]])
         result = play_session(instrument, config, start, sessions[start],

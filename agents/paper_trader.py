@@ -84,9 +84,10 @@ def new_sessions(instrument, candles, recorded, now):
     starts = list(sessions)
     expected = config["minutes"] / 5
     rows = []
-    for prev, start in zip(starts, starts[1:]):
+    for i, start in enumerate(starts[1:], 1):
+        prev = rules.previous_full_session(sessions, starts, i, config)
         key = (instrument, f"{start:%Y-%m-%d %H:%M}")
-        if key in recorded or (start - prev).days > 4:
+        if key in recorded or prev is None:
             continue
         if trading_day(start).isoformat() < START_DAY:
             continue

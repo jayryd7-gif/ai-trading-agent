@@ -10,7 +10,8 @@
 // The script picks Nasdaq or gold settings from the chart symbol.
 //
 // THE RULES (same as main.py)
-// - Key levels: the high and low of the previous session of the same kind.
+// - Key levels: the high and low of the previous full session of the same
+//   kind (holiday half-days are skipped).
 //     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
 //     Gold:   Tokyo, 9:00 AM to 5:00 PM Tokyo time (8 PM / 7 PM New York).
 // - In the first 30 minutes, a 5-minute candle closes beyond a key level,
@@ -73,11 +74,15 @@ var float pendLow   = na
 var float entryPx   = na
 var int   dir       = 0
 var bool  stopMoved = false
+var int   sessBars  = 0      // candles seen in the current session
+fullBars = (isGold ? 480 : 390) / 5 * 0.75   // shorter sessions are holiday half-days
 
 if newSess
-    if not na(curHigh)
+    // A holiday half-day (like Labor Day) is not used as the previous session.
+    if not na(curHigh) and sessBars >= fullBars
         prevHigh := curHigh
         prevLow  := curLow
+    sessBars  := 1
     curHigh   := high
     curLow    := low
     sessStart := time
@@ -86,6 +91,7 @@ if newSess
     pending   := 0
     stopMoved := false
 else if inSess
+    sessBars := sessBars + 1
     curHigh := math.max(curHigh, high)
     curLow  := math.min(curLow, low)
 
