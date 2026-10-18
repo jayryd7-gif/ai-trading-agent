@@ -29,6 +29,7 @@ import anthropic
 import main as replay                      # the replay engine (main.py)
 from key_levels import Candle
 from market_data import INSTRUMENTS
+from research_tools import log_cost
 from scorer import (BIAS_LOG, MAX_WAIT_HOURS, group_sessions, load_ohlc,
                     read_csv, score_brief)
 
@@ -279,6 +280,7 @@ def main(argv=None, now=None):
         f.write(text + "\n")
     print(f"Saved {path}")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
+    print(f"Estimated cost: ${log_cost(f'review-{instrument}', tokens_in, tokens_out, 0):.2f}")
     return path
 
 

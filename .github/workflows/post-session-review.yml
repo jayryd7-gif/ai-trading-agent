@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name "review-agent"
           git config user.email "review-agent@users.noreply.github.com"
-          git add reports/reviews no-trade-journal.md
+          git add reports/reviews no-trade-journal.md reports/costs
           git commit -m "Add ${{ steps.pick.outputs.instrument }} review and journal entry" || echo "Nothing to commit"
           for attempt in 1 2 3; do
             git pull --rebase && git push && break

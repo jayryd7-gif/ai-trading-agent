@@ -22,6 +22,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from market_data import INSTRUMENTS, get_market_facts
+from research_tools import log_cost
 
 # ---------------- SETTINGS ----------------
 MODEL = "claude-sonnet-5-5"   # a stronger model, since this one does research
@@ -86,6 +87,7 @@ def build_report(client, instrument, facts, today):
 
     input_tokens = 0
     output_tokens = 0
+    searches = 0
     response = None
 
     # A long search session can pause; keep going a few times if it does.
@@ -98,11 +100,14 @@ def build_report(client, instrument, facts, today):
         )
         input_tokens += response.usage.input_tokens
         output_tokens += response.usage.output_tokens
+        tool_use = getattr(response.usage, "server_tool_use", None)
+        searches += getattr(tool_use, "web_search_requests", 0) or 0
         if response.stop_reason != "pause_turn":
             break
         messages.append({"role": "assistant", "content": response.content})
 
     text = "".join(b.text for b in response.content if b.type == "text").strip()
+    log_cost(f"market-brief-{instrument}", input_tokens, output_tokens, searches)
     return text, input_tokens, output_tokens
 
 

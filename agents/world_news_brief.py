@@ -33,7 +33,7 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 
-from research_tools import estimated_cost, run_call
+from research_tools import log_cost, run_call
 
 # ---------------- SETTINGS ----------------
 SEARCHES = 6              # cap on web searches per run (the main cost control)
@@ -141,7 +141,7 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
-    cost = estimated_cost()
+    cost = log_cost("world-brief")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
     print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))
     return path

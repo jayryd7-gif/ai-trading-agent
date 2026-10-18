@@ -21,6 +21,30 @@ def estimated_cost():
             + SPENT["searches"] * PRICE_SEARCH)
 
 
+def log_cost(agent, tokens_in=None, tokens_out=None, searches=None):
+    """Add this run's cost to reports/costs/<agent>.csv (one file per agent, so
+    agents running at the same time never clash). Uses this run's running
+    totals unless numbers are passed in. Returns the cost in dollars."""
+    import csv
+    import os
+    from datetime import datetime, timezone
+    tokens_in = SPENT["in"] if tokens_in is None else tokens_in
+    tokens_out = SPENT["out"] if tokens_out is None else tokens_out
+    searches = SPENT["searches"] if searches is None else searches
+    cost = tokens_in * PRICE_IN + tokens_out * PRICE_OUT + searches * PRICE_SEARCH
+    folder = os.path.join("reports", "costs")
+    os.makedirs(folder, exist_ok=True)
+    path = os.path.join(folder, f"{agent}.csv")
+    new = not os.path.exists(path)
+    with open(path, "a", newline="") as f:
+        w = csv.writer(f)
+        if new:
+            w.writerow(["time_utc", "agent", "tokens_in", "tokens_out", "searches", "cost_usd"])
+        w.writerow([datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M"), agent,
+                    tokens_in, tokens_out, searches, f"{cost:.4f}"])
+    return cost
+
+
 def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=MODEL,
              effort=None):
     """One AI call. Returns (text, input_tokens, output_tokens, was_cut_off).

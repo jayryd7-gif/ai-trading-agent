@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "stock-agent"
           git config user.email "stock-agent@users.noreply.github.com"
-          git add reports/stocks
+          git add reports/stocks reports/costs
           git commit -m "Add stock brief $(date -u +%F)" || echo "Nothing to commit"
           for attempt in 1 2 3; do
             git pull --rebase && git push && break

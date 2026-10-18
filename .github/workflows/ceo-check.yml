@@ -1,0 +1,40 @@
+name: CEO Check
+
+on:
+  schedule:
+    # Times are UTC. After each kind of trading activity has been recorded.
+    - cron: "40 0 * * *"      # after the crypto bots and Alpaca (daily close)
+    - cron: "30 9 * * 1-5"    # after the gold (Tokyo) session
+    - cron: "15 22 * * 1-5"   # after the Nasdaq session
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ceo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check every agent against its rules
+        run: python agents/ceo.py
+        env:
+          PYTHONPATH: .
+
+      - name: Save the check in the repo
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "ceo-agent"
+          git config user.email "ceo-agent@users.noreply.github.com"
+          git add reports/ceo
+          git commit -m "CEO check $(date -u +'%F %H:%M')" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done

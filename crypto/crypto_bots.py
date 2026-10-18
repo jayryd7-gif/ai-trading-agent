@@ -391,6 +391,15 @@ def main():
             write_journal(os.path.join(folder, file), f"{name} journal ({account.lower()}, since {since})",
                           ABOUT[name], *bots[name])
 
+    # Each paper bot's value per day, for the weekly report
+    with open(os.path.join("crypto", "paper-values.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["date"] + list(paper))
+        dates = sorted({d["date"] for days, _ in paper.values() for d in days})
+        values = {n: {d["date"]: d["value"] for d in days} for n, (days, _) in paper.items()}
+        for day in dates:
+            w.writerow([day] + [f"{values[n].get(day, START_CASH):.2f}" for n in paper])
+
     # What the paper rotation bot holds now, for alpaca_sync.py to copy
     rot_days = paper["Rotation bot"][0]
     with open(os.path.join("crypto", "paper-targets.json"), "w") as f:

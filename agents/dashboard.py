@@ -11,6 +11,7 @@ expandable sections), the latest lean for each market, the session reviews, scor
 charts, recent results, and the agents still to be built.
 """
 
+import glob
 import os
 import re
 from datetime import datetime
@@ -35,7 +36,7 @@ LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
 LEAN_ICON = {"Bullish": "▲", "Bearish": "▼", "Neutral": "◆", "Unknown": "?"}
 
 PLANNED = [
-    ("Business research agent", "Finds fast-growing products worth selling"),
+    ("Product selling agent (separate repo)", "Main Agent from your Obsidian notes: what to sell, sourcing, advertising"),
     ("Live demo trading", "Sends the TradingView strategy's orders to a Tradovate demo or prop challenge account, behind a risk gatekeeper"),
 ]
 
@@ -318,6 +319,22 @@ def build_dashboard(now):
     if problems:
         out += ["## ⚠️ Problems", ""] + problems + [
             "", "Open the repo's Actions tab on GitHub for more detail.", ""]
+
+    # ---- CEO check and weekly report ----
+    try:
+        ceo = open(os.path.join(REPORT_FOLDER, "ceo", "latest.md")).read()
+        verdict = re.search(r"^\*\*(.+?)\*\*", ceo, re.M)
+        out += ["## 👔 CEO check", "",
+                f"**{verdict.group(1) if verdict else 'See the latest check'}** "
+                f"([read the full check]({REPORT_FOLDER}/ceo/latest.md))", ""]
+        out += details("What the CEO checked", read_body(os.path.join(REPORT_FOLDER, "ceo", "latest.md")))
+    except OSError:
+        out += ["## 👔 CEO check", "", "The CEO agent has not run yet.", ""]
+    weeklies = sorted(glob.glob(os.path.join(REPORT_FOLDER, "weekly", "*-weekly-report.md")))
+    if weeklies:
+        out += ["## 📅 Weekly report", ""]
+        out += details(f"Week ending {os.path.basename(weeklies[-1])[:10]}", read_body(weeklies[-1]))
+        out += [f"[All weekly reports]({REPORT_FOLDER}/weekly/)", ""]
 
     # ---- Paper trading ----
     glance, rest = paper_section()
