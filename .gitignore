@@ -224,3 +224,4 @@ crypto/cache/
 backtest-journal.md
 tv-latest.csv
 Session_Breakout*.csv
+!tradingview/exports/*.csv

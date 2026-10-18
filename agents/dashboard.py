@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 from charts import make_charts
 from scorer import ENOUGH_CALLS, _rate, read_csv
 from market_data import INSTRUMENTS
+from tradingview_stats import dashboard_section as tradingview_section
 
 # ---------------- SETTINGS ----------------
 REPORT_FOLDER = "reports"
@@ -328,6 +329,9 @@ def build_dashboard(now):
                 "[TradingView strategy](tradingview/breakout_strategy.pine)", ""]
     else:
         out += ["No paper trades yet.", ""]
+
+    # ---- TradingView ----
+    out += tradingview_section()
 
     # ---- Today's briefs, readable right here ----
     out += ["## Latest briefs", "",
