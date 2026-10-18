@@ -4,7 +4,7 @@ on:
   schedule:
     # Times are UTC. Shortly after the scorer, once each session has ended.
     - cron: "45 21 * * 1-5"   # Nasdaq session just ended (about 4:45-5:45 PM NY)
-    - cron: "45 10 * * 1-5"   # Asia session just ended (about 5:45-6:45 AM NY)
+    - cron: "45 10 * * 1-5"   # Asia session ended at 08:00 UTC (about 3-4 AM NY)
   workflow_dispatch:
     inputs:
       instrument:

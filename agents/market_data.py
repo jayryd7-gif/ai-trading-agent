@@ -8,17 +8,22 @@ All times are New York time.
 """
 
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 # ---------------- SETTINGS ----------------
+# "open" is the local time in "zone" (New York if no zone is given). Gold
+# follows the Tokyo open: 8:00 PM New York in summer, 7:00 PM in winter.
 INSTRUMENTS = {
     "nasdaq": {"symbol": "NQ=F", "name": "Nasdaq 100 futures",
                "label": "New York", "open": (9, 30), "minutes": 390},
     "gold": {"symbol": "GC=F", "name": "Gold futures",
-             "label": "Asia", "open": (21, 0), "minutes": 480},
+             "label": "Asia", "open": (9, 0), "zone": "Asia/Tokyo", "minutes": 480},
 }
 HISTORY_SESSIONS = 5      # how many past sessions to look back over
 STALE_AFTER_HOURS = 6     # warn if the newest candle is older than this
 # ------------------------------------------
+
+NEW_YORK = ZoneInfo("America/New_York")
 
 
 def load_candles(symbol):
@@ -42,11 +47,19 @@ def load_candles(symbol):
 
 
 def session_start(moment, config):
-    """Start time of the session this moment belongs to, or None."""
+    """Start (New York time) of the session this moment belongs to, or None.
+
+    The open is in config["zone"] (New York if not given). A session that
+    opens at 9:00 AM Tokyo time therefore moves by an hour in New York time
+    when the US clocks change, and stays at the real Tokyo open.
+    """
+    zone = ZoneInfo(config.get("zone", "America/New_York"))
     hour, minute = config["open"]
+    local = moment.replace(tzinfo=NEW_YORK).astimezone(zone)
     for days_back in (0, 1):
-        day = moment.date() - timedelta(days=days_back)
-        start = datetime(day.year, day.month, day.day, hour, minute)
+        day = local.date() - timedelta(days=days_back)
+        start = (datetime(day.year, day.month, day.day, hour, minute, tzinfo=zone)
+                 .astimezone(NEW_YORK).replace(tzinfo=None))
         if start <= moment < start + timedelta(minutes=config["minutes"]):
             return start
     return None

@@ -4,7 +4,7 @@ Follow these rules in order. Analyze the market and its moves, show your work, a
 
 ## Sessions
 - **Nasdaq (New York session):** opens at 9:30 AM New York time.
-- **Gold (Asia session):** opens at 9:00 PM New York time.
+- **Gold (Asia session):** opens with Tokyo at 9:00 AM Tokyo time. That is 8:00 PM New York time while US daylight saving time is on (March to early November) and 7:00 PM the rest of the year, because Japan does not change its clocks.
 - Be active and ready 15-30 minutes before the open.
 - Only look for breakouts in the first 30 minutes after the open.
 - Take at most one trade per session.

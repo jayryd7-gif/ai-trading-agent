@@ -2,10 +2,11 @@ name: Market Brief
 
 on:
   schedule:
-    # Times are UTC. These run about 7-8 AM and 7-8 PM New York time,
-    # which is before the 9:30 AM and 9:00 PM sessions in summer and winter.
+    # Times are UTC. The Nasdaq brief runs about 7-8 AM New York time, before
+    # the 9:30 AM open. The gold brief runs at 23:00 UTC (7 PM New York in
+    # summer, 6 PM in winter), an hour before the Tokyo open at 00:00 UTC.
     - cron: "0 12 * * 1-5"   # morning brief for Nasdaq (Mon-Fri)
-    - cron: "0 0 * * 1-5"    # evening brief for gold (Sun-Thu evenings NY)
+    - cron: "0 23 * * 0-4"   # evening brief for gold (Sun-Thu evenings NY)
   workflow_dispatch:
     inputs:
       instrument:

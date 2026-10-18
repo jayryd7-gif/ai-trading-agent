@@ -33,6 +33,7 @@ Assumptions made by this replay (change them in the SETTINGS block):
 
 import sys
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from data import SYMBOLS, load_candles, load_from_yahoo
 from journal import log_trade
@@ -52,16 +53,19 @@ ENTRY_WINDOW_MINUTES = 30              # only look for breakouts this long
 # Tested in experiments/gold_variations.py.
 CONFIRM_BREAKOUT = {"nasdaq": False, "gold": True}
 
-# Session times are New York time. Asia has no daylight saving, so you may
-# need to shift the gold open by an hour when the US clocks change.
+# "open" is the local time in "zone" (New York if no zone is given). Gold
+# opens with Tokyo at 9:00 AM Tokyo time: 8:00 PM New York in summer and
+# 7:00 PM in winter, because Japan has no daylight saving time.
 SESSIONS = {
     "nasdaq": {"label": "New York", "open": (9, 30), "minutes": 390,
                "name": "Nasdaq (MNQ)"},
-    "gold": {"label": "Asia", "open": (21, 0), "minutes": 480,
+    "gold": {"label": "Asia", "open": (9, 0), "zone": "Asia/Tokyo", "minutes": 480,
              "name": "Gold (MGC)"},
 }
 GOLD_SELL_PLAN = [1, 2, 2]   # stand-in for the agent's choice (1 to 3 each)
 # ------------------------------------------
+
+NEW_YORK = ZoneInfo("America/New_York")
 
 
 def parse_time(text):
@@ -76,11 +80,19 @@ def parse_time(text):
 
 
 def session_start(moment, config):
-    """Return the start time of the session this moment belongs to, or None."""
+    """Start (New York time) of the session this moment belongs to, or None.
+
+    The open is in config["zone"] (New York if not given). A session that
+    opens at 9:00 AM Tokyo time therefore moves by an hour in New York time
+    when the US clocks change, and stays at the real Tokyo open.
+    """
+    zone = ZoneInfo(config.get("zone", "America/New_York"))
     hour, minute = config["open"]
+    local = moment.replace(tzinfo=NEW_YORK).astimezone(zone)
     for days_back in (0, 1):
-        day = moment.date() - timedelta(days=days_back)
-        start = datetime(day.year, day.month, day.day, hour, minute)
+        day = local.date() - timedelta(days=days_back)
+        start = (datetime(day.year, day.month, day.day, hour, minute, tzinfo=zone)
+                 .astimezone(NEW_YORK).replace(tzinfo=None))
         if start <= moment < start + timedelta(minutes=config["minutes"]):
             return start
     return None

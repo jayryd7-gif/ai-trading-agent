@@ -75,8 +75,10 @@ SEARCH = {
 MIN_TRADES_PER_HALF = 6
 
 # Other times gold could be traded (hour, minute in New York time).
-OTHER_OPENS = [("Tokyo open 20:00", (20, 0)), ("Current: 21:00", (21, 0)),
-               ("London open 03:00", (3, 0)), ("New York gold open 08:20", (8, 20))]
+OTHER_OPENS = [("Current: Tokyo 9:00 AM", (9, 0), "Asia/Tokyo"),
+               ("Shanghai 9:00 AM (old 9 PM NY open)", (9, 0), "Asia/Shanghai"),
+               ("London 8:00 AM", (8, 0), "Europe/London"),
+               ("New York gold open 8:20 AM", (8, 20), "America/New_York")]
 
 
 def find_entry(session, start, key_high, key_low, opt, normal_size):
@@ -163,11 +165,11 @@ def play(instrument, session, start, key_high, key_low, opt, normal_size):
     return round(trade["banked"], 2)
 
 
-def prepare(instrument, candles, open_time=None):
+def prepare(instrument, candles, open_time=None, zone="America/New_York"):
     """Group candles into sessions (optionally with a different open time)."""
     config = dict(SESSIONS[instrument])
     if open_time:
-        config["open"] = open_time
+        config["open"], config["zone"] = open_time, zone
     timed = sorted((parse_time(c.time), c) for c in candles)
     return group_into_sessions(candles, config), timed
 
@@ -291,8 +293,8 @@ def main():
             print("\nSame breakout rules (45-minute window, confirm), "
                   "trading gold at a different time of day:")
             rows = []
-            for name, open_time in OTHER_OPENS:
-                results, _ = run(instrument, prepare(instrument, candles, open_time),
+            for name, open_time, zone in OTHER_OPENS:
+                results, _ = run(instrument, prepare(instrument, candles, open_time, zone),
                                  dict(BASE, window=45, confirm=True))
                 rows.append(summarize(name, results, middle))
             print_rows(rows)

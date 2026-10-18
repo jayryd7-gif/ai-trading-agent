@@ -176,7 +176,7 @@ def build_dashboard(now):
         when = parse_time(last["date"], last["time_ny"]) if last else None
         latest[name] = last
         runs = ("weekdays about 7-8 AM New York time" if name == "nasdaq"
-                else "Sun-Thu evenings about 7-8 PM New York time")
+                else "Sun-Thu evenings about 6-7 PM New York time")
         out.append(f"| {status_icon(when, now)} | Market brief: {name} | "
                    f"Writes the brief before the {config['label']} session | "
                    f"{age_text(when, now) if when else 'never'} | {runs} |")
