@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 18:14 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 19:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -9,14 +9,14 @@ Last updated 2026-10-18 18:14 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 12 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 22 hours ago | after each session ends |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 13 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 12 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 23 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 34 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 34 hours ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 35 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 35 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -338,64 +338,61 @@ BIAS: Neutral | CONFIDENCE: Low
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-10-15</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-10-18</b></summary>
 
-### Gold Futures Brief: Asia Session, Oct 15–16, 2026
+### Gold Futures: Asia Session Brief (Sunday, Oct 18, 2026)
 
 #### 1. What is driving gold
-- **Hot inflation:** US CPI for September rose to 3.7% a year, above expectations and the prior 3.4%. Gold dropped more than 1% on Wednesday, briefly nearing $4,086.
-- **Rebound on Thursday:** US producer prices rose 6.3% a year, against expectations of 5.4%. Even so, gold climbed above $4,150 as Treasury yields and the dollar retreated. The Dollar Index finished lower, near 102.0.
-- **Rate-hike worries:** Traders are looking ahead to the October 27–28 FOMC meeting, where another rate hike stays on the table.
-- **Fragile tone:** Saxo Bank warns that gold's technical outlook remains fragile. Another report says China's central bank bought 20 tonnes of gold again. I did not check that further.
+- Gold was on track for a small weekly loss as the dollar weakened and traders watched the Fed.
+- Hot inflation data complicated the rate outlook. US producer prices rose the most in 4-1/2 years, after a CPI report showing faster price gains in September.
+- Fed Chair Warsh gave no new signal at the IMF. Traders expect a hold this month and price a 91% chance of a hike in December (CME FedWatch). Higher rates tend to weigh on gold.
+- Oil is a risk. Oil is likely to start the week above $100 after a weekend of tanker and missile headlines.
+- Spot gold sources show prices around $4,166–$4,180. Your futures price is higher, so I use only your futures levels below.
 
 #### 2. Scheduled events (New York time)
-- **Thursday 4:30 PM:** Cleveland Fed's Beth Hammack speaks (per Kiplinger). Earlier this week, she said more tightening is needed to cool demand.
-- **Thursday 11:30 PM:** Fed Chair Kevin Warsh speaks, according to Kiplinger. This falls inside your session.
-- **Other speakers:** BoE's Bailey, the ECB's Nagel and BoC's Macklem are also due later in the Asia-session calendar. I could not confirm exact times for these.
-- **After the session:** US import prices (8:30 AM) and industrial production (9:15 AM) come on Friday.
-- **Conflicting times:** One calendar page lists Hammack and Warsh both at 4:30 PM. I treated that as less reliable. Please check the times on your own calendar.
+- **Fed:** There are no Fed speakers. The Fed entered its quiet period on Saturday, and its meeting ends Oct. 28. The decision is Oct 28 at 2:00 PM ET.
+- **China data (Monday):** One source lists industrial production, retail sales and Q3 GDP at "02:00" on Oct 19. It does not name a time zone. If that is GMT, it would be about 10 PM New York time tonight, inside your session. I could not verify this.
+- **US data:** The NAHB Housing Market Index is at 10:00 AM ET Monday, after your session ends.
+- **Earnings:** Meta, Tesla, Texas Instruments, Lam Research and IBM report Wednesday after the New York close. That is not in this session.
 
 #### 3. Key levels (from your price data)
-- **Previous session high:** 4183.30
-- **Previous session low:** 4152.70
-- **Since that session closed:** high 4197.70, low 4151.60. Price pushed above the old high and then fell back.
-- **Highest high of the last 5 Asia sessions:** 4242.30
-- **Lowest low of the last 5 Asia sessions:** 4152.70, which matches the previous session low.
-- **Previous close:** 4172.70
-- **Latest price:** 4175.00. It is inside the previous range, 8.30 below the high and 22.30 above the low. That puts it **nearer resistance (the high)** than support. It is also very close to the previous close.
+- Previous session high: **4211.20**
+- Previous session low: **4167.50**
+- Previous session close: 4208.30
+- Since that close: high **4220.40**, low **4170.10**
+- 5-session high: **4242.30**. 5-session low: **4132.00**.
+- Latest price is 4201.50. It is inside the previous range, **9.70 below the high and 34.00 above the low**. That puts it **closer to resistance** than support.
+- Price traded above the previous high (to 4220.40) and came back below it. That fits a market struggling to hold above the high.
 
 #### 4. Volume
-The previous session traded 1.07x the average of the five sessions before it, which is about normal. Participation was neither strong nor weak. It does not confirm a breakout either way.
+The previous session traded **0.91x** the average of the 5 sessions before it. That is slightly below average, so **participation was a bit weak**. Moves near the highs may lack strong backing.
 
 #### 5. Directional lean
-**Neutral, Low confidence.**
-- Price sits in the upper part of the previous range, just under the 4183.30 high. It failed to hold above that high after the 4197.70 spike.
-- Volume was average, so it gives no extra signal.
-- The news conflicts. Falling yields and a softer dollar helped gold bounce. Hot inflation and rate-hike risk are a headwind.
-- With no clear edge, I lean Neutral. This is a probability-based lean, not a prediction or a trade instruction.
+**Neutral | Confidence: Low**
+
+Price sits near the top of the previous range, which leans slightly cautious. It has also been repeatedly rejected near 4211–4220. Volume was a little light, so it does not confirm a breakout in either direction. The news is mixed. A softer dollar and lower yields help gold. Hot inflation, oil above $100 and a likely December hike cap it. Because these signals conflict, Neutral is the honest read. This is a probability-based lean, not a prediction or a trade instruction.
 
 **What would change the lean:**
-- A sustained hold above 4197.70 on firm volume would shift it toward Bullish.
-- A drop below 4152.70 or 4151.60, especially if Warsh sounds hawkish, would shift it toward Bearish.
+- Toward Bullish: a sustained hold above 4220.40 on rising volume, or a further drop in yields and the dollar.
+- Toward Bearish: a move back below 4170.10 and 4167.50, especially with a stronger dollar or higher yields from oil.
 
 #### 6. Event risk
-**High.** Fed Chair Warsh speaks during the session, and markets are pricing possible rate hikes after two hot inflation reports.
+**Medium.** The Fed is silent and US data is light, but China's data and weekend oil and geopolitical headlines could move gold during Asia hours.
 
 #### 7. Sources
-- Yahoo Finance (price data and gold report)
-- Coinpaper
+- Price data supplied (Yahoo Finance)
+- CNBC (Oct 16 gold and Warsh coverage)
+- FinanceFeeds / FXStreet (week-ahead)
+- Admiral Markets
 - BabyPips
-- InvestingLive
-- Kiplinger
-- Newsquawk
-- USAGold
-- Fortune
-- Goodreturns
-- CaptainAltcoin
+- LiteFinance
+- Investrade
+- Tradingpedia
+- JM Bullion
 
 BIAS: Neutral | CONFIDENCE: Low
 
-[Open the file](reports/2026-10-15-gold-brief.md)
+[Open the file](reports/2026-10-18-gold-brief.md)
 
 </details>
 
@@ -404,7 +401,7 @@ BIAS: Neutral | CONFIDENCE: Low
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-10-16 08:28 | ◆ Neutral | Low | Medium | 30099.50 | [read it](reports/2026-10-16-nasdaq-brief.md) |
-| gold | 2026-10-15 20:22 | ◆ Neutral | Low | High | 4175.00 | [read it](reports/2026-10-15-gold-brief.md) |
+| gold | 2026-10-18 19:12 | ◆ Neutral | Low | Medium | 4201.50 | [read it](reports/2026-10-18-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
