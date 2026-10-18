@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 03:53 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-18 04:03 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -13,7 +13,20 @@
 
 ### 🦙 Alpaca paper account (the rotation bot, copied)
 
-Not connected yet: add the ALPACA_KEY_ID and ALPACA_SECRET_KEY secrets on GitHub.
+Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-18 04:03 UTC.
+
+**Orders sent today:** buy AVAX $199.20, buy BCH $199.20, buy BTC $199.20, buy DOT $199.20
+
+| Coin | Value in Alpaca | Bot's target | Profit / loss in Alpaca |
+|---|---|---|---|
+| AVAX | $193.89 | $199.20 | -$0.50 |
+| BCH | $194.77 | $199.20 | $0.46 |
+| BTC | $194.81 | $199.20 | -$0.03 |
+| DOT | $195.18 | $199.20 | $0.31 |
+
+Alpaca does not list SUI, so those stay as cash in Alpaca. This is why Alpaca can differ from the bot.
+
+[Every Alpaca order (CSV)](crypto/alpaca-orders.csv)
 
 
 ### 🔄 Rotation bot
