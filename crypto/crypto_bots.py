@@ -15,7 +15,7 @@ THE BOTS (each starts with $1,000):
   bot             sells. The yardstick for the rotation bot.
 
 HOW IT RUNS: once a day after the daily close (00:00 UTC), it replays both
-bots from START (two years back) to the latest finished day, using real
+bots from START (four years back) to the latest finished day, using real
 daily closing prices. Days before GO_LIVE are a backtest (what the rules
 would have done). From GO_LIVE on it is paper trading: the same rules, run
 forward, with no real money. Every buy and sell is at that day's closing
@@ -47,7 +47,7 @@ from crypto_charts import holdings_chart, value_chart, drawdown_chart
 
 # ---------------- SETTINGS ----------------
 START_CASH = 1000.0
-START = date(2024, 10, 19)       # two years of history before going live
+START = date(2022, 10, 19)       # four years of history before going live
 GO_LIVE = date(2026, 10, 19)     # paper trading from this day on
 FEE = 0.4                        # percent per dollar bought or sold
 COINS = ["BTC", "ETH", "XRP", "BNB", "SOL", "DOGE", "ADA", "TRX", "LINK", "AVAX",

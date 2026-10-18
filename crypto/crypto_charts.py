@@ -44,11 +44,12 @@ def _nice_step(span):
 
 
 def _x_axis(dates, x_of, base, left, right):
-    """Month labels every 3 months, plus light vertical grid lines."""
+    """Month labels (every 3 months, or 6 for long periods)."""
     out, seen = [], set()
+    every = 6 if (dates[-1] - dates[0]).days > 3 * 365 else 3
     for d in dates:
         key = (d.year, d.month)
-        if d.day == 1 and d.month % 3 == 1 and key not in seen:
+        if d.day == 1 and (d.month - 1) % every == 0 and key not in seen:
             seen.add(key)
             x = x_of(d)
             out.append(f'<line x1="{x:.1f}" y1="{base}" x2="{x:.1f}" y2="{base + 4}" stroke="{SUBTLE}"/>')
