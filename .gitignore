@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local data and exports (not saved to GitHub)
+crypto/cache/
+backtest-journal.md
+tv-latest.csv
+Session_Breakout*.csv
