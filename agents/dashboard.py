@@ -284,7 +284,7 @@ def build_dashboard(now):
     out.append(f"| {status_icon(news_when, now)} | World news brief | Overnight news and "
                f"today's events: politics, economy, war, trade | "
                f"{age_text(news_when, now) if news_when else 'never'} | "
-               f"weekdays about 5-6 AM New York time |")
+               f"daily about 5-6 AM New York time |")
     research = {"crypto": latest_news("crypto", "crypto"),
                 "stocks": latest_news("stocks", "stock")}
     for label, key, purpose, runs in (

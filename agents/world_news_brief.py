@@ -21,8 +21,8 @@ everything else.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
 It makes ONE AI call with at most SEARCHES web searches, to keep each run
-cheap (the log shows the estimated cost). It runs on weekdays only. The
-briefing is saved in reports/news/.
+cheap (the log shows the estimated cost). It runs every day; weekend runs
+are shorter and use fewer searches. The briefing is saved in reports/news/.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 """
@@ -37,6 +37,7 @@ from research_tools import estimated_cost, run_call
 
 # ---------------- SETTINGS ----------------
 SEARCHES = 6              # cap on web searches per run (the main cost control)
+WEEKEND_SEARCHES = 3      # Saturday and Sunday: quieter news, a lighter run
 MAX_TOKENS = 8000         # cap on the length of the answer
 EFFORT = "medium"         # less thinking than the default, to keep the cost down
 BUDGET = 1.00             # warn in the log if a run costs more than this (dollars)
@@ -109,9 +110,14 @@ def build_briefing(client, now):
     """One research call. Returns (markdown_body, total_in, total_out)."""
     prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
                            countries=", ".join(COUNTRIES))
+    weekend = now.weekday() >= 5
+    if weekend:
+        prompt += ("\n\nIt is the weekend: markets are closed. Focus on what happened "
+                   "since Friday's close that could matter when markets reopen, and keep "
+                   "the whole briefing under 700 words.")
     text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
-                                                max_searches=SEARCHES, max_tokens=MAX_TOKENS,
-                                                effort=EFFORT)
+                                                max_searches=WEEKEND_SEARCHES if weekend else SEARCHES,
+                                                max_tokens=MAX_TOKENS, effort=EFFORT)
     if not text:
         raise SystemExit("The research call returned no text, so nothing was saved.")
     if cut:
