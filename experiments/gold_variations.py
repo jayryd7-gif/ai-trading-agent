@@ -31,7 +31,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import risk
 from data import SYMBOLS, load_from_yahoo
 from key_levels import check_breakout, find_key_levels
-from main import ENTRY_WINDOW_MINUTES, SESSIONS, group_into_sessions, parse_time
+from main import (CONFIRM_BREAKOUT, ENTRY_WINDOW_MINUTES, SESSIONS,
+                  group_into_sessions, parse_time)
 from risk import manage_trade, new_trade
 
 PERIOD = "60d"   # Yahoo keeps about 60 days of 5-minute candles
@@ -272,6 +273,7 @@ def search(instrument, prepared, middle):
 
 def main():
     instrument = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in SESSIONS else "gold"
+    BASE["confirm"] = CONFIRM_BREAKOUT[instrument]   # "Current rules" = main.py's rules
     candles = load_from_yahoo(SYMBOLS[instrument], interval="5m", period=PERIOD)
     prepared = prepare(instrument, candles)
     starts = list(prepared[0])

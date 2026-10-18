@@ -51,7 +51,7 @@ ENTRY_WINDOW_MINUTES = 30              # only look for breakouts this long
 
 # Wait for a second candle to close beyond the level before entering.
 # Tested in experiments/gold_variations.py.
-CONFIRM_BREAKOUT = {"nasdaq": False, "gold": True}
+CONFIRM_BREAKOUT = {"nasdaq": True, "gold": True}
 
 # "open" is the local time in "zone" (New York if no zone is given). Gold
 # opens with Tokyo at 9:00 AM Tokyo time: 8:00 PM New York in summer and

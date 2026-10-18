@@ -13,8 +13,8 @@ Follow these rules in order. Analyze the market and its moves, show your work, a
 1. Mark the high and low of the previous session of the same kind. These are your key levels.
 2. Wait for a breakout.
 3. Enter when a 5-minute candle closes above the previous high (long) or below the previous low (short).
-   - **Gold only:** wait for the next 5-minute candle to also close beyond the level. Enter at that second candle's close. If it closes back inside, there is no trade yet; keep watching for another breakout in the window.
-4. Initial stop loss: the other end of the breakout candle (its low for a long, its high for a short). For a confirmed gold breakout, use the far end of the two candles.
+   - Then wait for the next 5-minute candle to also close beyond the level. Enter at that second candle's close. If it closes back inside, there is no trade yet; keep watching for another breakout in the window.
+4. Initial stop loss: the other end of the breakout candle (its low for a long, its high for a short). With the confirming candle, use the far end of the two candles.
 5. If the market is choppy and not volatile, do not force a trade.
 
 ## Trade management: 3 targets
