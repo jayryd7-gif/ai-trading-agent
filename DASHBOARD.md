@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 00:06 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 06:19 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -8,15 +8,15 @@ Last updated 2026-10-18 00:06 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 40 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 6 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 5 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 5 hours ago | weekdays about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 30 hours ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 16 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 16 hours ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 11 hours ago | weekdays about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 36 hours ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 22 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 22 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -61,33 +61,25 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-17, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-10-18, event risk Medium</b></summary>
 
 #### Top things for today
 
-1. **Hormuz tanker incidents.** Iran's Revolutionary Guards said a tanker caught fire after hitting a mine in the Strait of Hormuz, and another tanker was hit by an unknown projectile off Saudi Arabia (AFP). The incident time is unconfirmed, and a similar mine claim was reported Oct 10, so it may not be new. At least nine ships have been attacked since Sunday, and Brent settled at $109.69, up 3.56%. Why it matters: energy prices, inflation expectations and rates.
-2. **Hot inflation data.** September CPI and PPI both came in above expectations, and the 2-year Treasury yield rose 15 bp to 4.94% on CPI day. No Fed speakers were found for today. Why it matters: rate-hike risk is an input for Nasdaq and gold.
-3. **Friday's Nasdaq drop.** The Nasdaq Composite fell 2.14% to 26,140, its biggest daily drop since July 23. The S&P 500 fell 1.09%, and the futures details were cut off from the source. Why it matters: it is the latest close, and US markets are shut today.
-4. **Trump rally in Kentucky.** A midterm campaign rally is scheduled for 2:00 PM at Truist Arena in Highland Heights, with topics not announced and statewide protests planned. Why it matters: the speech is open-ended, so any policy, tariff or Fed remarks would be unscripted.
-5. **Russia–Ukraine energy strikes.** Ukraine resumed strikes on Russian oil refineries on Oct 15 and vowed to continue. Headlines say Zelenskyy called Kyiv "done" with an energy ceasefire, but I only saw the headlines. Why it matters: refined-product and crude supply and risk appetite.
+1. **This briefing is incomplete.** The search tool failed, so no data releases, Fed speakers, hearings or Trump schedule were verified, and "Nothing found" does not mean nothing happened. Why it matters: the schedule and data picture is unknown, so check the calendars yourself.
+2. **Trump waived the new Russia-related sanctions and tariffs on Friday.** They were due to start today under the Graham Act and could have reached up to 100% on top buyers of Russian oil and gas, including China and India. The waiver lasts until the administration decides "further action is appropriate." Why it matters: it removes a tariff threat on large energy buyers, which touches oil, the dollar and risk appetite.
+3. **Ships in the Strait of Hormuz still face "indiscriminate attacks."** A maritime monitor said attacks are at their highest level since the war began (CBS, Oct. 16), and a tug was hit off the UAE overnight. Why it matters: Hormuz shipping risk links to oil, inflation and risk appetite.
+4. **Ukraine sent more than 1,000 drones at Russia and set a St. Petersburg oil export terminal on fire (AP).** Russia struck power substations in four Ukrainian regions, leaving tens of thousands of families without power. Why it matters: strikes on Russian oil export sites and Ukraine's grid link to energy and diesel prices.
+5. **Iran's hardline Kayhan newspaper said Iran should hit Israeli nuclear sites if the US strikes "Pickaxe Mountain."** Tasnim also quoted a man named Shirazi saying a "new order" governs Gulf and Hormuz shipping with no US role. Why it matters: it adds to Gulf escalation and energy transit risk.
 
 #### Today's schedule (New York time)
 
-| Time | Event | Who or where | Confirmed? |
-|---|---|---|---|
-| 8:00 AM | Executive Time | Trump, Mar-a-Lago | Yes, White House schedule |
-| 10:30 AM | Rally doors open | Truist Arena, Northern Kentucky University, Highland Heights, KY | Single source (Marshall County Daily) |
-| 2:00 PM | Political rally (midterm campaign, topics not announced) | Trump, Truist Arena, Highland Heights, KY | Yes, White House schedule, but Hoodline (citing FOX19) gives a 12:30 PM local start |
-| 7:00 PM | MAGA Inc. meeting | Trump, Mar-a-Lago | Yes, White House schedule |
-| 7:30 PM | MAGA Inc. candlelight dinner | Trump, Mar-a-Lago | Yes, White House schedule |
-
-The sources do not state a time zone for these entries. Travel times to and from Kentucky have not been announced.
+No scheduled events found.
 
 #### Event risk today
 
-Medium - No data releases, central bank events or Fed speakers were found, but the Hormuz attacks and an open-ended Trump rally speech are unscheduled risks.
+Medium - No scheduled events were confirmed, but the research was incomplete, the Hormuz and Russia–Ukraine headlines are active, and futures reopen tonight.
 
-[Read the full brief with all the details](reports/news/2026-10-17-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-18-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
