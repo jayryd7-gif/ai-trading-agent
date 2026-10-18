@@ -6,10 +6,13 @@ Run it like this (from the project folder, with PYTHONPATH set to "."):
     python agents/paper_trader.py            (both markets)
     python agents/paper_trader.py nasdaq     (one market)
 
-After each session ends, it loads that session's real 5-minute candles,
-applies the rules in main.py (30-minute window, confirming candle, 3 targets,
-stop to Target 1 after Target 2, close at the session end), and records the
-result, including sessions with no trade. It never records a session twice.
+It runs every 15 minutes during the sessions. Each time, it loads the real
+5-minute candles, applies the rules in main.py (30-minute window, confirming
+candle, 3 targets, stop to Target 1 after Target 2, close at the session end),
+and records a session as soon as its outcome is known:
+  - a trade, once it has fully closed (all targets, the stop, or session end)
+  - no trade, once the entry window has passed without a confirmed breakout
+It never records a session twice.
 
 It writes, in paper-trading/:
   trades.csv         one row per session, the raw record
@@ -78,7 +81,7 @@ def read_rows():
 
 
 def new_sessions(instrument, candles, recorded, now):
-    """Rows for finished sessions that are not in trades.csv yet."""
+    """Rows for sessions whose outcome is known and not in trades.csv yet."""
     config = rules.SESSIONS[instrument]
     sessions = rules.group_into_sessions(candles, config)
     starts = list(sessions)
@@ -91,14 +94,28 @@ def new_sessions(instrument, candles, recorded, now):
             continue
         if trading_day(start).isoformat() < START_DAY:
             continue
-        if start + timedelta(minutes=config["minutes"]) > now:
-            continue   # not finished yet
-        if len(sessions[start]) < MIN_SHARE_OF_CANDLES * expected:
+        finished = start + timedelta(minutes=config["minutes"]) <= now
+        if finished and len(sessions[start]) < MIN_SHARE_OF_CANDLES * expected:
             print(f"{instrument} {start}: only {len(sessions[start])} candles, will retry later")
             continue
+        session = sessions[start]
+        if not finished:
+            # Only use candles that have closed; the newest one may still be forming.
+            session = [(t, c) for t, c in session if t + timedelta(minutes=5) <= now]
+            if not session:
+                continue
         key_high, key_low = find_key_levels([c for _, c in sessions[prev]])
-        result = rules.play_session(instrument, config, start, sessions[start],
+        result = rules.play_session(instrument, config, start, session,
                                     key_high, key_low)
+        if not finished:
+            last_candle = session[-1][0]
+            if result is None:
+                # The last breakout candle and its confirming candle must be in.
+                window_end = start + timedelta(minutes=rules.ENTRY_WINDOW_MINUTES)
+                if last_candle < window_end:
+                    continue   # the entry window is not over yet
+            elif any("session ended" in text for _, text in result["events"]):
+                continue       # the trade is still open
         row = {"trading_day": trading_day(start).isoformat(), "instrument": instrument,
                "session_start": key[1], "signal": "no", "direction": "", "entry_time": "",
                "entry": "", "stop": "", "exit_time": "", "average_exit": "",

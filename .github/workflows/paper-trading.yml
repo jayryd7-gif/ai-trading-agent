@@ -2,18 +2,24 @@ name: Paper Trading
 
 on:
   schedule:
-    # Times are UTC. Runs after each session ends and records any finished
-    # session it has not recorded yet (both markets each time).
-    - cron: "50 21 * * 1-5"   # after the Nasdaq session (about 4:50-5:50 PM NY)
-    - cron: "15 9 * * 1-5"    # after the gold session, which ends at 08:00 UTC
+    # Times are UTC. Every 15 minutes while a session is open, so each paper
+    # trade is recorded soon after it closes. GitHub can start scheduled runs
+    # a few minutes late.
+    - cron: "*/15 13-21 * * 1-5"   # Nasdaq: 9:30 AM-4 PM New York, summer and winter
+    - cron: "*/15 0-8 * * 1-5"     # Gold: Tokyo session, 00:00-08:00 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: paper-trading
+  cancel-in-progress: false
+
 jobs:
   paper:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -24,18 +30,25 @@ jobs:
       - name: Install tools
         run: pip install yfinance
 
-      - name: Record the paper trades
+      - name: Record any paper trades that have closed
         run: python agents/paper_trader.py
         env:
           PYTHONPATH: .
 
-      - name: Save the results in the repo
+      - name: Save new results and refresh the dashboard
         if: ${{ !cancelled() }}
         run: |
+          # The summary's timestamp changes every run; only save real changes.
+          if git diff --quiet -- paper-trading/trades.csv paper-trading/paper-journal.md \
+             && git ls-files --error-unmatch paper-trading/trades.csv >/dev/null 2>&1; then
+            echo "No new sessions recorded"
+            exit 0
+          fi
+          python agents/dashboard.py
           git config user.name "paper-trader"
           git config user.email "paper-trader@users.noreply.github.com"
-          git add paper-trading
-          git commit -m "Record paper trades $(date -u +%F)" || echo "Nothing to commit"
+          git add paper-trading DASHBOARD.md reports/charts
+          git commit -m "Record paper trades $(date -u +'%F %H:%M')"
           for attempt in 1 2 3; do
             git pull --rebase && git push && break
             sleep 5
