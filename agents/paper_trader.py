@@ -48,6 +48,10 @@ COMMISSION_PER_CONTRACT = 1.00  # round-trip fees per micro contract, in dollars
 GOAL_TRADING_DAYS = 20          # paper trade at least this many days before a prop demo
 START_DAY = "2026-10-19"        # first trading day of the paper record (sessions before
                                 # it are backtest territory, see main.py)
+# Max drawdown: main.MAX_DRAWDOWN ($2,500). Once hit, no more paper trades are
+# taken. To start a fresh account after that, set this to the first trading
+# day of the new account, like "2026-11-02".
+DRAWDOWN_RESET_DAY = None
 
 # Practice challenge. These match Tradeify's GROWTH 50K evaluation as described
 # in its help center in October 2026. Prop firms change their rules, so check
@@ -66,10 +70,30 @@ FIELDS = ["trading_day", "instrument", "session_start", "signal", "direction",
           "gross", "fees", "net", "events"]
 
 
-def trading_day(start):
-    """Futures trading days start at 6 PM New York, so an evening session
-    (gold at the Tokyo open) belongs to the next day."""
-    return (start + timedelta(days=1)).date() if start.hour >= 18 else start.date()
+trading_day = rules.trading_day
+
+
+def apply_max_drawdown(rows, added):
+    """Replay the balance in time order. New sessions after the max drawdown
+    was hit become 'stopped' rows: the trade is not taken. Returns the day it
+    was hit, or None."""
+    account = rules.Account()
+    new = {id(r) for r in added}
+    for r in sorted(rows, key=lambda r: r["session_start"]):
+        if DRAWDOWN_RESET_DAY and r["trading_day"] < DRAWDOWN_RESET_DAY:
+            continue
+        start = datetime.strptime(r["session_start"], "%Y-%m-%d %H:%M")
+        if not account.can_trade(start):
+            if id(r) in new:
+                r.update({"signal": "stopped", "direction": "", "entry_time": "",
+                          "entry": "", "stop": "", "exit_time": "", "average_exit": "",
+                          "contracts": 0, "gross": 0.0, "fees": 0.0, "net": 0.0,
+                          "events": f"Not taken: the ${rules.MAX_DRAWDOWN:,} max drawdown "
+                                    f"was hit on {account.stopped_on}."})
+            continue
+        if r["signal"] == "yes":
+            account.record(float(r["net"]))
+    return account.stopped_on
 
 
 def read_rows():
@@ -205,7 +229,7 @@ def money(value):
     return f"-${-value:,.0f}" if value < 0 else f"${value:,.0f}"
 
 
-def build_summary(rows, now):
+def build_summary(rows, now, stopped_on=None):
     trades = [r for r in rows if r["signal"] == "yes"]
     nets = [float(r["net"]) for r in trades]
     wins = [n for n in nets if n > 0]
@@ -230,7 +254,12 @@ def build_summary(rows, now):
            f"*Updated {now:%Y-%m-%d %H:%M} New York time. Paper results from real "
            "5-minute candles with perfect fills at target and stop prices, after "
            f"${COMMISSION_PER_CONTRACT:.2f} per contract in fees. Real fills can be worse.*", "",
-           "## At a glance", "",
+           "## At a glance", ""]
+    if stopped_on:
+        out += [f"⛔ **The ${rules.MAX_DRAWDOWN:,} max drawdown was hit on {stopped_on}. "
+                "No more paper trades are taken until the account is reset** "
+                "(DRAWDOWN_RESET_DAY in agents/paper_trader.py).", ""]
+    out += [
            f"- Total after fees: **{money(sum(nets))}** over {len(trades)} trades "
            f"({len(rows)} sessions watched)",
            f"- Trading days with a trade: **{len(traded_days)}**, profitable: "
@@ -239,6 +268,8 @@ def build_summary(rows, now):
            f"- Profit factor: {sum(wins) / -sum(losses):.2f}" if losses else
            "- Profit factor: n/a (no losing trades yet)",
            f"- Biggest drop from a high (max drawdown): {money(max_dd)}",
+           f"- Room left before the {money(rules.MAX_DRAWDOWN)} max drawdown: "
+           f"**{money(max(0, rules.MAX_DRAWDOWN - (peak - equity)))}**",
            f"- Progress toward a prop demo: **{len(traded_days)} of {GOAL_TRADING_DAYS}** "
            "trading days", ""]
 
@@ -269,7 +300,7 @@ def build_summary(rows, now):
     out += ["", "## Daily results", "", "| Trading day | Sessions | Result after fees |",
             "|---|---|---|"]
     for d in list(days)[::-1][:30]:
-        what = ", ".join(f"{r['instrument']} {r['direction'] or 'no trade'}" for r in days[d])
+        what = ", ".join(f"{r['instrument']} {r['direction'] or ('stopped by max drawdown' if r['signal'] == 'stopped' else 'no trade')}" for r in days[d])
         out.append(f"| {d} | {what} | {money(day_nets[d])} |")
     out += ["", f"[Every paper trade](paper-journal.md) · [Raw data](trades.csv)", ""]
     return "\n".join(out)
@@ -293,6 +324,7 @@ def main(argv=None, now=None):
 
     os.makedirs(FOLDER, exist_ok=True)
     rows = sorted(rows + added, key=lambda r: r["session_start"])
+    stopped_on = apply_max_drawdown(rows, added)
     with open(TRADES_CSV, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
@@ -308,12 +340,12 @@ def main(argv=None, now=None):
             f.write(existing + "".join(journal_entry(r) for r in new_trades))
 
     with open(SUMMARY, "w") as f:
-        f.write(build_summary(rows, now))
+        f.write(build_summary(rows, now, stopped_on))
 
     print(f"Recorded {len(added)} new session(s), {len(new_trades)} with a trade.")
     for r in added:
         print(f"  {r['session_start']} {r['instrument']}: "
-              f"{r['direction'] or 'no trade'} {money(float(r['net']))}")
+              f"{r['direction'] or ('stopped by max drawdown' if r['signal'] == 'stopped' else 'no trade')} {money(float(r['net']))}")
     print(f"Saved {SUMMARY}")
 
 

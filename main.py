@@ -62,6 +62,12 @@ SESSIONS = {
     "gold": {"label": "Asia", "open": (9, 0), "zone": "Asia/Tokyo", "minutes": 480,
              "name": "Gold (MGC)"},
 }
+# Max drawdown, in dollars, across both markets together: if the balance
+# (closed trades) falls this far below its highest end-of-day balance,
+# trading stops completely, like a failed prop firm account. It never changes
+# a trade; it only decides whether more trades are allowed.
+MAX_DRAWDOWN = 2500
+
 # A session counts as the "previous session" only if it ran at least this
 # share of its normal length. This skips holiday half-days (like Labor Day).
 FULL_SESSION_SHARE = 0.75
@@ -273,6 +279,60 @@ def previous_full_session(sessions, starts, i, config):
     return None
 
 
+def trading_day(start):
+    """Futures trading days start at 6 PM New York, so an evening session
+    (gold at the Tokyo open) belongs to the next day."""
+    return (start + timedelta(days=1)).date() if start.hour >= 18 else start.date()
+
+
+class Account:
+    """Tracks the max drawdown across both markets."""
+
+    def __init__(self, max_drawdown=MAX_DRAWDOWN):
+        self.max_drawdown = max_drawdown
+        self.balance = self.peak_eod = 0.0
+        self.day = None
+        self.stopped_on = None   # the trading day max drawdown was hit
+
+    def can_trade(self, start):
+        day = trading_day(start)
+        if day != self.day:      # a new day: yesterday's close may be a new high
+            self.peak_eod = max(self.peak_eod, self.balance)
+            self.day = day
+        return self.stopped_on is None
+
+    def record(self, profit):
+        self.balance += profit
+        if self.stopped_on is None and self.balance <= self.peak_eod - self.max_drawdown:
+            self.stopped_on = self.day
+
+
+def run_account(candles_by_instrument, account=None):
+    """Replay both markets together, in time order, with the max drawdown.
+    Returns (results, account)."""
+    account = account or Account()
+    plan = []   # (start, instrument, session, key_high, key_low)
+    for instrument, candles in candles_by_instrument.items():
+        config = SESSIONS[instrument]
+        sessions = group_into_sessions(candles, config)
+        starts = list(sessions)
+        for i in range(1, len(starts)):
+            prev = previous_full_session(sessions, starts, i, config)
+            if prev is not None:
+                plan.append((starts[i], instrument, sessions[starts[i]],
+                             *find_key_levels([c for _, c in sessions[prev]])))
+    results = []
+    for start, instrument, session, key_high, key_low in sorted(plan, key=lambda p: p[0]):
+        if not account.can_trade(start):
+            break
+        result = play_session(instrument, SESSIONS[instrument], start, session,
+                              key_high, key_low)
+        if result is not None:
+            account.record(result["profit"])
+            results.append(result)
+    return results, account
+
+
 def run_replay(candles, instrument, journal_path=JOURNAL_PATH):
     """Replay every session in the candles. Returns a list of results."""
     config = SESSIONS[instrument]
@@ -341,6 +401,23 @@ def main():
             continue
         results, checked = run_replay(candles, instrument)
         print_summary(instrument, results, checked)
+
+    loaded = {}
+    for instrument in instruments:
+        try:
+            loaded[instrument] = load_for(instrument)
+        except Exception:
+            pass
+    if len(loaded) == len(SESSIONS):
+        results, account = run_account(loaded)
+        profits = [r["profit"] for r in results]
+        print(f"\n===== Both markets as one account, with a ${MAX_DRAWDOWN} max drawdown =====")
+        print(f"Trades taken: {len(results)}   Winners: {sum(p > 0 for p in profits)}   "
+              f"Total: ${round(sum(profits), 2)}")
+        if account.stopped_on:
+            print(f"Max drawdown was hit on {account.stopped_on}; trading stopped there.")
+        else:
+            print("Max drawdown was never hit.")
 
     print(f"\nEvery trade was written to {JOURNAL_PATH}.")
     print("Reminder: this is a replay on past data, not a prediction.")

@@ -21,6 +21,10 @@
 //   Sell 1 / 2 / 2 contracts. At Target 2 the stop moves to Target 1.
 // - At most one trade per session. Anything still open at the session end
 //   is closed.
+// - Max drawdown $2,500: if the balance (closed trades) falls that far below
+//   its highest end-of-day balance, no more trades are taken. Note that
+//   TradingView applies this per chart, while the paper trader applies it to
+//   both markets together.
 //
 // One difference from main.py: when a single candle touches both the stop
 // and a target, TradingView guesses the order from the candle's shape, while
@@ -43,6 +47,7 @@ goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, max
 goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
 goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, maxval = 3)
 showLevels = input.bool(true, "Draw the key levels")
+maxDD      = input.float(2500, "Max drawdown ($): stop trading if the balance falls this far below its highest end-of-day balance", minval = 0)
 // ------------------------------------------
 
 if timeframe.period != "5"
@@ -95,6 +100,16 @@ else if inSess
     curHigh := math.max(curHigh, high)
     curLow  := math.min(curLow, low)
 
+// ---- Max drawdown (trading days start at 6 PM New York) ----
+var float peakEOD = strategy.initial_capital
+var bool  halted  = false
+closedBalance = strategy.initial_capital + strategy.netprofit
+tradingDay = dayofmonth(time + 6 * 3600000, "America/New_York")
+if tradingDay != tradingDay[1]
+    peakEOD := math.max(peakEOD, nz(closedBalance[1], strategy.initial_capital))
+if not halted and closedBalance <= peakEOD - maxDD
+    halted := true
+
 inWindow = inSess and (time - sessStart) < windowMin * 60000
 haveLevels = not na(prevHigh)
 
@@ -115,7 +130,7 @@ enterTrade(int d, float stopPx) =>
         false
 
 // ---- Entries ----
-if inSess and haveLevels and not traded and strategy.position_size == 0
+if inSess and haveLevels and not traded and not halted and strategy.position_size == 0
     handled = false
     if confirm and pending != 0
         stillBeyond = pending == 1 ? close > prevHigh : close < prevLow
@@ -155,3 +170,4 @@ if strategy.position_size != 0 and inSess and time_close >= sessEnd
 plot(showLevels ? prevHigh : na, "Previous session high", color.new(color.green, 0), 1, plot.style_linebr)
 plot(showLevels ? prevLow  : na, "Previous session low",  color.new(color.red, 0),   1, plot.style_linebr)
 bgcolor(inWindow ? color.new(color.blue, 90) : na, title = "Entry window")
+bgcolor(halted ? color.new(color.red, 92) : na, title = "Stopped by max drawdown")
