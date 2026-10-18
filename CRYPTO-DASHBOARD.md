@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-18 03:14 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-18 03:45 UTC with prices up to the close on 2026-10-17. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -10,6 +10,11 @@
 |---|---|---|---|---|---|---|
 | **Rotation bot** | $1,000 | $1,000 | $0.00 | | 0 | first buys at the next daily close |
 | **Buy-and-hold bot** | $1,000 | $1,000 | $0.00 | | 0 | first buys at the next daily close |
+
+### 🦙 Alpaca paper account (the rotation bot, copied)
+
+Not connected yet: add the ALPACA_KEY_ID and ALPACA_SECRET_KEY secrets on GitHub.
+
 
 ### 🔄 Rotation bot
 

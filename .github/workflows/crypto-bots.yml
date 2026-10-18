@@ -24,12 +24,19 @@ jobs:
       - name: Run the crypto bots and build the crypto dashboard
         run: python crypto/crypto_bots.py
 
+      - name: Copy the rotation bot into the Alpaca paper account
+        run: python crypto/alpaca_sync.py
+        env:
+          # Accepts the secrets spelled ALPACA_... or ALPADA_...
+          ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID || secrets.ALPADA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY || secrets.ALPADA_SECRET_KEY }}
+
       - name: Save the results in the repo
         if: ${{ !cancelled() }}
         run: |
           git config user.name "crypto-bots"
           git config user.email "crypto-bots@users.noreply.github.com"
-          git add CRYPTO-DASHBOARD.md crypto/journal-rotation.md crypto/journal-hold.md crypto/trades.csv crypto/charts
+          git add CRYPTO-DASHBOARD.md crypto   # crypto/cache is ignored
           git commit -m "Update crypto bots $(date -u +%F)" || echo "Nothing to commit"
           for attempt in 1 2 3; do
             git pull --rebase && git push && break

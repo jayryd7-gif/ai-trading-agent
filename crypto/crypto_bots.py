@@ -312,6 +312,7 @@ def build_dashboard(paper, backtest, now):
     paper_days = next(iter(paper.values()))[0]
     if len(paper_days) >= 2:
         out += ["![Paper accounts' value](crypto/charts/paper-value.svg)", ""]
+    out += ["<!-- ALPACA -->", ""]   # alpaca_sync.py puts the Alpaca account here
     out += bot_section("Rotation bot", "🔄", *paper["Rotation bot"], "crypto/journal-rotation.md")
     out += bot_section("Buy-and-hold bot", "🏦", *paper["Buy-and-hold bot"], "crypto/journal-hold.md")
 
@@ -389,6 +390,13 @@ def main():
         for name, file in (("Rotation bot", "journal-rotation.md"), ("Buy-and-hold bot", "journal-hold.md")):
             write_journal(os.path.join(folder, file), f"{name} journal ({account.lower()}, since {since})",
                           ABOUT[name], *bots[name])
+
+    # What the paper rotation bot holds now, for alpaca_sync.py to copy
+    rot_days = paper["Rotation bot"][0]
+    with open(os.path.join("crypto", "paper-targets.json"), "w") as f:
+        json.dump({"date": str(rot_days[-1]["date"]) if rot_days else None,
+                   "value": rot_days[-1]["value"] if rot_days else START_CASH,
+                   "holdings": rot_days[-1]["holdings"] if rot_days else {}}, f, indent=2)
 
     now = datetime.now(timezone.utc)
     with open(DASHBOARD, "w") as f:
