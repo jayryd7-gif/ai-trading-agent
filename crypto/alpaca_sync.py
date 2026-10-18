@@ -17,7 +17,8 @@ Safety:
     MAX_SLICE dollars in total.
   - Coins Alpaca does not list are skipped and shown on the dashboard.
 
-The keys come from GitHub secrets: ALPACA_KEY_ID and ALPACA_SECRET_KEY.
+The keys come from GitHub secrets: ALPACA_KEY_ID and ALPACA_SECRET_KEY (or
+both in one secret, ALPADA_API_KEYS, separated by a space or new line).
 Without them, it does nothing.
 """
 
@@ -79,10 +80,22 @@ def log_orders(rows):
         w.writerows(rows)
 
 
+def split_combined():
+    """If both keys were saved in one secret (ALPADA_API_KEYS), split them:
+    the part starting with PK is the Key ID, the other part is the secret."""
+    parts = os.environ.get("ALPACA_COMBINED", "").replace(",", " ").split()
+    key = next((p for p in parts if p.startswith(("PK", "AK"))), None)
+    secret = next((p for p in parts if p != key), None)
+    if key and secret and not os.environ.get("ALPACA_KEY_ID"):
+        os.environ["ALPACA_KEY_ID"], os.environ["ALPACA_SECRET_KEY"] = key, secret
+
+
 def main():
+    split_combined()
     key = os.environ.get("ALPACA_KEY_ID", "")
     if not key or not os.environ.get("ALPACA_SECRET_KEY"):
-        print("No Alpaca keys found, so nothing was sent to Alpaca.")
+        found = "one key in ALPADA_API_KEYS but not both" if os.environ.get("ALPACA_COMBINED") else "none"
+        print(f"No Alpaca keys found ({found}), so nothing was sent to Alpaca.")
         section(["Not connected yet: add the ALPACA_KEY_ID and ALPACA_SECRET_KEY secrets on GitHub."])
         return
     if not key.startswith("PK"):

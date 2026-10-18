@@ -30,6 +30,7 @@ jobs:
           # Accepts the secrets spelled ALPACA_... or ALPADA_...
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID || secrets.ALPADA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY || secrets.ALPADA_SECRET_KEY }}
+          ALPACA_COMBINED: ${{ secrets.ALPADA_API_KEYS }}
 
       - name: Save the results in the repo
         if: ${{ !cancelled() }}
