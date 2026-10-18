@@ -175,6 +175,13 @@ def main():
     lines += ["[Every Alpaca order (CSV)](crypto/alpaca-orders.csv)"]
     section(lines)
     print(f"Alpaca: {len(orders)} order(s) sent, {len(problems)} problem(s), skipped {skipped}")
+    sys.path.insert(0, os.path.join(os.path.dirname(HERE), "agents"))
+    from notify import send
+    if orders:
+        send("Alpaca orders sent", ", ".join(f"{o[2]} {o[1]} {money(float(o[3]))}" for o in orders),
+             tags="moneybag")
+    if problems:
+        send("Alpaca problem", "\n".join(problems[:3]), priority="high", tags="warning")
     if problems:
         print("\n".join(problems))
 

@@ -27,6 +27,7 @@ from zoneinfo import ZoneInfo
 
 import main as rules
 import tradingview_stats as tv
+from notify import send
 
 FOLDER = os.path.join("reports", "weekly")
 
@@ -212,6 +213,10 @@ def main(argv=None):
     with open(path, "w") as f:
         f.write(build(sunday))
     print(f"Saved {path}")
+    text = open(path).read()
+    glance = text.split("## The week in one look", 1)[-1].split("##", 1)[0].strip()
+    send("Your weekly report is ready", glance.replace("**", "")[:800], tags="calendar",
+         link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
     return path
 
 

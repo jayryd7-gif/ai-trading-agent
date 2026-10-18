@@ -36,6 +36,7 @@ from zoneinfo import ZoneInfo
 import main as rules                       # the replay engine (main.py)
 from data import SYMBOLS, load_from_yahoo
 from key_levels import find_key_levels
+from notify import send
 
 # ---------------- SETTINGS ----------------
 FOLDER = "paper-trading"
@@ -333,6 +334,23 @@ def build_summary(rows, now, stopped_on=None):
     return "\n".join(out)
 
 
+def alert_phone(rows, added, new_trades):
+    """Phone alerts: every closed paper trade, and the max drawdown being hit."""
+    total = sum(float(r["net"]) for r in rows if r["signal"] == "yes")
+    for r in new_trades:
+        net = float(r["net"])
+        send(f"{rules.SESSIONS[r['instrument']]['name']} paper trade: {money(net)}",
+             f"{r['direction'].capitalize()} at {r['entry']} ({r['entry_time']}), closed "
+             f"{r['exit_time']}. {money(net)} after fees. Paper total so far: {money(total)}.",
+             priority="high", tags="chart_with_upwards_trend" if net > 0 else "chart_with_downwards_trend",
+             link="https://github.com/jayryd7-gif/ai-trading-agent/blob/main/paper-trading/paper-journal.md")
+    if any(r["signal"] == "stopped" for r in added) and \
+            not any(r["signal"] == "stopped" for r in rows if r not in added):
+        send("Max drawdown hit: paper trading stopped",
+             f"The ${rules.MAX_DRAWDOWN:,} max drawdown was reached. No more paper trades until "
+             "the account is reset.", priority="urgent", tags="rotating_light")
+
+
 def main(argv=None, now=None):
     argv = sys.argv[1:] if argv is None else argv
     now = now or datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
@@ -364,6 +382,7 @@ def main(argv=None, now=None):
     with open(SUMMARY, "w") as f:
         f.write(build_summary(rows, now, stopped_on))
 
+    alert_phone(rows, added, new_trades)
     print(f"Recorded {len(added)} new session(s), {len(new_trades)} with a trade.")
     for r in added:
         print(f"  {r['session_start']} {r['instrument']}: "

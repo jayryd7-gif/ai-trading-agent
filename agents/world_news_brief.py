@@ -34,6 +34,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
+from notify import send
 
 # ---------------- SETTINGS ----------------
 SEARCHES = 6              # cap on web searches per run (the main cost control)
@@ -141,6 +142,13 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    import re
+    first = re.search(r"^1\.\s*(.+)$", body, re.M)
+    risk = re.search(r"Event risk today.{0,60}?\b(Low|Medium|High)\b", body, re.S)
+    send(f"World brief: event risk {risk.group(1) if risk else 'n/a'}",
+         (first.group(1)[:300] if first else "Today's world brief is ready."), priority="low",
+         tags="earth_americas",
+         link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
     cost = log_cost("world-brief")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
     print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))

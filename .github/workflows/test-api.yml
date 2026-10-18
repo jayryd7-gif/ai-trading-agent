@@ -23,6 +23,8 @@ permissions:
 jobs:
   brief:
     runs-on: ubuntu-latest
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # your private phone-alert topic
     steps:
       - uses: actions/checkout@v4
 
@@ -57,3 +59,12 @@ jobs:
           git commit -m "Add ${{ steps.pick.outputs.instrument }} brief $(date -u +%F)" || echo "Nothing to commit"
           git pull --rebase
           git push
+
+      - name: Phone alert if this run failed
+        if: failure()
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: Market Brief failed" -H "Priority: high" -H "Tags: warning" \
+              -H "Click: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "The Market Brief run on GitHub failed. Tap to see what went wrong." "https://ntfy.sh/$NTFY_TOPIC" > /dev/null
+          fi

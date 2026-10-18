@@ -34,6 +34,7 @@ from zoneinfo import ZoneInfo
 
 import main as rules
 from risk import INSTRUMENTS as CONTRACT_RULES
+from notify import send
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crypto"))
 
@@ -319,6 +320,11 @@ def write(r, now):
         if new:
             w.writerow(["time_ny", "passed", "warnings", "broken"])
         w.writerow([now.strftime("%Y-%m-%d %H:%M"), ok, warn, bad])
+    if bad:
+        broken = [t for _, lines in r.sections for s, t in lines if s == BAD]
+        send(f"CEO check: {bad} broken rule(s)", "\n".join(f"- {t}" for t in broken[:5]),
+             priority="high", tags="x",
+             link="https://github.com/jayryd7-gif/ai-trading-agent/blob/main/reports/ceo/latest.md")
     print(verdict)
 
 

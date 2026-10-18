@@ -23,6 +23,7 @@ import anthropic
 
 from market_data import INSTRUMENTS, get_market_facts
 from research_tools import log_cost
+from notify import send
 
 # ---------------- SETTINGS ----------------
 MODEL = "claude-sonnet-5-5"   # a stronger model, since this one does research
@@ -169,6 +170,11 @@ def main():
 
     print(f"Saved {path}")
     print(f"Lean: {bias} ({confidence} confidence)")
+    risk = re.search(r"Event risk.{0,40}?\b(Low|Medium|High)\b", text, re.S)
+    send(f"{INSTRUMENTS[instrument]['name']} brief: {bias}",
+         f"Lean {bias} ({confidence} confidence). Event risk: {risk.group(1) if risk else 'n/a'}. "
+         f"Session opens soon.", priority="low", tags="newspaper",
+         link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
 
 

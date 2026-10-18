@@ -14,6 +14,8 @@ permissions:
 jobs:
   score:
     runs-on: ubuntu-latest
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # your private phone-alert topic
     steps:
       - uses: actions/checkout@v4
 
@@ -37,3 +39,12 @@ jobs:
             git pull --rebase && git push && break
             sleep 5
           done
+
+      - name: Phone alert if this run failed
+        if: failure()
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: Score Briefs failed" -H "Priority: high" -H "Tags: warning" \
+              -H "Click: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "The Score Briefs run on GitHub failed. Tap to see what went wrong." "https://ntfy.sh/$NTFY_TOPIC" > /dev/null
+          fi

@@ -43,6 +43,7 @@ from datetime import date, datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(os.path.dirname(HERE), "agents"))
 
 import strategy_lab as lab
 from crypto_charts import holdings_chart, value_chart, drawdown_chart
@@ -418,6 +419,24 @@ def main():
             value = days[-1]["value"] if days else START_CASH
             print(f"{account} {name}: {money(value, True)} after {len(trades)} trades")
     print(f"Wrote {DASHBOARD}")
+    alert_phone(paper)
+
+
+def alert_phone(paper):
+    """Nightly phone summary: each paper bot's value and today's trades."""
+    from notify import send
+    lines, trades_today = [], []
+    for name, (days, trades) in paper.items():
+        if not days:
+            continue
+        last = days[-1]
+        lines.append(f"{name}: {money(last['value'], True)} ({last['value'] / START_CASH - 1:+.1%})")
+        trades_today += [f"{t['action']} {t['coin']} ({name.split()[0]})" for t in trades
+                         if t["date"] == last["date"]]
+    if lines:
+        body = "\n".join(lines) + ("\nToday: " + ", ".join(trades_today) if trades_today else "\nNo trades today.")
+        send("Crypto bots tonight", body, priority="default" if trades_today else "low", tags="coin",
+             link="https://github.com/jayryd7-gif/ai-trading-agent/blob/main/CRYPTO-DASHBOARD.md")
 
 
 if __name__ == "__main__":
