@@ -20,9 +20,9 @@ crypto_research.py), so this brief leaves them out and has more room for
 everything else.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
-It makes three AI calls: two research calls (with web search) and one short
-call that writes the summary at the top. The briefing is saved in
-reports/news/.
+It makes ONE AI call with at most SEARCHES web searches, to keep each run
+cheap (the log shows the estimated cost). It runs on weekdays only. The
+briefing is saved in reports/news/.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 """
@@ -33,11 +33,13 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 
-from research_tools import research_parts, write_summary
+from research_tools import estimated_cost, run_call
 
 # ---------------- SETTINGS ----------------
-SEARCHES_PER_PART = 5   # cap on web searches for each research call (cost control)
-MAX_TOKENS = 5000         # cap on the length of each answer
+SEARCHES = 6              # cap on web searches per run (the main cost control)
+MAX_TOKENS = 8000         # cap on the length of the answer
+EFFORT = "medium"         # less thinking than the default, to keep the cost down
+BUDGET = 1.00             # warn in the log if a run costs more than this (dollars)
 NEWS_FOLDER = os.path.join("reports", "news")
 
 # Countries to give a short brief for. More countries = more cost and time.
@@ -58,67 +60,17 @@ SHARED_RULES = """Rules:
 - For important items add a short "Why it matters:" phrase naming the market
   link (rates, inflation, risk appetite, energy, the dollar, and so on). Do not
   predict price moves and do not tell the trader to buy or sell.
+- Start directly with the first section heading. Do not add a title.
 - Use plain language and short sentences."""
 
-INTRO = """You are a news and events analyst preparing a morning briefing for a
-day trader who trades Nasdaq and gold futures. Today is {weekday}, {date}.
-"Overnight" means since 4 PM yesterday, New York time. Use web search to find
-current information."""
+PROMPT = """You are a news and events analyst preparing a short morning briefing
+for a day trader who trades Nasdaq and gold futures. Today is {weekday},
+{date}. "Overnight" means since 4 PM yesterday, New York time. Use web search
+for current information. Search efficiently: one search can cover several
+topics, so combine them. Do not cover stock or crypto markets; other briefs
+handle those.
 
-PART_A = INTRO + """
-
-Cover these sections, in this order. Keep the whole answer under 1000 words.
-Do not cover stock or crypto markets; other briefs handle those.
-
-## 1. Politics and policy that could move markets
-Overnight developments and today's scheduled items: the White House, Congress,
-Treasury, the Federal Reserve (which speakers today, when, and the topic if
-known), and regulators. Include bills moving in Congress that could affect the
-economy, and executive orders.
-
-## 2. Economics
-Data released overnight, and data due today with the time, the previous
-reading, and the forecast if available (inflation, jobs, GDP, PMI, retail
-sales, and so on). Any central bank decisions or speakers.
-
-## 3. Government meetings and hearings today
-Congressional hearings, central bank meetings, and other official meetings,
-with times.
-
-## 4. President Trump
-What he said or announced overnight that could matter for markets. His
-schedule today: each speech, rally, or press event with the time, the place,
-and the topics if announced. If no schedule has been announced, say so.
-
-""" + SHARED_RULES
-
-PART_B = INTRO + """
-
-Cover these sections, in this order. Keep the whole answer under 1100 words.
-Do not cover stock or crypto markets; other briefs handle those.
-
-## 5. War and conflict
-Latest developments in active conflicts and anything that could affect energy,
-shipping, or markets.
-
-## 6. Trade and tariffs
-New tariffs, negotiations, deadlines, and trade deals.
-
-## 7. Country briefs
-For each of these countries: {countries}. Give 3 to 4 short bullets on the
-biggest political or economic news in the last day.
-
-## 8. Other political developments abroad
-Elections, leadership changes, sanctions, central bank moves, or energy
-decisions elsewhere that could affect the global economy.
-
-""" + SHARED_RULES
-
-SUMMARY_PROMPT = """Below are two research sections written this morning for a
-day trader who trades Nasdaq and gold futures. Today is {weekday}, {date}.
-
-Write three short parts, using only the information below. Do not add any new
-facts.
+Write these sections, in this order. Keep the whole briefing under 1,300 words.
 
 ## Top things for today
 At most 5 items, most important first. One or two sentences each, ending with
@@ -126,40 +78,45 @@ At most 5 items, most important first. One or two sentences each, ending with
 
 ## Today's schedule (New York time)
 A table with columns: Time | Event | Who or where | Confirmed? Sorted by time.
-Include only scheduled items that appear in the sections. If there are none,
-write "No scheduled events found."
+Economic data (with the previous reading and forecast if available), Fed and
+other central bank speakers, hearings, and President Trump's events. If there
+are none, write "No scheduled events found."
 
 ## Event risk today
 Low, Medium, or High, with one sentence explaining why. Write the word on its
 own right after the heading, like: "High - ...".
 
-Do not predict price moves and do not tell the trader to buy or sell.
+## Politics and policy
+The White House, Congress (including bills that could affect the economy),
+Treasury, the Federal Reserve, executive orders, and what President Trump said
+overnight.
 
-SECTIONS FOLLOW
+## Economics
+Data released overnight and what it showed.
 
-{part_a}
+## War, trade and tariffs
+Active conflicts that could affect energy, shipping or markets, and new
+tariffs, negotiations, deadlines or trade deals.
 
-{part_b}
-"""
+## Country briefs
+For each of these: {countries}. One or two short bullets on the biggest
+political or economic news in the last day.
+
+""" + SHARED_RULES
 
 
 def build_briefing(client, now):
-    """Run the three calls. Returns (markdown_body, total_in, total_out)."""
-    values = {"weekday": now.strftime("%A"), "date": now.strftime("%Y-%m-%d"),
-              "countries": ", ".join(COUNTRIES)}
-    parts, total_in, total_out = research_parts(
-        client, [("Part A", PART_A), ("Part B", PART_B)], values,
-        SEARCHES_PER_PART, MAX_TOKENS)
-
-    summary, t_in, t_out = write_summary(
-        client, SUMMARY_PROMPT.format(part_a=parts[0], part_b=parts[1], **values),
-        MAX_TOKENS)
-    total_in += t_in
-    total_out += t_out
-
-    body = (summary + "\n\n---\n\n# Details: US politics and the economy\n\n" + parts[0]
-            + "\n\n---\n\n# Details: the world\n\n" + parts[1] + "\n")
-    return body, total_in, total_out
+    """One research call. Returns (markdown_body, total_in, total_out)."""
+    prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
+                           countries=", ".join(COUNTRIES))
+    text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
+                                                max_searches=SEARCHES, max_tokens=MAX_TOKENS,
+                                                effort=EFFORT)
+    if not text:
+        raise SystemExit("The research call returned no text, so nothing was saved.")
+    if cut:
+        text += "\n\n(The briefing was cut off because it hit the length limit.)"
+    return text + "\n", tokens_in, tokens_out
 
 
 def main(now=None):
@@ -178,7 +135,9 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    cost = estimated_cost()
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
+    print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))
     return path
 
 

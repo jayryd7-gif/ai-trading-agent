@@ -3,8 +3,8 @@ name: World News Brief
 on:
   schedule:
     # Time is UTC. 10:00 UTC is about 5-6 AM New York time, before the market briefs.
-    # Runs every day. To skip weekends, change the last "*" to "1-5".
-    - cron: "0 10 * * *"
+    # Weekdays only, to keep the cost down. To run every day, change "1-5" to "*".
+    - cron: "0 10 * * 1-5"
   workflow_dispatch:
 
 permissions:
