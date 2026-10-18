@@ -1,21 +1,28 @@
 # Agent dashboard
 
-Last updated 2026-10-17 20:21 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-17 20:29 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 ## Agent status
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 36 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 48 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 1 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | weekdays about 6-7 AM New York time |
-| 🟢 | Scorer | Checks each lean against what price did | 26 hours ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 1 hours ago | weekdays about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 27 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 12 hours ago | after each session ends |
 | 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 12 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
+
+## Paper trading
+
+No sessions recorded yet. The paper record starts on 2026-10-19.
+
+[Paper trading journal](paper-trading/paper-journal.md) · [TradingView strategy](tradingview/breakout_strategy.pine)
 
 ## Latest briefs
 
@@ -430,7 +437,7 @@ By confidence:
 | Agent | Purpose | Status |
 |---|---|---|
 | Business research agent | Finds fast-growing products worth selling | ⚪ not built yet |
-| Paper trading agent | Places practice trades through your broker, behind a risk gatekeeper, and logs every trade in your journal automatically | ⚪ not built yet |
+| Live demo trading | Sends the TradingView strategy's orders to a Tradovate demo or prop challenge account, behind a risk gatekeeper | ⚪ not built yet |
 
 ## Links
 

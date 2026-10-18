@@ -1,0 +1,147 @@
+//@version=6
+// Session breakout strategy - the rules in trading-rules.md, for TradingView.
+//
+// HOW TO USE
+// 1. Open a 5-minute chart of MNQ1! (micro Nasdaq) or MGC1! (micro gold).
+// 2. Pine Editor (bottom of the screen) > paste this whole file > Save > Add to chart.
+// 3. The Strategy Tester tab shows every trade it would have taken, and it
+//    keeps adding new trades live as each session plays out. That is your
+//    paper trading record on TradingView.
+// The script picks Nasdaq or gold settings from the chart symbol.
+//
+// THE RULES (same as main.py)
+// - Key levels: the high and low of the previous session of the same kind.
+//     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
+//     Gold:   Tokyo, 9:00 AM to 5:00 PM Tokyo time (8 PM / 7 PM New York).
+// - In the first 30 minutes, a 5-minute candle closes beyond a key level,
+//   and the NEXT candle also closes beyond it. Enter at that second close.
+// - Stop: the far end of the two candles.
+// - 3 targets, each 30 points (Nasdaq) or 6 points (gold) apart.
+//   Sell 1 / 2 / 2 contracts. At Target 2 the stop moves to Target 1.
+// - At most one trade per session. Anything still open at the session end
+//   is closed.
+//
+// One difference from main.py: when a single candle touches both the stop
+// and a target, TradingView guesses the order from the candle's shape, while
+// main.py always assumes the stop was hit first.
+
+strategy("Session Breakout (ai-trading-agent)", overlay = true,
+     process_orders_on_close = true, pyramiding = 0,
+     default_qty_type = strategy.fixed, default_qty_value = 5,
+     commission_type = strategy.commission.cash_per_contract, commission_value = 0.0)
+
+// ---------------- SETTINGS ----------------
+market     = input.string("Auto", "Market", options = ["Auto", "Nasdaq", "Gold"])
+windowMin  = input.int(30, "Look for breakouts this many minutes after the open", minval = 5)
+confirm    = input.bool(true, "Wait for a second candle to confirm")
+goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
+goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
+goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, maxval = 3)
+showLevels = input.bool(true, "Draw the key levels")
+// ------------------------------------------
+
+if timeframe.period != "5"
+    runtime.error("Use a 5-minute chart. The rules are written for 5-minute candles.")
+
+root    = syminfo.root
+isGold  = market == "Gold" or (market == "Auto" and (root == "MGC" or root == "GC"))
+sessStr = isGold ? "0900-1700:23456" : "0930-1600:23456"
+zone    = isGold ? "Asia/Tokyo" : "America/New_York"
+spacing = isGold ? 6.0 : 30.0
+q1      = isGold ? goldPlan1 : 1
+q2      = isGold ? goldPlan2 : 2
+q3      = isGold ? goldPlan3 : 2
+total   = q1 + q2 + q3
+
+inSess   = not na(time(timeframe.period, sessStr, zone))
+newSess  = inSess and not inSess[1]
+
+var float curHigh   = na
+var float curLow    = na
+var float prevHigh  = na
+var float prevLow   = na
+var int   sessStart = 0
+var int   sessEnd   = 0
+var bool  traded    = false
+var int   pending   = 0      // 1 = long breakout waiting for confirmation, -1 = short
+var float pendHigh  = na
+var float pendLow   = na
+var float entryPx   = na
+var int   dir       = 0
+var bool  stopMoved = false
+
+if newSess
+    if not na(curHigh)
+        prevHigh := curHigh
+        prevLow  := curLow
+    curHigh   := high
+    curLow    := low
+    sessStart := time
+    sessEnd   := time + (isGold ? 480 : 390) * 60000
+    traded    := false
+    pending   := 0
+    stopMoved := false
+else if inSess
+    curHigh := math.max(curHigh, high)
+    curLow  := math.min(curLow, low)
+
+inWindow = inSess and (time - sessStart) < windowMin * 60000
+haveLevels = not na(prevHigh)
+
+enterTrade(int d, float stopPx) =>
+    entry = close
+    if math.abs(entry - stopPx) > 0
+        t1 = entry + d * spacing
+        t2 = entry + d * 2 * spacing
+        t3 = entry + d * 3 * spacing
+        id = d == 1 ? "Long" : "Short"
+        strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = total,
+             alert_message = '{"action":"' + (d == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(total) + ',"stop":' + str.tostring(stopPx) + '}')
+        strategy.exit("T1", id, qty = q1, limit = t1, stop = stopPx)
+        strategy.exit("T2", id, qty = q2, limit = t2, stop = stopPx)
+        strategy.exit("T3", id, qty = q3, limit = t3, stop = stopPx)
+        true
+    else
+        false
+
+// ---- Entries ----
+if inSess and haveLevels and not traded and strategy.position_size == 0
+    handled = false
+    if confirm and pending != 0
+        stillBeyond = pending == 1 ? close > prevHigh : close < prevLow
+        if stillBeyond
+            stopPx = pending == 1 ? math.min(pendLow, low) : math.max(pendHigh, high)
+            if enterTrade(pending, stopPx)
+                traded  := true
+                dir     := pending
+                entryPx := close
+            handled := true
+        pending := 0
+    if not handled and not traded and inWindow
+        breakout = close > prevHigh ? 1 : close < prevLow ? -1 : 0
+        if breakout != 0
+            if confirm
+                pending  := breakout
+                pendHigh := high
+                pendLow  := low
+            else
+                stopPx = breakout == 1 ? low : high
+                if enterTrade(breakout, stopPx)
+                    traded  := true
+                    dir     := breakout
+                    entryPx := close
+
+// ---- Manage the open trade: after Target 2, move the stop to Target 1 ----
+if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= q3
+    t1 = entryPx + dir * spacing
+    t3 = entryPx + dir * 3 * spacing
+    strategy.exit("T3", dir == 1 ? "Long" : "Short", qty = q3, limit = t3, stop = t1)
+    stopMoved := true
+
+// ---- Close anything still open at the end of the session ----
+if strategy.position_size != 0 and inSess and time_close >= sessEnd
+    strategy.close_all(comment = "Session end")
+
+plot(showLevels ? prevHigh : na, "Previous session high", color.new(color.green, 0), 1, plot.style_linebr)
+plot(showLevels ? prevLow  : na, "Previous session low",  color.new(color.red, 0),   1, plot.style_linebr)
+bgcolor(inWindow ? color.new(color.blue, 90) : na, title = "Entry window")

@@ -1,0 +1,42 @@
+name: Paper Trading
+
+on:
+  schedule:
+    # Times are UTC. Runs after each session ends and records any finished
+    # session it has not recorded yet (both markets each time).
+    - cron: "50 21 * * 1-5"   # after the Nasdaq session (about 4:50-5:50 PM NY)
+    - cron: "15 9 * * 1-5"    # after the gold session, which ends at 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install yfinance
+
+      - name: Record the paper trades
+        run: python agents/paper_trader.py
+        env:
+          PYTHONPATH: .
+
+      - name: Save the results in the repo
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "paper-trader"
+          git config user.email "paper-trader@users.noreply.github.com"
+          git add paper-trading
+          git commit -m "Record paper trades $(date -u +%F)" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done

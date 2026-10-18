@@ -25,6 +25,7 @@ REPORT_FOLDER = "reports"
 DASHBOARD = "DASHBOARD.md"
 JOURNAL = "trade-journal.md"
 NO_TRADE_JOURNAL = "no-trade-journal.md"
+PAPER_SUMMARY = os.path.join("paper-trading", "summary.md")
 REMINDERS = "REMINDERS.md"
 GOOD_WITHIN_HOURS = 72     # green if an agent ran within this long (covers weekends)
 LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
@@ -34,7 +35,7 @@ LEAN_ICON = {"Bullish": "▲", "Bearish": "▼", "Neutral": "◆", "Unknown": "?
 
 PLANNED = [
     ("Business research agent", "Finds fast-growing products worth selling"),
-    ("Paper trading agent", "Places practice trades through your broker, behind a risk gatekeeper, and logs every trade in your journal automatically"),
+    ("Live demo trading", "Sends the TradingView strategy's orders to a Tradovate demo or prop challenge account, behind a risk gatekeeper"),
 ]
 
 
@@ -77,6 +78,30 @@ def event_risk(brief_path):
         return "n/a"
     match = re.search(r"Event risk.{0,40}?\b(Low|Medium|High)\b", text, re.S)
     return match.group(1) if match else "n/a"
+
+
+def paper_updated():
+    """Read the 'Updated YYYY-MM-DD HH:MM' stamp from the paper trading summary."""
+    try:
+        text = open(PAPER_SUMMARY).read()
+    except OSError:
+        return None
+    match = re.search(r"Updated (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})", text)
+    return parse_time(match.group(1), match.group(2)) if match else None
+
+
+def paper_section():
+    """The paper trading summary split into (at a glance, the rest)."""
+    try:
+        text = open(PAPER_SUMMARY).read()
+    except OSError:
+        return None, None
+    parts = re.split(r"^## ", text, flags=re.M)
+    glance = next((p for p in parts if p.startswith("At a glance")), None)
+    rest = "\n".join("## " + p for p in parts if p.startswith(("By market", "Challenge", "Daily")))
+    if glance is None:   # nothing recorded yet
+        return read_body(PAPER_SUMMARY), None
+    return glance.split("\n", 1)[1].strip(), demote_headings(rest)
 
 
 def scorecard_updated():
@@ -269,6 +294,10 @@ def build_dashboard(now):
         when = research[key][2] if research[key] else None
         out.append(f"| {status_icon(when, now)} | {label} | {purpose} | "
                    f"{age_text(when, now) if when else 'never'} | {runs} New York time |")
+    paper = paper_updated()
+    out.append(f"| {status_icon(paper, now)} | Paper trader | Paper trades every session "
+               f"with your rules and runs a practice prop challenge | "
+               f"{age_text(paper, now) if paper else 'never'} | after each session ends |")
     updated = scorecard_updated()
     out.append(f"| {status_icon(updated, now)} | Scorer | Checks each lean against "
                f"what price did | {age_text(updated, now) if updated else 'never'} | "
@@ -287,6 +316,17 @@ def build_dashboard(now):
     if problems:
         out += ["## ⚠️ Problems", ""] + problems + [
             "", "Open the repo's Actions tab on GitHub for more detail.", ""]
+
+    # ---- Paper trading ----
+    glance, rest = paper_section()
+    out += ["## Paper trading", ""]
+    if glance:
+        out += [glance, ""]
+        out += details("Challenge simulation, results by market, and daily results", rest)
+        out += ["[Paper trading journal](paper-trading/paper-journal.md) · "
+                "[TradingView strategy](tradingview/breakout_strategy.pine)", ""]
+    else:
+        out += ["No paper trades yet.", ""]
 
     # ---- Today's briefs, readable right here ----
     out += ["## Latest briefs", "",

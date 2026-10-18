@@ -2,7 +2,7 @@ name: Update Dashboard
 
 on:
   workflow_run:
-    workflows: ["Market Brief", "Score Briefs", "Post-Session Review", "World News Brief", "Crypto Brief", "Stock Brief"]
+    workflows: ["Market Brief", "Score Briefs", "Post-Session Review", "World News Brief", "Crypto Brief", "Stock Brief", "Paper Trading"]
     types: [completed]
   workflow_dispatch:
 
