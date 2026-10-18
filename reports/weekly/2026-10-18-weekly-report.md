@@ -5,7 +5,7 @@
 ## The week in one look
 
 - **Futures paper:** $0 this week
-- **Rotation bot:** -$4.00 this week
+- **Rotation bot:** -$3.20 this week
 - **Buy-and-hold bot:** -$4.00 this week
 - **AI costs:** $0.00 this week
 
@@ -26,7 +26,7 @@ Export the List of trades from each chart and say "update TradingView" to refres
 
 | Bot | Start of week | End of week | Change | Since it started ($1,000) |
 |---|---|---|---|---|
-| Rotation bot | $1,000.00 | $996.00 | -$4.00 (-0.4%) | -$4.00 |
+| Rotation bot | $1,000.00 | $996.80 | -$3.20 (-0.3%) | -$3.20 |
 | Buy-and-hold bot | $1,000.00 | $996.00 | -$4.00 (-0.4%) | -$4.00 |
 
 Trades this week:
@@ -39,10 +39,9 @@ Trades this week:
 | 2026-10-17 | Rotation bot | 🟢 Buy | AVAX | $200.00 |  |
 | 2026-10-17 | Rotation bot | 🟢 Buy | BCH | $200.00 |  |
 | 2026-10-17 | Rotation bot | 🟢 Buy | BTC | $200.00 |  |
-| 2026-10-17 | Rotation bot | 🟢 Buy | DOT | $200.00 |  |
 | 2026-10-17 | Rotation bot | 🟢 Buy | SUI | $200.00 |  |
 
-**Alpaca copy:** 4 order(s) this week: buy AVAX, buy BCH, buy BTC, buy DOT
+**Alpaca copy:** 7 order(s) this week: buy AVAX, buy BCH, buy BTC, buy DOT, buy AVAX, buy BCH, sell DOT
 
 ## Market briefs (Nasdaq and gold)
 
@@ -51,7 +50,7 @@ Trades this week:
 
 ## CEO check
 
-**✅ No rules broken all week.** 1 checks ran. [Latest CEO check](../ceo/latest.md)
+**❌ Rules were broken this week.** 2 checks ran. [Latest CEO check](../ceo/latest.md)
 
 ## AI costs this week
 

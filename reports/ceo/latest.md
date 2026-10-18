@@ -1,8 +1,8 @@
 # 👔 CEO check
 
-*Checked 2026-10-18 08:32 New York time. Plain code, no AI.*
+*Checked 2026-10-18 18:14 New York time. Plain code, no AI.*
 
-**✅ All clear**: 7 passed, 0 warnings, 0 broken rules.
+**❌ 1 broken rule(s)**: 6 passed, 0 warnings, 1 broken rules.
 
 ### Futures paper trader
 
@@ -14,12 +14,12 @@
 
 ### Crypto bots
 
-- ✅ Rotation bot: 5 trades, buys only at weekly checks, never more than 5 coins at once.
+- ✅ Rotation bot: 4 trades, buys only at weekly checks, never more than 4 coins at once.
 - ✅ Buy-and-hold bot has never sold.
 
 ### Alpaca copy
 
-- ✅ All 4 Alpaca orders were for the bot's coins and within the limit.
+- ❌ Alpaca order for DOT, which is not one of the bot's coins.
 
 ### Costs
 
