@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 20:58 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 21:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -29,7 +29,8 @@ Last updated 2026-10-18 20:58 New York time. Everything here is written by softw
 
 ##### Futures paper trader
 
-- ✅ No sessions recorded yet, nothing to check.
+- ✅ All 0 paper trades followed the rules (one per session, inside the 30-minute window, right size, stop managed).
+- ✅ Room left before the $2,500 max drawdown: $2,500.
 
 ##### Your trade journal
 
@@ -46,7 +47,7 @@ Last updated 2026-10-18 20:58 New York time. Everything here is written by softw
 
 ##### Costs
 
-- ✅ No AI runs logged yet (cost logging started on 2026-10-18).
+- ✅ Spent $0.12 so far this month on 1 AI runs; on pace for about $0 (budget $50).
 
 ##### Agent health
 
