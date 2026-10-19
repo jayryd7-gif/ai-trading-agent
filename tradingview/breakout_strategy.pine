@@ -28,6 +28,10 @@
 //   Sell 1 / 2 / 2 contracts. At Target 2 the stop moves to Target 1.
 // - At most one trade per session. Anything still open at the session end
 //   is closed.
+// - Near the limit: when a closed trade leaves less than $1,500 of room before
+//   the max drawdown, no new trade until the next 9:30 AM New York (orange
+//   background), then 1 contract per target until the room is back above
+//   $1,500. A trade whose stop would lose more than the room left is skipped.
 // - Max drawdown $4,000: if the balance (closed trades) falls that far below
 //   its highest end-of-day balance, no more trades are taken. Note that
 //   TradingView applies this per chart, while the paper trader applies it to
@@ -58,6 +62,7 @@ showLevels = input.bool(true, "Draw the key levels")
 showTrade  = input.bool(true, "Draw entry, stop and targets while a trade is open")
 alertStyle = input.string("Readable", "Alert messages", options = ["Readable", "JSON (for a webhook)"])
 maxDD      = input.float(4000, "Max drawdown ($): stop trading if the balance falls this far below its highest end-of-day balance", minval = 0)
+nearLimit  = input.float(1500, "Near the limit ($): with less room than this, pause until the next 9:30 AM New York, then trade 1 contract per target", minval = 0)
 // ------------------------------------------
 
 if timeframe.period != "5"
@@ -140,6 +145,24 @@ if tradingDay != tradingDay[1]
 if not halted and closedBalance <= peakEOD - maxDD
     halted := true
 
+// ---- Near the max drawdown: pause until the next morning, then trade small ----
+room = maxDD - (peakEOD - closedBalance)
+var int pausedUntil = 0
+if strategy.closedtrades > nz(strategy.closedtrades[1]) and not halted and room < nearLimit
+    nyYear  = year(time, "America/New_York")
+    nyMonth = month(time, "America/New_York")
+    nyDay   = dayofmonth(time, "America/New_York")
+    // An evening (gold) session counts from its own calendar day too:
+    // "the next morning" is always the next 9:30 AM New York.
+    pausedUntil := timestamp("America/New_York", nyYear, nyMonth, nyDay, 9, 30) + 86400000
+paused  = time < pausedUntil
+reduced = room < nearLimit
+sz1 = reduced ? 1 : q1
+sz2 = reduced ? 1 : q2
+sz3 = reduced ? 1 : q3
+szTotal = sz1 + sz2 + sz3
+var int tradeQ3 = 0          // contracts for Target 3 in the open trade
+
 inWindow = inSess and (time - sessStart) < windowMin * 60000
 haveLevels = not na(prevHigh)
 
@@ -160,30 +183,27 @@ stopMsg(string tgt, int q, float lvl) =>
 
 enterTrade(int d, float stopPx) =>
     entry = close
-    if math.abs(entry - stopPx) > 0
+    // Near the limit, skip a trade whose stop would lose more than the room left.
+    riskUsd = math.abs(entry - stopPx) * syminfo.pointvalue * szTotal
+    if math.abs(entry - stopPx) > 0 and not (reduced and riskUsd >= room)
         t1 = entry + d * spacing
         t2 = entry + d * 2 * spacing
         t3 = entry + d * 3 * spacing
         id = d == 1 ? "Long" : "Short"
-        enterMsg = readable ? syminfo.ticker + " paper: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(total) + " at " + px(entry) + ", stop " + px(stopPx) + ", targets " + px(t1) + " / " + px(t2) + " / " + px(t3) : '{"action":"' + (d == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(total) + ',"stop":' + str.tostring(stopPx) + '}'
-        strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = total, alert_message = enterMsg)
-        strategy.exit("T1", id, qty = q1, limit = t1, stop = stopPx,
-             alert_profit = winMsg("Target 1", q1, t1), alert_loss = stopMsg("T1", q1, stopPx))
-        strategy.exit("T2", id, qty = q2, limit = t2, stop = stopPx,
-             alert_profit = winMsg("Target 2", q2, t2), alert_loss = stopMsg("T2", q2, stopPx))
-        strategy.exit("T3", id, qty = q3, limit = t3, stop = stopPx,
-             alert_profit = winMsg("Target 3", q3, t3), alert_loss = stopMsg("T3", q3, stopPx))
-        entryLvl := entry
-        stopLvl  := stopPx
-        t1Lvl    := t1
-        t2Lvl    := t2
-        t3Lvl    := t3
+        enterMsg = readable ? syminfo.ticker + " paper: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(szTotal) + (reduced ? " (small size)" : "") + " at " + px(entry) + ", stop " + px(stopPx) + ", targets " + px(t1) + " / " + px(t2) + " / " + px(t3) : '{"action":"' + (d == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(szTotal) + ',"stop":' + str.tostring(stopPx) + '}'
+        strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = szTotal, alert_message = enterMsg)
+        strategy.exit("T1", id, qty = sz1, limit = t1, stop = stopPx,
+             alert_profit = winMsg("Target 1", sz1, t1), alert_loss = stopMsg("T1", sz1, stopPx))
+        strategy.exit("T2", id, qty = sz2, limit = t2, stop = stopPx,
+             alert_profit = winMsg("Target 2", sz2, t2), alert_loss = stopMsg("T2", sz2, stopPx))
+        strategy.exit("T3", id, qty = sz3, limit = t3, stop = stopPx,
+             alert_profit = winMsg("Target 3", sz3, t3), alert_loss = stopMsg("T3", sz3, stopPx))
         true
     else
         false
 
 // ---- Entries ----
-if inSess and haveLevels and not traded and not halted and strategy.position_size == 0
+if inSess and haveLevels and not traded and not halted and not paused and strategy.position_size == 0
     handled = false
     if confirm and pending != 0
         stillBeyond = pending == 1 ? close > prevHigh : close < prevLow
@@ -193,6 +213,12 @@ if inSess and haveLevels and not traded and not halted and strategy.position_siz
                 traded  := true
                 dir     := pending
                 entryPx := close
+                entryLvl := close
+                stopLvl  := stopPx
+                t1Lvl    := close + pending * spacing
+                t2Lvl    := close + pending * 2 * spacing
+                t3Lvl    := close + pending * 3 * spacing
+                tradeQ3  := sz3
             handled := true
         pending := 0
     if not handled and not traded and inWindow
@@ -208,13 +234,19 @@ if inSess and haveLevels and not traded and not halted and strategy.position_siz
                     traded  := true
                     dir     := breakout
                     entryPx := close
+                    entryLvl := close
+                    stopLvl  := stopPx
+                    t1Lvl    := close + breakout * spacing
+                    t2Lvl    := close + breakout * 2 * spacing
+                    t3Lvl    := close + breakout * 3 * spacing
+                    tradeQ3  := sz3
 
 // ---- Manage the open trade: after Target 2, move the stop to Target 1 ----
-if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= q3
+if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= tradeQ3
     t1 = entryPx + dir * spacing
     t3 = entryPx + dir * 3 * spacing
-    strategy.exit("T3", dir == 1 ? "Long" : "Short", qty = q3, limit = t3, stop = t1,
-         alert_profit = winMsg("Target 3", q3, t3), alert_loss = stopMsg("T3", q3, t1))
+    strategy.exit("T3", dir == 1 ? "Long" : "Short", qty = tradeQ3, limit = t3, stop = t1,
+         alert_profit = winMsg("Target 3", tradeQ3, t3), alert_loss = stopMsg("T3", tradeQ3, t1))
     stopLvl   := t1
     stopMoved := true
 
@@ -236,3 +268,4 @@ plot(inTrade ? t1Lvl    : na, "Target 1", color.new(color.green, 30), 1, plot.st
 plot(inTrade ? t2Lvl    : na, "Target 2", color.new(color.green, 15), 1, plot.style_linebr)
 plot(inTrade ? t3Lvl    : na, "Target 3", color.new(color.green, 0),  2, plot.style_linebr)
 bgcolor(halted ? color.new(color.red, 92) : na, title = "Stopped by max drawdown")
+bgcolor(not halted and paused ? color.new(color.orange, 90) : na, title = "Paused near max drawdown")

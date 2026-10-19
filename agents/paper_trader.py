@@ -51,6 +51,8 @@ COMMISSION_PER_CONTRACT = 1.00  # round-trip fees per micro contract, in dollars
 GOAL_TRADING_DAYS = 20          # paper trade at least this many days before a prop demo
 START_DAY = "2026-10-19"        # first trading day of the paper record (sessions before
                                 # it are backtest territory, see main.py)
+# Near the max drawdown (less than main.NEAR_LIMIT left) the paper trader
+# pauses until the next morning, then trades the small size (main.REDUCED_PLAN).
 # Max drawdown: main.MAX_DRAWDOWN ($4,000). Once hit, no more paper trades are
 # taken. To start a fresh account after that, set this to the first trading
 # day of the new account, like "2026-11-02".
@@ -71,35 +73,35 @@ CHALLENGE = {
 FIELDS = ["trading_day", "instrument", "session_start", "signal", "direction",
           "entry_time", "entry", "stop", "exit_time", "average_exit", "contracts",
           "gross", "fees", "net", "events", "sell_plan", "key_high", "key_low",
-          "fills", "best_move", "worst_move", "lessons", "chart"]
+          "fills", "best_move", "worst_move", "lessons", "chart", "size_mode"]
 CHART_FOLDER = os.path.join(FOLDER, "charts")
 OPEN_TRADES = os.path.join(FOLDER, "open-trades.json")
 
 
 trading_day = rules.trading_day
+SKIPPED = {"stopped": "stopped by max drawdown", "paused": "paused near max drawdown",
+           "skipped": "skipped, risk too big near max drawdown"}
 
 
-def apply_max_drawdown(rows, added):
-    """Replay the balance in time order. New sessions after the max drawdown
-    was hit become 'stopped' rows: the trade is not taken. Returns the day it
-    was hit, or None."""
+def account_from(rows):
+    """The account (balance, max drawdown, pause) after the recorded rows."""
     account = rules.Account()
-    new = {id(r) for r in added}
     for r in sorted(rows, key=lambda r: r["session_start"]):
         if DRAWDOWN_RESET_DAY and r["trading_day"] < DRAWDOWN_RESET_DAY:
             continue
         start = datetime.strptime(r["session_start"], "%Y-%m-%d %H:%M")
-        if not account.can_trade(start):
-            if id(r) in new:
-                r.update({"signal": "stopped", "direction": "", "entry_time": "",
-                          "entry": "", "stop": "", "exit_time": "", "average_exit": "",
-                          "contracts": 0, "gross": 0.0, "fees": 0.0, "net": 0.0,
-                          "events": f"Not taken: the ${rules.MAX_DRAWDOWN:,} max drawdown "
-                                    f"was hit on {account.stopped_on}."})
-            continue
+        account.mode(start)   # moves the account to this session's day
         if r["signal"] == "yes":
-            account.record(float(r["net"]))
-    return account.stopped_on
+            account.record(float(r["net"]), start)
+    return account
+
+
+def blank_row(instrument, start, signal, events, levels=("", "")):
+    return {"trading_day": trading_day(start).isoformat(), "instrument": instrument,
+            "session_start": f"{start:%Y-%m-%d %H:%M}", "signal": signal, "direction": "",
+            "entry_time": "", "entry": "", "stop": "", "exit_time": "", "average_exit": "",
+            "contracts": 0, "gross": 0.0, "fees": 0.0, "net": 0.0, "events": events,
+            "key_high": levels[0], "key_low": levels[1]}
 
 
 def read_rows():
@@ -110,8 +112,10 @@ def read_rows():
         return []
 
 
-def new_sessions(instrument, candles, recorded, now, open_now=None):
-    """Rows for sessions whose outcome is known and not in trades.csv yet."""
+def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
+    """Rows for sessions whose outcome is known and not in trades.csv yet.
+    history: the rows recorded so far. The trades before each session decide
+    its size, the pause near the max drawdown, and the stop at it."""
     config = rules.SESSIONS[instrument]
     sessions = rules.group_into_sessions(candles, config)
     starts = list(sessions)
@@ -138,8 +142,32 @@ def new_sessions(instrument, candles, recorded, now, open_now=None):
             if not session:
                 continue
         key_high, key_low = levels
-        result = rules.play_session(instrument, config, start, session,
-                                    key_high, key_low)
+        account = account_from([r for r in history if r["session_start"] < key[1]])
+        mode = account.mode(start)
+        window_over = finished or session[-1][0] >= start + timedelta(
+            minutes=rules.ENTRY_WINDOW_MINUTES)
+        if mode == "stopped":
+            if window_over:
+                rows.append(blank_row(instrument, start, "stopped",
+                    f"Not taken: the ${rules.MAX_DRAWDOWN:,} max drawdown was hit on "
+                    f"{account.stopped_on}.", (round(key_high, 2), round(key_low, 2))))
+            continue
+        if mode == "paused":
+            if window_over:
+                rows.append(blank_row(instrument, start, "paused",
+                    f"Not taken: paused until {account.paused_until:%Y-%m-%d %H:%M} because "
+                    f"less than ${rules.NEAR_LIMIT:,} was left before the max drawdown.",
+                    (round(key_high, 2), round(key_low, 2))))
+            continue
+        result = rules.play_session(instrument, config, start, session, key_high, key_low,
+                                    size_plan=rules.REDUCED_PLAN if mode == "reduced" else None)
+        if result and mode == "reduced" and rules.too_risky(result, account.room()):
+            rows.append(blank_row(instrument, start, "skipped",
+                f"Breakout {result['direction']} at {result['entry_time']:%H:%M}, but even the "
+                f"small size risked ${result['risk_dollars']:,.0f} with only "
+                f"${account.room():,.0f} left before the max drawdown, so it was skipped.",
+                (round(key_high, 2), round(key_low, 2))))
+            continue
         if not finished:
             last_candle = session[-1][0]
             if result is None:
@@ -183,6 +211,7 @@ def new_sessions(instrument, candles, recorded, now, open_now=None):
                 "best_move": facts["mfe"], "worst_move": facts["mae"],
                 "lessons": " | ".join(facts["lessons"]),
                 "chart": chart,
+                "size_mode": mode,
             })
         rows.append(row)
     return rows
@@ -210,6 +239,9 @@ def journal_entry(row):
         f"at **{row['entry_time']}** (sell plan {row.get('sell_plan') or 'n/a'})",
         f"- **Stop:** {row['stop']}",
     ]
+    if row.get("size_mode") == "reduced":
+        out.append(f"- **Small size:** less than ${rules.NEAR_LIMIT:,} was left before the "
+                   f"${rules.MAX_DRAWDOWN:,} max drawdown, so it traded 1 contract per target.")
     fills = fills_of(row)
     if fills:
         out += ["", "| Time | What | Contracts | Price | Profit |", "|---|---|---|---|---|"]
@@ -380,7 +412,7 @@ def build_summary(rows, now, stopped_on=None):
     out += ["", "## Daily results", "", "| Trading day | Sessions | Result after fees |",
             "|---|---|---|"]
     for d in list(days)[::-1][:30]:
-        what = ", ".join(f"{r['instrument']} {r['direction'] or ('stopped by max drawdown' if r['signal'] == 'stopped' else 'no trade')}" for r in days[d])
+        what = ", ".join(f"{r['instrument']} {r['direction'] or SKIPPED.get(r['signal'], 'no trade')}" for r in days[d])
         out.append(f"| {d} | {what} | {money(day_nets[d])} |")
     out += ["", f"[Every paper trade](paper-journal.md) · [Raw data](trades.csv)", ""]
     return "\n".join(out)
@@ -415,6 +447,13 @@ def alert_phone(rows, added, new_trades):
              f"{money(total)}. Tap for the fills and the chart.",
              priority="high", tags="chart_with_upwards_trend" if net > 0 else "chart_with_downwards_trend",
              link="https://github.com/jayryd7-gif/ai-trading-agent/blob/main/paper-trading/paper-journal.md")
+    account = account_from(rows)
+    if new_trades and account.paused_until and account.stopped_on is None:
+        send("Paper trading paused until tomorrow morning",
+             f"Only {money(account.room())} is left before the {money(rules.MAX_DRAWDOWN)} max "
+             f"drawdown. No trades until {account.paused_until:%a %H:%M} New York, then the "
+             "small size (1 contract per target) until the room is back.",
+             priority="high", tags="warning")
     if any(r["signal"] == "stopped" for r in added) and \
             not any(r["signal"] == "stopped" for r in rows if r not in added):
         send("Max drawdown hit: paper trading stopped",
@@ -428,19 +467,30 @@ def main(argv=None, now=None):
     instruments = [a for a in argv if a in rules.SESSIONS] or list(rules.SESSIONS)
 
     rows = read_rows()
-    recorded = {(r["instrument"], r["session_start"]) for r in rows}
-    added, open_now = [], {}
+    loaded = {}
     for instrument in instruments:
         try:
-            candles = load_from_yahoo(SYMBOLS[instrument], interval="5m", period=LOOKBACK)
+            loaded[instrument] = load_from_yahoo(SYMBOLS[instrument], interval="5m",
+                                                 period=LOOKBACK)
         except Exception as error:
             print(f"Could not load {instrument} data: {error}")
-            continue
-        added += new_sessions(instrument, candles, recorded, now, open_now)
+
+    # One session at a time, oldest first across both markets, so each one
+    # sees the account (size, pause, max drawdown) left by the ones before.
+    added, open_now = [], {}
+    while True:
+        recorded = {(r["instrument"], r["session_start"]) for r in rows + added}
+        found, open_now = [], {}
+        for instrument, candles in loaded.items():
+            found += new_sessions(instrument, candles, recorded, now, open_now,
+                                  rows + added)
+        if not found:
+            break
+        added.append(min(found, key=lambda r: r["session_start"]))
 
     os.makedirs(FOLDER, exist_ok=True)
     rows = sorted(rows + added, key=lambda r: r["session_start"])
-    stopped_on = apply_max_drawdown(rows, added)
+    stopped_on = account_from(rows).stopped_on
     with open(TRADES_CSV, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS, restval="", extrasaction="ignore")
         writer.writeheader()
@@ -458,7 +508,7 @@ def main(argv=None, now=None):
     print(f"Recorded {len(added)} new session(s), {len(new_trades)} with a trade.")
     for r in added:
         print(f"  {r['session_start']} {r['instrument']}: "
-              f"{r['direction'] or ('stopped by max drawdown' if r['signal'] == 'stopped' else 'no trade')} {money(float(r['net']))}")
+              f"{r['direction'] or SKIPPED.get(r['signal'], 'no trade')} {money(float(r['net']))}")
     print(f"Saved {SUMMARY}")
 
 

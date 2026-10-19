@@ -79,6 +79,14 @@ SESSIONS = {
 # a trade; it only decides whether more trades are allowed.
 MAX_DRAWDOWN = 4000   # raised from $2,500 on 2026-10-19
 
+# Close to the max drawdown: when a closed trade leaves less than NEAR_LIMIT
+# dollars of room, stop for the day and take no trade until the next morning's
+# Nasdaq open (9:30 AM New York). While the room is still under NEAR_LIMIT,
+# trade the small size REDUCED_PLAN (1 contract at each target), and skip a
+# trade whose stop would lose more than the room left.
+NEAR_LIMIT = 1500   # $1,000 kicked in too late in the 60-day replay (net $4.6k vs $13.5k)
+REDUCED_PLAN = [1, 1, 1]
+
 # A session counts as the "previous session" only if it ran at least this
 # share of its normal length. This skips holiday half-days (like Labor Day).
 FULL_SESSION_SHARE = 0.75
@@ -135,7 +143,7 @@ def _fmt(moment):
     return moment.strftime("%H:%M")
 
 
-def play_session(instrument, config, start, session, key_high, key_low):
+def play_session(instrument, config, start, session, key_high, key_low, size_plan=None):
     """Look for a breakout in this session and play the trade out.
 
     Returns a result dictionary, or None if no trade was taken.
@@ -166,6 +174,8 @@ def play_session(instrument, config, start, session, key_high, key_low):
 
         sell_plan = GOLD_SELL_PLAN if instrument == "gold" else None
         trade = new_trade(instrument, direction, entry, stop, sell_plan)
+        if size_plan:   # a smaller size near the max drawdown
+            trade["sell_plan"], trade["contracts"] = list(size_plan), sum(size_plan)
         point_value = trade["point_value"]
         contracts = trade["contracts"]
         risk_dollars = round(abs(entry - stop) * point_value * contracts, 2)
@@ -335,13 +345,29 @@ def trading_day(start):
 
 
 class Account:
-    """Tracks the max drawdown across both markets."""
+    """Tracks the max drawdown across both markets, and the pause and small
+    size near it."""
 
     def __init__(self, max_drawdown=MAX_DRAWDOWN):
         self.max_drawdown = max_drawdown
         self.balance = self.peak_eod = 0.0
         self.day = None
         self.stopped_on = None   # the trading day max drawdown was hit
+        self.paused_until = None # no trades before this time (New York)
+
+    def room(self):
+        """Dollars left before the max drawdown (today's open gains above the
+        end-of-day high are not counted until the day closes)."""
+        return min(self.max_drawdown, self.max_drawdown - (self.peak_eod - self.balance))
+
+    def mode(self, start):
+        """'normal', 'reduced' (small size), 'paused' or 'stopped' for a
+        session starting at start."""
+        if not self.can_trade(start):
+            return "stopped"
+        if self.paused_until and start < self.paused_until:
+            return "paused"
+        return "reduced" if self.room() < NEAR_LIMIT else "normal"
 
     def can_trade(self, start):
         day = trading_day(start)
@@ -350,10 +376,13 @@ class Account:
             self.day = day
         return self.stopped_on is None
 
-    def record(self, profit):
+    def record(self, profit, start=None):
         self.balance += profit
         if self.stopped_on is None and self.balance <= self.peak_eod - self.max_drawdown:
             self.stopped_on = self.day
+        elif start is not None and self.room() < NEAR_LIMIT:
+            morning = start.date() + timedelta(days=1)
+            self.paused_until = datetime(morning.year, morning.month, morning.day, 9, 30)
 
 
 def run_account(candles_by_instrument, account=None):
@@ -372,14 +401,26 @@ def run_account(candles_by_instrument, account=None):
                 plan.append((starts[i], instrument, sessions[starts[i]], *levels))
     results = []
     for start, instrument, session, key_high, key_low in sorted(plan, key=lambda p: p[0]):
-        if not account.can_trade(start):
+        mode = account.mode(start)
+        if mode == "stopped":
             break
+        if mode == "paused":
+            continue
         result = play_session(instrument, SESSIONS[instrument], start, session,
-                              key_high, key_low)
-        if result is not None:
-            account.record(result["profit"])
-            results.append(result)
+                              key_high, key_low,
+                              size_plan=REDUCED_PLAN if mode == "reduced" else None)
+        if result is None:
+            continue
+        if mode == "reduced" and too_risky(result, account.room()):
+            continue
+        account.record(result["profit"], start)
+        results.append(result)
     return results, account
+
+
+def too_risky(result, room):
+    """True when hitting the stop would lose more than the room left."""
+    return result["risk_dollars"] >= room
 
 
 def run_replay(candles, instrument, journal_path=JOURNAL_PATH):

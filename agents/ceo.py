@@ -119,7 +119,12 @@ def check_paper_trader(r):
                        f"after the open (the window is {rules.ENTRY_WINDOW_MINUTES}).")
             problems += 1
         contracts = int(t["contracts"])
-        if t["instrument"] == "nasdaq" and contracts != sum(CONTRACT_RULES["nasdaq"]["fixed_plan"]):
+        if t.get("size_mode") == "reduced":
+            if contracts != sum(rules.REDUCED_PLAN):
+                r.add(BAD, f"{t['instrument']} {t['session_start']}: {contracts} contracts near "
+                           f"the max drawdown (the small size is {sum(rules.REDUCED_PLAN)}).")
+                problems += 1
+        elif t["instrument"] == "nasdaq" and contracts != sum(CONTRACT_RULES["nasdaq"]["fixed_plan"]):
             r.add(BAD, f"Nasdaq {t['session_start']}: {contracts} contracts (the rule is 5).")
             problems += 1
         if t["instrument"] == "gold" and not 3 <= contracts <= 9:
@@ -131,6 +136,21 @@ def check_paper_trader(r):
             r.add(BAD, f"{t['instrument']} {t['session_start']}: Target 2 was hit but the stop "
                        "was not moved to Target 1.")
             problems += 1
+    # Replay the account: no trade while paused, small size when near the limit.
+    account = rules.Account()
+    for x in sorted(rows, key=lambda x: x["session_start"]):
+        start = datetime.strptime(x["session_start"], "%Y-%m-%d %H:%M")
+        mode = account.mode(start)
+        if x["signal"] == "yes":
+            if mode in ("paused", "stopped"):
+                r.add(BAD, f"{x['instrument']} {x['session_start']}: traded while {mode} near "
+                           "the max drawdown.")
+                problems += 1
+            elif mode == "reduced" and x.get("size_mode") != "reduced":
+                r.add(BAD, f"{x['instrument']} {x['session_start']}: full size with less than "
+                           f"${rules.NEAR_LIMIT:,} left before the max drawdown.")
+                problems += 1
+            account.record(float(x["net"]), start)
     stopped = [x for x in rows if x["signal"] == "stopped"]
     if stopped:
         first = min(x["session_start"] for x in stopped)

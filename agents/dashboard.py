@@ -15,8 +15,12 @@ import glob
 import json
 import os
 import re
+import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
+
+# The project folder, for main.py and the paper trader's account rules.
+sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from charts import make_charts
 from scorer import ENOUGH_CALLS, _rate, read_csv
@@ -135,6 +139,24 @@ def paper_journal_section(how_many=15):
         live.append(f"- 🟢 **Open now: {'Nasdaq' if t['instrument'] == 'nasdaq' else 'Gold'} "
                     f"{t['direction']} {t['contracts']} contracts** at {t['entry']} "
                     f"({t['entry_time']}), stop {t['stop']}. Sold so far: {sold or 'nothing yet'}.")
+    try:
+        import main as rules
+        from paper_trader import account_from
+        acct = account_from(rows)
+        now = datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
+        if acct.stopped_on:
+            state = f"⛔ stopped: the max drawdown was hit on {acct.stopped_on}"
+        elif acct.paused_until and now < acct.paused_until:
+            state = f"⏸️ paused until {acct.paused_until:%a %b %d %H:%M}, then small size"
+        elif acct.room() < rules.NEAR_LIMIT:
+            state = "🟡 small size (1 contract per target)"
+        else:
+            state = "🟢 normal size"
+        live.insert(0, f"- **Room before the ${rules.MAX_DRAWDOWN:,} max drawdown: "
+                       f"${acct.room():,.0f}** · {state}. Under ${rules.NEAR_LIMIT:,} left, "
+                       "it pauses until the next morning and then trades small.")
+    except Exception as error:   # the dashboard should never fail over this line
+        print(f"Could not work out the account state: {error}")
     if live:
         out[2:2] = live + [""]
     if not rows:
@@ -142,8 +164,9 @@ def paper_journal_section(how_many=15):
     for r in sorted(rows, key=lambda r: r["session_start"], reverse=True)[:how_many]:
         market = "Nasdaq" if r["instrument"] == "nasdaq" else "Gold"
         if r["signal"] != "yes":
-            why = ("stopped by the max drawdown" if r["signal"] == "stopped"
-                   else "no breakout, no trade")
+            why = {"stopped": "stopped by the max drawdown",
+                   "paused": "paused near the max drawdown",
+                   "skipped": "skipped: risk too big"}.get(r["signal"], "no breakout, no trade")
             out.append(f"| {r['trading_day']} | {market} | – | 0 | {why} | | | | $0 | "
                        f"{r['events']} | [TV]({TV_LINKS[r['instrument']]}) |")
             continue

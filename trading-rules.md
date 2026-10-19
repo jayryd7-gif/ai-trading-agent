@@ -51,6 +51,21 @@ Each target is about $60 per contract from the one before it.
 - If price passes several targets in one candle, apply each one in order.
 - If one candle touches both the stop loss and a target, assume the stop loss was hit first.
 
+## Near the max drawdown
+
+The max drawdown is $4,000: if the balance falls that far below its highest
+end-of-day balance, trading stops completely (a blown account).
+
+- **Close to the limit** means less than **$1,500** of room is left.
+- When a closed trade leaves less than $1,500 of room, **stop for the day**: no
+  new trade until the **next morning's 9:30 AM New York open**. The gold
+  session that evening is skipped.
+- After the pause, while the room is still under $1,500, trade the **small
+  size: 1 contract at each target (3 in total)**, for Nasdaq and gold.
+- If even the small size would lose more than the room left when the stop is
+  hit, **skip the trade**.
+- Once winners bring the room back above $1,500, go back to the normal size.
+
 ## Choosing gold contract sizes
 
 Before entering a gold trade, read the market and pick one of these four sell plans. The three numbers are the contracts sold at Target 1, Target 2, and Target 3. Write which plan you chose, and why, in the trade journal.
