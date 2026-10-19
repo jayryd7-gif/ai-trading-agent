@@ -1,0 +1,5 @@
+# Generated pages: every bot rebuilds these, so on this Mac a merge keeps
+# the local copy instead of stopping on a conflict (the next bot run rebuilds
+# them). Needs, once per computer:  git config merge.ours.driver true
+DASHBOARD.md merge=ours
+CRYPTO-DASHBOARD.md merge=ours
