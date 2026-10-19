@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 07:04 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 07:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -12,7 +12,7 @@ Last updated 2026-10-19 07:04 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 36 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 47 hours ago | after each session ends |
@@ -285,54 +285,59 @@ No scheduled events found.
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-10-17</b></summary>
+<summary><b>📈 Stocks brief, 2026-10-19</b></summary>
 
-#### Top things today
-
-1. Stocks fell Friday as the AI selloff widened. The S&P 500 fell 1.1% to 7,659.44 and the Nasdaq fell 2.1% to 26,140.03. For the week, the S&P lost 1.9% and the Nasdaq lost 4.5%, its worst week since June. Why it matters: AI financing worries are weighing on the broad market.
-2. Semiconductors fell eight sessions in a row, the longest streak since 2008, and SOXX is down 16% over those eight sessions. On Friday AMD fell 6.0%, Micron 5.6%, Intel 5.8% and Broadcom 4.5%, while Nvidia slipped 1.4%. Why it matters: chips are at the center of the selloff.
-3. Oil is above $100, with WTI at $101.41 and Brent at $109.86. S&P energy rose about 2.5% on Middle East supply uncertainty. Why it matters: energy was the main area gaining while tech fell.
-4. CoreWeave (CRWV) fell 11.9% to $61.39 and is down 25.2% on the week. Its 9.625% notes due 2032 traded below 80 cents on the dollar Wednesday, with the yield above 15%. Why it matters: it shows stress in AI debt markets.
-5. Nuclear names fell with the AI trade: LEU fell 9.5% and OKLO fell 6.8% (down 19.4% on the week). No nuclear-specific reason was found. Why it matters: the group is trading with AI sentiment, not its own news.
-6. Meta and Tesla report Oct. 21 after the close, and Newmont and Southern Copper report Oct. 22. Why it matters: these are the next hard numbers for AI spending and metals miners.
+Results are JSON strings.## Top things today
+1. **Broad tech selloff.** The Nasdaq Composite fell 2.15% on Friday, and no company-specific cause was named for Nvidia's drop (Gotrade). Why it matters: the weakness hit almost every AI name I track.
+2. **CoreWeave (CRWV) credit stress.** The stock fell 11.9% on Friday and 25.2% over 5 days. Yields on its 2032 bonds reportedly touched 15%, which The Motley Fool read as rising default risk (via Gotrade, 10/18). Why it matters: a funding scare can spread to other AI-infrastructure names.
+3. **AI infrastructure names fell hardest.** On Friday, SMCI fell 9.9% and IREN fell 11.2%. Over 5 days, MU fell 14.6%, ARM fell 14.5% and AMD fell 13.0% (live data). Why it matters: the selling was heaviest in the most leveraged and highest-beta parts of the theme.
+4. **Nuclear and uranium sold off harder than the big names.** Friday: LEU fell 9.5% and OKLO fell 6.8%. Over 5 days: OKLO fell 19.4%, LEU fell 19.3% and SMR fell 19.0% (live data). Why it matters: small-cap nuclear is moving with AI-power sentiment.
+5. **Energy producers led the gainers.** CRGY rose 10.1%, MTDR rose 7.0% and AR rose 6.1% (live data). I did not find the cause. Why it matters: money moved from tech into oil and gas producers.
 
 #### Stocks to research
-
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| CRGY | Energy | +10.1% | Oil and gas producer; the move tracks the oil rally | No company news found |
-| MTDR | Energy | +7.0% | Oil and gas producer; oil-driven read | No company news found |
-| AR | Energy | +6.1% | Natural gas producer; Reuters named gas producer EQT among Friday's energy leaders | No company news found |
-| EQNR | Energy | +4.6% | Norwegian energy major; oil is the likely driver; on TheStreet's midday winners list | No company-specific news found |
-| CRWV | AI | -11.9% to $61.39 | Bonds below 80 cents and yield above 15%; ARK bought 381,231 shares over two sessions | $72.05B total liabilities and $640M quarterly interest expense (Q2); down 25.2% on the week |
-| INTC | AI / chips | -5.8% to $89.85 | Fell after TSMC comments on advanced-packaging capacity; the report said this does not show Intel lost a customer | Foundry unit had a $2.089B Q2 operating loss; earnings date unconfirmed (Oct. 22 or Oct. 29) |
-| OKLO | Nuclear | -6.8% | Down 19.4% on the week; moved with the AI trade | No nuclear-specific reason found |
-| NEM | Minerals | +2.4% | Only name up in the minerals group; reports Oct. 22 | Reason for the rise not verified |
+| CRWV | AI cloud | -11.9% 1d, -25.2% 5d | Bond-yield stress and a heavy-volume selloff | Debt concerns; high volatility |
+| META | AI | -3.7% 1d | Reports 10/21 (EPS est. $6.76) | Event risk; the date's timing is unconfirmed |
+| LEU | Uranium fuel | -9.5% 1d, -19.3% 5d | Biggest nuclear decliner | No news found for the move |
+| OKLO | Nuclear | -6.8% 1d, -19.4% 5d | Sector-wide slide | Pre-revenue company; no news found |
+| MU | Memory chips | -5.6% 1d, -14.6% 5d | Large 5-day drop in a big AI-linked name | No news found; high volatility |
+| IAM (Iambic Therapeutics) | New/IPO-type stock | +25.9% to $23.81 | Top small-cap gainer, $1.1B cap | Not in my themes; I found no news and could not confirm it is a recent IPO |
 
-#### Earnings this week
+#### AI and tech
+- **Selloff context.** Nvidia fell 1.43% to $214.13 on volume about 11.6% above average. It is about 12% below its 52-week high (Gotrade).
+- **CoreWeave credit worries.** See the bond-yield item above. IREN, another AI-infrastructure name, fell 11.2% on heavy volume (live data).
+- **Intel.** INTC fell 5.8% to $89.85 and was the most active stock by volume. I found no cause.
+- My search allowance ran out early. I found no other chip or AI news, so treat this section as incomplete.
 
-| Date | Ticker | Before open or after close | EPS estimate | Revenue estimate |
+#### Nuclear and critical minerals
+Nothing found. My searches did not return news on government deals, export limits, uranium, rare earths, lithium, copper or gold. Price moves only (live data):
+- Rare earths: MP fell 3.5% and USAR fell 5.0%. REMX fell 11.1% over 5 days.
+- Copper: FCX fell 0.7% and SCCO fell 0.6%.
+- Gold: NEM rose 2.4%, the only gain among my miners.
+
+#### Earnings
+Notable results since yesterday: Nothing found.
+
+| Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| Oct. 20 | NFLX | After close | Not found | Not found |
-| Oct. 21 | META | After close | $6.76 | $63.4B |
-| Oct. 21 | TSLA | After close (webcast 5:30 p.m.) | $0.45 | $28.1B |
-| Oct. 21 | IBM | After close | Not found | Not found |
-| Oct. 21 | TXN | After close | Not found | Not found |
-| Oct. 21 | LRCX | After close | Not found | Not found |
-| Oct. 21 | SAP | After close | Not found | Not found |
-| Oct. 22 | NEM | Timing not found | $1.94 | $6.3B |
-| Oct. 22 | SCCO | Timing not found | $1.95 | $4.4B |
-| Oct. 22 or Oct. 29 (unconfirmed) | INTC | Unconfirmed | $0.39 | $16.40B |
+| 2026-10-21 | META | Unconfirmed | $6.76 | $63.4B |
+| 2026-10-21 | TSLA | Unconfirmed | $0.45 | $28.1B |
+| 2026-10-22 | NEM | Unconfirmed | $1.94 | $6.3B |
+| 2026-10-22 | SCCO | Unconfirmed | $1.95 | $4.4B |
+| 2026-10-27 | FCX | Unconfirmed | $0.83 | $7.4B |
+| 2026-10-28 | GOOGL | Unconfirmed | $2.97 | $127.7B |
+| 2026-10-28 | MSFT | Unconfirmed | $4.72 | $90.7B |
+| 2026-10-29 | AMZN | Unconfirmed | $1.98 | $202.2B |
+| 2026-10-30 | CCJ | Unconfirmed | $0.34 | $736.9M |
+| 2026-11-02 | AAPL | Unconfirmed | $1.98 | $113.6B |
+| 2026-11-02 | BWXT | Unconfirmed | $1.19 | $972.3M |
+| 2026-11-02 | PLTR | Unconfirmed | $0.41 | $2.2B |
 
 #### Smart money
+Nothing found. I did not find any analyst rating changes, insider purchases or congressional trades in these themes.
 
-- ARK Invest bought 381,231 CoreWeave shares over two sessions (Benzinga).
-- Price target cuts clearly outnumbered raises on Oct. 16, with sentiment cautious (Stock Target Advisor via Globe and Mail).
-- A Yahoo Finance headline cites Barclays saying SpaceX could announce a Tesla merger this year. Only the headline was seen, not the article.
-- No insider or Congress trades were found. The search tool hit its limit, so this is not confirmed empty.
-- No theme-specific analyst calls were found.
-
-[Read the full brief with all the details](reports/stocks/2026-10-17-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-10-19-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
