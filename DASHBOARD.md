@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 06:04 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 06:27 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -10,10 +10,10 @@ Last updated 2026-10-19 06:04 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 24 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 35 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 3 days ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 46 hours ago | after each session ends |
 | 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 46 hours ago | after each session ends |
@@ -200,25 +200,41 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-18, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-10-19</b></summary>
 
 #### Top things for today
-
-1. **This briefing is incomplete.** The search tool failed, so no data releases, Fed speakers, hearings or Trump schedule were verified, and "Nothing found" does not mean nothing happened. Why it matters: the schedule and data picture is unknown, so check the calendars yourself.
-2. **Trump waived the new Russia-related sanctions and tariffs on Friday.** They were due to start today under the Graham Act and could have reached up to 100% on top buyers of Russian oil and gas, including China and India. The waiver lasts until the administration decides "further action is appropriate." Why it matters: it removes a tariff threat on large energy buyers, which touches oil, the dollar and risk appetite.
-3. **Ships in the Strait of Hormuz still face "indiscriminate attacks."** A maritime monitor said attacks are at their highest level since the war began (CBS, Oct. 16), and a tug was hit off the UAE overnight. Why it matters: Hormuz shipping risk links to oil, inflation and risk appetite.
-4. **Ukraine sent more than 1,000 drones at Russia and set a St. Petersburg oil export terminal on fire (AP).** Russia struck power substations in four Ukrainian regions, leaving tens of thousands of families without power. Why it matters: strikes on Russian oil export sites and Ukraine's grid link to energy and diesel prices.
-5. **Iran's hardline Kayhan newspaper said Iran should hit Israeli nuclear sites if the US strikes "Pickaxe Mountain."** Tasnim also quoted a man named Shirazi saying a "new order" governs Gulf and Hormuz shipping with no US role. Why it matters: it adds to Gulf escalation and energy transit risk.
+Nothing found. My search tool stopped working before I could pull current news. I have no verified information for Monday, 2026-10-19.
 
 #### Today's schedule (New York time)
-
-No scheduled events found.
+No scheduled events found. I could not retrieve an economic calendar, Fed speaker list, hearing schedule or Trump schedule. Check these directly:
+- An economic calendar.
+- The Fed's website.
+- The White House schedule.
 
 #### Event risk today
+Unknown - I could not check the schedule or overnight news, so I can't rate the risk.
 
-Medium - No scheduled events were confirmed, but the research was incomplete, the Hormuz and Russia–Ukraine headlines are active, and futures reopen tonight.
+#### Politics and policy
+Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-10-18-world-brief.md) · [All news briefs](reports/news/)
+#### Economics
+Nothing found.
+
+#### War, trade and tariffs
+Nothing found.
+
+#### Country briefs
+- China: Nothing found.
+- European Union: Nothing found.
+- United Kingdom: Nothing found.
+- Japan: Nothing found.
+- India: Nothing found.
+- Russia: Nothing found.
+- Canada: Nothing found.
+
+I chose not to fill these sections from memory. Anything I wrote would be invented, and it could mislead a trader. Please rerun this briefing once search is available.
+
+[Read the full brief with all the details](reports/news/2026-10-19-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
