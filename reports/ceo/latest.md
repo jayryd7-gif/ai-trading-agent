@@ -1,13 +1,13 @@
 # 👔 CEO check
 
-*Checked 2026-10-19 16:39 New York time. Plain code, no AI.*
+*Checked 2026-10-19 17:37 New York time. Plain code, no AI.*
 
 **✅ All clear**: 8 passed, 0 warnings, 0 broken rules.
 
 ### Futures paper trader
 
 - ✅ All 1 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
-- ✅ Room left before the $2,500 max drawdown: $2,500.
+- ✅ Room left before the $4,000 max drawdown: $4,000.
 
 ### Your trade journal
 

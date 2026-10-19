@@ -1,6 +1,6 @@
 # Paper trading summary
 
-*Updated 2026-10-19 16:39 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-10-19 17:37 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
@@ -9,7 +9,7 @@
 - Win rate: 100%
 - Profit factor: n/a (no losing trades yet)
 - Biggest drop from a high (max drawdown): $0
-- Room left before the $2,500 max drawdown: **$2,500**
+- Room left before the $4,000 max drawdown: **$4,000**
 - Progress toward a prop demo: **1 of 20** trading days
 
 ## By market

@@ -77,7 +77,7 @@ SESSIONS = {
 # (closed trades) falls this far below its highest end-of-day balance,
 # trading stops completely, like a failed prop firm account. It never changes
 # a trade; it only decides whether more trades are allowed.
-MAX_DRAWDOWN = 2500
+MAX_DRAWDOWN = 4000   # raised from $2,500 on 2026-10-19
 
 # A session counts as the "previous session" only if it ran at least this
 # share of its normal length. This skips holiday half-days (like Labor Day).

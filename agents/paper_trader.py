@@ -51,7 +51,7 @@ COMMISSION_PER_CONTRACT = 1.00  # round-trip fees per micro contract, in dollars
 GOAL_TRADING_DAYS = 20          # paper trade at least this many days before a prop demo
 START_DAY = "2026-10-19"        # first trading day of the paper record (sessions before
                                 # it are backtest territory, see main.py)
-# Max drawdown: main.MAX_DRAWDOWN ($2,500). Once hit, no more paper trades are
+# Max drawdown: main.MAX_DRAWDOWN ($4,000). Once hit, no more paper trades are
 # taken. To start a fresh account after that, set this to the first trading
 # day of the new account, like "2026-11-02".
 DRAWDOWN_RESET_DAY = None
