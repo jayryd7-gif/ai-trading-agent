@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 17:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 17:52 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -14,7 +14,7 @@ Last updated 2026-10-19 17:47 New York time. Everything here is written by softw
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 11 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -493,7 +493,7 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 
 ## Scorecard
 
-- Briefs scored: **4** (Bullish or Bearish calls: 0)
+- Briefs scored: **5** (Bullish or Bearish calls: 0)
 - Right: 0, Wrong: 0, Session ended flat: 0
 - Hit rate when the session was decisive: **n/a**
 - For comparison, price went up in 25% of decisive sessions
@@ -521,6 +521,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-10-19 | nasdaq | ◆ Neutral | Low | Flat (-0.19%) | Calm |
 | 2026-10-18 | gold | ◆ Neutral | Low | Down (-0.29%) | Moved |
 | 2026-10-16 | nasdaq | ◆ Neutral | Low | Down (-2.14%) | Moved |
 | 2026-10-15 | gold | ◆ Neutral | Low | Up (0.81%) | Moved |
