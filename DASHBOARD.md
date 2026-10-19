@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 06:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 07:04 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -12,11 +12,11 @@ Last updated 2026-10-19 06:51 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 35 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 36 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 3 days ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 46 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 46 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 47 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 47 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -545,10 +545,10 @@ The previous session's high (4211.20) and low (4167.50) become your key levels. 
 
 ## Scorecard
 
-- Briefs scored: **3** (Bullish or Bearish calls: 0)
+- Briefs scored: **4** (Bullish or Bearish calls: 0)
 - Right: 0, Wrong: 0, Session ended flat: 0
 - Hit rate when the session was decisive: **n/a**
-- For comparison, price went up in 33% of decisive sessions
+- For comparison, price went up in 25% of decisive sessions
 - ⚠️ Only 0 directional calls so far. Treat the numbers as noise until there are at least 30.
 
 By confidence:
@@ -573,6 +573,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-10-18 | gold | ◆ Neutral | Low | Down (-0.29%) | Moved |
 | 2026-10-16 | nasdaq | ◆ Neutral | Low | Down (-2.14%) | Moved |
 | 2026-10-15 | gold | ◆ Neutral | Low | Up (0.81%) | Moved |
 | 2026-10-15 | nasdaq | ◆ Neutral | Low | Down (-2.14%) | Moved |
