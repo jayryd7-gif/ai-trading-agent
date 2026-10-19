@@ -6,12 +6,13 @@ It reads the files the other agents leave in reports/ and writes a page that
 GitHub displays nicely, even in a private repo.
 
 It shows: your reminders, how each agent is doing, any problems in the last
-runs, the latest briefs and reviews (readable right on the page, in
-expandable sections), the latest lean for each market, the session reviews, scorecard summary,
+runs, the paper trade journal, the latest briefs (readable right on the page, in
+expandable sections), the latest lean for each market, scorecard summary,
 charts, recent results, and the agents still to be built.
 """
 
 import glob
+import json
 import os
 import re
 from datetime import datetime
@@ -28,6 +29,9 @@ DASHBOARD = "DASHBOARD.md"
 JOURNAL = "trade-journal.md"
 NO_TRADE_JOURNAL = "no-trade-journal.md"
 PAPER_SUMMARY = os.path.join("paper-trading", "summary.md")
+PAPER_TRADES = os.path.join("paper-trading", "trades.csv")
+TV_LINKS = {"nasdaq": "https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5",
+            "gold": "https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5"}
 REMINDERS = "REMINDERS.md"
 GOOD_WITHIN_HOURS = 72     # green if an agent ran within this long (covers weekends)
 LATE_WITHIN_HOURS = 168    # yellow up to this long, red after that
@@ -106,6 +110,73 @@ def paper_section():
     return glance.split("\n", 1)[1].strip(), demote_headings(rest)
 
 
+def _money(value):
+    return f"-${-value:,.0f}" if value < 0 else f"${value:,.0f}"
+
+
+def paper_journal_section(how_many=15):
+    """Every recent paper session as one table row: entry, each sale, exit,
+    result, what could have gone better, and links to the chart and TradingView."""
+    rows = read_csv(PAPER_TRADES)
+    out = ["## 📒 Trade journal (paper)", "",
+           "Newest first. Times are New York time. Each sale shows contracts @ price, time. "
+           "The 📈 link opens a chart of the trade; TV opens the same market on TradingView "
+           "(add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).", "",
+           "| Date | Market | Side | Lots | Entry | Target 1 | Target 2 | Target 3 / out | "
+           "Result | What could have gone better | See it |",
+           "|---|---|---|---|---|---|---|---|---|---|---|"]
+    try:
+        open_now = json.load(open(os.path.join("paper-trading", "open-trades.json")))
+    except (OSError, ValueError):
+        open_now = {}
+    live = []
+    for t in open_now.values():
+        sold = ", ".join(f"{f['contracts']} @ {f['price']} ({f['time']})" for f in t["sold_so_far"])
+        live.append(f"- 🟢 **Open now: {'Nasdaq' if t['instrument'] == 'nasdaq' else 'Gold'} "
+                    f"{t['direction']} {t['contracts']} contracts** at {t['entry']} "
+                    f"({t['entry_time']}), stop {t['stop']}. Sold so far: {sold or 'nothing yet'}.")
+    if live:
+        out[2:2] = live + [""]
+    if not rows:
+        return out[:2] + live + ["", "No sessions recorded yet.", ""]
+    for r in sorted(rows, key=lambda r: r["session_start"], reverse=True)[:how_many]:
+        market = "Nasdaq" if r["instrument"] == "nasdaq" else "Gold"
+        if r["signal"] != "yes":
+            why = ("stopped by the max drawdown" if r["signal"] == "stopped"
+                   else "no breakout, no trade")
+            out.append(f"| {r['trading_day']} | {market} | – | 0 | {why} | | | | $0 | "
+                       f"{r['events']} | [TV]({TV_LINKS[r['instrument']]}) |")
+            continue
+        try:
+            fills = json.loads(r.get("fills") or "[]")
+        except ValueError:
+            fills = []
+        cells = []
+        for f in fills:
+            label = "" if f["what"].startswith("Target") else f"{f['what'].lower()}: "
+            cells.append(f"{label}{f['contracts']} @ {f['price']}, {f['time']} ({_money(f['profit'])})")
+        targets = [c for c, f in zip(cells, fills) if f["what"].startswith("Target")]
+        others = [c for c, f in zip(cells, fills) if not f["what"].startswith("Target")]
+        cols = [targets[0] if targets else "–", targets[1] if len(targets) > 1 else "–",
+                "<br>".join(targets[2:] + others) or "–"]
+        lessons = "<br>".join("• " + t for t in (r.get("lessons") or "").split(" | ")
+                              if t and not t.startswith("Biggest move"))
+        chart = f"[📈 chart]({r['chart']}) · " if r.get("chart") else ""
+        icon = "✅" if float(r["net"]) > 0 else "❌"
+        out.append(f"| {r['trading_day']} | {market} | {r['direction']} | {r['contracts']} | "
+                   f"{r['entry']} @ {r['entry_time']}<br>stop {r['stop']} | "
+                   f"{' | '.join(cols)} | {icon} **{_money(float(r['net']))}**<br>"
+                   f"out {r['exit_time']} | {lessons or '–'} | {chart}"
+                   f"[TV]({TV_LINKS[r['instrument']]}) |")
+    latest = next((r for r in sorted(rows, key=lambda r: r["session_start"], reverse=True)
+                   if r.get("chart")), None)
+    out.append("")
+    if latest:
+        out += [f"**Latest trade:**", "", f"![Latest paper trade]({latest['chart']})", ""]
+    out += ["[Full journal with every fill](paper-trading/paper-journal.md)", ""]
+    return out
+
+
 def scorecard_updated():
     """Read the 'Updated YYYY-MM-DD HH:MM' stamp from the scorecard."""
     path = os.path.join(REPORT_FOLDER, "scorecard.md")
@@ -115,30 +186,6 @@ def scorecard_updated():
         return None
     match = re.search(r"Updated (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})", text)
     return parse_time(match.group(1), match.group(2)) if match else None
-
-
-def latest_review(name):
-    """Newest review file for a market: (session date, path, written time) or None."""
-    folder = os.path.join(REPORT_FOLDER, "reviews")
-    try:
-        files = os.listdir(folder)
-    except OSError:
-        return None
-    pattern = re.compile(rf"^(\d{{4}}-\d{{2}}-\d{{2}})-{name}-review\.md$")
-    found = sorted(f for f in files if pattern.match(f))
-    if not found:
-        return None
-    newest = found[-1]
-    session_date = pattern.match(newest).group(1)
-    written = None
-    try:
-        match = re.search(r"Written (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})",
-                          open(os.path.join(folder, newest)).read())
-        if match:
-            written = parse_time(match.group(1), match.group(2))
-    except OSError:
-        pass
-    return session_date, f"{REPORT_FOLDER}/reviews/{newest}", written
 
 
 def latest_news(subfolder="news", kind="world"):
@@ -305,13 +352,6 @@ def build_dashboard(now):
     out.append(f"| {status_icon(updated, now)} | Scorer | Checks each lean against "
                f"what price did | {age_text(updated, now) if updated else 'never'} | "
                f"after each session ends |")
-    for name, config in INSTRUMENTS.items():
-        review = latest_review(name)
-        when = review[2] if review else None
-        out.append(f"| {status_icon(when, now)} | Post-session review: {name} | "
-                   f"Reviews the {config['label']} session after it ends | "
-                   f"{age_text(when, now) if when else 'never'} | "
-                   f"after each session ends |")
     out += ["", "🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran", ""]
 
     # ---- Problems ----
@@ -319,6 +359,9 @@ def build_dashboard(now):
     if problems:
         out += ["## ⚠️ Problems", ""] + problems + [
             "", "Open the repo's Actions tab on GitHub for more detail.", ""]
+
+    # ---- The paper trade journal, first thing after status ----
+    out += paper_journal_section()
 
     # ---- CEO check and weekly report ----
     try:
@@ -388,23 +431,6 @@ def build_dashboard(now):
                    f"{row['confidence']} | {event_risk(brief_file)} | "
                    f"{row['price_at_brief'] or 'n/a'} | {link} |")
     out += ["", "A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral", ""]
-
-    # ---- Latest reviews ----
-    out += ["## Latest session reviews", "",
-            "| Market | Session | Review |", "|---|---|---|"]
-    for name in INSTRUMENTS:
-        review = latest_review(name)
-        if review:
-            out.append(f"| {name} | {review[0]} | [read it]({review[1]}) |")
-        else:
-            out.append(f"| {name} | none yet | |")
-    out += [""]
-    for name in INSTRUMENTS:
-        review = latest_review(name)
-        if review:
-            out += details(f"📝 {name} review, session {review[0]}",
-                           read_body(review[1], drop_section="Facts used"))
-    out += [f"[All reviews]({REPORT_FOLDER}/reviews/)", ""]
 
     # ---- Scorecard ----
     directional = [r for r in scores if r["bias"] in ("Bullish", "Bearish")]

@@ -83,6 +83,7 @@ def load_from_yahoo(symbol, interval="5m", period="5d"):
                 high=float(row["High"]),
                 low=float(row["Low"]),
                 close=float(row["Close"]),
+                open=float(row["Open"]),
             )
         )
     return candles

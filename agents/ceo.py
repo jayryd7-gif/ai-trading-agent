@@ -239,8 +239,10 @@ def check_alpaca(r):
         from crypto_bots import COINS, NEVER_OWN
     except Exception:
         COINS, NEVER_OWN = None, []
+    # Never-own coins are judged by the check below instead: buys before the
+    # rule existed (like DOT on Oct 18) and the sells that cleared them are fine.
     strange = [o for o in orders if COINS and o["coin"] not in COINS
-               and not (o["coin"] in NEVER_OWN and o["side"] == "sell")]
+               and o["coin"] not in NEVER_OWN]
     banned = [o for o in orders if o["coin"] in NEVER_OWN and o["side"] == "buy"
               and o["time_utc"] >= "2026-10-18 12:00"]
     for o in banned:

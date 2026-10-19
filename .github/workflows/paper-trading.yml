@@ -42,6 +42,7 @@ jobs:
         run: |
           # The summary's timestamp changes every run; only save real changes.
           if git diff --quiet -- paper-trading/trades.csv paper-trading/paper-journal.md \
+                                 paper-trading/open-trades.json \
              && git ls-files --error-unmatch paper-trading/trades.csv >/dev/null 2>&1; then
             echo "No new sessions recorded"
             exit 0

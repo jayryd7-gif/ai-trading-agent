@@ -10,11 +10,13 @@
 // The script picks Nasdaq or gold settings from the chart symbol.
 //
 // THE RULES (same as main.py)
-// - Key levels: the high and low of the previous full session of the same
-//   kind (holiday half-days are skipped).
+// - Key levels: the high and low of the 2 hours before the open
+//   (Nasdaq 7:30-9:30 AM New York, gold 7:00-9:00 AM Tokyo = 6-8 PM New York
+//   in summer). The "Key levels" setting switches back to the previous
+//   full session's high and low (the original rule; use a 30-minute window).
 //     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
 //     Gold:   Tokyo, 9:00 AM to 5:00 PM Tokyo time (8 PM / 7 PM New York).
-// - In the first 30 minutes, a 5-minute candle closes beyond a key level,
+// - In the first 60 minutes, a 5-minute candle closes beyond a key level,
 //   and the NEXT candle also closes beyond it. Enter at that second close.
 // - Stop: the far end of the two candles.
 // - 3 targets, each 30 points (Nasdaq) or 6 points (gold) apart.
@@ -41,7 +43,8 @@ strategy("Session Breakout (ai-trading-agent)", overlay = true,
 
 // ---------------- SETTINGS ----------------
 market     = input.string("Auto", "Market", options = ["Auto", "Nasdaq", "Gold"])
-windowMin  = input.int(30, "Look for breakouts this many minutes after the open", minval = 5)
+levelMode  = input.string("2 hours before the open", "Key levels", options = ["2 hours before the open", "Previous session"])
+windowMin  = input.int(60, "Look for breakouts this many minutes after the open", minval = 5)
 confirm    = input.bool(true, "Wait for a second candle to confirm")
 goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
 goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
@@ -56,6 +59,7 @@ if timeframe.period != "5"
 root    = syminfo.root
 isGold  = market == "Gold" or (market == "Auto" and (root == "MGC" or root == "GC"))
 sessStr = isGold ? "0900-1700:23456" : "0930-1600:23456"
+preStr  = isGold ? "0700-0900:23456" : "0730-0930:23456"
 zone    = isGold ? "Asia/Tokyo" : "America/New_York"
 spacing = isGold ? 6.0 : 30.0
 q1      = isGold ? goldPlan1 : 1
@@ -65,6 +69,9 @@ total   = q1 + q2 + q3
 
 inSess   = not na(time(timeframe.period, sessStr, zone))
 newSess  = inSess and not inSess[1]
+inPre    = not na(time(timeframe.period, preStr, zone))
+newPre   = inPre and not inPre[1]
+usePre   = levelMode == "2 hours before the open"
 
 var float curHigh   = na
 var float curLow    = na
@@ -80,11 +87,27 @@ var float entryPx   = na
 var int   dir       = 0
 var bool  stopMoved = false
 var int   sessBars  = 0      // candles seen in the current session
+var float preHigh   = na
+var float preLow    = na
+var int   preBars   = 0
+if newPre
+    preHigh := high
+    preLow  := low
+    preBars := 1
+else if inPre
+    preHigh := math.max(preHigh, high)
+    preLow  := math.min(preLow, low)
+    preBars := preBars + 1
 fullBars = (isGold ? 480 : 390) / 5 * 0.75   // shorter sessions are holiday half-days
 
 if newSess
     // A holiday half-day (like Labor Day) is not used as the previous session.
-    if not na(curHigh) and sessBars >= fullBars
+    if usePre
+        // At least half of the 24 pre-open candles are needed.
+        prevHigh := preBars >= 12 and not na(preHigh) ? preHigh : na
+        prevLow  := preBars >= 12 and not na(preLow) ? preLow : na
+        preBars  := 0
+    else if not na(curHigh) and sessBars >= fullBars
         prevHigh := curHigh
         prevLow  := curLow
     sessBars  := 1
@@ -167,7 +190,7 @@ if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_
 if strategy.position_size != 0 and inSess and time_close >= sessEnd
     strategy.close_all(comment = "Session end")
 
-plot(showLevels ? prevHigh : na, "Previous session high", color.new(color.green, 0), 1, plot.style_linebr)
-plot(showLevels ? prevLow  : na, "Previous session low",  color.new(color.red, 0),   1, plot.style_linebr)
+plot(showLevels ? prevHigh : na, "Key high", color.new(color.green, 0), 1, plot.style_linebr)
+plot(showLevels ? prevLow  : na, "Key low",  color.new(color.red, 0),   1, plot.style_linebr)
 bgcolor(inWindow ? color.new(color.blue, 90) : na, title = "Entry window")
 bgcolor(halted ? color.new(color.red, 92) : na, title = "Stopped by max drawdown")

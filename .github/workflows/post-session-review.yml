@@ -1,10 +1,13 @@
 name: Post-Session Review
 
 on:
-  schedule:
-    # Times are UTC. Shortly after the scorer, once each session has ended.
-    - cron: "45 21 * * 1-5"   # Nasdaq session just ended (about 4:45-5:45 PM NY)
-    - cron: "45 10 * * 1-5"   # Asia session ended at 08:00 UTC (about 3-4 AM NY)
+  # Switched off on 2026-10-19 to save AI costs. The paper trade journal
+  # (paper-trading/paper-journal.md and the dashboard) now covers every session:
+  # entries, each sale, exits, and what could have gone better, in plain code.
+  # To turn it back on, put these two lines back under a "schedule:" line:
+  #   - cron: "45 21 * * 1-5"   # Nasdaq session just ended
+  #   - cron: "45 10 * * 1-5"   # Asia session ended
+  # It can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
       instrument:

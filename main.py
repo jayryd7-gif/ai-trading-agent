@@ -18,8 +18,8 @@ How to run (in a terminal, inside your project folder):
 
 Assumptions made by this replay (change them in the SETTINGS block):
 - Candle times are New York time (Yahoo data from data.py is).
-- Key levels = the high and low of the previous session of the same kind.
-- Only the first 30 minutes of a session are scanned for a breakout, and
+- Key levels = the high and low of the 2 hours before the open (KEY_LEVELS).
+- Only the first 60 minutes of a session are scanned for a breakout, and
   at most one trade is taken per session.
 - Entry is at the close of the breakout candle. The stop is the other end
   of that candle (low for a long, high for a short).
@@ -47,7 +47,18 @@ CSV_FILES = {"nasdaq": "nasdaq.csv", "gold": "gold.csv"}  # used if "csv"
 # CSV note: the "time" column must already be in New York time.
 
 JOURNAL_PATH = "backtest-journal.md"   # kept separate from your real journal
-ENTRY_WINDOW_MINUTES = 30              # only look for breakouts this long
+ENTRY_WINDOW_MINUTES = 60              # only look for breakouts this long
+
+# Where the key levels come from:
+#   "pre_open"          the high and low of the PRE_OPEN_HOURS before the open
+#                       (Nasdaq 7:30-9:30 AM, gold 6-8 PM New York in summer)
+#   "previous_session"  the high and low of the previous full session (the
+#                       original rule, with a 30-minute window)
+# On the 60 days to Oct 19, 2026, "pre_open" with a 60-minute window traded
+# about 85% of sessions (vs about 60%) and made money in both halves of the
+# data, for both markets. Tested in experiments/key_level_test.py.
+KEY_LEVELS = "pre_open"
+PRE_OPEN_HOURS = 2
 
 # Wait for a second candle to close beyond the level before entering.
 # Tested in experiments/gold_variations.py.
@@ -162,6 +173,7 @@ def play_session(instrument, config, start, session, key_high, key_low):
 
         events = []        # (time, text)
         exits = []         # (price, contracts) for the average exit price
+        fills = []         # one per sale, for the journal
         exit_time = moment
 
         for later_moment, later in session[index + 1:]:
@@ -172,6 +184,7 @@ def play_session(instrument, config, start, session, key_high, key_low):
                         f"sold {a['contracts']} at Target {a['target']} "
                         f"({a['price']}, ${a['profit']})"))
                     exits.append((a["price"], a["contracts"]))
+                    fills.append(_fill(later_moment, f"Target {a['target']}", a))
                 elif a["action"] == "move_stop":
                     events.append((later_moment,
                         f"moved stop to {a['reason']} ({a['new_stop']})"))
@@ -180,11 +193,13 @@ def play_session(instrument, config, start, session, key_high, key_low):
                         f"sold the last {a['contracts']} at Target "
                         f"{a['target']} ({a['price']}, ${a['profit']})"))
                     exits.append((a["price"], a["contracts"]))
+                    fills.append(_fill(later_moment, f"Target {a['target']}", a))
                 elif a["action"] == "exit_stop":
                     events.append((later_moment,
                         f"stop hit, sold {a['contracts']} at {a['price']} "
                         f"(${a['profit']})"))
                     exits.append((a["price"], a["contracts"]))
+                    fills.append(_fill(later_moment, "Stop", a))
             exit_time = later_moment
             if trade["contracts"] == 0:
                 break
@@ -201,6 +216,9 @@ def play_session(instrument, config, start, session, key_high, key_low):
                 f"session ended, sold {trade['contracts']} at {last.close} "
                 f"(${profit})"))
             exits.append((last.close, trade["contracts"]))
+            fills.append({"time": f"{last_moment:%H:%M}", "what": "Session end",
+                          "contracts": trade["contracts"], "price": round(last.close, 2),
+                          "profit": profit})
             trade["banked"] = round(trade["banked"] + profit, 2)
             trade["contracts"] = 0
             exit_time = last_moment
@@ -221,6 +239,8 @@ def play_session(instrument, config, start, session, key_high, key_low):
             "average_exit": average_exit,
             "profit": trade["banked"],
             "events": events,
+            "fills": fills,
+            "entry_index": index,
             "sell_plan": trade["sell_plan"],
             "contracts": contracts,
             "risk_dollars": risk_dollars,
@@ -229,6 +249,11 @@ def play_session(instrument, config, start, session, key_high, key_low):
         }
 
     return None  # no breakout: do not force a trade
+
+
+def _fill(moment, what, action):
+    return {"time": f"{moment:%H:%M}", "what": what, "contracts": action["contracts"],
+            "price": action["price"], "profit": action["profit"]}
 
 
 def write_to_journal(result, path):
@@ -279,6 +304,30 @@ def previous_full_session(sessions, starts, i, config):
     return None
 
 
+def key_levels_for(sessions, starts, i, config, candles_by_time=None):
+    """(high, low) the session starts[i] trades against, or None.
+
+    candles_by_time: [(time, candle), ...] of ALL candles in time order,
+    needed for "pre_open" (the pre-open hours are outside the session).
+    """
+    if KEY_LEVELS == "pre_open":
+        start = starts[i]
+        since = start - timedelta(hours=PRE_OPEN_HOURS)
+        pre = [c for t, c in candles_by_time or [] if since <= t < start]
+        if len(pre) < PRE_OPEN_HOURS * 12 / 2:   # at least half the candles
+            return None
+        return find_key_levels(pre)
+    prev = previous_full_session(sessions, starts, i, config)
+    if prev is None:
+        return None
+    return find_key_levels([c for _, c in sessions[prev]])
+
+
+def timeline(candles):
+    """[(time, candle), ...] in time order."""
+    return sorted(((parse_time(c.time), c) for c in candles), key=lambda p: p[0])
+
+
 def trading_day(start):
     """Futures trading days start at 6 PM New York, so an evening session
     (gold at the Tokyo open) belongs to the next day."""
@@ -316,11 +365,11 @@ def run_account(candles_by_instrument, account=None):
         config = SESSIONS[instrument]
         sessions = group_into_sessions(candles, config)
         starts = list(sessions)
+        everything = timeline(candles)
         for i in range(1, len(starts)):
-            prev = previous_full_session(sessions, starts, i, config)
-            if prev is not None:
-                plan.append((starts[i], instrument, sessions[starts[i]],
-                             *find_key_levels([c for _, c in sessions[prev]])))
+            levels = key_levels_for(sessions, starts, i, config, everything)
+            if levels is not None:
+                plan.append((starts[i], instrument, sessions[starts[i]], *levels))
     results = []
     for start, instrument, session, key_high, key_low in sorted(plan, key=lambda p: p[0]):
         if not account.can_trade(start):
@@ -338,15 +387,15 @@ def run_replay(candles, instrument, journal_path=JOURNAL_PATH):
     config = SESSIONS[instrument]
     sessions = group_into_sessions(candles, config)
     starts = list(sessions)
+    everything = timeline(candles)
     results = []
 
     for i in range(1, len(starts)):
         start = starts[i]
-        previous_start = previous_full_session(sessions, starts, i, config)
-        if previous_start is None:
-            continue  # no usable previous session
-        key_high, key_low = find_key_levels(
-            [c for _, c in sessions[previous_start]])
+        levels = key_levels_for(sessions, starts, i, config, everything)
+        if levels is None:
+            continue  # no usable key levels
+        key_high, key_low = levels
         result = play_session(instrument, config, start, sessions[start],
                               key_high, key_low)
         if result is not None:

@@ -18,6 +18,7 @@ class Candle:
     high: float
     low: float
     close: float
+    open: float = None   # optional; used only for drawing charts
 
 
 RISK_REWARD = 3  # rule 6: 3:1 risk-to-reward

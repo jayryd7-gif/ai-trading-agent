@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 10:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 16:39 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -8,28 +8,41 @@ Last updated 2026-10-19 10:23 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 15 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 21 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 10 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 10 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 10 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 2 days ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 3 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 10 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
+## 📒 Trade journal (paper)
+
+Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
+
+| Date | Market | Side | Lots | Entry | Target 1 | Target 2 | Target 3 / out | Result | What could have gone better | See it |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-19 | Nasdaq | long | 5 | 29841.25 @ 10:15<br>stop 29694.0 | 1 @ 29871.25, 11:00 ($60) | 2 @ 29901.25, 11:15 ($240) | 2 @ 29931.25, 11:20 ($360) | ✅ **$655**<br>out 11:20 | • Price kept going 52.25 points past Target 3 (by 11:35). Letting the last 2 contract(s) run with a trailing stop could have made up to $209 more. | [📈 chart](paper-trading/charts/2026-10-19-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
+| 2026-10-19 | Gold | – | 0 | no breakout, no trade | | | | $0 | No confirmed breakout in the first 60 minutes. Key high 4207.10, low 4191.10. | [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
+
+**Latest trade:**
+
+![Latest paper trade](paper-trading/charts/2026-10-19-nasdaq.svg)
+
+[Full journal with every fill](paper-trading/paper-journal.md)
+
 ## 👔 CEO check
 
-**❌ 1 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**✅ All clear** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
 
 ##### Futures paper trader
 
-- ✅ All 0 paper trades followed the rules (one per session, inside the 30-minute window, right size, stop managed).
+- ✅ All 1 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
 - ✅ Room left before the $2,500 max drawdown: $2,500.
 
 ##### Your trade journal
@@ -43,11 +56,11 @@ Last updated 2026-10-19 10:23 New York time. Everything here is written by softw
 
 ##### Alpaca copy
 
-- ❌ Alpaca order for DOT, which is not one of the bot's coins.
+- ✅ All 7 Alpaca orders were for the bot's coins and within the limit.
 
 ##### Costs
 
-- ✅ Spent $0.12 so far this month on 1 AI runs; on pace for about $0 (budget $50).
+- ✅ Spent $0.75 so far this month on 6 AI runs; on pace for about $1 (budget $50).
 
 ##### Agent health
 
@@ -122,13 +135,13 @@ No AI runs logged this week.
 
 ## Paper trading
 
-- Total after fees: **$0** over 0 trades (2 sessions watched)
-- Trading days with a trade: **0**, profitable: **0**, losing: 0
-- Win rate: n/a
+- Total after fees: **$655** over 1 trades (2 sessions watched)
+- Trading days with a trade: **1**, profitable: **1**, losing: 0
+- Win rate: 100%
 - Profit factor: n/a (no losing trades yet)
 - Biggest drop from a high (max drawdown): $0
 - Room left before the $2,500 max drawdown: **$2,500**
-- Progress toward a prop demo: **0 of 20** trading days
+- Progress toward a prop demo: **1 of 20** trading days
 
 <details>
 <summary><b>Challenge simulation, results by market, and daily results</b></summary>
@@ -137,7 +150,7 @@ No AI runs logged this week.
 
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
-| nasdaq | 0 | 0 | $0 |
+| nasdaq | 1 | 1 | $655 |
 | gold | 0 | 0 | $0 |
 
 
@@ -149,14 +162,14 @@ Rules: reach $3,000 profit before the balance drops $2,000 below its highest end
 
 | Attempt | Started | Ended | Trading days | Balance | Result | Note |
 |---|---|---|---|---|---|---|
-| 1 | 2026-10-19 | 2026-10-19 | 0 | $50,000 | In progress |  |
+| 1 | 2026-10-19 | 2026-10-19 | 1 | $50,655 | In progress |  |
 
 
 #### Daily results
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-10-19 | gold no trade, nasdaq no trade | $0 |
+| 2026-10-19 | gold no trade, nasdaq long | $655 |
 
 [Every paper trade](paper-journal.md) · [Raw data](trades.csv)
 
@@ -475,79 +488,6 @@ BIAS: Neutral | CONFIDENCE: Low
 | gold | 2026-10-18 19:12 | ◆ Neutral | Low | Medium | 4201.50 | [read it](reports/2026-10-18-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
-
-## Latest session reviews
-
-| Market | Session | Review |
-|---|---|---|
-| nasdaq | 2026-10-16 | [read it](reports/reviews/2026-10-16-nasdaq-review.md) |
-| gold | 2026-10-18 | [read it](reports/reviews/2026-10-18-gold-review.md) |
-
-<details>
-<summary><b>📝 nasdaq review, session 2026-10-16</b></summary>
-
-#### 1. What the session did
-Price opened at 30024.25 and the session high of 30045.75 came at 09:30, so it sold off almost from the start. It closed at 29379.50, down 644.75 points (-2.15%). The low was 29268.75 at 15:05, a range of 777.00 points. Price never reached the previous high (30196.75). It first traded below the previous low (29622.50) at 12:00.
-
-#### 2. Did the brief help?
-The brief said Neutral, Low confidence. The day ended Down, so it did not point the right way. It also did not claim to.
-
-- **Right:** It listed the bearish factors: hot inflation data, rate-hike talk, a weak week for tech, and a hawkish Fed Chair. It also said being near the previous high limited upside, and price never got above that high.
-- **Missed:** It gave no sense that the day could be a large move. It listed the bullish and bearish factors but did not say which mattered more.
-
-A low-confidence Neutral is honest, but it gave you little to act on.
-
-#### 3. Rules replay versus reality
-The replay took no trade. No 5-minute candle closed above 30196.75 or below 29622.50 in the first 15 minutes. The break below the previous low came at 12:00, far outside your window. No trades were logged, so there is nothing to compare.
-
-#### 5. What went well
-- No trade was logged, which matches what the rules would have done.
-- On a day with a big move later, the rules kept you out of a setup that never appeared in the window. That is the "do not force a trade" rule working.
-
-#### 6. What to improve
-1. **Journal no-trade sessions.** The rules say to explain your actions. Write a few lines on why you stood aside, such as "no 5-minute close beyond either level by 09:45."
-2. **Respect the 15-minute window.** Your rule is "only look for breakouts in the first 15 minutes." The 12:00 break below the low was outside it. Note in your journal that it was outside the window, so you can see how the rule plays out over many sessions.
-3. **Write a pre-open note.** Mark the levels (30196.75 and 29622.50) and how far the open sits from each. Here the open was 172.50 below the high and 401.75 above the low. This builds your habit of marking key levels before the open.
-
-One session is a tiny sample, so don't draw big conclusions from it.
-
-#### 7. One thing to watch next session
-Mark the key levels from this session: high 30045.75 and low 29268.75. Then watch whether any 5-minute candle closes beyond either one in the first 15 minutes, as your rules require.
-
-</details>
-
-<details>
-<summary><b>📝 gold review, session 2026-10-18</b></summary>
-
-### Session Review: Gold, Asia session starting 2026-10-18 20:00
-
-#### 1. What the session did
-Gold opened at 4205.50 and closed at 4193.20, down 12.30 points (-0.29%). The range was 25.60 points, smaller than the previous session's 43.70. The low was 4185.60 at 21:25, and the high was 4211.20 at 03:30. That high matched the previous high exactly but never went above it. Price also stayed well above the previous low of 4167.50. The session stayed inside the previous range the whole time.
-
-#### 2. Did the brief help?
-The brief said Neutral, low confidence. The session counted as "Down," but -0.29% is a small move, so I would call the lean reasonable rather than right or wrong.
-- **Right:** It flagged 4211–4220 as an area where price had been rejected. This session topped out at 4211.20 and fell back.
-- **Right:** It said the signals conflicted and did not push a direction.
-- **Unresolved:** It mentioned China data possibly landing around 10 PM New York time but said it could not verify this. I can't tell from the data whether it mattered.
-
-#### 3. Rules replay versus reality
-The replay took no trade. No candle closed above 4211.20 or below 4167.50 in the first 30 minutes, so there was no breakout to confirm. Price never reached either level all session. No trades were logged, so there is nothing to compare. The two match. I can't tell whether you chose to sit out or were simply away.
-
-#### 4. Your trades
-No trades were logged, so I'm skipping this section.
-
-#### 5. What went well
-- No trade was logged, and the rules did not call for one. Nothing was forced in a session that never broke a key level (Rule 5).
-- The brief gave you clear levels to mark: 4211.20 and 4167.50.
-
-#### 6. What to improve
-1. **Journal no-trade sessions too.** The rules ask you to explain your actions. A two-line note ("levels marked, no breakout, no trade") builds the habit.
-2. **Be ready 15–30 minutes before the open.** Mark 4211.20 and 4167.50 by about 19:30–19:45 New York time, so you are not guessing at the open.
-3. **Check news timing yourself.** The China data time was unverified. Your "
-
-</details>
-
-[All reviews](reports/reviews/)
 
 ## Scorecard
 
