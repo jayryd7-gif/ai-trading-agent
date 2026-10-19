@@ -39,3 +39,23 @@ under "Your notes" in any entry.
 - **Your notes:** 
 
 ---
+
+### No-trade session | 2026-10-18 | Asia
+- **Instrument:** Gold futures
+- **What happened:** No signal. The rules gave no entry.
+- **Why:** No 5-minute candle closed above the previous high (4211.20) or below the previous low (4167.50) in the first 30 minutes after the 20:00 open. (Previous Asia session was 2026-10-15.)
+- **First 30 minutes, candle by candle:**
+  - 20:00 candle: close 4205.50, closed inside the range (5.70 below the high, 38.00 above the low).
+  - 20:05 candle: close 4204.40, closed inside the range (6.80 below the high, 36.90 above the low).
+  - 20:10 candle: close 4201.70, closed inside the range (9.50 below the high, 34.20 above the low).
+  - 20:15 candle: close 4199.00, closed inside the range (12.20 below the high, 31.50 above the low).
+  - 20:20 candle: close 4196.40, closed inside the range (14.80 below the high, 28.90 above the low).
+  - 20:25 candle: close 4196.00, closed inside the range (15.20 below the high, 28.50 above the low).
+- **Closest call:** Price got within 2.80 of the previous high (its highest point was 4208.40) but never reached it.
+- **After the window:** No candle closed beyond either level for the rest of the session.
+- **What the market was showing:** The session range was 25.60 points, 60% of the average of the last 5 (a quiet session). Open to close it moved -12.30 points (-0.29%).
+- **The morning brief said:** Neutral (Low confidence), event risk Medium.
+- **Verdict:** Consistent with your rules. There was no setup, so staying out was correct under the rules.
+- **Your notes:** 
+
+---
