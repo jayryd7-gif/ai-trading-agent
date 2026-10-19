@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 08:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 10:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -8,15 +8,15 @@ Last updated 2026-10-19 08:32 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 1 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 12 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 15 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 2 days ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 1 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 3 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -122,7 +122,7 @@ No AI runs logged this week.
 
 ## Paper trading
 
-- Total after fees: **$0** over 0 trades (1 sessions watched)
+- Total after fees: **$0** over 0 trades (2 sessions watched)
 - Trading days with a trade: **0**, profitable: **0**, losing: 0
 - Win rate: n/a
 - Profit factor: n/a (no losing trades yet)
@@ -156,7 +156,7 @@ Rules: reach $3,000 profit before the balance drops $2,000 below its highest end
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-10-19 | gold no trade | $0 |
+| 2026-10-19 | gold no trade, nasdaq no trade | $0 |
 
 [Every paper trade](paper-journal.md) · [Raw data](trades.csv)
 
