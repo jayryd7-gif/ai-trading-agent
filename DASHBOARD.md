@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-18 19:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-18 20:58 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -8,15 +8,15 @@ Last updated 2026-10-18 19:13 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 13 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 12 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 23 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 26 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
-| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 35 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 35 hours ago | after each session ends |
+| 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 37 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 37 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -121,7 +121,46 @@ No AI runs logged this week.
 
 ## Paper trading
 
-No sessions recorded yet. The paper record starts on 2026-10-19.
+- Total after fees: **$0** over 0 trades (1 sessions watched)
+- Trading days with a trade: **0**, profitable: **0**, losing: 0
+- Win rate: n/a
+- Profit factor: n/a (no losing trades yet)
+- Biggest drop from a high (max drawdown): $0
+- Room left before the $2,500 max drawdown: **$2,500**
+- Progress toward a prop demo: **0 of 20** trading days
+
+<details>
+<summary><b>Challenge simulation, results by market, and daily results</b></summary>
+
+#### By market
+
+| Market | Trades | Wins | Total after fees |
+|---|---|---|---|
+| nasdaq | 0 | 0 | $0 |
+| gold | 0 | 0 | $0 |
+
+
+#### Challenge simulation: Tradeify Growth 50K (practice)
+
+Rules: reach $3,000 profit before the balance drops $2,000 below its highest end-of-day balance. Stop for the day after losing $1,250. Check the firm's current rules before relying on this.
+
+**Passed 0, failed 0, 1 in progress.**
+
+| Attempt | Started | Ended | Trading days | Balance | Result | Note |
+|---|---|---|---|---|---|---|
+| 1 | 2026-10-19 | 2026-10-19 | 0 | $50,000 | In progress |  |
+
+
+#### Daily results
+
+| Trading day | Sessions | Result after fees |
+|---|---|---|
+| 2026-10-19 | gold no trade | $0 |
+
+[Every paper trade](paper-journal.md) · [Raw data](trades.csv)
+
+
+</details>
 
 [Paper trading journal](paper-trading/paper-journal.md) · [TradingView strategy](tradingview/breakout_strategy.pine)
 
