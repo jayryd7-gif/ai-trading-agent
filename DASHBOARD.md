@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 07:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 07:14 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -16,7 +16,7 @@ Last updated 2026-10-19 07:10 New York time. Everything here is written by softw
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 | 🟢 | Post-session review: nasdaq | Reviews the New York session after it ends | 47 hours ago | after each session ends |
-| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | 47 hours ago | after each session ends |
+| 🟢 | Post-session review: gold | Reviews the Asia session after it ends | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -474,7 +474,7 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 | Market | Session | Review |
 |---|---|---|
 | nasdaq | 2026-10-16 | [read it](reports/reviews/2026-10-16-nasdaq-review.md) |
-| gold | 2026-10-15 | [read it](reports/reviews/2026-10-15-gold-review.md) |
+| gold | 2026-10-18 | [read it](reports/reviews/2026-10-18-gold-review.md) |
 
 <details>
 <summary><b>📝 nasdaq review, session 2026-10-16</b></summary>
@@ -510,39 +510,33 @@ Mark the key levels from this session: high 30045.75 and low 29268.75. Then watc
 </details>
 
 <details>
-<summary><b>📝 gold review, session 2026-10-15</b></summary>
+<summary><b>📝 gold review, session 2026-10-18</b></summary>
+
+### Session Review: Gold, Asia session starting 2026-10-18 20:00
 
 #### 1. What the session did
-Gold opened at 4177.10 and closed at 4210.60, up 33.50 points (+0.80%). The low was 4167.50 at 21:30, and the high was 4211.20 at 03:30. Price first traded above the previous high (4183.30) at 22:30. It never came near the previous low (4152.70). It was mostly a steady climb with the high set near the end of the session.
+Gold opened at 4205.50 and closed at 4193.20, down 12.30 points (-0.29%). The range was 25.60 points, smaller than the previous session's 43.70. The low was 4185.60 at 21:25, and the high was 4211.20 at 03:30. That high matched the previous high exactly but never went above it. Price also stayed well above the previous low of 4167.50. The session stayed inside the previous range the whole time.
 
 #### 2. Did the brief help?
-The brief leaned Neutral with low confidence. The session finished up, so it did not call the direction. But it did not claim an edge it lacked, and that is honest. One session can't say whether that lean was good or bad.
-
-What it got right:
-- It named 4183.30 as the key high, and that level was broken.
-- It said the news conflicted, and the session did not resolve that either way.
-
-What it missed:
-- It gave no sense of how far price might travel, and the move was 33.50 points.
-- It flagged the Warsh speech at 11:30 PM but didn't say what would matter if price moved around it.
+The brief said Neutral, low confidence. The session counted as "Down," but -0.29% is a small move, so I would call the lean reasonable rather than right or wrong.
+- **Right:** It flagged 4211–4220 as an area where price had been rejected. This session topped out at 4211.20 and fell back.
+- **Right:** It said the signals conflicted and did not push a direction.
+- **Unresolved:** It mentioned China data possibly landing around 10 PM New York time but said it could not verify this. I can't tell from the data whether it mattered.
 
 #### 3. Rules replay versus reality
-The replay found no trade. No 5-minute candle closed above 4183.30 or below 4152.70 in the first 15 minutes. The break above the high came at 22:30, 90 minutes after the open, which is outside your window.
+The replay took no trade. No candle closed above 4211.20 or below 4167.50 in the first 30 minutes, so there was no breakout to confirm. Price never reached either level all session. No trades were logged, so there is nothing to compare. The two match. I can't tell whether you chose to sit out or were simply away.
 
 #### 4. Your trades
-No trades were logged for this session, so there is nothing to grade here.
+No trades were logged, so I'm skipping this section.
 
 #### 5. What went well
-- No trade was logged, which matches the replay. Nothing was forced after the window closed.
-- The previous high and low were clear, and the brief's levels matched the software's numbers.
+- No trade was logged, and the rules did not call for one. Nothing was forced in a session that never broke a key level (Rule 5).
+- The brief gave you clear levels to mark: 4211.20 and 4167.50.
 
 #### 6. What to improve
-1. **Log a short note on no-trade sessions.** The "Explain and journal" rule asks you to explain your actions. Write one or two lines on what you saw in the first 15 minutes and why nothing qualified.
-2. **Don't judge the rule by the missed move.** "Only look for breakouts in the first 15 minutes" kept you out of a 33.50-point day. One session is too small to judge that rule. If you want to test it, track it over many sessions.
-3. **Verify news times before the open.** The brief said the calendar times conflicted. Check them yourself, because the "Uncertain" sell plan (1, 1, 1) applies when major news is within 30 minutes.
-
-#### 7. One thing to watch next session
-The previous session's high (4211.20) and low (4167.50) become your key levels. Watch whether any 5-minute candle closes beyond them in the first 15 minutes. If none does, the rules say to stay out.
+1. **Journal no-trade sessions too.** The rules ask you to explain your actions. A two-line note ("levels marked, no breakout, no trade") builds the habit.
+2. **Be ready 15–30 minutes before the open.** Mark 4211.20 and 4167.50 by about 19:30–19:45 New York time, so you are not guessing at the open.
+3. **Check news timing yourself.** The China data time was unverified. Your "
 
 </details>
 
@@ -586,10 +580,28 @@ By confidence:
 ## Your journals
 
 - Trades logged: **0**. [Open the trade journal](trade-journal.md)
-- No-trade sessions explained: **2**. [Open the no-trade journal](no-trade-journal.md)
+- No-trade sessions explained: **3**. [Open the no-trade journal](no-trade-journal.md)
 
 <details>
 <summary><b>Latest no-trade sessions</b></summary>
+
+##### No-trade session | 2026-10-18 | Asia
+- **Instrument:** Gold futures
+- **What happened:** No signal. The rules gave no entry.
+- **Why:** No 5-minute candle closed above the previous high (4211.20) or below the previous low (4167.50) in the first 30 minutes after the 20:00 open. (Previous Asia session was 2026-10-15.)
+- **First 30 minutes, candle by candle:**
+  - 20:00 candle: close 4205.50, closed inside the range (5.70 below the high, 38.00 above the low).
+  - 20:05 candle: close 4204.40, closed inside the range (6.80 below the high, 36.90 above the low).
+  - 20:10 candle: close 4201.70, closed inside the range (9.50 below the high, 34.20 above the low).
+  - 20:15 candle: close 4199.00, closed inside the range (12.20 below the high, 31.50 above the low).
+  - 20:20 candle: close 4196.40, closed inside the range (14.80 below the high, 28.90 above the low).
+  - 20:25 candle: close 4196.00, closed inside the range (15.20 below the high, 28.50 above the low).
+- **Closest call:** Price got within 2.80 of the previous high (its highest point was 4208.40) but never reached it.
+- **After the window:** No candle closed beyond either level for the rest of the session.
+- **What the market was showing:** The session range was 25.60 points, 60% of the average of the last 5 (a quiet session). Open to close it moved -12.30 points (-0.29%).
+- **The morning brief said:** Neutral (Low confidence), event risk Medium.
+- **Verdict:** Consistent with your rules. There was no setup, so staying out was correct under the rules.
+- **Your notes:**
 
 ##### No-trade session | 2026-10-16 | New York
 - **Instrument:** Nasdaq 100 futures
