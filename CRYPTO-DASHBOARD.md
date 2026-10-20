@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-19 01:05 UTC with prices up to the close on 2026-10-18. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-20 01:07 UTC with prices up to the close on 2026-10-19. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -8,22 +8,22 @@
 
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
-| **Rotation bot** | $1,000 | **$1,003.26** | $3.26 (+0.3%) | 0% | 4 | SUI, BTC, BCH, AVAX |
-| **Buy-and-hold bot** | $1,000 | **$1,001.63** | $1.63 (+0.2%) | 0% | 3 | BTC, SOL, ETH |
+| **Rotation bot** | $1,000 | **$1,003.08** | $3.08 (+0.3%) | 0% | 4 | SUI, BCH, BTC, AVAX |
+| **Buy-and-hold bot** | $1,000 | **$1,003.71** | $3.71 (+0.4%) | 0% | 3 | SOL, BTC, ETH |
 
 ![Paper accounts' value](crypto/charts/paper-value.svg)
 
 ### 🦙 Alpaca paper account (the rotation bot, copied)
 
-Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-19 01:05 UTC.
+Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-20 01:07 UTC.
 
 **Orders sent today:** none needed.
 
 | Coin | Value in Alpaca | Bot's target | Profit / loss in Alpaca |
 |---|---|---|---|
-| AVAX | $201.06 | $199.40 | -$3.95 |
-| BCH | $202.87 | $199.71 | -$1.64 |
-| BTC | $195.99 | $200.73 | $1.14 |
+| AVAX | $199.37 | $195.98 | -$5.64 |
+| BCH | $207.63 | $202.96 | $3.12 |
+| BTC | $194.23 | $200.29 | -$0.61 |
 
 Alpaca does not list SUI, so those stay as cash in Alpaca. This is why Alpaca can differ from the bot.
 
@@ -38,10 +38,10 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| SUI | $203.42 | $200.00 | $3.42 (+1.7%) | 20% |
-| BTC | $200.73 | $200.00 | $0.73 (+0.4%) | 20% |
-| BCH | $199.71 | $200.00 | -$0.29 (-0.1%) | 20% |
-| AVAX | $199.40 | $200.00 | -$0.60 (-0.3%) | 20% |
+| SUI | $203.85 | $200.00 | $3.85 (+1.9%) | 20% |
+| BCH | $202.96 | $200.00 | $2.96 (+1.5%) | 20% |
+| BTC | $200.29 | $200.00 | $0.29 (+0.1%) | 20% |
+| AVAX | $195.98 | $200.00 | -$4.02 (-2.0%) | 20% |
 | Cash | $200.00 | | | 20% |
 
 **Latest trades**
@@ -56,10 +56,10 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-18:** $1,003.26
-- **Total profit / loss:** **$3.26 (+0.3%)**
+- **Value on 2026-10-19:** $1,003.08
+- **Total profit / loss:** **$3.08 (+0.3%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $3.26
+  - On coins still held: $3.08
 - **Fees paid (included above):** $3.20
 - **Trades:** 4 buys, 0 sells
 
@@ -73,9 +73,9 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $334.55 | $333.33 | $1.21 (+0.4%) | 33% |
-| SOL | $334.05 | $333.33 | $0.72 (+0.2%) | 33% |
-| ETH | $333.03 | $333.33 | -$0.30 (-0.1%) | 33% |
+| SOL | $337.17 | $333.33 | $3.83 (+1.1%) | 34% |
+| BTC | $333.82 | $333.33 | $0.49 (+0.1%) | 33% |
+| ETH | $332.72 | $333.33 | -$0.62 (-0.2%) | 33% |
 | Cash | $0.00 | | | 0% |
 
 **Latest trades**
@@ -89,10 +89,10 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-18:** $1,001.63
-- **Total profit / loss:** **$1.63 (+0.2%)**
+- **Value on 2026-10-19:** $1,003.71
+- **Total profit / loss:** **$3.71 (+0.4%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $1.63
+  - On coins still held: $3.71
 - **Fees paid (included above):** $4.00
 - **Trades:** 3 buys, 0 sells
 
@@ -104,8 +104,8 @@ What the rules would have done with $1,000 each on real past prices. It keeps ru
 
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
-| **Rotation bot** | $1,000 | **$3,345.38** | $2,345.38 (+234.5%) | 49% | 383 | BTC, SUI, AVAX |
-| **Buy-and-hold bot** | $1,000 | **$3,245.93** | $2,245.93 (+224.6%) | 64% | 3 | BTC, SOL, ETH |
+| **Rotation bot** | $1,000 | **$3,335.20** | $2,335.20 (+233.5%) | 49% | 383 | BTC, SUI, AVAX |
+| **Buy-and-hold bot** | $1,000 | **$3,253.41** | $2,253.41 (+225.3%) | 64% | 3 | BTC, SOL, ETH |
 
 ![Value of each bot](crypto/charts/value.svg)
 
@@ -121,9 +121,9 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $680.86 | $679.98 | $0.88 (+0.1%) | 20% |
-| SUI | $660.31 | $679.98 | -$19.67 (-2.9%) | 20% |
-| AVAX | $587.52 | $671.51 | -$83.99 (-12.5%) | 18% |
+| BTC | $679.39 | $679.98 | -$0.59 (-0.1%) | 20% |
+| SUI | $661.70 | $679.98 | -$18.28 (-2.7%) | 20% |
+| AVAX | $577.42 | $671.51 | -$94.09 (-14.0%) | 17% |
 | Cash | $1,416.70 | | | 42% |
 
 **Latest trades**
@@ -535,10 +535,10 @@ Holds up to 5 of the strongest coins by 120-day gain, rechecked every 7 days, on
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-18:** $3,345.38
-- **Total profit / loss:** **$2,345.38 (+234.5%)**
+- **Value on 2026-10-19:** $3,335.20
+- **Total profit / loss:** **$2,335.20 (+233.5%)**
   - From coins already sold: $2,448.17 (73 of 190 sells made money)
-  - On coins still held: -$102.78
+  - On coins still held: -$112.96
 - **Fees paid (included above):** $708.24
 - **Trades:** 193 buys, 190 sells
 
@@ -552,9 +552,9 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $1,425.57 | $333.33 | $1,092.23 (+327.7%) | 44% |
-| SOL | $1,197.66 | $333.33 | $864.33 (+259.3%) | 37% |
-| ETH | $622.70 | $333.33 | $289.36 (+86.8%) | 19% |
+| BTC | $1,422.48 | $333.33 | $1,089.15 (+326.7%) | 44% |
+| SOL | $1,208.82 | $333.33 | $875.49 (+262.6%) | 37% |
+| ETH | $622.10 | $333.33 | $288.77 (+86.6%) | 19% |
 | Cash | $0.00 | | | 0% |
 
 **Latest trades**
@@ -568,10 +568,10 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-18:** $3,245.93
-- **Total profit / loss:** **$2,245.93 (+224.6%)**
+- **Value on 2026-10-19:** $3,253.41
+- **Total profit / loss:** **$2,253.41 (+225.3%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $2,245.93
+  - On coins still held: $2,253.41
 - **Fees paid (included above):** $4.00
 - **Trades:** 3 buys, 0 sells
 
@@ -583,7 +583,7 @@ Each bot's value at the end of each month.
 
 | Month end | Rotation bot | Buy-and-hold bot |
 |---|---|---|
-| 2026-10 | $3,345 | $3,246 |
+| 2026-10 | $3,335 | $3,253 |
 | 2026-09 | $3,978 | $3,504 |
 | 2026-08 | $3,087 | $3,187 |
 | 2026-07 | $2,942 | $2,411 |
