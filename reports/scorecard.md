@@ -1,17 +1,17 @@
 # Brief scorecard
 
-Updated 2026-10-20 07:02 New York time. Scored briefs: 5. Waiting to be scored: 0.
+Updated 2026-10-20 17:54 New York time. Scored briefs: 6. Waiting to be scored: 0.
 
-> **Too few directional calls to trust any of this yet.** There are 0 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
+> **Too few directional calls to trust any of this yet.** There are 1 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
 ## Directional calls (Bullish or Bearish)
 
 - Right: 0
-- Wrong: 0
+- Wrong: 1
 - Session ended flat (neither): 0
-- Hit rate when the session was decisive: **n/a**
+- Hit rate when the session was decisive: **0%**
 
-For comparison: across all scored sessions, price went up in 25% of the decisive ones (1 of 4). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 40% of the decisive ones (2 of 5). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
@@ -19,13 +19,13 @@ For comparison: across all scored sessions, price went up in 25% of the decisive
 |---|---|---|---|---|
 | High | 0 | 0 | 0 | n/a |
 | Medium | 0 | 0 | 0 | n/a |
-| Low | 0 | 0 | 0 | n/a |
+| Low | 0 | 1 | 0 | 0% |
 
 ## By instrument
 
 | Instrument | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
-| nasdaq | 0 | 0 | 0 | n/a |
+| nasdaq | 0 | 1 | 0 | 0% |
 | gold | 0 | 0 | 0 | n/a |
 
 ## Neutral calls
@@ -37,6 +37,7 @@ For comparison: across all scored sessions, price went up in 25% of the decisive
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-10-20 | nasdaq | Bearish | Low | 2026-10-20 09:30 | Up (0.32%) | Wrong |
 | 2026-10-19 | nasdaq | Neutral | Low | 2026-10-19 09:30 | Flat (-0.19%) | Calm |
 | 2026-10-18 | gold | Neutral | Low | 2026-10-18 20:00 | Down (-0.29%) | Moved |
 | 2026-10-16 | nasdaq | Neutral | Low | 2026-10-16 09:30 | Down (-2.14%) | Moved |
