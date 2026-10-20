@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ✅ 2026-10-20 | Nasdaq (MNQ) | Long | $655
+- **Session start (New York):** 2026-10-20 09:30
+- **Why:** two 5-minute candles closed beyond the key high (29636.0)
+- **Entry:** Bought **5 contracts** at **29717.75** at **10:05** (sell plan 1/2/2)
+- **Stop:** 29604.0
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 10:15 | Target 1 | 1 | 29747.75 | $60 |
+| 10:15 | Target 2 | 2 | 29777.75 | $240 |
+| 10:25 | Target 3 | 2 | 29807.75 | $360 |
+
+- **Exit:** last contract out at **10:25**, average 29783.75
+- **Result:** $660 before fees, **$655 after fees**
+- **What could have gone better:**
+  - Price kept going 95.75 points past Target 3 (by 10:30). Letting the last 2 contract(s) run with a trailing stop could have made up to $383 more.
+  - Biggest move against you while in the trade: 25.75 points ($258 on paper). Best move for you: 165.25 points.
+
+![Chart of this trade](charts/2026-10-20-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ✅ 2026-10-20 | Gold (MGC) | Short | $415
 - **Session start (New York):** 2026-10-19 20:00
 - **Why:** two 5-minute candles closed beyond the key low (4151.0)
@@ -54,8 +78,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **$1,070** over 2 trades
-- **Winners:** 2 (100%), **losers:** 0
-- **Before fees:** $1,080, fees paid: $10
-- **Nasdaq (MNQ):** $655 over 1 trades
+- **Total profit / loss after fees:** **$1,725** over 3 trades
+- **Winners:** 3 (100%), **losers:** 0
+- **Before fees:** $1,740, fees paid: $15
+- **Nasdaq (MNQ):** $1,310 over 2 trades
 - **Gold (MGC):** $415 over 1 trades
