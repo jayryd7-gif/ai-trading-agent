@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-20 06:21 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-20 06:50 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -16,12 +16,12 @@ Last updated 2026-10-20 06:21 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -260,48 +260,44 @@ This briefing is empty because of a tool failure. It does not mean today is quie
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-19</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-20</b></summary>
 
-Results are strings in dicts possibly mixed; run all with safe printing.## Top things today
-
-1. **Bitcoin is stuck below resistance.** BTC is at $82,362 (+0.4% in 24h, -0.8% over 7 days). KuCoin's daily report says it is testing the $82.5K–$83K resistance zone. Why it matters: a break either way could set the tone for the week.
-2. **AI stocks are weak.** KuCoin's report says SanDisk, Dell and CoreWeave fell roughly 20–25% over the week. Why it matters: BTC held up while tech sold off, but this is a risk-mood signal to watch.
-3. **Quack AI (Q) is the standout mover.** It is up 40% in 24h and 320.6% in 7 days, on $97.8M of volume. I found no news explaining the move. Why it matters: it is a big pump with no known catalyst.
-4. **Alts lag Bitcoin.** ETH is down 4.4% and SOL is down 5.5% over 7 days. Raydium is down 20.1% over 7 days despite a +7.0% bounce today. Why it matters: money is not rotating into large alts yet.
-5. **Sentiment reads Greed (59) while prices are flat.** Why it matters: optimism is ahead of price action.
+#### Top things today
+1. **Majors are slightly lower.** Not applicable BTC is $81,454 (-1.1% in 24h, -2.5% in 7d). ETH is $2,382 (-1.7% in 24h, -5.4% in 7d). SOL is $103.87 (-0.9% in 24h). (Live data) Why it matters: ETH is lagging BTC over the week.
+2. **Sentiment is "Greed" (55) while prices drift down.** (Live data) Why it matters: mood and price are pointing in different directions.
+3. **Bedrock (BR) leads the gainers at +43.6%.** It trades on $54.1M of volume against a $208.6M market cap. I found no news to explain the move (live data). Why it matters: a big pump with no known cause is a risk signal.
+4. **Small-cap rotation is the main theme.** Metaplex (MPLX) is up 65.5% and Janction (JCT) is up 100.7% on the trending list. (CoinGecko trending) Why it matters: traders are chasing small, low-ranked coins.
+5. **Worldcoin (WLD) is the most liquid gainer.** It is up 7.1% on $385.7M of volume, with a $2.0B market cap. (Live data) Why it matters: its volume is much larger than the other gainers', so its move has more behind it.
 
 #### Coins to research
+My news searches failed because the search tool hit its usage limit. The reasons below are therefore "no news found," not confirmed causes.
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Quack AI (Q) | +40.0% (+320.6% 7d) | No news found | Pump with no news. 7-day run is more than 4x. Volume is about 16% of market cap. |
-| Bedrock (BR) | +22.0% | No news found | Small cap ($145.3M). Pump with no news. |
-| Provenance (HASH) | +15.6% | No news found | 24h volume is only $7.9K against a $432.1M cap. The price is likely unreliable. |
-| DGrid AI (DGAI) | +9.7% | No news found | Small cap ($135.5M). Down 5.1% over 7 days. No news. |
-| Raydium (RAY) | +7.0% | Possible bounce after a 20.1% weekly drop (unconfirmed) | The bounce follows a large drop. No news found. |
-| Arbitrum (ARB) | +6.8% | No news found | Move may be noise. Price is $0.196. |
+| Bedrock (BR) | +43.6% (7d +50.9%) | Cause not found | Pump with no news found. Small cap of $208.6M. |
+| Janction (JCT) | +100.7% | Cause not found | Rank 497. Doubled in a day. No news found. |
+| Metaplex (MPLX) | +65.5% | Cause not found | Rank 550. Big move with no news found. |
+| GRX Chain (GRX) | +23.9% (7d -11.6%) | Cause not found | Only $3.3M volume on a $191.7M cap. 7d trend is negative. |
+| Collector Crypt (CARDS) | +14.3% | Cause not found. It is also on the trending list. | Pump with no news found. |
+| MemeCore (M) | +7.7% (7d -10.9%) | Cause not found | $1.8B cap but only $3.2M volume. That is thin trading. |
 
-I did not find any new meme coins pumping beyond the live data.
+I found no new meme coins from live data beyond those above.
 
 #### Whale watch
-
-No whale moves found.
+No whale moves found. My searches failed, so this is not a confirmed "none."
 
 #### Government and regulation
-
 Nothing found.
 
 #### Who is buying and adopting
-
-KuCoin's report says continued corporate treasury purchases and limited selling by medium-term holders are giving BTC a floor. It names no buyers (KuCoin). I found nothing else.
+Nothing found.
 
 #### Next 7 days
-
 No scheduled events found.
 
-**Note:** My search quota ran out after one search. The whale, regulation, adoption and calendar sections are empty because I couldn't search them. They are not confirmed quiet, so check Whale Alert, Lookonchain and Congress.gov directly.
+I can retry the searches later if you'd like.
 
-[Read the full brief with all the details](reports/crypto/2026-10-19-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-20-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
