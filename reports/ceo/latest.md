@@ -1,12 +1,12 @@
 # 👔 CEO check
 
-*Checked 2026-10-20 05:59 New York time. Plain code, no AI.*
+*Checked 2026-10-20 18:40 New York time. Plain code, no AI.*
 
 **✅ All clear**: 8 passed, 0 warnings, 0 broken rules.
 
 ### Futures paper trader
 
-- ✅ All 2 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
+- ✅ All 3 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
 - ✅ Room left before the $4,000 max drawdown: $4,000.
 
 ### Your trade journal
@@ -24,7 +24,7 @@
 
 ### Costs
 
-- ✅ Spent $0.96 so far this month on 7 AI runs; on pace for about $1 (budget $50).
+- ✅ Spent $1.32 so far this month on 10 AI runs; on pace for about $2 (budget $50).
 
 ### Agent health
 
