@@ -3,10 +3,12 @@ name: Paper Trading
 on:
   schedule:
     # Times are UTC. Every 15 minutes while a session is open, so each paper
-    # trade is recorded soon after it closes. GitHub can start scheduled runs
-    # a few minutes late.
-    - cron: "*/15 13-21 * * 1-5"   # Nasdaq: 9:30 AM-4 PM New York, summer and winter
-    - cron: "*/15 0-8 * * 1-5"     # Gold: Tokyo session, 00:00-08:00 UTC
+    # trade is recorded soon after it closes. GitHub delays or drops runs
+    # scheduled on the hour and quarter-hour when it is busy (on Oct 19 the
+    # 8:30, 8:45 and 9:00 PM runs never started), so these run at :07, :22,
+    # :37 and :52 instead.
+    - cron: "7,22,37,52 13-21 * * 1-5"   # Nasdaq: 9:30 AM-4 PM New York, summer and winter
+    - cron: "7,22,37,52 0-8 * * 1-5"     # Gold: Tokyo session, 00:00-08:00 UTC
   workflow_dispatch:
 
 permissions:
