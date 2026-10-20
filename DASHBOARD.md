@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-20 05:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-20 06:21 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -15,10 +15,10 @@ Last updated 2026-10-20 05:59 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 24 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
@@ -224,19 +224,16 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-19</b></summary>
+<summary><b>🌍 World news brief, 2026-10-20</b></summary>
 
 #### Top things for today
-Nothing found. My search tool stopped working before I could pull current news. I have no verified information for Monday, 2026-10-19.
+Nothing found. My web search tool stopped working before it returned any results, so I have no verified information for today, 2026-10-20. I have not filled the gaps with guesses.
 
 #### Today's schedule (New York time)
-No scheduled events found. I could not retrieve an economic calendar, Fed speaker list, hearing schedule or Trump schedule. Check these directly:
-- An economic calendar.
-- The Fed's website.
-- The White House schedule.
+No scheduled events found. I could not check an economic calendar, Fed speaker list, hearing schedule or Trump's public schedule. Check these directly before the open.
 
 #### Event risk today
-Unknown - I could not check the schedule or overnight news, so I can't rate the risk.
+Unknown - I could not look at today's calendar or overnight news, so I can't rate the risk.
 
 #### Politics and policy
 Nothing found.
@@ -256,9 +253,9 @@ Nothing found.
 - Russia: Nothing found.
 - Canada: Nothing found.
 
-I chose not to fill these sections from memory. Anything I wrote would be invented, and it could mislead a trader. Please rerun this briefing once search is available.
+This briefing is empty because of a tool failure. It does not mean today is quiet. I can redo it if search access comes back.
 
-[Read the full brief with all the details](reports/news/2026-10-19-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-20-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
