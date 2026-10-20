@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-20 07:02 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-20 08:29 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -15,13 +15,13 @@ Last updated 2026-10-20 07:02 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 25 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 11 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -359,69 +359,64 @@ Nothing found. I did not find any analyst rating changes, insider purchases or c
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-10-19</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-10-20</b></summary>
 
-### Nasdaq 100 futures brief for Monday, Oct 19, 2026 (New York session)
+### Nasdaq 100 Futures Brief for the New York Session, Oct 20, 2026
 
 #### 1. What is driving futures
-- Futures are bouncing after a rough week. Nasdaq 100 contracts climbed 1.1% to snap a weeklong selloff of 5.5%. Friday was weak too. The Nasdaq Composite dropped 2.1%.
-- The worry is the AI trade. The Nasdaq fell 4.5% for the week, its worst week since late June.
-- Chip names are leading the bounce. Intel rose over 4% before the open after a JPMorgan upgrade. AMD and Micron each rose more than 2%.
-- Oil is easing but still high. One report says oil slipped from $110 a barrel. Another expects oil above $100 after weekend tanker and missile headlines. I could not verify an exact oil price.
+- Nasdaq 100 futures slipped on Tuesday. AI-linked stocks weakened and oil rebounded.
+- Micron and Sandisk fell about 3% each. Seagate, Intel and AMD fell more than 2%.
+- This follows a bounce. The Nasdaq Composite rose more than 1% on Monday. That came after a hard week. The Nasdaq fell 4.5% last week, its worst week since late June.
+- Worries about AI debt are part of the story. The selloff was driven partly by concerns over CoreWeave's debt load and AI financing costs.
+- Oil is a second pressure point. Houthi attacks on Saudi Arabia raised supply worries. Brent was near $109.70.
 
 #### 2. Scheduled events (New York time)
-- **Before the open:**
-  - Canada CPI at 8:30 AM. It is seen at 3.2% a year.
-  - China Q3 GDP came out overnight.
-  - ECB's Lane and Elderson are listed as speakers (Newsquawk calendar). I could not verify their times.
-- **During the session:** NAHB Housing Market Index at 10:00 AM.
-- **Fed:** The Fed is in its quiet period, so no Fed officials will speak this week. The FOMC meets Oct 27–28.
-- **Earnings today:** I found no mega-cap Nasdaq names. Fifth Third (FITB) reports before the open.
-- **Coming up:**
-  - Netflix reports Tuesday after the close.
-  - Meta, Tesla, Texas Instruments, Lam Research and IBM report Wednesday after the close.
-  - These can affect positioning today.
+- **Before the open:** Housing Starts for September come out at 8:30 AM. GE, RTX, GM, MMM and NOC report before the open.
+- **During the session:** One source lists Pending Home Sales at 10:00 AM. Another source lists the Atlanta Fed GDPNow at 10:00 AM instead. I could not confirm which is right. Neither is a major market mover.
+- **Fed:** The Fed blackout runs through Oct 29, so no Fed officials will speak. The FOMC meets Oct 28. Futures assigned a 15% chance of an October hike as of Friday.
+- **After the close:** Netflix, Intuitive Surgical, Capital One, Chubb and United Airlines report after the close. SpaceX (SPCX) also reports after the close. I could not verify exact release times.
+- **Tomorrow:** Meta, Tesla and Lam Research report Oct 21 after the close.
 
 #### 3. Key levels (from the price data)
-- Previous session high: **30,045.75**
-- Previous session low: **29,268.75**. This is also the lowest low of the last 5 sessions.
-- Previous close: **29,379.50**
-- Since-close range: high **29,813.50**, low **29,344.75**
-- Highest high of the last 5 sessions: **31,048.75**
-- Latest price: **29,751.50**. It is inside the previous range, 294.25 below the high and 482.75 above the low.
+- Latest price: 29533.75.
+- Previous session high: 29983.50.
+- Previous session low: 29653.75.
+- Previous session close: 29722.25.
+- Since-close high: 29803.50.
+- Since-close low: 29491.50. Price is only 42.25 above it.
+- 5-session high: 30814.75.
+- 5-session low: 29268.75.
 
-Price is in the middle of the range, a bit closer to the high. It is not at a clear high or low. It is near the overnight high of 29,813.50, which is a nearby ceiling to watch.
+Price is **below the previous session low by 120.00**. It sits near support, not resistance. The previous low (29653.75) is now overhead and could act as resistance. If 29491.50 breaks, the 5-session low is the next level in the data.
 
 #### 4. Volume
-Friday's volume was 633,168 contracts, or 1.52x the average of the prior five sessions. That is strong participation. It came on a down day that closed near the low. So the heavy volume backs the selling, not the bounce. The overnight bounce has no volume data yet.
+The previous session traded 0.92x the average of the five sessions before it. That is slightly light. Participation was a bit weak, and it did not back Monday's bounce strongly. The gap from 1.0x is small, so the signal is mild.
 
 #### 5. Directional lean
-**Neutral, Low confidence.**
+**Bearish, Low confidence.**
 
-The signals conflict. Futures are up about 1.1% on news, with chips leading. But price is still well below the 5-session high of 31,048.75. It is only mid-range, and Friday's heavy volume came with the selloff. The bounce could be a relief move or the start of a recovery, and today's calendar offers little to settle it. Big earnings arrive later in the week. A move above the previous high of 30,045.75 on solid volume would make me lean more bullish. A drop back below the overnight low of 29,344.75, and then the previous low of 29,268.75, would make me lean bearish. A sharp jump in oil or yields would also push me bearish. This is a probability-based lean, not a prediction or a trade instruction.
+Price is below the previous session low and near the lows of the last few sessions. The news also leans negative: AI-linked stocks are weak, oil is high, and rate worries are still in the background. Volume was slightly light, so it does not clearly confirm a move down. Monday showed that dip-buyers are active, so a bounce is possible. Big earnings after the close may also keep traders cautious.
+
+I would change the lean to Neutral if price climbs back above 29653.75 and holds, or if chip stocks recover. I would change it to Bullish if it also reclaims the 29803.50 level. A sharp rise in volume on a break below 29491.50 would raise my confidence in the bearish lean. This is a probability-based lean, not a prediction or a trade instruction.
 
 #### 6. Event risk
-**Medium.** Today's data is light and the Fed is silent, but oil and geopolitical headlines, and the AI-earnings run-up to Netflix, Meta and Tesla, can move tech quickly.
+**Medium.** Scheduled data is light and the Fed is silent. But AI-stock volatility, oil headlines, and a heavy earnings slate after the close could move prices.
 
 #### 7. Sources
-- Price data: Yahoo Finance (as supplied)
-- Bloomberg
-- Quartz
-- Yahoo Finance Live
-- ABC News (Australia)
-- Sunday Guardian (citing Reuters)
-- Newsquawk
+- CNBC (live updates)
+- Yahoo Finance (market coverage and earnings calendar)
+- Free Malaysia Today (Reuters-based report)
+- Investing.com (economic calendar preview)
+- Kiplinger (economic calendar)
+- Market Chameleon (earnings calendar)
 - Trading Economics
-- BabyPips
-- Gotrade
-- eOption
-- Kiplinger
-- StockTitan
-- Schwab
+- CNBC (Fed analysis)
 
-BIAS: Neutral | CONFIDENCE: Low
+**Unverified:** exact times for after-close earnings, the pending home sales and GDPNow conflict, and any Fed speaker schedule.
 
-[Open the file](reports/2026-10-19-nasdaq-brief.md)
+BIAS: Bearish | CONFIDENCE: Low
+
+[Open the file](reports/2026-10-20-nasdaq-brief.md)
 
 </details>
 
@@ -468,7 +463,7 @@ Last session traded 0.92x the average of the five sessions before it. That is sl
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-10-19 08:31 | ◆ Neutral | Low | Medium | 29751.50 | [read it](reports/2026-10-19-nasdaq-brief.md) |
+| nasdaq | 2026-10-20 08:28 | ▼ Bearish | Low | Medium | 29533.75 | [read it](reports/2026-10-20-nasdaq-brief.md) |
 | gold | 2026-10-19 19:20 | ? Unknown | Unknown | n/a | 4153.40 | [read it](reports/2026-10-19-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
