@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-19 21:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-19 21:14 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -70,7 +70,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $0.75 so far this month on 6 AI runs; on pace for about $1 (budget $50).
+- ✅ Spent $0.96 so far this month on 7 AI runs; on pace for about $2 (budget $50).
 
 ##### Agent health
 
