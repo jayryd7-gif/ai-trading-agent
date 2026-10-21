@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-21 07:05 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-21 07:12 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -19,7 +19,7 @@ Last updated 2026-10-21 07:05 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
@@ -315,59 +315,60 @@ I could not run searches, so the last four sections are empty because I could no
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-10-19</b></summary>
+<summary><b>📈 Stocks brief, 2026-10-21</b></summary>
 
-Results are JSON strings.## Top things today
-1. **Broad tech selloff.** The Nasdaq Composite fell 2.15% on Friday, and no company-specific cause was named for Nvidia's drop (Gotrade). Why it matters: the weakness hit almost every AI name I track.
-2. **CoreWeave (CRWV) credit stress.** The stock fell 11.9% on Friday and 25.2% over 5 days. Yields on its 2032 bonds reportedly touched 15%, which The Motley Fool read as rising default risk (via Gotrade, 10/18). Why it matters: a funding scare can spread to other AI-infrastructure names.
-3. **AI infrastructure names fell hardest.** On Friday, SMCI fell 9.9% and IREN fell 11.2%. Over 5 days, MU fell 14.6%, ARM fell 14.5% and AMD fell 13.0% (live data). Why it matters: the selling was heaviest in the most leveraged and highest-beta parts of the theme.
-4. **Nuclear and uranium sold off harder than the big names.** Friday: LEU fell 9.5% and OKLO fell 6.8%. Over 5 days: OKLO fell 19.4%, LEU fell 19.3% and SMR fell 19.0% (live data). Why it matters: small-cap nuclear is moving with AI-power sentiment.
-5. **Energy producers led the gainers.** CRGY rose 10.1%, MTDR rose 7.0% and AR rose 6.1% (live data). I did not find the cause. Why it matters: money moved from tech into oil and gas producers.
+#### Top things today
+1. Meta and Tesla report after today's close (timing unconfirmed). Meta is down 9.0% over 5 days and Tesla is flat at -0.4%. Why it matters: the results could move AI spending sentiment.
+2. AI and chip stocks fell over the last 5 days. AMD fell 11.7%, ARM 13.4%, SMCI 16.9% and CRWV 20.2%. Why it matters: the weakness is concentrated in the more speculative AI names.
+3. Nuclear stocks also fell. LEU dropped 18.2%, SMR 14.0%, OKLO 13.5% and CEG 12.5%. Why it matters: the group is moving as one, which points to a sector-wide trend.
+4. Braze (BRZE) rose 51.7% to $45.57 on heavy volume. I could not confirm the cause. Why it matters: it is the biggest mover in the live data, and a move this large usually follows company news.
+5. Newmont and Southern Copper report tomorrow, followed by Freeport on Oct 27. Why it matters: these results will show how the miners are doing.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| CRWV | AI cloud | -11.9% 1d, -25.2% 5d | Bond-yield stress and a heavy-volume selloff | Debt concerns; high volatility |
-| META | AI | -3.7% 1d | Reports 10/21 (EPS est. $6.76) | Event risk; the date's timing is unconfirmed |
-| LEU | Uranium fuel | -9.5% 1d, -19.3% 5d | Biggest nuclear decliner | No news found for the move |
-| OKLO | Nuclear | -6.8% 1d, -19.4% 5d | Sector-wide slide | Pre-revenue company; no news found |
-| MU | Memory chips | -5.6% 1d, -14.6% 5d | Large 5-day drop in a big AI-linked name | No news found; high volatility |
-| IAM (Iambic Therapeutics) | New/IPO-type stock | +25.9% to $23.81 | Top small-cap gainer, $1.1B cap | Not in my themes; I found no news and could not confirm it is a recent IPO |
+| BRZE | Software | +51.7% to $45.57 | Top gainer and among the most active by volume | Cause not confirmed. A one-day jump this large can reverse. |
+| CRWV | AI infrastructure | +1.7% on the day, -20.2% over 5 days | Most active by volume. Sharp pullback. | Large 5-day drop and no news found |
+| LEU | Uranium enrichment | -18.2% over 5 days | Biggest drop among nuclear names. Reports Nov 4. | Estimated revenue is only $63.6M, so it is small. No news found. |
+| META | AI | -9.0% over 5 days | Reports today | Event risk |
+| SMCI | AI servers | -16.9% over 5 days | Reports Nov 3 | Large drop with no news found |
+| RUN | Solar | +9.9% to $7.57 | Top small-cap gainer | Small cap ($1.8B). No news found. |
+
+IPOs and new stocks: SPCX (Space Exploration Technologies) is among the most active names. It last traded at $147.79 (-0.1%), with a market cap of $1.9T. I found no details on its listing.
 
 #### AI and tech
-- **Selloff context.** Nvidia fell 1.43% to $214.13 on volume about 11.6% above average. It is about 12% below its 52-week high (Gotrade).
-- **CoreWeave credit worries.** See the bond-yield item above. IREN, another AI-infrastructure name, fell 11.2% on heavy volume (live data).
-- **Intel.** INTC fell 5.8% to $89.85 and was the most active stock by volume. I found no cause.
-- My search allowance ran out early. I found no other chip or AI news, so treat this section as incomplete.
+Nothing found. My news searches failed because I hit the tool's search limit, so I have no sourced news items. The live data shows these 1-day moves: META -1.6%, ARM -3.1%, IREN -4.0%, and NVDA -0.3% at $216.47.
 
 #### Nuclear and critical minerals
-Nothing found. My searches did not return news on government deals, export limits, uranium, rare earths, lithium, copper or gold. Price moves only (live data):
-- Rare earths: MP fell 3.5% and USAR fell 5.0%. REMX fell 11.1% over 5 days.
-- Copper: FCX fell 0.7% and SCCO fell 0.6%.
-- Gold: NEM rose 2.4%, the only gain among my miners.
+Nothing found. I have no news on government deals or export limits. Over the last 5 days, MP fell 8.0%, USAR 10.8% and UEC 5.0%. NEM rose 1.1% over the same period.
 
 #### Earnings
-Notable results since yesterday: Nothing found.
+Results since yesterday: nothing found. I could not check them.
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 2026-10-21 | META | Unconfirmed | $6.76 | $63.4B |
-| 2026-10-21 | TSLA | Unconfirmed | $0.45 | $28.1B |
+| 2026-10-21 | META | Unconfirmed | $6.80 | $63.4B |
+| 2026-10-21 | TSLA | Unconfirmed | $0.45 | $28.3B |
 | 2026-10-22 | NEM | Unconfirmed | $1.94 | $6.3B |
-| 2026-10-22 | SCCO | Unconfirmed | $1.95 | $4.4B |
+| 2026-10-22 | SCCO | Unconfirmed | $1.99 | $4.4B |
 | 2026-10-27 | FCX | Unconfirmed | $0.83 | $7.4B |
-| 2026-10-28 | GOOGL | Unconfirmed | $2.97 | $127.7B |
+| 2026-10-28 | GOOGL | Unconfirmed | $2.99 | $127.9B |
 | 2026-10-28 | MSFT | Unconfirmed | $4.72 | $90.7B |
 | 2026-10-29 | AMZN | Unconfirmed | $1.98 | $202.2B |
-| 2026-10-30 | CCJ | Unconfirmed | $0.34 | $736.9M |
-| 2026-11-02 | AAPL | Unconfirmed | $1.98 | $113.6B |
+| 2026-10-30 | CCJ | Unconfirmed | $0.31 | $750.6M |
+| 2026-11-02 | AAPL | Unconfirmed | $1.98 | $113.4B |
 | 2026-11-02 | BWXT | Unconfirmed | $1.19 | $972.3M |
 | 2026-11-02 | PLTR | Unconfirmed | $0.41 | $2.2B |
+| 2026-11-03 | AMD | Unconfirmed | $1.93 | $13.1B |
+| 2026-11-03 | SMCI | Unconfirmed | $1.04 | $15.0B |
+| 2026-11-04 | ALB | Unconfirmed | $2.55 | $1.5B |
+| 2026-11-04 | ARM | Unconfirmed | $0.47 | $1.4B |
+| 2026-11-04 | LEU | Unconfirmed | $0.01 | $63.6M |
 
 #### Smart money
-Nothing found. I did not find any analyst rating changes, insider purchases or congressional trades in these themes.
+Nothing found. I could not check analyst actions, insider buying or congressional trades.
 
-[Read the full brief with all the details](reports/stocks/2026-10-19-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-10-21-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
