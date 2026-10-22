@@ -1,13 +1,13 @@
 # 👔 CEO check
 
-*Checked 2026-10-21 21:13 New York time. Plain code, no AI.*
+*Checked 2026-10-21 22:01 New York time. Plain code, no AI.*
 
 **✅ All clear**: 8 passed, 0 warnings, 0 broken rules.
 
 ### Futures paper trader
 
-- ✅ All 4 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
-- ✅ Room left before the $4,000 max drawdown: $3,748.
+- ✅ All 5 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
+- ✅ Tradeify practice evaluation: $2,162 above the $2,000 trailing drawdown floor.
 
 ### Your trade journal
 

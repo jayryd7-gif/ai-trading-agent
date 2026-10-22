@@ -136,21 +136,37 @@ def check_paper_trader(r):
             r.add(BAD, f"{t['instrument']} {t['session_start']}: Target 2 was hit but the stop "
                        "was not moved to Target 1.")
             problems += 1
-    # Replay the account: no trade while paused, small size when near the limit.
-    account = rules.Account()
+    # Replay the account the bot trades on: no trade on a stopped, paused or
+    # finished day, and no trade whose stop could break the account's limits.
+    from paper_trader import ACCOUNT, account_from
+    from risk import INSTRUMENTS as SPECS
+    done = []
     for x in sorted(rows, key=lambda x: x["session_start"]):
+        account = account_from(done)
         start = datetime.strptime(x["session_start"], "%Y-%m-%d %H:%M")
         mode = account.mode(start)
         if x["signal"] == "yes":
-            if mode in ("paused", "stopped"):
-                r.add(BAD, f"{x['instrument']} {x['session_start']}: traded while {mode} near "
-                           "the max drawdown.")
+            risk = (abs(float(x["entry"]) - float(x["stop"])) * int(x["contracts"])
+                    * SPECS[x["instrument"]]["point_value"])
+            if mode in ("paused", "stopped", "day_stopped", "day_done"):
+                r.add(BAD, f"{x['instrument']} {x['session_start']}: traded on a day that "
+                           f"was {mode.replace('_', ' ')}.")
                 problems += 1
-            elif mode == "reduced" and x.get("size_mode") != "reduced":
-                r.add(BAD, f"{x['instrument']} {x['session_start']}: full size with less than "
-                           f"${rules.NEAR_LIMIT:,} left before the max drawdown.")
+            elif x.get("size_mode") and risk >= account.allowance() + 1:
+                r.add(BAD, f"{x['instrument']} {x['session_start']}: its stop risked "
+                           f"${risk:,.0f}, more than the ${account.allowance():,.0f} the "
+                           "account could lose that day.")
                 problems += 1
-            account.record(float(x["net"]), start)
+            if x["instrument"] == "nasdaq" and x["exit_time"] > "16:45":
+                r.add(BAD, f"Nasdaq {x['session_start']}: still open after 4:45 PM "
+                           "(Tradeify closes everything then).")
+                problems += 1
+        done.append(x)
+    if ACCOUNT == "tradeify":
+        failed = [a for a in account_from(rows).finish() if a["result"] == "Failed"]
+        for a in failed:
+            r.add(BAD, f"Tradeify practice {a['phase'].lower()} failed: {a['note']}.")
+            problems += 1
     stopped = [x for x in rows if x["signal"] == "stopped"]
     if stopped:
         first = min(x["session_start"] for x in stopped)
@@ -169,6 +185,15 @@ def check_paper_trader(r):
     for t in sorted(trades, key=lambda x: x["session_start"]):
         equity += float(t["net"])
         peak = max(peak, equity)
+    if ACCOUNT == "tradeify":
+        from tradeify import RULES as T, floor
+        acct = account_from(rows)
+        a = acct.a
+        cushion = a["balance"] + acct.day_pnl - floor(a)
+        status = WARN if cushion < DRAWDOWN_WARN_LEFT * T["drawdown"] else OK
+        r.add(status, f"Tradeify practice {a['phase'].lower()}: ${cushion:,.0f} above the "
+                      f"${T['drawdown']:,} trailing drawdown floor.")
+        return
     left = rules.MAX_DRAWDOWN - (peak - equity)
     status = WARN if left < DRAWDOWN_WARN_LEFT * rules.MAX_DRAWDOWN else OK
     r.add(status, f"Room left before the ${rules.MAX_DRAWDOWN:,} max drawdown: ${left:,.0f}.")

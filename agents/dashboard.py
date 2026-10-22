@@ -143,18 +143,32 @@ def paper_journal_section(how_many=15):
         import main as rules
         from paper_trader import account_from
         acct = account_from(rows)
-        now = datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
-        if acct.stopped_on:
-            state = f"⛔ stopped: the max drawdown was hit on {acct.stopped_on}"
-        elif acct.paused_until and now < acct.paused_until:
-            state = f"⏸️ paused until {acct.paused_until:%a %b %d %H:%M}, then small size"
-        elif acct.room() < rules.NEAR_LIMIT:
-            state = "🟡 small size (1 contract per target)"
+        if hasattr(acct, "attempts"):            # the Tradeify practice account
+            from tradeify import RULES as T, floor, payout_status
+            a = acct.a
+            cushion = a["balance"] + acct.day_pnl - floor(a)
+            today = (f"today {_money(acct.day_pnl)}, {_money(T['daily_loss_limit'] + acct.day_pnl)} "
+                     f"left before the daily loss limit")
+            if a["phase"] == "Evaluation":
+                goal = f"{_money(T['start'] + T['target'] - a['balance'] - acct.day_pnl)} to pass"
+            else:
+                goal = "payout: " + payout_status(a)[1]
+            live.insert(0, f"- **Tradeify 50K {a['phase'].lower()}: balance "
+                           f"{_money(a['balance'] + acct.day_pnl)}**, {_money(cushion)} above the "
+                           f"drawdown floor, {goal}; {today}. "
+                           "[Details](paper-trading/summary.md)")
         else:
-            state = "🟢 normal size"
-        live.insert(0, f"- **Room before the ${rules.MAX_DRAWDOWN:,} max drawdown: "
-                       f"${acct.room():,.0f}** · {state}. Under ${rules.NEAR_LIMIT:,} left, "
-                       "it pauses until the next morning and then trades small.")
+            now = datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
+            if acct.stopped_on:
+                state = f"⛔ stopped: the max drawdown was hit on {acct.stopped_on}"
+            elif acct.paused_until and now < acct.paused_until:
+                state = f"⏸️ paused until {acct.paused_until:%a %b %d %H:%M}, then small size"
+            elif acct.room() < rules.NEAR_LIMIT:
+                state = "🟡 small size (1 contract per target)"
+            else:
+                state = "🟢 normal size"
+            live.insert(0, f"- **Room before the ${rules.MAX_DRAWDOWN:,} max drawdown: "
+                           f"${acct.room():,.0f}** · {state}.")
     except Exception as error:   # the dashboard should never fail over this line
         print(f"Could not work out the account state: {error}")
     if live:
@@ -166,7 +180,9 @@ def paper_journal_section(how_many=15):
         if r["signal"] != "yes":
             why = {"stopped": "stopped by the max drawdown",
                    "paused": "paused near the max drawdown",
-                   "skipped": "skipped: risk too big"}.get(r["signal"], "no breakout, no trade")
+                   "skipped": "skipped: risk too big",
+                   "day_stopped": "skipped: daily loss limit",
+                   "day_done": "skipped: daily profit cap"}.get(r["signal"], "no breakout, no trade")
             out.append(f"| {r['trading_day']} | {market} | – | 0 | {why} | | | | $0 | "
                        f"{r['events']} | [TV]({TV_LINKS[r['instrument']]}) |")
             continue

@@ -1,13 +1,13 @@
 # Paper trading summary
 
-*Updated 2026-10-21 21:55 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-10-21 22:01 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **$1,888** over 5 trades (7 sessions watched)
+- Total after fees: **$1,590** over 5 trades (7 sessions watched)
 - Trading days with a trade: **4**, profitable: **3**, losing: 1
 - Win rate: 80%
-- Profit factor: 8.48
+- Profit factor: 7.30
 - Biggest drop from a high (max drawdown): $252
 - Room left before the $4,000 max drawdown: **$4,000**
 - Progress toward a prop demo: **4 of 20** trading days
@@ -16,18 +16,19 @@
 
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
-| nasdaq | 3 | 2 | $1,058 |
+| nasdaq | 3 | 2 | $760 |
 | gold | 2 | 2 | $830 |
 
-## Challenge simulation: Tradeify Growth 50K (practice)
+## Tradeify Growth 50K (practice account the bot trades on)
 
-Rules: reach $3,000 profit before the balance drops $2,000 below its highest end-of-day balance. Stop for the day after losing $1,250. Check the firm's current rules before relying on this.
+Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trailing drawdown $2,000 below the highest end-of-day balance, and touching it even with an open trade fails the account; daily loss limit $1,250 ends the day. Funded: a payout needs $53,000, 5 days over $150, and the biggest day at most 35% of the profit. The bot sizes every trade so its stop cannot break a rule, and stops for the day once up $600. Check Tradeify's current rules before relying on this.
 
-**Passed 0, failed 0, 1 in progress.**
+**Now: Evaluation**, balance **$51,590**, $2,000 above the drawdown floor.
+- To pass: $1,410 more profit.
 
-| Attempt | Started | Ended | Trading days | Balance | Result | Note |
-|---|---|---|---|---|---|---|
-| 1 | 2026-10-19 | 2026-10-22 | 4 | $51,888 | In progress |  |
+| # | Account | Started | Ended | Trading days | Balance | Result | Payouts | Note |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Evaluation | 2026-10-19 | 2026-10-22 | 4 | $51,590 | In progress | – |  |
 
 ## Daily results
 
@@ -36,6 +37,6 @@ Rules: reach $3,000 profit before the balance drops $2,000 below its highest end
 | 2026-10-22 | gold short | $415 |
 | 2026-10-21 | gold no trade, nasdaq short | -$252 |
 | 2026-10-20 | gold short, nasdaq long | $1,070 |
-| 2026-10-19 | gold no trade, nasdaq long | $655 |
+| 2026-10-19 | gold no trade, nasdaq long | $357 |
 
 [Every paper trade](paper-journal.md) · [Raw data](trades.csv)

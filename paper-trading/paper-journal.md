@@ -77,7 +77,7 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ### ✅ 2026-10-20 | Gold (MGC) | Short | $415
 - **Session start (New York):** 2026-10-19 20:00
-- **Why:** two 5-minute candles closed beyond the key low (4151.0)
+- **Why:** two 5-minute candles closed beyond the key low (4150.7)
 - **Entry:** Sold short **5 contracts** at **4150.6** at **20:55** (sell plan 1/2/2)
 - **Stop:** 4152.4
 
@@ -99,23 +99,24 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
-### ✅ 2026-10-19 | Nasdaq (MNQ) | Long | $655
+### ✅ 2026-10-19 | Nasdaq (MNQ) | Long | $357
 - **Session start (New York):** 2026-10-19 09:30
 - **Why:** two 5-minute candles closed beyond the key high (29794.25)
-- **Entry:** Bought **5 contracts** at **29841.25** at **10:15** (sell plan 1/2/2)
+- **Entry:** Bought **3 contracts** at **29841.25** at **10:15** (sell plan 1/1/1)
 - **Stop:** 29694.0
+- **Small size:** less than $1,500 was left before the $4,000 max drawdown, so it traded 1 contract per target.
 
 | Time | What | Contracts | Price | Profit |
 |---|---|---|---|---|
 | 11:00 | Target 1 | 1 | 29871.25 | $60 |
-| 11:15 | Target 2 | 2 | 29901.25 | $240 |
-| 11:20 | Target 3 | 2 | 29931.25 | $360 |
+| 11:15 | Target 2 | 1 | 29901.25 | $120 |
+| 11:20 | Target 3 | 1 | 29931.25 | $180 |
 
-- **Exit:** last contract out at **11:20**, average 29907.25
-- **Result:** $660 before fees, **$655 after fees**
+- **Exit:** last contract out at **11:20**, average 29901.25
+- **Result:** $360 before fees, **$357 after fees**
 - **What could have gone better:**
-  - Price kept going 52.25 points past Target 3 (by 11:35). Letting the last 2 contract(s) run with a trailing stop could have made up to $209 more.
-  - Biggest move against you while in the trade: 81.00 points ($810 on paper). Best move for you: 104.00 points.
+  - Price kept going 52.25 points past Target 3 (by 11:35). Letting the last 1 contract(s) run with a trailing stop could have made up to $104 more.
+  - Biggest move against you while in the trade: 81.00 points ($486 on paper). Best move for you: 104.00 points.
 
 ![Chart of this trade](charts/2026-10-19-nasdaq.svg)
 
@@ -125,8 +126,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **$1,888** over 5 trades
+- **Total profit / loss after fees:** **$1,590** over 5 trades
 - **Winners:** 4 (80%), **losers:** 1
-- **Before fees:** $1,912, fees paid: $25
-- **Nasdaq (MNQ):** $1,058 over 3 trades
+- **Before fees:** $1,612, fees paid: $23
+- **Nasdaq (MNQ):** $760 over 3 trades
 - **Gold (MGC):** $830 over 2 trades

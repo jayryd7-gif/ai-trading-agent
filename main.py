@@ -84,6 +84,16 @@ MAX_DRAWDOWN = 4000   # raised from $2,500 on 2026-10-19
 # Nasdaq open (9:30 AM New York). While the room is still under NEAR_LIMIT,
 # trade the small size REDUCED_PLAN (1 contract at each target), and skip a
 # trade whose stop would lose more than the room left.
+# Daily loss limit, like Tradeify's (soft breach): once the trading day (6 PM
+# to 5 PM New York, so the evening gold session counts toward the next
+# morning's Nasdaq) has lost this much, no more trades that day. A trade whose
+# stop would lose more than what is left of today's limit (or of the room
+# before the max drawdown) drops to REDUCED_PLAN, or is skipped if even that
+# is too big.
+DAILY_LOSS_LIMIT = 1250
+# For Tradeify's 35% consistency rule: once the trading day has made this
+# much, no more trades that day (None = no cap).
+DAILY_PROFIT_CAP = None
 NEAR_LIMIT = 1500   # $1,000 kicked in too late in the 60-day replay (net $4.6k vs $13.5k)
 REDUCED_PLAN = [1, 1, 1]
 
@@ -354,6 +364,7 @@ class Account:
         self.day = None
         self.stopped_on = None   # the trading day max drawdown was hit
         self.paused_until = None # no trades before this time (New York)
+        self.day_pnl = 0.0       # closed profit so far this trading day
 
     def room(self):
         """Dollars left before the max drawdown (today's open gains above the
@@ -367,6 +378,10 @@ class Account:
             return "stopped"
         if self.paused_until and start < self.paused_until:
             return "paused"
+        if self.day_pnl <= -DAILY_LOSS_LIMIT:
+            return "day_stopped"
+        if DAILY_PROFIT_CAP is not None and self.day_pnl >= DAILY_PROFIT_CAP:
+            return "day_done"
         return "reduced" if self.room() < NEAR_LIMIT else "normal"
 
     def can_trade(self, start):
@@ -374,10 +389,17 @@ class Account:
         if day != self.day:      # a new day: yesterday's close may be a new high
             self.peak_eod = max(self.peak_eod, self.balance)
             self.day = day
+            self.day_pnl = 0.0
         return self.stopped_on is None
+
+    def allowance(self):
+        """The most one trade may lose: what is left of today's loss limit,
+        or of the room before the max drawdown, whichever is smaller."""
+        return min(self.room(), DAILY_LOSS_LIMIT + self.day_pnl)
 
     def record(self, profit, start=None):
         self.balance += profit
+        self.day_pnl += profit
         if self.stopped_on is None and self.balance <= self.peak_eod - self.max_drawdown:
             self.stopped_on = self.day
         elif start is not None and self.room() < NEAR_LIMIT:
@@ -404,18 +426,39 @@ def run_account(candles_by_instrument, account=None):
         mode = account.mode(start)
         if mode == "stopped":
             break
-        if mode == "paused":
+        if mode in ("paused", "day_stopped", "day_done"):
             continue
-        result = play_session(instrument, SESSIONS[instrument], start, session,
-                              key_high, key_low,
-                              size_plan=REDUCED_PLAN if mode == "reduced" else None)
-        if result is None:
+        result, size = play_with_limits(instrument, start, session, key_high, key_low,
+                                        account, mode)
+        if result is None or size == "skipped":
             continue
-        if mode == "reduced" and too_risky(result, account.room()):
-            continue
-        account.record(result["profit"], start)
+        result["session"], result["start"] = session, start
+        if hasattr(account, "attempts"):     # a prop firm account: open loss matters
+            account.record(result["profit"] - result["contracts"], start,
+                           worst=result["risk_dollars"])
+        else:
+            account.record(result["profit"], start)
         results.append(result)
     return results, account
+
+
+def play_with_limits(instrument, start, session, key_high, key_low, account, mode):
+    """Play a session with the size the account allows.
+    Returns (result, size_mode): size_mode is "normal", "reduced", or
+    "skipped" (result then holds the trade that was not taken)."""
+    config = SESSIONS[instrument]
+    limit = account.allowance()
+    if mode == "normal":
+        result = play_session(instrument, config, start, session, key_high, key_low)
+        if result is None or not too_risky(result, limit):
+            return result, "normal"
+    result = play_session(instrument, config, start, session, key_high, key_low,
+                          size_plan=REDUCED_PLAN)
+    if result is None:
+        return None, "reduced"
+    if too_risky(result, limit):
+        return result, "skipped"
+    return result, "reduced"
 
 
 def too_risky(result, room):

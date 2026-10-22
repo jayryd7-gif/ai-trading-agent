@@ -28,14 +28,12 @@
 //   Sell 1 / 2 / 2 contracts. At Target 2 the stop moves to Target 1.
 // - At most one trade per session. Anything still open at the session end
 //   is closed.
-// - Near the limit: when a closed trade leaves less than $1,500 of room before
-//   the max drawdown, no new trade until the next 9:30 AM New York (orange
-//   background), then 1 contract per target until the room is back above
-//   $1,500. A trade whose stop would lose more than the room left is skipped.
-// - Max drawdown $4,000: if the balance (closed trades) falls that far below
-//   its highest end-of-day balance, no more trades are taken. Note that
-//   TradingView applies this per chart, while the paper trader applies it to
-//   both markets together.
+// - Tradeify Growth 50K limits: the drawdown floor trails $2,000 below the
+//   highest end-of-day balance, and the daily loss limit is $1,250. Each trade
+//   is sized so its stop cannot break either (full size, else 1 contract per
+//   target, else no trade). After the daily loss limit, no more trades that
+//   day (orange background). Too close to the floor for any trade: a new
+//   evaluation starts, so the strategy never stops for good.
 //
 // One difference from main.py: when a single candle touches both the stop
 // and a target, TradingView guesses the order from the candle's shape, while
@@ -61,8 +59,10 @@ goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, max
 showLevels = input.bool(true, "Draw the key levels")
 showTrade  = input.bool(true, "Draw entry, stop and targets while a trade is open")
 alertStyle = input.string("Readable", "Alert messages", options = ["Readable", "JSON (for a webhook)"])
-maxDD      = input.float(4000, "Max drawdown ($): stop trading if the balance falls this far below its highest end-of-day balance", minval = 0)
-nearLimit  = input.float(1500, "Near the limit ($): with less room than this, pause until the next 9:30 AM New York, then trade 1 contract per target", minval = 0)
+maxDD      = input.float(2000, "Trailing drawdown ($) below the highest end-of-day balance (Tradeify Growth 50K: 2000)", minval = 0)
+dailyLimit = input.float(1250, "Daily loss limit ($): no more trades that trading day (Tradeify Growth 50K: 1250)", minval = 0)
+riskBuffer = input.float(100, "Spare room ($) kept for slippage when checking a trade's risk", minval = 0)
+resetBelow = input.float(400, "Start a new evaluation when the account is this close to its floor ($)", minval = 0)
 // ------------------------------------------
 
 if timeframe.period != "5"
@@ -135,32 +135,27 @@ else if inSess
     curHigh := math.max(curHigh, high)
     curLow  := math.min(curLow, low)
 
-// ---- Max drawdown (trading days start at 6 PM New York) ----
-var float peakEOD = strategy.initial_capital
-var bool  halted  = false
+// ---- The Tradeify account (trading days start at 6 PM New York) ----
+// The drawdown floor trails the highest end-of-day balance. Each trade is
+// sized so hitting its stop stays above the floor and inside the daily loss
+// limit (minus a spare buffer): full size, else 1 contract per target, else
+// no trade. When the account gets too close to its floor for any trade, a new
+// evaluation starts (like buying a reset), so the strategy never stops for good.
+var float peakEOD     = strategy.initial_capital
+var float dayStartBal = strategy.initial_capital
+var int   resets      = 0
 closedBalance = strategy.initial_capital + strategy.netprofit
 tradingDay = dayofmonth(time + 6 * 3600000, "America/New_York")
 if tradingDay != tradingDay[1]
-    peakEOD := math.max(peakEOD, nz(closedBalance[1], strategy.initial_capital))
-if not halted and closedBalance <= peakEOD - maxDD
-    halted := true
-
-// ---- Near the max drawdown: pause until the next morning, then trade small ----
-room = maxDD - (peakEOD - closedBalance)
-var int pausedUntil = 0
-if strategy.closedtrades > nz(strategy.closedtrades[1]) and not halted and room < nearLimit
-    nyYear  = year(time, "America/New_York")
-    nyMonth = month(time, "America/New_York")
-    nyDay   = dayofmonth(time, "America/New_York")
-    // An evening (gold) session counts from its own calendar day too:
-    // "the next morning" is always the next 9:30 AM New York.
-    pausedUntil := timestamp("America/New_York", nyYear, nyMonth, nyDay, 9, 30) + 86400000
-paused  = time < pausedUntil
-reduced = room < nearLimit
-sz1 = reduced ? 1 : q1
-sz2 = reduced ? 1 : q2
-sz3 = reduced ? 1 : q3
-szTotal = sz1 + sz2 + sz3
+    peakEOD     := math.max(peakEOD, nz(closedBalance[1], strategy.initial_capital))
+    dayStartBal := nz(closedBalance[1], strategy.initial_capital)
+    if closedBalance - (peakEOD - maxDD) < resetBelow
+        peakEOD := closedBalance        // a fresh evaluation from here
+        resets  := resets + 1
+dayPnl    = closedBalance - dayStartBal
+cushion   = closedBalance - (peakEOD - maxDD)
+allowance = math.min(cushion, dailyLimit + dayPnl) - riskBuffer
+dayOver   = dayPnl <= -dailyLimit
 var int tradeQ3 = 0          // contracts for Target 3 in the open trade
 
 inWindow = inSess and (time - sessStart) < windowMin * 60000
@@ -181,11 +176,22 @@ winMsg(string tgt, int q, float lvl) =>
 stopMsg(string tgt, int q, float lvl) =>
     readable ? syminfo.ticker + " paper: stop hit, closed " + str.tostring(q) + " at " + px(lvl) + " (" + tgt + " order)" : '{"action":"stop","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(q) + '}'
 
+// Contracts at Target 1, 2 and 3 for a stop this far away: full size if its
+// risk fits today's allowance, else 1 / 1 / 1, else 0 (no trade).
+sizeFor(float stopDist) =>
+    fullRisk  = stopDist * syminfo.pointvalue * (q1 + q2 + q3)
+    smallRisk = stopDist * syminfo.pointvalue * 3
+    fullRisk < allowance ? 1 : smallRisk < allowance ? 2 : 0
+
 enterTrade(int d, float stopPx) =>
     entry = close
-    // Near the limit, skip a trade whose stop would lose more than the room left.
-    riskUsd = math.abs(entry - stopPx) * syminfo.pointvalue * szTotal
-    if math.abs(entry - stopPx) > 0 and not (reduced and riskUsd >= room)
+    plan  = sizeFor(math.abs(entry - stopPx))
+    sz1 = plan == 1 ? q1 : 1
+    sz2 = plan == 1 ? q2 : 1
+    sz3 = plan == 1 ? q3 : 1
+    szTotal = sz1 + sz2 + sz3
+    reduced = plan == 2
+    if math.abs(entry - stopPx) > 0 and plan > 0
         t1 = entry + d * spacing
         t2 = entry + d * 2 * spacing
         t3 = entry + d * 3 * spacing
@@ -203,7 +209,7 @@ enterTrade(int d, float stopPx) =>
         false
 
 // ---- Entries ----
-if inSess and haveLevels and not traded and not halted and not paused and strategy.position_size == 0
+if inSess and haveLevels and not traded and not dayOver and strategy.position_size == 0
     handled = false
     if confirm and pending != 0
         stillBeyond = pending == 1 ? close > prevHigh : close < prevLow
@@ -218,7 +224,7 @@ if inSess and haveLevels and not traded and not halted and not paused and strate
                 t1Lvl    := close + pending * spacing
                 t2Lvl    := close + pending * 2 * spacing
                 t3Lvl    := close + pending * 3 * spacing
-                tradeQ3  := sz3
+                tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
             handled := true
         pending := 0
     if not handled and not traded and inWindow
@@ -239,7 +245,7 @@ if inSess and haveLevels and not traded and not halted and not paused and strate
                     t1Lvl    := close + breakout * spacing
                     t2Lvl    := close + breakout * 2 * spacing
                     t3Lvl    := close + breakout * 3 * spacing
-                    tradeQ3  := sz3
+                    tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
 
 // ---- Manage the open trade: after Target 2, move the stop to Target 1 ----
 if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= tradeQ3
@@ -267,5 +273,4 @@ plot(inTrade ? stopLvl  : na, "Stop",     color.new(color.red, 0),   2, plot.sty
 plot(inTrade ? t1Lvl    : na, "Target 1", color.new(color.green, 30), 1, plot.style_linebr)
 plot(inTrade ? t2Lvl    : na, "Target 2", color.new(color.green, 15), 1, plot.style_linebr)
 plot(inTrade ? t3Lvl    : na, "Target 3", color.new(color.green, 0),  2, plot.style_linebr)
-bgcolor(halted ? color.new(color.red, 92) : na, title = "Stopped by max drawdown")
-bgcolor(not halted and paused ? color.new(color.orange, 90) : na, title = "Paused near max drawdown")
+bgcolor(dayOver and inSess ? color.new(color.orange, 90) : na, title = "Daily loss limit reached")

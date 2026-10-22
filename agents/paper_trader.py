@@ -20,9 +20,10 @@ It writes, in paper-trading/:
   paper-journal.md   a journal entry for every paper trade
   summary.md         totals, profitable days, and the challenge simulation
 
-THE CHALLENGE SIMULATION replays the paper results against the prop firm
-rules in CHALLENGE, as back-to-back attempts: each attempt runs until it
-passes or fails, and the next one starts the following trading day.
+THE ACCOUNT: the bot trades on a Tradeify Growth 50K practice account
+(agents/tradeify.py, ACCOUNT below), so each trade is sized to fit that
+account's daily loss limit and trailing drawdown, and the summary tracks the
+evaluation, the funded account and its payout rules.
 
 It places NO orders and has no broker access. The live version on
 TradingView is tradingview/breakout_strategy.pine; compare the two.
@@ -38,7 +39,9 @@ from zoneinfo import ZoneInfo
 import main as rules                       # the replay engine (main.py)
 from data import SYMBOLS, load_from_yahoo
 from notify import send
+from risk import INSTRUMENTS
 from trade_review import draw, review, tradingview_link
+from tradeify import RULES as TRADEIFY, TradeifyAccount, payout_status
 
 # ---------------- SETTINGS ----------------
 FOLDER = "paper-trading"
@@ -58,16 +61,13 @@ START_DAY = "2026-10-19"        # first trading day of the paper record (session
 # day of the new account, like "2026-11-02".
 DRAWDOWN_RESET_DAY = None
 
-# Practice challenge. These match Tradeify's GROWTH 50K evaluation as described
-# in its help center in October 2026. Prop firms change their rules, so check
-# help.tradeify.co and update these before you rely on them.
-CHALLENGE = {
-    "name": "Tradeify Growth 50K (practice)",
-    "start_balance": 50000,
-    "profit_target": 3000,
-    "trailing_drawdown": 2000,   # trails the highest end-of-day balance
-    "daily_loss_limit": 1250,    # soft limit: stop trading for the day
-}
+# The account the bot trades on. "tradeify": a Tradeify Growth 50K practice
+# account (agents/tradeify.py) - every trade is sized so its stop cannot break
+# the daily loss limit or the trailing drawdown, a $600 day ends trading for
+# the day, and evaluations and funded payouts are tracked. "own": the bot's own
+# account with main.MAX_DRAWDOWN and the pause near it.
+ACCOUNT = "tradeify"
+
 # ------------------------------------------
 
 FIELDS = ["trading_day", "instrument", "session_start", "signal", "direction",
@@ -80,18 +80,38 @@ OPEN_TRADES = os.path.join(FOLDER, "open-trades.json")
 
 trading_day = rules.trading_day
 SKIPPED = {"stopped": "stopped by max drawdown", "paused": "paused near max drawdown",
-           "skipped": "skipped, risk too big near max drawdown"}
+           "skipped": "skipped, risk too big for today's limits",
+           "day_stopped": "skipped, daily loss limit hit",
+           "day_done": "skipped, daily profit cap reached"}
+# Why a session was not traded, by account mode.
+WHY_NOT = {
+    "paused": lambda a: (f"Not taken: paused until {a.paused_until:%Y-%m-%d %H:%M} because "
+                         f"less than ${rules.NEAR_LIMIT:,} was left before the max drawdown."),
+    "day_stopped": lambda a: (f"Not taken: the ${rules.DAILY_LOSS_LIMIT:,} daily loss limit "
+                              "was reached earlier this trading day."),
+    "day_done": lambda a: (f"Not taken: this trading day was already up "
+                           f"${a.PROFIT_CAP:,}, the daily profit cap that keeps the biggest "
+                           "day small for the 35% consistency rule."),
+}
 
 
 def account_from(rows):
-    """The account (balance, max drawdown, pause) after the recorded rows."""
-    account = rules.Account()
+    """The account the bot trades on, after the recorded rows: the Tradeify
+    Growth 50K practice account (ACCOUNT = "tradeify"), or the bot's own
+    account with main.MAX_DRAWDOWN ("own")."""
+    account = TradeifyAccount() if ACCOUNT == "tradeify" else rules.Account()
     for r in sorted(rows, key=lambda r: r["session_start"]):
         if DRAWDOWN_RESET_DAY and r["trading_day"] < DRAWDOWN_RESET_DAY:
             continue
         start = datetime.strptime(r["session_start"], "%Y-%m-%d %H:%M")
         account.mode(start)   # moves the account to this session's day
-        if r["signal"] == "yes":
+        if r["signal"] != "yes":
+            continue
+        if ACCOUNT == "tradeify":
+            risk = (abs(float(r["entry"]) - float(r["stop"])) * int(r["contracts"])
+                    * INSTRUMENTS[r["instrument"]]["point_value"])
+            account.record(float(r["net"]), start, worst=risk)
+        else:
             account.record(float(r["net"]), start)
     return account
 
@@ -152,21 +172,20 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
                     f"Not taken: the ${rules.MAX_DRAWDOWN:,} max drawdown was hit on "
                     f"{account.stopped_on}.", (round(key_high, 2), round(key_low, 2))))
             continue
-        if mode == "paused":
+        levels_rounded = (round(key_high, 2), round(key_low, 2))
+        if mode in WHY_NOT:
             if window_over:
-                rows.append(blank_row(instrument, start, "paused",
-                    f"Not taken: paused until {account.paused_until:%Y-%m-%d %H:%M} because "
-                    f"less than ${rules.NEAR_LIMIT:,} was left before the max drawdown.",
-                    (round(key_high, 2), round(key_low, 2))))
+                rows.append(blank_row(instrument, start, mode, WHY_NOT[mode](account),
+                                      levels_rounded))
             continue
-        result = rules.play_session(instrument, config, start, session, key_high, key_low,
-                                    size_plan=rules.REDUCED_PLAN if mode == "reduced" else None)
-        if result and mode == "reduced" and rules.too_risky(result, account.room()):
+        result, size = rules.play_with_limits(instrument, start, session, key_high,
+                                              key_low, account, mode)
+        if size == "skipped":
             rows.append(blank_row(instrument, start, "skipped",
                 f"Breakout {result['direction']} at {result['entry_time']:%H:%M}, but even the "
-                f"small size risked ${result['risk_dollars']:,.0f} with only "
-                f"${account.room():,.0f} left before the max drawdown, so it was skipped.",
-                (round(key_high, 2), round(key_low, 2))))
+                f"small size risked ${result['risk_dollars']:,.0f} and only "
+                f"${account.allowance():,.0f} could be lost today without breaking the "
+                "daily loss limit or the drawdown, so it was skipped.", levels_rounded))
             continue
         if not finished:
             last_candle = session[-1][0]
@@ -211,7 +230,7 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
                 "best_move": facts["mfe"], "worst_move": facts["mae"],
                 "lessons": " | ".join(facts["lessons"]),
                 "chart": chart,
-                "size_mode": mode,
+                "size_mode": size,
             })
         rows.append(row)
     return rows
@@ -296,49 +315,47 @@ def by_day(rows):
     return days
 
 
-def simulate_challenge(days):
-    """Back-to-back attempts. Returns a list of attempt dictionaries."""
-    c = CHALLENGE
-    attempts, current = [], None
-    for day, sessions in days.items():
-        if current is None:
-            current = {"start": day, "balance": c["start_balance"],
-                       "peak_eod": c["start_balance"], "days": 0, "result": "In progress",
-                       "end": day, "note": "", "dll_days": 0}
-        floor = current["peak_eod"] - c["trailing_drawdown"]
-        day_net, traded = 0.0, False
-        for r in sessions:
-            if r["signal"] != "yes":
-                continue
-            if day_net <= -c["daily_loss_limit"]:
-                current["note"] = "skipped a session after the daily loss limit"
-                continue
-            day_net += float(r["net"])
-            traded = True
-            if current["balance"] + day_net <= floor:
-                current["result"] = "Failed"
-                current["note"] = (f"balance fell to ${current['balance'] + day_net:,.0f}, "
-                                   f"below the drawdown floor of ${floor:,.0f}")
-                break
-        if day_net <= -c["daily_loss_limit"]:
-            current["dll_days"] += 1
-        current["balance"] += day_net
-        current["days"] += 1 if traded else 0
-        current["end"] = day
-        if current["result"] == "In progress":
-            current["peak_eod"] = max(current["peak_eod"], current["balance"])
-            if current["balance"] >= c["start_balance"] + c["profit_target"]:
-                current["result"] = "Passed"
-        if current["result"] != "In progress":
-            attempts.append(current)
-            current = None
-    if current is not None:
-        attempts.append(current)
-    return attempts
-
-
 def money(value):
     return f"-${-value:,.0f}" if value < 0 else f"${value:,.0f}"
+
+
+def tradeify_section(rows):
+    """The Tradeify Growth 50K practice account: every evaluation and funded
+    account so far, and what is still needed for the next step."""
+    r = TRADEIFY
+    account = account_from(rows)
+    current = account.a
+    attempts = account.finish()
+    out = ["", f"## Tradeify Growth 50K (practice account the bot trades on)", "",
+           f"Rules from Tradeify's help center (Oct 2026): evaluation passes at "
+           f"${r['start'] + r['target']:,}; trailing drawdown ${r['drawdown']:,} below the highest "
+           f"end-of-day balance, and touching it even with an open trade fails the account; "
+           f"daily loss limit ${r['daily_loss_limit']:,} ends the day. Funded: a payout needs "
+           f"${r['payout_balance']:,}, {r['payout_days']} days over ${r['payout_day_min']}, and "
+           f"the biggest day at most {r['consistency']:.0%} of the profit. The bot sizes every "
+           f"trade so its stop cannot break a rule, and stops for the day once up "
+           f"${TradeifyAccount.PROFIT_CAP:,}. Check Tradeify's current rules before relying on this.", ""]
+    if current is not None:
+        cushion = current["balance"] - (current["peak_eod"] - r["drawdown"]
+                                        if not (current["phase"] == "Funded"
+                                                and current["peak_eod"] >= r["lock_at"])
+                                        else r["locked_floor"])
+        out.append(f"**Now: {current['phase']}**, balance **{money(current['balance'])}**, "
+                   f"{money(cushion)} above the drawdown floor.")
+        if current["phase"] == "Evaluation":
+            left = r["start"] + r["target"] - current["balance"]
+            out.append(f"- To pass: {money(max(0, left))} more profit.")
+        else:
+            ok, text = payout_status(current)
+            out.append(f"- Next payout: {'✅ ready to request' if ok else 'not yet'}: {text}.")
+        out.append("")
+    out += ["| # | Account | Started | Ended | Trading days | Balance | Result | Payouts | Note |",
+            "|---|---|---|---|---|---|---|---|---|"]
+    for i, a in enumerate(attempts, 1):
+        paid = ", ".join(f"{money(p)} on {d}" for d, p in a["payouts"]) or "–"
+        out.append(f"| {i} | {a['phase']} | {a['start'] or '–'} | {a['end'] or '–'} | {a['days']} | "
+                   f"{money(a['balance'])} | {a['result']} | {paid} | {a['note']} |")
+    return out
 
 
 def build_summary(rows, now, stopped_on=None):
@@ -392,22 +409,7 @@ def build_summary(rows, now, stopped_on=None):
         out.append(f"| {name} | {len(mine)} | {sum(1 for n in mine if n > 0)} | "
                    f"{money(sum(mine))} |")
 
-    c = CHALLENGE
-    attempts = simulate_challenge(days)
-    passed = sum(1 for a in attempts if a["result"] == "Passed")
-    failed = sum(1 for a in attempts if a["result"] == "Failed")
-    out += ["", f"## Challenge simulation: {c['name']}", "",
-            f"Rules: reach {money(c['profit_target'])} profit before the balance drops "
-            f"{money(c['trailing_drawdown'])} below its highest end-of-day balance. "
-            f"Stop for the day after losing {money(c['daily_loss_limit'])}. "
-            "Check the firm's current rules before relying on this.", "",
-            f"**Passed {passed}, failed {failed}, "
-            f"{len(attempts) - passed - failed} in progress.**", "",
-            "| Attempt | Started | Ended | Trading days | Balance | Result | Note |",
-            "|---|---|---|---|---|---|---|"]
-    for i, a in enumerate(attempts, 1):
-        out.append(f"| {i} | {a['start']} | {a['end']} | {a['days']} | "
-                   f"{money(a['balance'])} | {a['result']} | {a['note']} |")
+    out += tradeify_section(rows)
 
     out += ["", "## Daily results", "", "| Trading day | Sessions | Result after fees |",
             "|---|---|---|"]

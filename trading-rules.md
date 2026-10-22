@@ -51,20 +51,32 @@ Each target is about $60 per contract from the one before it.
 - If price passes several targets in one candle, apply each one in order.
 - If one candle touches both the stop loss and a target, assume the stop loss was hit first.
 
-## Near the max drawdown
+## Account rules: Tradeify Growth 50K
 
-The max drawdown is $4,000: if the balance falls that far below its highest
-end-of-day balance, trading stops completely (a blown account).
+The bot trades on a Tradeify Growth 50K practice account (since 2026-10-21),
+using Tradeify's rules as written in its help center in October 2026:
 
-- **Close to the limit** means less than **$1,500** of room is left.
-- When a closed trade leaves less than $1,500 of room, **stop for the day**: no
-  new trade until the **next morning's 9:30 AM New York open**. The gold
-  session that evening is skipped.
-- After the pause, while the room is still under $1,500, trade the **small
-  size: 1 contract at each target (3 in total)**, for Nasdaq and gold.
-- If even the small size would lose more than the room left when the stop is
-  hit, **skip the trade**.
-- Once winners bring the room back above $1,500, go back to the normal size.
+- **Evaluation:** pass at $53,000 (+$3,000). No consistency rule.
+- **Trailing drawdown:** $2,000 below the highest end-of-day balance. Touching
+  it at any moment, open trades included, fails the account. On the funded
+  account it locks at $50,100 once the end-of-day balance reaches $52,100.
+- **Daily loss limit:** $1,250. After that, no more trades that trading day
+  (6 PM to 5 PM New York, so the evening gold session counts toward the next
+  morning's Nasdaq session).
+- **Every trade is sized to fit:** if hitting the stop could break the daily
+  loss limit or the drawdown (with $100 to spare), trade 1 contract per target
+  instead; if even that could, skip the trade.
+- **Daily profit cap:** once the trading day is up $600, no more trades that
+  day. This keeps the biggest day small for the funded account's 35%
+  consistency rule.
+- **Funded payouts:** balance at least $53,000, 5 trading days over $150
+  profit, and the biggest day at most 35% of the profit since the last payout.
+  Max payout $1,500, then $2,000, $2,500, $3,000.
+- **Always:** flat by 4:45 PM New York, at most 40 micros, no hedging, at
+  least one trade a week.
+
+The earlier rule (a $4,000 max drawdown with a pause near it) is still in the
+code: set `ACCOUNT = "own"` in agents/paper_trader.py to use it again.
 
 ## Choosing gold contract sizes
 
