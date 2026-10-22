@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-22 06:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-22 06:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -16,11 +16,11 @@ Last updated 2026-10-22 06:26 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -257,44 +257,48 @@ I haven't filled any gaps with guesses. Please re-run this briefing once search 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-21</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-22</b></summary>
 
 #### Top things today
-1. Search tools failed today, so I have no news to confirm why the market moved. The only data I have is the live numbers. Why it matters: any explanation for today's moves would be a guess.
-2. Bitcoin is at $83,320 (+2.2% in 24h, 7d flat). Ethereum is at $2,454 (+2.9%) and Solana is at $106.50 (+2.4%). Why it matters: the whole market rose together, though weekly moves are still flat to slightly negative.
-3. The Fear and Greed Index reads 63 (Greed). Why it matters: sentiment is warm while weekly prices have not moved.
-4. Zcash (ZEC) is up 12.4% at $1,277.8, with a $21.7B market cap and $1.1B in 24h volume. It is trending on CoinGecko at rank 10. Why it matters: it is by far the largest coin among today's top gainers, and the volume is real.
-5. NEAR is up 11.0% with $1.5B in volume, and it is also trending. Why it matters: volume is high for a coin this size, which points to broad interest. I found no cause.
+
+1. Prices are lower across the board. Bitcoin is $81,990 (-1.6% in 24h, +0.7% over 7d). Ethereum is $2,405 (-2.0%). Solana is $104.54 (-1.9%). (live data) Why it matters: the market is slipping while the Fear and Greed Index still reads 68 (Greed).
+2. Monero (XMR) is up 8.0% in 24h and 19.7% over 7d. It trades at $644.91, with a $12.2B market cap and $287.5M in 24h volume. (live data) Why it matters: it is a large-cap coin rising while the major coins fall, and it is also trending on CoinGecko.
+3. Lighter (LIT) is up 9.2% in 24h and 22.3% over 7d. Volume is $165.3M. (live data) Why it matters: the volume is heavy for a $919M coin.
+4. Several small coins are up sharply on thin volume. MemeCore (M) is up 17.3% on $5.1M of volume. GRX Chain (GRX) is up 13.9% on $4.7M. (live data) Why it matters: thin volume means prices can reverse fast.
+5. Akedo (AKE) is down 21.4% and Celestia (TIA) is down 7.0%. Both are trending. (CoinGecko) Why it matters: trending coins are not always rising coins.
+
+My news search tool failed today because it hit its usage limit. I could not check news, so I have not explained why any coin moved. Everything below comes only from the live data.
 
 #### Coins to research
-I found no news for any coin in this table. "Why it is moving" is "No cause found" throughout. The flags come from the live data only.
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Convex Finance (CVX) | +21.0% (7d +33.0%) | No cause found | Small cap ($238.1M). Big weekly run-up. |
-| Pearl (PEARL) | +19.4% | No cause found. Also trending. | Volume is only $12.6M against an $822.2M cap. Pump with no news. |
-| Akedo (AKE) | +19.4% (7d +43.6%) | No cause found | Volume is only $16.9M against an $828.4M cap. Big weekly run-up. |
-| Provenance Blockchain (HASH) | +15.2% | No cause found | Volume is only $41.8K against a $442.9M cap. This looks thin and easy to move. |
-| Doodles (DOOD) | +123.4% | No cause found. Trending. | Rank 743, so tiny. A pump with no news. |
-| IOST | +93.5% | No cause found. Trending. | Rank 420. A pump with no news. |
+| MemeCore (M) | +17.3% | Not found (no news checked) | Volume of $5.1M against a $2.0B market cap. Pump with no confirmed news. |
+| GRX Chain (GRX) | +13.9% | Not found | Volume of $4.7M against a $241.5M market cap. Pump with no confirmed news. |
+| Lighter (LIT) | +9.2% | Not found. Volume is high at $165.3M. | Pump with no confirmed news. Rank 80. |
+| Monero (XMR) | +8.0% | Not found. Up 19.7% over 7d and trending. | Pump with no confirmed news. Large cap, so more liquid. |
+| Quack AI (Q) | +4.6% | Not found | Up 129.5% over 7d. Volume of $17.8M against a $578.9M market cap. |
+| Universal High Income (UHI) | +10.2% | Not found. Trending. | Rank 831, so a tiny market cap. Pump with no confirmed news. |
 
-Other coins I noticed: Railgun (RAIL) is up 12.7% on only $361.1K volume. Useless Coin (USELESS) is up 14.5% but down 10.1% over 7 days. I did not check holder concentration for any coin.
+Other flags from the data: A7A5 has only $12.2K in 24h volume against a $476.5M market cap. Bitway (BTW) is down 13.8% over 7d.
 
 #### Whale watch
-No whale moves found.
+
+No whale moves found. (I could not search.)
 
 #### Government and regulation
+
 Nothing found.
 
 #### Who is buying and adopting
+
 Nothing found.
 
 #### Next 7 days
+
 No scheduled events found.
 
-I could not run searches, so the last four sections are empty because I could not look, not because nothing happened. Check Whale Alert, Lookonchain, Arkham, CoinDesk and the SEC and CFTC sites directly.
-
-[Read the full brief with all the details](reports/crypto/2026-10-21-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-22-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
