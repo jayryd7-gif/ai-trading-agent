@@ -42,7 +42,7 @@
 // Futures need only a small deposit (margin) per contract, so margin checks
 // are turned off. Without this, TradingView rejects every order because the
 // contracts are worth more than the account balance.
-strategy("Session Breakout (ai-trading-agent)", overlay = true,
+strategy("Session Breakout - Tradeify 50K", overlay = true,
      process_orders_on_close = true, pyramiding = 0,
      initial_capital = 50000, margin_long = 0, margin_short = 0,
      default_qty_type = strategy.fixed, default_qty_value = 5,
