@@ -2109,14 +2109,24 @@ Every trade, oldest first. No real money.
 - **Profit / loss on this coin:** -$18.62
 - **Why:** ADA closed below its 50-day average (its uptrend broke)
 
+### 2026-10-21 | Buy BCH
+- **Price:** $286.30 (that day's close)
+- **Amount:** $675.19 for 2.3489 BCH, fee $2.70
+- **Why:** weekly check: #2 by 120-day gain (+47%), in an uptrend, with bitcoin in an uptrend
+
+### 2026-10-21 | Buy LTC
+- **Price:** $61.58 (that day's close)
+- **Amount:** $675.19 for 10.9206 LTC, fee $2.70
+- **Why:** weekly check: #4 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend
+
 ---
 
 ## Total
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-20:** $3,373.61
-- **Total profit / loss:** **$2,373.61 (+237.4%)**
+- **Value on 2026-10-21:** $3,370.55
+- **Total profit / loss:** **$2,370.55 (+237.1%)**
   - From coins already sold: $2,448.17 (73 of 190 sells made money)
-  - On coins still held: -$74.56
-- **Fees paid (included above):** $708.24
-- **Trades:** 193 buys, 190 sells
+  - On coins still held: -$77.62
+- **Fees paid (included above):** $713.64
+- **Trades:** 195 buys, 190 sells

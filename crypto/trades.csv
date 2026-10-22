@@ -392,3 +392,5 @@ backtest,Rotation bot,2026-10-14,Buy,ADA,0.2302,2942.0477,679.98,2.72,,"weekly c
 backtest,Rotation bot,2026-10-14,Buy,BTC,81682,0.0082914143,679.98,2.72,,"weekly check: #4 by 120-day gain (+24%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2026-10-14,Buy,SUI,1.0227,662.22684,679.98,2.72,,"weekly check: #3 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2026-10-16,Sell,ADA,0.2257,2942.0477,664.02,2.66,-18.62,ADA closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-21,Buy,BCH,286.3,2.3488965,675.19,2.70,,"weekly check: #2 by 120-day gain (+47%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-21,Buy,LTC,61.58,10.920576,675.19,2.70,,"weekly check: #4 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
