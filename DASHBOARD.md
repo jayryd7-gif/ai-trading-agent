@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-21 21:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-21 21:21 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -18,7 +18,7 @@ Last updated 2026-10-21 21:13 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 15 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 14 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
@@ -28,7 +28,7 @@ Last updated 2026-10-21 21:13 New York time. Everything here is written by softw
 ## 📒 Trade journal (paper)
 
 - **Room before the $4,000 max drawdown: $3,748** · 🟢 normal size. Under $1,500 left, it pauses until the next morning and then trades small.
-- 🟢 **Open now: Gold short 5 contracts** at 4137.2 (20:15), stop 4143.1. Sold so far: nothing yet.
+- 🟢 **Open now: Gold short 5 contracts** at 4137.2 (20:15), stop 4143.1. Sold so far: 1 @ 4131.2 (20:35).
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
