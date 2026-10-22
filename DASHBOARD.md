@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-22 06:03 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-22 06:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -17,11 +17,11 @@ Last updated 2026-10-22 06:03 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 24 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -219,31 +219,21 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-21, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-10-22</b></summary>
 
-Results are JSON strings; parse.## Top things for today
-1. **Trump rallies in South Carolina.** Trump is campaigning for Republican candidates in South Carolina, with midterms 13 days away (Fox News). Why it matters: political risk and headline risk for policy and risk appetite.
-2. **Student loan collections.** An unverified social media post cites Forbes. It says the Education and Treasury departments are preparing to go after wages and benefits of borrowers in default, using private debt collectors. I could not confirm this independently. Why it matters: it is a consumer-income and fiscal headline.
-3. **Trump's North Carolina rally.** He spoke for more than 90 minutes in Greenville. He announced a new manufacturing plant in the state and $1.5 billion toward semiconductor chip production (NBC News, ABC11). Why it matters: industrial policy and spending headlines.
-4. **DOJ fraud-tip program.** Trump and Vice President Vance announced a Justice Department program that pays tipsters for help finding fraud (NBC News). Why it matters: it is a fiscal and enforcement headline, with limited direct market link.
-5. **Data gap.** My search tool hit its usage limit after one search. I found no economic calendar, central bank, tariff, war or country data for today. Why it matters: check a live calendar and newswire before trading.
+#### Top things for today
+Nothing found. My search tool hit its usage limit before it returned any usable results for 22 October 2026.
 
 #### Today's schedule (New York time)
-| Time | Event | Who or where | Confirmed? |
-|---|---|---|---|
-| 7:00 PM | Political rally | Trump, T. Ed Garrison Arena, Pendleton, SC | Listed on Roll Call's presidential schedule; the page layout is slightly unclear (Roll Call) |
-| Not found | Economic data releases | Not found | No scheduled events found |
-| Not found | Fed and other central bank speakers | Not found | No scheduled events found |
+No scheduled events found.
 
 #### Event risk today
-Medium - I could not verify today's data or Fed calendar, so this rating reflects only the Trump rally and political headlines. Treat it as provisional.
+Unknown - I couldn't confirm today's calendar or overnight news, so I can't rate the risk. Check an economic calendar before the open.
 
 #### Politics and policy
-- **Trump overnight:** At a Greenville, NC rally for Senate candidate Michael Whatley, Trump promised cash and waivers if Republicans win the midterms (NBC News). He said a vote for Whatley is a vote for his policies (ABC11). He also attacked Democratic candidates, including Roy Cooper (Fox News).
-- **Midterms:** Democrats are widening the Senate battleground map. Affordability is a central issue (Fox News).
-- **Federal student loans:** There is an unconfirmed report of a Treasury and Education plan to collect on defaulted loans (social media citing Forbes).
-- **Ilhan Omar:** One social media post says she was raided by DHS. I could not verify it.
-- **Congress, Treasury, Fed, executive orders:** Nothing found.
+Nothing found.
+
+One unrelated item did come back. It was an SCMP/Bloomberg story dated 5 September 2026. It said President Trump pressed the Fed to cut rates and threatened to cut trade with some deficit countries if it didn't. It also said Warsh had taken over from Powell as Fed chair. It is seven weeks old and is not overnight news. I've treated it as background only. Why it matters: it points to ongoing tension over rates and trade policy, which affects rate expectations and the dollar.
 
 #### Economics
 Nothing found.
@@ -252,15 +242,17 @@ Nothing found.
 Nothing found.
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:** Nothing found.
-- **United Kingdom:** Nothing found.
-- **Japan:** Nothing found.
-- **India:** Nothing found.
-- **Russia:** Nothing found.
-- **Canada:** Nothing found.
+- China: Nothing found.
+- European Union: Nothing found.
+- United Kingdom: Nothing found.
+- Japan: Nothing found.
+- India: Nothing found.
+- Russia: Nothing found.
+- Canada: Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-10-21-world-brief.md) · [All news briefs](reports/news/)
+I haven't filled any gaps with guesses. Please re-run this briefing once search access is back.
+
+[Read the full brief with all the details](reports/news/2026-10-22-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
