@@ -1,6 +1,6 @@
 # Brief scorecard
 
-Updated 2026-10-21 17:56 New York time. Scored briefs: 8. Waiting to be scored: 0.
+Updated 2026-10-22 07:05 New York time. Scored briefs: 9. Waiting to be scored: 0.
 
 > **Too few directional calls to trust any of this yet.** There are 1 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
@@ -11,7 +11,7 @@ Updated 2026-10-21 17:56 New York time. Scored briefs: 8. Waiting to be scored: 
 - Session ended flat (neither): 0
 - Hit rate when the session was decisive: **0%**
 
-For comparison: across all scored sessions, price went up in 57% of the decisive ones (4 of 7). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 50% of the decisive ones (4 of 8). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
@@ -31,12 +31,13 @@ For comparison: across all scored sessions, price went up in 57% of the decisive
 ## Neutral calls
 
 - Session stayed calm (flat): 1
-- Session moved up or down anyway: 6
+- Session moved up or down anyway: 7
 
 ## Most recent scored briefs
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-10-21 | gold | Neutral | Low | 2026-10-21 20:00 | Down (-0.94%) | Moved |
 | 2026-10-21 | nasdaq | Neutral | Low | 2026-10-21 09:30 | Up (0.41%) | Moved |
 | 2026-10-20 | gold | Neutral | Low | 2026-10-20 20:00 | Up (0.24%) | Moved |
 | 2026-10-20 | nasdaq | Bearish | Low | 2026-10-20 09:30 | Up (0.32%) | Wrong |
