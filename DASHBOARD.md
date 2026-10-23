@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-23 06:00 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-23 06:24 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -15,13 +15,13 @@ Last updated 2026-10-23 06:00 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 24 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -222,40 +222,46 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-22</b></summary>
+<summary><b>🌍 World news brief, 2026-10-23, event risk Medium</b></summary>
 
 #### Top things for today
-Nothing found. My search tool hit its usage limit before it returned any usable results for 22 October 2026.
+1. **Trump ordered to sit for a deposition in the BBC lawsuit.** A judge issued the order. Trump is seeking $10 billion over a documentary that edited his January 6, 2021 speech. BBC lawyers say he cancelled an October 16 deposition and campaigned that day instead (WORLD Radio news summary). Why it matters: headline and legal risk around the President, with no direct data link found.
+2. **White House press secretary search is under way again.** Karoline Leavitt is advising on it (WORLD Radio). The summary was cut off, so I can't give details. Why it matters: it affects how policy messages reach the public.
+3. **Justice Department charges against a Virginia state senator, and a federal search of Rep. Ilhan Omar's home.** The senator calls the case political. Blanche says the investigation began before Trump returned to office. The attorney general is also answering criticism about the timing of the Omar search (WORLD Radio). Why it matters: political-risk headlines.
+4. **Ukraine and Russia are trading attacks.** (WORLD Radio, no detail found.) Why it matters: energy and risk appetite.
 
 #### Today's schedule (New York time)
 No scheduled events found.
 
+My search tool hit its usage limit after one search. I could not check the economic calendar, Fed speakers or Trump's schedule. Check those yourself before the open.
+
 #### Event risk today
-Unknown - I couldn't confirm today's calendar or overnight news, so I can't rate the risk. Check an economic calendar before the open.
+Medium - I couldn't confirm the data calendar, so this is a cautious rating. The one source I found shows active political and legal headlines and a Russia-Ukraine exchange of attacks.
 
 #### Politics and policy
-Nothing found.
-
-One unrelated item did come back. It was an SCMP/Bloomberg story dated 5 September 2026. It said President Trump pressed the Fed to cut rates and threatened to cut trade with some deficit countries if it didn't. It also said Warsh had taken over from Powell as Fed chair. It is seven weeks old and is not overnight news. I've treated it as background only. Why it matters: it points to ongoing tension over rates and trade policy, which affects rate expectations and the dollar.
+- **Justice Department:** It announced charges against a Virginia state senator. Blanche said the probe began before Trump's return to office (WORLD Radio).
+- **Ilhan Omar:** The attorney general responded to criticism about the timing of the federal search of her home (WORLD Radio).
+- **Trump and the BBC:** A judge ordered Trump to give a deposition in his suit against the BBC (WORLD Radio).
+- **Press secretary:** The search for a new White House press secretary has restarted (WORLD Radio).
+- **Congress, Treasury, Fed, executive orders, Trump's overnight remarks:** Nothing found.
 
 #### Economics
 Nothing found.
 
 #### War, trade and tariffs
-Nothing found.
+- **Russia and Ukraine:** Both sides traded attacks (WORLD Radio). I found no details on targets or energy sites. Why it matters: energy and gold safe-haven demand.
+- **Tariffs and trade deals:** Nothing found.
 
 #### Country briefs
-- China: Nothing found.
-- European Union: Nothing found.
-- United Kingdom: Nothing found.
-- Japan: Nothing found.
-- India: Nothing found.
-- Russia: Nothing found.
-- Canada: Nothing found.
+- **China:** Nothing found.
+- **European Union:** Nothing found.
+- **United Kingdom:** Nothing found. The only UK link is the BBC lawsuit in the US, covered above.
+- **Japan:** Nothing found.
+- **India:** Nothing found.
+- **Russia:** Ukraine and Russia traded attacks (WORLD Radio).
+- **Canada:** Nothing found.
 
-I haven't filled any gaps with guesses. Please re-run this briefing once search access is back.
-
-[Read the full brief with all the details](reports/news/2026-10-22-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-23-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
