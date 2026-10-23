@@ -2119,14 +2119,44 @@ Every trade, oldest first. No real money.
 - **Amount:** $675.19 for 10.9206 LTC, fee $2.70
 - **Why:** weekly check: #4 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend
 
+### 2026-10-22 | Sell AVAX
+- **Price:** $9.13 (that day's close)
+- **Amount:** $548.52 for 60.0919 AVAX, fee $2.19
+- **Profit / loss on this coin:** -$125.18
+- **Why:** AVAX closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell BTC
+- **Price:** $81,416.09 (that day's close)
+- **Amount:** $675.05 for 0.00829141 BTC, fee $2.70
+- **Profit / loss on this coin:** -$7.62
+- **Why:** BTC closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell SUI
+- **Price:** $0.9724 (that day's close)
+- **Amount:** $643.95 for 662.227 SUI, fee $2.58
+- **Profit / loss on this coin:** -$38.61
+- **Why:** SUI closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell BCH
+- **Price:** $275.10 (that day's close)
+- **Amount:** $646.18 for 2.3489 BCH, fee $2.58
+- **Profit / loss on this coin:** -$31.59
+- **Why:** BCH closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell LTC
+- **Price:** $58.87 (that day's close)
+- **Amount:** $642.89 for 10.9206 LTC, fee $2.57
+- **Profit / loss on this coin:** -$34.87
+- **Why:** LTC closed below its 50-day average (its uptrend broke)
+
 ---
 
 ## Total
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-21:** $3,370.55
-- **Total profit / loss:** **$2,370.55 (+237.1%)**
-  - From coins already sold: $2,448.17 (73 of 190 sells made money)
-  - On coins still held: -$77.62
-- **Fees paid (included above):** $713.64
-- **Trades:** 195 buys, 190 sells
+- **Value on 2026-10-22:** $3,210.29
+- **Total profit / loss:** **$2,210.29 (+221.0%)**
+  - From coins already sold: $2,210.29 (73 of 195 sells made money)
+  - On coins still held: $0.00
+- **Fees paid (included above):** $726.27
+- **Trades:** 195 buys, 195 sells

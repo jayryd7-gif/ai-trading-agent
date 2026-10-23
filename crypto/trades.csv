@@ -6,6 +6,10 @@ paper,Rotation bot,2026-10-17,Buy,AVAX,9.767,20.395208,200.00,0.80,,"weekly chec
 paper,Rotation bot,2026-10-17,Buy,BCH,275.5,0.723049,200.00,0.80,,"weekly check: #2 by 120-day gain (+39%), in an uptrend, with bitcoin in an uptrend"
 paper,Rotation bot,2026-10-17,Buy,BTC,81491,0.0024444405,200.00,0.80,,"weekly check: #4 by 120-day gain (+28%), in an uptrend, with bitcoin in an uptrend"
 paper,Rotation bot,2026-10-17,Buy,SUI,0.9764,204.01475,200.00,0.80,,"weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend"
+paper,Rotation bot,2026-10-22,Sell,AVAX,9.128,20.395208,186.17,0.74,-14.58,AVAX closed below its 50-day average (its uptrend broke)
+paper,Rotation bot,2026-10-22,Sell,BCH,275.1,0.723049,198.91,0.80,-1.88,BCH closed below its 50-day average (its uptrend broke)
+paper,Rotation bot,2026-10-22,Sell,BTC,81416.1,0.0024444405,199.02,0.80,-1.78,BTC closed below its 50-day average (its uptrend broke)
+paper,Rotation bot,2026-10-22,Sell,SUI,0.9724,204.01475,198.38,0.79,-2.41,SUI closed below its 50-day average (its uptrend broke)
 backtest,Buy-and-hold bot,2022-10-19,Buy,BTC,19124,0.017360412,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
 backtest,Buy-and-hold bot,2022-10-19,Buy,ETH,1285.09,0.25834766,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
 backtest,Buy-and-hold bot,2022-10-19,Buy,SOL,28.86,11.503812,333.33,1.33,,"day one: equal thirds of BTC, ETH and SOL, held for good"
@@ -394,3 +398,8 @@ backtest,Rotation bot,2026-10-14,Buy,SUI,1.0227,662.22684,679.98,2.72,,"weekly c
 backtest,Rotation bot,2026-10-16,Sell,ADA,0.2257,2942.0477,664.02,2.66,-18.62,ADA closed below its 50-day average (its uptrend broke)
 backtest,Rotation bot,2026-10-21,Buy,BCH,286.3,2.3488965,675.19,2.70,,"weekly check: #2 by 120-day gain (+47%), in an uptrend, with bitcoin in an uptrend"
 backtest,Rotation bot,2026-10-21,Buy,LTC,61.58,10.920576,675.19,2.70,,"weekly check: #4 by 120-day gain (+46%), in an uptrend, with bitcoin in an uptrend"
+backtest,Rotation bot,2026-10-22,Sell,AVAX,9.128,60.091864,548.52,2.19,-125.18,AVAX closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-22,Sell,BTC,81416.1,0.0082914143,675.05,2.70,-7.62,BTC closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-22,Sell,SUI,0.9724,662.22684,643.95,2.58,-38.61,SUI closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-22,Sell,BCH,275.1,2.3488965,646.18,2.58,-31.59,BCH closed below its 50-day average (its uptrend broke)
+backtest,Rotation bot,2026-10-22,Sell,LTC,58.87,10.920576,642.89,2.57,-34.87,LTC closed below its 50-day average (its uptrend broke)

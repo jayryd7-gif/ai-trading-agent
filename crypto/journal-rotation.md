@@ -24,14 +24,38 @@ Every trade, oldest first. No real money.
 - **Amount:** $200.00 for 204.015 SUI, fee $0.80
 - **Why:** weekly check: #3 by 120-day gain (+36%), in an uptrend, with bitcoin in an uptrend
 
+### 2026-10-22 | Sell AVAX
+- **Price:** $9.13 (that day's close)
+- **Amount:** $186.17 for 20.3952 AVAX, fee $0.74
+- **Profit / loss on this coin:** -$14.58
+- **Why:** AVAX closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell BCH
+- **Price:** $275.10 (that day's close)
+- **Amount:** $198.91 for 0.723049 BCH, fee $0.80
+- **Profit / loss on this coin:** -$1.88
+- **Why:** BCH closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell BTC
+- **Price:** $81,416.09 (that day's close)
+- **Amount:** $199.02 for 0.00244444 BTC, fee $0.80
+- **Profit / loss on this coin:** -$1.78
+- **Why:** BTC closed below its 50-day average (its uptrend broke)
+
+### 2026-10-22 | Sell SUI
+- **Price:** $0.9724 (that day's close)
+- **Amount:** $198.38 for 204.015 SUI, fee $0.79
+- **Profit / loss on this coin:** -$2.41
+- **Why:** SUI closed below its 50-day average (its uptrend broke)
+
 ---
 
 ## Total
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-21:** $1,019.54
-- **Total profit / loss:** **$19.54 (+2.0%)**
-  - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $19.54
-- **Fees paid (included above):** $3.20
-- **Trades:** 4 buys, 0 sells
+- **Value on 2026-10-22:** $979.35
+- **Total profit / loss:** **-$20.65 (-2.1%)**
+  - From coins already sold: -$20.65 (0 of 4 sells made money)
+  - On coins still held: $0.00
+- **Fees paid (included above):** $6.33
+- **Trades:** 4 buys, 4 sells

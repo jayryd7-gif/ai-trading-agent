@@ -6,3 +6,6 @@ time_utc,coin,side,dollars,qty,status,order_id
 2026-10-18 17:29,AVAX,buy,10.87,,pending_new,7a4bd38f-a554-4b12-9aba-08a1632175ee
 2026-10-18 17:29,BCH,buy,10.45,,pending_new,9c58a2fd-5d46-4558-8272-c2c10f612c2e
 2026-10-18 17:29,DOT,sell,188.16,174.928730684,pending_new,1f2cb318-ca6c-4a60-847e-3c10851650e9
+2026-10-23 01:10,AVAX,sell,189.62,20.84643484,pending_new,6b8f01b6-91bd-4e4a-9374-96bf35bec005
+2026-10-23 01:10,BCH,sell,203.27,0.739570824,pending_new,60e698f1-19d8-40c0-9c6a-d0e080c4049f
+2026-10-23 01:10,BTC,sell,193.71,0.002380736,pending_new,782c4ef9-11c9-428f-a968-aab709d27e5c
