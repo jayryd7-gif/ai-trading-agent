@@ -1,6 +1,6 @@
 # 👔 CEO check
 
-*Checked 2026-10-22 18:39 New York time. Plain code, no AI.*
+*Checked 2026-10-22 21:17 New York time. Plain code, no AI.*
 
 **✅ All clear**: 8 passed, 0 warnings, 0 broken rules.
 
@@ -15,16 +15,16 @@
 
 ### Crypto bots
 
-- ✅ Rotation bot: 4 trades, buys only at weekly checks, never more than 4 coins at once.
+- ✅ Rotation bot: 8 trades, buys only at weekly checks, never more than 4 coins at once.
 - ✅ Buy-and-hold bot has never sold.
 
 ### Alpaca copy
 
-- ✅ All 7 Alpaca orders were for the bot's coins and within the limit.
+- ✅ All 10 Alpaca orders were for the bot's coins and within the limit.
 
 ### Costs
 
-- ✅ Spent $2.46 so far this month on 19 AI runs; on pace for about $3 (budget $50).
+- ✅ Spent $2.59 so far this month on 20 AI runs; on pace for about $4 (budget $50).
 
 ### Agent health
 
