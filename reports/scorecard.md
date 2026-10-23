@@ -1,24 +1,24 @@
 # Brief scorecard
 
-Updated 2026-10-22 17:54 New York time. Scored briefs: 9. Waiting to be scored: 0.
+Updated 2026-10-23 07:02 New York time. Scored briefs: 10. Waiting to be scored: 0.
 
-> **Too few directional calls to trust any of this yet.** There are 1 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
+> **Too few directional calls to trust any of this yet.** There are 2 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
 ## Directional calls (Bullish or Bearish)
 
-- Right: 0
+- Right: 1
 - Wrong: 1
 - Session ended flat (neither): 0
-- Hit rate when the session was decisive: **0%**
+- Hit rate when the session was decisive: **50%**
 
-For comparison: across all scored sessions, price went up in 50% of the decisive ones (4 of 8). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 44% of the decisive ones (4 of 9). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
 | Confidence | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
 | High | 0 | 0 | 0 | n/a |
-| Medium | 0 | 0 | 0 | n/a |
+| Medium | 1 | 0 | 0 | 100% |
 | Low | 0 | 1 | 0 | 0% |
 
 ## By instrument
@@ -26,7 +26,7 @@ For comparison: across all scored sessions, price went up in 50% of the decisive
 | Instrument | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
 | nasdaq | 0 | 1 | 0 | 0% |
-| gold | 0 | 0 | 0 | n/a |
+| gold | 1 | 0 | 0 | 100% |
 
 ## Neutral calls
 
@@ -37,6 +37,7 @@ For comparison: across all scored sessions, price went up in 50% of the decisive
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-10-22 | gold | Bearish | Medium | 2026-10-22 20:00 | Down (-0.31%) | Right |
 | 2026-10-21 | gold | Neutral | Low | 2026-10-21 20:00 | Down (-0.94%) | Moved |
 | 2026-10-21 | nasdaq | Neutral | Low | 2026-10-21 09:30 | Up (0.41%) | Moved |
 | 2026-10-20 | gold | Neutral | Low | 2026-10-20 20:00 | Up (0.24%) | Moved |
