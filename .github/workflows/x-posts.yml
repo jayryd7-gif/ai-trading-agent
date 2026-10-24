@@ -1,0 +1,67 @@
+name: X Post Drafts
+
+on:
+  schedule:
+    # Time is UTC. 11:15 UTC is about 6-7 AM New York time, after the world,
+    # crypto and stock briefs, so the morning drafts are ready before 7-8 AM.
+    - cron: "15 11 * * *"
+    # 21:10 UTC is about 4-5 PM New York time, after the stock market close.
+    - cron: "10 21 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "morning or close"
+        default: "morning"
+
+permissions:
+  contents: write
+
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # your private phone-alert topic
+      MODE: ${{ github.event.schedule == '10 21 * * *' && 'close' || inputs.mode || 'morning' }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the Anthropic tool and Yahoo Finance
+        run: pip install anthropic yfinance
+
+      - name: Write the X drafts
+        shell: bash
+        run: |
+          mkdir -p reports/x-posts
+          if [ "$MODE" = "close" ]; then
+            python agents/x_posts.py --close 2>&1 | tee reports/x-posts/last-run-log.txt
+          else
+            python agents/x_posts.py 2>&1 | tee reports/x-posts/last-run-log.txt
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Save the drafts and the run log in the repo
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "x-posts-agent"
+          git config user.email "x-posts-agent@users.noreply.github.com"
+          git add reports/x-posts reports/costs
+          git commit -m "Add X drafts ($MODE) $(date -u +%F)" || echo "Nothing to commit"
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
+
+      - name: Phone alert if this run failed
+        if: failure()
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: X Post Drafts failed" -H "Priority: high" -H "Tags: warning" \
+              -H "Click: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "The X Post Drafts run on GitHub failed. Tap to see what went wrong." "https://ntfy.sh/$NTFY_TOPIC" > /dev/null
+          fi

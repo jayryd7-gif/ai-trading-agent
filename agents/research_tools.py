@@ -21,17 +21,20 @@ def estimated_cost():
             + SPENT["searches"] * PRICE_SEARCH)
 
 
-def log_cost(agent, tokens_in=None, tokens_out=None, searches=None):
+def log_cost(agent, tokens_in=None, tokens_out=None, searches=None,
+             price_in=PRICE_IN, price_out=PRICE_OUT):
     """Add this run's cost to reports/costs/<agent>.csv (one file per agent, so
     agents running at the same time never clash). Uses this run's running
-    totals unless numbers are passed in. Returns the cost in dollars."""
+    totals unless numbers are passed in. Pass price_in and price_out (dollars
+    per token) for an agent that uses a different model. Returns the cost in
+    dollars."""
     import csv
     import os
     from datetime import datetime, timezone
     tokens_in = SPENT["in"] if tokens_in is None else tokens_in
     tokens_out = SPENT["out"] if tokens_out is None else tokens_out
     searches = SPENT["searches"] if searches is None else searches
-    cost = tokens_in * PRICE_IN + tokens_out * PRICE_OUT + searches * PRICE_SEARCH
+    cost = tokens_in * price_in + tokens_out * price_out + searches * PRICE_SEARCH
     folder = os.path.join("reports", "costs")
     os.makedirs(folder, exist_ok=True)
     path = os.path.join(folder, f"{agent}.csv")
