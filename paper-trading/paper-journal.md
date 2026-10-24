@@ -20,6 +20,7 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
   - Price never reached Target 1: the best it did was +16.75 points, and Target 1 needed 30.
   - After the stop, price turned and reached +156.75 points by 10:50. The stop (74.25 points from entry) was too tight: a stop just past the key level (29145.0) would have kept you in.
   - The entry was 24.25 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Fakeout re-entry (switched off): price closed back beyond the entry at 10:35; re-entering 3 contracts at 29225.0 (stop 29141.75) would have made $357.
   - Biggest move against you while in the trade: 87.50 points ($875 on paper). Best move for you: 16.75 points.
 
 ![Chart of this trade](charts/2026-10-23-nasdaq.svg)
@@ -42,7 +43,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 - **Result:** -$135 before fees, **-$140 after fees**
 - **What could have gone better:**
   - Price never reached Target 1: the best it did was +2.80 points, and Target 1 needed 6.
-  - After the stop, price turned and reached +8.00 points by 21:15. The stop (2.70 points from entry) was too tight: a stop just past the key level (4036.0) would have kept you in.
+  - After the stop, price turned and reached +33.50 points by 22:00. The stop (2.70 points from entry) was too tight: a stop just past the key level (4036.0) would have kept you in.
+  - Fakeout re-entry (switched off): price closed back beyond the entry at 21:00; re-entering 3 contracts at 4034.1 (stop 4045.5) would have made $357.
   - Biggest move against you while in the trade: 9.80 points ($490 on paper). Best move for you: 2.80 points.
 
 ![Chart of this trade](charts/2026-10-22-gold.svg)
@@ -66,7 +68,7 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 - **Exit:** last contract out at **10:45**, average 29293.0
 - **Result:** $660 before fees, **$655 after fees**
 - **What could have gone better:**
-  - Price kept going 15.50 points past Target 3 (by 10:50). Letting the last 2 contract(s) run with a trailing stop could have made up to $62 more.
+  - Price kept going 236.00 points past Target 3 (by 15:45). Letting the last 2 contract(s) run with a trailing stop could have made up to $944 more.
   - Biggest move against you while in the trade: 12.00 points ($120 on paper). Best move for you: 109.00 points.
 
 ![Chart of this trade](charts/2026-10-22-nasdaq.svg)
@@ -90,7 +92,7 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 - **Exit:** last contract out at **21:30**, average 4128.8
 - **Result:** $420 before fees, **$415 after fees**
 - **What could have gone better:**
-  - Moving the stop to Target 1 after Target 2 locked in the profit; price never reached Target 3 afterwards.
+  - The last contracts were stopped at Target 1, then price reached Target 3 by 01:45. A looser stop after Target 2 would have caught it.
   - Biggest move against you while in the trade: 0.80 points ($40 on paper). Best move for you: 13.50 points.
 
 ![Chart of this trade](charts/2026-10-21-gold.svg)

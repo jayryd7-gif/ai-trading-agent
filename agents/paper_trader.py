@@ -73,7 +73,8 @@ ACCOUNT = "tradeify"
 FIELDS = ["trading_day", "instrument", "session_start", "signal", "direction",
           "entry_time", "entry", "stop", "exit_time", "average_exit", "contracts",
           "gross", "fees", "net", "events", "sell_plan", "key_high", "key_low",
-          "fills", "best_move", "worst_move", "lessons", "chart", "size_mode"]
+          "fills", "best_move", "worst_move", "lessons", "chart", "size_mode",
+          "worst_dollars", "reentry"]
 CHART_FOLDER = os.path.join(FOLDER, "charts")
 OPEN_TRADES = os.path.join(FOLDER, "open-trades.json")
 
@@ -110,6 +111,7 @@ def account_from(rows):
         if ACCOUNT == "tradeify":
             risk = (abs(float(r["entry"]) - float(r["stop"])) * int(r["contracts"])
                     * INSTRUMENTS[r["instrument"]]["point_value"])
+            risk = max(risk, float(r.get("worst_dollars") or 0))   # a re-entry can add to it
             account.record(float(r["net"]), start, worst=risk)
         else:
             account.record(float(r["net"]), start)
@@ -216,7 +218,7 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
             facts = review(result, session)
             chart = os.path.join(CHART_FOLDER, f"{key[1][:10]}-{instrument}.svg")
             draw(result, everything, chart)
-            fees = round(result["contracts"] * COMMISSION_PER_CONTRACT, 2)
+            fees = round(rules.contracts_traded(result) * COMMISSION_PER_CONTRACT, 2)
             row.update({
                 "signal": "yes", "direction": result["direction"],
                 "entry_time": f"{result['entry_time']:%H:%M}", "entry": result["entry"],
@@ -231,6 +233,8 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
                 "lessons": " | ".join(facts["lessons"]),
                 "chart": chart,
                 "size_mode": size,
+                "worst_dollars": result["worst_dollars"],
+                "reentry": json.dumps(result["reentry"]) if result.get("reentry") else "",
             })
         rows.append(row)
     return rows

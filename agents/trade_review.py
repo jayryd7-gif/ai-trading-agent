@@ -115,6 +115,16 @@ def review(result, session):
         if ended:
             lessons.append("Part of the trade was closed at the session end, before "
                            "Target 3. A smaller final target would have paid sooner.")
+    shadow = result.get("reentry_shadow")
+    if shadow:
+        lessons.append(
+            f"Fakeout re-entry (switched off): price closed back beyond the entry at "
+            f"{shadow['time']}; re-entering {shadow['contracts']} contracts at {shadow['entry']} "
+            f"(stop {shadow['stop']}) would have made {money(shadow['profit'] - shadow['contracts'])}.")
+    if result.get("reentry"):
+        r = result["reentry"]
+        lessons.append(f"Fakeout re-entry at {r['time']}: {r['contracts']} contracts at "
+                       f"{r['entry']} (stop {r['stop']}) made {money(r['profit'])}.")
     lessons.append(f"Biggest move against you while in the trade: {mae:.2f} points "
                    f"({money(mae * pv * result['contracts'])} on paper). Best move for you: "
                    f"{mfe:.2f} points.")

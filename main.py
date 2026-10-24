@@ -101,6 +101,18 @@ REDUCED_PLAN = [1, 1, 1]
 # share of its normal length. This skips holiday half-days (like Labor Day).
 FULL_SESSION_SHARE = 0.75
 GOLD_SELL_PLAN = [1, 2, 2]   # stand-in for the agent's choice (1 to 3 each)
+
+# Fakeout re-entry: after a trade is stopped out at its ORIGINAL stop, the
+# first later candle in the session that closes back beyond the original entry
+# (above it for a long, below for a short) re-enters the same direction, once,
+# at the smaller REENTRY_PLAN, with the stop at the far end of that candle.
+# It is skipped if its stop could lose more than the day's limits allow.
+# Off: on the 60 days to Oct 23, 2026 the re-entries lost money (21 of them,
+# 5 winners, -$946; stricter versions did no better). With it off, the
+# journal still shows what each re-entry would have done ("reentry_shadow").
+REENTRY = False
+REENTRY_PLAN = [1, 1, 1]
+REENTRY_UNTIL_MINUTES = None   # minutes after the open to stop looking (None: session end)
 # ------------------------------------------
 
 NEW_YORK = ZoneInfo("America/New_York")
@@ -153,9 +165,90 @@ def _fmt(moment):
     return moment.strftime("%H:%M")
 
 
-def play_session(instrument, config, start, session, key_high, key_low, size_plan=None):
-    """Look for a breakout in this session and play the trade out.
+def _run_trade(trade, session, index):
+    """Manage an open trade over session[index + 1:], then close what is left
+    at the session end. Returns (events, exits, fills, exit_time, last_index)."""
+    events, exits, fills = [], [], []
+    exit_time, last_index = session[index][0], index
+    for later_index in range(index + 1, len(session)):
+        later_moment, later = session[later_index]
+        actions, trade = manage_trade(trade, later.high, later.low)
+        for a in actions:
+            if a["action"] == "sell_partial":
+                events.append((later_moment,
+                    f"sold {a['contracts']} at Target {a['target']} "
+                    f"({a['price']}, ${a['profit']})"))
+                exits.append((a["price"], a["contracts"]))
+                fills.append(_fill(later_moment, f"Target {a['target']}", a))
+            elif a["action"] == "move_stop":
+                events.append((later_moment,
+                    f"moved stop to {a['reason']} ({a['new_stop']})"))
+            elif a["action"] == "exit_target":
+                events.append((later_moment,
+                    f"sold the last {a['contracts']} at Target "
+                    f"{a['target']} ({a['price']}, ${a['profit']})"))
+                exits.append((a["price"], a["contracts"]))
+                fills.append(_fill(later_moment, f"Target {a['target']}", a))
+            elif a["action"] == "exit_stop":
+                events.append((later_moment,
+                    f"stop hit, sold {a['contracts']} at {a['price']} "
+                    f"(${a['profit']})"))
+                exits.append((a["price"], a["contracts"]))
+                fills.append(_fill(later_moment, "Stop", a))
+        exit_time, last_index = later_moment, later_index
+        if trade["contracts"] == 0:
+            break
 
+    # Still open when the session ended: close at the last close
+    if trade["contracts"] > 0:
+        last_moment, last = session[-1]
+        points = (last.close - trade["entry"]) if trade["direction"] == "long" \
+            else (trade["entry"] - last.close)
+        profit = round(points * trade["point_value"] * trade["contracts"], 2)
+        events.append((last_moment,
+            f"session ended, sold {trade['contracts']} at {last.close} (${profit})"))
+        exits.append((last.close, trade["contracts"]))
+        fills.append({"time": f"{last_moment:%H:%M}", "what": "Session end",
+                      "contracts": trade["contracts"], "price": round(last.close, 2),
+                      "profit": profit})
+        trade["banked"] = round(trade["banked"] + profit, 2)
+        trade["contracts"] = 0
+        exit_time, last_index = last_moment, len(session) - 1
+    return events, exits, fills, exit_time, last_index, trade
+
+
+def _reentry(instrument, direction, entry, session, after, max_loss):
+    """After a fakeout stop-out: the first later candle that closes back beyond
+    the original entry, in the original direction, re-enters at REENTRY_PLAN
+    with its stop at the far end of that candle. None if there is none, or if
+    its stop could lose more than max_loss."""
+    for index in range(after + 1, len(session)):
+        moment, candle = session[index]
+        if REENTRY_UNTIL_MINUTES is not None and \
+                moment - session[0][0] >= timedelta(minutes=REENTRY_UNTIL_MINUTES):
+            return None
+        beyond = candle.close > entry if direction == "long" else candle.close < entry
+        if not beyond:
+            continue
+        price = round(candle.close, 2)
+        stop = round(candle.low if direction == "long" else candle.high, 2)
+        if abs(price - stop) <= 0:
+            continue
+        trade = new_trade(instrument, direction, price, stop)
+        trade["sell_plan"], trade["contracts"] = list(REENTRY_PLAN), sum(REENTRY_PLAN)
+        risk = abs(price - stop) * trade["point_value"] * trade["contracts"]
+        if max_loss is not None and risk >= max_loss:
+            return None
+        return index, trade, round(risk, 2)
+    return None
+
+
+def play_session(instrument, config, start, session, key_high, key_low, size_plan=None,
+                 max_loss=None):
+    """Look for a breakout in this session and play the trade out, with one
+    re-entry after a fakeout stop-out (REENTRY).
+
+    max_loss: the most the session may lose in total (for the re-entry check).
     Returns a result dictionary, or None if no trade was taken.
     """
     window = timedelta(minutes=ENTRY_WINDOW_MINUTES)
@@ -188,63 +281,55 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
             trade["sell_plan"], trade["contracts"] = list(size_plan), sum(size_plan)
         point_value = trade["point_value"]
         contracts = trade["contracts"]
+        sell_plan = trade["sell_plan"]
         risk_dollars = round(abs(entry - stop) * point_value * contracts, 2)
-        final_target = target_price(trade, len(trade["sell_plan"]))
+        final_target = target_price(trade, len(sell_plan))
 
-        events = []        # (time, text)
-        exits = []         # (price, contracts) for the average exit price
-        fills = []         # one per sale, for the journal
-        exit_time = moment
+        events, exits, fills, exit_time, last_index, trade = _run_trade(trade, session, index)
+        profit = trade["banked"]
+        worst = risk_dollars
 
-        for later_moment, later in session[index + 1:]:
-            actions, trade = manage_trade(trade, later.high, later.low)
-            for a in actions:
-                if a["action"] == "sell_partial":
-                    events.append((later_moment,
-                        f"sold {a['contracts']} at Target {a['target']} "
-                        f"({a['price']}, ${a['profit']})"))
-                    exits.append((a["price"], a["contracts"]))
-                    fills.append(_fill(later_moment, f"Target {a['target']}", a))
-                elif a["action"] == "move_stop":
-                    events.append((later_moment,
-                        f"moved stop to {a['reason']} ({a['new_stop']})"))
-                elif a["action"] == "exit_target":
-                    events.append((later_moment,
-                        f"sold the last {a['contracts']} at Target "
-                        f"{a['target']} ({a['price']}, ${a['profit']})"))
-                    exits.append((a["price"], a["contracts"]))
-                    fills.append(_fill(later_moment, f"Target {a['target']}", a))
-                elif a["action"] == "exit_stop":
-                    events.append((later_moment,
-                        f"stop hit, sold {a['contracts']} at {a['price']} "
-                        f"(${a['profit']})"))
-                    exits.append((a["price"], a["contracts"]))
-                    fills.append(_fill(later_moment, "Stop", a))
-            exit_time = later_moment
-            if trade["contracts"] == 0:
-                break
+        # A fakeout: stopped out at the ORIGINAL stop (the stop never moved up).
+        # If price then closes back beyond the original entry, go again, smaller.
+        reentry = shadow = None
+        faked_out = bool(fills) and fills[-1]["what"] == "Stop" and fills[-1]["price"] == stop
+        if faked_out and not REENTRY:
+            found = _reentry(instrument, direction, entry, session, last_index, None)
+            if found:
+                r_index, r_trade, r_risk = found
+                r_stop = r_trade["stop_loss"]
+                *_, r_trade = _run_trade(r_trade, session, r_index)
+                shadow = {"time": f"{session[r_index][0]:%H:%M}", "entry": r_trade["entry"],
+                          "stop": r_stop, "contracts": sum(REENTRY_PLAN),
+                          "profit": r_trade["banked"]}
+        if faked_out and REENTRY:
+            room = None if max_loss is None else max_loss + profit
+            found = _reentry(instrument, direction, entry, session, last_index, room)
+            if found:
+                r_index, r_trade, r_risk = found
+                r_moment = session[r_index][0]
+                events.append((r_moment,
+                    f"fakeout: price closed back beyond the entry, re-entered "
+                    f"{direction} {r_trade['contracts']} at {r_trade['entry']}, "
+                    f"stop {r_trade['stop_loss']}"))
+                fills.append({"time": f"{r_moment:%H:%M}", "what": "Re-entry",
+                              "contracts": r_trade["contracts"], "price": r_trade["entry"],
+                              "profit": 0.0})
+                r_stop = r_trade["stop_loss"]
+                r_events, r_exits, r_fills, exit_time, _, r_trade = \
+                    _run_trade(r_trade, session, r_index)
+                events += r_events
+                exits += r_exits
+                fills += r_fills
+                profit = round(profit + r_trade["banked"], 2)
+                worst = max(worst, -trade["banked"] + r_risk)
+                reentry = {"time": f"{r_moment:%H:%M}", "entry": r_trade["entry"],
+                           "stop": r_stop, "contracts": sum(REENTRY_PLAN),
+                           "sell_plan": list(REENTRY_PLAN), "profit": r_trade["banked"],
+                           "risk_dollars": r_risk}
 
-        # Still open when the session ended: close at the last close
-        if trade["contracts"] > 0:
-            last_moment, last = session[-1]
-            if direction == "long":
-                points = last.close - entry
-            else:
-                points = entry - last.close
-            profit = round(points * point_value * trade["contracts"], 2)
-            events.append((last_moment,
-                f"session ended, sold {trade['contracts']} at {last.close} "
-                f"(${profit})"))
-            exits.append((last.close, trade["contracts"]))
-            fills.append({"time": f"{last_moment:%H:%M}", "what": "Session end",
-                          "contracts": trade["contracts"], "price": round(last.close, 2),
-                          "profit": profit})
-            trade["banked"] = round(trade["banked"] + profit, 2)
-            trade["contracts"] = 0
-            exit_time = last_moment
-
-        total_contracts = sum(c for _, c in exits)
-        average_exit = round(sum(p * c for p, c in exits) / total_contracts, 2)
+        sold = sum(c for _, c in exits)
+        average_exit = round(sum(p * c for p, c in exits) / sold, 2)
 
         return {
             "instrument": instrument,
@@ -257,13 +342,16 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
             "final_target": final_target,
             "exit_time": exit_time,
             "average_exit": average_exit,
-            "profit": trade["banked"],
+            "profit": profit,
             "events": events,
             "fills": fills,
             "entry_index": index,
-            "sell_plan": trade["sell_plan"],
+            "sell_plan": sell_plan,
             "contracts": contracts,
             "risk_dollars": risk_dollars,
+            "worst_dollars": round(worst, 2),
+            "reentry": reentry,
+            "reentry_shadow": shadow,
             "key_high": key_high,
             "key_low": key_low,
         }
@@ -434,8 +522,8 @@ def run_account(candles_by_instrument, account=None):
             continue
         result["session"], result["start"] = session, start
         if hasattr(account, "attempts"):     # a prop firm account: open loss matters
-            account.record(result["profit"] - result["contracts"], start,
-                           worst=result["risk_dollars"])
+            account.record(result["profit"] - contracts_traded(result), start,
+                           worst=result["worst_dollars"])
         else:
             account.record(result["profit"], start)
         results.append(result)
@@ -449,16 +537,23 @@ def play_with_limits(instrument, start, session, key_high, key_low, account, mod
     config = SESSIONS[instrument]
     limit = account.allowance()
     if mode == "normal":
-        result = play_session(instrument, config, start, session, key_high, key_low)
+        result = play_session(instrument, config, start, session, key_high, key_low,
+                              max_loss=limit)
         if result is None or not too_risky(result, limit):
             return result, "normal"
     result = play_session(instrument, config, start, session, key_high, key_low,
-                          size_plan=REDUCED_PLAN)
+                          size_plan=REDUCED_PLAN, max_loss=limit)
     if result is None:
         return None, "reduced"
     if too_risky(result, limit):
         return result, "skipped"
     return result, "reduced"
+
+
+def contracts_traded(result):
+    """Every contract bought or sold short in the session, re-entry included
+    (fees are charged per contract)."""
+    return result["contracts"] + (result["reentry"]["contracts"] if result.get("reentry") else 0)
 
 
 def too_risky(result, room):

@@ -62,6 +62,7 @@ alertStyle = input.string("Readable", "Alert messages", options = ["Readable", "
 maxDD      = input.float(2000, "Trailing drawdown ($) below the highest end-of-day balance (Tradeify Growth 50K: 2000)", minval = 0)
 dailyLimit = input.float(1250, "Daily loss limit ($): no more trades that trading day (Tradeify Growth 50K: 1250)", minval = 0)
 riskBuffer = input.float(100, "Spare room ($) kept for slippage when checking a trade's risk", minval = 0)
+reEnter    = input.bool(false, "Re-enter after a fakeout: once per session, 1 contract per target, when a candle closes back beyond the original entry after a stop-out")
 resetBelow = input.float(400, "Start a new evaluation when the account is this close to its floor ($)", minval = 0)
 // ------------------------------------------
 
@@ -157,6 +158,12 @@ cushion   = closedBalance - (peakEOD - maxDD)
 allowance = math.min(cushion, dailyLimit + dayPnl) - riskBuffer
 dayOver   = dayPnl <= -dailyLimit
 var int tradeQ3 = 0          // contracts for Target 3 in the open trade
+var bool  reArmed  = false   // stopped out at the original stop: watch for a re-entry
+var bool  reDone   = false
+var string curId  = "Long"   // the open position's entry id
+var string curT3  = "T3"     // and its Target 3 exit
+var float firstEntry = na
+var float firstStop  = na
 
 inWindow = inSess and (time - sessStart) < windowMin * 60000
 haveLevels = not na(prevHigh)
@@ -221,6 +228,10 @@ if inSess and haveLevels and not traded and not dayOver and strategy.position_si
                 entryPx := close
                 entryLvl := close
                 stopLvl  := stopPx
+                firstEntry := close
+                firstStop  := stopPx
+                curId      := pending == 1 ? "Long" : "Short"
+                curT3      := "T3"
                 t1Lvl    := close + pending * spacing
                 t2Lvl    := close + pending * 2 * spacing
                 t3Lvl    := close + pending * 3 * spacing
@@ -242,16 +253,56 @@ if inSess and haveLevels and not traded and not dayOver and strategy.position_si
                     entryPx := close
                     entryLvl := close
                     stopLvl  := stopPx
+                    firstEntry := close
+                    firstStop  := stopPx
+                    curId      := breakout == 1 ? "Long" : "Short"
+                    curT3      := "T3"
                     t1Lvl    := close + breakout * spacing
                     t2Lvl    := close + breakout * 2 * spacing
                     t3Lvl    := close + breakout * 3 * spacing
                     tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
 
+// ---- Fakeout re-entry (setting): a stop-out at the ORIGINAL stop arms it ----
+if newSess
+    reArmed := false
+    reDone  := false
+if reEnter and not reDone and strategy.closedtrades > nz(strategy.closedtrades[1]) and strategy.position_size == 0 and not stopMoved and traded
+    lastExit = strategy.closedtrades.exit_price(strategy.closedtrades - 1)
+    if math.abs(lastExit - firstStop) <= syminfo.mintick * 2
+        reArmed := true
+if reArmed and inSess and not dayOver and strategy.position_size == 0
+    back = dir == 1 ? close > firstEntry : close < firstEntry
+    if back
+        rStop = dir == 1 ? low : high
+        rRisk = math.abs(close - rStop) * syminfo.pointvalue * 3
+        if rRisk > 0 and rRisk < allowance
+            rid = dir == 1 ? "Re-entry Long" : "Re-entry Short"
+            rt1 = close + dir * spacing
+            rt2 = close + dir * 2 * spacing
+            rt3 = close + dir * 3 * spacing
+            strategy.entry(rid, dir == 1 ? strategy.long : strategy.short, qty = 3,
+                 alert_message = readable ? syminfo.ticker + " paper: fakeout RE-ENTRY " + (dir == 1 ? "BUY 3" : "SELL SHORT 3") + " at " + px(close) + ", stop " + px(rStop) : '{"action":"' + (dir == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":3,"stop":' + str.tostring(rStop) + '}')
+            strategy.exit("RT1", rid, qty = 1, limit = rt1, stop = rStop, alert_profit = winMsg("Target 1", 1, rt1), alert_loss = stopMsg("RT1", 1, rStop))
+            strategy.exit("RT2", rid, qty = 1, limit = rt2, stop = rStop, alert_profit = winMsg("Target 2", 1, rt2), alert_loss = stopMsg("RT2", 1, rStop))
+            strategy.exit("RT3", rid, qty = 1, limit = rt3, stop = rStop, alert_profit = winMsg("Target 3", 1, rt3), alert_loss = stopMsg("RT3", 1, rStop))
+            entryPx  := close
+            entryLvl := close
+            stopLvl  := rStop
+            t1Lvl    := rt1
+            t2Lvl    := rt2
+            t3Lvl    := rt3
+            tradeQ3  := 1
+            stopMoved := false
+            curId    := rid
+            curT3    := "RT3"
+        reArmed := false
+        reDone  := true
+
 // ---- Manage the open trade: after Target 2, move the stop to Target 1 ----
 if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= tradeQ3
     t1 = entryPx + dir * spacing
     t3 = entryPx + dir * 3 * spacing
-    strategy.exit("T3", dir == 1 ? "Long" : "Short", qty = tradeQ3, limit = t3, stop = t1,
+    strategy.exit(curT3, curId, qty = tradeQ3, limit = t3, stop = t1,
          alert_profit = winMsg("Target 3", tradeQ3, t3), alert_loss = stopMsg("T3", tradeQ3, t1))
     stopLvl   := t1
     stopMoved := true

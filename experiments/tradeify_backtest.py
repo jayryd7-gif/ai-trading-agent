@@ -68,7 +68,7 @@ def follow(data, cap):
     days = {}
     for r in results:
         d = R.trading_day(r["start"]).isoformat()
-        days[d] = days.get(d, 0) + r["profit"] - r["contracts"]
+        days[d] = days.get(d, 0) + r["profit"] - R.contracts_traded(r)
     print(f"\n=== Bot following Tradeify's limits, daily profit cap {cap}: {len(results)} trades, "
           f"net ${sum(days.values()):,.0f}, small-size trades "
           f"{sum(r['contracts'] == 3 for r in results)}")
@@ -83,8 +83,11 @@ def follow(data, cap):
 
 if __name__ == "__main__":
     data = {k: load_from_yahoo(SYMBOLS[k], "5m", "60d") for k in R.SESSIONS}
-    for cap in (None, 600):
-        follow(data, cap)
+    for reentry in (False, True):
+        R.REENTRY = reentry
+        print(f"\n##### Fakeout re-entry {'ON' if reentry else 'OFF'}")
+        follow(data, 600)
+    R.REENTRY = True
     if "all" not in sys.argv:
         sys.exit()
     report("Bot as it runs now ($4,000 max drawdown, daily loss limit, risk check)",
