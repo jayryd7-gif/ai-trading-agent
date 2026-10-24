@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-24 06:19 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-24 06:48 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -18,10 +18,10 @@ Last updated 2026-10-24 06:19 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 22 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 35 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 19 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 20 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -257,37 +257,34 @@ Nothing found.
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-23</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-24</b></summary>
 
 #### Top things today
 
-1. **Majors are flat.** Bitcoin is $81,614 (-0.4% over 24h, -0.7% over 7d). Ethereum is $2,396.56 (-2.4% over 7d). Solana is $104.04 (-2.4% over 7d). Why it matters: the big coins are quiet, so the moves are in smaller coins. (Live data)
-2. **Sentiment is neutral.** The Fear and Greed Index is 50. Why it matters: the market shows no strong fear or greed right now. (Live data)
-3. **Memecoins are leading.** PEPE is up 10.5% on $464M volume, and its 7d gain is 19.9%. BONK is up 4.9%. Why it matters: meme coins are drawing money while the majors stall. (Live data)
-4. **Akedo (AKE) is the top large-cap gainer.** It is up 18.7% on $40.3M volume, with a $766M market cap. I found no news to explain it. Why it matters: a pump with no known cause is higher risk. (Live data)
-5. **Trending small coins are moving hard.** IRYS is up 110.9%, DACITY up 94.5%, and UHI up 64.3%. Why it matters: these are sharp moves in low-ranked, thinly traded coins. (CoinGecko trending)
+1. Bitcoin is at $80,607, down 1.2% in 24h and 1.3% in 7d. Ethereum is at $2,369, down 1.1%. Solana is at $101.68, down 2.3% (live data). Why it matters: the large caps are drifting lower, not crashing.
+2. The Fear and Greed Index reads 51 (Neutral). Why it matters: sentiment is balanced, with no extreme to point to.
+3. Irys (IRYS) is up 50.6% in 24h and 432% in 7d. Its 24h volume of $978.6M is about eight times its $120.8M market cap (live data). Why it matters: that is a very hot, crowded move, and I found no news to explain it.
+4. Orderly (ORDER) is up 210% and Moonbirds (BIRB) is up 76% in 24h (CoinGecko trending). Why it matters: small and mid-cap alts are where the sharp moves are today.
+5. Many majors are down 3–10% on the day: Aerodrome (AERO) –9.9%, Litecoin (LTC) –4.8%, Uniswap (UNI) –4.3%, Hyperliquid (HYPE) –3.1% (CoinGecko trending). Why it matters: the weakness extends beyond BTC.
 
-My web search tool failed with a usage-limit error. I did not get any news, whale, regulation or event data, so the sections below say "Nothing found" where I have no source.
+Note: my web search tool failed with a usage-limit error, so I have no news for today. The sections below that need news say "Nothing found."
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Irys (IRYS), rank 313 | +110.9% | Cause not found. It is trending on CoinGecko. | A pump with no news found. The move is very large. |
-| Dacity Coin (DACITY), rank 960 | +94.5% | Cause not found. | Tiny market cap, rank 960, and no news found. |
-| Universal High Income (UHI), rank 603 | +64.3% | Cause not found. | Small market cap and no news found. |
-| Akedo (AKE) | +18.7% | Cause not found. | A pump with no news found. Wallet concentration not checked. |
-| edgeX (EDGE) | +12.6% | Cause not found. Its 7d gain is +10.3%. | Market cap is $120M and volume is $5.8M. No news found. |
-| Railgun (RAIL) | +6.7% | Cause not found. | Volume is only $449.6K against a $150.5M market cap. Its 7d change is -2.1%. |
+| Irys (IRYS) | +50.6% (7d +432%) | No news found | Up more than 5x in a week. Volume is about 8x market cap. Pump with no news. |
+| Orderly (ORDER) | +210% | No news found | Rank 515. Pump with no news. Move is huge and sudden. |
+| Moonbirds (BIRB) | +76.2% | No news found | Rank 546. Small cap. Pump with no news. |
+| MemeCore (M) | +21.9% (7d +35.4%) | No news found | 24h volume is only $2.0M on a $2.5B market cap. Very thin trading. |
+| Binance Super CZ (BSC) | +36.2% | No news found | Rank 822. Name looks like a meme or imitation. Tiny cap. Pump with no news. |
+| Dacity Coin (DACITY) | +17.7% | No news found | Rank 867. Tiny cap. Pump with no news. |
 
-Other notes from the live data:
-- PEPE is up 10.5%, which looks like part of a broad memecoin move.
-- HASH has $3.3K of 24h volume against a $411M market cap. That is a very large gap, so its price may not be reliable.
-- BR is up 46.3% over 7d.
+I have not checked holder concentration for any of these.
 
 #### Whale watch
 
-No whale moves found. (Search unavailable, so this was not checked.)
+No whale moves found.
 
 #### Government and regulation
 
@@ -301,7 +298,7 @@ Nothing found.
 
 No scheduled events found.
 
-[Read the full brief with all the details](reports/crypto/2026-10-23-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-24-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
