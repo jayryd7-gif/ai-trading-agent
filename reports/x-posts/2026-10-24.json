@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-24",
+  "written": "2026-10-24 18:20",
+  "skipped": [
+    "World, politics and the presidency: the Sat Oct 24 brief came back empty (its search failed), so this topic is left out."
+  ],
+  "used": [
+    "Stocks: reports/stocks/2026-10-23-stock-brief.md (Fri Oct 23, NOT today; its news search failed, so it has live data but little or no news)",
+    "Crypto: reports/crypto/2026-10-24-crypto-brief.md (Sat Oct 24, today; its news search failed, so it has live data but little or no news)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-23-nasdaq-brief.md (Fri Oct 23, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-10-22-gold-brief.md (Thu Oct 22, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Economy",
+      "post": "1/ Morning Money Brief, Oct 24: September CPI, cited Thursday, rose 3.7% y/y, above the 3.6% estimate. That feeds Fed rate choices that set savings yields and mortgage costs. Fed decides Wed Oct 28. If it signals more hikes, borrowing may stay pricier."
+    },
+    {
+      "section": "Stocks",
+      "post": "2/ Friday's data: AI and chip stocks fell hard. META -7.0%, AMD -8.1%, CRWV -10.1%. No cause confirmed. Why it matters: index funds and 401(k)s often hold these names. Watch GOOGL and MSFT earnings Oct 28. Weak results could keep tech volatile."
+    },
+    {
+      "section": "Crypto",
+      "post": "3/ Bitcoin is near $80,607, down 1.2% in 24h. Ethereum sits at $2,369. Why it matters: big coins are drifting, but small tokens like Irys (+50.6%) moved with no news found. If volume fades, those spikes can reverse fast. Not financial advice."
+    }
+  ],
+  "midday": {
+    "story": "Friday's AI and chip stock selloff",
+    "post": "Why this matters for your wallet: On Friday, AI and chip stocks fell sharply. META dropped 7.0%, AMD 8.1% and CRWV 10.1%. Many index funds and 401(k)s hold these names. Watch GOOGL and MSFT earnings on Oct 28. Results could steady the group or extend the drop."
+  },
+  "video": {
+    "script": "Your money moved this week, and most people missed why. Here's your Morning Money Brief for Saturday, October 24. First, inflation: September CPI rose 3.7 percent from a year earlier, above the 3.6 percent estimate. That feeds the Fed's rate decision on Wednesday, which affects savings yields and mortgage costs. Second, stocks: on Friday, AI and chip names sold off hard. Meta fell 7 percent, AMD 8.1 percent, and CoreWeave 10.1 percent. No cause was confirmed. If big tech earnings on October 28 disappoint, watch for more swings in index funds and 401(k)s. Third, crypto: Bitcoin sits near $80,607, down 1.2 percent in a day, while small coins spike with no clear news. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Morning Money Brief, Oct 24",
+      "CPI 3.7% y/y, above 3.6% estimate",
+      "Fed decides Wed Oct 28",
+      "AI stocks fell Friday: META -7.0%",
+      "Bitcoin ~$80,607, down 1.2%",
+      "Not financial advice"
+    ]
+  },
+  "wrap": {
+    "numbers": "Bitcoin: 80,356.60 (-0.9%)\nEther: 2,338.90 (-1.9%)\nSolana: 101.34 (-1.4%)\nStock markets: closed for the weekend",
+    "posts": [
+      "Weekend crypto check, Oct 24: Bitcoin $80,357 (-0.9%), Ether $2,339 (-1.9%), Solana $101.34 (-1.4%). Why it matters: steady small losses, no panic, so crypto savings are drifting, not crashing. Next: stocks reopen Monday and the Fed decides Wed Oct 28. Not financial advice."
+    ],
+    "reply": "Data: Yahoo Finance closing prices (may be delayed); change vs the previous daily close.\nNot financial advice. News and analysis only.",
+    "written": "2026-10-24 18:02"
+  }
+}

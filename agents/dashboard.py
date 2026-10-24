@@ -342,7 +342,8 @@ def build_dashboard(now):
            f"Last updated {now:%Y-%m-%d %H:%M} New York time. "
            "Everything here is written by software and AI agents. "
            "It can be wrong, so check anything you plan to act on.", "",
-           "**[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**", ""]
+           "**[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · "
+           "**[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**", ""]
 
     # ---- Reminders ----
     reminders = open_reminders()

@@ -24,7 +24,10 @@ The close run pulls free closing prices from Yahoo Finance (no key needed)
 and writes the wrap into the same day's file. On weekends stock markets are
 closed, so the wrap covers crypto only.
 
-The drafts are saved in reports/x-posts/YYYY-MM-DD.md. Nothing is posted:
+The drafts are saved in reports/x-posts/YYYY-MM-DD.md (plus a .json copy
+of the same drafts), and X-DASHBOARD.md is rebuilt after every run: what the
+posts talk about today, which topics were covered or skipped each day, and
+which briefs worked. Nothing is posted:
 X's API charges per post, and we are in $0 mode. Each run is ONE small call to
 the cheapest model with no web search (well under a cent).
 
@@ -53,6 +56,8 @@ MAX_TOKENS = 6000
 BUDGET = 0.05             # warn in the log if a run costs more than this (dollars)
 POST_LIMIT = 280          # X's limit for a free account
 X_FOLDER = os.path.join("reports", "x-posts")
+X_DASHBOARD = "X-DASHBOARD.md"
+DASHBOARD_DAYS = 14       # days of history on the dashboard
 
 # (label, folder, file suffix, oldest brief to use in days). Stock and futures
 # briefs don't run every day, so an older one is allowed, labelled with its date.
@@ -84,14 +89,17 @@ STYLE_RULES = """Rules for every post:
   Never add news, prices or events from memory. If the material says a fact is
   unconfirmed, say so or leave it out.
 - If a brief is older than today, say when ("Friday's data") rather than
-  presenting it as today's news.
+  presenting it as today's news. Briefs written before the 9:30 AM open
+  describe the PREVIOUS trading day's moves: a stock brief written Friday
+  morning shows Thursday's moves, so call them Thursday's.
 - No buy, sell or hold calls, no price targets, and do not repeat the futures
   briefs' trading bias, lean or key levels. Those are for our own trading.
 - Politics: report what happened and what was said. Do not take sides, insult
   anyone, or speculate about motives.
 - No links in posts (links go in the suggested reply). At most one emoji and at
   most one hashtag per post. Plain, punchy language; short sentences.
-- Keep every post under 260 characters, counting spaces."""
+- Keep every post under 260 characters, counting spaces. Keep every
+  suggested reply under 200 characters (a disclaimer line is added to it)."""
 
 MORNING_PROMPT = """You write the "Morning Money Brief" for an X (Twitter) account
 that explains what happened in the world, politics, the economy, stocks and
@@ -368,6 +376,153 @@ def closing_numbers(now):
     return "\n".join(lines)
 
 
+# ---------------- the dashboard ----------------
+
+TOPICS = [("🌍 World & politics", r"world|politic|president|white house|trump|congress|war|"
+                                 r"tariff|trade|countr|china|russia|europe|canada"),
+          ("💵 Economy", r"econom|inflation|cpi|fed|rate|jobs|gdp|pce"),
+          ("📈 Stocks", r"stock|nasdaq|s&p|earnings|equit"),
+          ("🪙 Crypto", r"crypto|bitcoin|btc|ether|solana")]
+
+
+def record_path(day):
+    return os.path.join(X_FOLDER, f"{day:%Y-%m-%d}.json")
+
+
+def load_record(day):
+    try:
+        with open(record_path(day)) as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def save_record(day, record):
+    os.makedirs(X_FOLDER, exist_ok=True)
+    with open(record_path(day), "w") as f:
+        json.dump(record, f, indent=2, ensure_ascii=False)
+
+
+def topic_of(section):
+    for name, pattern in TOPICS:
+        if re.search(pattern, section, re.I):
+            return name
+    return section
+
+
+def short(text, n=110):
+    text = re.sub(r"^\d+/\s*", "", " ".join(text.split()))
+    return text if len(text) <= n else text[:n - 1].rsplit(" ", 1)[0] + "…"
+
+
+def month_cost(now):
+    path = os.path.join("reports", "costs", "x-posts.csv")
+    try:
+        with open(path) as f:
+            rows = [l.split(",") for l in f.read().splitlines()[1:]]
+        rows = [r for r in rows if r[0].startswith(f"{now:%Y-%m}")]
+        return sum(float(r[-1]) for r in rows), len(rows)
+    except (OSError, ValueError, IndexError):
+        return 0.0, 0
+
+
+def brief_health(today, days=7):
+    """Table rows: how each source brief looked on each of the last `days` days."""
+    icons = {"ok": "✅", "no-news": "🟡", "failed": "❌"}
+    rows = []
+    for label, folder, suffix, _ in SOURCES:
+        cells = []
+        for back in range(days - 1, -1, -1):
+            day = today - timedelta(days=back)
+            path = os.path.join(folder, f"{day:%Y-%m-%d}-{suffix}.md")
+            if os.path.exists(path):
+                with open(path) as f:
+                    cells.append(icons[brief_status(f.read())])
+            else:
+                cells.append("·")
+        rows.append(f"| {label} | " + " | ".join(cells) + " |")
+    head = " | ".join(f"{today - timedelta(days=b):%a %d}" for b in range(days - 1, -1, -1))
+    return [f"| Brief | {head} |", "|---|" + "---|" * days] + rows
+
+
+def build_dashboard(now):
+    today = now.date()
+    records = [r for r in (load_record(today - timedelta(days=b)) for b in range(DASHBOARD_DAYS)) if r]
+    cost, runs = month_cost(now)
+    out = ["# 𝕏 X Brief Dashboard", "",
+           f"*Updated {now:%Y-%m-%d %H:%M} New York time by the X drafts agent "
+           "(agents/x_posts.py). Drafts only: nothing is posted automatically. "
+           f"News and analysis, {DISCLAIMER.lower()}*", "",
+           "[← Main dashboard](DASHBOARD.md)", ""]
+
+    latest = records[0] if records else {}
+    out += ["## Today", ""]
+    if latest.get("date") != f"{today:%Y-%m-%d}":
+        out += ["No drafts for today yet. The morning run is about 7 AM New York time.", ""]
+    else:
+        wrap = latest.get("wrap")
+        out += [f"- **Morning drafts:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
+                f"→ [open today's drafts](reports/x-posts/{latest['date']}.md)",
+                f"- **After-close wrap:** {'✅ ready' if wrap else '⏳ after the close (about 5 PM New York time)'}",
+                f"- **Claude cost this month:** ${cost:.3f} ({runs} run(s) this month)", ""]
+        if latest.get("skipped"):
+            out += ["**Left out today (the brief failed or is missing, so nothing was made up):**"]
+            out += [f"- {s}" for s in latest["skipped"]] + [""]
+
+        out += ["## What it's talking about today", "",
+                "| When | Post | Topic | What it says |", "|---|---|---|---|"]
+        for i, item in enumerate(latest.get("thread", []), 1):
+            out.append(f"| 7-8 AM | Thread {i} | {topic_of(item['section'])} | {short(item['post'])} |")
+        if latest.get("midday"):
+            out.append(f"| 12-1 PM | Midday take | {latest['midday']['story']} | "
+                       f"{short(latest['midday']['post'])} |")
+        for i, post in enumerate((wrap or {}).get("posts", []), 1):
+            out.append(f"| After close | Wrap {i} | Closing numbers | {short(post)} |")
+        if latest.get("video"):
+            out.append(f"| Any time | Video | Morning Money Brief | "
+                       f"{short(latest['video']['script'])} |")
+        out.append("")
+        if latest.get("close_watch"):
+            out += ["**Coming up:** " + latest["close_watch"], ""]
+        if wrap:
+            out += ["**Closing numbers:**", "```text", wrap["numbers"], "```", ""]
+
+    out += [f"## Topics covered, last {DASHBOARD_DAYS} days", "",
+            "✅ covered · ⏭️ left out (its brief failed or was missing) · — no drafts that day", "",
+            "| Date | " + " | ".join(n for n, _ in TOPICS) + " | Wrap | Biggest story |",
+            "|---|" + "---|" * (len(TOPICS) + 2)]
+    for back in range(DASHBOARD_DAYS):
+        day = today - timedelta(days=back)
+        r = load_record(day)
+        if not r:
+            if back < 7:
+                out.append(f"| {day:%a %b %d} | " + " | ".join("—" for _ in TOPICS) + " | — | |")
+            continue
+        covered = {topic_of(t["section"]) for t in r.get("thread", [])}
+        cells = ["✅" if name in covered else "⏭️" for name, _ in TOPICS]
+        link = f"[{day:%a %b %d}](reports/x-posts/{day:%Y-%m-%d}.md)"
+        out.append(f"| {link} | " + " | ".join(cells) + f" | {'✅' if r.get('wrap') else '—'} | "
+                   f"{(r.get('midday') or {}).get('story', '')} |")
+    out.append("")
+
+    out += ["## Are the source briefs working? (last 7 days)", "",
+            "The X posts can only talk about what these briefs found. "
+            "✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day "
+            "(the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)", ""]
+    out += brief_health(today) + [""]
+
+    out += ["## How to post", "",
+            "1. Open today's drafts (link above). Each post is in its own box, with its length.",
+            "2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. "
+            "Put the suggested reply (sources) under it.",
+            "3. Midday take at 12-1 PM, the after-close wrap at 4:30-5:30 PM.",
+            "4. Fix anything marked ⚠️ first, and spot-check a number or two against the brief.", ""]
+
+    with open(X_DASHBOARD, "w") as f:
+        f.write("\n".join(out))
+    print(f"Wrote {X_DASHBOARD}")
+
+
 # ---------------- runs ----------------
 
 def finish(path, tokens_in, tokens_out, title):
@@ -409,7 +564,12 @@ def morning(now, drafts_file=None):
                           lambda _: old.group(0), text, flags=re.S)
     with open(path, "w") as f:
         f.write(text)
+    record = load_record(now.date())
+    record.update({"date": f"{now:%Y-%m-%d}", "written": f"{now:%Y-%m-%d %H:%M}",
+                   "skipped": skipped, "used": used, **drafts})
+    save_record(now.date(), record)
     finish(path, tokens_in, tokens_out, "X morning drafts ready")
+    build_dashboard(now)
     return path
 
 
@@ -436,7 +596,12 @@ def close(now, drafts_file=None):
                 f"{DISCLAIMER}*\n\n## 3. After-close stocks + crypto wrap\n\n{wrap}\n")
     with open(path, "w") as f:
         f.write(text)
+    record = load_record(now.date())
+    record.update({"date": f"{now:%Y-%m-%d}",
+                   "wrap": {"numbers": numbers, "written": f"{now:%Y-%m-%d %H:%M}", **drafts}})
+    save_record(now.date(), record)
     finish(path, tokens_in, tokens_out, "X close wrap ready")
+    build_dashboard(now)
     return path
 
 
@@ -445,11 +610,15 @@ def main():
     parser.add_argument("--close", action="store_true", help="write the after-close wrap")
     parser.add_argument("--drafts", help="use drafts from this JSON file instead of the AI")
     parser.add_argument("--date", help="pretend today is this date (YYYY-MM-DD)")
+    parser.add_argument("--dashboard", action="store_true", help="only rebuild X-DASHBOARD.md")
     args = parser.parse_args()
     now = datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
     if args.date:
         now = datetime.combine(date.fromisoformat(args.date), now.time())
-    (close if args.close else morning)(now, args.drafts)
+    if args.dashboard:
+        build_dashboard(now)
+    else:
+        (close if args.close else morning)(now, args.drafts)
 
 
 if __name__ == "__main__":
