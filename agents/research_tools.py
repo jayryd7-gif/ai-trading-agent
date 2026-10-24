@@ -12,6 +12,11 @@ MODEL = "claude-sonnet-5-5"
 PRICE_IN, PRICE_OUT = 2.00 / 1e6, 10.00 / 1e6    # per token, Claude Sonnet 5.5
 PRICE_SEARCH = 10.00 / 1000                       # per web search
 
+# The basic web search. The newer "web_search_20260209" (dynamic filtering) kept
+# failing with a usage-limit error after about one search (world, crypto and stock
+# briefs, Oct 17-24), while the market briefs on this basic version never did.
+SEARCH_TOOL = "web_search_20250305"
+
 SPENT = {"in": 0, "out": 0, "searches": 0}        # running total for this run
 
 
@@ -57,13 +62,14 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
     extra = {"output_config": {"effort": effort}} if effort else {}
     if use_search:
         extra["tools"] = [{
-            "type": "web_search_20260209",
+            "type": SEARCH_TOOL,
             "name": "web_search",
             "max_uses": max_searches,
         }]
 
     tokens_in = tokens_out = 0
     response = None
+    errors = []
     for _ in range(5):   # a long search session can pause; keep going
         response = client.messages.create(
             model=model, max_tokens=max_tokens, messages=messages, **extra)
@@ -71,9 +77,12 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
         tokens_out += response.usage.output_tokens
         tool_use = getattr(response.usage, "server_tool_use", None)
         SPENT["searches"] += getattr(tool_use, "web_search_requests", 0) or 0
+        errors += search_errors(response)
         if response.stop_reason != "pause_turn":
             break
         messages.append({"role": "assistant", "content": response.content})
+    if errors:   # shows in the run log, so a failed search is easy to diagnose
+        print(f"Web search errors: {', '.join(errors)}")
 
     SPENT["in"] += tokens_in
     SPENT["out"] += tokens_out
@@ -81,6 +90,16 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
     if response.stop_reason == "refusal":
         text = text or "(The AI declined to write this part.)"
     return text, tokens_in, tokens_out, response.stop_reason == "max_tokens"
+
+
+def search_errors(response):
+    """Error codes from failed web searches in a response. A failed search does
+    not raise: its result block holds an error object instead of a list."""
+    codes = []
+    for block in response.content:
+        if block.type == "web_search_tool_result" and not isinstance(block.content, list):
+            codes.append(getattr(block.content, "error_code", "unknown"))
+    return codes
 
 
 def research_parts(client, parts, values, max_searches, max_tokens):

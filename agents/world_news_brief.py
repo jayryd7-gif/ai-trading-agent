@@ -107,6 +107,13 @@ political or economic news in the last day.
 """ + SHARED_RULES
 
 
+def is_empty(text):
+    """True when the search failed and the top section says "Nothing found"."""
+    import re
+    top = re.search(r"## Top things[^\n]*\n+\s*(.*)", text)
+    return bool(top and top.group(1).lower().startswith("nothing found"))
+
+
 def build_briefing(client, now):
     """One research call. Returns (markdown_body, total_in, total_out)."""
     prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
@@ -116,9 +123,17 @@ def build_briefing(client, now):
         prompt += ("\n\nIt is the weekend: markets are closed. Focus on what happened "
                    "since Friday's close that could matter when markets reopen, and keep "
                    "the whole briefing under 700 words.")
-    text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
-                                                max_searches=WEEKEND_SEARCHES if weekend else SEARCHES,
-                                                max_tokens=MAX_TOKENS, effort=EFFORT)
+    tokens_in = tokens_out = 0
+    for attempt in range(2):   # politics must not be missing: one retry if it comes back empty
+        text, t_in, t_out, cut = run_call(client, prompt, use_search=True,
+                                          max_searches=WEEKEND_SEARCHES if weekend else SEARCHES,
+                                          max_tokens=MAX_TOKENS, effort=EFFORT)
+        tokens_in += t_in
+        tokens_out += t_out
+        if text and not is_empty(text):
+            break
+        print(f"Attempt {attempt + 1}: the briefing came back empty" +
+              (", trying once more." if attempt == 0 else "."))
     if not text:
         raise SystemExit("The research call returned no text, so nothing was saved.")
     if cut:
@@ -142,6 +157,11 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    if is_empty(body):
+        send("World brief came back EMPTY", "The news search failed twice, so today's world "
+             "and politics news is missing. The X drafts agent will search on its own.",
+             priority="high", tags="warning",
+             link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
     import re
     first = re.search(r"^1\.\s*(.+)$", body, re.M)
     risk = re.search(r"Event risk today.{0,60}?\b(Low|Medium|High)\b", body, re.S)

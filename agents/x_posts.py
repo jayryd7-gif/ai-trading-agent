@@ -16,9 +16,11 @@ The morning run reads the latest briefs the other agents wrote:
   - reports/stocks/  stock brief (stock_research.py)
   - reports/crypto/  crypto brief (crypto_research.py)
   - reports/         Nasdaq and gold futures briefs (market_brief.py)
-If a brief is missing, too old, or came back empty (for example its news
-search hit a usage limit), that topic is SKIPPED and the file says so. The AI
-is never asked to fill a gap from memory.
+World news, politics and the presidency must never be missing: if the
+world brief is empty or missing, this agent runs its own small news search
+(WORLD_SEARCHES searches) for that topic. Any other brief that is missing, too
+old, or came back empty is SKIPPED and the file says so. The AI is never asked
+to fill a gap from memory.
 
 The close run pulls free closing prices from Yahoo Finance (no key needed)
 and writes the wrap into the same day's file. On weekends stock markets are
@@ -29,7 +31,8 @@ of the same drafts), and X-DASHBOARD.md is rebuilt after every run: what the
 posts talk about today, which topics were covered or skipped each day, and
 which briefs worked. Nothing is posted:
 X's API charges per post, and we are in $0 mode. Each run is ONE small call to
-the cheapest model with no web search (well under a cent).
+the cheapest model with no web search (well under a cent), plus the backup
+news search (about 5 cents) on days the world brief is empty.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 For a test without an API key, pass drafts you wrote yourself:
@@ -45,7 +48,7 @@ import unicodedata
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from research_tools import log_cost
+from research_tools import SPENT, log_cost, run_call
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -55,6 +58,10 @@ EFFORT = "low"            # little thinking needed to rewrite facts we already h
 MAX_TOKENS = 6000
 BUDGET = 0.05             # warn in the log if a run costs more than this (dollars)
 POST_LIMIT = 280          # X's limit for a free account
+WORLD_TOPIC = "World, politics and the presidency"
+WORLD_SEARCHES = 4        # backup news search when the world brief is empty ($0.01 each)
+BACKUP_MODEL = "claude-sonnet-5-5"            # used only if the search fails on MODEL
+BACKUP_PRICES = (2.00 / 1e6, 10.00 / 1e6)     # Claude Sonnet 5.5, dollars per token
 X_FOLDER = os.path.join("reports", "x-posts")
 X_DASHBOARD = "X-DASHBOARD.md"
 DASHBOARD_DAYS = 14       # days of history on the dashboard
@@ -62,7 +69,7 @@ DASHBOARD_DAYS = 14       # days of history on the dashboard
 # (label, folder, file suffix, oldest brief to use in days). Stock and futures
 # briefs don't run every day, so an older one is allowed, labelled with its date.
 SOURCES = [
-    ("World, politics and the presidency", os.path.join("reports", "news"), "world-brief", 0),
+    (WORLD_TOPIC, os.path.join("reports", "news"), "world-brief", 0),
     ("Stocks", os.path.join("reports", "stocks"), "stock-brief", 3),
     ("Crypto", os.path.join("reports", "crypto"), "crypto-brief", 0),
     ("Nasdaq futures (macro backdrop)", "reports", "nasdaq-brief", 3),
@@ -109,7 +116,8 @@ crypto, and why it matters for ordinary people's money. Today is {weekday}
 Write:
 1. thread: a 3-5 post thread, one post per topic that has material below, in
    this order: world/politics/presidency/other countries, economy, stocks,
-   crypto. Start post 1 with "Morning Money Brief, {short_date}:" and number
+   crypto. The world/politics/presidency post is required whenever the
+   material has anything on it. Start post 1 with "Morning Money Brief, {short_date}:" and number
    the posts "1/", "2/" and so on at the start. The last post must end with
    "{disclaimer}" Use "section" to name the topic of each post.
 2. midday: ONE stand-alone take on the single biggest story in the material,
@@ -238,6 +246,46 @@ def gather(today):
     return "\n\n".join(parts), skipped, used, list(dict.fromkeys(urls))
 
 
+# ---------------- backup world news search ----------------
+
+WORLD_PROMPT = """Today is {weekday} {date}. Search the web for the most important
+news from the last 24 hours on:
+- President Trump and the White House: what he said and did, orders, his schedule today
+- US politics and policy: Congress, the courts, the Fed and Treasury
+- World affairs: wars, trade and tariffs, and other countries' leaders and economies
+Search efficiently: one search can cover several topics.
+
+Write 4-6 items, most important first. For each: what happened in one or two
+sentences with names, numbers and dates, then the source in brackets, like
+(Reuters). Then a line "Scheduled today:" with any confirmed events and times
+(New York time). Use only what you found; never add anything from memory. If
+you found nothing, write only "Nothing found." Report what happened without
+taking sides. Start directly with the first item."""
+
+
+def world_search(now):
+    """Our own small news search for the world topic, used when the world brief
+    is empty. Returns the text, or None if nothing was found."""
+    import anthropic
+    client = anthropic.Anthropic()
+    prompt = WORLD_PROMPT.format(weekday=now.strftime("%A"), date=f"{now:%Y-%m-%d}")
+    for model, (price_in, price_out) in [(MODEL, (PRICE_IN, PRICE_OUT)), (BACKUP_MODEL, BACKUP_PRICES)]:
+        before = SPENT["searches"]
+        try:
+            text, t_in, t_out, _ = run_call(client, prompt, use_search=True,
+                                            max_searches=WORLD_SEARCHES, max_tokens=4000,
+                                            model=model)
+        except anthropic.BadRequestError as error:
+            print(f"Backup news search on {model} failed: {error}")
+            continue
+        searches = SPENT["searches"] - before
+        cost = log_cost("x-posts", t_in, t_out, searches, price_in, price_out)
+        print(f"Backup news search on {model}: {searches} searches, ${cost:.4f}")
+        if text and not text.lower().startswith("nothing found"):
+            return text
+    return None
+
+
 # ---------------- the AI call ----------------
 
 def ask(prompt, schema):
@@ -304,6 +352,10 @@ def render_morning(now, drafts, skipped, used, urls):
 
     out.append("## Sources used\n")
     out += [f"- {u}" for u in used] or ["- None."]
+    if any(s.startswith(WORLD_TOPIC) for s in skipped):
+        out.append("\n🚨 **No world, politics or presidency news today: the world brief AND the "
+                   "backup search both failed. Check the news yourself and write that post "
+                   "by hand.**")
     if skipped:
         out.append("\n**Skipped (no invented news):**")
         out += [f"- {s}" for s in skipped]
@@ -538,10 +590,24 @@ def finish(path, tokens_in, tokens_out, title):
 
 def morning(now, drafts_file=None):
     material, skipped, used, urls = gather(now.date())
+    tokens_in = tokens_out = 0
+    world_missing = any(s.startswith(WORLD_TOPIC) for s in skipped)
+    if world_missing and not drafts_file:
+        news = world_search(now)
+        if news:
+            skipped = [s for s in skipped if not s.startswith(WORLD_TOPIC)]
+            used.insert(0, f"{WORLD_TOPIC}: the world brief was empty, so the X agent "
+                           f"searched the news itself ({now:%a %b %d}, today)")
+            material = (f"===== {WORLD_TOPIC} - searched {now:%A %Y-%m-%d} (today) =====\n"
+                        f"{news}\n\n{material}")
+            world_missing = False
     if not material:
         raise SystemExit("No usable brief for today, so no drafts were written. "
                          + " ".join(skipped))
-    tokens_in = tokens_out = 0
+    if world_missing:
+        send("X drafts: NO politics news today", "The world brief and the backup search both "
+             "came back empty. Check the news yourself before posting.", priority="high",
+             tags="warning")
     if drafts_file:
         with open(drafts_file) as f:
             drafts = json.load(f)
