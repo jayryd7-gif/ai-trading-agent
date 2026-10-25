@@ -1,6 +1,6 @@
 # 🪙 Crypto Dashboard
 
-*Updated 2026-10-24 01:12 UTC with prices up to the close on 2026-10-23. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
+*Updated 2026-10-25 01:02 UTC with prices up to the close on 2026-10-24. **No real money is used.** Trades happen at daily closing prices (00:00 UTC), after a 0.4% fee. This is research, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -9,13 +9,13 @@
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
 | **Rotation bot** | $1,000 | **$979.35** | -$20.65 (-2.1%) | 4% | 8 | cash |
-| **Buy-and-hold bot** | $1,000 | **$990.68** | -$9.32 (-0.9%) | 4% | 3 | BTC, SOL, ETH |
+| **Buy-and-hold bot** | $1,000 | **$983.97** | -$16.03 (-1.6%) | 4% | 3 | BTC, SOL, ETH |
 
 ![Paper accounts' value](crypto/charts/paper-value.svg)
 
 ### 🦙 Alpaca paper account (the rotation bot, copied)
 
-Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-24 01:12 UTC.
+Copies the paper rotation bot's holdings into a real Alpaca **paper** account (play money), so you can watch it in the Alpaca app. Updated 2026-10-25 01:02 UTC.
 
 **Orders sent today:** none needed.
 
@@ -48,7 +48,7 @@ All cash: nothing is held right now.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-23:** $979.35
+- **Value on 2026-10-24:** $979.35
 - **Total profit / loss:** **-$20.65 (-2.1%)**
   - From coins already sold: -$20.65 (0 of 4 sells made money)
   - On coins still held: $0.00
@@ -65,9 +65,9 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $330.77 | $333.33 | -$2.56 (-0.8%) | 33% |
-| SOL | $330.01 | $333.33 | -$3.32 (-1.0%) | 33% |
-| ETH | $329.90 | $333.33 | -$3.44 (-1.0%) | 33% |
+| BTC | $329.54 | $333.33 | -$3.79 (-1.1%) | 33% |
+| SOL | $328.50 | $333.33 | -$4.83 (-1.4%) | 33% |
+| ETH | $325.92 | $333.33 | -$7.41 (-2.2%) | 33% |
 | Cash | $0.00 | | | 0% |
 
 **Latest trades**
@@ -81,10 +81,10 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-23:** $990.68
-- **Total profit / loss:** **-$9.32 (-0.9%)**
+- **Value on 2026-10-24:** $983.97
+- **Total profit / loss:** **-$16.03 (-1.6%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: -$9.32
+  - On coins still held: -$16.03
 - **Fees paid (included above):** $4.00
 - **Trades:** 3 buys, 0 sells
 
@@ -97,7 +97,7 @@ What the rules would have done with $1,000 each on real past prices. It keeps ru
 | Bot | Started with | Value now | Total profit / loss | Worst fall | Trades | Holding now |
 |---|---|---|---|---|---|---|
 | **Rotation bot** | $1,000 | **$3,210.29** | $2,210.29 (+221.0%) | 49% | 390 | cash |
-| **Buy-and-hold bot** | $1,000 | **$3,209.48** | $2,209.48 (+220.9%) | 64% | 3 | BTC, SOL, ETH |
+| **Buy-and-hold bot** | $1,000 | **$3,191.41** | $2,191.41 (+219.1%) | 64% | 3 | BTC, SOL, ETH |
 
 ![Value of each bot](crypto/charts/value.svg)
 
@@ -529,7 +529,7 @@ All cash: nothing is held right now.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-23:** $3,210.29
+- **Value on 2026-10-24:** $3,210.29
 - **Total profit / loss:** **$2,210.29 (+221.0%)**
   - From coins already sold: $2,210.29 (73 of 195 sells made money)
   - On coins still held: $0.00
@@ -546,9 +546,9 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 
 | Coin | Value now | Paid | Profit / loss | Share of the bot |
 |---|---|---|---|---|
-| BTC | $1,409.48 | $333.33 | $1,076.15 (+322.8%) | 44% |
-| SOL | $1,183.17 | $333.33 | $849.83 (+255.0%) | 37% |
-| ETH | $616.83 | $333.33 | $283.50 (+85.0%) | 19% |
+| BTC | $1,404.25 | $333.33 | $1,070.92 (+321.3%) | 44% |
+| SOL | $1,177.76 | $333.33 | $844.43 (+253.3%) | 37% |
+| ETH | $609.40 | $333.33 | $276.06 (+82.8%) | 19% |
 | Cash | $0.00 | | | 0% |
 
 **Latest trades**
@@ -562,10 +562,10 @@ Bought equal thirds of BTC, ETH and SOL on day one and never sells.
 **Total**
 
 - **Started with:** $1,000.00
-- **Value on 2026-10-23:** $3,209.48
-- **Total profit / loss:** **$2,209.48 (+220.9%)**
+- **Value on 2026-10-24:** $3,191.41
+- **Total profit / loss:** **$2,191.41 (+219.1%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $2,209.48
+  - On coins still held: $2,191.41
 - **Fees paid (included above):** $4.00
 - **Trades:** 3 buys, 0 sells
 
@@ -577,7 +577,7 @@ Each bot's value at the end of each month.
 
 | Month end | Rotation bot | Buy-and-hold bot |
 |---|---|---|
-| 2026-10 | $3,210 | $3,209 |
+| 2026-10 | $3,210 | $3,191 |
 | 2026-09 | $3,978 | $3,504 |
 | 2026-08 | $3,087 | $3,187 |
 | 2026-07 | $2,942 | $2,411 |
