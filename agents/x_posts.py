@@ -60,6 +60,8 @@ EFFORT = "low"            # little thinking needed to rewrite facts we already h
 MAX_TOKENS = 6000
 BUDGET = 0.05             # warn in the log if a run costs more than this (dollars)
 POST_LIMIT = 280          # X's limit for a free account
+BRAND = "Cash Flow Brief"             # the X account's name
+HANDLE = "@cashflowbrief00"           # the X account's handle
 WORLD_TOPIC = "World, politics and the presidency"
 WORLD_SEARCHES = 4        # backup news search when the world brief is empty ($0.01 each)
 BACKUP_MODEL = "claude-sonnet-5-5"            # used only if the search fails on MODEL
@@ -110,7 +112,7 @@ STYLE_RULES = """Rules for every post:
 - Keep every post under 260 characters, counting spaces. Keep every
   suggested reply under 200 characters (a disclaimer line is added to it)."""
 
-MORNING_PROMPT = """You write the "Morning Money Brief" for an X (Twitter) account
+MORNING_PROMPT = """You write the morning "{brand}" for an X (Twitter) account
 that explains what happened in the world, politics, the economy, stocks and
 crypto, and why it matters for ordinary people's money. Today is {weekday}
 {date}.{weekend}
@@ -119,14 +121,14 @@ Write:
 1. thread: a 3-5 post thread, one post per topic that has material below, in
    this order: world/politics/presidency/other countries, economy, stocks,
    crypto. The world/politics/presidency post is required whenever the
-   material has anything on it. Start post 1 with "Morning Money Brief, {short_date}:" and number
+   material has anything on it. Start post 1 with "{brand}, {short_date}:" and number
    the posts "1/", "2/" and so on at the start. The last post must end with
    "{disclaimer}" Use "section" to name the topic of each post.
 2. midday: ONE stand-alone take on the single biggest story in the material,
    framed as "why this matters for your wallet". "story" names the story.
 3. close_watch: one line on what to watch at today's close (or, on a weekend,
    when markets reopen), using only scheduled events in the material.
-4. video: a 30-60 second vertical video script called "Morning Money Brief"
+4. video: a 30-60 second vertical video script called "{brand}"
    for X, YouTube Shorts and Instagram. 80-150 spoken words. A hook in the
    first sentence, then the top 2-3 stories using the same angle, and end with
    "{disclaimer} Follow for tomorrow's brief." Also give 3-6 short on-screen
@@ -344,7 +346,7 @@ def shorten_long(drafts):
 
 def date_values(now):
     weekend = now.weekday() >= 5
-    return {"weekday": now.strftime("%A"), "date": f"{now:%Y-%m-%d}",
+    return {"brand": BRAND, "weekday": now.strftime("%A"), "date": f"{now:%Y-%m-%d}",
             "short_date": f"{now:%b} {now.day}", "disclaimer": DISCLAIMER,
             "weekend": (" It is the weekend: stock markets are closed and crypto "
                         "trades 24/7." if weekend else "")}
@@ -400,7 +402,7 @@ def render_morning(now, drafts, skipped, used, urls):
     out.append("")
 
     thread = drafts["thread"]
-    out.append("## 1. Morning Money Brief thread (post 7-8 AM NY)\n")
+    out.append(f"## 1. {BRAND} morning thread (post 7-8 AM NY)\n")
     if not 3 <= len(thread) <= 5:
         out.append(f"⚠️ The thread has {len(thread)} posts (aim for 3-5).\n")
     if thread and DISCLAIMER.lower() not in thread[-1]["post"].lower():
@@ -420,7 +422,7 @@ def render_morning(now, drafts, skipped, used, urls):
 
     video = drafts["video"]
     words = len(video["script"].split())
-    out.append("## 4. Video script: Morning Money Brief (30-60 sec vertical)\n")
+    out.append(f"## 4. Video script: {BRAND} (30-60 sec vertical)\n")
     out.append("For X, YouTube Shorts and Instagram Reels. "
                f"{words} words, about {round(words / 2.5)} seconds at a normal pace.\n")
     out.append("Script:\n```text\n" + video["script"].strip() + "\n```\n")
@@ -539,7 +541,7 @@ def build_dashboard(now):
     today = now.date()
     records = [r for r in (load_record(today - timedelta(days=b)) for b in range(DASHBOARD_DAYS)) if r]
     cost, runs = month_cost(now)
-    out = ["# 𝕏 X Brief Dashboard", "",
+    out = [f"# 𝕏 {BRAND} Dashboard ({HANDLE})", "",
            f"*Updated {now:%Y-%m-%d %H:%M} New York time by the X drafts agent "
            "(agents/x_posts.py). Drafts only: nothing is posted automatically. "
            f"News and analysis, {DISCLAIMER.lower()}*", "",
@@ -569,7 +571,7 @@ def build_dashboard(now):
         for i, post in enumerate((wrap or {}).get("posts", []), 1):
             out.append(f"| After close | Wrap {i} | Closing numbers | {short(post)} |")
         if latest.get("video"):
-            out.append(f"| Any time | Video | Morning Money Brief | "
+            out.append(f"| Any time | Video | {BRAND} | "
                        f"{short(latest['video']['script'])} |")
         out.append("")
         if latest.get("close_watch"):
