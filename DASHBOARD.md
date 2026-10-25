@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-24 21:12 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-25 06:19 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -15,13 +15,13 @@ Last updated 2026-10-24 21:12 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 37 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 38 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 27 hours ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 18 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 36 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -223,16 +223,16 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-24, event risk Low</b></summary>
+<summary><b>🌍 World news brief, 2026-10-25, event risk Low</b></summary>
 
 #### Top things for today
-Nothing found. My search tool failed with a "usage limit exceeded" error, so I got no current news for 2026-10-24. I won't guess at events.
+Nothing found. My searches failed because the search tool hit its usage limit, so I have no verified news since Friday's close.
 
 #### Today's schedule (New York time)
-No scheduled events found. Markets are closed on Saturday, and I could not check for any weekend events.
+No scheduled events found.
 
 #### Event risk today
-Low - Markets are closed. I also could not verify any weekend developments, so check headlines before the reopen.
+Low - Markets are closed, and I found no scheduled events. This rating comes from missing data, not from a check of the news. Check for weekend headlines before the open.
 
 #### Politics and policy
 Nothing found.
@@ -252,7 +252,9 @@ Nothing found.
 - Russia: Nothing found.
 - Canada: Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-10-24-world-brief.md) · [All news briefs](reports/news/)
+I don't want to invent events or give you stale information. Please re-run this briefing once search is available again.
+
+[Read the full brief with all the details](reports/news/2026-10-25-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
