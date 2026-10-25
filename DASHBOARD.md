@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-25 15:34 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-25 18:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -8,6 +8,7 @@ Last updated 2026-10-25 15:34 New York time. Everything here is written by softw
 
 - ⏰ When your broker is connected: log every trade in trade-journal.md with a heading like `### Trade #1 | 2026-10-16` (swap the `__` in the template for the trade number) and keep the `- **Session:**` line, so the post-session reviewer can see your trades. Or ask Claude to build automatic trade logging into the paper trading agent.
 - ⏰ Before trading real money: make this repo private (GitHub → Settings → Danger Zone → Change visibility). First run `git cherry-pick 0f7e3a2` so the paper trader checks less often and stays under GitHub's 2,000 free Actions minutes a month for private repos (it is public now to keep Actions free and unlimited).
+- ⏰ 𝕏 **Turn on X auto-posting once @cashflowbrief00 gets traction:** 500+ followers, OR any post with 10,000+ views, OR 1,000+ views a day for a week (check the account's Analytics). Then tell Claude "turn on X auto-posting". It needs X API keys from developer.x.com (about $2.50-3/month for 5-6 posts a day, within the $25 AI budget) and X's "automated account" label.
 
 [Edit reminders](REMINDERS.md)
 
@@ -17,11 +18,11 @@ Last updated 2026-10-25 15:34 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 days ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 9 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 28 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 46 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 30 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -77,7 +78,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $3.30 so far this month on 27 AI runs; on pace for about $4 (budget $50).
+- ✅ Spent $3.60 so far this month on 31 AI runs; on pace for about $4 (budget $50).
 
 ##### Agent health
 
@@ -88,18 +89,32 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ## 📅 Weekly report
 
 <details>
-<summary><b>Week ending 2026-10-18</b></summary>
+<summary><b>Week ending 2026-10-25</b></summary>
 
 #### The week in one look
 
-- **Futures paper:** $0 this week
-- **Rotation bot:** -$3.20 this week
-- **Buy-and-hold bot:** -$4.00 this week
-- **AI costs:** $0.00 this week
+- **Futures paper:** +$1,357 this week
+- **Rotation bot:** -$23.91 this week
+- **Buy-and-hold bot:** -$17.66 this week
+- **AI costs:** $3.48 this week
 
 #### Futures paper trading
 
-No sessions recorded this week.
+- **This week:** +$1,357 after fees, 8 trades (5 wins, 3 losses), 2 sessions with no trade
+- **Since paper trading began:** +$1,357 over 8 trades
+- Nasdaq (MNQ): +$667 over 5 trades
+- Gold (MGC): +$690 over 3 trades
+
+| Day | Market | Side | Entry | Result |
+|---|---|---|---|---|
+| 2026-10-19 | nasdaq | long | 29841.25 at 10:15 | +$357 |
+| 2026-10-20 | gold | short | 4150.6 at 20:55 | +$415 |
+| 2026-10-20 | nasdaq | long | 29717.75 at 10:05 | +$655 |
+| 2026-10-21 | nasdaq | short | 29818.5 at 10:15 | -$252 |
+| 2026-10-22 | gold | short | 4137.2 at 20:15 | +$415 |
+| 2026-10-22 | nasdaq | short | 29359.0 at 10:25 | +$655 |
+| 2026-10-23 | gold | short | 4034.4 at 20:30 | -$140 |
+| 2026-10-23 | nasdaq | long | 29169.25 at 10:00 | -$748 |
 
 #### TradingView strategy
 
@@ -114,35 +129,43 @@ Export the List of trades from each chart and say "update TradingView" to refres
 
 | Bot | Start of week | End of week | Change | Since it started ($1,000) |
 |---|---|---|---|---|
-| Rotation bot | $1,000.00 | $996.80 | -$3.20 (-0.3%) | -$3.20 |
-| Buy-and-hold bot | $1,000.00 | $996.00 | -$4.00 (-0.4%) | -$4.00 |
+| Rotation bot | $1,003.26 | $979.35 | -$23.91 (-2.4%) | -$20.65 |
+| Buy-and-hold bot | $1,001.63 | $983.97 | -$17.66 (-1.8%) | -$16.03 |
 
 Trades this week:
 
 | Day | Bot | | Coin | Amount | Profit / loss |
 |---|---|---|---|---|---|
-| 2026-10-17 | Buy-and-hold bot | 🟢 Buy | BTC | $333.33 |  |
-| 2026-10-17 | Buy-and-hold bot | 🟢 Buy | ETH | $333.33 |  |
-| 2026-10-17 | Buy-and-hold bot | 🟢 Buy | SOL | $333.33 |  |
-| 2026-10-17 | Rotation bot | 🟢 Buy | AVAX | $200.00 |  |
-| 2026-10-17 | Rotation bot | 🟢 Buy | BCH | $200.00 |  |
-| 2026-10-17 | Rotation bot | 🟢 Buy | BTC | $200.00 |  |
-| 2026-10-17 | Rotation bot | 🟢 Buy | SUI | $200.00 |  |
+| 2026-10-22 | Rotation bot | 🔴 Sell | AVAX | $186.17 | -$14.58 |
+| 2026-10-22 | Rotation bot | 🔴 Sell | BCH | $198.91 | -$1.88 |
+| 2026-10-22 | Rotation bot | 🔴 Sell | BTC | $199.02 | -$1.78 |
+| 2026-10-22 | Rotation bot | 🔴 Sell | SUI | $198.38 | -$2.41 |
 
-**Alpaca copy:** 7 order(s) this week: buy AVAX, buy BCH, buy BTC, buy DOT, buy AVAX, buy BCH, sell DOT
+**Alpaca copy:** 3 order(s) this week: sell AVAX, sell BCH, sell BTC
 
 #### Market briefs (Nasdaq and gold)
 
-- 3 briefs scored; 0 gave a direction, 0 of those were right.
-- 3 were Neutral.
+- 7 briefs scored; 2 gave a direction, 1 of those were right.
+- 5 were Neutral.
 
 #### CEO check
 
-**❌ Rules were broken this week.** 2 checks ran. [Latest CEO check](../ceo/latest.md)
+**❌ Rules were broken this week.** 25 checks ran. [Latest CEO check](../ceo/latest.md)
 
 #### AI costs this week
 
-No AI runs logged this week.
+| Agent | Runs | Cost |
+|---|---|---|
+| world-brief | 8 | $1.01 |
+| crypto-brief | 7 | $0.81 |
+| market-brief-nasdaq | 5 | $0.62 |
+| market-brief-gold | 4 | $0.55 |
+| stock-brief | 3 | $0.46 |
+| review-gold | 1 | $0.03 |
+| x-posts | 2 | $0.01 |
+| **Total** | 30 | **$3.48** |
+
+At this pace: about $15 a month.
 
 [Main dashboard](../../DASHBOARD.md) · [Crypto dashboard](../../CRYPTO-DASHBOARD.md)
 
