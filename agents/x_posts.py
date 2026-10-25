@@ -621,6 +621,13 @@ def build_dashboard(now):
             "(the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)", ""]
     out += brief_health(today) + [""]
 
+    out += ["## 🚀 When to turn on auto-posting", "",
+            "You post by hand for now. Once the account has traction, tell Claude "
+            "**\"turn on X auto-posting\"** and the bot will post these drafts by itself:",
+            "- 500+ followers, **or**",
+            "- any post with 10,000+ views, **or**",
+            "- 1,000+ views a day for a week (check the account's Analytics).", "",
+            "It costs about $2.50-3 a month through X's API, within the $25 AI budget.", ""]
     out += ["## How to post", "",
             "1. Open today's drafts (link above). Each post is in its own box, with its length.",
             "2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. "
