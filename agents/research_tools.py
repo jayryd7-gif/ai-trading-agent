@@ -4,6 +4,13 @@ stocks). It makes one AI call, optionally with web search, and keeps going if
 a long search session pauses.
 
 This file is not an agent and does nothing on its own.
+
+It also holds the MONTHLY BUDGET for every AI agent in this repo. Before each AI
+call, check_budget() adds up this month's costs in reports/costs/*.csv:
+  - past SAVER_AT ($21): saver mode, half the web searches, and a phone alert
+  - at CAP ($25): no more AI calls until the 1st of next month, and a phone alert
+The costs are estimates from the prices below, so also set a monthly spend
+limit in the Claude Console (Settings > Limits) as a second guard.
 """
 
 MODEL = "claude-sonnet-5-5"
@@ -18,6 +25,68 @@ PRICE_SEARCH = 10.00 / 1000                       # per web search
 SEARCH_TOOL = "web_search_20250305"
 
 SPENT = {"in": 0, "out": 0, "searches": 0}        # running total for this run
+
+# ---------------- MONTHLY BUDGET (all AI agents together) ----------------
+CAP = 25.00               # hard stop: no AI calls past this in a calendar month (dollars)
+SAVER_AT = 21.00          # past this, saver mode: half the web searches
+NEXT_RUN = 0.40           # the most one run might cost; the cap keeps room for it
+COSTS_FOLDER = "reports/costs"
+WARNED_FILE = "reports/costs/budget-alerts.txt"   # which alerts went out (one per month)
+
+
+def spent_this_month():
+    """Estimated dollars spent by every agent this calendar month (UTC)."""
+    import csv
+    import glob
+    import os
+    from datetime import datetime, timezone
+    month = datetime.now(timezone.utc).strftime("%Y-%m")
+    total = 0.0
+    for path in glob.glob(os.path.join(COSTS_FOLDER, "*.csv")):
+        try:
+            with open(path) as f:
+                total += sum(float(r["cost_usd"]) for r in csv.DictReader(f)
+                             if r.get("time_utc", "").startswith(month))
+        except (OSError, ValueError, KeyError):
+            pass
+    return total
+
+
+def _alert_once(kind, title, message, priority):
+    """Send a phone alert at most once a month for each kind."""
+    import os
+    from datetime import datetime, timezone
+    from notify import send
+    key = f"{datetime.now(timezone.utc):%Y-%m} {kind}"
+    try:
+        with open(WARNED_FILE) as f:
+            if key in f.read().split("\n"):
+                return
+    except OSError:
+        pass
+    send(title, message, priority=priority, tags="money_with_wings")
+    os.makedirs(os.path.dirname(WARNED_FILE), exist_ok=True)
+    with open(WARNED_FILE, "a") as f:
+        f.write(key + "\n")
+
+
+def check_budget(agent=""):
+    """Call before any AI call. Stops the run (cleanly, no error) once this
+    month's spend is too close to CAP. Returns True in saver mode."""
+    spent = spent_this_month()
+    if spent + NEXT_RUN > CAP:
+        print(f"Monthly AI budget reached: ${spent:.2f} spent of the ${CAP:.0f} cap. "
+              f"{agent or 'This agent'} did not run. AI runs start again on the 1st.")
+        _alert_once("cap", f"AI budget cap reached (${CAP:.0f})",
+                    f"${spent:.2f} spent this month. All AI agents are paused until the 1st. "
+                    "Trading bots and dashboards keep running.", "high")
+        raise SystemExit(0)
+    if spent >= SAVER_AT:
+        _alert_once("saver", f"AI spend passed ${SAVER_AT:.0f} this month",
+                    f"${spent:.2f} spent. Saver mode is on: half the web searches. "
+                    f"Everything stops at ${CAP:.0f}.", "default")
+        return True
+    return False
 
 
 def estimated_cost():
@@ -58,6 +127,8 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
     """One AI call. Returns (text, input_tokens, output_tokens, was_cut_off).
     effort: "low", "medium" or "high" (None = the model's default). Lower
     effort means less thinking and fewer searches, so it costs less."""
+    if check_budget() and use_search:
+        max_searches = max(2, max_searches // 2)   # saver mode
     messages = [{"role": "user", "content": prompt}]
     extra = {"output_config": {"effort": effort}} if effort else {}
     if use_search:

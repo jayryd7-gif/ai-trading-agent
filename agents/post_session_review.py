@@ -29,7 +29,7 @@ import anthropic
 import main as replay                      # the replay engine (main.py)
 from key_levels import Candle
 from market_data import INSTRUMENTS
-from research_tools import log_cost
+from research_tools import check_budget, log_cost
 from scorer import (BIAS_LOG, MAX_WAIT_HOURS, group_sessions, load_ohlc,
                     read_csv, score_brief)
 
@@ -213,6 +213,7 @@ def build_review(client, instrument, start, candles, previous, brief_row,
         journal=("\n\n".join(journal) if journal
                  else "No trades were logged for this session."),
         rules=rules)
+    check_budget("The post-session review")
     response = client.messages.create(
         model=MODEL, max_tokens=MAX_TOKENS,
         messages=[{"role": "user", "content": prompt}])

@@ -48,7 +48,7 @@ import unicodedata
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from research_tools import SPENT, log_cost, run_call
+from research_tools import SPENT, check_budget, log_cost, run_call
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -291,6 +291,7 @@ def world_search(now):
 def ask(prompt, schema):
     """One small call with a fixed JSON shape. Returns (dict, tokens_in, tokens_out)."""
     import anthropic
+    check_budget("The X drafts agent")
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY on its own
     response = client.messages.create(
         model=MODEL, max_tokens=MAX_TOKENS,

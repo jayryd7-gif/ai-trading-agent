@@ -22,7 +22,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from market_data import INSTRUMENTS, get_market_facts
-from research_tools import log_cost
+from research_tools import check_budget, log_cost
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -80,10 +80,11 @@ def build_report(client, instrument, facts, today):
     config = INSTRUMENTS[instrument]
     messages = [{"role": "user", "content": PROMPT.format(
         date=today, label=config["label"], name=config["name"], facts=facts)}]
+    saver = check_budget(f"The {instrument} brief")
     tools = [{
         "type": "web_search_20250305",
         "name": "web_search",
-        "max_uses": MAX_SEARCHES,
+        "max_uses": max(2, MAX_SEARCHES // 2) if saver else MAX_SEARCHES,
     }]
 
     input_tokens = 0
