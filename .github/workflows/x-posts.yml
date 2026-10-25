@@ -1,12 +1,12 @@
 name: X Post Drafts
 
 on:
-  schedule:
-    # Time is UTC. 11:15 UTC is about 6-7 AM New York time, after the world,
-    # crypto and stock briefs, so the morning drafts are ready before 7-8 AM.
-    - cron: "15 11 * * *"
-    # 21:10 UTC is about 4-5 PM New York time, after the stock market close.
-    - cron: "10 21 * * *"
+  # Switched OFF on 2026-10-24 until the X account exists (plan: posting by
+  # itself from Monday morning). To turn it back on, put these lines back
+  # under a "schedule:" line:
+  #   - cron: "15 11 * * *"   # about 6-7 AM New York time: morning drafts
+  #   - cron: "10 21 * * *"   # about 4-5 PM New York time: after-close wrap
+  # It can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
       mode:
