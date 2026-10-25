@@ -118,12 +118,23 @@ crypto, and why it matters for ordinary people's money. Today is {weekday}
 {date}.{weekend}
 
 Write:
-1. thread: a 3-5 post thread, one post per topic that has material below, in
-   this order: world/politics/presidency/other countries, economy, stocks,
-   crypto. The world/politics/presidency post is required whenever the
-   material has anything on it. Start post 1 with "{brand}, {short_date}:" and number
-   the posts "1/", "2/" and so on at the start. The last post must end with
-   "{disclaimer}" Use "section" to name the topic of each post.
+1. thread: a 5-post thread in exactly this format (blank lines as shown).
+   Post 1, section "Intro":
+     1/ {brand}, {short_date} ☀️
+
+     <one sentence: the biggest things for your wallet today>
+
+     What happened, why it matters, and what could happen next 🧵
+   Posts 2-5, sections "Politics", "Economy", "Stocks", "Crypto", in that order
+   (Politics covers the President, the White House, Congress and other
+   countries; it is required whenever the material has anything on it):
+     2/ Politics: <what happened>
+
+     Why it matters: <the money link>
+
+     Next: <what could happen next>
+   If a topic has no material at all, leave that post out and renumber. The
+   last post must end with a blank line and "{disclaimer}"
 2. midday: ONE stand-alone take on the single biggest story in the material,
    framed as "why this matters for your wallet". "story" names the story.
 3. close_watch: one line on what to watch at today's close (or, on a weekend,
@@ -555,25 +566,32 @@ def build_dashboard(now):
         wrap = latest.get("wrap")
         out += [f"- **Morning drafts:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
                 f"→ [open today's drafts](reports/x-posts/{latest['date']}.md)",
-                f"- **After-close wrap:** {'✅ ready' if wrap else '⏳ after the close (about 5 PM New York time)'}",
+                f"- **After-close wrap:** {'✅ ready' if wrap else '⏸️ off for now (run X Post Drafts by hand with mode close)'}",
                 f"- **Claude cost this month:** ${cost:.3f} ({runs} run(s) this month)", ""]
         if latest.get("skipped"):
             out += ["**Left out today (the brief failed or is missing, so nothing was made up):**"]
             out += [f"- {s}" for s in latest["skipped"]] + [""]
 
-        out += ["## What it's talking about today", "",
-                "| When | Post | Topic | What it says |", "|---|---|---|---|"]
-        for i, item in enumerate(latest.get("thread", []), 1):
-            out.append(f"| 7-8 AM | Thread {i} | {topic_of(item['section'])} | {short(item['post'])} |")
+        thread = latest.get("thread", [])
+        out += [f"## 📋 Today's posts, ready to copy ({today:%A %b %d})", "",
+                "Each box has a copy button (top right on GitHub). Post the thread in one go: "
+                "write post 1, tap **+** for each next post, then **Post all**. Then reply "
+                f"to post {len(thread)} with the sources reply.", ""]
+        for i, item in enumerate(thread, 1):
+            name = item["section"] if item["section"] == "Intro" else topic_of(item["section"])
+            out.append(post_block(item["post"], f"Post {i} of {len(thread)} · {name}"))
+        if latest.get("reply_thread"):
+            out.append(reply_block(latest["reply_thread"]).replace(
+                "Suggested reply (post it right under the main post):",
+                f"**Reply under post {len(thread)} · sources**"))
         if latest.get("midday"):
-            out.append(f"| 12-1 PM | Midday take | {latest['midday']['story']} | "
-                       f"{short(latest['midday']['post'])} |")
+            out += [f"### Midday take (12-1 PM): {latest['midday']['story']}", "",
+                    post_block(latest["midday"]["post"])]
         for i, post in enumerate((wrap or {}).get("posts", []), 1):
-            out.append(f"| After close | Wrap {i} | Closing numbers | {short(post)} |")
+            out.append(post_block(post, f"After-close wrap {i}"))
         if latest.get("video"):
-            out.append(f"| Any time | Video | {BRAND} | "
-                       f"{short(latest['video']['script'])} |")
-        out.append("")
+            out += ["<details><summary>🎬 Video script (30-60 sec)</summary>", "",
+                    "```text", latest["video"]["script"].strip(), "```", "</details>", ""]
         if latest.get("close_watch"):
             out += ["**Coming up:** " + latest["close_watch"], ""]
         if wrap:

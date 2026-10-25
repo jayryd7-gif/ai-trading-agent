@@ -1,12 +1,14 @@
 name: X Post Drafts
 
 on:
-  # Switched OFF on 2026-10-24 until the X account exists (plan: posting by
-  # itself from Monday morning). To turn it back on, put these lines back
-  # under a "schedule:" line:
-  #   - cron: "15 11 * * *"   # about 6-7 AM New York time: morning drafts
+  schedule:
+    # Time is UTC. 11:15 UTC is about 6-7 AM New York time, after the world,
+    # crypto and stock briefs, so the drafts are on X-DASHBOARD.md before 7-8 AM.
+    - cron: "15 11 * * *"
+  # The after-close wrap is off for now (you post by hand). To turn it on, add
+  # this line under "schedule:":
   #   - cron: "10 21 * * *"   # about 4-5 PM New York time: after-close wrap
-  # It can still be run by hand from the Actions tab.
+  # Both can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
       mode:
