@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-25 06:19 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-25 06:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
 
@@ -18,10 +18,10 @@ Last updated 2026-10-25 06:19 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 18 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 36 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 19 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 37 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -259,48 +259,40 @@ I don't want to invent events or give you stale information. Please re-run this 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-24</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-25</b></summary>
 
 #### Top things today
-
-1. Bitcoin is at $80,607, down 1.2% in 24h and 1.3% in 7d. Ethereum is at $2,369, down 1.1%. Solana is at $101.68, down 2.3% (live data). Why it matters: the large caps are drifting lower, not crashing.
-2. The Fear and Greed Index reads 51 (Neutral). Why it matters: sentiment is balanced, with no extreme to point to.
-3. Irys (IRYS) is up 50.6% in 24h and 432% in 7d. Its 24h volume of $978.6M is about eight times its $120.8M market cap (live data). Why it matters: that is a very hot, crowded move, and I found no news to explain it.
-4. Orderly (ORDER) is up 210% and Moonbirds (BIRB) is up 76% in 24h (CoinGecko trending). Why it matters: small and mid-cap alts are where the sharp moves are today.
-5. Many majors are down 3–10% on the day: Aerodrome (AERO) –9.9%, Litecoin (LTC) –4.8%, Uniswap (UNI) –4.3%, Hyperliquid (HYPE) –3.1% (CoinGecko trending). Why it matters: the weakness extends beyond BTC.
-
-Note: my web search tool failed with a usage-limit error, so I have no news for today. The sections below that need news say "Nothing found."
+1. Bitcoin is near $80,248, down 0.4% in 24h and 1.7% over 7 days. Ether is down 1.9% in 24h and 3.5% over 7 days. Why it matters: majors are drifting lower, while the Fear and Greed Index sits at a neutral 54. (Live data)
+2. Cap (CAP) is the top gainer, up 34.8% in 24h and 40.2% over 7 days. Volume is $33.0M on a $145.1M market cap. Why it matters: it is the biggest move among the 250 largest coins, and I found no news to explain it. (Live data)
+3. Privacy coins are holding up. Zcash is up 2.8% and Monero is up 2.0% in 24h, both while the majors fell. Why it matters: this is relative strength against a soft market. (Live data)
+4. Quack AI (Q) is up 15.2% in 24h but down 40.1% over 7 days. Why it matters: the daily gain follows a steep weekly drop, so it may be a bounce. (Live data)
+5. Live search was unavailable today, so I have no news on regulation, whales, adoption or scheduled events. Why it matters: treat this brief as price data only.
 
 #### Coins to research
-
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Irys (IRYS) | +50.6% (7d +432%) | No news found | Up more than 5x in a week. Volume is about 8x market cap. Pump with no news. |
-| Orderly (ORDER) | +210% | No news found | Rank 515. Pump with no news. Move is huge and sudden. |
-| Moonbirds (BIRB) | +76.2% | No news found | Rank 546. Small cap. Pump with no news. |
-| MemeCore (M) | +21.9% (7d +35.4%) | No news found | 24h volume is only $2.0M on a $2.5B market cap. Very thin trading. |
-| Binance Super CZ (BSC) | +36.2% | No news found | Rank 822. Name looks like a meme or imitation. Tiny cap. Pump with no news. |
-| Dacity Coin (DACITY) | +17.7% | No news found | Rank 867. Tiny cap. Pump with no news. |
+| Cap (CAP) | +34.8% | No reason found | Small market cap ($145.1M). Pump with no news. Volume is about 23% of market cap. |
+| Quack AI (Q) | +15.2% | No reason found | Down 40.1% over 7 days. Very volatile. Cause unconfirmed. |
+| eCash (XEC) | +13.1% | No reason found | Small cap ($147.5M). Pump with no news. |
+| Useless Coin (USELESS) | +6.0% | No reason found | Meme-style coin. Up 19.5% over 7 days. Pump with no news. |
+| Provenance (HASH) | +3.8% | No reason found | 24h volume is only $2.3K. The price is not a reliable signal. |
+| Dacity Coin (DACITY) | +23.5% | No reason found (trending list) | Rank 776, so a tiny market cap. Likely thin liquidity. Pump with no news. |
 
-I have not checked holder concentration for any of these.
+Pearl (PEARL) is trending and down 11.6% in 24h. I did not find the cause.
 
 #### Whale watch
-
 No whale moves found.
 
 #### Government and regulation
-
 Nothing found.
 
 #### Who is buying and adopting
-
 Nothing found.
 
 #### Next 7 days
-
 No scheduled events found.
 
-[Read the full brief with all the details](reports/crypto/2026-10-24-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-25-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
