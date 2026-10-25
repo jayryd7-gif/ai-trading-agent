@@ -18,7 +18,8 @@ The morning run reads the latest briefs the other agents wrote:
   - reports/         Nasdaq and gold futures briefs (market_brief.py)
 World news, politics and the presidency must never be missing: if the
 world brief is empty or missing, this agent runs its own small news search
-(WORLD_SEARCHES searches) for that topic. Any other brief that is missing, too
+(WORLD_SEARCHES searches) for that topic, and if that fails too it uses free
+Google News headlines (news_feed.py). Any other brief that is missing, too
 old, or came back empty is SKIPPED and the file says so. The AI is never asked
 to fill a gap from memory.
 
@@ -49,6 +50,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from research_tools import SPENT, check_budget, log_cost, run_call
+from news_feed import headlines_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -303,6 +305,41 @@ def ask(prompt, schema):
         raise SystemExit("The drafts were cut off by the length limit, so nothing was saved.")
     text = next(b.text for b in response.content if b.type == "text")
     return json.loads(text), response.usage.input_tokens, response.usage.output_tokens
+
+
+SHORTEN_PROMPT = """Each X post below is too long. Rewrite each one to at most
+{limit} characters, counting spaces. Keep the same facts, numbers and names, and
+the same angle: what happened -> why it matters for your money -> what could
+happen next. Keep any "1/"-style number at the start and any "Not financial
+advice." at the end. Cut filler words first. Return the posts in the same order.
+
+{posts}"""
+
+SHORT_SCHEMA = {"type": "object",
+                "properties": {"posts": {"type": "array", "items": {"type": "string"}}},
+                "required": ["posts"], "additionalProperties": False}
+REPLY_KEYS = ("reply_thread", "reply_midday", "reply")   # a disclaimer line is added to these
+
+
+def shorten_long(drafts):
+    """One extra small call that shortens every post over the limit (the model
+    often runs a little long). Returns (tokens_in, tokens_out)."""
+    slots = [(item, "post") for item in drafts.get("thread", [])]
+    if drafts.get("midday"):
+        slots.append((drafts["midday"], "post"))
+    slots += [(drafts, key) for key in REPLY_KEYS if key in drafts]
+    slots += [(drafts["posts"], i) for i in range(len(drafts.get("posts", [])))]
+    limit = lambda key: 225 if key in REPLY_KEYS else 270
+    long = [(box, key) for box, key in slots if x_length(box[key]) > limit(key)]
+    if not long:
+        return 0, 0
+    text = "\n\n".join(f"POST {n}:\n{box[key]}" for n, (box, key) in enumerate(long, 1))
+    answer, t_in, t_out = ask(SHORTEN_PROMPT.format(limit=250, posts=text), SHORT_SCHEMA)
+    for (box, key), new in zip(long, answer.get("posts", [])):
+        if x_length(new) < x_length(box[key]):
+            box[key] = new.strip()
+    print(f"Shortened {len(long)} post(s) that were over the limit.")
+    return t_in, t_out
 
 
 def date_values(now):
@@ -602,6 +639,16 @@ def morning(now, drafts_file=None):
             material = (f"===== {WORLD_TOPIC} - searched {now:%A %Y-%m-%d} (today) =====\n"
                         f"{news}\n\n{material}")
             world_missing = False
+    if world_missing and not drafts_file:
+        headlines = headlines_text()
+        if headlines:
+            skipped = [s for s in skipped if not s.startswith(WORLD_TOPIC)]
+            used.insert(0, f"{WORLD_TOPIC}: the world brief and the backup search were empty, "
+                           "so this uses Google News HEADLINES only (check each story before posting)")
+            material = (f"===== {WORLD_TOPIC} - Google News headlines, {now:%A %Y-%m-%d} "
+                        "(HEADLINES ONLY: state only what a headline says, credit the outlet, "
+                        f"add no details) =====\n{headlines}\n\n{material}")
+            world_missing = False
     if not material:
         raise SystemExit("No usable brief for today, so no drafts were written. "
                          + " ".join(skipped))
@@ -619,6 +666,8 @@ def morning(now, drafts_file=None):
         prompt = MORNING_PROMPT.format(**date_values(now), skipped=skipped_text,
                                        material=material)
         drafts, tokens_in, tokens_out = ask(prompt, MORNING_SCHEMA)
+        t_in, t_out = shorten_long(drafts)
+        tokens_in, tokens_out = tokens_in + t_in, tokens_out + t_out
 
     os.makedirs(X_FOLDER, exist_ok=True)
     path = os.path.join(X_FOLDER, f"{now:%Y-%m-%d}.md")
@@ -652,6 +701,8 @@ def close(now, drafts_file=None):
         prompt = CLOSE_PROMPT.format(**date_values(now), numbers=numbers,
                                      morning=morning_text[:6000])
         drafts, tokens_in, tokens_out = ask(prompt, CLOSE_SCHEMA)
+        t_in, t_out = shorten_long(drafts)
+        tokens_in, tokens_out = tokens_in + t_in, tokens_out + t_out
 
     wrap = render_wrap(now, drafts, numbers)
     os.makedirs(X_FOLDER, exist_ok=True)

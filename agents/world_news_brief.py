@@ -19,6 +19,10 @@ Stocks and crypto have their own agents (stock_research.py and
 crypto_research.py), so this brief leaves them out and has more room for
 everything else.
 
+Free Google News headlines (news_feed.py) go into the prompt as leads, so the
+brief is never empty even if the web search fails: it can then report what the
+headlines say, credited to each outlet.
+
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
 It makes ONE AI call with at most SEARCHES web searches, to keep each run
 cheap (the log shows the estimated cost). It runs every day; weekend runs
@@ -34,6 +38,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
+from news_feed import headlines_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -119,6 +124,13 @@ def build_briefing(client, now):
     prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
                            countries=", ".join(COUNTRIES))
     weekend = now.weekday() >= 5
+    headlines = headlines_text()
+    if headlines:
+        prompt += ("\n\nHEADLINES FROM GOOGLE NEWS (last 24 hours, free feed). Use them as leads "
+                   "for your searches. If a search fails, you may still report what a headline "
+                   "says, credited to its outlet, but add no detail beyond the headline and "
+                   "write \"(headline only)\" after it. Never write \"Nothing found\" for a "
+                   "section these headlines cover.\n" + headlines)
     if weekend:
         prompt += ("\n\nIt is the weekend: markets are closed. Focus on what happened "
                    "since Friday's close that could matter when markets reopen, and keep "
