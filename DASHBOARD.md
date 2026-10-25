@@ -1,8 +1,8 @@
 # Agent dashboard
 
-Last updated 2026-10-25 06:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-25 15:34 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
-**[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)**
+**[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
 ## Reminders
 
@@ -15,13 +15,13 @@ Last updated 2026-10-25 06:47 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 46 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 days ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 19 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 37 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 9 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 28 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 46 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -223,36 +223,54 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-25, event risk Low</b></summary>
+<summary><b>🌍 World news brief, 2026-10-25, event risk Medium</b></summary>
 
 #### Top things for today
-Nothing found. My searches failed because the search tool hit its usage limit, so I have no verified news since Friday's close.
+1. **Iran decision pending.** Trump said he is weighing a deal with Iran against action to "finish them off." He also said there would be no strike on Sunday (Iran International, CBS). Why it matters: oil, risk appetite and safe-haven demand.
+2. **Houthi attacks on Saudi Arabia.** The Houthis said they attacked Riyadh's airport on Sunday, hours after flights resumed (CBS). The US ordered nonessential embassy staff and their families to leave Saudi Arabia (Iran International). Why it matters: energy supply risk.
+3. **Iran warning on the Gulf.** Iran said US ships would never be allowed in the Persian Gulf. Its foreign minister said a return to war would not change Iran's positions (CBS). Why it matters: shipping and oil.
+4. **Fed week.** The Fed decides on Wednesday and is expected to hold at 3.75–4.00%. A Reuters poll found 94 of 100 economists expect a hold (Newsquawk). Why it matters: rates and the dollar.
+5. **Midterms in nine days.** The Justice Department sued over Alaska's Senate race, seeking to block certification if the incumbent loses (NBC). Why it matters: policy uncertainty.
 
 #### Today's schedule (New York time)
-No scheduled events found.
+Markets are closed. No major US data is due Sunday.
+
+| Time | Event | Who or where | Confirmed? |
+|---|---|---|---|
+| Afternoon (time unconfirmed) | Campaign rally | Trump, Port Huron, Michigan | Confirmed (CNN, Fox); time (unconfirmed) |
+| Mon 12:30 PM | Chicago Fed National Activity Index (Sep); previous -0.04 | US | Per Trading Economics |
+| Mon 2:30 PM | Dallas Fed Manufacturing Index (Oct); previous 9.8, forecast 7 | US | Per Trading Economics |
+| Mon (time unconfirmed) | Trump rally | Mississippi | Planned (Gray DC) |
 
 #### Event risk today
-Low - Markets are closed, and I found no scheduled events. This rating comes from missing data, not from a check of the news. Check for weekend headlines before the open.
+Medium - Markets are closed, but Iran and Houthi headlines could move the reopen. Fed, GDP and PCE come later this week.
 
 #### Politics and policy
-Nothing found.
+- Trump spoke to reporters before leaving for Michigan. He said the US has "different" sets of Iran intelligence, some of it classified (Iran International).
+- Trump's week of rallies: Mississippi Monday, Texas Tuesday, Ohio Wednesday (Gray DC).
+- On Saturday Trump announced a $4.2B Audi plant in Georgia (Fox).
+- Fed: the meeting is Oct 27–28. The statement is at 2:00 PM Wednesday and the press conference at 2:30 PM. There is no dot plot (TradingKey). Why it matters: rate path.
+- A Russia sanctions waiver is in play. A Trump executive order suspended tariffs and sanctions tied to Russian energy. Trump later said no final decision had been made (Reuters/CNBC, Oct 20). Why it matters: energy supply and inflation.
 
 #### Economics
-Nothing found.
+Nothing found. No major US release fell this weekend.
+- Later this week, GDP and PCE are due Thursday at 8:30 AM. The Atlanta Fed GDPNow estimate for Q3 is 3.5% (Newsquawk, Trading Economics).
+- Inflation has been above the Fed's target for nearly six years, which Newsquawk linked to energy costs and tariffs.
 
 #### War, trade and tariffs
-Nothing found.
+- **Iran/Gulf:** see the top items above.
+- **Russia/Ukraine:** at a Florida rally, Trump floated 200% tariffs on both countries. He doubted it would work because the US trades little with them (Ukrinform). Why it matters: energy and sanctions.
+- **Russian oil tariffs:** a September law lets Trump impose up to 100% tariffs on top buyers of Russian oil, naming China and India (Mother Jones, Oct 12). The executive order suspended these tariffs (CNN, Oct 19).
+- **Oil level:** Brent was about $109 on Oct 20 (Reuters).
 
 #### Country briefs
-- China: Nothing found.
-- European Union: Nothing found.
-- United Kingdom: Nothing found.
-- Japan: Nothing found.
-- India: Nothing found.
-- Russia: Nothing found.
-- Canada: Nothing found.
-
-I don't want to invent events or give you stale information. Please re-run this briefing once search is available again.
+- **China:** Nothing found.
+- **European Union:** An EU-Canada summit is scheduled for Oct 29–30. The ECB decides Thursday (Newsquawk).
+- **United Kingdom:** The Autumn Budget is Wednesday (Newsquawk).
+- **Japan:** The BoJ decides Friday. Tokyo CPI is also due that day (Newsquawk).
+- **India:** Nothing new found. Trump repeated his claim that tariff threats ended the India-Pakistan fighting. India denies the US role (Ukrinform).
+- **Russia:** Nothing new found from the last day. See the sanctions waiver above.
+- **Canada:** The Bank of Canada decides Wednesday. The EU-Canada summit is Oct 29–30 (Newsquawk).
 
 [Read the full brief with all the details](reports/news/2026-10-25-world-brief.md) · [All news briefs](reports/news/)
 
