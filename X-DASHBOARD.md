@@ -1,66 +1,193 @@
-# 𝕏 X Brief Dashboard
+# 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-24 18:23 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-25 22:12 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning drafts:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-24.md)
-- **After-close wrap:** ✅ ready
-- **Claude cost this month:** $0.004 (1 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-25.md)
+- **Evening thread:** ✅ ready (below)
+- **Claude cost this month:** $0.006 (2 run(s) this month)
 
-**Left out today (the brief failed or is missing, so nothing was made up):**
-- World, politics and the presidency: the Sat Oct 24 brief came back empty (its search failed), so this topic is left out.
+## 🌙 Tonight's thread, ready to copy (Sunday Oct 25)
 
-## What it's talking about today
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
 
-| When | Post | Topic | What it says |
-|---|---|---|---|
-| 7-8 AM | Thread 1 | 💵 Economy | Morning Money Brief, Oct 24: September CPI, cited Thursday, rose 3.7% y/y, above the 3.6% estimate. That… |
-| 7-8 AM | Thread 2 | 📈 Stocks | Friday's data: AI and chip stocks fell hard. META -7.0%, AMD -8.1%, CRWV -10.1%. No cause confirmed. Why it… |
-| 7-8 AM | Thread 3 | 🪙 Crypto | Bitcoin is near $80,607, down 1.2% in 24h. Ethereum sits at $2,369. Why it matters: big coins are drifting,… |
-| 12-1 PM | Midday take | Friday's AI and chip stock selloff | Why this matters for your wallet: On Friday, AI and chip stocks fell sharply. META dropped 7.0%, AMD 8.1%… |
-| After close | Wrap 1 | Closing numbers | Weekend crypto check, Oct 24: Bitcoin $80,357 (-0.9%), Ether $2,339 (-1.9%), Solana $101.34 (-1.4%). Why it… |
-| Any time | Video | Morning Money Brief | Your money moved this week, and most people missed why. Here's your Morning Money Brief for Saturday,… |
-
-**Closing numbers:**
+**Post 1 of 5 · Intro** (170/280)
 ```text
-Bitcoin: 80,356.60 (-0.9%)
-Ether: 2,338.90 (-1.9%)
-Solana: 101.34 (-1.4%)
-Stock markets: closed for the weekend
+1/ Cash Flow Brief: Evening, Oct 25 🌙
+
+Oil eased, Bitcoin slipped under $80K for a moment, and Fed week starts tomorrow.
+
+What happened today and what to watch Monday 🧵
 ```
+
+**Post 2 of 5 · 🌍 World & politics** (268/280)
+```text
+2/ Politics & world: the Houthis attacked Riyadh's airport, and the US told nonessential staff to leave Saudi Arabia. Trump said there'd be no Iran strike today.
+
+Why it matters: Gulf risk = oil and gas prices.
+
+Tomorrow: Trump rallies in Mississippi. Watch Iran news.
+```
+
+**Post 3 of 5 · 💵 Economy** (244/280)
+```text
+3/ Economy: the Fed meets Tuesday and decides Wednesday at 2 PM ET. Markets expect a pause, with hike odds under 15% despite 3.7% inflation.
+
+Why it matters: it sets the rates on your loans and cards.
+
+Tomorrow: only minor regional Fed reports.
+```
+
+**Post 4 of 5 · 📈 Stocks** (263/280)
+```text
+4/ Stocks: futures reopened slightly higher tonight (S&P and Nasdaq +0.1%) as oil eased to about $102.
+
+Why it matters: cheaper oil takes pressure off inflation and your gas tank.
+
+Tomorrow: the 9:30 AM open. Microsoft, Alphabet and Amazon report later this week.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (261/280)
+```text
+5/ Crypto: Bitcoin briefly fell under $80K and sits near $80,000 (-0.9% today). Ether $2,326 (-1.2%). Reports say ~$436M in bullish bets were wiped out in 4 hours.
+
+Why it matters: borrowed money makes dips sharper.
+
+Tomorrow: watch $80K.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(200/280)
+```text
+Sources: CBS, NYT, Gulf News, Iran International (politics); Barron's, IBD, Yahoo Finance futures data; CoinGecko, alternative.me, BigGo Finance (crypto).
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500 futures: 7,668.50 (+0.1%)
+Nasdaq futures: 29,157.25 (+0.1%)
+Oil (WTI): 102.10 (-1.1%)
+Bitcoin: 80,039 (-0.9%)
+Ether: 2,326.16 (-1.2%)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Sunday Oct 25)
+
+Each box has a copy button (top right on GitHub). Post the thread in one go: write post 1, tap **+** for each next post, then **Post all**. Then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (216/280)
+```text
+1/ Cash Flow Brief, Oct 25 ☀️
+
+Big week for your wallet: the Fed decides on rates Wednesday, Big Tech reports earnings, and the midterms are 9 days away.
+
+What happened, why it matters, and what could happen next 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (246/280)
+```text
+2/ Politics: Trump announced Audi will put $4.2B into a new plant in Georgia.
+
+Why it matters: factory money means local jobs and supplier contracts.
+
+Next: he campaigns in MI, MS, TX and OH this week. Watch for more investment news before Nov 3.
+```
+
+**Post 3 of 5 · 💵 Economy** (258/280)
+```text
+3/ Economy: September inflation hit 3.7%, above the 3.6% forecast. The Fed already raised rates in Sept.
+
+Why it matters: mortgages, car loans and cards stay expensive.
+
+Next: Fed decision Wed, 2 PM ET. A hold is expected. Watch for hints of a December hike.
+```
+
+**Post 4 of 5 · 📈 Stocks** (243/280)
+```text
+4/ Stocks: AI names got hit last week. The Nasdaq fell 2.6% Thursday after Meta's AI spending plan. Meta -7%, AMD -8%.
+
+Why it matters: these are big pieces of most 401(k)s and index funds.
+
+Next: Alphabet and Microsoft report Wed, Amazon Thu.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (243/280)
+```text
+5/ Crypto: Bitcoin ~$80,250, down 1.7% this week. Ether -3.5%. Fear & Greed: 54, neutral.
+
+Why it matters: a slow drift, not a panic.
+
+Next: a tough-sounding Fed on Wednesday could weigh on crypto. A calm one could help.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(191/280)
+```text
+Sources: Fox News, Washington Times, Gray DC (politics); CPI and Fed rate data via CNBC and Yahoo Finance; CoinGecko and alternative.me (crypto).
+Not financial advice. News and analysis only.
+```
+
+### Midday take (12-1 PM): Inflation and Wednesday's Fed decision
+
+(250/280)
+```text
+Why this matters for your wallet: inflation is 3.7% and the Fed meets Wednesday.
+
+If it signals a December hike, card and loan rates could rise again. Savings accounts could pay a bit more.
+
+If it sounds calmer, stocks and crypto may get some relief.
+```
+
+**Coming up:** Fed decision Wed Oct 28, 2 PM ET; Alphabet and Microsoft earnings Wed; GDP + PCE and Amazon Thu; midterms Nov 3.
 
 ## Topics covered, last 14 days
 
 ✅ covered · ⏭️ left out (its brief failed or was missing) · — no drafts that day
 
-| Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Wrap | Biggest story |
+| Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Sat Oct 24](reports/x-posts/2026-10-24.md) | ⏭️ | ✅ | ✅ | ✅ | ✅ | Friday's AI and chip stock selloff |
+| [Sun Oct 25](reports/x-posts/2026-10-25.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Inflation and Wednesday's Fed decision |
+| [Sat Oct 24](reports/x-posts/2026-10-24.md) | ⏭️ | ✅ | ✅ | ✅ | — | Friday's AI and chip stock selloff |
 | Fri Oct 23 | — | — | — | — | — | |
 | Thu Oct 22 | — | — | — | — | — | |
 | Wed Oct 21 | — | — | — | — | — | |
 | Tue Oct 20 | — | — | — | — | — | |
 | Mon Oct 19 | — | — | — | — | — | |
-| Sun Oct 18 | — | — | — | — | — | |
 
 ## Are the source briefs working? (last 7 days)
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Sun 18 | Mon 19 | Tue 20 | Wed 21 | Thu 22 | Fri 23 | Sat 24 |
+| Brief | Mon 19 | Tue 20 | Wed 21 | Thu 22 | Fri 23 | Sat 24 | Sun 25 |
 |---|---|---|---|---|---|---|---|
-| World, politics and the presidency | 🟡 | ❌ | ❌ | 🟡 | ❌ | 🟡 | ❌ |
-| Stocks | · | ✅ | · | ✅ | · | 🟡 | · |
-| Crypto | ✅ | ✅ | 🟡 | ✅ | 🟡 | 🟡 | 🟡 |
-| Nasdaq futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
-| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
+| World, politics and the presidency | ❌ | ❌ | 🟡 | ❌ | 🟡 | ❌ | ✅ |
+| Stocks | ✅ | · | ✅ | · | 🟡 | · | · |
+| Crypto | ✅ | 🟡 | ✅ | 🟡 | 🟡 | 🟡 | ✅ |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
+| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
+
+## 🚀 When to turn on auto-posting
+
+You post by hand for now. Once the account has traction, tell Claude **"turn on X auto-posting"** and the bot will post these drafts by itself:
+- 500+ followers, **or**
+- any post with 10,000+ views, **or**
+- 1,000+ views a day for a week (check the account's Analytics).
+
+It costs about $2.50-3 a month through X's API, within the $25 AI budget.
 
 ## How to post
 
 1. Open today's drafts (link above). Each post is in its own box, with its length.
 2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. Put the suggested reply (sources) under it.
-3. Midday take at 12-1 PM, the after-close wrap at 4:30-5:30 PM.
+3. Midday take at 12-1 PM, the evening thread at 7-9 PM.
 4. Fix anything marked ⚠️ first, and spot-check a number or two against the brief.

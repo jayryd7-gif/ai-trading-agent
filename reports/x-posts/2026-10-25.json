@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-25",
+  "written": "2026-10-25 15:30",
+  "skipped": [],
+  "used": [
+    "Written by hand in chat from today's news (posted to @cashflowbrief00)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Oct 25 ☀️\n\nBig week for your wallet: the Fed decides on rates Wednesday, Big Tech reports earnings, and the midterms are 9 days away.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Trump announced Audi will put $4.2B into a new plant in Georgia.\n\nWhy it matters: factory money means local jobs and supplier contracts.\n\nNext: he campaigns in MI, MS, TX and OH this week. Watch for more investment news before Nov 3."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: September inflation hit 3.7%, above the 3.6% forecast. The Fed already raised rates in Sept.\n\nWhy it matters: mortgages, car loans and cards stay expensive.\n\nNext: Fed decision Wed, 2 PM ET. A hold is expected. Watch for hints of a December hike."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: AI names got hit last week. The Nasdaq fell 2.6% Thursday after Meta's AI spending plan. Meta -7%, AMD -8%.\n\nWhy it matters: these are big pieces of most 401(k)s and index funds.\n\nNext: Alphabet and Microsoft report Wed, Amazon Thu."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin ~$80,250, down 1.7% this week. Ether -3.5%. Fear & Greed: 54, neutral.\n\nWhy it matters: a slow drift, not a panic.\n\nNext: a tough-sounding Fed on Wednesday could weigh on crypto. A calm one could help.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Fox News, Washington Times, Gray DC (politics); CPI and Fed rate data via CNBC and Yahoo Finance; CoinGecko and alternative.me (crypto).",
+  "midday": {
+    "story": "Inflation and Wednesday's Fed decision",
+    "post": "Why this matters for your wallet: inflation is 3.7% and the Fed meets Wednesday.\n\nIf it signals a December hike, card and loan rates could rise again. Savings accounts could pay a bit more.\n\nIf it sounds calmer, stocks and crypto may get some relief."
+  },
+  "reply_midday": "Sources: CPI and Fed rate data via CNBC and Yahoo Finance.",
+  "close_watch": "Fed decision Wed Oct 28, 2 PM ET; Alphabet and Microsoft earnings Wed; GDP + PCE and Amazon Thu; midterms Nov 3.",
+  "evening": {
+    "numbers": "S&P 500 futures: 7,668.50 (+0.1%)\nNasdaq futures: 29,157.25 (+0.1%)\nOil (WTI): 102.10 (-1.1%)\nBitcoin: 80,039 (-0.9%)\nEther: 2,326.16 (-1.2%)",
+    "written": "2026-10-25 19:46",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Oct 25 🌙\n\nOil eased, Bitcoin slipped under $80K for a moment, and Fed week starts tomorrow.\n\nWhat happened today and what to watch Monday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: the Houthis attacked Riyadh's airport, and the US told nonessential staff to leave Saudi Arabia. Trump said there'd be no Iran strike today.\n\nWhy it matters: Gulf risk = oil and gas prices.\n\nTomorrow: Trump rallies in Mississippi. Watch Iran news."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: the Fed meets Tuesday and decides Wednesday at 2 PM ET. Markets expect a pause, with hike odds under 15% despite 3.7% inflation.\n\nWhy it matters: it sets the rates on your loans and cards.\n\nTomorrow: only minor regional Fed reports."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: futures reopened slightly higher tonight (S&P and Nasdaq +0.1%) as oil eased to about $102.\n\nWhy it matters: cheaper oil takes pressure off inflation and your gas tank.\n\nTomorrow: the 9:30 AM open. Microsoft, Alphabet and Amazon report later this week."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: Bitcoin briefly fell under $80K and sits near $80,000 (-0.9% today). Ether $2,326 (-1.2%). Reports say ~$436M in bullish bets were wiped out in 4 hours.\n\nWhy it matters: borrowed money makes dips sharper.\n\nTomorrow: watch $80K.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: CBS, NYT, Gulf News, Iran International (politics); Barron's, IBD, Yahoo Finance futures data; CoinGecko, alternative.me, BigGo Finance (crypto)."
+  }
+}
