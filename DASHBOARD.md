@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-26 06:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-26 06:57 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,9 +17,9 @@ Last updated 2026-10-26 06:32 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 3 days ago | after each session ends |
@@ -316,40 +316,66 @@ Medium - No major US data is due, but Iran strike headlines and Trump's remarks 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-25</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-26</b></summary>
 
 #### Top things today
-1. Bitcoin is near $80,248, down 0.4% in 24h and 1.7% over 7 days. Ether is down 1.9% in 24h and 3.5% over 7 days. Why it matters: majors are drifting lower, while the Fear and Greed Index sits at a neutral 54. (Live data)
-2. Cap (CAP) is the top gainer, up 34.8% in 24h and 40.2% over 7 days. Volume is $33.0M on a $145.1M market cap. Why it matters: it is the biggest move among the 250 largest coins, and I found no news to explain it. (Live data)
-3. Privacy coins are holding up. Zcash is up 2.8% and Monero is up 2.0% in 24h, both while the majors fell. Why it matters: this is relative strength against a soft market. (Live data)
-4. Quack AI (Q) is up 15.2% in 24h but down 40.1% over 7 days. Why it matters: the daily gain follows a steep weekly drop, so it may be a bounce. (Live data)
-5. Live search was unavailable today, so I have no news on regulation, whales, adoption or scheduled events. Why it matters: treat this brief as price data only.
+
+1. **QNT and ENA lead the 24h gainers.** QNT is up 15.4% and ENA up 9.4%, while BTC is up only 0.2%. Reports tie QNT to its September pick for The Clearing House's US tokenized deposit network (KuCoin News). ENA has no confirmed new announcement (unconfirmed). Why it matters: these are the day's strongest moves, but the cause is not clear.
+2. **Bitcoin is stuck near $80K.** It is down 2.8% over 7 days, and Fear and Greed reads 50. US spot BTC ETFs saw $635.6M in outflows on Oct 22 after $524.8M in inflows (Pluang). Why it matters: ETF flows are swinging back and forth.
+3. **Whale wallets keep pulling BTC from Wintermute.** Lookonchain says 40 new wallets took 9,458 BTC (about $771.5M) since Oct 1. The data shows transfers only. It does not show who received the coins or whether anyone bought them (CoinDesk via KuCoin). Why it matters: it is read as accumulation, but that is unproven.
+4. **The US market-structure bill is stalled.** The CLARITY Act failed a Senate cloture vote 49-50 on Sept 15, and no new vote is scheduled (CryptoTicker). Why it matters: the SEC and CFTC are setting rules without a law.
+5. **GRASS has a token unlock tonight.** About $21.5M, or 4.5% of its market value, unlocks at about 8:00 PM ET today (Bitcoinsistemi). GRASS is also up 17.2% over 7 days. Why it matters: new supply is arriving after a rally.
 
 #### Coins to research
+
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Cap (CAP) | +34.8% | No reason found | Small market cap ($145.1M). Pump with no news. Volume is about 23% of market cap. |
-| Quack AI (Q) | +15.2% | No reason found | Down 40.1% over 7 days. Very volatile. Cause unconfirmed. |
-| eCash (XEC) | +13.1% | No reason found | Small cap ($147.5M). Pump with no news. |
-| Useless Coin (USELESS) | +6.0% | No reason found | Meme-style coin. Up 19.5% over 7 days. Pump with no news. |
-| Provenance (HASH) | +3.8% | No reason found | 24h volume is only $2.3K. The price is not a reliable signal. |
-| Dacity Coin (DACITY) | +23.5% | No reason found (trending list) | Rank 776, so a tiny market cap. Likely thin liquidity. Pump with no news. |
+| Quant (QNT) | +15.4% | Sept selection by The Clearing House for a US tokenized deposit network (KuCoin News). Today's catalyst is unclear. | Up 15% in a day. Volume is only $115M on a $3.0B cap. Trade sites call the cause an "institutional repricing" without detail (TradersUnion). |
+| Ethena (ENA) | +9.4% | Rebound after a roughly 22% monthly drop. Technical buying and social attention, with no confirmed new announcement (crypto.news). | Arthur Hayes sold about $2.7M of ENA (crypto.news). Large token unlocks earlier in October (Publish0x). |
+| MemeCore (M) | +8.6% | No news found. | Volume is $1.3M on a $2.3B cap, which is very thin. Up 33.6% in 7 days. |
+| Akedo (AKE) | +8.1% | No news found. Tokenpost listed it as Monday's top gainer. | Volume is $9.1M on a $718M cap. A pump with no news. |
+| Grass (GRASS) | +6.5% | No news found. | $21.5M unlock tonight (Bitcoinsistemi). Up 17.2% in 7 days. |
+| Pyth Network (PYTH) | +6.7% | No news found. Flat over 7 days (+0.1%). | A pump with no news. |
 
-Pearl (PEARL) is trending and down 11.6% in 24h. I did not find the cause.
+I found no new meme coin pumping hard in the search results. The trending list holds only small-cap names, and I found no news on them.
 
 #### Whale watch
-No whale moves found.
+
+No whale moves found in the last 24 hours. Older items:
+
+| When | Coin | Amount (USD) | Who | Direction |
+|---|---|---|---|---|
+| Oct 20 (older than 24h) | BTC | $41.5M (500 BTC) | Dormant wallet linked to Clifton Collins; unclear if keys were recovered (Lookonchain) | Onto an exchange (Coinbase Prime) |
+| Oct 22 (older than 24h) | BTC to ETH | About $20.6M | Single wallet swapping BTC for ETH (Lookonchain via ChainCatcher) | Bought ETH, sold BTC |
 
 #### Government and regulation
-Nothing found.
+
+- **CLARITY Act (H.R. 3633):** It would split crypto oversight between the SEC and CFTC. It failed cloture 49-50 on Sept 15 (CryptoTicker). The Senate does not return to legislative business until Nov 9. The bill would need reintroduction in the new Congress in January 2027 (Baker Botts).
+- **CFTC:** On Oct 5 it issued an advance notice on Regulation CTX and CAM. These cover leveraged retail crypto trades and a new "crypto asset market" venue type. Comments are due Dec 14 (Troutman Pepper Locke).
+- **SEC:** The "Regulation Crypto Assets" proposal closed comments Oct 20 (CryptoTicker). The Oct 1 custody proposal for advisers and funds takes comments until Dec 7 (CryptoTicker). A tokenized-stock venue exemption runs to 2031 (CryptoTicker).
+- **Other countries:** One roundup lists an ESMA stablecoin wind-down, EBA supervision of USDC, and a MAS stablecoin consultation. I could not confirm details (unconfirmed) (CryptoInfrastructure). Bybit won a full VARA licence in Dubai (Analytics Insight).
+- **Low-profile bills or amendments:** Nothing found.
 
 #### Who is buying and adopting
-Nothing found.
+
+- **Smarter Web Company (UK):** It added 20 BTC (about £1.23M) on Oct 23. Its total is now 2,850 BTC (Analytics Insight).
+- **HSBC:** It launched RedCoin (RCHKD), a Hong Kong dollar stablecoin. It is available through the PayMe platform (Analytics Insight).
+- **Countries and governments buying BTC:** Nothing found.
 
 #### Next 7 days
-No scheduled events found.
 
-[Read the full brief with all the details](reports/crypto/2026-10-25-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+Token unlock times are converted from the source's Turkey time to New York time.
+
+| Date | Event | Coin or topic |
+|---|---|---|
+| Oct 26, about 8:00 PM ET | $1.59M unlock, 40% of market value (Bitcoinsistemi) | Vultisig (VULT) |
+| Oct 26, about 8:00 PM ET | $21.5M unlock, 4.5% of market value (Bitcoinsistemi) | Grass (GRASS) |
+| Oct 28, about 8:00 PM ET | $19.7M unlock, 8.4% of market value (Bitcoinsistemi) | Falcon Finance (FF) |
+| Oct 26 – Nov 1 | About $145M in unlocks across 16 altcoins (Bitcoinsistemi) | Altcoin unlocks |
+
+Ethereum's Glamsterdam upgrade was reported as delayed, with no new date found (Analytics Insight).
+
+[Read the full brief with all the details](reports/crypto/2026-10-26-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
