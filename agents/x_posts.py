@@ -4,7 +4,7 @@ the X (Twitter) news account. You copy each draft and post it by hand.
 
 Run it like this:
     python agents/x_posts.py            # morning: thread, midday take, video script
-    python agents/x_posts.py --close    # after the close: stocks + crypto wrap
+    python agents/x_posts.py --evening  # evening: what happened today, what to watch tomorrow
 
 Every post follows the same angle:
     what happened -> why it matters for your money -> what could happen next
@@ -23,9 +23,10 @@ Google News headlines (news_feed.py). Any other brief that is missing, too
 old, or came back empty is SKIPPED and the file says so. The AI is never asked
 to fill a gap from memory.
 
-The close run pulls free closing prices from Yahoo Finance (no key needed)
-and writes the wrap into the same day's file. On weekends stock markets are
-closed, so the wrap covers crypto only.
+The evening run writes a second 5-post thread: what happened today and what to
+watch tomorrow. It uses free data only: closing prices from Yahoo Finance (on
+Sundays the futures that reopen at 6 PM; on Saturdays crypto only), free Google
+News headlines (news_feed.py), and this morning's briefs and drafts.
 
 The drafts are saved in reports/x-posts/YYYY-MM-DD.md (plus a .json copy
 of the same drafts), and X-DASHBOARD.md is rebuilt after every run: what the
@@ -50,7 +51,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from research_tools import SPENT, check_budget, log_cost, run_call
-from news_feed import headlines_text
+from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, headlines_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -80,10 +81,12 @@ SOURCES = [
     ("Gold futures (macro backdrop)", "reports", "gold-brief", 3),
 ]
 
-# Closing prices for the after-close wrap (Yahoo Finance symbols).
+# Prices for the evening thread (Yahoo Finance symbols).
 STOCK_SYMBOLS = {"S&P 500": "^GSPC", "Nasdaq": "^IXIC", "Dow": "^DJI",
                  "10-yr yield": "^TNX", "Oil (WTI)": "CL=F", "Gold": "GC=F"}
 CRYPTO_SYMBOLS = {"Bitcoin": "BTC-USD", "Ether": "ETH-USD", "Solana": "SOL-USD"}
+FUTURES_SYMBOLS = {"S&P 500 futures": "ES=F", "Nasdaq futures": "NQ=F",   # Sunday evenings
+                   "Oil (WTI)": "CL=F", "Gold": "GC=F"}
 
 DISCLAIMER = "Not financial advice."
 WRAP_START, WRAP_END = "<!-- close-wrap:start -->", "<!-- close-wrap:end -->"
@@ -154,23 +157,47 @@ Write:
 MATERIAL (the briefs our research agents wrote):
 {material}"""
 
-CLOSE_PROMPT = """You write the after-close "stocks + crypto wrap" for an X
-(Twitter) account that explains why markets matter for ordinary people's
-money. Today is {weekday} {date}.{weekend}
+EVENING_PROMPT = """You write the evening "{brand}" for an X (Twitter) account
+that explains what happened in the world, politics, the economy, stocks and
+crypto, and why it matters for ordinary people's money. It is {weekday} {date},
+evening, New York time.{weekend}
 
-Write 1-2 posts using ONLY the closing numbers below and, for context, this
-morning's drafts. Post 1 starts with "Closing bell, {short_date}:" (on a
-weekend, "Weekend crypto check, {short_date}:"). Give the key moves, why they
-matter for the reader's money, and what could happen next (upcoming events
-from this morning's drafts are fine). The last post must end with
-"{disclaimer}" Also write a suggested reply naming the data source.
+Write a 5-post thread about what happened TODAY and what to watch TOMORROW
+({tomorrow}), in exactly this format (blank lines as shown).
+Post 1, section "Intro":
+  1/ {brand}: Evening, {short_date} 🌙
+
+  <one sentence: the biggest things for your wallet today>
+
+  What happened today and what to watch {tomorrow_short} 🧵
+Posts 2-5, sections "Politics", "Economy", "Stocks", "Crypto", in that order
+(Politics covers the President, the White House, Congress and other countries;
+it is required):
+  2/ Politics & world: <what happened today>
+
+  Why it matters: <the money link>
+
+  Tomorrow: <what to watch tomorrow>
+The last post must end with a blank line and "{disclaimer}"
+Also write reply_evening: the suggested sources reply, naming the outlets and
+data the posts use, like "Sources: Reuters, AP (politics); Yahoo Finance;
+CoinGecko". Do not invent URLs.
+
+For "Tomorrow", use only events named in the material (schedules, earnings,
+votes, rallies). If none are named for a topic, say what to watch as a
+follow-up of today's story ("Watch whether ..."), never an invented event.
+HEADLINES are headlines only: state only what a headline says, credit the
+outlet, and add no details. Prices come only from the PRICES section.
 
 """ + STYLE_RULES + """
 
-CLOSING NUMBERS (Yahoo Finance, may be delayed):
+PRICES (Yahoo Finance, may be delayed):
 {numbers}
 
-THIS MORNING'S DRAFTS (context only):
+TODAY'S HEADLINES (Google News, last 24 hours):
+{headlines}
+
+THIS MORNING'S BRIEFS AND DRAFTS (context, including today's and this week's schedule):
 {morning}"""
 
 MORNING_SCHEMA = {
@@ -195,11 +222,13 @@ MORNING_SCHEMA = {
     "additionalProperties": False,
 }
 
-CLOSE_SCHEMA = {
+EVENING_SCHEMA = {
     "type": "object",
-    "properties": {"posts": {"type": "array", "items": {"type": "string"}},
-                   "reply": {"type": "string"}},
-    "required": ["posts", "reply"],
+    "properties": {
+        "thread": MORNING_SCHEMA["properties"]["thread"],
+        "reply_evening": {"type": "string"},
+    },
+    "required": ["thread", "reply_evening"],
     "additionalProperties": False,
 }
 
@@ -331,7 +360,7 @@ advice." at the end. Cut filler words first. Return the posts in the same order.
 SHORT_SCHEMA = {"type": "object",
                 "properties": {"posts": {"type": "array", "items": {"type": "string"}}},
                 "required": ["posts"], "additionalProperties": False}
-REPLY_KEYS = ("reply_thread", "reply_midday", "reply")   # a disclaimer line is added to these
+REPLY_KEYS = ("reply_thread", "reply_midday", "reply_evening", "reply")   # a disclaimer line is added to these
 
 
 def shorten_long(drafts):
@@ -357,7 +386,9 @@ def shorten_long(drafts):
 
 def date_values(now):
     weekend = now.weekday() >= 5
-    return {"brand": BRAND, "weekday": now.strftime("%A"), "date": f"{now:%Y-%m-%d}",
+    tomorrow = now + timedelta(days=1)
+    return {"brand": BRAND, "weekday": now.strftime("%A"),
+            "tomorrow": f"{tomorrow:%A %b} {tomorrow.day}", "tomorrow_short": f"{tomorrow:%A}", "date": f"{now:%Y-%m-%d}",
             "short_date": f"{now:%b} {now.day}", "disclaimer": DISCLAIMER,
             "weekend": (" It is the weekend: stock markets are closed and crypto "
                         "trades 24/7." if weekend else "")}
@@ -427,8 +458,8 @@ def render_morning(now, drafts, skipped, used, urls):
     out.append(post_block(drafts["midday"]["post"]))
     out.append(reply_block(drafts["reply_midday"]))
 
-    out.append("## 3. After-close stocks + crypto wrap (post 4:30-5:30 PM NY)\n")
-    out.append(f"{WRAP_START}\nThe 5 PM run fills this in with real closing numbers.\n\n"
+    out.append("## 3. Evening thread (post 7-9 PM NY)\n")
+    out.append(f"{WRAP_START}\nThe evening run (about 7:30 PM NY) fills this in.\n\n"
                f"What to watch: {drafts['close_watch']}\n{WRAP_END}\n")
 
     video = drafts["video"]
@@ -443,39 +474,53 @@ def render_morning(now, drafts, skipped, used, urls):
     return "\n".join(out)
 
 
-def render_wrap(now, drafts, numbers):
-    out = [WRAP_START, f"Closing numbers (Yahoo Finance, {now:%H:%M} NY, may be delayed):",
+def render_evening(now, drafts, numbers):
+    thread = drafts["thread"]
+    out = [WRAP_START, f"Prices (Yahoo Finance, {now:%H:%M} NY, may be delayed):",
            "```text", numbers, "```\n"]
-    for i, post in enumerate(drafts["posts"], 1):
-        out.append(post_block(post, f"Post {i}"))
-    out.append(reply_block(drafts["reply"]))
+    if thread and DISCLAIMER.lower() not in thread[-1]["post"].lower():
+        out.append(f"⚠️ The last post is missing \"{DISCLAIMER}\": add it.\n")
+    for i, item in enumerate(thread, 1):
+        out.append(post_block(item["post"], f"Post {i} of {len(thread)} - {item['section']}"))
+    out.append(reply_block(drafts["reply_evening"]))
     out.append(WRAP_END)
     return "\n".join(out)
 
 
-# ---------------- closing prices ----------------
+# ---------------- evening prices ----------------
 
-def closing_numbers(now):
-    """Last price and change vs the previous daily close. Returns text."""
+def change_line(name, symbol, last, prev):
+    if symbol == "^TNX":
+        return f"{name}: {last:.2f}% ({last - prev:+.2f} pts vs the last close)"
+    return f"{name}: {last:,.2f} ({(last / prev - 1) * 100:+.1f}% vs the last close)"
+
+
+def evening_numbers(now):
+    """Latest price and change vs the previous daily close. Weekdays: the stock
+    market close; Sundays: the futures that reopen at 6 PM; always crypto."""
     import yfinance as yf
-    symbols = dict(CRYPTO_SYMBOLS)
     if now.weekday() < 5:
-        symbols = {**STOCK_SYMBOLS, **symbols}
-    closes = yf.download(list(symbols.values()), period="7d", interval="1d",
-                         progress=False, auto_adjust=False)["Close"]
+        symbols = {**STOCK_SYMBOLS, **CRYPTO_SYMBOLS}
+    elif now.weekday() == 6:
+        symbols = {**FUTURES_SYMBOLS, **CRYPTO_SYMBOLS}
+    else:
+        symbols = dict(CRYPTO_SYMBOLS)
     lines = []
     for name, symbol in symbols.items():
-        series = closes[symbol].dropna()
-        if len(series) < 2:
-            lines.append(f"{name}: no data")
-            continue
-        last, prev = float(series.iloc[-1]), float(series.iloc[-2])
-        if symbol == "^TNX":
-            lines.append(f"{name}: {last:.2f}% ({last - prev:+.2f} pts)")
-        else:
-            lines.append(f"{name}: {last:,.2f} ({(last / prev - 1) * 100:+.1f}%)")
-    if now.weekday() >= 5:
-        lines.append("Stock markets: closed for the weekend")
+        try:
+            ticker = yf.Ticker(symbol)
+            daily = ticker.history(period="10d", interval="1d")["Close"].dropna()
+            prev = daily[[d.date() < now.date() for d in daily.index]]
+            hourly = ticker.history(period="2d", interval="1h")["Close"].dropna()
+            last = float(hourly.iloc[-1]) if len(hourly) else float(daily.iloc[-1])
+            lines.append(change_line(name, symbol, last, float(prev.iloc[-1])))
+        except Exception as error:      # one missing price never stops the thread
+            lines.append(f"{name}: no data ({type(error).__name__})")
+    if now.weekday() == 5:
+        lines.append("Stock markets: closed for the weekend (crypto trades 24/7)")
+    elif now.weekday() == 6:
+        lines.append("Stock markets: closed today; futures reopened at 6 PM NY; "
+                     "the stock market opens Monday 9:30 AM NY")
     return "\n".join(lines)
 
 
@@ -563,17 +608,33 @@ def build_dashboard(now):
     if latest.get("date") != f"{today:%Y-%m-%d}":
         out += ["No drafts for today yet. The morning run is about 7 AM New York time.", ""]
     else:
-        wrap = latest.get("wrap")
-        out += [f"- **Morning drafts:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
+        night = latest.get("evening")
+        out += [f"- **Morning thread:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
                 f"→ [open today's drafts](reports/x-posts/{latest['date']}.md)",
-                f"- **After-close wrap:** {'✅ ready' if wrap else '⏸️ off for now (run X Post Drafts by hand with mode close)'}",
+                f"- **Evening thread:** {'✅ ready (below)' if night else '⏳ about 7:30 PM New York time'}",
                 f"- **Claude cost this month:** ${cost:.3f} ({runs} run(s) this month)", ""]
         if latest.get("skipped"):
             out += ["**Left out today (the brief failed or is missing, so nothing was made up):**"]
             out += [f"- {s}" for s in latest["skipped"]] + [""]
 
+        if night:     # in the evening, tonight's thread goes first
+            nthread = night.get("thread", [])
+            out += [f"## 🌙 Tonight's thread, ready to copy ({today:%A %b %d})", "",
+                    "What happened today and what to watch tomorrow. Post it in one go "
+                    f"(post 1, tap **+** for each next post, **Post all**), then reply to post "
+                    f"{len(nthread)} with the sources reply.", ""]
+            for i, item in enumerate(nthread, 1):
+                name = item["section"] if item["section"] == "Intro" else topic_of(item["section"])
+                out.append(post_block(item["post"], f"Post {i} of {len(nthread)} · {name}"))
+            if night.get("reply_evening"):
+                out.append(reply_block(night["reply_evening"]).replace(
+                    "Suggested reply (post it right under the main post):",
+                    f"**Reply under post {len(nthread)} · sources**"))
+            out += ["<details><summary>Prices used</summary>", "", "```text", night["numbers"],
+                    "```", "</details>", ""]
+
         thread = latest.get("thread", [])
-        out += [f"## 📋 Today's posts, ready to copy ({today:%A %b %d})", "",
+        out += [f"## 📋 {'This morning' if night else 'Today'}'s posts, ready to copy ({today:%A %b %d})", "",
                 "Each box has a copy button (top right on GitHub). Post the thread in one go: "
                 "write post 1, tap **+** for each next post, then **Post all**. Then reply "
                 f"to post {len(thread)} with the sources reply.", ""]
@@ -587,19 +648,15 @@ def build_dashboard(now):
         if latest.get("midday"):
             out += [f"### Midday take (12-1 PM): {latest['midday']['story']}", "",
                     post_block(latest["midday"]["post"])]
-        for i, post in enumerate((wrap or {}).get("posts", []), 1):
-            out.append(post_block(post, f"After-close wrap {i}"))
         if latest.get("video"):
             out += ["<details><summary>🎬 Video script (30-60 sec)</summary>", "",
                     "```text", latest["video"]["script"].strip(), "```", "</details>", ""]
         if latest.get("close_watch"):
             out += ["**Coming up:** " + latest["close_watch"], ""]
-        if wrap:
-            out += ["**Closing numbers:**", "```text", wrap["numbers"], "```", ""]
 
     out += [f"## Topics covered, last {DASHBOARD_DAYS} days", "",
             "✅ covered · ⏭️ left out (its brief failed or was missing) · — no drafts that day", "",
-            "| Date | " + " | ".join(n for n, _ in TOPICS) + " | Wrap | Biggest story |",
+            "| Date | " + " | ".join(n for n, _ in TOPICS) + " | Evening | Biggest story |",
             "|---|" + "---|" * (len(TOPICS) + 2)]
     for back in range(DASHBOARD_DAYS):
         day = today - timedelta(days=back)
@@ -611,7 +668,7 @@ def build_dashboard(now):
         covered = {topic_of(t["section"]) for t in r.get("thread", [])}
         cells = ["✅" if name in covered else "⏭️" for name, _ in TOPICS]
         link = f"[{day:%a %b %d}](reports/x-posts/{day:%Y-%m-%d}.md)"
-        out.append(f"| {link} | " + " | ".join(cells) + f" | {'✅' if r.get('wrap') else '—'} | "
+        out.append(f"| {link} | " + " | ".join(cells) + f" | {'✅' if r.get('evening') else '—'} | "
                    f"{(r.get('midday') or {}).get('story', '')} |")
     out.append("")
 
@@ -632,7 +689,7 @@ def build_dashboard(now):
             "1. Open today's drafts (link above). Each post is in its own box, with its length.",
             "2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. "
             "Put the suggested reply (sources) under it.",
-            "3. Midday take at 12-1 PM, the after-close wrap at 4:30-5:30 PM.",
+            "3. Midday take at 12-1 PM, the evening thread at 7-9 PM.",
             "4. Fix anything marked ⚠️ first, and spot-check a number or two against the brief.", ""]
 
     with open(X_DASHBOARD, "w") as f:
@@ -699,10 +756,10 @@ def morning(now, drafts_file=None):
     os.makedirs(X_FOLDER, exist_ok=True)
     path = os.path.join(X_FOLDER, f"{now:%Y-%m-%d}.md")
     text = render_morning(now, drafts, skipped, used, urls)
-    if os.path.exists(path):   # keep a close wrap that is already there
+    if os.path.exists(path):   # keep an evening thread that is already there
         with open(path) as f:
             old = re.search(re.escape(WRAP_START) + ".*?" + re.escape(WRAP_END), f.read(), re.S)
-        if old and "Closing numbers" in old.group(0):
+        if old and "Prices (Yahoo" in old.group(0):
             text = re.sub(re.escape(WRAP_START) + ".*?" + re.escape(WRAP_END),
                           lambda _: old.group(0), text, flags=re.S)
     with open(path, "w") as f:
@@ -716,43 +773,55 @@ def morning(now, drafts_file=None):
     return path
 
 
-def close(now, drafts_file=None):
+def evening(now, drafts_file=None):
+    """The evening thread: what happened today, what to watch tomorrow."""
     path = os.path.join(X_FOLDER, f"{now:%Y-%m-%d}.md")
-    morning_text = open(path).read() if os.path.exists(path) else "(none written today)"
-    numbers = closing_numbers(now)
+    day_text = open(path).read() if os.path.exists(path) else ""
+    numbers = evening_numbers(now)
     tokens_in = tokens_out = 0
     if drafts_file:
         with open(drafts_file) as f:
             drafts = json.load(f)
     else:
-        prompt = CLOSE_PROMPT.format(**date_values(now), numbers=numbers,
-                                     morning=morning_text[:6000])
-        drafts, tokens_in, tokens_out = ask(prompt, CLOSE_SCHEMA)
+        headlines = headlines_text(NEWS_TOPICS + MARKET_TOPICS)
+        if not headlines:
+            send("X evening thread: no headlines", "Google News could not be reached, so the "
+                 "evening thread uses only this morning's briefs. Check the news before posting.",
+                 priority="high", tags="warning")
+        world = latest_brief(os.path.join("reports", "news"), "world-brief", now.date(), 0)
+        context = [day_text[:6000] or "(no morning drafts today)"]
+        if world:
+            context.append(open(world[1]).read()[:6000])
+        prompt = EVENING_PROMPT.format(**date_values(now), numbers=numbers,
+                                       headlines=headlines or "(none: the free feed failed)",
+                                       morning="\n\n".join(context))
+        drafts, tokens_in, tokens_out = ask(prompt, EVENING_SCHEMA)
         t_in, t_out = shorten_long(drafts)
         tokens_in, tokens_out = tokens_in + t_in, tokens_out + t_out
 
-    wrap = render_wrap(now, drafts, numbers)
+    section = render_evening(now, drafts, numbers)
     os.makedirs(X_FOLDER, exist_ok=True)
-    if WRAP_START in morning_text:
+    if WRAP_START in day_text:
         text = re.sub(re.escape(WRAP_START) + ".*?" + re.escape(WRAP_END),
-                      lambda _: wrap, morning_text, flags=re.S)
+                      lambda _: section, day_text, flags=re.S)
     else:
-        text = (f"# X drafts - {now:%A %Y-%m-%d}\n\n*No morning drafts today. "
-                f"{DISCLAIMER}*\n\n## 3. After-close stocks + crypto wrap\n\n{wrap}\n")
+        text = (day_text or f"# X drafts - {now:%A %Y-%m-%d}\n\n*No morning drafts today. "
+                f"{DISCLAIMER}*\n") + f"\n## 3. Evening thread (post 7-9 PM NY)\n\n{section}\n"
     with open(path, "w") as f:
         f.write(text)
     record = load_record(now.date())
     record.update({"date": f"{now:%Y-%m-%d}",
-                   "wrap": {"numbers": numbers, "written": f"{now:%Y-%m-%d %H:%M}", **drafts}})
+                   "evening": {"numbers": numbers, "written": f"{now:%Y-%m-%d %H:%M}", **drafts}})
     save_record(now.date(), record)
-    finish(path, tokens_in, tokens_out, "X close wrap ready")
+    finish(path, tokens_in, tokens_out, "X evening thread ready")
     build_dashboard(now)
     return path
 
 
 def main():
     parser = argparse.ArgumentParser(description="Write X post drafts from the daily briefs.")
-    parser.add_argument("--close", action="store_true", help="write the after-close wrap")
+    parser.add_argument("--evening", "--close", action="store_true",
+                        help="write the evening thread (today + tomorrow)")
     parser.add_argument("--drafts", help="use drafts from this JSON file instead of the AI")
     parser.add_argument("--date", help="pretend today is this date (YYYY-MM-DD)")
     parser.add_argument("--dashboard", action="store_true", help="only rebuild X-DASHBOARD.md")
@@ -763,7 +832,7 @@ def main():
     if args.dashboard:
         build_dashboard(now)
     else:
-        (close if args.close else morning)(now, args.drafts)
+        (evening if args.evening else morning)(now, args.drafts)
 
 
 if __name__ == "__main__":

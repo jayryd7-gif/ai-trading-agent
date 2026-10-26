@@ -5,14 +5,15 @@ on:
     # Time is UTC. 11:15 UTC is about 6-7 AM New York time, after the world,
     # crypto and stock briefs, so the drafts are on X-DASHBOARD.md before 7-8 AM.
     - cron: "15 11 * * *"
-  # The after-close wrap is off for now (you post by hand). To turn it on, add
-  # this line under "schedule:":
-  #   - cron: "10 21 * * *"   # about 4-5 PM New York time: after-close wrap
+    # 23:30 UTC is about 6:30-7:30 PM New York time: the evening thread (what
+    # happened today, what to watch tomorrow). On Sundays it is after the futures
+    # reopen at 6 PM.
+    - cron: "30 23 * * *"
   # Both can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
       mode:
-        description: "morning or close"
+        description: "morning or evening"
         default: "morning"
 
 permissions:
@@ -23,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # your private phone-alert topic
-      MODE: ${{ github.event.schedule == '10 21 * * *' && 'close' || inputs.mode || 'morning' }}
+      MODE: ${{ github.event.schedule == '30 23 * * *' && 'evening' || inputs.mode || 'morning' }}
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -39,8 +40,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p reports/x-posts
-          if [ "$MODE" = "close" ]; then
-            python agents/x_posts.py --close 2>&1 | tee reports/x-posts/last-run-log.txt
+          if [ "$MODE" = "evening" ] || [ "$MODE" = "close" ]; then
+            python agents/x_posts.py --evening 2>&1 | tee reports/x-posts/last-run-log.txt
           else
             python agents/x_posts.py 2>&1 | tee reports/x-posts/last-run-log.txt
           fi

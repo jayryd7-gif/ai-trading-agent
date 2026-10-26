@@ -27,6 +27,12 @@ TOPICS = [
     ("Economy, the Fed and tariffs", "\"Federal Reserve\" OR inflation OR tariffs OR economy when:1d"),
     ("World", "China OR Russia OR Ukraine OR Iran OR Israel OR Europe OR Canada when:1d"),
 ]
+# Extra topics for the evening thread, which has no stock or crypto brief yet.
+MARKET_TOPICS = [
+    ("Stock market today", "\"stock market\" OR \"Wall Street\" OR \"S&P 500\" OR Nasdaq when:1d"),
+    ("Crypto today", "bitcoin OR crypto OR ethereum when:1d"),
+    ("Tomorrow and this week", "\"week ahead\" OR \"what to watch\" OR tomorrow stocks earnings when:1d"),
+]
 PER_TOPIC = 6
 
 
@@ -52,10 +58,10 @@ def fetch(query, count=PER_TOPIC):
             for w, t, o in items[:count]]
 
 
-def headlines_text():
+def headlines_text(topics=TOPICS):
     """All topics as plain text, or "" if Google News could not be reached."""
     parts, seen = [], set()
-    for topic, query in TOPICS:
+    for topic, query in topics:
         try:
             rows = [r for r in fetch(query) if r[0].lower() not in seen]
         except Exception as error:      # never let the free feed break an agent
