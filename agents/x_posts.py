@@ -26,7 +26,8 @@ to fill a gap from memory.
 The evening run writes a second 5-post thread: what happened today and what to
 watch tomorrow. It uses free data only: closing prices from Yahoo Finance (on
 Sundays the futures that reopen at 6 PM; on Saturdays crypto only), free Google
-News headlines (news_feed.py), and this morning's briefs and drafts.
+News headlines and the free economic calendar (news_feed.py), and this
+morning's briefs and drafts.
 
 The drafts are saved in reports/x-posts/YYYY-MM-DD.md (plus a .json copy
 of the same drafts), and X-DASHBOARD.md is rebuilt after every run: what the
@@ -51,7 +52,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from research_tools import SPENT, check_budget, log_cost, run_call
-from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, headlines_text
+from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, calendar_text, headlines_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -183,8 +184,8 @@ Also write reply_evening: the suggested sources reply, naming the outlets and
 data the posts use, like "Sources: Reuters, AP (politics); Yahoo Finance;
 CoinGecko". Do not invent URLs.
 
-For "Tomorrow", use only events named in the material (schedules, earnings,
-votes, rallies). If none are named for a topic, say what to watch as a
+For "Tomorrow", use the ECONOMIC CALENDAR (official times, New York time) and
+events named in the headlines or briefs (earnings, votes, rallies). If none are named for a topic, say what to watch as a
 follow-up of today's story ("Watch whether ..."), never an invented event.
 HEADLINES are headlines only: state only what a headline says, credit the
 outlet, and add no details. Prices come only from the PRICES section.
@@ -193,6 +194,9 @@ outlet, and add no details. Prices come only from the PRICES section.
 
 PRICES (Yahoo Finance, may be delayed):
 {numbers}
+
+ECONOMIC CALENDAR (free feed, New York time; "TODAY" here means {date}):
+{calendar}
 
 TODAY'S HEADLINES (Google News, last 24 hours):
 {headlines}
@@ -795,6 +799,7 @@ def evening(now, drafts_file=None):
         if world:
             context.append(open(world[1]).read()[:6000])
         prompt = EVENING_PROMPT.format(**date_values(now), numbers=numbers,
+                                       calendar=calendar_text(now) or "(not available today)",
                                        headlines=headlines or "(none: the free feed failed)",
                                        morning="\n\n".join(context))
         drafts, tokens_in, tokens_out = ask(prompt, EVENING_SCHEMA)

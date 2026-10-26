@@ -19,14 +19,22 @@ Stocks and crypto have their own agents (stock_research.py and
 crypto_research.py), so this brief leaves them out and has more room for
 everything else.
 
-Free Google News headlines (news_feed.py) go into the prompt as leads, so the
-brief is never empty even if the web search fails: it can then report what the
-headlines say, credited to each outlet.
+FREE DATA FIRST (rebuilt 2026-10-26 to cut the cost from about $0.29 to about
+$0.10 a run). Two free feeds (news_feed.py) go into the prompt:
+  - Google News headlines: the President, Congress, the Fed, tariffs, wars and
+    other countries, from the last 24 hours
+  - an economic calendar: every important data release and central bank
+    decision today, tomorrow and later this week, with times, forecasts and
+    previous values
+So the AI does not spend web searches finding the news or the schedule. It
+uses its few searches (SEARCHES) only to get the details of the biggest
+stories. Most of the old cost was the AI reading pages of search results, so
+fewer searches is what makes it cheaper. If the searches fail, the brief still
+reports what the headlines say, credited to each outlet, so it is never empty.
 
 It only RESEARCHES and WRITES. It cannot trade, and it has no broker access.
-It makes ONE AI call with at most SEARCHES web searches, to keep each run
-cheap (the log shows the estimated cost). It runs every day; weekend runs
-are shorter and use fewer searches. The briefing is saved in reports/news/.
+It makes ONE AI call (the log shows the estimated cost). It runs every day;
+weekend runs are shorter. The briefing is saved in reports/news/.
 
 The API key comes from the environment (GitHub supplies it as a secret).
 """
@@ -38,12 +46,12 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
-from news_feed import headlines_text
+from news_feed import calendar_text, headlines_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
-SEARCHES = 6              # cap on web searches per run (the main cost control)
-WEEKEND_SEARCHES = 3      # Saturday and Sunday: quieter news, a lighter run
+SEARCHES = 2              # web searches per run, only for the biggest stories (main cost control)
+WEEKEND_SEARCHES = 1      # Saturday and Sunday: quieter news, a lighter run
 MAX_TOKENS = 8000         # cap on the length of the answer
 EFFORT = "medium"         # less thinking than the default, to keep the cost down
 BUDGET = 1.00             # warn in the log if a run costs more than this (dollars)
@@ -55,8 +63,8 @@ COUNTRIES = ["China", "European Union", "United Kingdom", "Japan", "India",
 # ------------------------------------------
 
 SHARED_RULES = """Rules:
-- Use only what you found in your searches. Never invent events, quotes,
-  times, or places.
+- Use only what is in the calendar, the headlines, or your searches. Never
+  invent events, quotes, times, or places.
 - All times must be New York time. If a time or place is not officially
   announced, write "(unconfirmed)".
 - If you found nothing for a section, write "Nothing found."
@@ -72,10 +80,19 @@ SHARED_RULES = """Rules:
 
 PROMPT = """You are a news and events analyst preparing a short morning briefing
 for a day trader who trades Nasdaq and gold futures. Today is {weekday},
-{date}. "Overnight" means since 4 PM yesterday, New York time. Use web search
-for current information. Search efficiently: one search can cover several
-topics, so combine them. Do not cover stock or crypto markets; other briefs
-handle those.
+{date}. "Overnight" means since 4 PM yesterday, New York time. Do not cover
+stock or crypto markets; other briefs handle those.
+
+You are given two free sources below: an ECONOMIC CALENDAR and NEWS HEADLINES.
+Build the briefing from them first. Then use web search ONLY to get the facts
+behind the one or two stories most likely to move markets or the economy
+today (for example a war, a tariff move, a Fed or Treasury surprise, or
+something the President said). You have at most {searches} search(es):
+combine topics in one search, and never search for the schedule (the
+calendar already has it) or for stories the headlines already make clear.
+For stories you did not search, report what the headline says, credited to
+its outlet, and add "(headline only)". Do not add details a headline does
+not state.
 
 Write these sections, in this order. Keep the whole briefing under 1,300 words.
 
@@ -85,9 +102,11 @@ At most 5 items, most important first. One or two sentences each, ending with
 
 ## Today's schedule (New York time)
 A table with columns: Time | Event | Who or where | Confirmed? Sorted by time.
-Economic data (with the previous reading and forecast if available), Fed and
-other central bank speakers, hearings, and President Trump's events. If there
-are none, write "No scheduled events found."
+Take economic data and central bank events from the ECONOMIC CALENDAR (with
+the forecast and previous reading); they are confirmed. Add hearings and
+President Trump's events from the headlines or your searches. Then one line
+"Coming up this week:" with the calendar's later high-impact events. If there
+are none today, write "No scheduled events found."
 
 ## Event risk today
 Low, Medium, or High, with one sentence explaining why. Write the word on its
@@ -121,16 +140,19 @@ def is_empty(text):
 
 def build_briefing(client, now):
     """One research call. Returns (markdown_body, total_in, total_out)."""
-    prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
-                           countries=", ".join(COUNTRIES))
     weekend = now.weekday() >= 5
+    prompt = PROMPT.format(weekday=now.strftime("%A"), date=now.strftime("%Y-%m-%d"),
+                           countries=", ".join(COUNTRIES),
+                           searches=WEEKEND_SEARCHES if weekend else SEARCHES)
+    calendar = calendar_text(now)
+    prompt += ("\n\nECONOMIC CALENDAR (free feed, New York time; official release times):\n"
+               + (calendar or "(The calendar could not be reached today. Use one search for "
+                              "today's US economic calendar.)"))
     headlines = headlines_text()
-    if headlines:
-        prompt += ("\n\nHEADLINES FROM GOOGLE NEWS (last 24 hours, free feed). Use them as leads "
-                   "for your searches. If a search fails, you may still report what a headline "
-                   "says, credited to its outlet, but add no detail beyond the headline and "
-                   "write \"(headline only)\" after it. Never write \"Nothing found\" for a "
-                   "section these headlines cover.\n" + headlines)
+    prompt += ("\n\nNEWS HEADLINES (Google News, last 24 hours, free feed). Never write "
+               "\"Nothing found\" for a section these headlines cover.\n"
+               + (headlines or "(The headline feed could not be reached today. Use your "
+                               "searches for the most important overnight news.)"))
     if weekend:
         prompt += ("\n\nIt is the weekend: markets are closed. Focus on what happened "
                    "since Friday's close that could matter when markets reopen, and keep "

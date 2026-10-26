@@ -1,11 +1,15 @@
 name: X Post Drafts
 
 on:
-  # Switched OFF on 2026-10-26: until the account gets traction, the user asks
-  # Claude in chat for each morning and evening thread. To turn it back on, put
-  # these lines back under a "schedule:" line:
-  #   - cron: "0 9 * * *"     # about 4-5 AM New York time: morning thread
-  #   - cron: "30 23 * * *"   # about 6:30-7:30 PM New York time: evening thread
+  schedule:
+    # Time is UTC. 09:00 UTC is about 4-5 AM New York time, after the world,
+    # crypto and stock briefs, so the drafts are on X-DASHBOARD.md before 6 AM
+    # (GitHub sometimes starts scheduled runs up to ~20 minutes late).
+    - cron: "0 9 * * *"
+    # 23:30 UTC is about 6:30-7:30 PM New York time: the evening thread (what
+    # happened today, what to watch tomorrow). On Sundays it is after the futures
+    # reopen at 6 PM.
+    - cron: "30 23 * * *"
   # Both can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:

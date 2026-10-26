@@ -128,7 +128,7 @@ def run_call(client, prompt, use_search, max_searches=5, max_tokens=3500, model=
     effort: "low", "medium" or "high" (None = the model's default). Lower
     effort means less thinking and fewer searches, so it costs less."""
     if check_budget() and use_search:
-        max_searches = max(2, max_searches // 2)   # saver mode
+        max_searches = max(1, max_searches // 2)   # saver mode
     messages = [{"role": "user", "content": prompt}]
     extra = {"output_config": {"effort": effort}} if effort else {}
     if use_search:
