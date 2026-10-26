@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-26 18:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-26 19:20 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-26 18:43 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 12 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 9 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 13 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 12 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 11 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 12 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -536,47 +536,56 @@ BIAS: Neutral | CONFIDENCE: Low
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-10-25</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-10-26</b></summary>
 
-### Gold Futures Brief: Asia Session, Sunday Oct 25 to Monday Oct 26, 2026
+### Gold Futures: Asia Session Brief (Mon, Oct 26, 2026)
 
-**1. What is driving gold**
-- International gold fell about 4% last week, its weakest week in more than four months.
-- Oil rose after attacks on Saudi Arabia, which added to inflation worries and to bets that the Fed keeps rates higher for longer. Gold pays no interest, so that outlook weighs on it.
-- The Fed is already tightening. In September it raised rates 25 basis points to 3.75%–4.00%.
-- Gold briefly lost $4,000 and then reclaimed it on Friday. I could not verify the exact cause of that bounce.
+#### 1. What is driving gold
+- **Range trading near $4,000.** After a large intraday loss on Oct 22, gold has held around $4,000. Traders are waiting for the Fed meeting and for possible new Gulf hostilities.
+- **Rate worries.** The odds of a Fed hike briefly jumped to about 50-50 after the stronger inflation report on Oct 14, then faded. Inflation could still rise because of oil's recent gains.
+- **Weekly trend is down.** BullionVault shows a weekly change of -3.50%. Gold is also well below its record high of $5,602.22 on January 28, 2026.
 
-**2. Scheduled events (New York time)**
-- **During this session (8:00 PM Sun to 4:00 AM Mon):** I found no major scheduled releases. Kiplinger lists no noteworthy US economic reports for Monday. Unscheduled Middle East oil headlines are the main risk.
-- **Just after the session:**
-  - Tuesday: US consumer confidence. The FOMC meeting also starts.
-  - Wednesday, 2:00 PM: Fed rate decision. The Chair's press conference follows at 2:30 PM. As of Oct 22, CME FedWatch showed about a 90.6% chance of a hold and 9.4% chance of a hike. Odds of a December hike are 84%.
-  - Thursday, 8:30 AM: Q3 GDP and September PCE.
-  - Friday: Bank of Japan decision and Tokyo CPI.
-- Big tech earnings are due this week. I did not verify exact dates or times.
+#### 2. Scheduled events (New York time)
+**Tonight's session (8 PM to 4 AM):**
+- I found no major US release scheduled inside the window.
+- China's Fifth Plenum begins Monday and runs through Oct 29. I could not verify any gold-specific impact.
+- Tuesday's US durable goods report is at 12:30 GMT, which is 8:30 AM NY. That is after the session ends.
 
-**3. Key levels (from the price data)**
-- Previous session high: **4047.40**
-- Previous session low: **4000.90**. This is also the lowest low of the last 5 Asia sessions.
-- Previous close: **4025.70**
-- Since that close: high **4050.20**, low **3989.10**. Price dipped below the old low and came back.
-- Highest high of the last 5 sessions: **4211.20**. It is far above current price.
-- Latest price is **4012.80**. That is inside the range, 34.60 below the high and 11.90 above the low. It sits **nearer support (the low)** than resistance.
+**Just after the session:**
+- **Wed, Oct 28, 2:00 PM:** Fed decision, with a hold expected. Chair Warsh's press conference follows at 2:30 PM.
+- **Thu, Oct 29, 8:30 AM:** Core PCE is expected at 3.1% and headline PCE at 3.6%. Q3 GDP is expected at 3.2%.
+- **Thu, Oct 29 (about 9:15 AM):** ECB decision.
+- **Thursday night:** The Bank of Japan decision lands in Friday's Tokyo session. One source lists it at 11:00 PM ET.
 
-**4. Volume**
-The previous session traded 1.24x the average of the 5 sessions before it. That is moderately above average, so participation was decent but not extreme. It shows interest during the dip but does not say which way the market will go. Be careful with the late-Friday dip below the low, because I have no volume data for that move.
+DST ends Nov 1, so the Tokyo open moves to 7 PM NY after that.
 
-**5. Directional lean: Neutral | Confidence: Low**
-The signals conflict. The news is bearish: the Fed is hiking, oil is rising and gold had a heavy week. Price is also close to the range low. But price bounced back above 4000.90 after the dip to 3989.10, so sellers have not taken control. Volume is somewhat above average but does not point either way. With the Fed decision coming after this session, traders may stay cautious. This is a probability-based lean, not a prediction or a trade instruction.
-**What would change it:** Lean Bearish if price breaks and holds below 3989.10 on rising volume, or if oil spikes. Lean Bullish if price breaks and holds above 4047.40 and 4050.20, or if oil and yield pressure fades.
+#### 3. Key levels (from the price data)
+- Previous session high: **4032.90**
+- Previous session low: **3990.90**. This is also the lowest low of the last 5 Asia sessions.
+- Previous close: **4022.80**
+- Since the close: high **4044.00**, low **4002.30**. Price pushed above the old high and came back inside.
+- Highest high of the last 5 Asia sessions: **4166.50**
+- Latest price: **4024.70**. That is 8.20 below the high and 33.80 above the low, so it sits **nearer resistance (the high)**.
 
-**6. Event risk: Medium**
-No major scheduled data falls inside the session, but oil and Middle East headlines can hit at any time, and traders may position ahead of Wednesday's Fed decision.
+#### 4. Volume
+The previous session traded **0.70x** the average of the five sessions before it. That is weak participation. Moves in thin trading are less reliable and can reverse. FXStreet also expects volume to stay low ahead of major news.
 
-**7. Sources**
-usagold.com, jmbullion.com, tradingeconomics.com, fxstreet.com, kitco.com, india.com, yardeniquicktakes.com, kiplinger.com, newsquawk.com, litefinance.org, fedratec
+#### 5. Directional lean
+**Neutral. Confidence: Low.**
 
-[Open the file](reports/2026-10-25-gold-brief.md)
+Price is in the upper part of a narrow range, which could hint at a bullish tilt. Against that, the 5-session low sits only 33.80 below, and the weekly trend is down. Volume was weak, so a break of either side would lack confirmation. The Fed decision is only about a day and a half away, and traders usually hold back before it. The signals conflict, so I stay Neutral.
+
+**What would change the lean:**
+- A move and hold above 4044.00 on rising volume would shift it toward Bullish.
+- A break below 3990.90 on rising volume would shift it toward Bearish.
+- Surprise Gulf headlines, or a sharp swing in oil, could also change it.
+
+This is a probability-based lean, not a prediction or a trade instruction.
+
+#### 6. Event risk
+**Medium
+
+[Open the file](reports/2026-10-26-gold-brief.md)
 
 </details>
 
@@ -585,7 +594,7 @@ usagold.com, jmbullion.com, tradingeconomics.com, fxstreet.com, kitco.com, india
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-10-26 10:34 | ◆ Neutral | Low | Medium | 29368.25 | [read it](reports/2026-10-26-nasdaq-brief.md) |
-| gold | 2026-10-25 19:14 | ? Unknown | Unknown | Medium | 4012.80 | [read it](reports/2026-10-25-gold-brief.md) |
+| gold | 2026-10-26 19:20 | ? Unknown | Unknown | Medium | 4024.70 | [read it](reports/2026-10-26-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
