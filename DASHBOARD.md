@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-26 06:11 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-26 06:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -18,8 +18,8 @@ Last updated 2026-10-26 06:11 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 3 days ago | after each session ends |
@@ -248,56 +248,70 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-25, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-10-26, event risk Medium</b></summary>
 
 #### Top things for today
-1. **Iran decision pending.** Trump said he is weighing a deal with Iran against action to "finish them off." He also said there would be no strike on Sunday (Iran International, CBS). Why it matters: oil, risk appetite and safe-haven demand.
-2. **Houthi attacks on Saudi Arabia.** The Houthis said they attacked Riyadh's airport on Sunday, hours after flights resumed (CBS). The US ordered nonessential embassy staff and their families to leave Saudi Arabia (Iran International). Why it matters: energy supply risk.
-3. **Iran warning on the Gulf.** Iran said US ships would never be allowed in the Persian Gulf. Its foreign minister said a return to war would not change Iran's positions (CBS). Why it matters: shipping and oil.
-4. **Fed week.** The Fed decides on Wednesday and is expected to hold at 3.75–4.00%. A Reuters poll found 94 of 100 economists expect a hold (Newsquawk). Why it matters: rates and the dollar.
-5. **Midterms in nine days.** The Justice Department sued over Alaska's Senate race, seeking to block certification if the incumbent loses (NBC). Why it matters: policy uncertainty.
+1. **Iran strike risk.** Trump said Sunday "There will not be a strike today." The Pentagon is reportedly planning attacks after the midterms. (Benzinga) Why it matters: energy prices and safe-haven demand.
+2. **Oil is near war highs.** Early Monday, WTI was about $101.51 and Brent about $115.23, both lower. (Sunday Guardian) Brent briefly topped $117 on Friday after Iran's Revolutionary Guard claimed hits on seven tankers. Why it matters: energy inflation and rate expectations.
+3. **Central bank week.** The Fed and Bank of Canada decide Wednesday, the ECB Thursday and the BoJ Friday. (CoinDesk) The base case is a Fed hold, with about 15% odds of a hike. (Admiral Markets) Why it matters: rates and the dollar.
+4. **Possible US tariff cut for Canada.** A headline says the US is expected to remove 50% tariffs on some Canadian products as soon as today. (investingLive, headline only) Why it matters: trade risk and the Canadian dollar.
+5. **Gold fell last week.** Gold held steady in Asia after dropping more than 4% last week, as investors weighed energy inflation and policy ahead of the Fed. (Investing.com) Why it matters: real yields and the dollar.
 
 #### Today's schedule (New York time)
-Markets are closed. No major US data is due Sunday.
-
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| Afternoon (time unconfirmed) | Campaign rally | Trump, Port Huron, Michigan | Confirmed (CNN, Fox); time (unconfirmed) |
-| Mon 12:30 PM | Chicago Fed National Activity Index (Sep); previous -0.04 | US | Per Trading Economics |
-| Mon 2:30 PM | Dallas Fed Manufacturing Index (Oct); previous 9.8, forecast 7 | US | Per Trading Economics |
-| Mon (time unconfirmed) | Trump rally | Mississippi | Planned (Gray DC) |
+| Time not found | Mecca pact officials hold talks with Iranian leaders | Tehran. Saudi Defence Minister Prince Khalid bin Salman, Pakistan's Asim Munir and Turkey's Ibrahim Kalin. | Date confirmed, time (unconfirmed) |
+| Time not found | Trump event | Corinth, Mississippi (Jamie Dupree newsletter) | Place reported, time (unconfirmed) |
+| Time not found | US Treasury buyback, 20Y-30Y | US Treasury (Newsquawk) | Listed, time (unconfirmed) |
+| Time not found | ECB's Elderson speaks | Newsquawk calendar | Listed, time (unconfirmed) |
+| Time not found | China Communist Party Fifth Plenum starts (runs Oct 26–29) | China | Confirmed |
+| 11:10 AM | 2029 EU bond auction, previous 3.613% | EU (Trading Economics) | Listed |
+
+Other notes:
+- Monday has no major data releases from the US (LiteFinance).
+- Tuesday: US consumer confidence. Trump holds rallies in Corpus Christi, with remarks at 2 p.m. local time, and Lubbock, with remarks at 6 p.m. The source's time zone isn't stated, and the Texas rallies are in Central time.
 
 #### Event risk today
-Medium - Markets are closed, but Iran and Houthi headlines could move the reopen. Fed, GDP and PCE come later this week.
+Medium - No major US data is due, but Iran strike headlines and Trump's remarks can move energy and gold ahead of Wednesday's Fed decision.
 
 #### Politics and policy
-- Trump spoke to reporters before leaving for Michigan. He said the US has "different" sets of Iran intelligence, some of it classified (Iran International).
-- Trump's week of rallies: Mississippi Monday, Texas Tuesday, Ohio Wednesday (Gray DC).
-- On Saturday Trump announced a $4.2B Audi plant in Georgia (Fox).
-- Fed: the meeting is Oct 27–28. The statement is at 2:00 PM Wednesday and the press conference at 2:30 PM. There is no dot plot (TradingKey). Why it matters: rate path.
-- A Russia sanctions waiver is in play. A Trump executive order suspended tariffs and sanctions tied to Russian energy. Trump later said no final decision had been made (Reuters/CNBC, Oct 20). Why it matters: energy supply and inflation.
+- **Trump on Iran.** He accused Iran of faking ship attacks in the Strait of Hormuz to push up oil prices before the midterms. (CBS) Why it matters: energy and risk appetite.
+- **Campaign trail.** The midterms are Nov. 3. Trump's reported schedule is Mississippi Monday, then Ohio Wednesday, Florida Friday and Iowa Sunday. (Jamie Dupree)
+- **Fed.** Fed Chair Kevin Warsh's comments are the focus. (CoinDesk) Headline: Firstpost says the Fed is expected to hold with inflation elevated (headline only).
+- **Congress.** One headline says Sen. McConnell told Trump to plan for lame-duck Pentagon funding (Jamie Dupree, headline only). I found no economy-related bill details.
+- Treasury and executive orders: Nothing found.
 
 #### Economics
-Nothing found. No major US release fell this weekend.
-- Later this week, GDP and PCE are due Thursday at 8:30 AM. The Atlanta Fed GDPNow estimate for Q3 is 3.5% (Newsquawk, Trading Economics).
-- Inflation has been above the Fed's target for nearly six years, which Newsquawk linked to energy costs and tariffs.
+- Nothing from the US overnight. Headline: Reuters says US growth was boosted by AI with no sign of a turning point higher (headline only).
+- Japan data due at 5 AM NY: coincident and leading indexes. I found no actual readings.
+- Ahead this week:
+  - US Q3 GDP on Thursday, forecast 3.2% versus 2.2% before.
+  - September PCE is expected at about 0.5% month on month and 3.6% year on year. (TraderFactor)
 
 #### War, trade and tariffs
-- **Iran/Gulf:** see the top items above.
-- **Russia/Ukraine:** at a Florida rally, Trump floated 200% tariffs on both countries. He doubted it would work because the US trades little with them (Ukrinform). Why it matters: energy and sanctions.
-- **Russian oil tariffs:** a September law lets Trump impose up to 100% tariffs on top buyers of Russian oil, naming China and India (Mother Jones, Oct 12). The executive order suspended these tariffs (CNN, Oct 19).
-- **Oil level:** Brent was about $109 on Oct 20 (Reuters).
+- **Iran.** The Tehran talks are the first formal contact between Iran and all three pact members since Saudi Arabia was drawn deeper into the conflict with the Houthis. (The Media Line) Both the US and Iran have reportedly drawn up plans to restart the wider war, possibly after Nov. 3. Qatari mediators met Iranian officials on Sunday. Why it matters: Hormuz shipping and oil.
+- **Ukraine-Russia.** Zelenskyy said Kyiv, Washington and Moscow will hold a trilateral meeting in November. Russia's Ushakov said Putin agreed in principle to restart talks after Nov. 10. Why it matters: Russian energy and risk appetite.
+- **Tariffs.** Canada tariff report above. Nothing else found.
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:** An EU-Canada summit is scheduled for Oct 29–30. The ECB decides Thursday (Newsquawk).
-- **United Kingdom:** The Autumn Budget is Wednesday (Newsquawk).
-- **Japan:** The BoJ decides Friday. Tokyo CPI is also due that day (Newsquawk).
-- **India:** Nothing new found. Trump repeated his claim that tariff threats ended the India-Pakistan fighting. India denies the US role (Ukrinform).
-- **Russia:** Nothing new found from the last day. See the sanctions waiver above.
-- **Canada:** The Bank of Canada decides Wednesday. The EU-Canada summit is Oct 29–30 (Newsquawk).
+- **China**
+  - The Fifth Plenum opens today. No major stimulus is expected from the meeting, and the closing communiqué is the item to watch. (Newsquawk)
+  - Beijing revised its outbound investment rules (SCMP).
+- **European Union**
+  - Von der Leyen has spoken of preparing more trade tools. (SCMP)
+  - The ECB decides Thursday. Economists mostly expect a hold (70 of 73). Sources differ on the current deposit rate: 2.50% (CoinDesk) versus 2.65% (Kaohoon).
+- **United Kingdom**
+  - The Autumn Budget is Wednesday, the same day as the Fed. (Newsquawk)
+- **Japan**
+  - BoJ decision Friday. Hold expected, with under 5% hike odds. A headline says the yen is acting as a safe haven again (investingLive, headline only).
+- **India**
+  - Nothing found.
+- **Russia**
+  - Putin agreed in principle to restart talks (see above). US envoy Witkoff met Putin in St. Petersburg. (Yahoo)
+- **Canada**
+  - Markets lean toward a 25 bp Bank of Canada hike to 2.50% on Wednesday. (TraderFactor) Admiral Markets says hold. An EU-Canada summit runs Oct 29–30. (Newsquawk)
 
-[Read the full brief with all the details](reports/news/2026-10-25-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-26-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
