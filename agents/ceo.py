@@ -53,6 +53,15 @@ DRAWDOWN_WARN_LEFT = 0.25 # warn when less than this share of the max drawdown i
 # ------------------------------------------
 
 OK, WARN, BAD = "✅", "⚠️", "❌"
+WAIT = "⏳"                # not met yet (not a warning)
+
+# When the bot is ready to trade the real account on its own (through
+# TradersPost and Tradovate). All of these, from the paper record of the
+# Tradeify practice account, plus the manual steps listed in check_readiness.
+READY_DAYS = 15           # trading days recorded
+READY_PROFIT_FACTOR = 1.3
+READY_WORST_DAY = -1250   # no trading day worse than the daily loss limit
+READINESS = os.path.join("reports", "ceo", "readiness.json")
 
 
 def read_csv(path):
@@ -348,6 +357,65 @@ def check_health(r):
 
 # ---------------- output ----------------
 
+def check_readiness(r, now):
+    """Is the bot ready to run the real account by itself? Phone alert the
+    first time every automatic check passes."""
+    r.section("Ready to run on its own?")
+    from paper_trader import ACCOUNT, account_from
+    rows = read_csv(PAPER_TRADES)
+    trades = [x for x in rows if x["signal"] == "yes"]
+    days = {}
+    for x in rows:
+        days[x["trading_day"]] = days.get(x["trading_day"], 0.0) + float(x["net"] or 0)
+    nets = [float(x["net"]) for x in trades]
+    wins, losses = sum(n for n in nets if n > 0), -sum(n for n in nets if n < 0)
+    pf = wins / losses if losses else (float("inf") if wins else 0.0)
+    attempts = account_from(rows).finish() if ACCOUNT == "tradeify" else []
+    paper_bad = [t for title, lines in r.sections if title == "Futures paper trader"
+                 for s, t in lines if s == BAD]
+    checks = [
+        (len(days) >= READY_DAYS,
+         f"{len(days)} of {READY_DAYS} trading days on the paper record"),
+        (not paper_bad, "every paper trade followed the rules" if not paper_bad
+         else f"{len(paper_bad)} rule problem(s) in the paper trader above"),
+        (not any(a["result"] == "Failed" for a in attempts),
+         "the Tradeify practice account never failed"),
+        (any(a["result"] == "Passed" for a in attempts),
+         "the Tradeify practice evaluation has passed" if any(
+             a["result"] == "Passed" for a in attempts) else
+         "the Tradeify practice evaluation has not passed yet"),
+        (bool(nets) and pf >= READY_PROFIT_FACTOR,
+         f"profit factor {pf:.2f} (needs {READY_PROFIT_FACTOR} or more), "
+         f"total ${sum(nets):,.0f} over {len(nets)} trades"),
+        (bool(days) and min(days.values()) >= READY_WORST_DAY,
+         f"worst trading day ${min(days.values(), default=0):,.0f} "
+         f"(needs ${READY_WORST_DAY:,} or better)"),
+    ]
+    for ok, text in checks:
+        r.add(OK if ok else WAIT, text)
+    r.add(WAIT, "You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K")
+    r.add(WAIT, "You: 2+ weeks of the live 50K alerts traded by hand with no rule broken")
+    r.add(WAIT, "You + Claude: 2-3 sessions on a TradersPost paper account matching the chart")
+    ready = all(ok for ok, _ in checks)
+    try:
+        state = json.load(open(READINESS))
+    except (OSError, ValueError):
+        state = {}
+    if ready and not state.get("ready_since"):
+        state["ready_since"] = now.strftime("%Y-%m-%d")
+        send("Trading bot: paper record ready for automation",
+             f"All automatic checks passed ({len(days)} days, profit factor {pf:.2f}, no failed "
+             "account). Next: Tradeify's written OK, then the TradersPost paper test. "
+             "Open Claude and say 'set up TradersPost'.",
+             priority="high", tags="tada",
+             link="https://github.com/jayryd7-gif/ai-trading-agent/blob/main/reports/ceo/latest.md")
+    elif not ready and state.get("ready_since"):
+        state["ready_since"] = None         # fell back: alert again next time
+    os.makedirs(os.path.dirname(READINESS), exist_ok=True)
+    with open(READINESS, "w") as f:
+        json.dump(state, f)
+
+
 def write(r, now):
     ok, warn, bad = r.counts()
     verdict = (f"{BAD} {bad} broken rule(s)" if bad else f"{WARN} {warn} thing(s) to look at"
@@ -383,7 +451,8 @@ def main(now=None):
             check(r)
         except Exception as error:      # a broken check must never stop the others
             r.add(WARN, f"This check could not run: {error}")
-    for check in (lambda rep: check_costs(rep, now), check_health):
+    for check in (lambda rep: check_costs(rep, now), check_health,
+                  lambda rep: check_readiness(rep, now)):
         try:
             check(r)
         except Exception as error:
