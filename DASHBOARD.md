@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-26 07:12 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-26 07:17 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -20,7 +20,7 @@ Last updated 2026-10-26 07:12 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
@@ -380,66 +380,70 @@ Ethereum's Glamsterdam upgrade was reported as delayed, with no new date found (
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-10-23</b></summary>
+<summary><b>📈 Stocks brief, 2026-10-26</b></summary>
 
 #### Top things today
-1. **Broad selloff in AI and tech.** In the live data, almost every AI name fell. META lost 7.0%, AMD 8.1%, ARM 7.3% and CRWV 10.1%. Only AAPL (+1.2%) rose. Why it matters: the weakness was wide, not limited to one stock.
-2. **Nuclear and power names fell hard.** VST dropped 9.8%, CEG 5.7% and BWXT 5.8%. LEU is down 18.0% over five days. Why it matters: AI-power stocks fell along with AI chips.
-3. **Copper miners dropped.** SCCO fell 7.3% and FCX fell 6.3%. FCX reports on Oct 27. Why it matters: the earnings report is close, and the stock is already weak.
-4. **Big names fell on heavy volume.** NOK fell 14.8%, SPCX 9.1% and INTC 8.0% (live data). I found no news explaining these moves. Why it matters: the causes are unknown.
-5. **Mega-cap earnings start next week.** GOOGL and MSFT report Oct 28, and AMZN reports Oct 29. Why it matters: these reports come after a sharp drop in AI stocks.
-
-**Note:** My news search tool failed. No news articles were retrieved, so the sections below rely only on the live data. No sources are named because I have no news items to cite.
+1. **Earnings and the Fed this week.** Futures were rising and oil was sliding as Wall Street prepared for big earnings and a Fed meeting on Tuesday and Wednesday (TheStreet). Markets see only a 10% chance of a hike at this meeting. Traders are watching for hints about December (TheStreet). Why it matters: it sets the tone for every name on your list.
+2. **Big tech reports Wednesday and Thursday.** GOOGL and MSFT report Oct 28, and AMZN reports Oct 29. Investors are focused on capital spending plans (TheStreet). Why it matters: AI spending worries drove last week's losses.
+3. **Neocloud stocks are under pressure.** Musk said more than 200 neocloud companies could collapse, and CoreWeave, Nebius and Iren fell (CNBC via TheStreet). CRWV is down 11.7% over 5 days. Why it matters: debt costs are the main worry in AI infrastructure.
+4. **AT&T fell 8% on Friday on a SpaceX report.** News linked the drop to a report that SpaceX wants access to at least 80,000 US cell sites. T-Mobile fell 7.7% (Trefis). Why it matters: SpaceX (SPCX, $2.0T market cap) is now moving telecom stocks.
+5. **Nuclear, uranium and miners all fell over 5 days.** CEG, VST, LEU, BWXT, SCCO and NEM each lost 6–11% (live data). Gold had its worst week since June as oil rose and rate-hike bets grew (Mining.com). Why it matters: the weakness is broad, not tied to one stock.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| CRWV | AI | -10.1% 1d, -20.2% 5d | Biggest 1-day drop among AI names | Cause not confirmed; no news found |
-| VST | Nuclear/power | -9.8% 1d; earnings Nov 6 | Largest drop in the nuclear group | No news found |
-| LEU | Uranium | -18.0% 5d; earnings Nov 4 | Steepest 5-day fall in the nuclear group | EPS estimate is negative; revenue estimate only $58.5M |
-| AMD | AI chips | -8.1% 1d; earnings Nov 3 | Large drop before earnings | No news found |
-| SCCO | Copper | -7.3% 1d, -9.0% 5d | Large drop in copper | No news found |
-| SPCX | New stock | -9.1% on heavy volume | $1.9T market cap; among the most active stocks | Appears to be a recent listing (unconfirmed); no news found |
+| CRWV | AI | -2.5% 1D, -11.7% 5D | Debt worries, analyst target cuts (Bernstein, UBS, Morgan Stanley). Goldman upgraded it on Oct 19. | Leveraged and unprofitable. Insiders sold more than $470M over three months (MarketBeat). |
+| NEM | Gold | -4.6% 1D, -8.2% 5D | Freedom Broker cut it to Hold on Oct 22, and gold fell about 4% on the week. | The 1-day drop is bigger than the news I found. |
+| LEU | Nuclear | -10.9% 5D | Reports Nov 4. | Large drop with no news found. Revenue estimate is only $57.2M. |
+| USAR | Rare earths | -3.1% 1D, -11.5% 5D | Reports Nov 5. | Small company with a tiny revenue estimate ($13.6M) and a loss expected. No news found. |
+| RHI | Staffing | +21.7% | Q3 EPS of $0.49 beat the $0.47 estimate. Staffing revenue grew for the first time since 2022 (TIKR). | Q4 EPS guidance midpoint is below consensus. Valuation is higher after the jump. |
+| SPCX | New stock (SpaceX) | +1.9% | Most active by volume, $2.0T market cap. Its Starlink plans are hitting telecom stocks (Trefis). | Newly listed. I found no listing details. |
 
 #### AI and tech
-Nothing found in news. From the live data, <b>META</b> (-11.9%), <b>ARM</b> (-14.2%) and <b>CRWV</b> (-20.2%) are the weakest over five days. Intel fell 8.0% on heavy volume. Nokia fell 14.8%. I could not confirm the reasons.
+- **Neocloud debt fears.** Bernstein cut its CoreWeave target to $51 and estimated it needs about $85B to fund its backlog. The stock closed down 10.1% on Oct 22 (Motley Fool). HSBC kept a $39 target. Goldman called the drop a buying chance (The Wealth Advisor).
+- **Asia AI doubts.** South Korean stocks are down more than 40% from their June high on doubts about AI spending. SK Hynix and Samsung report this week (Kaohoon). Goldman cut its Kospi target to 9,000. Why it matters: it is a read-through for MU.
+- **Mega-cap tech lagged.** META is down 9.4% and GOOGL down 6.0% over 5 days (live data). Both are hit by capital spending concerns (TheStreet).
 
 #### Nuclear and critical minerals
-Nothing found in news. Live data shows weakness across the groups:
-- **Uranium:** URA -4.1%, CCJ -3.8%, UEC -5.3%.
-- **Rare earths:** MP -2.4%, USAR -5.9%, REMX -3.3%.
-- **Lithium:** ALB -2.0%, SQM -3.5%, LAC -1.9%.
-- **Gold:** NEM -2.6%.
-
-I found no government deals or export-limit news.
+- **Uranium supply news.** Namibia approved Bannerman's $353M Etango mine, with first production targeted for 2028 (Mining.com). The US also backed Global Atomic's Niger mine with a conditional $414M loan, reported Sept 25 (Northern Miner).
+- **Gold weakness.** Bullion fell 4% last week, as oil-driven rate-hike bets built (Mining.com). NEM fell 4.6% on Friday.
+- **Power demand.** On Oct 7, Google agreed to buy power from Constellation Energy, which lifted Australian uranium miners (Reuters via Mining Weekly). CEG reports Nov 9.
+- Nothing new found on export limits or new US government deals today.
 
 #### Earnings
-**Results since yesterday:** Nothing found. Several of today's top gainers may have reported results (for example SPOT, ROP, POOL and WCN), but I could not confirm that.
+**Results since yesterday:** Nothing found for the watchlist. Notable earlier reports:
+- **RHI** (reported after the close Thursday): EPS of $0.49 vs. $0.47 expected, and revenue of $1.36B matched estimates. Shares jumped about 22% (Seeking Alpha, Investing.com).
+- **T** (reported Wednesday): EPS of $0.65 vs. $0.60 expected, and revenue of $32.3B vs. $31.7B. It raised its 2026 outlook. Shares fell 6.4% that day on subscriber and competition worries, then fell 8% on Friday (Trefis).
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| Oct 27 | FCX | Not confirmed | $0.83 | $7.4B |
-| Oct 28 | GOOGL | Not confirmed | $2.97 | $127.9B |
-| Oct 28 | MSFT | Not confirmed | $4.72 | $90.7B |
-| Oct 29 | AMZN | Not confirmed | $1.98 | $202.2B |
-| Oct 30 | CCJ | Not confirmed | $0.27 | $753.9M |
-| Nov 2 | AAPL | Not confirmed | $1.98 | $113.4B |
-| Nov 2 | BWXT | Not confirmed | $1.19 | $972.3M |
-| Nov 2 | PLTR | Not confirmed | $0.41 | $2.2B |
-| Nov 3 | AMD | Not confirmed | $1.93 | $13.1B |
-| Nov 3 | SMCI | Not confirmed | $1.20 | $16.3B |
-| Nov 4 | ALB | Not confirmed | $2.52 | $1.5B |
-| Nov 4 | ARM | Not confirmed | $0.47 | $1.4B |
-| Nov 4 | LEU | Not confirmed | -$0.07 | $58.5M |
-| Nov 5 | MP | Not confirmed | -$0.01 | $119.1M |
-| Nov 5 | SMR | Not confirmed | -$0.12 | $3.8M |
-| Nov 5 | USAR | Not confirmed | -$0.15 | $13.6M |
-| Nov 6 | VST | Not confirmed | $3.01 | $6.9B |
+| 2026-10-27 | FCX | Not confirmed | $0.83 | $7.4B |
+| 2026-10-28 | GOOGL | Not confirmed | $2.97 | $127.8B |
+| 2026-10-28 | MSFT | Not confirmed | $4.72 | $90.8B |
+| 2026-10-29 | AMZN | Not confirmed | $1.98 | $202.2B |
+| 2026-10-30 | CCJ | Not confirmed | $0.27 | $753.9M |
+| 2026-11-02 | AAPL | Not confirmed | $1.98 | $113.4B |
+| 2026-11-02 | BWXT | Not confirmed | $1.19 | $972.3M |
+| 2026-11-02 | PLTR | Not confirmed | $0.41 | $2.2B |
+| 2026-11-03 | AMD | Not confirmed | $1.93 | $13.1B |
+| 2026-11-03 | SMCI | Not confirmed | $1.20 | $16.3B |
+| 2026-11-04 | ALB | Not confirmed | $2.52 | $1.5B |
+| 2026-11-04 | ARM | Not confirmed | $0.48 | $1.4B |
+| 2026-11-04 | LEU | Not confirmed | -$0.07 | $57.2M |
+| 2026-11-05 | MP | Not confirmed | -$0.01 | $119.0M |
+| 2026-11-05 | SMR | Not confirmed | -$0.12 | $3.8M |
+| 2026-11-05 | USAR | Not confirmed | -$0.15 | $13.6M |
+| 2026-11-06 | OKLO | Not confirmed | -$0.26 | $1.1M |
+| 2026-11-06 | VST | Not confirmed | $3.01 | $6.9B |
+| 2026-11-09 | CEG | Not confirmed | $3.74 | $9.3B |
 
 #### Smart money
-Nothing found.
+- **CRWV:** Morgan Stanley kept Equal-Weight and cut its target to $70 from $99 (GuruFocus). UBS cut its target to $105 and kept Buy (MarketBeat). Goldman upgraded it to Buy on Oct 19 (Briefs).
+- **NEM:** Freedom Broker cut it from Buy to Hold on Oct 22 and lowered its target to $116 from $130 (GuruFocus).
+- **CoreWeave insiders** sold about $472M of stock over three months, per MarketBeat. GuruFocus puts the figure at about $922M. The sources differ.
+- No insider buying or congressional trades found in these themes.
 
-[Read the full brief with all the details](reports/stocks/2026-10-23-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-10-26-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
