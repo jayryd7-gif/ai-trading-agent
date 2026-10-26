@@ -2,9 +2,10 @@ name: World News Brief
 
 on:
   schedule:
-    # Time is UTC. 10:00 UTC is about 5-6 AM New York time, before the market briefs.
+    # Time is UTC. 08:00 UTC is about 3-4 AM New York time, so the X drafts built
+    # from it are ready before 6 AM (moved 2 hours earlier on 2026-10-25).
     # Every day. Weekend runs use fewer searches (WEEKEND_SEARCHES) to stay cheap.
-    - cron: "0 10 * * *"
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 permissions:

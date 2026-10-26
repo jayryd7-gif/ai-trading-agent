@@ -1,6 +1,6 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-25 22:12 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-25 22:16 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
@@ -81,7 +81,7 @@ Ether: 2,326.16 (-1.2%)
 
 ## 📋 This morning's posts, ready to copy (Sunday Oct 25)
 
-Each box has a copy button (top right on GitHub). Post the thread in one go: write post 1, tap **+** for each next post, then **Post all**. Then reply to post 5 with the sources reply.
+Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
 **Post 1 of 5 · Intro** (216/280)
 ```text
@@ -188,6 +188,6 @@ It costs about $2.50-3 a month through X's API, within the $25 AI budget.
 ## How to post
 
 1. Open today's drafts (link above). Each post is in its own box, with its length.
-2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. Put the suggested reply (sources) under it.
+2. Morning thread (ready by about 5:30 AM New York time): posts 1-2 before work, 3-5 as replies on your 8-9 AM break (or all 5 at once). Sources reply under the last.
 3. Midday take at 12-1 PM, the evening thread at 7-9 PM.
 4. Fix anything marked ⚠️ first, and spot-check a number or two against the brief.

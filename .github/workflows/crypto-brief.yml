@@ -2,9 +2,9 @@ name: Crypto Brief
 
 on:
   schedule:
-    # Time is UTC. 10:20 UTC is about 5:20-6:20 AM New York time, right after the
+    # Time is UTC. 08:20 UTC is about 3:20-4:20 AM New York time, right after the
     # world news brief. Crypto trades all week, so this runs every day.
-    - cron: "20 10 * * *"
+    - cron: "20 8 * * *"
   workflow_dispatch:
 
 permissions:

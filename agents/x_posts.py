@@ -444,7 +444,7 @@ def render_morning(now, drafts, skipped, used, urls):
     out.append("")
 
     thread = drafts["thread"]
-    out.append(f"## 1. {BRAND} morning thread (post 7-8 AM NY)\n")
+    out.append(f"## 1. {BRAND} morning thread (post before 6 AM, or posts 1-2 then 3-5 at 8-9 AM)\n")
     if not 3 <= len(thread) <= 5:
         out.append(f"⚠️ The thread has {len(thread)} posts (aim for 3-5).\n")
     if thread and DISCLAIMER.lower() not in thread[-1]["post"].lower():
@@ -606,7 +606,7 @@ def build_dashboard(now):
     latest = records[0] if records else {}
     out += ["## Today", ""]
     if latest.get("date") != f"{today:%Y-%m-%d}":
-        out += ["No drafts for today yet. The morning run is about 7 AM New York time.", ""]
+        out += ["No drafts for today yet. The morning run is about 5 AM New York time.", ""]
     else:
         night = latest.get("evening")
         out += [f"- **Morning thread:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
@@ -635,9 +635,11 @@ def build_dashboard(now):
 
         thread = latest.get("thread", [])
         out += [f"## 📋 {'This morning' if night else 'Today'}'s posts, ready to copy ({today:%A %b %d})", "",
-                "Each box has a copy button (top right on GitHub). Post the thread in one go: "
-                "write post 1, tap **+** for each next post, then **Post all**. Then reply "
-                f"to post {len(thread)} with the sources reply.", ""]
+                "Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 "
+                "as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** "
+                "open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 "
+                f"with post 5, so they join the same thread. Then reply to post {len(thread)} "
+                "with the sources reply. (Or post all 5 at once before work.)", ""]
         for i, item in enumerate(thread, 1):
             name = item["section"] if item["section"] == "Intro" else topic_of(item["section"])
             out.append(post_block(item["post"], f"Post {i} of {len(thread)} · {name}"))
@@ -687,8 +689,8 @@ def build_dashboard(now):
             "It costs about $2.50-3 a month through X's API, within the $25 AI budget.", ""]
     out += ["## How to post", "",
             "1. Open today's drafts (link above). Each post is in its own box, with its length.",
-            "2. Post the thread at 7-8 AM: post 1, then reply to it with post 2, and so on. "
-            "Put the suggested reply (sources) under it.",
+            "2. Morning thread (ready by about 5:30 AM New York time): posts 1-2 before work, "
+            "3-5 as replies on your 8-9 AM break (or all 5 at once). Sources reply under the last.",
             "3. Midday take at 12-1 PM, the evening thread at 7-9 PM.",
             "4. Fix anything marked ⚠️ first, and spot-check a number or two against the brief.", ""]
 
