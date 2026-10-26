@@ -83,6 +83,58 @@ def headlines_text(topics=TOPICS):
     return "\n\n".join(parts)
 
 
+# Regulators and Congress: the SEC's and CFTC's own press-release feeds (rule
+# votes, open meetings, roundtables, enforcement) and a news search for the
+# hearings that move markets (the committees' own feeds block automated reads).
+REGULATOR_FEEDS = [
+    ("SEC (official press releases)", "https://www.sec.gov/news/pressreleases.rss"),
+    ("CFTC (official press releases)", "https://www.cftc.gov/RSS/RSSGP/rssgp.xml"),
+]
+HEARINGS_QUERY = ("\"Senate Banking Committee\" OR \"House Financial Services Committee\" OR "
+                  "\"SEC Chair\" OR \"SEC commissioner\" OR \"CFTC\" OR \"testify before\" when:2d")
+
+
+def rss_items(url, days=2, count=8):
+    """[(title, New York time text)] from an RSS feed, from the last `days` days."""
+    request = urllib.request.Request(url, headers={"User-Agent": "ai-trading-agent research (non-commercial)"})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        root = ET.fromstring(response.read())
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    items = []
+    for item in root.findall(".//item"):
+        try:
+            when = parsedate_to_datetime(item.findtext("pubDate"))
+        except (TypeError, ValueError):
+            continue
+        if when.tzinfo and when >= cutoff:
+            items.append((when, " ".join((item.findtext("title") or "").split())))
+    items.sort(reverse=True)
+    return [(t, f"{w.astimezone(ZoneInfo('America/New_York')):%a %b %d %I:%M %p} NY")
+            for w, t in items[:count]]
+
+
+def regulators_text():
+    """SEC and CFTC announcements and market-moving hearings, as plain text.
+    "" if nothing could be reached."""
+    parts = []
+    for label, url in REGULATOR_FEEDS:
+        try:
+            rows = rss_items(url)
+        except Exception as error:      # never let a free feed break an agent
+            print(f"{label} feed failed: {error}")
+            continue
+        parts.append(f"{label}:\n" + ("\n".join(f"- {t} ({w})" for t, w in rows)
+                                       or "- Nothing in the last 2 days."))
+    try:
+        rows = fetch(HEARINGS_QUERY)
+        if rows:
+            parts.append("Congressional hearings and regulators in the news:\n"
+                         + "\n".join(f"- {t} ({o}, {w})" for t, o, w in rows))
+    except Exception as error:
+        print(f"Hearings headlines failed: {error}")
+    return "\n\n".join(parts)
+
+
 CALENDAR_FEED = "https://nfs.faireconomy.media/ff_calendar_thisweek.xml"
 # Which events to show: US events of medium or high impact, and only the
 # high-impact ones from these other economies.
@@ -173,6 +225,8 @@ def calendar_text(now):
 
 if __name__ == "__main__":
     print(headlines_text() or "No headlines (Google News could not be reached).")
+    print()
+    print(regulators_text() or "No SEC/CFTC/hearings news (feeds could not be reached).")
     print()
     print(calendar_text(datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None))
           or "No calendar (the feed could not be reached).")

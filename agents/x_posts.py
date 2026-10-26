@@ -52,7 +52,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from research_tools import SPENT, check_budget, log_cost, run_call
-from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, calendar_text, headlines_text
+from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, calendar_text, headlines_text, regulators_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -131,7 +131,9 @@ Write:
      What happened, why it matters, and what could happen next 🧵
    Posts 2-5, sections "Politics", "Economy", "Stocks", "Crypto", in that order
    (Politics covers the President, the White House, Congress and other
-   countries; it is required whenever the material has anything on it):
+   countries; it is required whenever the material has anything on it.
+   Economy also covers SEC and CFTC actions and market-moving hearings; put
+   crypto rules in the Crypto post):
      2/ Politics: <what happened>
 
      Why it matters: <the money link>
@@ -173,7 +175,8 @@ Post 1, section "Intro":
   What happened today and what to watch {tomorrow_short} 🧵
 Posts 2-5, sections "Politics", "Economy", "Stocks", "Crypto", in that order
 (Politics covers the President, the White House, Congress and other countries;
-it is required):
+it is required. Economy also covers SEC and CFTC actions and market-moving
+hearings; put crypto rules in the Crypto post):
   2/ Politics & world: <what happened today>
 
   Why it matters: <the money link>
@@ -200,6 +203,9 @@ ECONOMIC CALENDAR (free feed, New York time; "TODAY" here means {date}):
 
 TODAY'S HEADLINES (Google News, last 24 hours):
 {headlines}
+
+REGULATORS AND HEARINGS (official SEC and CFTC press releases, hearing headlines):
+{regulators}
 
 THIS MORNING'S BRIEFS AND DRAFTS (context, including today's and this week's schedule):
 {morning}"""
@@ -463,7 +469,7 @@ def render_morning(now, drafts, skipped, used, urls):
     out.append(reply_block(drafts["reply_midday"]))
 
     out.append("## 3. Evening thread (post 7-9 PM NY)\n")
-    out.append(f"{WRAP_START}\nThe evening run (about 7:30 PM NY) fills this in.\n\n"
+    out.append(f"{WRAP_START}\nThe evening run (about 6:30 PM NY) fills this in.\n\n"
                f"What to watch: {drafts['close_watch']}\n{WRAP_END}\n")
 
     video = drafts["video"]
@@ -615,7 +621,7 @@ def build_dashboard(now):
         night = latest.get("evening")
         out += [f"- **Morning thread:** {'✅ ready' if latest.get('thread') else '⏳ not yet'} "
                 f"→ [open today's drafts](reports/x-posts/{latest['date']}.md)",
-                f"- **Evening thread:** {'✅ ready (below)' if night else '⏳ about 7:30 PM New York time'}",
+                f"- **Evening thread:** {'✅ ready (below), reminder at 7 PM' if night else '⏳ about 6:30 PM New York time'}",
                 f"- **Claude cost this month:** ${cost:.3f} ({runs} run(s) this month)", ""]
         if latest.get("skipped"):
             out += ["**Left out today (the brief failed or is missing, so nothing was made up):**"]
@@ -800,6 +806,7 @@ def evening(now, drafts_file=None):
             context.append(open(world[1]).read()[:6000])
         prompt = EVENING_PROMPT.format(**date_values(now), numbers=numbers,
                                        calendar=calendar_text(now) or "(not available today)",
+                                       regulators=regulators_text() or "(not available today)",
                                        headlines=headlines or "(none: the free feed failed)",
                                        morning="\n\n".join(context))
         drafts, tokens_in, tokens_out = ask(prompt, EVENING_SCHEMA)
@@ -825,6 +832,21 @@ def evening(now, drafts_file=None):
     return path
 
 
+def remind(now):
+    """7 PM phone reminder to post the evening thread (no AI, no cost)."""
+    night = load_record(now.date()).get("evening")
+    link = "https://github.com/jayryd7-gif/ai-trading-agent/blob/main/X-DASHBOARD.md"
+    if night:
+        first = night["thread"][0]["post"].split("\n")[0] if night.get("thread") else ""
+        send("7 PM: post tonight's thread", f"Your evening thread is ready on the X dashboard. {first}",
+             priority="high", tags="bird", link=link)
+    else:
+        send("7 PM: evening thread not ready", "The evening thread isn't on the X dashboard yet. "
+             "Check GitHub Actions (X Post Drafts), or ask Claude to write it.",
+             priority="high", tags="warning", link=link)
+    print("Reminder sent." if night else "Reminder sent (thread not ready).")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Write X post drafts from the daily briefs.")
     parser.add_argument("--evening", "--close", action="store_true",
@@ -832,12 +854,19 @@ def main():
     parser.add_argument("--drafts", help="use drafts from this JSON file instead of the AI")
     parser.add_argument("--date", help="pretend today is this date (YYYY-MM-DD)")
     parser.add_argument("--dashboard", action="store_true", help="only rebuild X-DASHBOARD.md")
+    parser.add_argument("--remind", action="store_true", help="send the 7 PM posting reminder")
+    parser.add_argument("--if-missing", action="store_true",
+                        help="with --evening: do nothing if tonight's thread is already written")
     args = parser.parse_args()
     now = datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None)
     if args.date:
         now = datetime.combine(date.fromisoformat(args.date), now.time())
     if args.dashboard:
         build_dashboard(now)
+    elif args.remind:
+        remind(now)
+    elif args.evening and args.if_missing and load_record(now.date()).get("evening"):
+        print("Tonight's evening thread is already written, so this run does nothing.")
     else:
         (evening if args.evening else morning)(now, args.drafts)
 

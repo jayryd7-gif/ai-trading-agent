@@ -6,15 +6,21 @@ on:
     # crypto and stock briefs, so the drafts are on X-DASHBOARD.md before 6 AM
     # (GitHub sometimes starts scheduled runs up to ~20 minutes late).
     - cron: "0 9 * * *"
-    # 23:30 UTC is about 6:30-7:30 PM New York time: the evening thread (what
-    # happened today, what to watch tomorrow). On Sundays it is after the futures
-    # reopen at 6 PM.
+    # Evening thread at 6:30 PM New York time (what happened today, what to watch
+    # tomorrow), so it is ready before the 7 PM reminder. Two UTC times so it is
+    # 6:30 PM in both summer and winter time; the run that isn't 6 PM in New
+    # York stops at once.
+    - cron: "30 22 * * *"
     - cron: "30 23 * * *"
-  # Both can still be run by hand from the Actions tab.
+    # Phone reminder at 7 PM New York time to post the evening thread (no AI, $0).
+    # Same two-time trick for summer and winter time.
+    - cron: "0 23 * * *"
+    - cron: "0 0 * * *"
+  # All can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
       mode:
-        description: "morning or evening"
+        description: "morning, evening or remind"
         default: "morning"
 
 permissions:
@@ -25,7 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # your private phone-alert topic
-      MODE: ${{ github.event.schedule == '30 23 * * *' && 'evening' || inputs.mode || 'morning' }}
+      SCHEDULE: ${{ github.event.schedule }}
+      INPUT_MODE: ${{ inputs.mode }}
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -37,11 +44,28 @@ jobs:
       - name: Install the Anthropic tool and Yahoo Finance
         run: pip install anthropic yfinance
 
-      - name: Write the X drafts
+      - name: Write the X drafts (or send the 7 PM reminder)
         shell: bash
         run: |
           mkdir -p reports/x-posts
-          if [ "$MODE" = "evening" ] || [ "$MODE" = "close" ]; then
+          case "$SCHEDULE" in
+            "30 22 * * *"|"30 23 * * *") MODE=evening; HOURS="18 19" ;;
+            "0 23 * * *"|"0 0 * * *")    MODE=remind;  HOURS="19" ;;
+            "")                          MODE="${INPUT_MODE:-morning}"; HOURS="" ;;
+            *)                           MODE=morning; HOURS="" ;;
+          esac
+          echo "MODE=$MODE" >> "$GITHUB_ENV"
+          NOW_HOUR="$(TZ=America/New_York date +%H)"
+          if [ -n "$HOURS" ] && [[ " $HOURS " != *" $NOW_HOUR "* ]]; then
+            echo "It is ${NOW_HOUR}:xx in New York, not the right hour (summer/winter time), so this run stops here."
+            exit 0
+          fi
+          if [ "$MODE" = "remind" ]; then
+            python agents/x_posts.py --remind
+          elif [ "$MODE" = "evening" ] && [ -n "$SCHEDULE" ]; then
+            # a late or second scheduled run skips if tonight's thread is already written
+            python agents/x_posts.py --evening --if-missing 2>&1 | tee reports/x-posts/last-run-log.txt
+          elif [ "$MODE" = "evening" ] || [ "$MODE" = "close" ]; then
             python agents/x_posts.py --evening 2>&1 | tee reports/x-posts/last-run-log.txt
           else
             python agents/x_posts.py 2>&1 | tee reports/x-posts/last-run-log.txt

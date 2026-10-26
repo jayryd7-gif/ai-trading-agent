@@ -6,7 +6,9 @@ Run it like this:
     python agents/world_news_brief.py
 
 It covers what happened overnight and what is scheduled today:
-  - politics and policy (White House, Congress, Fed speakers, SEC and CFTC)
+  - politics and policy (White House, Congress, Fed speakers)
+  - the SEC and CFTC (rule votes, open meetings, enforcement) and market-moving
+    congressional hearings, from their official feeds
   - economics (data released and due, with times)
   - government meetings and hearings
   - President Trump: what he said, and his schedule (what, when, where)
@@ -46,7 +48,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
-from news_feed import calendar_text, headlines_text
+from news_feed import calendar_text, headlines_text, regulators_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -120,6 +122,14 @@ overnight.
 ## Economics
 Data released overnight and what it showed.
 
+## SEC, CFTC and hearings
+SEC and CFTC actions (rule votes, open meetings, roundtables, enforcement,
+ETF decisions) and congressional hearings that could move markets (Fed,
+Treasury, SEC or bank officials testifying; Senate Banking and House
+Financial Services). Include upcoming hearings and meetings with their date
+and time if known. Use the REGULATORS section below. If there are none,
+write "Nothing found."
+
 ## War, trade and tariffs
 Active conflicts that could affect energy, shipping or markets, and new
 tariffs, negotiations, deadlines or trade deals.
@@ -148,6 +158,9 @@ def build_briefing(client, now):
     prompt += ("\n\nECONOMIC CALENDAR (free feed, New York time; official release times):\n"
                + (calendar or "(The calendar could not be reached today. Use one search for "
                               "today's US economic calendar.)"))
+    regulators = regulators_text()
+    prompt += ("\n\nREGULATORS AND HEARINGS (official SEC and CFTC press releases, and hearing "
+               "headlines):\n" + (regulators or "(These feeds could not be reached today.)"))
     headlines = headlines_text()
     prompt += ("\n\nNEWS HEADLINES (Google News, last 24 hours, free feed). Never write "
                "\"Nothing found\" for a section these headlines cover.\n"
