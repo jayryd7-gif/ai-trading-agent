@@ -1,154 +1,91 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-25 22:16 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-26 19:57 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-25.md)
+- **Morning thread:** ⏳ not yet → [open today's drafts](reports/x-posts/2026-10-26.md)
 - **Evening thread:** ✅ ready (below)
-- **Claude cost this month:** $0.006 (2 run(s) this month)
+- **Claude cost this month:** $0.010 (3 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Sunday Oct 25)
+## 🌙 Tonight's thread, ready to copy (Monday Oct 26)
 
 What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
 
-**Post 1 of 5 · Intro** (170/280)
+**Post 1 of 5 · Intro** (188/280)
 ```text
-1/ Cash Flow Brief: Evening, Oct 25 🌙
+1/ Cash Flow Brief: Evening, Oct 26 🌙
 
-Oil eased, Bitcoin slipped under $80K for a moment, and Fed week starts tomorrow.
+Oil is still above $100 and the 10-yr yield is at 4.99%, so gas, loans and rate bets are in focus.
 
-What happened today and what to watch Monday 🧵
+What happened today and what to watch Tuesday 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (268/280)
+**Post 2 of 5 · 🌍 World & politics** (244/280)
 ```text
-2/ Politics & world: the Houthis attacked Riyadh's airport, and the US told nonessential staff to leave Saudi Arabia. Trump said there'd be no Iran strike today.
+2/ Politics & world: A court let California ballots Trump targeted be counted for now.
 
-Why it matters: Gulf risk = oil and gas prices.
+Why it matters: Election fights can shift tax and tariff policy that hits your prices.
 
-Tomorrow: Trump rallies in Mississippi. Watch Iran news.
+Tomorrow: Watch whether the ruling holds before the Nov. 3 midterms.
 ```
 
-**Post 3 of 5 · 💵 Economy** (244/280)
+**Post 3 of 5 · 💵 Economy** (246/280)
 ```text
-3/ Economy: the Fed meets Tuesday and decides Wednesday at 2 PM ET. Markets expect a pause, with hike odds under 15% despite 3.7% inflation.
+3/ Economy: Oil (WTI) is $101.46, down 1.8%. The 10-yr yield is 4.99%.
 
-Why it matters: it sets the rates on your loans and cards.
+Why it matters: Oil and yields reach gas prices, mortgages and loans.
 
-Tomorrow: only minor regional Fed reports.
+Tomorrow: CB consumer confidence at 10 AM ET (forecast 81.2). Watch it before Wednesday's Fed decision.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (263/280)
+**Post 4 of 5 · 📈 Stocks** (238/280)
 ```text
-4/ Stocks: futures reopened slightly higher tonight (S&P and Nasdaq +0.1%) as oil eased to about $102.
+4/ Stocks: S&P 500 at 7,676.61 (+0.7%), Nasdaq 26,169.36 (+0.8%). Anthropic filed for a Nasdaq IPO (Barchart).
 
-Why it matters: cheaper oil takes pressure off inflation and your gas tank.
+Why it matters: 401(k)s and index funds ride these moves.
 
-Tomorrow: the 9:30 AM open. Microsoft, Alphabet and Amazon report later this week.
+Tomorrow: PayPal and SoFi earnings. Watch if fintech stocks follow.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (261/280)
+**Post 5 of 5 · 🪙 Crypto** (238/280)
 ```text
-5/ Crypto: Bitcoin briefly fell under $80K and sits near $80,000 (-0.9% today). Ether $2,326 (-1.2%). Reports say ~$436M in bullish bets were wiped out in 4 hours.
+5/ Crypto: Bitcoin is $79,985.47, flat on the day.
 
-Why it matters: borrowed money makes dips sharper.
+Why it matters: A jury duty scam took $19,700 via Bitcoin ATM (KHOU). Verify callers first.
 
-Tomorrow: watch $80K.
+Tomorrow: Watch if crypto follows stocks after Anthropic's IPO filing.
 
 Not financial advice.
 ```
 
 **Reply under post 5 · sources**
-(200/280)
+(210/280)
 ```text
-Sources: CBS, NYT, Gulf News, Iran International (politics); Barron's, IBD, Yahoo Finance futures data; CoinGecko, alternative.me, BigGo Finance (crypto).
+Sources: The Washington Post, CNN (politics); Barchart (Anthropic IPO); Yahoo Finance (prices, earnings); economic calendar feed; KHOU (Bitcoin ATM scam); CoinGecko
 Not financial advice. News and analysis only.
 ```
 
 <details><summary>Prices used</summary>
 
 ```text
-S&P 500 futures: 7,668.50 (+0.1%)
-Nasdaq futures: 29,157.25 (+0.1%)
-Oil (WTI): 102.10 (-1.1%)
-Bitcoin: 80,039 (-0.9%)
-Ether: 2,326.16 (-1.2%)
+S&P 500: 7,676.61 (+0.7% vs the last close)
+Nasdaq: 26,169.36 (+0.8% vs the last close)
+Dow: 52,358.79 (+0.3% vs the last close)
+10-yr yield: 4.99% (-0.00 pts vs the last close)
+Oil (WTI): 101.46 (-1.8% vs the last close)
+Gold: 4,020.60 (+0.3% vs the last close)
+Bitcoin: 79,985.47 (-0.0% vs the last close)
+Ether: 2,319.67 (-0.3% vs the last close)
+Solana: 100.78 (-0.4% vs the last close)
 ```
 </details>
 
-## 📋 This morning's posts, ready to copy (Sunday Oct 25)
+## 📋 This morning's posts, ready to copy (Monday Oct 26)
 
-Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
-
-**Post 1 of 5 · Intro** (216/280)
-```text
-1/ Cash Flow Brief, Oct 25 ☀️
-
-Big week for your wallet: the Fed decides on rates Wednesday, Big Tech reports earnings, and the midterms are 9 days away.
-
-What happened, why it matters, and what could happen next 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (246/280)
-```text
-2/ Politics: Trump announced Audi will put $4.2B into a new plant in Georgia.
-
-Why it matters: factory money means local jobs and supplier contracts.
-
-Next: he campaigns in MI, MS, TX and OH this week. Watch for more investment news before Nov 3.
-```
-
-**Post 3 of 5 · 💵 Economy** (258/280)
-```text
-3/ Economy: September inflation hit 3.7%, above the 3.6% forecast. The Fed already raised rates in Sept.
-
-Why it matters: mortgages, car loans and cards stay expensive.
-
-Next: Fed decision Wed, 2 PM ET. A hold is expected. Watch for hints of a December hike.
-```
-
-**Post 4 of 5 · 📈 Stocks** (243/280)
-```text
-4/ Stocks: AI names got hit last week. The Nasdaq fell 2.6% Thursday after Meta's AI spending plan. Meta -7%, AMD -8%.
-
-Why it matters: these are big pieces of most 401(k)s and index funds.
-
-Next: Alphabet and Microsoft report Wed, Amazon Thu.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (243/280)
-```text
-5/ Crypto: Bitcoin ~$80,250, down 1.7% this week. Ether -3.5%. Fear & Greed: 54, neutral.
-
-Why it matters: a slow drift, not a panic.
-
-Next: a tough-sounding Fed on Wednesday could weigh on crypto. A calm one could help.
-
-Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(191/280)
-```text
-Sources: Fox News, Washington Times, Gray DC (politics); CPI and Fed rate data via CNBC and Yahoo Finance; CoinGecko and alternative.me (crypto).
-Not financial advice. News and analysis only.
-```
-
-### Midday take (12-1 PM): Inflation and Wednesday's Fed decision
-
-(250/280)
-```text
-Why this matters for your wallet: inflation is 3.7% and the Fed meets Wednesday.
-
-If it signals a December hike, card and loan rates could rise again. Savings accounts could pay a bit more.
-
-If it sounds calmer, stocks and crypto may get some relief.
-```
-
-**Coming up:** Fed decision Wed Oct 28, 2 PM ET; Alphabet and Microsoft earnings Wed; GDP + PCE and Amazon Thu; midterms Nov 3.
+Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 0 with the sources reply. (Or post all 5 at once before work.)
 
 ## Topics covered, last 14 days
 
@@ -156,25 +93,25 @@ If it sounds calmer, stocks and crypto may get some relief.
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
 | [Sun Oct 25](reports/x-posts/2026-10-25.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Inflation and Wednesday's Fed decision |
 | [Sat Oct 24](reports/x-posts/2026-10-24.md) | ⏭️ | ✅ | ✅ | ✅ | — | Friday's AI and chip stock selloff |
 | Fri Oct 23 | — | — | — | — | — | |
 | Thu Oct 22 | — | — | — | — | — | |
 | Wed Oct 21 | — | — | — | — | — | |
 | Tue Oct 20 | — | — | — | — | — | |
-| Mon Oct 19 | — | — | — | — | — | |
 
 ## Are the source briefs working? (last 7 days)
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Mon 19 | Tue 20 | Wed 21 | Thu 22 | Fri 23 | Sat 24 | Sun 25 |
+| Brief | Tue 20 | Wed 21 | Thu 22 | Fri 23 | Sat 24 | Sun 25 | Mon 26 |
 |---|---|---|---|---|---|---|---|
-| World, politics and the presidency | ❌ | ❌ | 🟡 | ❌ | 🟡 | ❌ | ✅ |
-| Stocks | ✅ | · | ✅ | · | 🟡 | · | · |
-| Crypto | ✅ | 🟡 | ✅ | 🟡 | 🟡 | 🟡 | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
-| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
+| World, politics and the presidency | ❌ | 🟡 | ❌ | 🟡 | ❌ | ✅ | ✅ |
+| Stocks | · | ✅ | · | 🟡 | · | · | ✅ |
+| Crypto | 🟡 | ✅ | 🟡 | 🟡 | 🟡 | ✅ | ✅ |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
+| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | ✅ |
 
 ## 🚀 When to turn on auto-posting
 
