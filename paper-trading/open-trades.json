@@ -1,17 +1,1 @@
-{
- "gold 2026-10-25 20:00": {
-  "instrument": "gold",
-  "session_start": "2026-10-25 20:00",
-  "direction": "short",
-  "contracts": 5,
-  "entry": 4001.5,
-  "entry_time": "20:05",
-  "stop": 4011.1,
-  "sell_plan": [
-   1,
-   2,
-   2
-  ],
-  "sold_so_far": []
- }
-}
+{}
