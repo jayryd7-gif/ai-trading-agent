@@ -58,7 +58,7 @@ from notify import send
 MODEL = "claude-haiku-5-5"                    # the cheapest model: rewriting, no research
 PRICE_IN, PRICE_OUT = 0.10 / 1e6, 0.50 / 1e6  # dollars per token, Claude Haiku 5.5
 EFFORT = "low"            # little thinking needed to rewrite facts we already have
-MAX_TOKENS = 6000
+MAX_TOKENS = 16000         # room for the hidden thinking too; a cut-off answer is lost (Oct 26)
 BUDGET = 0.05             # warn in the log if a run costs more than this (dollars)
 POST_LIMIT = 280          # X's limit for a free account
 BRAND = "Cash Flow Brief"             # the X account's name
