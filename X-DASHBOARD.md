@@ -1,16 +1,76 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-27 05:33 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-27 18:57 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-27.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.015 (4 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.021 (5 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Tuesday Oct 27)
+## 🌙 Tonight's thread, ready to copy (Tuesday Oct 27)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (195/280)
+```text
+1/ Cash Flow Brief: Evening, Oct 27 🌙
+
+Stocks rallied and oil fell, but the 10-year yield is at 4.99% and the Fed decides tomorrow at 2:00 PM.
+
+What happened today and what to watch Wednesday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (239/280)
+```text
+2/ Politics: Israel exit polls show no clear winner, Netanyahu losing majority (Washington Post). Trump rallied in Corpus Christi, Lubbock. Why: Shocks abroad and in Washington move oil and markets. Tomorrow: Watch Israeli count vs. polls.
+```
+
+**Post 3 of 5 · 💵 Economy** (241/280)
+```text
+3/ Economy: NBC: Fed expected to hold rates steady. CFTC sued Utah to block state enforcement. Why: Rates set mortgage and savings yields; 10-year yield is 4.99%. Tomorrow: Fed 2:00 PM (forecast 4.00%), presser 2:30 PM. Watch inflation tone.
+```
+
+**Post 4 of 5 · 📈 Stocks** (240/280)
+```text
+4/ Stocks: Nasdaq +1.2% to 26,474.90, S&P 500 +0.6% to 7,722.98, Dow flat at 52,387.18. IBD says techs and small caps led. Why: Retirement accounts hold these indexes. Tomorrow: Alphabet, KLA, Boston Scientific report Q3. Watch AI spending.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (264/280)
+```text
+5/ Crypto: BTC 80,713.92 (+0.9%), ETH 2,344.42 (+1.0%) per Yahoo Finance.
+
+Why it matters: FXStreet reports Ether ETF outflows near record, which can signal weaker demand.
+
+Tomorrow: Watch if outflows continue after the 2:00 PM Fed decision.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(181/280)
+```text
+Sources: AP, Washington Post, NBC News, CFTC releases (politics, Fed, CFTC); Yahoo Finance prices; Investor's Business Daily; FXStreet. Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,722.98 (+0.6% vs the last close)
+Nasdaq: 26,474.90 (+1.2% vs the last close)
+Dow: 52,387.18 (+0.0% vs the last close)
+10-yr yield: 4.99% (+0.01 pts vs the last close)
+Oil (WTI): 99.91 (-1.8% vs the last close)
+Gold: 4,077.00 (+1.0% vs the last close)
+Bitcoin: 80,713.92 (+0.9% vs the last close)
+Ether: 2,344.42 (+1.0% vs the last close)
+Solana: 101.07 (+0.3% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Tuesday Oct 27)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -90,7 +150,7 @@ Oil is still above $110, and it could decide what you pay at the pump. Here's yo
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | — | US-Iran war and oil prices |
+| [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
 | [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
 | [Sun Oct 25](reports/x-posts/2026-10-25.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Inflation and Wednesday's Fed decision |
 | [Sat Oct 24](reports/x-posts/2026-10-24.md) | ⏭️ | ✅ | ✅ | ✅ | — | Friday's AI and chip stock selloff |
@@ -107,7 +167,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | 🟡 | ❌ | 🟡 | ❌ | ✅ | ✅ | ✅ |
 | Stocks | ✅ | · | 🟡 | · | · | ✅ | · |
 | Crypto | ✅ | 🟡 | 🟡 | 🟡 | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | ✅ |
 | Gold futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
