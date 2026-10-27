@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-27",
+  "written": "2026-10-27 05:33",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-10-27-world-brief.md (Tue Oct 27, today)",
+    "Stocks: reports/stocks/2026-10-26-stock-brief.md (Mon Oct 26, NOT today)",
+    "Crypto: reports/crypto/2026-10-27-crypto-brief.md (Tue Oct 27, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-26-nasdaq-brief.md (Mon Oct 26, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-10-26-gold-brief.md (Mon Oct 26, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Oct 27 ☀️\n\nBrent oil near $114.81 and the Fed decision tomorrow could shape your gas, inflation and rates.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Saudi, Pakistani and Turkish officials met Iran's leaders in Tehran and agreed to keep talking.\n\nWhy it matters: Oil fell for a second day on war-widening hopes. Oil drives gas prices.\n\nNext: If talks stall, watch oil climb again."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: Consumer Confidence at 10:00 AM, forecast 81.2 vs 81.9. Fed decision tomorrow, 2:00 PM, forecast 4.00%.\n\nWhy it matters: Rates set mortgage and savings yields.\n\nNext: If the Fed holds, watch the chair's tone on inflation."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: AT&T fell 8% Friday on a report SpaceX wants access to at least 80,000 US cell sites.\n\nWhy it matters: One report moved a major telecom 8% in a day.\n\nNext: Watch GOOGL and MSFT results Wed, AMZN Thu, for AI spending."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: BTC is $79,704 (-0.6%). Quack AI (Q) is up 66.6% with no confirmed catalyst.\n\nWhy it matters: 241.28M Q tokens unlock Nov 2, adding supply.\n\nNext: If the CFTC advances exchange registration, watch the rules.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, AP, CNBC, Trefis, TheStreet, Cointelegraph, Pluang, CoinGecko live data, Yahoo Finance consensus",
+  "midday": {
+    "story": "US-Iran war and oil prices",
+    "post": "Brent is near $114.81 as Saudi, Pakistani and Turkish officials keep Iran talks going. Why this matters for your wallet: oil feeds gas prices, shipping costs and inflation. If talks stall, watch fuel and grocery prices climb. Not financial advice."
+  },
+  "reply_midday": "Sources: CNBC, Bloomberg, Reuters via Oil & Gas Middle East, AP. Brent price from CNBC settlement data.",
+  "close_watch": "Watch the 10:00 AM Consumer Confidence release (forecast 81.2, previous 81.9) into today's close.",
+  "video": {
+    "script": "Oil is still above $110, and it could decide what you pay at the pump. Here's your Cash Flow Brief for Tuesday, October 27. First, Saudi, Pakistani and Turkish officials met Iran's leaders in Tehran and agreed to keep talking. Oil fell for a second day on hopes the US-Iran war won't widen. If talks stall, oil could climb again and feed into gas and grocery prices. Second, AT&T fell 8% Friday after a report that SpaceX wants access to at least 80,000 US cell sites. Third, the Fed decides tomorrow at 2 PM, with no change expected at 4%. That matters for mortgages and savings yields. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Brent near $114.81",
+      "Consumer Confidence: 10:00 AM today",
+      "Fed decision: Wed 2:00 PM",
+      "AT&T -8% (Friday)",
+      "Not financial advice"
+    ]
+  }
+}
