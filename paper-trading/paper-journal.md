@@ -4,6 +4,31 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-10-27 | Nasdaq (MNQ) | Long | -$688
+- **Session start (New York):** 2026-10-27 09:30
+- **Why:** two 5-minute candles closed beyond the key high (29628.75)
+- **Entry:** Bought **5 contracts** at **29649.5** at **09:40** (sell plan 1/2/2)
+- **Stop:** 29581.25
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 09:45 | Stop | 5 | 29581.25 | -$682 |
+
+- **Exit:** last contract out at **09:45**, average 29581.25
+- **Result:** -$682 before fees, **-$688 after fees**
+- **What could have gone better:**
+  - Price never reached Target 1: the best it did was +28.25 points, and Target 1 needed 30.
+  - The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.
+  - The entry was 20.75 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Fakeout re-entry (switched off): price closed back beyond the entry at 10:30; re-entering 3 contracts at 29652.0 (stop 29606.75) would have made $8.
+  - Biggest move against you while in the trade: 101.50 points ($1,015 on paper). Best move for you: 28.25 points.
+
+![Chart of this trade](charts/2026-10-27-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ❌ 2026-10-26 | Gold (MGC) | Short | -$329
 - **Session start (New York):** 2026-10-25 20:00
 - **Why:** two 5-minute candles closed beyond the key low (4003.1)
@@ -222,8 +247,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **$1,028** over 9 trades
-- **Winners:** 5 (56%), **losers:** 4
-- **Before fees:** $1,071, fees paid: $43
-- **Nasdaq (MNQ):** $667 over 5 trades
+- **Total profit / loss after fees:** **$340** over 10 trades
+- **Winners:** 5 (50%), **losers:** 5
+- **Before fees:** $388, fees paid: $48
+- **Nasdaq (MNQ):** -$20 over 6 trades
 - **Gold (MGC):** $361 over 4 trades
