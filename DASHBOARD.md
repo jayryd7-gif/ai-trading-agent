@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-27 05:00 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-27 06:07 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-27 05:00 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 18 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 22 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 11 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 1 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -81,7 +81,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $4.64 so far this month on 38 AI runs; on pace for about $6 (budget $50).
+- ✅ Spent $4.99 so far this month on 41 AI runs; on pace for about $6 (budget $50).
 
 ##### Agent health
 
@@ -89,7 +89,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ⏳ 6 of 15 trading days on the paper record
+- ⏳ 7 of 15 trading days on the paper record
 - ✅ every paper trade followed the rules
 - ✅ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
