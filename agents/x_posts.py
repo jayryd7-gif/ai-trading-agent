@@ -52,7 +52,7 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from research_tools import SPENT, check_budget, log_cost, run_call
-from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, calendar_text, headlines_text, regulators_text
+from news_feed import MARKET_TOPICS, TOPICS as NEWS_TOPICS, calendar_text, fed_text, headlines_text, regulators_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -141,6 +141,10 @@ Write:
      Next: <what could happen next>
    If a topic has no material at all, leave that post out and renumber. The
    last post must end with a blank line and "{disclaimer}"
+   If the material has a "What the Fed said" section or a Fed rate decision
+   from the last day, add a "🏦 What the Fed said" post right after Economy
+   (section "Fed", 6 posts): bullets for the decision and vote, inflation,
+   jobs or the economy, and what the chair signaled, then "Why it matters".
 2. midday: ONE stand-alone take on the single biggest story in the material,
    framed as "why this matters for your wallet". "story" names the story.
 3. close_watch: one line on what to watch at today's close (or, on a weekend,
@@ -183,6 +187,21 @@ hearings; put crypto rules in the Crypto post):
 
   Tomorrow: <what to watch tomorrow>
 The last post must end with a blank line and "{disclaimer}"
+
+If a FED DECISION section is given below (the Fed announced a rate decision
+in the last day), add one extra post right after the Economy post, section
+"Fed", so the thread has 6 posts (renumber; Crypto stays last). Format:
+  N/ 🏦 What the Fed said:
+
+  • <the decision, and the vote with any dissents>
+  • <the key line on inflation>
+  • <the key line on jobs or the economy>
+  • <what the chair signaled about next steps (press conference headlines)>
+
+  Why it matters: <rates on mortgages, loans, savings>
+Use only the official statement and the headlines. Quote at most a few
+words, and mark press-conference points as reported by the outlet.
+
 Also write reply_evening: the suggested sources reply, naming the outlets and
 data the posts use, like "Sources: Reuters, AP (politics); Yahoo Finance;
 CoinGecko". Do not invent URLs.
@@ -206,6 +225,8 @@ TODAY'S HEADLINES (Google News, last 24 hours):
 
 REGULATORS AND HEARINGS (official SEC and CFTC press releases, hearing headlines):
 {regulators}
+
+{fed}
 
 THIS MORNING'S BRIEFS AND DRAFTS (context, including today's and this week's schedule):
 {morning}"""
@@ -634,7 +655,7 @@ def build_dashboard(now):
                     f"(post 1, tap **+** for each next post, **Post all**), then reply to post "
                     f"{len(nthread)} with the sources reply.", ""]
             for i, item in enumerate(nthread, 1):
-                name = item["section"] if item["section"] == "Intro" else topic_of(item["section"])
+                name = {"Intro": "Intro", "Fed": "🏦 Fed"}.get(item["section"]) or topic_of(item["section"])
                 out.append(post_block(item["post"], f"Post {i} of {len(nthread)} · {name}"))
             if night.get("reply_evening"):
                 out.append(reply_block(night["reply_evening"]).replace(
@@ -651,7 +672,7 @@ def build_dashboard(now):
                 f"with post 5, so they join the same thread. Then reply to post {len(thread)} "
                 "with the sources reply. (Or post all 5 at once before work.)", ""]
         for i, item in enumerate(thread, 1):
-            name = item["section"] if item["section"] == "Intro" else topic_of(item["section"])
+            name = {"Intro": "Intro", "Fed": "🏦 Fed"}.get(item["section"]) or topic_of(item["section"])
             out.append(post_block(item["post"], f"Post {i} of {len(thread)} · {name}"))
         if latest.get("reply_thread"):
             out.append(reply_block(latest["reply_thread"]).replace(
@@ -807,6 +828,9 @@ def evening(now, drafts_file=None):
         prompt = EVENING_PROMPT.format(**date_values(now), numbers=numbers,
                                        calendar=calendar_text(now) or "(not available today)",
                                        regulators=regulators_text() or "(not available today)",
+                                       fed=("FED DECISION (official Federal Reserve statement and "
+                                            "press conference headlines):\n" + fed) if (fed := fed_text())
+                                           else "(No Fed decision today.)",
                                        headlines=headlines or "(none: the free feed failed)",
                                        morning="\n\n".join(context))
         drafts, tokens_in, tokens_out = ask(prompt, EVENING_SCHEMA)

@@ -135,6 +135,70 @@ def regulators_text():
     return "\n\n".join(parts)
 
 
+# The Fed: its official monetary-policy feed. On decision days it has the FOMC
+# statement (2:00 PM New York time); the press conference (2:30 PM) comes from
+# news headlines.
+FED_FEED = "https://www.federalreserve.gov/feeds/press_monetary.xml"
+FED_HEADLINES_QUERY = ("\"Fed chair\" OR FOMC OR \"Federal Reserve\" rate decision OR "
+                       "\"press conference\" OR statement when:12h")
+
+
+def page_text(url, limit=4000):
+    """The readable paragraphs of a web page (simple, no extra libraries)."""
+    import html
+    import re
+    request = urllib.request.Request(url, headers={"User-Agent": "ai-trading-agent research (non-commercial)"})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        raw = response.read().decode("utf-8", "replace")
+    paras = []
+    summary = re.search(r'<meta name="description" content="(.*?)"', raw, re.S)
+    if summary:     # the Fed puts the vote count ("by a 12 - 0 vote") here
+        paras.append("Summary: " + " ".join(html.unescape(summary.group(1)).split()))
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", raw, re.S):
+        text = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", p)).split())
+        boilerplate = (".gov website", "safely connected to the .gov", "central bank of the United States, provides",
+                       "Review of Monetary Policy Strategy")
+        if (len(text) > 80 and not text.startswith(("For release", "For media", "Share"))
+                and not any(b in text for b in boilerplate)):
+            paras.append(text)
+    return "\n\n".join(paras)[:limit]
+
+
+def fed_text(hours=30):
+    """If the Fed released a policy statement in the last `hours` hours: the
+    statement text plus press-conference headlines. Otherwise ""."""
+    try:
+        request = urllib.request.Request(FED_FEED, headers={"User-Agent": "ai-trading-agent research (non-commercial)"})
+        with urllib.request.urlopen(request, timeout=20) as response:
+            root = ET.fromstring(response.read())
+    except Exception as error:      # never let a free feed break an agent
+        print(f"Fed feed failed: {error}")
+        return ""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    parts = []
+    for item in root.findall(".//item"):
+        try:
+            when = parsedate_to_datetime(item.findtext("pubDate"))
+        except (TypeError, ValueError):
+            continue
+        title = item.findtext("title") or ""
+        if when >= cutoff and "statement" in title.lower():
+            try:
+                body = page_text(item.findtext("link"))
+            except Exception as error:
+                body = f"(The statement page could not be read: {error})"
+            parts.append(f"OFFICIAL FOMC STATEMENT ({when.astimezone(ZoneInfo('America/New_York')):%a %b %d %I:%M %p} NY):\n{body}")
+    if not parts:
+        return ""
+    try:
+        rows = fetch(FED_HEADLINES_QUERY, 10)
+        parts.append("PRESS CONFERENCE AND REACTION HEADLINES:\n"
+                     + "\n".join(f"- {t} ({o}, {w})" for t, o, w in rows))
+    except Exception as error:
+        print(f"Fed headlines failed: {error}")
+    return "\n\n".join(parts)
+
+
 CALENDAR_FEED = "https://nfs.faireconomy.media/ff_calendar_thisweek.xml"
 # Which events to show: US events of medium or high impact, and only the
 # high-impact ones from these other economies.

@@ -48,7 +48,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
-from news_feed import calendar_text, headlines_text, regulators_text
+from news_feed import calendar_text, fed_text, headlines_text, regulators_text
 from notify import send
 
 # ---------------- SETTINGS ----------------
@@ -158,6 +158,14 @@ def build_briefing(client, now):
     prompt += ("\n\nECONOMIC CALENDAR (free feed, New York time; official release times):\n"
                + (calendar or "(The calendar could not be reached today. Use one search for "
                               "today's US economic calendar.)"))
+    fed = fed_text()
+    if fed:
+        prompt += ("\n\nFED DECISION (the Fed announced a rate decision in the last day). Add a "
+                   "section \"## What the Fed said\" right after \"Top things for today\": short "
+                   "bullets for the decision and the vote (with any dissents), the key lines on "
+                   "inflation, jobs and the economy, and what the chair signaled at the press "
+                   "conference (from the headlines, credited to the outlet). Quote at most a few "
+                   "words.\n" + fed)
     regulators = regulators_text()
     prompt += ("\n\nREGULATORS AND HEARINGS (official SEC and CFTC press releases, and hearing "
                "headlines):\n" + (regulators or "(These feeds could not be reached today.)"))
