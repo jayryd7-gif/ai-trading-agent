@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-28 13:47 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-28 18:01 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-28 13:47 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 5 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 18 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 9 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 9 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 8 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 7 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 9 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 13 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 13 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 13 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -599,10 +599,10 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 
 ## Scorecard
 
-- Briefs scored: **14** (Bullish or Bearish calls: 2)
+- Briefs scored: **15** (Bullish or Bearish calls: 2)
 - Right: 1, Wrong: 1, Session ended flat: 0
 - Hit rate when the session was decisive: **50%**
-- For comparison, price went up in 54% of decisive sessions
+- For comparison, price went up in 57% of decisive sessions
 - ⚠️ Only 2 directional calls so far. Treat the numbers as noise until there are at least 30.
 
 By confidence:
@@ -627,6 +627,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-10-28 | nasdaq | ◆ Neutral | Low | Up (0.20%) | Moved |
 | 2026-10-27 | gold | ◆ Neutral | Low | Down (-0.44%) | Moved |
 | 2026-10-27 | nasdaq | ◆ Neutral | Low | Up (0.85%) | Moved |
 | 2026-10-26 | nasdaq | ◆ Neutral | Low | Up (0.85%) | Moved |
@@ -636,7 +637,6 @@ By confidence:
 | 2026-10-21 | nasdaq | ◆ Neutral | Low | Up (0.41%) | Moved |
 | 2026-10-20 | gold | ◆ Neutral | Low | Up (0.24%) | Moved |
 | 2026-10-20 | nasdaq | ▼ Bearish | Low | Up (0.32%) | Wrong |
-| 2026-10-19 | nasdaq | ◆ Neutral | Low | Flat (-0.19%) | Calm |
 
 ## Your journals
 
