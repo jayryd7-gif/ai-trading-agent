@@ -1,16 +1,100 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-28 05:41 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-28 19:00 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-28.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.027 (6 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.031 (7 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Wednesday Oct 28)
+## 🌙 Tonight's thread, ready to copy (Wednesday Oct 28)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 6 with the sources reply.
+
+**Post 1 of 6 · Intro** (189/280)
+```text
+1/ Cash Flow Brief: Evening, Oct 28 🌙
+
+The Fed held rates at 3-3/4 to 4 percent, and that sets what you pay on loans and earn on savings.
+
+What happened today and what to watch Thursday 🧵
+```
+
+**Post 2 of 6 · 🌍 World & politics** (267/280)
+```text
+2/ Politics & world: Iran war costs hit $47 billion, per US military estimates (WaPo). Israel's prime minister question is still open after the election (NYT).
+
+Why it matters: more war spending can mean more borrowing.
+
+Tomorrow: Watch whether war costs keep rising.
+```
+
+**Post 3 of 6 · 💵 Economy** (231/280)
+```text
+3/ Economy: Small business owners say inflation and trade war fallout are squeezing them (WCTI).
+
+Why it matters: higher costs can squeeze your budget.
+
+Tomorrow: 8:30 AM Core PCE (forecast 0.3%). Watch whether it shifts rate bets.
+```
+
+**Post 4 of 6 · 🏦 Fed** (242/280)
+```text
+4/ 🏦 What the Fed said:
+
+• Held at 3-3/4 to 4 percent, vote 10-2. Cook and Hammack wanted a hike.
+• Inflation 'remains elevated.'
+• Warsh: awaiting 'more information' (Reuters).
+
+Why it matters: mortgage, loan and savings rates may stay put.
+```
+
+**Post 5 of 6 · 📈 Stocks** (266/280)
+```text
+5/ Stocks: S&P 500 at 7,748.03 (+0.3%). Alphabet slid in early after-hours trading after missing expectations (Union-Bulletin).
+
+Why it matters: big tech moves can hit index funds in your 401(k).
+
+Tomorrow: Intel reports earnings (Yahoo Finance). Watch the reaction.
+```
+
+**Post 6 of 6 · 🪙 Crypto** (248/280)
+```text
+6/ Crypto: Bitcoin at 81,078.60 (+0.3%) after five down days.
+
+Why it matters: Bessent says Treasury will address SEC-CFTC crypto oversight gaps. Rule changes can shift your options.
+
+Tomorrow: Watch whether the bounce holds.
+
+Not financial advice.
+```
+
+**Reply under post 6 · sources**
+(202/280)
+```text
+Sources: Federal Reserve statement; Reuters, CNBC, AP, WaPo (Fed, politics); Yahoo Finance (prices, earnings); Union-Bulletin; TOKENPOST (Bessent); FXStreet
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,748.03 (+0.3% vs the last close)
+Nasdaq: 26,561.23 (+0.3% vs the last close)
+Dow: 52,519.95 (+0.3% vs the last close)
+10-yr yield: 5.05% (+0.05 pts vs the last close)
+Oil (WTI): 102.11 (+2.2% vs the last close)
+Gold: 4,065.20 (-0.2% vs the last close)
+Bitcoin: 81,078.60 (+0.3% vs the last close)
+Ether: 2,353.36 (+0.2% vs the last close)
+Solana: 102.21 (+0.9% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Wednesday Oct 28)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -86,7 +170,7 @@ Fed and Bank of Canada decisions land today, and they could change what you pay 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | — | Today's Fed and Bank of Canada decisions |
+| [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's Fed and Bank of Canada decisions |
 | [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
 | [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
 | [Sun Oct 25](reports/x-posts/2026-10-25.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Inflation and Wednesday's Fed decision |
@@ -103,7 +187,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ❌ | 🟡 | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | 🟡 | · | · | ✅ | · | ✅ |
 | Crypto | 🟡 | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting

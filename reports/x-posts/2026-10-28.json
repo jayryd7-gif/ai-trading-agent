@@ -47,5 +47,36 @@
       "Iran war: $47B+ spent",
       "LEU +11.2% Tuesday"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,748.03 (+0.3% vs the last close)\nNasdaq: 26,561.23 (+0.3% vs the last close)\nDow: 52,519.95 (+0.3% vs the last close)\n10-yr yield: 5.05% (+0.05 pts vs the last close)\nOil (WTI): 102.11 (+2.2% vs the last close)\nGold: 4,065.20 (-0.2% vs the last close)\nBitcoin: 81,078.60 (+0.3% vs the last close)\nEther: 2,353.36 (+0.2% vs the last close)\nSolana: 102.21 (+0.9% vs the last close)",
+    "written": "2026-10-28 19:00",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Oct 28 🌙\n\nThe Fed held rates at 3-3/4 to 4 percent, and that sets what you pay on loans and earn on savings.\n\nWhat happened today and what to watch Thursday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Iran war costs hit $47 billion, per US military estimates (WaPo). Israel's prime minister question is still open after the election (NYT).\n\nWhy it matters: more war spending can mean more borrowing.\n\nTomorrow: Watch whether war costs keep rising."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: Small business owners say inflation and trade war fallout are squeezing them (WCTI).\n\nWhy it matters: higher costs can squeeze your budget.\n\nTomorrow: 8:30 AM Core PCE (forecast 0.3%). Watch whether it shifts rate bets."
+      },
+      {
+        "section": "Fed",
+        "post": "4/ 🏦 What the Fed said:\n\n• Held at 3-3/4 to 4 percent, vote 10-2. Cook and Hammack wanted a hike.\n• Inflation 'remains elevated.'\n• Warsh: awaiting 'more information' (Reuters).\n\nWhy it matters: mortgage, loan and savings rates may stay put."
+      },
+      {
+        "section": "Stocks",
+        "post": "5/ Stocks: S&P 500 at 7,748.03 (+0.3%). Alphabet slid in early after-hours trading after missing expectations (Union-Bulletin).\n\nWhy it matters: big tech moves can hit index funds in your 401(k).\n\nTomorrow: Intel reports earnings (Yahoo Finance). Watch the reaction."
+      },
+      {
+        "section": "Crypto",
+        "post": "6/ Crypto: Bitcoin at 81,078.60 (+0.3%) after five down days.\n\nWhy it matters: Bessent says Treasury will address SEC-CFTC crypto oversight gaps. Rule changes can shift your options.\n\nTomorrow: Watch whether the bounce holds.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Federal Reserve statement; Reuters, CNBC, AP, WaPo (Fed, politics); Yahoo Finance (prices, earnings); Union-Bulletin; TOKENPOST (Bessent); FXStreet"
   }
 }
