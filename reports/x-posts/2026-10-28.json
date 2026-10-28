@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-28",
+  "written": "2026-10-28 05:41",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-10-28-world-brief.md (Wed Oct 28, today)",
+    "Stocks: reports/stocks/2026-10-28-stock-brief.md (Wed Oct 28, today)",
+    "Crypto: reports/crypto/2026-10-28-crypto-brief.md (Wed Oct 28, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-27-nasdaq-brief.md (Tue Oct 27, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-10-27-gold-brief.md (Tue Oct 27, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Oct 28 ☀️\n\nThe Fed and Bank of Canada rate decisions land today, and they set borrowing costs for your mortgage and savings.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ US Iran war spending topped $47B, 25%+ above the Pentagon's July estimate. Trump imposed a naval blockade on Iran. Why it matters: more borrowing, and oil shocks hit gas prices. Next: if fighting restarts, watch oil and gold."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: Fed decision at 2:00 PM ET, forecast to hold at 4.00%. Bank of Canada at 9:45 AM, forecast to hike to 2.50%.\n\nWhy it matters: Rates drive mortgage, card and savings yields.\n\nNext: If the Fed signals more hikes, borrowing costs stay high."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Tuesday, nuclear fuel LEU rose 11.2% and rare earth USAR rose 16.7%, with no company news found.\n\nWhy it matters: Big one-day swings in small groups can reverse fast.\n\nNext: Watch Alphabet and Microsoft results after the close."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin dipped below $80,000, then bounced to $81,393. Quack AI (Q) fell 31.8% after a 261% pump.\n\nWhy it matters: Wash-traded pumps can reverse fast.\n\nNext: If the Fed turns hawkish, watch BTC near $80,000. CLARITY Act is still stuck.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, Yahoo Finance, CNBC, CNN, CoinStats, CoinGecko live data, The Globe and Mail",
+  "midday": {
+    "story": "Today's Fed and Bank of Canada decisions",
+    "post": "Why this matters for your wallet: The Fed decides at 2:00 PM ET, forecast to hold at 4.00%. If it holds, mortgage and card rates may stay high. If it signals more hikes, borrowing costs rise further."
+  },
+  "reply_midday": "Sources: Yahoo Finance, The Globe and Mail, calendar forecasts from our research brief",
+  "close_watch": "Today's close: Alphabet and Microsoft report after the close, and the Fed decision lands at 2:00 PM ET.",
+  "video": {
+    "script": "Fed and Bank of Canada decisions land today, and they could change what you pay on loans. Here's your Cash Flow Brief. First, the Fed decides at 2 PM Eastern, forecast to hold at 4 percent. Bank of Canada is forecast to hike to 2.5 percent. Second, the US has spent over 47 billion dollars on the Iran war, more than 25 percent above the Pentagon's July estimate. More war spending can mean more government borrowing. Third, nuclear fuel stock LEU jumped 11 percent Tuesday, with no company news found. Big swings in small groups can reverse fast. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Fed decision: 2:00 PM ET",
+      "Forecast: hold at 4.00%",
+      "BoC forecast: hike to 2.50%",
+      "Iran war: $47B+ spent",
+      "LEU +11.2% Tuesday"
+    ]
+  }
+}

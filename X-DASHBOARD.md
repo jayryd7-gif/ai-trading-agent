@@ -1,148 +1,84 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-27 18:57 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-28 05:41 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-27.md)
-- **Evening thread:** ✅ ready (below), reminder at 7 PM
-- **Claude cost this month:** $0.021 (5 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-28.md)
+- **Evening thread:** ⏳ about 6:30 PM New York time
+- **Claude cost this month:** $0.027 (6 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Tuesday Oct 27)
-
-What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
-
-**Post 1 of 5 · Intro** (195/280)
-```text
-1/ Cash Flow Brief: Evening, Oct 27 🌙
-
-Stocks rallied and oil fell, but the 10-year yield is at 4.99% and the Fed decides tomorrow at 2:00 PM.
-
-What happened today and what to watch Wednesday 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (239/280)
-```text
-2/ Politics: Israel exit polls show no clear winner, Netanyahu losing majority (Washington Post). Trump rallied in Corpus Christi, Lubbock. Why: Shocks abroad and in Washington move oil and markets. Tomorrow: Watch Israeli count vs. polls.
-```
-
-**Post 3 of 5 · 💵 Economy** (241/280)
-```text
-3/ Economy: NBC: Fed expected to hold rates steady. CFTC sued Utah to block state enforcement. Why: Rates set mortgage and savings yields; 10-year yield is 4.99%. Tomorrow: Fed 2:00 PM (forecast 4.00%), presser 2:30 PM. Watch inflation tone.
-```
-
-**Post 4 of 5 · 📈 Stocks** (240/280)
-```text
-4/ Stocks: Nasdaq +1.2% to 26,474.90, S&P 500 +0.6% to 7,722.98, Dow flat at 52,387.18. IBD says techs and small caps led. Why: Retirement accounts hold these indexes. Tomorrow: Alphabet, KLA, Boston Scientific report Q3. Watch AI spending.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (264/280)
-```text
-5/ Crypto: BTC 80,713.92 (+0.9%), ETH 2,344.42 (+1.0%) per Yahoo Finance.
-
-Why it matters: FXStreet reports Ether ETF outflows near record, which can signal weaker demand.
-
-Tomorrow: Watch if outflows continue after the 2:00 PM Fed decision.
-
-Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(181/280)
-```text
-Sources: AP, Washington Post, NBC News, CFTC releases (politics, Fed, CFTC); Yahoo Finance prices; Investor's Business Daily; FXStreet. Not financial advice. News and analysis only.
-```
-
-<details><summary>Prices used</summary>
-
-```text
-S&P 500: 7,722.98 (+0.6% vs the last close)
-Nasdaq: 26,474.90 (+1.2% vs the last close)
-Dow: 52,387.18 (+0.0% vs the last close)
-10-yr yield: 4.99% (+0.01 pts vs the last close)
-Oil (WTI): 99.91 (-1.8% vs the last close)
-Gold: 4,077.00 (+1.0% vs the last close)
-Bitcoin: 80,713.92 (+0.9% vs the last close)
-Ether: 2,344.42 (+1.0% vs the last close)
-Solana: 101.07 (+0.3% vs the last close)
-```
-</details>
-
-## 📋 This morning's posts, ready to copy (Tuesday Oct 27)
+## 📋 Today's posts, ready to copy (Wednesday Oct 28)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
-**Post 1 of 5 · Intro** (189/280)
+**Post 1 of 5 · Intro** (207/280)
 ```text
-1/ Cash Flow Brief, Oct 27 ☀️
+1/ Cash Flow Brief, Oct 28 ☀️
 
-Brent oil near $114.81 and the Fed decision tomorrow could shape your gas, inflation and rates.
+The Fed and Bank of Canada rate decisions land today, and they set borrowing costs for your mortgage and savings.
 
 What happened, why it matters, and what could happen next 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (243/280)
+**Post 2 of 5 · 🌍 World & politics** (228/280)
 ```text
-2/ Politics: Saudi, Pakistani and Turkish officials met Iran's leaders in Tehran and agreed to keep talking.
-
-Why it matters: Oil fell for a second day on war-widening hopes. Oil drives gas prices.
-
-Next: If talks stall, watch oil climb again.
+2/ US Iran war spending topped $47B, 25%+ above the Pentagon's July estimate. Trump imposed a naval blockade on Iran. Why it matters: more borrowing, and oil shocks hit gas prices. Next: if fighting restarts, watch oil and gold.
 ```
 
-**Post 3 of 5 · 💵 Economy** (233/280)
+**Post 3 of 5 · 💵 Economy** (249/280)
 ```text
-3/ Economy: Consumer Confidence at 10:00 AM, forecast 81.2 vs 81.9. Fed decision tomorrow, 2:00 PM, forecast 4.00%.
+3/ Economy: Fed decision at 2:00 PM ET, forecast to hold at 4.00%. Bank of Canada at 9:45 AM, forecast to hike to 2.50%.
 
-Why it matters: Rates set mortgage and savings yields.
+Why it matters: Rates drive mortgage, card and savings yields.
 
-Next: If the Fed holds, watch the chair's tone on inflation.
+Next: If the Fed signals more hikes, borrowing costs stay high.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (227/280)
+**Post 4 of 5 · 📈 Stocks** (238/280)
 ```text
-4/ Stocks: AT&T fell 8% Friday on a report SpaceX wants access to at least 80,000 US cell sites.
+4/ Stocks: Tuesday, nuclear fuel LEU rose 11.2% and rare earth USAR rose 16.7%, with no company news found.
 
-Why it matters: One report moved a major telecom 8% in a day.
+Why it matters: Big one-day swings in small groups can reverse fast.
 
-Next: Watch GOOGL and MSFT results Wed, AMZN Thu, for AI spending.
+Next: Watch Alphabet and Microsoft results after the close.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (241/280)
+**Post 5 of 5 · 🪙 Crypto** (269/280)
 ```text
-5/ Crypto: BTC is $79,704 (-0.6%). Quack AI (Q) is up 66.6% with no confirmed catalyst.
+5/ Crypto: Bitcoin dipped below $80,000, then bounced to $81,393. Quack AI (Q) fell 31.8% after a 261% pump.
 
-Why it matters: 241.28M Q tokens unlock Nov 2, adding supply.
+Why it matters: Wash-traded pumps can reverse fast.
 
-Next: If the CFTC advances exchange registration, watch the rules.
+Next: If the Fed turns hawkish, watch BTC near $80,000. CLARITY Act is still stuck.
 
 Not financial advice.
 ```
 
 **Reply under post 5 · sources**
-(160/280)
+(140/280)
 ```text
-Sources: Reuters, AP, CNBC, Trefis, TheStreet, Cointelegraph, Pluang, CoinGecko live data, Yahoo Finance consensus
+Sources: Reuters, Yahoo Finance, CNBC, CNN, CoinStats, CoinGecko live data, The Globe and Mail
 Not financial advice. News and analysis only.
 ```
 
-### Midday take (12-1 PM): US-Iran war and oil prices
+### Midday take (12-1 PM): Today's Fed and Bank of Canada decisions
 
-(247/280)
+(199/280)
 ```text
-Brent is near $114.81 as Saudi, Pakistani and Turkish officials keep Iran talks going. Why this matters for your wallet: oil feeds gas prices, shipping costs and inflation. If talks stall, watch fuel and grocery prices climb. Not financial advice.
+Why this matters for your wallet: The Fed decides at 2:00 PM ET, forecast to hold at 4.00%. If it holds, mortgage and card rates may stay high. If it signals more hikes, borrowing costs rise further.
 ```
 
 <details><summary>🎬 Video script (30-60 sec)</summary>
 
 ```text
-Oil is still above $110, and it could decide what you pay at the pump. Here's your Cash Flow Brief for Tuesday, October 27. First, Saudi, Pakistani and Turkish officials met Iran's leaders in Tehran and agreed to keep talking. Oil fell for a second day on hopes the US-Iran war won't widen. If talks stall, oil could climb again and feed into gas and grocery prices. Second, AT&T fell 8% Friday after a report that SpaceX wants access to at least 80,000 US cell sites. Third, the Fed decides tomorrow at 2 PM, with no change expected at 4%. That matters for mortgages and savings yields. Not financial advice. Follow for tomorrow's brief.
+Fed and Bank of Canada decisions land today, and they could change what you pay on loans. Here's your Cash Flow Brief. First, the Fed decides at 2 PM Eastern, forecast to hold at 4 percent. Bank of Canada is forecast to hike to 2.5 percent. Second, the US has spent over 47 billion dollars on the Iran war, more than 25 percent above the Pentagon's July estimate. More war spending can mean more government borrowing. Third, nuclear fuel stock LEU jumped 11 percent Tuesday, with no company news found. Big swings in small groups can reverse fast. Not financial advice. Follow for tomorrow's brief.
 ```
 </details>
 
-**Coming up:** Watch the 10:00 AM Consumer Confidence release (forecast 81.2, previous 81.9) into today's close.
+**Coming up:** Today's close: Alphabet and Microsoft report after the close, and the Fed decision lands at 2:00 PM ET.
 
 ## Topics covered, last 14 days
 
@@ -150,25 +86,25 @@ Oil is still above $110, and it could decide what you pay at the pump. Here's yo
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | — | Today's Fed and Bank of Canada decisions |
 | [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
 | [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
 | [Sun Oct 25](reports/x-posts/2026-10-25.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Inflation and Wednesday's Fed decision |
 | [Sat Oct 24](reports/x-posts/2026-10-24.md) | ⏭️ | ✅ | ✅ | ✅ | — | Friday's AI and chip stock selloff |
 | Fri Oct 23 | — | — | — | — | — | |
 | Thu Oct 22 | — | — | — | — | — | |
-| Wed Oct 21 | — | — | — | — | — | |
 
 ## Are the source briefs working? (last 7 days)
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Wed 21 | Thu 22 | Fri 23 | Sat 24 | Sun 25 | Mon 26 | Tue 27 |
+| Brief | Thu 22 | Fri 23 | Sat 24 | Sun 25 | Mon 26 | Tue 27 | Wed 28 |
 |---|---|---|---|---|---|---|---|
-| World, politics and the presidency | 🟡 | ❌ | 🟡 | ❌ | ✅ | ✅ | ✅ |
-| Stocks | ✅ | · | 🟡 | · | · | ✅ | · |
-| Crypto | ✅ | 🟡 | 🟡 | 🟡 | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | ✅ |
-| Gold futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
+| World, politics and the presidency | ❌ | 🟡 | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Stocks | · | 🟡 | · | · | ✅ | · | ✅ |
+| Crypto | 🟡 | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
+| Gold futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
 
