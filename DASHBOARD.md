@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-27 21:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-28 04:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-27 21:32 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 38 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 45 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -266,73 +266,72 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-27, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-10-28, event risk High</b></summary>
 
 #### Top things for today
-1. **Iran diplomacy and oil.** Saudi, Pakistani and Turkish officials met Iranian leaders in Tehran on Monday and agreed to keep talking. Oil fell for a second day on hopes that the US-Iran war won't widen. Brent was near $114.81 early Tuesday. Houthi attacks on Saudi Arabia have continued in recent weeks. (CNBC, Bloomberg, Reuters via others) Why it matters: energy prices, inflation expectations and safe-haven demand.
-2. **Trump and Rubio at a Venezuelan crude tanker.** The visit is in Port Arthur, Texas, the same day Trump campaigns in the state. He has rallies set for Corpus Christi and Lubbock. (AP) Why it matters: any Trump remarks on oil, Iran or Venezuela could move energy and the dollar.
-3. **Fed decision is tomorrow, 2:00 PM.** The calendar forecast is no change at 4.00%. A Globe and Mail/Yahoo Finance headline says a new source of inflation has put Fed Chair Kevin Warsh and the FOMC in a bind (headline only). Why it matters: rates, the dollar and gold.
-4. **CB Consumer Confidence at 10:00 AM.** The forecast is 81.2, down from 81.9. Why it matters: growth and rate expectations ahead of the Fed.
-5. **Israel election.** The Jerusalem Post reports Netanyahu and Eisenkot are battling for power, and CBS News calls the race wide open (headline only). Why it matters: Middle East risk and safe-haven demand.
+1. **FOMC decision, 2:00 PM, press conference 2:30 PM.** The calendar forecast is no change at 4.00%. Headlines from Yahoo Finance and The Globe and Mail say rates should hold, with at least three hikes expected by September 2027 (headline only). Why it matters: rates, the dollar and gold.
+2. **Bank of Canada decision, 9:45 AM.** The calendar forecast is 2.50%, up from 2.25%. The Monetary Policy Report comes out at the same time, and the press conference is at 10:30 AM. Why it matters: Canadian rates and the dollar.
+3. **Iran war costs and risk of renewed fighting.** The US military has spent over $47 billion on the Iran war, more than 25% above the Pentagon's July estimate (Reuters). Trump has imposed a naval blockade on Iran to cut its oil export income. He has also kept open restarting combat after the midterms. Why it matters: energy prices and safe-haven demand.
+4. **Israel's election has no clear winner.** Partial results show Netanyahu's bloc at 56 seats and Eisenkot's at 48. A coalition needs 61. (CNBC) Why it matters: Middle East risk and war policy.
+5. **UK Budget at 8:30 AM.** The calendar lists the Annual Budget Release as high impact. I found no detail on its contents. Why it matters: gilts and sterling.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| Not announced | Trump and Rubio show off a Venezuelan crude tanker | Port Arthur, Texas | Reported by AP from anonymous officials; time (unconfirmed) |
-| Not announced | Trump campaign rallies | Corpus Christi and Lubbock, Texas | Reported by AP; times (unconfirmed) |
-| 10:00 AM | CB Consumer Confidence (forecast 81.2, previous 81.9) | USD | Yes |
+| 8:30 AM | Annual Budget Release (high impact) | UK (GBP) | Yes |
+| 9:45 AM | BOC Overnight Rate, forecast 2.50%, previous 2.25% | Canada | Yes |
+| 9:45 AM | BOC Rate Statement and Monetary Policy Report | Canada | Yes |
+| 10:30 AM | BOC Press Conference | Canada | Yes |
+| 2:00 PM | Federal Funds Rate, forecast 4.00%, previous 4.00% | US Fed | Yes |
+| 2:00 PM | FOMC Statement | US Fed | Yes |
+| 2:30 PM | FOMC Press Conference | US Fed | Yes |
+| Not stated | Trump campaign push in Texas, with Talarico also campaigning (wandtv.com headline) | Texas | (unconfirmed) |
 
 Coming up this week:
-- **Wed Oct 28:**
-  - 8:30 AM: UK Annual Budget.
-  - 9:45 AM: Bank of Canada Monetary Policy Report and rate statement. The overnight rate forecast is 2.50%, previous 2.25%.
-  - 10:30 AM: BOC press conference.
-  - 2:00 PM: FOMC rate decision and statement. The forecast is 4.00%, previous 4.00%.
-  - 2:30 PM: FOMC press conference.
-- **Thu Oct 29:**
-  - 8:30 AM: Advance GDP, forecast 3.2% (previous 1.5%), and Core PCE m/m, forecast 0.3% (previous 0.2%).
-  - 9:15 AM: ECB rate decision, forecast 2.65% (previous 2.65%), and policy statement.
-  - 9:45 AM: ECB press conference.
-  - 10:30 PM: BOJ policy rate (forecast below 1.25%, same as previous) and statement.
-  - 10:31 PM: BOJ Outlook Report.
-- **Fri Oct 30, 1:30 AM:** BOJ press conference.
+- Thu 8:30 AM: US Advance GDP (forecast 3.2%, previous 1.5%).
+- Thu 8:30 AM: Core PCE (forecast 0.3%, previous 0.2%).
+- Thu 8:30 AM: Unemployment Claims (forecast 198K, previous 194K).
+- Thu 9:15 AM: ECB rate (forecast 2.65%, previous 2.65%). The ECB press conference follows at 9:45 AM.
+- Thu 10:30 PM: BOJ policy rate (forecast below 1.25%, previous below 1.25%). The Outlook Report follows at 10:31 PM.
+- Fri 1:30 AM: BOJ press conference.
 
 #### Event risk today
-Medium - Only one medium-impact US data release is scheduled, but Iran headlines and Trump's Texas appearances could move energy, and the Fed, BOC and UK Budget follow tomorrow.
+High - The Fed and Bank of Canada decisions both come today, along with the UK Budget. The Iran war and Israel's unsettled election add geopolitical risk.
 
 #### Politics and policy
-- **Trump and Rubio:** Rubio is also national security adviser. It is highly unusual for the top diplomat to join political travel. Trump is trying to shore up support for Senate candidate Ken Paxton, who is in a tight race with Democrat James Talarico. (AP)
-- **Fed:** The Seattle Times ran "5 things to watch" from the Fed's next meeting (headline only). The Globe and Mail/Yahoo Finance piece on Warsh and inflation is noted above.
-- **Midterms and courts:** The Washington Post says California ballots Trump targeted can be counted for now under a court ruling (headline only, Washington Post). The Post also reports a judge halted tree removal and set new limits on Trump's golf project (headline only).
-- **Congress:** Bloomberg Government says a changing Congress threatens to challenge corporate leadership (headline only).
-- **Overnight Trump remarks:** Nothing found in the sources.
+- **Fed:** The 2:00 PM decision is still ahead. A GuruFocus headline says the Fed maintains rates, but the calendar shows the decision comes at 2:00 PM (headline only). Don't treat that as a result.
+- **Trump overnight:** Headlines say Trump and Talarico made a final push in Texas (wandtv.com, headline only). A Kansas Reflector opinion piece says Trump spoke in Kansas (headline only). I found no Trump quotes on the economy.
+- **Midterms:** Al Jazeera and Euronews carry midterm pieces (headline only). I found no headlines on bills or Treasury action.
+- **War funding:** More than $29 billion is projected to replace munitions used in the conflict. (Reuters via Business Standard) Why it matters: deficits and Treasury supply.
 
 #### Economics
-Nothing found. The calendar lists no data released overnight. The World Economic Forum published "5 major challenges facing the global economy" (headline only).
+Nothing found on US data released overnight. The calendar's data releases today are the BOC, the UK Budget and the Fed. The Money Talks News and NDTV headlines are consumer inflation features, not data releases (headline only).
 
 #### SEC, CFTC and hearings
-- **SEC:** Nothing in the last 2 days (official press releases).
-- **CFTC:** The CFTC and the NBA signed an MOU on protecting the integrity of professional basketball (CFTC press release, Mon Oct 26, 10:00 AM). Gaming Intelligence says the NBA also signed integrity deals with Kalshi and Polymarket (headline only).
-- **Crypto registration:** Crypto Economy says the CFTC is pushing its crypto exchange registration plan forward after the CLARITY Act stalled (headline only).
-- **Kraken parent Payward:** FinanceFeeds says Payward plans to become the first CFTC-regulated HIP-3 deployer on Hyperliquid (headline only).
-- **Hearings:** No Fed, Treasury, SEC or bank-official hearings found for today.
+- **SEC:** Nothing in the last two days.
+- **CFTC and Utah:** The CFTC sued Utah on Tuesday to block state enforcement against prediction markets (CFTC release).
+- **COT report:** The CFTC announced the COT report will be published twice a week. Quantum Commodity Intelligence says this covers oil positioning data (headline only).
+- **NBA agreement:** The CFTC and the NBA signed an MOU on Monday to protect the integrity of professional basketball (CFTC release).
+- **Polymarket:** Yahoo Finance runs a story headed "The Soldier, VPN and $400K Test To CFTC's Reach as Polymarket Probe Returns" (headline only).
+- **Hearings:** No congressional hearings found.
 
 #### War, trade and tariffs
-- **US-Iran war (ninth month):** Trump continues to weigh stepping up military operations against Tehran. (CNBC) Monday's settlements: Brent at $115.81 and WTI at $101.76. (CNBC) Brent's Friday close of $116.72 was its highest since April. October was the worst month for attacks on shipping in and near the Strait of Hormuz since 2017, per a think-tank cited by the source. Why it matters: oil, shipping costs and inflation.
-- **Tehran talks:** Saudi Arabia said the visit aimed to open negotiating channels and prevent a return to military escalation. (Reuters via Oil & Gas Middle East) Al Jazeera reports the four countries agreed to continue talks (headline only).
-- **Venezuela:** The Port Arthur event is tied to Venezuelan crude headed to Texas refineries. Why it matters: US crude supply and sanctions policy.
-- **Trade:** TBS News carries a headline that Carney says the US is moving closer to Canada's trade demands as the midterms approach (headline only). I found no new tariff deadlines.
+- **Iran:** Trump launched the war jointly with Israel in February. An April ceasefire gave Iran time to restore some defenses, missiles and drones. US officials say the Pentagon has been planning to restart heavy fighting if ordered. (Reuters) CBS also reports a Saudi-Houthi fight, with Egypt getting involved (headline only). Why it matters: oil, shipping and gold.
+- **Israel:** Times of Israel's live blog notes the shekel weakened against the dollar. Democrats chairman Yair Golan urged the opposition to form a government backed by Arab parties. (Ynet)
+- **Tariffs and trade:** Nothing found.
 
 #### Country briefs
-- **China:** TBS News headline: countries are caught between the US and China as AI rivalry intensifies (headline only).
-- **European Union:** Reuters: European shares fell as HSBC weighed and France protests kept investors wary (headline only). The ECB decides Thursday.
-- **United Kingdom:** The Annual Budget is due Wednesday at 8:30 AM (calendar). No other UK news found.
-- **Japan:** The BOJ decision is Thursday at 10:30 PM, with the press conference Friday at 1:30 AM (calendar). The forecast is no change in the policy rate.
-- **India:** Nothing found.
+- **China:**
+  - Volkswagen plans to take its China-developed technology global (Reuters, headline only).
+  - Bloomberg reports Mbappé apologized after a China backlash (headline only).
+- **European Union:** Nothing found in headlines. The ECB decision is Thursday at 9:15 AM.
+- **United Kingdom:** The Budget is released at 8:30 AM. I found no headlines on its contents.
+- **Japan:** Nothing found in headlines. The BOJ decision is Thursday at 10:30 PM.
+- **India:** NDTV reports a survey in which 62% of Indians say salary growth can't keep up with inflation (headline only).
 - **Russia:** Nothing found.
-- **Canada:** The BOC decides Wednesday at 9:45 AM, with a forecast of 2.50% against 2.25% before (calendar). The Carney trade headline is noted above (headline only).
+- **Canada:** The BOC decision is at 9:45 AM and the forecast is a hike to 2.50%. The press conference is at 10:30 AM.
 
-[Read the full brief with all the details](reports/news/2026-10-27-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-28-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
