@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-27 20:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-27 21:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-27 20:51 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 12 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 1 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 16 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 16 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 38 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -58,15 +58,15 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**⚠️ 1 thing(s) to look at** ([read the full check](reports/ceo/latest.md))
+**❌ 1 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
 
 ##### Futures paper trader
 
-- ✅ All 10 paper trades followed the rules (one per session, inside the 60-minute window, right size, stop managed).
-- ⚠️ Tradeify practice evaluation: $96 above the $2,000 trailing drawdown floor.
+- ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
+- ✅ Tradeify practice evaluation: $1,610 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -83,7 +83,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $5.20 so far this month on 42 AI runs; on pace for about $6 (budget $50).
+- ✅ Spent $5.33 so far this month on 44 AI runs; on pace for about $6 (budget $50).
 
 ##### Agent health
 
@@ -91,11 +91,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ⏳ 7 of 15 trading days on the paper record
-- ✅ every paper trade followed the rules
-- ✅ the Tradeify practice account never failed
+- ⏳ 8 of 15 trading days on the paper record
+- ⏳ 1 rule problem(s) in the paper trader above
+- ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 1.16 (needs 1.3 or more), total $340 over 10 trades
+- ⏳ profit factor 0.98 (needs 1.3 or more), total $-50 over 11 trades
 - ✅ worst trading day $-888 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
