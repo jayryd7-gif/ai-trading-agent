@@ -1,6 +1,6 @@
 # Brief scorecard
 
-Updated 2026-10-29 07:15 New York time. Scored briefs: 16. Waiting to be scored: 0.
+Updated 2026-10-29 18:03 New York time. Scored briefs: 16. Waiting to be scored: 0.
 
 > **Too few directional calls to trust any of this yet.** There are 2 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
