@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-10-29 | Gold (MGC) | Short | -$365
+- **Session start (New York):** 2026-10-28 20:00
+- **Why:** two 5-minute candles closed beyond the key low (4063.0)
+- **Entry:** Sold short **5 contracts** at **4057.4** at **20:05** (sell plan 1/2/2)
+- **Stop:** 4067.9
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 20:30 | Target 1 | 1 | 4051.4 | $60 |
+| 21:15 | Stop | 4 | 4067.9 | -$420 |
+
+- **Exit:** last contract out at **21:15**, average 4064.6
+- **Result:** -$360 before fees, **-$365 after fees**
+- **What could have gone better:**
+  - Target 1 paid $60, but the stop stayed at the start. Moving it to breakeven after Target 1 would have ended this trade at about $60 instead of -$360.
+  - The entry was 5.60 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Biggest move against you while in the trade: 12.50 points ($625 on paper). Best move for you: 9.60 points.
+
+![Chart of this trade](charts/2026-10-28-gold.svg)
+
+[Open Gold (MGC) on TradingView](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ❌ 2026-10-28 | Nasdaq (MNQ) | Short | -$681
 - **Session start (New York):** 2026-10-28 09:30
 - **Why:** two 5-minute candles closed beyond the key low (29888.25)
@@ -296,8 +320,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$730** over 12 trades
-- **Winners:** 5 (42%), **losers:** 7
-- **Before fees:** -$674, fees paid: $56
+- **Total profit / loss after fees:** **-$1,096** over 13 trades
+- **Winners:** 5 (38%), **losers:** 8
+- **Before fees:** -$1,034, fees paid: $61
 - **Nasdaq (MNQ):** -$702 over 7 trades
-- **Gold (MGC):** -$29 over 5 trades
+- **Gold (MGC):** -$394 over 6 trades
