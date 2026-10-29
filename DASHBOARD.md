@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-29 04:46 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-29 05:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,11 +16,11 @@ Last updated 2026-10-29 04:46 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -351,58 +351,64 @@ High - US GDP and core PCE, the ECB decision and press conference, and the BOJ d
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-28</b></summary>
+<summary><b>🪙 Crypto brief, 2026-10-29</b></summary>
 
 #### Top things today
-1. **Fed decision today.** Bitcoin dipped below $80,000 on risk-off mood ahead of the Fed decision on Oct 28 (CoinStats). BTC has since bounced to $81,393. Why it matters: the rate decision is the main macro risk for every coin today.
-2. **Whales are turning bearish on derivatives.** Glassnode says Bitcoin whales on Hyperliquid are net short for the first time since March (crypto.news). Glassnode says both a deeper pullback and a short squeeze are possible. Why it matters: crowded shorts can fuel a sharp move either way.
-3. **Quack AI (Q) is down 31.8% after a huge pump.** It jumped 261% on Oct 27, and 78% of its volume was flagged as wash trading (Pluang). No verified catalyst was found (Coincu). Why it matters: it is a clear example of a manipulated move.
-4. **The CLARITY Act is still stuck.** A Sept 15 Senate cloture vote failed 49 to 50 (CoinStats, citing FluidRWA). Why it matters: the industry is leaning on the SEC and CFTC for rules instead.
-5. **ETF outflows and liquidations are weighing on the market.** Bitcoin's recent decline has coincided with large US spot ETF withdrawals and leveraged liquidations (crypto.news). Why it matters: ETF flows are a key demand signal.
+
+1. **Bitcoin is back near $80,000 after the Fed held rates.** The Fed kept rates at 3.75%-4% on October 28 in a 10-2 vote. It said inflation is still elevated, so future hikes remain possible. (Motley Fool, Bitcoin Foundation) Why it matters: a December hike is still being debated.
+2. **Strategy reports earnings today (Oct 29).** Last week it bought no bitcoin and held at 848,517 BTC. It spent about $204.9M buying back STRC preferred shares instead. (The Block) Why it matters: the biggest corporate buyer paused.
+3. **Whales sent a lot of BTC to exchanges.** Lookonchain said three whales moved 6,168 BTC (about $498.5M) to Coinbase Prime overnight. (crypto.news) Why it matters: deposits can mean selling, but that is not confirmed.
+4. **Bitcoin options expire Friday.** More than $11.1B in bitcoin options expire two days after the Fed decision. (Cryptoticker) Why it matters: expiry can add volatility.
+5. **Two trending coins dropped hard.** Axis Robotics (AXIS) fell 38.3% and Quack AI (Q) fell 25.0% in 24 hours (CoinGecko trending data). I found no cause for either. Why it matters: sharp falls in thinly traded coins.
 
 #### Coins to research
+
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Bitway (BTW) | +27.5% | An earlier rally was explained by a short squeeze, with no announcement found (CoinStats). I found no news for today's move. | One wallet reportedly holds over 72% of supply. 101.63M BTW unlock is due Nov 2. Volume is only $14.5M against a $2.7B market cap. 7d is -15.8%. |
-| Quack AI (Q) | -31.8% | Reversal after the 261% pump. | Wash trading flagged. The contract is mintable. Retail float is near zero. No news. |
-| Pepe (PEPE) | +15.2% | No catalyst found. It is trending and sits at +8.5% over 7d. | Meme coin. Pump with no news found. |
-| Pons (PONS) | +15.3% | No news found. | Small cap ($191M). Volume is high relative to cap. Pump with no news. |
-| MemeCore (M) | +13.0% | No news found. It is +45% over 7d. | Only $3.2M volume on a $2.5B cap. Meme-style asset. |
-| STONK | +11.4% | No news found. Trending, rank 257. | Small cap, meme-type, no news. |
+| Pearl (PEARL) | +10.9% (7d -22.9%) | Coinbase added it to its listing roadmap on Oct 19. It is an AI-linked chain built around "proof of useful work." (Yahoo Finance, Cryptonews) | Still down 22.9% on the week. About 352.6M of 2.1B max tokens circulate, so more supply is due. A roadmap listing is not a confirmed listing. |
+| Ape and Pepe (APEPE) | +15.6% | I found no news for today's move. | Pump with no news. Market cap is $292M. A past exchange suspension (Toobit, 2025) is noted on CoinMarketCap. |
+| Axis Robotics (AXIS) | -38.3% | No cause found. A similarly named "Axis Labs (AXIS)" was on Coinbase's roadmap. I could not confirm it is the same token. (unconfirmed) | Rank 794. Very small. Sudden crash. |
+| Quack AI (Q) | -25.0% | No cause found. | Trending for a sharp drop. No news found. |
+| Kinetiq (KNTQ) | +2.1% (7d +15.0%) | No news found. | Moderate volume ($6.7M) against a $141.6M cap. Move is small today. |
+| Quantus (QTC) | +4.0% | No news found. | Rank 760. Small cap. |
 
 #### Whale watch
+
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Oct 27 (time unconfirmed) | BTC (11,330) | ~$903M | Whale dormant 5 months (Bitbase report) | Off an exchange (Binance to two new cold addresses) |
-| Overnight Oct 27–28 (time unconfirmed) | BTC | ~$500M | Unidentified whale(s) (Arkham, via crypto.news) | Onto an exchange (Coinbase Prime). Arkham did not confirm a sale. |
+| Overnight, Oct 28 (exact time not given) | BTC | ~$498.5M (6,168 BTC) | Three unnamed whales (Lookonchain) | Onto an exchange (Coinbase Prime) |
+| Around Oct 28 (time not given) | BTC | ~$35.4M | Unnamed (Arkham) | Onto an exchange. Reports don't say whether it overlaps with the $498.5M above. (unconfirmed) |
+| Since early Oct | BTC | ~$771.5M (9,458 BTC) | 40 wallets (Lookonchain) | Off an exchange (Wintermute). This is a month-to-date total, not a one-day move. |
 
-Background: Lookonchain tracked 9,458 BTC ($771.5M) withdrawn from Wintermute to 40 new wallets since Oct. 1. That is a month-long total, not a one-day move.
+AMBCrypto also headlined a $903M whale buy. I could not verify the details.
 
 #### Government and regulation
-- **CLARITY Act (Senate):** It is not law. It would split SEC and CFTC jurisdiction and create a "digital commodity" category (Holland & Knight). Sen. Lummis says it now includes Democratic requests to cut the Regulation Crypto fundraising cap from $75M to $50M, with a $200M lifetime limit (CoinStats, citing Hokanews).
-- **CFTC:** It sued Utah as the prediction-market fight reaches 10 states, and Polymarket faces renewed scrutiny over a $1.4M settlement (crypto.news). It has also proposed Regulation CTX and Regulation CAM for crypto trading (CoinStats).
-- **OCC/banking:** Ripple got final OCC approval for a national trust bank. Kraken launched CFTC-regulated perpetuals on Hyperliquid (Bitbase).
-- **Other countries:** Nothing found.
+
+- **CLARITY Act (market structure):** It is not law. A Sept 15 Senate cloture vote failed 49 to 50. Sen. Lummis says it now cuts the "Regulation Crypto" fundraising cap from $75M to $50M and adds a $200M lifetime limit. (CoinStats, citing Hokanews)
+- **CFTC:** It has proposed rules for crypto trading called Regulation CTX and Regulation CAM. (CoinStats)
+- **SEC:** It proposed Regulation Crypto Assets, with offering exemptions, and set temporary relief for tokenized stock venues on Sept 17. (Bitcoin Foundation) These are older than "the last few days."
+- **UK:** The Admiral Markets source list shows an FCA headline about a ban, but the text was cut off. (unconfirmed)
+- No new bills or amendments from the last few days were found beyond the above.
 
 #### Who is buying and adopting
-- Governments buying bitcoin: Nothing found.
-- BlackRock joined SBI and Startale to link tokenized funds with a yen stablecoin (crypto.news).
-- Hong Kong Gold Exchange is using Chainlink for gold token transfers (crypto.news).
-- The OCC is encouraging community banks to become payment stablecoin issuers (Coincu headline).
+
+- **Strive (ASST):** Bought 6,182 BTC from Oct 17 to 23, taking holdings to about 43,000 BTC. (24/7 Wall St.)
+- **Strategy:** Paused buying, as above.
+- **US government:** It still hasn't bought any bitcoin for its reserve. The reserve holds only seized coins. (bit.com)
+- **ETFs:** US spot Bitcoin ETFs took in $110.3M on Oct 26 and about $176M on Oct 27. (Admiral Markets)
+- No new company stablecoin payment launches found.
 
 #### Next 7 days
+
 | Date | Event | Coin or topic |
 |---|---|---|
-| Oct 28 | Fed policy decision (release time unconfirmed) | Macro / all crypto |
-| Oct 29 | 59.26M CARDS unlock, about $17.6M (BeInCrypto) | Collector Crypt (CARDS) |
-| Oct 29 | Falcon Finance unlock of about $19.65M, 8.44% of market value (cryptonews.net; time zone unconfirmed) | FF |
-| Oct 30–31 | Monthly unlocks (CryptoUniversity) | OP, TIA |
-| Nov 1 | 13.15M SUI unlock (BeInCrypto). Largest daily unlock total of the week, $66.88M (TokenPost). | SUI |
-| Nov 2 | 101.63M BTW unlock (CoinStats) | Bitway (BTW) |
+| Thu Oct 29 | Strategy earnings | BTC / MSTR |
+| Fri Oct 30 | Bitcoin options expiry (~$11.1B–$12.2B, sources differ) | BTC |
+| Tue Nov 3 | US midterm elections | Policy / market mood |
 
-I found no scheduled hearings or ETF deadlines.
+No token unlocks, upgrades, hearings or ETF deadlines were found.
 
-[Read the full brief with all the details](reports/crypto/2026-10-28-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-10-29-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
