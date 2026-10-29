@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-29 08:39 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-29 10:03 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-29 08:39 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 27 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 11 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 1 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 15 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 5 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 5 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 29 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -34,6 +34,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 | Date | Market | Side | Lots | Entry | Target 1 | Target 2 | Target 3 / out | Result | What could have gone better | See it |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-29 | Nasdaq | – | 0 | skipped: risk too big | | | | $0 | Breakout short at 09:35, but even the small size risked $1,101 and only $464 could be lost today without breaking the daily loss limit or the drawdown, so it was skipped. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-10-29 | Gold | short | 5 | 4057.4 @ 20:05<br>stop 4067.9 | 1 @ 4051.4, 20:30 ($60) | – | stop: 4 @ 4067.9, 21:15 (-$420) | ❌ **-$365**<br>out 21:15 | • Target 1 paid $60, but the stop stayed at the start. Moving it to breakeven after Target 1 would have ended this trade at about $60 instead of -$360.<br>• The entry was 5.60 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-10-28-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-10-28 | Nasdaq | short | 3 | 29787.5 @ 09:45<br>stop 29900.5 | – | – | stop: 3 @ 29900.5, 12:50 (-$678) | ❌ **-$681**<br>out 12:50 | • Price never reached Target 1: the best it did was +3.50 points, and Target 1 needed 30.<br>• The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.<br>• The entry was 100.75 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-10-28-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-10-28 | Gold | long | 5 | 4083.1 @ 20:05<br>stop 4075.4 | – | – | stop: 5 @ 4075.4, 20:25 (-$385) | ❌ **-$390**<br>out 20:25 | • Price never reached Target 1: the best it did was +1.00 points, and Target 1 needed 6.<br>• The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.<br>• The entry was 5.20 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-10-27-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
@@ -48,7 +49,6 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 | 2026-10-21 | Nasdaq | short | 5 | 29818.5 @ 10:15<br>stop 29843.25 | – | – | stop: 5 @ 29843.25, 10:20 (-$248) | ❌ **-$252**<br>out 10:20 | • Price never reached Target 1: the best it did was +25.75 points, and Target 1 needed 30.<br>• The breakout failed and price kept going the other way, so the stop did its job and kept the loss small. | [📈 chart](paper-trading/charts/2026-10-21-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-10-21 | Gold | – | 0 | no breakout, no trade | | | | $0 | No confirmed breakout in the first 60 minutes. Key high 4149.80, low 4132.00. | [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-10-20 | Nasdaq | long | 5 | 29717.75 @ 10:05<br>stop 29604.0 | 1 @ 29747.75, 10:15 ($60) | 2 @ 29777.75, 10:15 ($240) | 2 @ 29807.75, 10:25 ($360) | ✅ **$655**<br>out 10:25 | • Price kept going 95.75 points past Target 3 (by 10:30). Letting the last 2 contract(s) run with a trailing stop could have made up to $383 more. | [📈 chart](paper-trading/charts/2026-10-20-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
-| 2026-10-20 | Gold | short | 5 | 4150.6 @ 20:55<br>stop 4152.4 | 1 @ 4144.6, 21:00 ($60) | 2 @ 4138.6, 21:15 ($240) | stop: 2 @ 4144.6, 21:40 ($120) | ✅ **$415**<br>out 21:40 | • Moving the stop to Target 1 after Target 2 locked in the profit; price never reached Target 3 afterwards. | [📈 chart](paper-trading/charts/2026-10-19-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 
 **Latest trade:**
 
@@ -192,7 +192,7 @@ At this pace: about $15 a month.
 
 ## Paper trading
 
-- Total after fees: **-$1,096** over 13 trades (17 sessions watched)
+- Total after fees: **-$1,096** over 13 trades (18 sessions watched)
 - Trading days with a trade: **9**, profitable: **3**, losing: 6
 - Win rate: 38%
 - Profit factor: 0.70
@@ -215,7 +215,7 @@ At this pace: about $15 a month.
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-10-29 | gold short | -$365 |
+| 2026-10-29 | gold short, nasdaq skipped, risk too big for today's limits | -$365 |
 | 2026-10-28 | gold long, nasdaq short | -$1,071 |
 | 2026-10-27 | gold no trade, nasdaq long | -$688 |
 | 2026-10-26 | gold short, nasdaq no trade | -$329 |
