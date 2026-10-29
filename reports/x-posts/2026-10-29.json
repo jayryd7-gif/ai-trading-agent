@@ -52,5 +52,36 @@
       "Your loan rates: watch this",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,721.02 (-0.3% vs the last close)\nNasdaq: 26,188.00 (-1.4% vs the last close)\nDow: 52,343.34 (-0.3% vs the last close)\n10-yr yield: 4.99% (-0.06 pts vs the last close)\nOil (WTI): 102.81 (+0.0% vs the last close)\nGold: 4,037.30 (-0.4% vs the last close)\nBitcoin: 78,712.62 (-3.1% vs the last close)\nEther: 2,265.13 (-3.9% vs the last close)\nSolana: 96.45 (-5.7% vs the last close)",
+    "written": "2026-10-29 19:03",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Oct 29 🌙\n\nThe Fed held rates with two votes for a hike, and today's GDP, PCE and ECB decisions could move your loan and savings rates.\n\nWhat happened today and what to watch Friday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: A judge blocked a Medicaid 'medically frail' rule (Courthouse News). Netanyahu fell short of a parliamentary majority (AP).\n\nWhy it matters: Medicaid rules affect family health costs.\n\nTomorrow: Watch whether the administration appeals the ruling."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: US growth beat expectations (Semafor). Federal debt exceeds GDP, first since WWII (Washington Post). Why it matters: big debt can keep yields high; 10-yr is 4.99%. Tomorrow: 8:30 AM ECI, forecast 0.8%. Watch if wage costs cool."
+      },
+      {
+        "section": "Fed",
+        "post": "4/ 🏦 What the Fed said:\n\n• Held 3-3/4% to 4%. 10-2; Cook, Hammack wanted a hike.\n• Inflation \"remains elevated.\"\n• Jobs kept pace with the workforce.\n• Next decision Dec 9 (Admiral Markets).\n\nWhy it matters: Loan rates may stay high."
+      },
+      {
+        "section": "Stocks",
+        "post": "5/ Stocks: Nasdaq fell 1.4% to 26,188.00; S&P 500 slipped 0.3% to 7,721.02. Alphabet's worst day ever (IBD). Why it matters: tech drops can hit index funds and retirements. Tomorrow: Amazon earnings (per IBD) show if cloud growth steadies tech."
+      },
+      {
+        "section": "Crypto",
+        "post": "6/ Crypto: Bitcoin is at 78,712.62, down 3.1%. Ether is at 2,265.13, down 3.9%. Coinbase is profitable again (Motley Fool). Why it matters: crypto swings hit portfolios fast. Tomorrow: Does Bitcoin hold after the Fed? Not financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Federal Reserve statement, Courthouse News, AP (politics); Semafor, Washington Post (economy); Admiral Markets (Fed); IBD (stocks); Motley Fool (crypto); Yahoo Finance (prices)."
   }
 }

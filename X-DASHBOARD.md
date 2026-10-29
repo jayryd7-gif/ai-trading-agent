@@ -1,16 +1,87 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-29 05:43 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-29 19:03 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-29.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.037 (8 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.042 (9 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Thursday Oct 29)
+## 🌙 Tonight's thread, ready to copy (Thursday Oct 29)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 6 with the sources reply.
+
+**Post 1 of 6 · Intro** (213/280)
+```text
+1/ Cash Flow Brief: Evening, Oct 29 🌙
+
+The Fed held rates with two votes for a hike, and today's GDP, PCE and ECB decisions could move your loan and savings rates.
+
+What happened today and what to watch Friday 🧵
+```
+
+**Post 2 of 6 · 🌍 World & politics** (268/280)
+```text
+2/ Politics & world: A judge blocked a Medicaid 'medically frail' rule (Courthouse News). Netanyahu fell short of a parliamentary majority (AP).
+
+Why it matters: Medicaid rules affect family health costs.
+
+Tomorrow: Watch whether the administration appeals the ruling.
+```
+
+**Post 3 of 6 · 💵 Economy** (239/280)
+```text
+3/ Economy: US growth beat expectations (Semafor). Federal debt exceeds GDP, first since WWII (Washington Post). Why it matters: big debt can keep yields high; 10-yr is 4.99%. Tomorrow: 8:30 AM ECI, forecast 0.8%. Watch if wage costs cool.
+```
+
+**Post 4 of 6 · 🏦 Fed** (234/280)
+```text
+4/ 🏦 What the Fed said:
+
+• Held 3-3/4% to 4%. 10-2; Cook, Hammack wanted a hike.
+• Inflation "remains elevated."
+• Jobs kept pace with the workforce.
+• Next decision Dec 9 (Admiral Markets).
+
+Why it matters: Loan rates may stay high.
+```
+
+**Post 5 of 6 · 📈 Stocks** (244/280)
+```text
+5/ Stocks: Nasdaq fell 1.4% to 26,188.00; S&P 500 slipped 0.3% to 7,721.02. Alphabet's worst day ever (IBD). Why it matters: tech drops can hit index funds and retirements. Tomorrow: Amazon earnings (per IBD) show if cloud growth steadies tech.
+```
+
+**Post 6 of 6 · 🪙 Crypto** (239/280)
+```text
+6/ Crypto: Bitcoin is at 78,712.62, down 3.1%. Ether is at 2,265.13, down 3.9%. Coinbase is profitable again (Motley Fool). Why it matters: crypto swings hit portfolios fast. Tomorrow: Does Bitcoin hold after the Fed? Not financial advice.
+```
+
+**Reply under post 6 · sources**
+(232/280)
+```text
+Sources: Federal Reserve statement, Courthouse News, AP (politics); Semafor, Washington Post (economy); Admiral Markets (Fed); IBD (stocks); Motley Fool (crypto); Yahoo Finance (prices).
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,721.02 (-0.3% vs the last close)
+Nasdaq: 26,188.00 (-1.4% vs the last close)
+Dow: 52,343.34 (-0.3% vs the last close)
+10-yr yield: 4.99% (-0.06 pts vs the last close)
+Oil (WTI): 102.81 (+0.0% vs the last close)
+Gold: 4,037.30 (-0.4% vs the last close)
+Bitcoin: 78,712.62 (-3.1% vs the last close)
+Ether: 2,265.13 (-3.9% vs the last close)
+Solana: 96.45 (-5.7% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Thursday Oct 29)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 6 with the sources reply. (Or post all 5 at once before work.)
 
@@ -99,7 +170,7 @@ The Fed just held rates, and two officials wanted a hike. Here's what that means
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | — | The Fed held at 3.75% to 4% with two votes for a hike |
+| [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | ✅ | The Fed held at 3.75% to 4% with two votes for a hike |
 | [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's Fed and Bank of Canada decisions |
 | [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
 | [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
@@ -116,7 +187,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | 🟡 | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | 🟡 | · | · | ✅ | · | ✅ | · |
 | Crypto | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
