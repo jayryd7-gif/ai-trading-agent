@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-30 07:12 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-30 08:39 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-30 07:12 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 11 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -463,45 +463,66 @@ No other scheduled events (unlocks, upgrades, hearings, ETF deadlines) were foun
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-10-29</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-10-30</b></summary>
 
-### Nasdaq 100 Futures Brief – Thursday, Oct 29, 2026 (New York session)
+### Nasdaq 100 Futures Brief for the New York Session, Fri 2026-10-30
 
-#### 1. What is driving the market
-- **Big Tech earnings are the main driver.** Nasdaq futures dropped as mixed Alphabet and Microsoft results left investors weighing the payoff from heavy AI spending.
-- **Alphabet is weak.** It slid 10.5% in premarket trading after disappointing search advertising results and a big rise in cash burn.
-- **Microsoft is strong.** It climbed 3.5% after a cash-flow beat and a forecast for strong cloud growth.
-- **Software and chips are soft.** Fortinet fell 25.4% and ServiceNow fell 19%. The chip sector looked set to snap a 4-day win streak.
-- **The Fed was not the shock.** The Fed held rates steady in a 10-2 vote on Wednesday.
-- **The rest of the market is steadier.** Dow futures were near flat while Nasdaq-100 futures were down about 1%.
+#### 1. What is driving futures
+- US stock futures sank on the last trading day of the month. Amazon and Alphabet earnings this week renewed worries about Big Tech's AI spending.
+- Nasdaq-100 futures fell as much as 2.5%. Dow futures rose 0.1%, and S&P 500 futures dropped 1%.
+- Traders moved out of key AI-related stocks and into more defensive areas.
+- Intel fell 25% in premarket trading after its Q4 outlook came up short. Amazon fell 7% premarket.
+- Amazon still expects about $220 billion in 2026 cash capital spending.
+- A major cyberattack on Binance also hit crypto stocks.
+- Thursday's session was weak too. The Nasdaq Composite fell 1.4% on weak AI-related names. An elevated inflation reading also hurt sentiment.
 
 #### 2. Scheduled events (New York time)
-- **8:30 AM:** Advance Q3 GDP, September PCE inflation, and weekly jobless claims. Kiplinger lists all of these at 8:30 am. One Investing.com preview says 7:30 AM ET, which conflicts with the others. I treat 8:30 as correct.
-- **Forecasts:** GDP forecast is 3.2% vs 2.2% before. Core PCE forecast is 0.3%. Jobless claims forecast is 198K. Other sources show slightly different forecasts.
-- **ECB decision:** 14:15 CET, with Lagarde's press conference at 14:45 CET. That is about 9:15 and 9:45 AM New York time, by my conversion.
-- **Earnings:** Amazon reports after the close, with its call at 5:00 p.m. ET. That is after the session ends. Caterpillar, Eli Lilly and Intel also report. I could not verify their release times.
-- **Fed speakers today:** I found none.
-- **Tomorrow:** The Bank of Japan decision is Friday.
+- **8:30 AM:** Q3 Employment Cost Index, expected +0.8% q/q.
+- **9:30 AM:** Regular session opens. ExxonMobil holds its earnings call at 9:30 AM ET.
+- **9:45 AM:** Chicago PMI for October, expected 54.8 (prior 58.8).
+- **Already out:** September PCE came in at 3.6% year over year, in line with the forecast.
+- **Fed:** A Wednesday decision was scheduled. A hold at 3.75%–4.00% was expected. I did not verify the actual outcome.
+- **Not verified:** I found no confirmed Fed speakers for today. One Kiplinger listing at 12:30 pm was cut off, so I can't say what it is.
 
 #### 3. Key levels (from the price data)
-- **Previous session high:** 30009.00. This is also the highest high of the last 5 sessions.
-- **Previous session low:** 29767.25.
-- **Previous close:** 29990.75.
-- **Since that close:** high 30178.00, low 29482.50.
-- **5-session low:** 28987.00.
-- **Latest price:** 29637.00. That is 130.25 below the previous session low, so price has broken under that low.
-- **Where price sits:** It is not near the highs. It is below the previous low, which now acts as overhead resistance. The nearest support is the overnight low of 29482.50, about 154.5 points below.
+- **Latest price:** 28,797.50.
+- **Previous session high:** 29,677.00.
+- **Previous session low:** 29,405.00. Price is 607.50 below it, so this level is now overhead resistance.
+- **Previous session close:** 29,566.25.
+- **Highest high of the last 5 sessions:** 30,009.00.
+- **Lowest low of the last 5 sessions:** 28,987.00. Price is also below this, about 189.50 points under.
+- **Since the close:** high 29,593.25 and low 28,762.75.
+
+Price is sitting near support, not resistance. It is only 34.75 points above the post-close low of 28,762.75. Every prior-session high and low is above it. If that low breaks, there is no earlier level in the data to point to.
 
 #### 4. Volume
-The previous session traded 0.92x the average of the 5 sessions before it. That is slightly below average. It suggests mild participation, not strong conviction. Yesterday's modest, slightly light volume doesn't confirm a strong trend either way.
+The previous session traded 1.12x the average of the five sessions before it. That is slightly above average, so participation was modestly firm, not strong. It also describes Thursday, not today. I have no volume figure for today's session yet.
 
 #### 5. Directional lean
-**Bearish, Low confidence.**
-Price is below the previous session low and well off the overnight high of 30178.00. The news also leans negative, with AI-spending worries hitting Alphabet and software stocks. Volume is only slightly light, so it neither confirms nor weakens the move. Confidence is low because Microsoft's strong results offset Alphabet's, and the 8:30 AM GDP and PCE data can reverse the tone quickly. Price has also already dropped a lot overnight.
+**Bearish, Confidence: Medium.**
 
-**What would change the lean:** a move back above the previous low of
+Price is below the previous session's low and below the 5-session low. The news is negative: a second day of AI-spending worries with big earnings misses. Thursday's volume was a little above average, which fits a selloff with real participation. These signals mostly point the same way. I am holding back from High confidence because the gap down is already large. Sharp drops like this can bounce, and the price sits close to the post-close low.
 
-[Open the file](reports/2026-10-29-nasdaq-brief.md)
+**What would change the lean:**
+- A recovery back above 28,987.00 and then 29,405.00, with steady buying.
+- Signs that the AI-spending fears are easing, such as strong tech names stabilizing.
+- Weak volume on further selling.
+
+This is a probability-based lean, not a prediction or a trade instruction.
+
+#### 6. Event risk: Medium
+Big Tech earnings are done, and today's data (Employment Cost Index, Chicago PMI) is second-tier. But the market is reacting sharply to headlines, and it is month-end.
+
+#### 7. Sources
+- Yahoo Finance
+- CNBC
+- Bloomberg
+- Investing.com
+- TheStreet
+- Quartz
+- Admi
+
+[Open the file](reports/2026-10-30-nasdaq-brief.md)
 
 </details>
 
@@ -546,7 +567,7 @@ The previous session traded 0.94x the average of the five sessions before it. Th
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-10-29 08:39 | ? Unknown | Unknown | n/a | 29637.00 | [read it](reports/2026-10-29-nasdaq-brief.md) |
+| nasdaq | 2026-10-30 08:39 | ? Unknown | Unknown | Medium | 28797.50 | [read it](reports/2026-10-30-nasdaq-brief.md) |
 | gold | 2026-10-29 19:26 | ? Unknown | Unknown | n/a | 4024.20 | [read it](reports/2026-10-29-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
