@@ -4,3 +4,4 @@ time_utc,agent,tokens_in,tokens_out,searches,cost_usd
 2026-10-23 11:10,stock-brief,28682,2190,5,0.1293
 2026-10-26 11:17,stock-brief,82656,3185,5,0.2472
 2026-10-28 09:27,stock-brief,92596,3529,5,0.2705
+2026-10-30 09:30,stock-brief,76204,4281,5,0.2452
