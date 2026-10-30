@@ -48,5 +48,32 @@
       "8:30 AM: Employment Cost Index",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,580.95 (-1.8% vs the last close)\nNasdaq: 25,440.68 (-2.8% vs the last close)\nDow: 51,774.18 (-1.1% vs the last close)\n10-yr yield: 4.93% (-0.06 pts vs the last close)\nOil (WTI): 102.95 (+0.9% vs the last close)\nGold: 3,884.90 (-3.6% vs the last close)\nBitcoin: 76,786.21 (-1.3% vs the last close)\nEther: 2,231.92 (-0.8% vs the last close)\nSolana: 95.71 (+0.2% vs the last close)",
+    "written": "2026-10-30 18:59",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Oct 30 🌙\n\nStocks fell as tech sold off, a $6.3B Binance hack hit crypto, and oil stayed above $100.\n\nWhat happened today and what to watch Saturday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics: Another Russian refinery ablaze despite Trump's Kyiv warning (Washington Post). NBC: $2.1B Patriot sale to Ukraine approved. Why: refinery hits tighten supply and lift gas prices. Tomorrow: Watch fuel prices at Trump's weekend rallies."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: Employment Cost Index was due at 8:30 AM ET (forecast 0.8%, previous 0.9%). No result yet. Why: wage data steers rate bets, feeding mortgage and savings rates. Tomorrow: No major US data Saturday. Watch if wages shift rate bets next week."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: S&P -1.8% to 7,580.95, Nasdaq -2.8%, Dow -1.1%. Bloomberg: tech stocks plunged. WSJ ties it to AI selling after Amazon, Intel earnings. Why: index funds and 401(k)s hold them. Next: If AI selling persists, watch jobs, Apple earnings."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: CNBC: $6.3B Binance hack. Bitcoin 76,786.21 (-1.3%), Ether 2,231.92 (-0.8%). CFTC proposed federal registration for leveraged exchanges. Why: hacked exchanges endanger held coins. Next: Watch if CFTC proposal advances. Not financial advice."
+      }
+    ],
+    "reply_evening": "Sources: The Washington Post, NBC News, WSJ, Bloomberg, CNBC, Crypto Briefing (headlines); Yahoo Finance prices; economic calendar feed."
   }
 }

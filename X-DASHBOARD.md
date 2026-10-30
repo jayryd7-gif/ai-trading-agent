@@ -1,16 +1,71 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-30 05:44 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-30 18:59 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-30.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.048 (10 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.053 (11 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Friday Oct 30)
+## 🌙 Tonight's thread, ready to copy (Friday Oct 30)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (180/280)
+```text
+1/ Cash Flow Brief: Evening, Oct 30 🌙
+
+Stocks fell as tech sold off, a $6.3B Binance hack hit crypto, and oil stayed above $100.
+
+What happened today and what to watch Saturday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (248/280)
+```text
+2/ Politics: Another Russian refinery ablaze despite Trump's Kyiv warning (Washington Post). NBC: $2.1B Patriot sale to Ukraine approved. Why: refinery hits tighten supply and lift gas prices. Tomorrow: Watch fuel prices at Trump's weekend rallies.
+```
+
+**Post 3 of 5 · 💵 Economy** (250/280)
+```text
+3/ Economy: Employment Cost Index was due at 8:30 AM ET (forecast 0.8%, previous 0.9%). No result yet. Why: wage data steers rate bets, feeding mortgage and savings rates. Tomorrow: No major US data Saturday. Watch if wages shift rate bets next week.
+```
+
+**Post 4 of 5 · 📈 Stocks** (244/280)
+```text
+4/ Stocks: S&P -1.8% to 7,580.95, Nasdaq -2.8%, Dow -1.1%. Bloomberg: tech stocks plunged. WSJ ties it to AI selling after Amazon, Intel earnings. Why: index funds and 401(k)s hold them. Next: If AI selling persists, watch jobs, Apple earnings.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (251/280)
+```text
+5/ Crypto: CNBC: $6.3B Binance hack. Bitcoin 76,786.21 (-1.3%), Ether 2,231.92 (-0.8%). CFTC proposed federal registration for leveraged exchanges. Why: hacked exchanges endanger held coins. Next: Watch if CFTC proposal advances. Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(182/280)
+```text
+Sources: The Washington Post, NBC News, WSJ, Bloomberg, CNBC, Crypto Briefing (headlines); Yahoo Finance prices; economic calendar feed.
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,580.95 (-1.8% vs the last close)
+Nasdaq: 25,440.68 (-2.8% vs the last close)
+Dow: 51,774.18 (-1.1% vs the last close)
+10-yr yield: 4.93% (-0.06 pts vs the last close)
+Oil (WTI): 102.95 (+0.9% vs the last close)
+Gold: 3,884.90 (-3.6% vs the last close)
+Bitcoin: 76,786.21 (-1.3% vs the last close)
+Ether: 2,231.92 (-0.8% vs the last close)
+Solana: 95.71 (+0.2% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Friday Oct 30)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -90,7 +145,7 @@ Your crypto, your stock fund and your gas bill all moved today. Here's what matt
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | — | Binance's suspected $6.3B hack |
+| [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance's suspected $6.3B hack |
 | [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | ✅ | The Fed held at 3.75% to 4% with two votes for a hike |
 | [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's Fed and Bank of Canada decisions |
 | [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
@@ -107,7 +162,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | · | ✅ | · | ✅ | · | ✅ |
 | Crypto | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
