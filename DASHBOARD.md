@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-29 21:56 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-30 04:46 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-10-29 21:56 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 40 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -268,86 +268,64 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-10-29, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-10-30, event risk Medium</b></summary>
 
 #### Top things for today
-1. **US GDP and Core PCE at 8:30 AM.** The calendar forecasts advance GDP at 3.2% (previous 1.5%) and core PCE at 0.3% m/m (previous 0.2%). Why it matters: inflation data after a Fed hold with a hawkish tilt, so it bears on rate and gold pricing.
-2. **Fed hold with a hawkish lean.** The Fed kept the range at 3.75% to 4% in a 10-2 vote, with Cook and Hammack dissenting. The dissents reinforced investor expectations of a December hike (Yahoo Finance). Why it matters: rate path and the dollar.
-3. **ECB decision at 9:15 AM, press conference at 9:45 AM.** The forecast is a hold at 2.65%. Why it matters: euro and global yields.
-4. **Iran war and energy prices.** The Iran war has kept pushing up energy costs (Yahoo Finance). Warsh said oil futures have climbed lately while market rates have rolled over (Admiral Markets, citing Newsquawk). Why it matters: oil, inflation and safe-haven demand.
-5. **BOJ decision tonight at 10:30 PM.** The forecast is a hold below 1.25%. Why it matters: yen and global rates.
-
-#### What the Fed said
-- **Decision:** The FOMC held the rate at 3-3/4 to 4 percent (official statement). It also continues to maintain ample reserves.
-- **Vote:** 10-2. Lisa Cook and Beth Hammack dissented. They preferred a quarter-point hike. CNBC noted Cook had never dissented since joining in 2022.
-- **Economy:** The statement says activity is expanding at a strong pace and spending is resilient. It says job gains have kept pace with the workforce and unemployment has changed little. Uncertainty is elevated, partly from geopolitics.
-- **Inflation:** The statement says inflation "remains elevated."
-- **Warsh at the press conference:**
-  - He said politics played no role in the decision (Yahoo Finance).
-  - He said the Fed is not tolerating an inflation target above 2% (Yahoo Finance).
-  - The Fed will hold one fewer rate vote a year from 2027 (Yahoo Finance).
-  - The next decision is December 9, with new projections (Admiral Markets).
-- **Headlines only:** "The Federal Reserve's hawkish hold" (Livemint). "Bracing For December Fed Rate Hike" (BusinessToday Malaysia). "The Fed Kept Rates Steady in October, but We See Cuts in 2027" (Morningstar). (headline only)
+1. **Ukraine hit a Russian refinery again.** Kyiv launched a drone attack early Friday on the Novokuibyshevsk refinery in southwestern Russia. Ukraine had paused attacks on Russian oil for over a week under pressure from Trump. (ARA, WSJ headline) Why it matters: diesel and crude supply, energy-driven inflation.
+2. **Trump's reaction.** Trump said that if Zelenskyy is again shooting at refineries, he is only making the world oil price higher. (NBC News, Newsmax interview, late Thursday). That quote may refer to the earlier round of strikes. NBC's page was labeled 13 days old. Why it matters: energy prices, inflation, the Fed outlook.
+3. **US-Iran war still affects shipping.** CNN's headline says Somali piracy is back as the US-Iran war rattles shipping (headline only). ARA also cites a blockade of the Strait of Hormuz. Why it matters: oil, safe-haven demand.
+4. **Employment Cost Index at 8:30 AM.** Forecast 0.8%, previous 0.9%. Why it matters: wage inflation, rate expectations.
+5. **Tariffs and midterms.** Nikkei Asia says Trump is holding off overcapacity tariffs as the midterms near (headline only). The midterms are on November 3. Why it matters: trade risk, the dollar.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 8:30 AM | Advance GDP q/q (forecast 3.2%, previous 1.5%) | US | Yes |
-| 8:30 AM | Core PCE Price Index m/m (forecast 0.3%, previous 0.2%) | US | Yes |
-| 8:30 AM | Advance GDP Price Index q/q (forecast 3.3%, previous 6.2%) | US | Yes |
-| 8:30 AM | Unemployment Claims (forecast 198K, previous 194K) | US | Yes |
-| 9:15 AM | ECB Main Refinancing Rate (forecast 2.65%, previous 2.65%) | ECB | Yes |
-| 9:15 AM | ECB Monetary Policy Statement | ECB | Yes |
-| 9:45 AM | ECB Press Conference | ECB | Yes |
-| 10:30 PM | BOJ Policy Rate (forecast <1.25%, previous <1.25%) | Japan | Yes |
-| 10:30 PM | BOJ Monetary Policy Statement | Japan | Yes |
-| 10:31 PM | BOJ Outlook Report | Japan | Yes |
+| 1:30 AM | BOJ Press Conference (High impact). Already held. The feed has no outcome. | Japan | Yes |
+| 8:30 AM | Employment Cost Index q/q (forecast 0.8%, previous 0.9%) | USD | Yes |
 
-No Trump events or hearings with times were found for today.
+No Trump events or hearings with times were found in the headlines or searches.
 
-Coming up this week: Fri Oct 30, 1:30 AM BOJ Press Conference (high impact). Fri Oct 30, 8:30 AM Employment Cost Index q/q (medium impact, forecast 0.8%, previous 0.9%).
+Coming up this week: No scheduled events found. The calendar lists nothing major for Saturday, Oct 31.
 
 #### Event risk today
-High - US GDP and core PCE, the ECB decision and press conference, and the BOJ decision all land today, after a Fed hold with two hawkish dissents.
+Medium - The Employment Cost Index is the only scheduled US release, but the renewed Ukraine refinery strikes and the Iran war keep energy headlines live.
 
 #### Politics and policy
-- **Fed and the White House:** The Trump administration had warned the Fed against hiking before next week's midterms (Yahoo Finance). Warsh declined to respond to Trump's criticism that rates should be lower and that the committee is "political" (Yahoo Finance).
-- **Fed AI task force:** Warsh said he would attend a hearing next month by the Fed task force on AI (Yahoo Finance). No date was given.
-- **Midterms:** "As Trump Faces Down the Midterms, a Grim Mood Takes Over the White House" (The New York Times). (headline only)
-- **Gallup:** Economy, health care and Iran top voter concerns ahead of the midterms (U.S. News & World Report). (headline only)
-- **Other headlines:** Wisconsin Democrats sue Trump over taxpayer money used for campaign ads (The Daily Cardinal). (headline only) Alaska's governor ordered a criminal investigation into the Peltola campaign (The New York Times). (headline only)
-- No overnight Trump quotes, executive orders, Treasury items or bills were found in the feed.
+- Trump responded late Thursday to Ukraine's defiance, speaking to Newsmax. (NBC News)
+- CNBC says Trump and Vance scrapped planned appearances in the final stretch of the midterm campaign (headline only).
+- CNN has a piece on Trump's team and election claims ("BIG cheating") ahead of November (headline only).
+- The Guardian asks whether Trump's global actions, from Ukraine to Iran, will hurt him in elections (headline only).
+- No Fed, Treasury or executive-order news was found in the feed.
 
 #### Economics
-- No US data was released overnight, according to the calendar.
-- Headline items: a new inflation forecast piece (The Motley Fool). PepsiCo's CEO is bracing for rising input cost inflation (Money Talks News). StoneX says falling coffee inflation is helping demand recover. (all headline only)
-- Gold: "Why Are Gold Prices Still Falling After the Fed Pauses Rate Hikes? September PCE May Determine Gold's Direction" (TradingKey). (headline only)
+- No US data was released overnight.
+- France's economy shrank 0.1% in Q3 (Le Monde, headline only). WSJ's headline links the contraction to mounting debt worries (headline only).
+- Bloomberg says record gasoline prices pushed Kenya's inflation to a three-year high (headline only).
+- MUFG Research published an FX Daily Snapshot (headline only).
 
 #### SEC, CFTC and hearings
-- **SEC:** Nothing in the last 2 days.
-- **CFTC roundtable:** The CFTC announced it will host a roundtable on 24/7 trading (CFTC press release, Wed 1:00 PM). The date and time were not given (unconfirmed).
-- **CFTC and states:** The CFTC sued in Utah to block state enforcement (CFTC press release, Tue). Kalshi and Polymarket US sued Missouri and Louisiana (ReadWrite). (headline only)
-- **COT report:** The CFTC announced semiweekly publication of the COT report (CFTC press release, Tue).
-- **AI remarks:** CFTC Chair Selig spoke about AI agents trading crypto and floated "know-your-agent" rules (BigGo Finance, KuCoin). (headline only)
-- **Hearings:** No market-moving congressional hearings were found.
+- No congressional hearings were found.
+- SEC: two entities were charged in a $130 million fraud scheme that used false SEC filings (SEC press release, Thu Oct 29).
+- CFTC: it hosted a roundtable on 24/7 trading on Wed Oct 28 (CFTC press release).
+- CFTC: Crypto Briefing says it held an inaugural Frontier Forum on super intelligence (headline only). 디지털투데이 says the CFTC chair called for redesigned financial rules for autonomous AI agents (headline only).
+- CFTC: DeFi Rate says it sued Utah amid prediction-market fights with states (headline only).
+- CoinMarketCap says the Hyperliquid Policy Center urged a court to dismiss CME's lawsuit against the CFTC (headline only).
 
 #### War, trade and tariffs
-- **Iran war:** It continues to lift energy costs and inflation worries (Yahoo Finance, AP). Shell's profits doubled to $10.8bn as the Iran war lifted oil margins (The Guardian). (headline only) Why it matters: energy prices and inflation.
-- **Hezbollah:** It says it does not care who governs Israel (Arab News). (headline only)
-- **Israel's election:** The New York Times is asking when the winner will be known. (headline only)
-- **Europe:** Destinus' monthly output is higher than Europe's pre-war annual cruise missile production (Reuters). (headline only)
-- No new tariffs or trade deadlines were found.
+- **Ukraine-Russia:** Monitoring channels call the Novokuybyshevsk attack a resumption of strikes, the first after an unofficial pause that began in mid-October. The refinery is owned by Rosneft. (Kyiv Independent) Why it matters: diesel supply, energy prices.
+- **Middle East:** Audacy says Saudi Arabia reported a drone intercepted near Islam's holiest city (headline only). CNN reports a US-Iran war affecting shipping (headline only).
+- **Tariffs:** Nikkei Asia says Trump is holding off overcapacity tariffs (headline only). CBC says an American importer facing a $40M tariff bill is suing Trump to end some tariffs on Canada (headline only).
 
 #### Country briefs
-- **China:** SCMP says China's industrial strength keeps it from "turning Japanese." (headline only)
-- **European Union:** The EU backtracked on Canada becoming an "associate member" (Al Jazeera). (headline only)
+- **China:** WSJ says a Chinese executive close to Nvidia's CEO is suspected of giving China information (headline only). SCMP has an opinion piece on US-China relations no longer running on Trump's personal ties (headline only).
+- **European Union:** France's Q3 GDP fell 0.1% (Le Monde, WSJ; headline only).
 - **United Kingdom:** Nothing found.
-- **Japan:** The BOJ decision is at 10:30 PM tonight. The forecast is a hold below 1.25% (calendar).
+- **Japan:** The BOJ press conference was scheduled for 1:30 AM. The feed gives no content.
 - **India:** Nothing found.
-- **Russia:** Al Jazeera asks what Russia really offers Africa, and says economic incentives are limited. (headline only)
-- **Canada:** The EU backtracked on the "associate member" idea (Al Jazeera). (headline only)
+- **Russia:** Ukraine hit the Novokuibyshevsk refinery (ARA). France 24 says Novaya Gazeta shut down after years of Kremlin pressure (headline only).
+- **Canada:** CBC says an importer is suing Trump over some tariffs on Canada (headline only).
 
-[Read the full brief with all the details](reports/news/2026-10-29-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-10-30-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
