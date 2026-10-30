@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-10-30 05:09 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-10-30 05:30 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -20,8 +20,8 @@ Last updated 2026-10-30 05:09 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -389,80 +389,76 @@ No other scheduled events (unlocks, upgrades, hearings, ETF deadlines) were foun
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-10-28</b></summary>
+<summary><b>📈 Stocks brief, 2026-10-30</b></summary>
 
 #### Top things today
-1. Alphabet and Microsoft report after the close, and the Fed decision comes at 2:00 p.m. ET. Futures were near flat as investors prepared for big tech earnings and the Fed decision. Why it matters: cloud growth and AI spending plans will set the tone for chips.
-2. Anthropic's IPO filing lifted chips. Chip stocks rallied again on the filing. That fits yesterday's gains in AMD, AVGO and SMCI. (CNBC/Capp Notes) Why it matters: a new AI listing can pull money into AI hardware.
-3. Chip stocks are rebounding after a rough stretch. The chip index was down about 20% from its June peak as of Oct. 15, when rate and AI-financing worries hit (CNN). Why it matters: the bounce is still young.
-4. Nuclear fuel names jumped. LEU rose 11.2% and URA 4.4%. I found no company-specific cause for LEU. Why it matters: the group is oversold and moving as one trade.
-5. Rare earth stocks rallied. USAR rose 16.7% and MP 9.1%. I found no specific news today. Why it matters: these names have swung on US-China headlines.
+1. **Alphabet fell 12.6% after a Q3 miss.** EPS was $2.12 against a $3.01 consensus. Free cash flow turned negative on heavy AI spending, and Alphabet said capex will rise again next year (Schwab). Why it matters: it raised doubts about whether AI spending earns a return.
+2. **Intel and Amazon dropped after the close Thursday.** Intel fell roughly 17–23% on weak Q4 guidance despite an EPS beat. Amazon fell about 6–7% after a small miss on EPS and revenue (Investing.com, investingLive). Why it matters: they point to a wider AI-cost selloff in tech at the open.
+3. **ServiceNow had its worst day ever, down 26.9%.** Its cRPO growth guidance cooled, and the software ETF IGV fell 4.1% midday (Benzinga). Why it matters: a good AI story did not protect software from a bookings slowdown.
+4. **Microsoft held up.** It closed down just 0.2%, and coverage described its results as strong (Schwab). Why it matters: the market is rewarding visible AI returns and punishing cash burn.
+5. **Cameco reports today (timing unconfirmed).** The setup is a record uranium price against earnings that lag it (Investing.com). Why it matters: it is the main nuclear-fuel print of the week.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| LEU | Nuclear fuel | +11.2% | Reports Nov. 4. It runs the only NRC-licensed HALEU facility. It has a $4.5B backlog. | Down more than 52% this year. No news found for the move. |
-| USAR | Rare earths | +16.7% | Reports Nov. 5. The company is building a $1.2B magnet plant in South Carolina. (Yahoo Finance) | Revenue estimate is only $13.6M. No news found for the move. First plant output is targeted for 2028. |
-| MP | Rare earths | +9.1% | Reports Nov. 5. Mountain Pass is the only large-scale US rare earth mine. | EPS estimate is negative. The group trades on US-China headlines. |
-| SMCI | AI servers | +7.3% | Reports Nov. 3. Rode the Anthropic-driven chip rally. | Gain came with no company news found. |
-| SMR | Small reactors | +8.2% | Reports Nov. 5. Moved with the nuclear group. | Very small revenue ($3.8M estimate). Down 62% this year. |
-| SOFI | Fintech (outside the three themes) | +13.4% | Record $1.4B adjusted revenue, raised 2026 guidance. | Already moved sharply on earnings. |
-
-New listings: SPCX (Space Exploration Technologies) is a new stock with a $2.0T market cap. It rose 1.1% on heavy volume. I found no details on its listing.
+| AMD | AI chips | -2.1% 1d, +11.5% 5d | Reports Nov 3 against a $13.1B revenue estimate. | The chip index fell Thursday; the AI-cost worry is a risk. |
+| CRWV | AI cloud | -5.0% 1d, +9.2% 5d | AI cloud names fell 6–7% after hours on Thursday. Reports Nov 10. | Expected loss of $1.21 per share. Sensitive to AI-spending sentiment. |
+| USAR | Rare earths | +0.4% 1d, +9.2% 5d | The US government holds about 10% after a $1.6B package (FT). Reports Nov 5. | Revenue estimate is only $13.6M and it is losing money. China put it on an export control list. |
+| SMR | Nuclear | +4.4% 1d, +10% 5d | Reports Nov 5. | Revenue estimate is only $3.8M. One headline said analysts cut NuScale price targets (unconfirmed detail). |
+| GKOS | Earnings mover | +33.6% | Revenue was $211M against $168M expected, and it raised guidance (CNBC). | After a two-day jump from the $170s, the move may be extended. |
+| SPCX | New listing | -0.9% | Space Exploration Technologies, market cap about $2.0T, is among the most active stocks. | I found no news on it today. Alphabet booked an unrealized SpaceX loss of about $8.2B (TradingKey). |
 
 #### AI and tech
-- **Anthropic IPO filing.** Markets rose Monday, helped in part by the filing. Chip names like AMD and Broadcom led. (Yahoo Finance)
-- **Meta's equity raise.** One summary cites a "historic $97.5B equity raise" at Meta. I couldn't confirm this elsewhere (unconfirmed). Meta is down 10.7% over five days.
-- **Memory and Korea.** SK Hynix reported a sharp jump in quarterly operating profit (Investing.com). Micron is up about 200% this year. (24/7 Wall St.)
-- **Rate worries.** Higher borrowing costs have raised concern about funding AI buildouts. (CNBC, Oct. 15)
+- **Alphabet:** Revenue was $127.6B, up 25% but below expectations. Cloud revenue rose 103% to $30.7B, yet search and YouTube ads missed (Benzinga, Schwab). Roughly $500B of market value was lost, the second-largest one-day loss on record.
+- **Amazon and Intel:** Amazon posted EPS of $1.89 against $1.97 expected, and revenue of $201.9B against $202.2B (investingLive). Its free cash flow was reported at about -$42.4B (tech-insider.org). Intel's Q3 EPS was $0.52 against $0.41 expected, but revenue and Q4 guidance disappointed. It warned of PC headwinds (Investing.com).
+- **Funding:** Microsoft launched a $25B bond offering (ChainCatcher). AI cloud names CoreWeave, Nebius and Iren fell 6–7% after hours.
+- **Chips:** The semiconductor index fell for the first time in five sessions, and Marvell fell more than 13% (Bloomingbit). Nvidia, AMD and Micron were less affected than the Alphabet-linked names, though Micron closed down 5.0%.
 
 #### Nuclear and critical minerals
-- **Nuclear fuel rally.** LEU, SMR and OKLO all rose. OKLO is down 63% this year, with no commercial revenue and dilution risk. TD Cowen has a Hold. (24/7 Wall St.)
-- **Centrus deals.** Centrus picked Fluor to help expand its Ohio plant and signed a HALEU supply agreement with Oklo. (Cameco SEC filing)
-- **Rare earth policy.** In June, China cut off dual-use item supplies to MP and USA Rare Earth. Phoenix Tailings plans a $375M separation plant in New York. (Asia Times)
-- **Copper.** Freeport's Q3 adjusted EPS was 88 cents, and realized copper averaged $6.54 a pound. I found no new gold or lithium news.
+- **Cameco (CCJ):** Reports today. Last quarter's realized uranium price was up 18% to US$67.79 a pound, but uranium gross profit fell 27% as costs rose. The long-term price is at a 19-year high of $96.50 (Investing.com, TIKR). One firm trimmed its target to $95 from $97 and kept Equal Weight.
+- **Nuclear sentiment:** Cameco fell about 11.9% over the past month despite a US$120B US–Korea Westinghouse framework. NuScale and Oklo each fell more than 28% (TIKR). Thursday, SMR rose 4.4% and BWXT rose 2.2%.
+- **China and rare earths:** The US–China truce on rare earth export controls now runs to January 10, 2027, not November 10 (Startup Fortune, citing Treasury Secretary Bessent). China's controls on seven medium and heavy rare earths stayed in force throughout. In June, Beijing added MP Materials and USA Rare Earth to its own export control list. Pentagon rules barring Chinese-origin rare earths from weapons start January 1 (OilPrice).
+- **Government stakes:** One headline cites a US government portfolio of about $30B across 43 deals in chips, minerals and quantum (investingLive). I did not open the details.
 
 #### Earnings
-**Results since yesterday**
-- FCX: EPS $0.88 on $7.55B revenue, versus $0.80 and $7.09B expected. Shares rose 1%.
-- SoFi: beat estimates and rose 13.4%.
-- HRI: Adjusted EPS $3.91 versus $2.96, and raised EBITDA guidance. Shares rose 22.8%.
-- KNSA: Arcalyst revenue up 58%, guidance raised. Shares rose 22.2%.
-- PNR: beat and rose 12.8%.
-- XYL: Missed and cut guidance. Shares fell 12%.
-- Chip-related: Ultra Clean beat by 21 cents and rose 11%.
+**Results since yesterday (reaction as reported):**
+- **Alphabet:** EPS $2.12 against $3.01 expected. Stock -12.6%.
+- **ServiceNow:** EPS $1.00 against $1.02 expected. Revenue was $4.106B, slightly above estimates. Stock -26.9%.
+- **Amazon:** Missed on both lines. Stock -4.2% in the session, then roughly -6% to -7% after hours (the low was about -12%).
+- **Intel:** Beat on EPS, missed on revenue. Stock -3.6% in the session, then about -17% to -23% after hours.
+- **Crocs:** EPS $3.69 against $3.31 expected, and it raised guidance. Stock +25.5%.
+- **Glaukos:** Beat on revenue and raised guidance. Stock +33.6%.
+- **Also moving:** ADT rose 33.2% on a $15.3B all-cash takeover by Thrive Holdings, expected to close in Q1 2027 (CNBC). This was a deal, not earnings.
+- **Microsoft and Fortinet:** Microsoft's numbers were not in my results. Fortinet fell more than 20% (CNBC).
 
-**Today's after-close context:** Options imply about a 4.7% move for Microsoft. Alphabet's call is at 4:30 PM ET. Microsoft's webcast is at 5:30 PM ET.
+**Watchlist calendar.** Timing was not in the live data. I did not confirm it for any name, so all are listed as unconfirmed.
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 10/28 | GOOGL | After the close | $2.97 | $127.9B |
-| 10/28 | MSFT | After the close | $4.72 | $90.7B |
-| 10/29 | AMZN | After the close (per one calendar) | $1.99 | $202.2B |
-| 10/30 | CCJ | Not confirmed | $0.27 | $753.9M |
-| 11/02 | AAPL | Not confirmed | $1.98 | $113.3B |
-| 11/02 | BWXT | Not confirmed | $1.19 | $972.4M |
-| 11/02 | PLTR | Not confirmed | $0.41 | $2.2B |
-| 11/03 | AMD | Not confirmed | $1.93 | $13.1B |
-| 11/03 | SMCI | Not confirmed | $1.20 | $16.3B |
-| 11/04 | ALB | Not confirmed | $2.53 | $1.6B |
-| 11/04 | ARM | Not confirmed | $0.48 | $1.4B |
-| 11/04 | LEU | Not confirmed | -$0.16 | $56.9M |
-| 11/05 | MP | Not confirmed | -$0.01 | $119.0M |
-| 11/05 | SMR | Not confirmed | -$0.12 | $3.8M |
-| 11/05 | USAR | Not confirmed | -$0.15 | $13.6M |
-| 11/06 | OKLO | Not confirmed | -$0.26 | $1.1M |
-| 11/06 | VST | Not confirmed | $3.01 | $6.4B |
-| 11/09 | CEG | Not confirmed | $3.84 | $9.3B |
-| 11/10 | CRWV | Not confirmed | -$1.21 | $3.5B |
+| 10-30 | CCJ | (unconfirmed) | $0.27 | $753.9M |
+| 11-02 | AAPL | (unconfirmed) | $1.98 | $113.3B |
+| 11-02 | BWXT | (unconfirmed) | $1.19 | $972.4M |
+| 11-02 | PLTR | (unconfirmed) | $0.41 | $2.2B |
+| 11-03 | AMD | (unconfirmed) | $1.94 | $13.1B |
+| 11-03 | SMCI | (unconfirmed) | $1.20 | $16.3B |
+| 11-04 | ALB | (unconfirmed) | $2.53 | $1.6B |
+| 11-04 | ARM | (unconfirmed) | $0.48 | $1.4B |
+| 11-04 | LEU | (unconfirmed) | -$0.13 | $57.0M |
+| 11-05 | MP | (unconfirmed) | -$0.01 | $119.0M |
+| 11-05 | SMR | (unconfirmed) | -$0.12 | $3.8M |
+| 11-05 | USAR | (unconfirmed) | -$0.15 | $13.6M |
+| 11-06 | OKLO | (unconfirmed) | -$0.26 | $1.1M |
+| 11-06 | VST | (unconfirmed) | $3.09 | $6.0B |
+| 11-09 | CEG | (unconfirmed) | $3.84 | $9.3B |
+| 11-10 | CRWV | (unconfirmed) | -$1.21 | $3.5B |
+| 11-13 | LAC | (unconfirmed) | -$0.03 | n/a |
 
 #### Smart money
-- Oklo: TD Cowen set a Hold rating with a target near $26 (24/7 Wall St.).
-- Alphabet: Citizens cut its target to $450 from $515 but kept Market Outperform. Needham reiterated Buy at $450 (Investing.com).
-- Broadcom: Four firms reiterated Buy, with targets from $470 to $600. (Everhint)
-- Insider buying and congressional trades: Nothing found.
+- **Cameco:** One firm trimmed its price target to $95 from $97 and kept an Equal Weight rating. The firm was not named in the source (TIKR).
+- **Insider buying and Congress trades:** Nothing found in the three themes.
+- **Analyst rating changes after Alphabet, Amazon, Intel and ServiceNow:** Nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-10-28-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-10-30-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
