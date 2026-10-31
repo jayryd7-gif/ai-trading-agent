@@ -48,5 +48,32 @@
       "BTC $77,263",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "Bitcoin: 77,384.23 (+0.2% vs the last close)\nEther: 2,251.16 (+0.5% vs the last close)\nSolana: 95.23 (-1.0% vs the last close)\nStock markets: closed for the weekend (crypto trades 24/7)",
+    "written": "2026-10-31 18:57",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Oct 31 🌙\n\nIran war headlines and a $6.3 billion Binance crypto hack are the biggest wallet stories today.\n\nWhat happened today and what to watch Sunday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Trump said Friday the Iran war should end soon, with no US strike before Nov. 3 midterms.\n\nWhy it matters: Iran news moves oil, and oil moves your gas bill.\n\nTomorrow: if talks stall, energy costs could rise. Watch Qatari mediation."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: No major data today. Friday, the SEC eased Treasury clearing rules for some repo deals.\n\nWhy it matters: repo rates feed short-term borrowing costs.\n\nTomorrow: no major data listed. Watch whether the CFTC's Utah case moves."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: Markets are closed for the weekend, so no fresh moves today.\n\nWhy it matters: weekend news can gap prices, and index funds in your 401(k) move with them.\n\nTomorrow: if Iran headlines hit, watch futures at the Sunday reopening."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: BTC $77,384.23 (+0.2%). FBI blames North Korea for the $6.3B Binance hack.\n\nWhy it matters: big exchange hacks can put user funds at risk.\n\nTomorrow: watch for more detail on user losses.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Reuters, AP, WSJ, NBC News, LA Times (news); SEC; Yahoo Finance (prices); CoinGecko"
   }
 }

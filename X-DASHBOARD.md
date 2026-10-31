@@ -1,16 +1,84 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-31 05:31 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-10-31 18:57 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-31.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.059 (12 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.061 (13 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Saturday Oct 31)
+## 🌙 Tonight's thread, ready to copy (Saturday Oct 31)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (184/280)
+```text
+1/ Cash Flow Brief: Evening, Oct 31 🌙
+
+Iran war headlines and a $6.3 billion Binance crypto hack are the biggest wallet stories today.
+
+What happened today and what to watch Sunday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (253/280)
+```text
+2/ Politics & world: Trump said Friday the Iran war should end soon, with no US strike before Nov. 3 midterms.
+
+Why it matters: Iran news moves oil, and oil moves your gas bill.
+
+Tomorrow: if talks stall, energy costs could rise. Watch Qatari mediation.
+```
+
+**Post 3 of 5 · 💵 Economy** (235/280)
+```text
+3/ Economy: No major data today. Friday, the SEC eased Treasury clearing rules for some repo deals.
+
+Why it matters: repo rates feed short-term borrowing costs.
+
+Tomorrow: no major data listed. Watch whether the CFTC's Utah case moves.
+```
+
+**Post 4 of 5 · 📈 Stocks** (237/280)
+```text
+4/ Stocks: Markets are closed for the weekend, so no fresh moves today.
+
+Why it matters: weekend news can gap prices, and index funds in your 401(k) move with them.
+
+Tomorrow: if Iran headlines hit, watch futures at the Sunday reopening.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (221/280)
+```text
+5/ Crypto: BTC $77,384.23 (+0.2%). FBI blames North Korea for the $6.3B Binance hack.
+
+Why it matters: big exchange hacks can put user funds at risk.
+
+Tomorrow: watch for more detail on user losses.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(138/280)
+```text
+Sources: Reuters, AP, WSJ, NBC News, LA Times (news); SEC; Yahoo Finance (prices); CoinGecko
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+Bitcoin: 77,384.23 (+0.2% vs the last close)
+Ether: 2,251.16 (+0.5% vs the last close)
+Solana: 95.23 (-1.0% vs the last close)
+Stock markets: closed for the weekend (crypto trades 24/7)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Saturday Oct 31)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -86,7 +154,7 @@ Oil could move your gas bill this week, and here is why. Iran's war and attacks 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | — | Iran war and Hormuz shipping attacks |
+| [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran war and Hormuz shipping attacks |
 | [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance's suspected $6.3B hack |
 | [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | ✅ | The Fed held at 3.75% to 4% with two votes for a hike |
 | [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's Fed and Bank of Canada decisions |
