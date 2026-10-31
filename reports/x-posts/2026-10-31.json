@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-31",
+  "written": "2026-10-31 05:31",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-10-31-world-brief.md (Sat Oct 31, today)",
+    "Stocks: reports/stocks/2026-10-30-stock-brief.md (Fri Oct 30, NOT today)",
+    "Crypto: reports/crypto/2026-10-31-crypto-brief.md (Sat Oct 31, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-30-nasdaq-brief.md (Fri Oct 30, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-10-29-gold-brief.md (Thu Oct 29, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Oct 31 ☀️\n\nIran war and Hormuz ship attacks are the biggest risks to your gas and grocery bills today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Trump said Friday the Iran war should end soon and the US would not strike before the Nov. 3 midterms.\n\nWhy it matters: renewed fighting could lift oil and gas prices.\n\nNext: if Qatari-mediated talks stall, energy costs could rise. Watch Tehran."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ SEC granted relief from Treasury clearing rules for some repo deals and charged two entities in a $130 million fraud. Why it matters: fraud can drain investor savings. Next: if Utah's prediction-market case advances, watch CFTC's response."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Thursday, Alphabet fell 12.6% after a Q3 miss; EPS was $2.12 vs $3.01 expected.\n\nWhy it matters: if AI spending outruns returns, index funds in your 401(k) feel it.\n\nNext: if AI-cost worries spread, watch tech. AMD reports Nov 3."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Fear and Greed is 30. BTC is $77,263 (-4.2% in 7 days).\n\nWhy it matters: the Clarity Act stalled in the Senate, so there is no near-term US crypto rulebook.\n\nNext: BTW has $175.8M unlocking Nov 2. Watch for supply pressure.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: WSJ, CBS, SEC, CFTC, Schwab, CNBC, CoinGecko live data",
+  "midday": {
+    "story": "Iran war and Hormuz shipping attacks",
+    "post": "Why this matters for your wallet: Hormuz traffic is still about 70% below prewar levels. Higher oil means higher gas, shipping and grocery costs. If attacks continue, inflation pressure could rise. Watch the Sunday futures reopening."
+  },
+  "reply_midday": "Sources: WSJ, NewsNation, UKMTO, ScanX (Hormuz traffic data)",
+  "close_watch": "Markets are closed; watch the Sunday futures reopening for Iran-driven moves, and the Nov. 2 BTW unlock on the crypto side.",
+  "video": {
+    "script": "Oil could move your gas bill this week, and here is why. Iran's war and attacks on ships in the Strait of Hormuz are the top story. Trump said Friday the war should end soon, and that the US would not strike before the November 3 midterms. Hormuz traffic is still about 70 percent below prewar levels, and that can push shipping and energy costs up. In stocks, Alphabet fell 12.6 percent Thursday after a Q3 earnings miss, raising questions about AI spending that could reach your retirement account. In crypto, the Fear and Greed index is at 30, and the Clarity Act is stalled in the Senate. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Iran war: energy risk",
+      "Hormuz traffic ~70% below prewar",
+      "Alphabet -12.6% (Thu)",
+      "Fear and Greed: 30",
+      "BTC $77,263",
+      "Not financial advice"
+    ]
+  }
+}
