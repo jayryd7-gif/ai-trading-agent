@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-01 17:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-01 18:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,12 +17,12 @@ Last updated 2026-11-01 17:26 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 13 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 days ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 47 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -527,39 +527,56 @@ Big Tech earnings are done, and today's data (Employment Cost Index, Chicago PMI
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-10-29</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-11-01</b></summary>
 
-### Gold Futures Brief: Asia Session, Oct 29–30, 2026
+### Gold Futures Brief: Asia Session (Tokyo open 9:00 AM Tokyo = 7:00 PM New York, Sun Nov 1)
+
+US daylight saving time ends today. The Tokyo open is now 7:00 PM New York time.
 
 #### 1. What is driving gold
-- **Hawkish Fed hold.** The Fed held rates at 3.75%-4.00% on Oct 28 in a 10-2 vote. Cook and Hammack both wanted a 25 bp hike. Futures still priced about an 85% chance of a hike on Dec 9.
-- **Strong data on Thursday.** Gold slid as a 3.4% GDP beat kept a December Fed hike in play. I could not verify the September PCE result. Sources I found disagreed on it.
-- **Wider backdrop.** Attention is on Middle East tensions, energy prices and whether the Fed hikes again. The 10-year yield was about 5.04% on Oct 28.
+- Gold had a hard fall. December COMEX futures settled 3.3% lower at $3,898.90 on Friday, the lowest since October 2025. Gold lost about 7.2% over October, its second straight monthly decline.
+- The main driver is Fed rate-hike bets. Traders price about a 75% chance of a December hike (CME FedWatch). The Fed held rates on Oct 28, with two officials voting for an immediate hike. Higher oil adds to inflation worries.
+- A tech selloff made it worse. The Wall Street selloff triggered liquidation across precious metals. Gold fell even though Treasury yields dropped.
+- Some analysts see an oversold bounce coming. Commerzbank expects one, per the FinanceFeeds summary. I could not verify that independently.
 
 #### 2. Scheduled events (New York time)
-- **7:30 PM Thu:** Tokyo core CPI for October. Consensus is 2.6%, down from 2.7%. It lands just before the open.
-- **Session open, 8:00 PM:** Tokyo 9:00 AM.
-- **About 11:00 PM Thu:** Bank of Japan decision with the Outlook Report. It is scheduled for 12:00 JST on Oct 30. There is no fixed release time. OIS pricing favors a hold, with a 2.4% chance of a hike. Sources disagree on the current BOJ rate (0.75% vs 1.25%). I could not settle that.
-- **About 2:30 AM Fri:** Governor Ueda's press conference is at 3:30 PM JST, which is 2:30 AM ET.
-- **After the session, 8:30 AM Fri:** US Employment Cost Index (forecast 0.8%). Fed's Daly speaks at 12 PM and Musalem at 12:30 PM. These come after the Asia session ends.
+**During the Asia session (7 PM Sun to about 3 AM Mon):**
+- 7:30 PM: Japan final manufacturing PMI and Australia building permits. I converted these from UTC times on Trading Economics.
+- China's NPC Standing Committee meeting begins Monday and runs through Nov 6.
+- An OPEC and non-OPEC ministerial meeting was listed for Oct 31. I did not verify the outcome.
 
-I found no major earnings that move gold during the session.
+**After the session:**
+- Mon 10:00 AM: US ISM Manufacturing PMI. Consensus is 54.7.
+- Mon 11:15 AM: Fed's Goolsbee speaks.
+- Mon after the close: Apple and Palantir report.
+- Tue Nov 3: US midterm elections. The RBA also decides that day.
+- Fri Nov 6, 8:30 AM: US jobs report. It comes out Friday at 8:30 a.m.
+
+I found no Fed speakers or major US data inside the Asia window.
 
 #### 3. Key levels (from the price data)
-- Previous session high: **4081.00**
-- Previous session low: **4033.40**
-- Previous session close: 4034.50
-- 5-session high: **4084.10**
-- 5-session low: **3990.90**
-- Since that close: high 4051.10, low 4016.30
-- Latest price: **4024.20**
-
-The latest price is 9.20 below the previous session low. It is also only about 8 points above the post-close low of 4016.30. So it sits **near support**, not resistance. The old low at 4033.40 is now overhead and could act as resistance.
+- Latest price: 3902.70.
+- Previous session high: 4030.80. Low: 3974.70. Close: 3984.60.
+- Highest high of the last 5 Asia sessions: 4084.10. Lowest low: 3974.70.
+- Since that session closed: high 4009.20, low 3879.30.
+- Price is 72.00 below the previous session low. 3974.70 is now overhead, so it may act as resistance.
+- Price is 23.40 above the post-session low of 3879.30. It sits closer to support than to resistance.
+- News sources also flag $4,000 as a round-number level. It is not in the price block.
 
 #### 4. Volume
-The previous session traded 0.94x the average of the five sessions before it. That is sl
+The previous session traded 1.38x the average of the 5 sessions before it. That means above-average participation. The selloff happened after that session closed. I have no volume figure for the breakdown itself. So this tells us about interest in that session, not about the current drop.
 
-[Open the file](reports/2026-10-29-gold-brief.md)
+#### 5. Directional lean
+**Bearish, Medium confidence.** Price is below the previous session low and below the 5-session low of 3974.70. That is a clear break lower. The news backs it up: Fed hike odds are high, oil is elevated, and one source says momentum is "decisively bearish." Volume was elevated, but it doesn't clearly point either way. The risks to this lean are forced selling that has run its course and talk of an oversold bounce. Price is also close to the post-session low.
+
+What would change my lean:
+- Price reclaims 3974.70 and holds above it.
+- Equities stabilize.
+- Hike odds fall.
+- Weak US data comes in. The jobs report is on Friday.
+- Middle
+
+[Open the file](reports/2026-11-01-gold-brief.md)
 
 </details>
 
@@ -568,7 +585,7 @@ The previous session traded 0.94x the average of the five sessions before it. Th
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-10-30 08:39 | ? Unknown | Unknown | Medium | 28797.50 | [read it](reports/2026-10-30-nasdaq-brief.md) |
-| gold | 2026-10-29 19:26 | ? Unknown | Unknown | n/a | 4024.20 | [read it](reports/2026-10-29-gold-brief.md) |
+| gold | 2026-11-01 18:25 | ? Unknown | Unknown | n/a | 3902.70 | [read it](reports/2026-11-01-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
