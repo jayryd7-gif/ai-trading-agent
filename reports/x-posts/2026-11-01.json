@@ -48,5 +48,32 @@
       "Midterms: Tue Nov 3",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500 futures: 7,641.75 (+0.4% vs the last close)\nNasdaq futures: 28,654.75 (+0.4% vs the last close)\nOil (WTI): 102.35 (-1.7% vs the last close)\nGold: 3,908.30 (+0.2% vs the last close)\nBitcoin: 78,230.39 (+1.0% vs the last close)\nEther: 2,272.97 (+0.9% vs the last close)\nSolana: 94.41 (-1.0% vs the last close)\nStock markets: closed today; futures reopened at 6 PM NY; the stock market opens Monday 9:30 AM NY",
+    "written": "2026-11-01 18:59",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Nov 1 🌙\n\nIran strike threats and a reported Binance hack are the biggest things for your wallet today.\n\nWhat happened today and what to watch Monday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Trump said one or two Iran sites need 'taking care of' while talks continue (Benzinga).\n\nWhy it matters: if strikes resume, oil could rise and hit gas and food bills.\n\nTomorrow: if strikes resume, watch oil. Midterms Tue Nov 3."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: SEC gave exemptive relief from Treasury clearing for some repo deals (Oct 30).\n\nWhy it matters: repo markets help set loan and savings rates.\n\nTomorrow: ISM Manufacturing, 10 AM (forecast 54.7). Watch whether it shifts rate bets."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: markets are closed. S&P 500 futures are +0.4% at 7,641.75 and reopen at 6 PM NY (Yahoo Finance).\n\nWhy it matters: futures can set the tone for retirement accounts.\n\nTomorrow: Alamo (ALG) reports earnings Monday. Watch how the open reacts."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: Bitcoin 78,230.39 (+1.0%). Binance says it replaced 95% of stolen crypto for users.\n\nWhy it matters: exchange trust and withdrawals affect your access to funds.\n\nTomorrow: watch whether Binance withdrawals run smoothly.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Benzinga, Anadolu (politics); SEC press release (repo relief); Economic calendar feed; Yahoo Finance (prices, earnings); PYMNTS (Binance). Not financial advice."
   }
 }
