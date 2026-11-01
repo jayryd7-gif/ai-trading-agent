@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-01 03:40 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-01 04:03 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -19,8 +19,8 @@ Last updated 2026-11-01 03:40 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 43 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 46 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 42 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 34 hours ago | after each session ends |
 
@@ -334,63 +334,69 @@ Nothing found on data released overnight. The next US data is ISM Manufacturing 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-10-31</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-01</b></summary>
 
 #### Top things today
+1. **Binance hack.** North Korea is reported to have stolen about $6.4B from Binance, the largest crypto hack on record (TRM Labs via BitDigest). Other outlets use $6.3B. Binance is targeting Sunday for withdrawals, and the FBI and Secret Service are involved (Bitcoin News Digest). Early X posts with lower figures were unconfirmed. Why it matters: exchange trust and liquidity.
+2. **US crypto bill stalled; agencies are filling the gap.** The CLARITY Act is stuck in the Senate. The SEC and CFTC are writing rules without it (CNBC, CoinStats). Why it matters: rules for altcoins and exchanges are being set by agencies, not Congress.
+3. **US midterms are Tuesday, Nov. 3.** Crypto groups have put more than $200M into the races (CNBC via Shattered). Why it matters: the result shapes the next push on the stalled bill.
+4. **Fed held rates at 3.75%–4.00% on Oct. 28, in a 10–2 vote.** Bitcoin then dipped below $80K and $628M was liquidated in one hour (CoinStats). A Fed official said tightening may be needed soon (CNBC link in Bitcoin News Digest). Why it matters: rate fears are weighing on risk assets.
+5. **Kinetiq (KNTQ) is near record highs ahead of its Elysium launch on Nov. 9.** Why it matters: it is the clearest news-driven mover on today's list.
 
-1. **Market mood is fearful.** The Fear and Greed Index is 30. BTC is $77,263 (-4.2% over 7 days), ETH is $2,239 (-5.7%) and SOL is $95.31 (-6.4%). Why it matters: the whole market is weak, so most gainers are going against the trend.
-2. **The Senate market-structure bill is stalled.** The Clarity Act stalled in the Senate in September (CNBC). Open fights include an ethics clause for officials, DeFi treatment and stablecoin yield (crypto.news). Why it matters: there is no near-term federal rulebook.
-3. **The SEC is moving on its own.** It proposed rules to make it easier for advisers and regulated funds to hold crypto for clients (CNBC, Oct 2). Why it matters: agencies are writing rules that Congress has not.
-4. **Spot Bitcoin ETFs saw a fourth straight day of inflows.** Net inflow was $17.07 million on October 29 (CoinTurk, citing SoSoValue). Why it matters: demand is positive but small.
-5. **A large unlock cluster starts this weekend.** BTW has $175.8M due Nov 2, and Hyperliquid has a modeled unlock on Nov 6 (details under Next 7 days). Why it matters: extra supply can hit prices, and HYPE is already down 5.4%.
+Market snapshot: BTC is $78,123 and the Fear & Greed Index is 34 (Fear).
 
 #### Coins to research
-
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Infinity Ground (AIN) | +57.3% (CoinGecko trending) | A token buyback has bought about $3M of AIN after a September 16 crash the team blamed on a third-party error (KuCoin News). Sources disagree on the size of the pump. | Rank ~446. It went from above $0.07 to over $0.20, then fell toward $0.03. Most supply sits outside the circulating count (Phemex). Heavy derivatives activity: open interest hit $86M (Coinedition). Paid "next 200x" promos are circulating. |
-| Beam (BEAM) | +12.4% (7d +49.8%) | No news found. | Pump with no known catalyst. Volume of $225M is high against a $255M market cap. |
-| Cap (CAP) | +13.1% (7d +27.9%) | No news found. | Small cap ($136.5M). Pump with no news. |
-| Optimism (OP) | +10.6% | No news found. | Bounce in a weak week. 7d is about flat. |
-| EigenCloud (EIGEN) | +7.8% (7d -10.8%) | No news found. | An unlock of roughly $7M is due around Nov 1. Details are in the Next 7 days table. |
-| Collector Crypt (CARDS) | -11.8% (trending) | About 59.26M tokens (9.6% of circulating supply) unlocked Oct 30 (KuCoin News). | Falling after a large unlock. |
+| Lighter (LIT) | +15.7% | No clear news found. A new wallet pulled 1.15M LIT (about $3.3M) off OKX (Lookonchain via Bitcoinsistemi). Purpose unknown. | Pump with no news. $785M cap. Trending, which can mean crowded interest. |
+| Kinetiq (KNTQ) | +5.8% (+43% 7d) | Elysium, a Hyperliquid layer-2, is set for mainnet Nov. 9 (TokenPost). It hit a record above $0.50 on Thursday. | Up sharply in a short time. A 7-day gain this size leaves little room for a "sell the news" move. Role in Elysium fees is still unclear (TokenPost). |
+| Beam (BEAM) | +7.3% (+78% 7d) | No news found. | Pump with no news. $146M volume on a $276M cap is very high turnover. |
+| Kite (KITE) | +9.2% | No news found. A roughly $12.2M unlock (4.25% of market value) was listed for Nov. 1 (Cryptonews). | Fresh unlock supply. Only $11M volume. |
+| Morpho (MORPHO) | +10.1% (+11.5% 7d) | No news found. | Pump with no news. Thin volume ($44.9M) for a $1.6B cap. |
+| Pons (PONS) | +9.1% | No news found. | Small cap ($165M). Low rank (#195). Pump with no news. |
+
+I found no data on wallet concentration for any of these coins.
 
 #### Whale watch
+| When | Coin | Amount (USD) | Who | Direction |
+|---|---|---|---|---|
+| Oct. 30–31 (exact time not given) | SOL | ~$58.5M and ~$52.7M | Unknown wallets (Whale Alert) | Onto an exchange (Coinbase Institutional, a custodian, so it may not be a sale) |
+| Oct. 31 (about 4 hours before the report) | ETH | ~$21.6M (9,625 ETH) | Whale (Lookonchain) | Off an exchange (received from FalconX) |
+| Oct. 31 | HYPE | ~$10.7M (118,000 HYPE) | a16z-linked entity (alleged, unconfirmed) (TechFlow) | Transfer, destination not stated |
+| Past 5 days to Oct. 29 | AAVE and WLD | ~$42.7M combined | One whale (Lookonchain) | Onto exchanges |
 
-No whale moves found. Whale items turned up in searches were months old, so I left them out. One October 30 article mentioned a Galaxy Digital BTC transfer, but it gave no amount.
+Timestamps are as reported and may be outside the last 24 hours.
 
 #### Government and regulation
-
-- **CLARITY Act (market structure):** One report says the Senate stalled it on September 15 with a 49-50 vote (Daily Prabhat). Another calls it a cloture vote (crypto.news). Nothing newer was found.
-- **Strategic Bitcoin Reserve Bill:** The House Financial Services Committee approved it, the first time such a proposal has cleared a federal committee (BigGo). It bars the Treasury from selling reserve bitcoin and directs Treasury and Commerce to find budget-neutral ways to add more. It has not had a floor vote that I found.
-- **Sen. Hagerty:** In an interview reported Oct 29-30, he said the reserve could grow soon after market-structure law passes. White House officials say no plan exists yet to add to the reserve (BigGo).
-- **SEC:** The custody proposal from early October. It would allow self-custody in certain cases and let state trust companies act as custodians. (CNBC)
-- **CFTC:** Chair Selig has said the agency will finalize its own digital-asset market-structure framework if Congress stalls (crypto.news, as of its July-September updates).
-- **Other countries:** Nothing found.
-- **Low-profile bills:** None found in the last few days.
+- **CLARITY Act (US):** It would split oversight of digital assets between the SEC and CFTC and require exchanges to register federally. It passed the House 294–134 in July 2025 and is stalled in the Senate (CryptoTicker, CoinStats). Sen. Lummis blamed the setback for weakening the response to the Binance hack (AMBCrypto).
+- **CFTC:** It issued an advance notice of proposed rulemaking on Oct. 5. Comments are due Dec. 14. Delivery to a user's own wallet within 28 days is the key test (Bullrunners). CFTC Chair Selig cited the Binance hack to argue for federal oversight of offshore exchanges (Decrypt, AMBCrypto). The CFTC is also proposing "Regulation CTX" and "Regulation CAM" (CoinStats).
+- **SEC:** Its custody proposal would make it easier for advisers and funds to hold crypto, and comments are due Dec. 7 (CNBC, Bullrunners). Chair Atkins reportedly said most crypto assets are not securities (OneSafe, secondary source).
+- **Treasury:** Secretary Bessent said regulation is moving ahead with or without Congress (Bitcoin Magazine via BitDigest).
+- **H.R. 10357 (House tax bill):** It would treat network fees under $10 as not taxable, for dispositions after 2027. It would also extend the wash-sale rule to crypto. A House committee advanced it (Bullrunners). Floor status not found.
+- **Stablecoins:** The GENIUS Act (July 2025) is already in force. The OCC has a final rule on stablecoin payments (CryptoTicker, OneSafe).
+- **Russia:** Moscow Exchange plans to start Bitcoin, Ethereum and USDT trading on Dec. 1. It starts with professional traders and retail access is limited (RBC via crypto.news). Russia's regulated framework began taking effect Sept. 1.
 
 #### Who is buying and adopting
-
-- **Countries and governments:** Nothing new found. The US reserve is estimated at about 200,000 BTC (Bitcoin Magazine, via Digital Today), and I found no new purchases.
-- **Companies buying bitcoin:** Nothing found.
-- **Payments and stablecoins:** One October 30 headline said Circle backs SEC crypto rules as USDC adoption grows (Tronweekly). I did not see the details.
+- **Strategy:** Shares fell about 7.8% on Friday after earnings. It holds a $4.83B cash reserve. The 5,552 BTC it sold in the quarter had been announced earlier (Bitcoin News Digest). A Nov. 11 index decision is also pending (crypto.news headline, no details found).
+- **US spot Bitcoin ETFs:** Inflows were $110.3M on Oct. 26 and $176M on Oct. 27 (CoinStats).
+- **Payments and tokenization:** DTCC's tokenization service went live with J.P. Morgan and Citi. Tencent and Visa are expanding a cross-border payments partnership. USDC now has a 56% share of euro stablecoin trading (BitDigest headlines, secondary source).
+- **Government buying:** Nothing found.
 
 #### Next 7 days
-
-The sources do not agree on time zones, so exact New York times are unconfirmed.
-
 | Date | Event | Coin or topic |
 |---|---|---|
-| Oct 31 - Nov 1 | EIGEN unlock of about $7M. DefiLlama lists it Oct 31, while others list Nov 1 (unconfirmed time). | EIGEN |
-| Nov 1 | Sui unlock of 13.15M SUI, about $12.1M (BeInCrypto) | SUI |
-| Nov 1 | MemeCore unlock of $53.6M (DefiLlama); Kite unlock of about $12.19M (time unconfirmed) | M, KITE |
-| Nov 1 and Nov 5 | Ethena unlocks, about $113M combined (GitHub governance report, unconfirmed) | ENA |
-| Nov 2 | 101.63M BTW tokens, about $175.82M (KuCoin post) | BTW |
-| Nov 6 | $923.63M HYPE allocation (Tokenomist). It is a modeled schedule, not a confirmed distribution. | HYPE |
+| Nov. 1 | Sunday target for Binance withdrawals to resume | Binance |
+| Nov. 1 | Unlocks: ENA (about $113M with Nov. 5), SUI, EIGEN, KITE. MemeCore (M) about $51M (DefiLlama) | Unlocks |
+| Nov. 2 | About $175.8M unlock (KuCoin) | BTW |
+| Nov. 3 | US midterm elections | Crypto policy |
+| Nov. 5 | ENA unlock (part of the ~$113M above) | ENA |
+| Nov. 6 | HYPE unlock of about $923M per Tokenomist. DefiLlama showed none, so it is unconfirmed (ETHNews) | HYPE |
+| Nov. 7–8 | STABLE unlock of about $23.5M. DefiLlama says Nov. 7. RootData says Nov. 8 at 1 p.m. Beijing time, which is about midnight New York time. | STABLE |
+| Nov. 9 | Elysium mainnet launch (TokenPost) | KNTQ / Hyperliquid |
 
-No ETF deadlines or hearings were found.
+No ETF deadlines or hearings were found for this week.
 
-[Read the full brief with all the details](reports/crypto/2026-10-31-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-01-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
