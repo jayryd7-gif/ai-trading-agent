@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-01",
+  "written": "2026-11-01 04:38",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-01-world-brief.md (Sun Nov 01, today)",
+    "Stocks: reports/stocks/2026-10-30-stock-brief.md (Fri Oct 30, NOT today)",
+    "Crypto: reports/crypto/2026-11-01-crypto-brief.md (Sun Nov 01, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-30-nasdaq-brief.md (Fri Oct 30, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-10-29-gold-brief.md (Thu Oct 29, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 1 ☀️\n\nIran strike threats and the Binance hack are the biggest things for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Trump says one or two Iran sites need 'taking care of.' Rubio: no decision yet on resuming strikes. Why it matters: strikes could lift oil and inflation, hitting gas and food bills. Next: if strikes resume, watch oil, shipping. Midterms Nov 3."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ SEC gave exemptive relief from Treasury clearing for some repo deals (Oct 30). No major US data overnight. Why it matters: repo markets set borrowing costs for loans and savings. Next: Monday's ISM Manufacturing (forecast 54.7). Watch repo relief."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks, Thursday: Alphabet fell 12.6% after a Q3 EPS miss ($2.12 vs $3.01 expected).\n\nWhy it matters: AI spending without clear returns is being punished, which can reach index funds.\n\nNext: if AI-cost worries spread, watch AMD earnings due Nov 3."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: North Korea is reported to have stolen about $6.4B from Binance, the largest crypto hack on record.\n\nWhy it matters: exchange trust and liquidity.\n\nNext: watch whether Binance withdrawals resume as targeted.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Benzinga, Times of Israel, Anadolu, CNBC, Schwab, Investing.com, CoinStats, TRM Labs via BitDigest, SEC press release",
+  "midday": {
+    "story": "Binance hack and exchange trust",
+    "post": "Why this matters for your wallet: a reported $6.4B theft from Binance would be the largest crypto hack on record. If you keep coins on exchanges, check withdrawal status and think about how much you hold there. Not financial advice."
+  },
+  "reply_midday": "Sources: TRM Labs via BitDigest, Bitcoin News Digest, CoinStats. Figures are reported and not final.",
+  "close_watch": "Stock markets are closed for the weekend; watch the Sunday evening reopening and Monday 10:00 AM ISM Manufacturing PMI (forecast 54.7).",
+  "video": {
+    "script": "North Korea is reported to have stolen about 6.4 billion dollars from Binance, the largest crypto hack on record. Binance is targeting Sunday for withdrawals to resume. Meanwhile, US officials say strikes on Iran are still on the table, and oil could jump if they happen. Why does this matter? If you hold coins on an exchange, watch withdrawals and only keep what you can afford to lose. If oil rises, gas and groceries often follow. Next up: Monday's ISM data and Tuesday's midterms. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Binance hack: ~$6.4B reported",
+      "Iran strike threats: oil risk",
+      "Watch Binance withdrawals",
+      "Alphabet -12.6% Thursday",
+      "Midterms: Tue Nov 3",
+      "Not financial advice"
+    ]
+  }
+}

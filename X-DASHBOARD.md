@@ -1,152 +1,80 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-10-31 18:57 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-01 04:38 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-10-31.md)
-- **Evening thread:** ✅ ready (below), reminder at 7 PM
-- **Claude cost this month:** $0.061 (13 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-01.md)
+- **Evening thread:** ⏳ about 6:30 PM New York time
+- **Claude cost this month:** $0.006 (1 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Saturday Oct 31)
-
-What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
-
-**Post 1 of 5 · Intro** (184/280)
-```text
-1/ Cash Flow Brief: Evening, Oct 31 🌙
-
-Iran war headlines and a $6.3 billion Binance crypto hack are the biggest wallet stories today.
-
-What happened today and what to watch Sunday 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (253/280)
-```text
-2/ Politics & world: Trump said Friday the Iran war should end soon, with no US strike before Nov. 3 midterms.
-
-Why it matters: Iran news moves oil, and oil moves your gas bill.
-
-Tomorrow: if talks stall, energy costs could rise. Watch Qatari mediation.
-```
-
-**Post 3 of 5 · 💵 Economy** (235/280)
-```text
-3/ Economy: No major data today. Friday, the SEC eased Treasury clearing rules for some repo deals.
-
-Why it matters: repo rates feed short-term borrowing costs.
-
-Tomorrow: no major data listed. Watch whether the CFTC's Utah case moves.
-```
-
-**Post 4 of 5 · 📈 Stocks** (237/280)
-```text
-4/ Stocks: Markets are closed for the weekend, so no fresh moves today.
-
-Why it matters: weekend news can gap prices, and index funds in your 401(k) move with them.
-
-Tomorrow: if Iran headlines hit, watch futures at the Sunday reopening.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (221/280)
-```text
-5/ Crypto: BTC $77,384.23 (+0.2%). FBI blames North Korea for the $6.3B Binance hack.
-
-Why it matters: big exchange hacks can put user funds at risk.
-
-Tomorrow: watch for more detail on user losses.
-
-Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(138/280)
-```text
-Sources: Reuters, AP, WSJ, NBC News, LA Times (news); SEC; Yahoo Finance (prices); CoinGecko
-Not financial advice. News and analysis only.
-```
-
-<details><summary>Prices used</summary>
-
-```text
-Bitcoin: 77,384.23 (+0.2% vs the last close)
-Ether: 2,251.16 (+0.5% vs the last close)
-Solana: 95.23 (-1.0% vs the last close)
-Stock markets: closed for the weekend (crypto trades 24/7)
-```
-</details>
-
-## 📋 This morning's posts, ready to copy (Saturday Oct 31)
+## 📋 Today's posts, ready to copy (Sunday Nov 01)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
-**Post 1 of 5 · Intro** (185/280)
+**Post 1 of 5 · Intro** (179/280)
 ```text
-1/ Cash Flow Brief, Oct 31 ☀️
+1/ Cash Flow Brief, Nov 1 ☀️
 
-Iran war and Hormuz ship attacks are the biggest risks to your gas and grocery bills today.
+Iran strike threats and the Binance hack are the biggest things for your wallet today.
 
 What happened, why it matters, and what could happen next 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (258/280)
+**Post 2 of 5 · 🌍 World & politics** (246/280)
 ```text
-2/ Politics: Trump said Friday the Iran war should end soon and the US would not strike before the Nov. 3 midterms.
-
-Why it matters: renewed fighting could lift oil and gas prices.
-
-Next: if Qatari-mediated talks stall, energy costs could rise. Watch Tehran.
+2/ Trump says one or two Iran sites need 'taking care of.' Rubio: no decision yet on resuming strikes. Why it matters: strikes could lift oil and inflation, hitting gas and food bills. Next: if strikes resume, watch oil, shipping. Midterms Nov 3.
 ```
 
-**Post 3 of 5 · 💵 Economy** (242/280)
+**Post 3 of 5 · 💵 Economy** (250/280)
 ```text
-3/ SEC granted relief from Treasury clearing rules for some repo deals and charged two entities in a $130 million fraud. Why it matters: fraud can drain investor savings. Next: if Utah's prediction-market case advances, watch CFTC's response.
+3/ SEC gave exemptive relief from Treasury clearing for some repo deals (Oct 30). No major US data overnight. Why it matters: repo markets set borrowing costs for loans and savings. Next: Monday's ISM Manufacturing (forecast 54.7). Watch repo relief.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (240/280)
+**Post 4 of 5 · 📈 Stocks** (250/280)
 ```text
-4/ Stocks: Thursday, Alphabet fell 12.6% after a Q3 miss; EPS was $2.12 vs $3.01 expected.
+4/ Stocks, Thursday: Alphabet fell 12.6% after a Q3 EPS miss ($2.12 vs $3.01 expected).
 
-Why it matters: if AI spending outruns returns, index funds in your 401(k) feel it.
+Why it matters: AI spending without clear returns is being punished, which can reach index funds.
 
-Next: if AI-cost worries spread, watch tech. AMD reports Nov 3.
+Next: if AI-cost worries spread, watch AMD earnings due Nov 3.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (257/280)
+**Post 5 of 5 · 🪙 Crypto** (241/280)
 ```text
-5/ Crypto: Fear and Greed is 30. BTC is $77,263 (-4.2% in 7 days).
+5/ Crypto: North Korea is reported to have stolen about $6.4B from Binance, the largest crypto hack on record.
 
-Why it matters: the Clarity Act stalled in the Senate, so there is no near-term US crypto rulebook.
+Why it matters: exchange trust and liquidity.
 
-Next: BTW has $175.8M unlocking Nov 2. Watch for supply pressure.
+Next: watch whether Binance withdrawals resume as targeted.
 
 Not financial advice.
 ```
 
 **Reply under post 5 · sources**
-(109/280)
+(172/280)
 ```text
-Sources: WSJ, CBS, SEC, CFTC, Schwab, CNBC, CoinGecko live data
+Sources: Benzinga, Times of Israel, Anadolu, CNBC, Schwab, Investing.com, CoinStats, TRM Labs via BitDigest, SEC press release
 Not financial advice. News and analysis only.
 ```
 
-### Midday take (12-1 PM): Iran war and Hormuz shipping attacks
+### Midday take (12-1 PM): Binance hack and exchange trust
 
-(233/280)
+(232/280)
 ```text
-Why this matters for your wallet: Hormuz traffic is still about 70% below prewar levels. Higher oil means higher gas, shipping and grocery costs. If attacks continue, inflation pressure could rise. Watch the Sunday futures reopening.
+Why this matters for your wallet: a reported $6.4B theft from Binance would be the largest crypto hack on record. If you keep coins on exchanges, check withdrawal status and think about how much you hold there. Not financial advice.
 ```
 
 <details><summary>🎬 Video script (30-60 sec)</summary>
 
 ```text
-Oil could move your gas bill this week, and here is why. Iran's war and attacks on ships in the Strait of Hormuz are the top story. Trump said Friday the war should end soon, and that the US would not strike before the November 3 midterms. Hormuz traffic is still about 70 percent below prewar levels, and that can push shipping and energy costs up. In stocks, Alphabet fell 12.6 percent Thursday after a Q3 earnings miss, raising questions about AI spending that could reach your retirement account. In crypto, the Fear and Greed index is at 30, and the Clarity Act is stalled in the Senate. Not financial advice. Follow for tomorrow's brief.
+North Korea is reported to have stolen about 6.4 billion dollars from Binance, the largest crypto hack on record. Binance is targeting Sunday for withdrawals to resume. Meanwhile, US officials say strikes on Iran are still on the table, and oil could jump if they happen. Why does this matter? If you hold coins on an exchange, watch withdrawals and only keep what you can afford to lose. If oil rises, gas and groceries often follow. Next up: Monday's ISM data and Tuesday's midterms. Not financial advice. Follow for tomorrow's brief.
 ```
 </details>
 
-**Coming up:** Markets are closed; watch the Sunday futures reopening for Iran-driven moves, and the Nov. 2 BTW unlock on the crypto side.
+**Coming up:** Stock markets are closed for the weekend; watch the Sunday evening reopening and Monday 10:00 AM ISM Manufacturing PMI (forecast 54.7).
 
 ## Topics covered, last 14 days
 
@@ -154,6 +82,7 @@ Oil could move your gas bill this week, and here is why. Iran's war and attacks 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Sun Nov 01](reports/x-posts/2026-11-01.md) | ✅ | ✅ | ✅ | ✅ | — | Binance hack and exchange trust |
 | [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran war and Hormuz shipping attacks |
 | [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance's suspected $6.3B hack |
 | [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | ✅ | The Fed held at 3.75% to 4% with two votes for a hike |
@@ -167,13 +96,13 @@ Oil could move your gas bill this week, and here is why. Iran's war and attacks 
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Sun 25 | Mon 26 | Tue 27 | Wed 28 | Thu 29 | Fri 30 | Sat 31 |
+| Brief | Mon 26 | Tue 27 | Wed 28 | Thu 29 | Fri 30 | Sat 31 | Sun 01 |
 |---|---|---|---|---|---|---|---|
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Stocks | · | ✅ | · | ✅ | · | ✅ | · |
+| Stocks | ✅ | · | ✅ | · | ✅ | · | · |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
-| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
+| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | · |
 
 ## 🚀 When to turn on auto-posting
 
