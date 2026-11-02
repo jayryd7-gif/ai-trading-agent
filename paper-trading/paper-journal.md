@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-11-02 | Nasdaq (MNQ) | Long | -$1,015
+- **Session start (New York):** 2026-11-02 09:30
+- **Why:** two 5-minute candles closed beyond the key high (28844.0)
+- **Entry:** Bought **5 contracts** at **28886.75** at **10:25** (sell plan 1/2/2)
+- **Stop:** 28785.75
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 10:45 | Stop | 5 | 28785.75 | -$1,010 |
+
+- **Exit:** last contract out at **10:45**, average 28785.75
+- **Result:** -$1,010 before fees, **-$1,015 after fees**
+- **What could have gone better:**
+  - Price never reached Target 1: the best it did was +2.50 points, and Target 1 needed 30.
+  - The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.
+  - The entry was 42.75 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Biggest move against you while in the trade: 111.75 points ($1,118 on paper). Best move for you: 2.50 points.
+
+![Chart of this trade](charts/2026-11-02-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ❌ 2026-10-30 | Gold (MGC) | Short | -$265
 - **Session start (New York):** 2026-10-29 20:00
 - **Why:** two 5-minute candles closed beyond the key low (4018.2)
@@ -344,8 +368,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$1,360** over 14 trades
-- **Winners:** 5 (36%), **losers:** 9
-- **Before fees:** -$1,294, fees paid: $66
-- **Nasdaq (MNQ):** -$702 over 7 trades
+- **Total profit / loss after fees:** **-$2,376** over 15 trades
+- **Winners:** 5 (33%), **losers:** 10
+- **Before fees:** -$2,304, fees paid: $71
+- **Nasdaq (MNQ):** -$1,716 over 8 trades
 - **Gold (MGC):** -$659 over 7 trades
