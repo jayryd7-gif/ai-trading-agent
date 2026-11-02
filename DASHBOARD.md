@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-01 20:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-02 03:54 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,11 +17,11 @@ Last updated 2026-11-01 20:43 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 days ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 days ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -256,68 +256,76 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-01, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-11-02, event risk High</b></summary>
 
 #### Top things for today
-1. **Iran: strike threat while talks continue.** Trump told reporters in Palm Beach on Saturday that one or two sites still need "taking care of," and that the US could do it in 10 minutes. He also said the talks are "going fine" but called Iran "not very reliable." Rubio said at a G20 press conference in Atlanta that Trump has not decided whether to resume strikes. (Benzinga, citing Times of Israel) Why it matters: energy supply risk, safe-haven demand and inflation.
-2. **Iran warns of wider targets.** Iran threatens unrestricted targets if the conflict resumes, while Doha talks continue (The Media Line, headline only). Why it matters: Gulf oil and shipping risk.
-3. **Trump says he's "in no hurry" with Iran.** He said this at a Halloween party (Al Jazeera, headline only). Why it matters: it suggests no set deadline, so uncertainty stays.
-4. **US midterms are Tuesday.** The calendar lists Congressional Elections on Nov 3. Why it matters: policy and fiscal expectations, rates and the dollar.
-5. **Ukraine and the G20.** Trump says he would invite Zelenskyy to the G20 summit in the US (Anadolu, headline only). Why it matters: Russia-related risk and energy.
+1. **US-Iran war and talks.** Secretary of State Rubio said Saturday that Trump has not decided on new strikes and would prefer a diplomatic solution (Reuters via GV Wire). Trump has held off on strikes in recent weeks ahead of the midterms. Why it matters: energy prices, safe-haven demand, risk appetite.
+2. **Strait of Hormuz and the US blockade.** Iran says the Strait can't reopen until the US naval blockade ends and its demands are met (Iran International). Why it matters: oil supply, inflation expectations.
+3. **US midterm elections.** Voting is Tuesday, Nov 3. The results will decide whether Republicans keep their thin majorities in both houses. Anadolu's headline says polls show Democrats ahead (headline only). Why it matters: policy outlook, the dollar, rates.
+4. **ISM Manufacturing PMI at 10:00 AM.** Forecast is 54.7, previous 54.5. Why it matters: growth and rate expectations.
+5. **Bank of England decision Thursday and US jobs report Friday.** Why it matters: rates and the dollar.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| All day | No major events listed | Economic calendar | Yes |
-| Unconfirmed | Iran talks continue | Doha (Media Line, headline only) | No (unconfirmed) |
-
-Tomorrow: Mon Nov 02, 10:00 AM, USD ISM Manufacturing PMI (forecast 54.7, previous 54.5).
+| Overnight/ongoing | Iran-US indirect talks via mediators | Qatar/Pakistan mediators | Unconfirmed (no set time) |
+| 10:00 AM | ISM Manufacturing PMI (forecast 54.7, previous 54.5) | USD | Yes |
+| Time not given | CFTC roundtable on 24/7 trading (Markets Media, headline only) | CFTC | Unconfirmed |
 
 Coming up this week:
-- Tue Nov 3, 10:16 AM: US Congressional Elections.
-- Thu Nov 5, 7:00 AM: BOE rate decision (forecast 4.00%, previous 3.75%), votes (forecast 7-0-2, previous 3-0-6), Monetary Policy Summary and Report.
+- Tue Nov 3, 10:00 AM: JOLTS (forecast 7.11M, previous 7.08M).
+- Tue Nov 3, 10:16 AM: Congressional Elections (high impact).
+- Thu Nov 5, 7:00 AM: BOE Bank Rate (forecast 4.00%, previous 3.75%) and MPC votes (forecast 7-0-2, previous 3-0-6).
+- Thu Nov 5, 7:00 AM: BOE Monetary Policy Report and Summary.
 - Thu Nov 5, 7:30 AM: BOE Gov Bailey speaks.
-- Fri Nov 6, 8:30 AM: US Non-Farm Payrolls (forecast 63K, previous 29K), unemployment rate (4.2%, previous 4.2%), average hourly earnings (0.3%, previous 0.1%).
-- Fri Nov 6, 8:30 AM: Canada employment change (forecast 14.5K, previous -68.3K) and unemployment rate (6.5%, previous 6.5%).
+- Fri Nov 6, 8:30 AM: US Non-Farm Payrolls (forecast 63K, previous 29K).
+- Fri Nov 6, 8:30 AM: US unemployment rate (forecast 4.2%, previous 4.2%).
+- Fri Nov 6, 8:30 AM: US average hourly earnings (forecast 0.3%, previous 0.1%).
+- Fri Nov 6, 8:30 AM: Canada jobs (forecast 14.5K, previous -68.3K) and unemployment rate (forecast 6.5%, previous 6.5%).
 - Fri Nov 6, 11:00 AM: BOJ Gov Ueda speaks.
 
 #### Event risk today
-Medium - Markets are closed, but the Iran strike threats and talks could change the picture before the Sunday evening reopening. The calendar has no events today.
+High - The Iran strike decision is open and election day is tomorrow, with ISM data also due at 10:00 AM.
 
 #### Politics and policy
-- Trump said he is "in no hurry" with Iran (Al Jazeera, headline only).
-- Trump said Flavio Bolsonaro can stay in the US "as long as he wants" (Anadolu, headline only).
-- Trump lost allies after elections in Serbia and Brazil (DW, headline only).
-- Mamdani says Trump will grant a visa to the mother of a boy killed in a Bronx shooting (Al Jazeera, headline only).
-- Midterm coverage: IndraStra Global looks at what the midterms could mean for markets and oil (headline only). Other headlines cover Senate races in Michigan, Texas and Alaska.
-- Nothing found on Treasury, Fed or executive orders.
+- Midterms: Headlines point to Democrats leading in several Senate races (Anadolu, headline only). The Daily Beast ran a headline on final polls going badly for Trump (headline only).
+- Alaska: The New York Times reports a judge rejected a move by Trump officials to challenge the Alaska Senate election (headline only).
+- Trump on Iran: Trump said the war would end "very soon" and called higher oil prices "a very small price to pay." He said he had a "good talk" with Netanyahu on Iran. Axios, citing sources, says Netanyahu is pressing him to strike immediately.
+- Fed: The Motley Fool ran a piece on a Kevin Warsh inflation warning (headline only).
 
 #### Economics
-Nothing found on data released overnight. The next US data is ISM Manufacturing on Monday.
+- No major US data came out overnight.
+- The Japan Times says the BOJ signals low hopes for consumer spending as the population falls (headline only).
+- Anadolu says global investors are starting the week cautiously ahead of the US midterms (headline only).
+- Globalpost says voter anger over the economy boosted smaller parties in the New Zealand election (headline only).
+- Mexico's Digital Economy Law lets the finance ministry restrict cash payments (The Digital Banker, headline only).
 
 #### SEC, CFTC and hearings
-- The SEC issued exemptive relief from Treasury clearing requirements for certain inter-affiliate and non-US repo transactions (SEC press release, Fri Oct 30, 3:30 PM).
-- CFTC Chair Selig vows to take the state fight over prediction markets to the Supreme Court (Crypto Briefing, headline only).
-- The CFTC and the US seek an order blocking Utah's Kalshi prosecution (RG.org, headline only).
-- The CFTC chair said the $6.3B Binance hack "proves our exact point" (Bitbo, headline only). A US lawmaker gave a different answer (Bitcoin News, headline only).
-- The SEC chair says most crypto assets are not securities (Yahoo Finance, headline only).
+- No SEC or CFTC press releases in the last 2 days.
+- Markets Media reports the CFTC will host a roundtable on 24/7 trading (headline only). The date and time are unconfirmed.
+- Gambling Insider reports the federal government asked a court to halt Utah's criminal case against Kalshi (headline only).
+- Forex Crunch and insidebitcoins report ICE's Hyperliquid perps deal as a first test of the CFTC's onshore perps pathway (headline only).
 - No congressional hearings found.
 
 #### War, trade and tariffs
-- **Iran:** see the top items above. Trump says the US could strike remaining nuclear sites in "10 minutes" (Anadolu, headline only). Benzinga says Western intelligence flags Pickaxe Mountain as a likely nuclear-material storage site that has not been struck. Why it matters: oil and shipping risk.
-- **Ukraine:** Zelensky met Erdoğan in Türkiye (EA WorldView, headline only).
-- Tariffs and trade: nothing found.
+- **Talks:** Qatari and Pakistani mediators met in Doha on Saturday with an Iranian delegation present. Iran received an outline of a peace deal from the US through the Qataris. Iran says its message exchange with the US continues. Axios reported the negotiators left Doha Sunday after a third day of talks.
+- **Iran's demands:** They include lifting recent US sanctions, restoring June oil waivers, recognizing new Hormuz shipping routes set by Iran and Oman, and ending fighting on all fronts, including Lebanon. The US has not publicly accepted these.
+- **Iran's warning:** Supreme Leader Mojtaba Khamenei demanded readiness for an immediate response "without geographical restriction" to any threat.
+- **Blockade and shipping:** CENTCOM says US forces have redirected 144 commercial vessels under the blockade (Fox News). A tanker was hit off a Saudi Gulf port. (Iran International)
+- **Hormuz traffic:** Fox's live blog lists a headline saying Bessent said Hormuz traffic is back to prewar levels without Iranian oil (headline only).
+- **Other:** The Anadolu headline says a commentator claims Trump could launch a nuclear strike within days (headline only). It is an unverified claim.
+- **Trade:** Chinese outlet 中国科技网 ran a headline saying US curbs on China investments put biotech innovation at risk (headline only).
 
 #### Country briefs
-- **China:** Some EU and Chinese firms want to cooperate even as tensions simmer (South China Morning Post, headline only).
-- **European Union:** Same SCMP story as China (headline only).
-- **United Kingdom:** The BOE decision is Thursday at 7:00 AM; the calendar forecasts a rate of 4.00%, up from 3.75%.
-- **Japan:** BOJ Gov Ueda speaks Friday at 11:00 AM.
+- **China:** US curbs on China investments put biotech innovation at risk (中国科技网, headline only).
+- **European Union:** Tesla registrations surged across Northern Europe in October (Reuters, headline only).
+- **United Kingdom:** The Bank of England decision is Thursday at 7:00 AM. The forecast is 4.00%, up from 3.75%.
+- **Japan:** The BOJ signals low hopes for consumer spending as the population falls (The Japan Times, headline only). BOJ Gov Ueda speaks Friday at 11:00 AM.
 - **India:** Nothing found.
-- **Russia:** Nothing found beyond the Ukraine war headlines above.
-- **Canada:** Employment data is due Friday at 8:30 AM.
+- **Russia:** Nothing found.
+- **Canada:** Nothing found for the last day. Jobs data is due Friday at 8:30 AM.
 
-[Read the full brief with all the details](reports/news/2026-11-01-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-02-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
