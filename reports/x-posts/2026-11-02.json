@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-02",
+  "written": "2026-11-02 04:55",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-02-world-brief.md (Mon Nov 02, today)",
+    "Stocks: reports/stocks/2026-11-02-stock-brief.md (Mon Nov 02, today)",
+    "Crypto: reports/crypto/2026-11-02-crypto-brief.md (Mon Nov 02, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-10-30-nasdaq-brief.md (Fri Oct 30, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-01-gold-brief.md (Sun Nov 01, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 2 ☀️\n\nUS-Iran strike talks, a chip-stock rout and the Binance crypto hack are the biggest things for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Rubio said Trump hasn't decided on new Iran strikes and prefers a diplomatic route. Trump said the war would end very soon.\n\nWhy it matters: Oil drives gas and grocery prices.\n\nNext: If talks stall, watch oil and risk assets react."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: ISM factory PMI at 10:00 AM, forecast 54.7, previous 54.5.\n\nWhy it matters: Factory strength shapes rate expectations, which feed mortgage and loan rates.\n\nNext: If it beats, watch rate bets and yields move. Jobs report Friday."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Intel fell 28.6% Friday on weak guidance, its steepest drop since 1974. The Nasdaq had its biggest drop since June 5.\n\nWhy it matters: Index funds hold these AI giants, so 401(k)s feel it.\n\nNext: Watch AMD's Tuesday report for signs the selloff spreads."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: About $6.3B was stolen from Binance on Oct 29. About $3B is frozen.\n\nWhy it matters: BTC at $78,140 has not recovered the post-hack drop.\n\nNext: If stolen funds keep moving, watch for more selling pressure.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, Axios, Fox News (CENTCOM), Iran International, Bloomberg, CoinDesk, CNBC, Market Index live data.",
+  "midday": {
+    "story": "Intel's 28.6% drop and the chip rout",
+    "post": "Intel fell 28.6% Friday, and the chip rout pulled the Nasdaq 7.8% below its Oct 6 record close. Why this matters for your wallet: index funds are heavy in AI names, so a 401(k) can feel every chip selloff. Watch AMD's report Tuesday."
+  },
+  "reply_midday": "Sources: Reuters, Bloomberg, Market Index live data (Nasdaq and chip moves).",
+  "close_watch": "Today's close: ISM Manufacturing PMI at 10:00 AM (forecast 54.7), and Apple and Palantir report today (timing not confirmed).",
+  "video": {
+    "script": "Intel just had its steepest one-day drop since 1974, and your 401k may feel it. It fell 28.6% Friday after weak guidance, and the Nasdaq had its biggest drop since June 5. Index funds hold these AI giants, so watch the chip selloff. Second, Trump said the Iran war would end very soon, and Rubio said new strikes aren't decided. Oil drives gas and grocery prices, so watch oil. Third, about 6.3 billion dollars was stolen from Binance on October 29, and about 3 billion is frozen. If stolen funds keep moving, watch for more crypto selling. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Intel: -28.6% Friday",
+      "Steepest drop since 1974",
+      "Nasdaq: biggest drop since June 5",
+      "Iran: no strike decision yet",
+      "Binance hack: ~$6.3B stolen",
+      "Not financial advice"
+    ]
+  }
+}
