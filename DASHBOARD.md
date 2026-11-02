@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-02 04:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-02 04:39 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -20,7 +20,7 @@ Last updated 2026-11-02 04:26 New York time. Everything here is written by softw
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 days ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
@@ -394,76 +394,69 @@ I did not find confirmed token unlocks or ETF deadlines for the week. A DropsTab
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-10-30</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-02</b></summary>
 
 #### Top things today
-1. **Alphabet fell 12.6% after a Q3 miss.** EPS was $2.12 against a $3.01 consensus. Free cash flow turned negative on heavy AI spending, and Alphabet said capex will rise again next year (Schwab). Why it matters: it raised doubts about whether AI spending earns a return.
-2. **Intel and Amazon dropped after the close Thursday.** Intel fell roughly 17–23% on weak Q4 guidance despite an EPS beat. Amazon fell about 6–7% after a small miss on EPS and revenue (Investing.com, investingLive). Why it matters: they point to a wider AI-cost selloff in tech at the open.
-3. **ServiceNow had its worst day ever, down 26.9%.** Its cRPO growth guidance cooled, and the software ETF IGV fell 4.1% midday (Benzinga). Why it matters: a good AI story did not protect software from a bookings slowdown.
-4. **Microsoft held up.** It closed down just 0.2%, and coverage described its results as strong (Schwab). Why it matters: the market is rewarding visible AI returns and punishing cash burn.
-5. **Cameco reports today (timing unconfirmed).** The setup is a record uranium price against earnings that lag it (Investing.com). Why it matters: it is the main nuclear-fuel print of the week.
+1. Intel fell 28.6% on Friday after a weak Q4 forecast. It was the stock's steepest one-day drop since 1974. Intel guided to $15–16B in Q4 revenue, against a market forecast of $17.07B (Reuters, Bloomberg-style wire coverage). Why it matters: it started the chip rout.
+2. The Nasdaq had its biggest one-day drop since June 5, on Intel and Amazon results and worries about AI spending (Reuters). It sits 7.8% below its Oct 6 record close. Why it matters: the AI trade is under pressure.
+3. The chips index fell 7.2% and is down more than 15% for the month. AMD fell 10.9% and Nvidia fell 4.2% (live data). Why it matters: AMD reports Tuesday and is the next test.
+4. Miners and nuclear names fell with tech. Gold fell 3.6% and copper fell 1.4% overnight (Market Index). Why it matters: the selloff spread beyond AI.
+5. Apple and Palantir report today. Why it matters: both are big AI-linked names after a hard week.
 
 #### Stocks to research
+
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| AMD | AI chips | -2.1% 1d, +11.5% 5d | Reports Nov 3 against a $13.1B revenue estimate. | The chip index fell Thursday; the AI-cost worry is a risk. |
-| CRWV | AI cloud | -5.0% 1d, +9.2% 5d | AI cloud names fell 6–7% after hours on Thursday. Reports Nov 10. | Expected loss of $1.21 per share. Sensitive to AI-spending sentiment. |
-| USAR | Rare earths | +0.4% 1d, +9.2% 5d | The US government holds about 10% after a $1.6B package (FT). Reports Nov 5. | Revenue estimate is only $13.6M and it is losing money. China put it on an export control list. |
-| SMR | Nuclear | +4.4% 1d, +10% 5d | Reports Nov 5. | Revenue estimate is only $3.8M. One headline said analysts cut NuScale price targets (unconfirmed detail). |
-| GKOS | Earnings mover | +33.6% | Revenue was $211M against $168M expected, and it raised guidance (CNBC). | After a two-day jump from the $170s, the move may be extended. |
-| SPCX | New listing | -0.9% | Space Exploration Technologies, market cap about $2.0T, is among the most active stocks. | I found no news on it today. Alphabet booked an unrealized SpaceX loss of about $8.2B (TradingKey). |
+| AMD | AI chips | -10.9% (1 day) | Reports Nov 3. Street expects about $13.1B revenue and EPS near $1.94. | Big downside gap already. Sentiment is shaky. |
+| INTC | Chips | -28.6% | Weak guidance. BofA cut it to Neutral and lowered its target to $100. | Falling-knife risk. A lower share price could add an accounting gain tied to the US government stake. |
+| CCJ | Uranium | -7.9% | Near a 1-year low (MarketBeat). A Key Lake outage cut output (newsletter). | Latest quarter missed estimates. The sector is selling off with no single fix. |
+| MP | Rare earths | -5.0% | Reports Nov 5. China's suspension of its rare-earth controls lapses about Nov 10. | Loss-making. Policy-driven moves can reverse quickly. |
+| USAR | Rare earths | -8.6% | Reports Nov 5. | Small company. Loss-making. Revenue estimate only $13.6M. |
+| SPCX | New large listing | -6.4% | Space Exploration Technologies is among the most active stocks. Market cap is $1.8T. | I found no news on it, so the move is unexplained. It is a new stock with limited trading history. |
 
 #### AI and tech
-- **Alphabet:** Revenue was $127.6B, up 25% but below expectations. Cloud revenue rose 103% to $30.7B, yet search and YouTube ads missed (Benzinga, Schwab). Roughly $500B of market value was lost, the second-largest one-day loss on record.
-- **Amazon and Intel:** Amazon posted EPS of $1.89 against $1.97 expected, and revenue of $201.9B against $202.2B (investingLive). Its free cash flow was reported at about -$42.4B (tech-insider.org). Intel's Q3 EPS was $0.52 against $0.41 expected, but revenue and Q4 guidance disappointed. It warned of PC headwinds (Investing.com).
-- **Funding:** Microsoft launched a $25B bond offering (ChainCatcher). AI cloud names CoreWeave, Nebius and Iren fell 6–7% after hours.
-- **Chips:** The semiconductor index fell for the first time in five sessions, and Marvell fell more than 13% (Bloomingbit). Nvidia, AMD and Micron were less affected than the Alphabet-linked names, though Micron closed down 5.0%.
+- **Intel rout:** The Q3 results beat Intel's own guidance. The weak Q4 outlook and a PC slowdown warning did the damage (technology.org). Data center and AI revenue still rose 78% to $7.3B.
+- **Spillover:** Qualcomm lost about 11% and SanDisk dropped 13.6%. Dell and HP fell 10.8% and 9.6%. Alphabet is down 12.6% over five days after earnings.
+- **AMD and SMCI report Tuesday:** It is also the day of the US midterm elections. BofA sees weaker PC demand as a possible revenue headwind of up to $750M for AMD, partly offset by server sales.
+- **Politics:** One analysis says tighter data center rules after the midterms could pressure AI supply chains (BigGo). This is speculative.
 
 #### Nuclear and critical minerals
-- **Cameco (CCJ):** Reports today. Last quarter's realized uranium price was up 18% to US$67.79 a pound, but uranium gross profit fell 27% as costs rose. The long-term price is at a 19-year high of $96.50 (Investing.com, TIKR). One firm trimmed its target to $95 from $97 and kept Equal Weight.
-- **Nuclear sentiment:** Cameco fell about 11.9% over the past month despite a US$120B US–Korea Westinghouse framework. NuScale and Oklo each fell more than 28% (TIKR). Thursday, SMR rose 4.4% and BWXT rose 2.2%.
-- **China and rare earths:** The US–China truce on rare earth export controls now runs to January 10, 2027, not November 10 (Startup Fortune, citing Treasury Secretary Bessent). China's controls on seven medium and heavy rare earths stayed in force throughout. In June, Beijing added MP Materials and USA Rare Earth to its own export control list. Pentagon rules barring Chinese-origin rare earths from weapons start January 1 (OilPrice).
-- **Government stakes:** One headline cites a US government portfolio of about $30B across 43 deals in chips, minerals and quantum (investingLive). I did not open the details.
+- **China rare-earth controls:** China's suspension of its extraterritorial controls, including the 0.1% content rule, expires Nov 10. The same source says ex-China NdPr prices sit just above the Pentagon's $110/kg floor in its MP Materials deal.
+- **Copper miners lag the metal:** Southern Copper fell 7.42% and Freeport 5.55% on Friday, both to three-month lows. Freeport cut its 2026 copper sales forecast on Oct 28. LME copper fell 1.5% on Friday.
+- **Rare-earth stocks:** Critical Metals' new shares from its European Lithium deal are due to trade Nov 6. That adds supply to a weak group.
+- **Uranium:** The long-term price hit a record $96 in Q3 (Investing News). Even so, URA is down about 39% over a longer period (Market Index table). Lotus Resources shipped its first uranium from Kayelekera.
 
 #### Earnings
-**Results since yesterday (reaction as reported):**
-- **Alphabet:** EPS $2.12 against $3.01 expected. Stock -12.6%.
-- **ServiceNow:** EPS $1.00 against $1.02 expected. Revenue was $4.106B, slightly above estimates. Stock -26.9%.
-- **Amazon:** Missed on both lines. Stock -4.2% in the session, then roughly -6% to -7% after hours (the low was about -12%).
-- **Intel:** Beat on EPS, missed on revenue. Stock -3.6% in the session, then about -17% to -23% after hours.
-- **Crocs:** EPS $3.69 against $3.31 expected, and it raised guidance. Stock +25.5%.
-- **Glaukos:** Beat on revenue and raised guidance. Stock +33.6%.
-- **Also moving:** ADT rose 33.2% on a $15.3B all-cash takeover by Thrive Holdings, expected to close in Q1 2027 (CNBC). This was a deal, not earnings.
-- **Microsoft and Fortinet:** Microsoft's numbers were not in my results. Fortinet fell more than 20% (CNBC).
-
-**Watchlist calendar.** Timing was not in the live data. I did not confirm it for any name, so all are listed as unconfirmed.
+**Results since yesterday:** Nothing found. The only results I found are last week's Intel and Amazon reports, covered above. Apple, Palantir and BWXT report today.
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 10-30 | CCJ | (unconfirmed) | $0.27 | $753.9M |
-| 11-02 | AAPL | (unconfirmed) | $1.98 | $113.3B |
-| 11-02 | BWXT | (unconfirmed) | $1.19 | $972.4M |
-| 11-02 | PLTR | (unconfirmed) | $0.41 | $2.2B |
-| 11-03 | AMD | (unconfirmed) | $1.94 | $13.1B |
-| 11-03 | SMCI | (unconfirmed) | $1.20 | $16.3B |
-| 11-04 | ALB | (unconfirmed) | $2.53 | $1.6B |
-| 11-04 | ARM | (unconfirmed) | $0.48 | $1.4B |
-| 11-04 | LEU | (unconfirmed) | -$0.13 | $57.0M |
-| 11-05 | MP | (unconfirmed) | -$0.01 | $119.0M |
-| 11-05 | SMR | (unconfirmed) | -$0.12 | $3.8M |
-| 11-05 | USAR | (unconfirmed) | -$0.15 | $13.6M |
-| 11-06 | OKLO | (unconfirmed) | -$0.26 | $1.1M |
-| 11-06 | VST | (unconfirmed) | $3.09 | $6.0B |
-| 11-09 | CEG | (unconfirmed) | $3.84 | $9.3B |
-| 11-10 | CRWV | (unconfirmed) | -$1.21 | $3.5B |
-| 11-13 | LAC | (unconfirmed) | -$0.03 | n/a |
+| 2026-11-02 | AAPL | Not confirmed | $1.99 | $113.4B |
+| 2026-11-02 | BWXT | Not confirmed | $1.19 | $972.4M |
+| 2026-11-02 | PLTR | Not confirmed | $0.41 | $2.2B |
+| 2026-11-03 | AMD | After the close (TechFlow) | $1.94 | $13.1B |
+| 2026-11-03 | SMCI | Not confirmed | $1.23 | $16.3B |
+| 2026-11-04 | ALB | Not confirmed | $2.53 | $1.6B |
+| 2026-11-04 | ARM | Not confirmed | $0.48 | $1.4B |
+| 2026-11-04 | LEU | Not confirmed | -$0.13 | $55.6M |
+| 2026-11-05 | MP | Not confirmed | -$0.01 | $118.9M |
+| 2026-11-05 | SMR | Not confirmed | -$0.12 | $3.8M |
+| 2026-11-05 | USAR | Not confirmed | -$0.15 | $13.6M |
+| 2026-11-06 | OKLO | Not confirmed | -$0.26 | $1.1M |
+| 2026-11-06 | VST | Not confirmed | $3.08 | $6.0B |
+| 2026-11-09 | CEG | Not confirmed | $3.88 | $9.3B |
+| 2026-11-10 | CRWV | Not confirmed | -$1.21 | $3.5B |
+| 2026-11-13 | LAC | Not confirmed | -$0.03 | n/a |
+
+Nvidia is not on the watchlist table. It reports in mid-November.
 
 #### Smart money
-- **Cameco:** One firm trimmed its price target to $95 from $97 and kept an Equal Weight rating. The firm was not named in the source (TIKR).
-- **Insider buying and Congress trades:** Nothing found in the three themes.
-- **Analyst rating changes after Alphabet, Amazon, Intel and ServiceNow:** Nothing found.
+- **Intel downgrade:** Bank of America's Vivek Arya cut Intel to Neutral from Buy and lowered the target from $145 to $100.
+- **Cameco:** MarketBeat flagged a new 12-month low on an analyst downgrade, but its snippet doesn't name the firm. It also shows no insider buying or selling in the past three months.
+- **Nvidia insiders:** MarketBeat shows no insider buys in 12 months and 10 insiders selling, about $1.27B.
+- **Congress and Nvidia:** Rep. Daniel Meuser (R-Pa.) recently sold Nvidia shares (Benzinga). Quiver data shows small purchases by Reps. Cleo Fields and Michael Rulli in June. I found no congressional trades in the nuclear or minerals names.
 
-[Read the full brief with all the details](reports/stocks/2026-10-30-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-02-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
