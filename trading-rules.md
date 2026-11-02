@@ -4,7 +4,8 @@ Follow these rules in order. Analyze the market and its moves, show your work, a
 
 ## Sessions
 - **Nasdaq (New York session):** opens at 9:30 AM New York time.
-- **Gold (Asia session):** opens with Tokyo at 9:00 AM Tokyo time. That is 8:00 PM New York time while US daylight saving time is on (March to early November) and 7:00 PM the rest of the year, because Japan does not change its clocks.
+- **Gold (Asia session):** starts at 9:00 PM New York time all year (Toronto is the same time).
+- **Early watch:** the bot watches from 90 minutes before each open (Nasdaq 8:00 AM, gold 7:30 PM). It may enter before the open only on a CLEAR breakout of the high and low of the 2 hours before that watch starts (Nasdaq 6-8 AM, gold 5:30-7:30 PM): the same two-candle rule, both candles close in the trade's direction, the entry is no more than half a target past the level, and no candle in the 30 minutes before swept the level (poked through it and closed back). Still one trade per session.
 - Be active and ready 15-30 minutes before the open.
 - Only look for breakouts in the first 60 minutes after the open.
 - Take at most one trade per session.
@@ -12,7 +13,7 @@ Follow these rules in order. Analyze the market and its moves, show your work, a
 ## Entry rules
 1. Mark the high and low of the **2 hours before the open**. These are your key levels.
    - Nasdaq: 7:30-9:30 AM New York.
-   - Gold: 7:00-9:00 AM Tokyo (6:00-8:00 PM New York in summer, 5:00-7:00 PM in winter).
+   - Gold: 7:00-9:00 PM New York.
    - Changed on 2026-10-19 from "the previous session's high and low, first 30 minutes".
      On the 60 days before that, the new levels traded about 85% of sessions
      instead of about 60%, and made more in both halves of the data for both

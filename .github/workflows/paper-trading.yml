@@ -7,8 +7,9 @@ on:
     # scheduled on the hour and quarter-hour when it is busy (on Oct 19 the
     # 8:30, 8:45 and 9:00 PM runs never started), so these run at :07, :22,
     # :37 and :52 instead.
-    - cron: "7,22,37,52 13-21 * * 1-5"   # Nasdaq: 9:30 AM-4 PM New York, summer and winter
-    - cron: "7,22,37,52 0-8 * * 1-5"     # Gold: Tokyo session, 00:00-08:00 UTC
+    - cron: "7,22,37,52 12-21 * * 1-5"   # Nasdaq: 8 AM (early watch)-4 PM New York, summer and winter
+    - cron: "7,22,37,52 0-10 * * 1-5"    # Gold: 7:30 PM (early watch)-5 AM New York
+    - cron: "7,22,37,52 23 * * 0-4"      # Gold early watch in summer (7:30 PM = 23:30 UTC)
   workflow_dispatch:
 
 permissions:

@@ -140,15 +140,20 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
     its size, the pause near the max drawdown, and the stop at it."""
     config = rules.SESSIONS[instrument]
     sessions = rules.group_into_sessions(candles, config)
-    starts = list(sessions)
+    upcoming = rules.upcoming_open(now, config)   # in its early watch, no candles yet
+    if upcoming is not None:
+        sessions.setdefault(upcoming, [])
+    starts = sorted(sessions)
     everything = rules.timeline(candles)
     expected = config["minutes"] / 5
     rows = []
     for i, start in enumerate(starts[1:], 1):
         key = (instrument, f"{start:%Y-%m-%d %H:%M}")
-        if key in recorded:
+        if key in recorded or key[1] < config.get("first_session", ""):
             continue
         levels = rules.key_levels_for(sessions, starts, i, config, everything)
+        if levels is None and start == upcoming:
+            levels = (float("inf"), float("-inf"))   # not known yet; only early entries
         if levels is None:
             continue
         if trading_day(start).isoformat() < START_DAY:
@@ -157,7 +162,8 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
         if finished and len(sessions[start]) < MIN_SHARE_OF_CANDLES * expected:
             print(f"{instrument} {start}: only {len(sessions[start])} candles, will retry later")
             continue
-        session = sessions[start]
+        session = rules.with_early(everything, start, sessions[start])
+        early = rules.early_levels(everything, start)
         if not finished:
             # Only use candles that have closed; the newest one may still be forming.
             session = [(t, c) for t, c in session if t + timedelta(minutes=5) <= now]
@@ -181,7 +187,7 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
                                       levels_rounded))
             continue
         result, size = rules.play_with_limits(instrument, start, session, key_high,
-                                              key_low, account, mode)
+                                              key_low, account, mode, early)
         if size == "skipped":
             rows.append(blank_row(instrument, start, "skipped",
                 f"Breakout {result['direction']} at {result['entry_time']:%H:%M}, but even the "

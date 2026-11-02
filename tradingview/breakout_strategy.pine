@@ -16,11 +16,12 @@
 //
 // THE RULES (same as main.py)
 // - Key levels: the high and low of the 2 hours before the open
-//   (Nasdaq 7:30-9:30 AM New York, gold 7:00-9:00 AM Tokyo = 6-8 PM New York
-//   in summer). The "Key levels" setting switches back to the previous
+//   (Nasdaq 7:30-9:30 AM New York, gold 7-9 PM New York). The "Key levels" setting switches back to the previous
 //   full session's high and low (the original rule; use a 30-minute window).
 //     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
-//     Gold:   Tokyo, 9:00 AM to 5:00 PM Tokyo time (8 PM / 7 PM New York).
+//     Gold:   9:00 PM to 5:00 AM New York time, all year.
+// - Early watch: from 90 minutes before the open (Nasdaq 8:00 AM, gold
+//   7:30 PM), a CLEAR breakout of the 2 hours before that may be taken early.
 // - In the first 60 minutes, a 5-minute candle closes beyond a key level,
 //   and the NEXT candle also closes beyond it. Enter at that second close.
 // - Stop: the far end of the two candles.
@@ -52,6 +53,7 @@ strategy("RESEARCH - Session Breakout (paper)", overlay = true,
 market     = input.string("Auto", "Market", options = ["Auto", "Nasdaq", "Gold"])
 levelMode  = input.string("2 hours before the open", "Key levels", options = ["2 hours before the open", "Previous session"])
 windowMin  = input.int(60, "Look for breakouts this many minutes after the open", minval = 5)
+earlyMin   = input.int(90, "Watch this many minutes before the open: early entries on a CLEAR breakout only (0 = off)", minval = 0)
 confirm    = input.bool(true, "Wait for a second candle to confirm")
 goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
 goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
@@ -71,9 +73,9 @@ if timeframe.period != "5"
 
 root    = syminfo.root
 isGold  = market == "Gold" or (market == "Auto" and (root == "MGC" or root == "GC"))
-sessStr = isGold ? "0900-1700:23456" : "0930-1600:23456"
-preStr  = isGold ? "0700-0900:23456" : "0730-0930:23456"
-zone    = isGold ? "Asia/Tokyo" : "America/New_York"
+sessStr = isGold ? "2100-0500:1234567" : "0930-1600:23456"
+preStr  = isGold ? "1900-2100:1234567" : "0730-0930:23456"
+zone    = "America/New_York"
 spacing = isGold ? 6.0 : 30.0
 q1      = isGold ? goldPlan1 : 1
 q2      = isGold ? goldPlan2 : 2
@@ -113,6 +115,39 @@ else if inPre
     preBars := preBars + 1
 fullBars = (isGold ? 480 : 390) / 5 * 0.75   // shorter sessions are holiday half-days
 
+// ---- Early watch (same as main.py EARLY_MINUTES): from earlyMin minutes
+// before the open, a CLEAR breakout of the high and low of the 2 hours
+// before the watch may be traded early. Still one trade per session. ----
+nyY       = year(time, "America/New_York")
+nyM       = month(time, "America/New_York")
+nyD       = dayofmonth(time, "America/New_York")
+openToday = timestamp("America/New_York", nyY, nyM, nyD, isGold ? 21 : 9, isGold ? 0 : 30)
+watchFrom = openToday - earlyMin * 60000
+inEarly   = earlyMin > 0 and not inSess and time >= watchFrom and time < openToday
+newEarly  = inEarly and not inEarly[1]
+inELvl    = earlyMin > 0 and time >= watchFrom - 7200000 and time < watchFrom
+var float eHigh          = na
+var float eLow           = na
+var int   eBars          = 0
+var float earlyHigh      = na
+var float earlyLow       = na
+var int   earlyEntryTime = 0
+if inELvl and not inELvl[1]
+    eHigh := high
+    eLow  := low
+    eBars := 1
+else if inELvl
+    eHigh := math.max(eHigh, high)
+    eLow  := math.min(eLow, low)
+    eBars := eBars + 1
+if newEarly
+    // At least an hour of candles (gold pauses from 5 to 6 PM).
+    earlyHigh := eBars >= 12 ? eHigh : na
+    earlyLow  := eBars >= 12 ? eLow : na
+    eBars     := 0
+    traded    := false
+    pending   := 0
+
 if newSess
     // A holiday half-day (like Labor Day) is not used as the previous session.
     if usePre
@@ -128,9 +163,10 @@ if newSess
     curLow    := low
     sessStart := time
     sessEnd   := time + (isGold ? 480 : 390) * 60000
-    traded    := false
+    // An early trade counts as this session's one trade.
+    traded    := earlyMin > 0 and earlyEntryTime > 0 and time - earlyEntryTime <= earlyMin * 60000
     pending   := 0
-    stopMoved := false
+    stopMoved := strategy.position_size != 0 ? stopMoved : false
 else if inSess
     sessBars := sessBars + 1
     curHigh := math.max(curHigh, high)
@@ -216,15 +252,30 @@ enterTrade(int d, float stopPx) =>
     else
         false
 
+// Before the open, only the early levels count, and only a clear breakout:
+// both candles close in the trade's direction, the entry is at most half a
+// target past the level, and no candle in the 30 minutes before swept the
+// level (poked through it and closed back).
+useEarly = inEarly
+lvlHigh  = useEarly ? earlyHigh : prevHigh
+lvlLow   = useEarly ? earlyLow : prevLow
+clearOk(int d, float level) =>
+    ok = d * (close - open) > 0 and d * (close[1] - open[1]) > 0 and d * (close - level) <= spacing / 2
+    for i = 2 to 7
+        if (d == 1 ? high[i] > level : low[i] < level) and d * (close[i] - level) <= 0
+            ok := false
+    ok
+
 // ---- Entries ----
-if inSess and haveLevels and not traded and not dayOver and strategy.position_size == 0
+if (inSess or useEarly) and not na(lvlHigh) and not traded and not dayOver and strategy.position_size == 0
     handled = false
-    if confirm and pending != 0
-        stillBeyond = pending == 1 ? close > prevHigh : close < prevLow
+    if (confirm or useEarly) and pending != 0
+        stillBeyond = (pending == 1 ? close > lvlHigh : close < lvlLow) and (not useEarly or clearOk(pending, pending == 1 ? lvlHigh : lvlLow))
         if stillBeyond
             stopPx = pending == 1 ? math.min(pendLow, low) : math.max(pendHigh, high)
             if enterTrade(pending, stopPx)
                 traded  := true
+                earlyEntryTime := useEarly ? time : earlyEntryTime
                 dir     := pending
                 entryPx := close
                 entryLvl := close
@@ -239,10 +290,10 @@ if inSess and haveLevels and not traded and not dayOver and strategy.position_si
                 tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
             handled := true
         pending := 0
-    if not handled and not traded and inWindow
-        breakout = close > prevHigh ? 1 : close < prevLow ? -1 : 0
+    if not handled and not traded and (inWindow or useEarly)
+        breakout = close > lvlHigh ? 1 : close < lvlLow ? -1 : 0
         if breakout != 0
-            if confirm
+            if confirm or useEarly
                 pending  := breakout
                 pendHigh := high
                 pendLow  := low
@@ -318,6 +369,9 @@ if strategy.position_size != 0 and inSess and time_close >= sessEnd
 plot(showLevels ? prevHigh : na, "RESEARCH key high", color.new(color.purple, 20), 1, plot.style_circles)
 plot(showLevels ? prevLow  : na, "RESEARCH key low",  color.new(color.purple, 20), 1, plot.style_circles)
 bgcolor(inWindow ? color.new(color.purple, 94) : na, title = "RESEARCH entry window")
+plot(showLevels and inEarly ? earlyHigh : na, "RESEARCH early high", color.new(color.purple, 50), 1, plot.style_cross)
+plot(showLevels and inEarly ? earlyLow  : na, "RESEARCH early low",  color.new(color.purple, 50), 1, plot.style_cross)
+bgcolor(inEarly ? color.new(color.purple, 97) : na, title = "RESEARCH early watch")
 
 // The open trade: entry (blue), stop (red, moves to Target 1 after Target 2),
 // targets (green). Buys and sells are marked by TradingView's own trade arrows.

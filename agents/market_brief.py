@@ -34,8 +34,8 @@ REPORT_FOLDER = "reports"
 
 PROMPT = """You are a market research assistant for a day trader who trades
 micro Nasdaq futures in the New York session (opens 9:30 AM New York time)
-and micro gold futures in the Asia session (opens with Tokyo at 9:00 AM Tokyo
-time, which is 8:00 PM New York time in summer and 7:00 PM in winter).
+and micro gold futures in the Asia session (the bot starts at 9:00 PM New York
+time all year, and may enter from 7:30 PM on a clear breakout).
 
 Today's date is {date}. This brief is for the upcoming {label} session of
 {name}.

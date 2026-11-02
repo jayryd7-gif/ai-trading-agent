@@ -4,7 +4,7 @@ on:
   schedule:
     # Times are UTC. After each kind of trading activity has been recorded.
     - cron: "40 0 * * *"      # after the crypto bots and Alpaca (daily close)
-    - cron: "30 9 * * 1-5"    # after the gold (Tokyo) session
+    - cron: "15 11 * * 1-5"   # after the gold session (ends 5 AM New York)
     - cron: "15 22 * * 1-5"   # after the Nasdaq session
   workflow_dispatch:
 

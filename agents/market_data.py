@@ -12,12 +12,12 @@ from zoneinfo import ZoneInfo
 
 # ---------------- SETTINGS ----------------
 # "open" is the local time in "zone" (New York if no zone is given). Gold
-# follows the Tokyo open: 8:00 PM New York in summer, 7:00 PM in winter.
+# opens at 9:00 PM New York all year (the bot watches from 7:30 PM).
 INSTRUMENTS = {
     "nasdaq": {"symbol": "NQ=F", "name": "Nasdaq 100 futures",
                "label": "New York", "open": (9, 30), "minutes": 390},
     "gold": {"symbol": "GC=F", "name": "Gold futures",
-             "label": "Asia", "open": (9, 0), "zone": "Asia/Tokyo", "minutes": 480},
+             "label": "Asia", "open": (21, 0), "minutes": 480},
 }
 HISTORY_SESSIONS = 5      # how many past sessions to look back over
 STALE_AFTER_HOURS = 6     # warn if the newest candle is older than this
