@@ -1,16 +1,89 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-02 04:55 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-02 18:03 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-02.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.015 (3 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.019 (4 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Monday Nov 02)
+## 🌙 Tonight's thread, ready to copy (Monday Nov 02)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (199/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 2 🌙
+
+A record $6.3B Binance hack, a Nasdaq slide and a sharp oil drop are the biggest things for your wallet today.
+
+What happened today and what to watch Tuesday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (241/280)
+```text
+2/ Politics & world: Supreme Court rejected a Trump push to set aside thousands of California ballots (AP).
+
+Why it matters: Midterm results can shift tariffs and spending.
+
+Tomorrow: Voting Tuesday. Watch whether Congress's balance changes.
+```
+
+**Post 3 of 5 · 💵 Economy** (227/280)
+```text
+3/ Economy: ISM factory PMI was due at 10:00 AM (forecast 54.7). 10-yr yield: 4.89%.
+
+Why it matters: Yields feed mortgage rates, so a dip can ease home loan costs.
+
+Tomorrow: JOLTS job openings at 10:00 AM. Jobs report Friday.
+```
+
+**Post 4 of 5 · 📈 Stocks** (234/280)
+```text
+4/ Stocks: Nasdaq fell 1.0% to 25,170.95. S&P 500 slipped 0.5%. Dow rose 0.4%.
+
+Why it matters: Your 401(k) likely holds big tech through index funds.
+
+Next: AMD reports Q3 earnings tomorrow. If chip losses continue, watch the Nasdaq.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (255/280)
+```text
+5/ Crypto: Binance says it covered 95% of the assets taken in a record $6.3B hack.
+
+Why it matters: BTC fell 2.0% to 76,677.68, and exchange risk affects savings held there.
+
+Next: If withdrawal worries grow, watch for more selling.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(195/280)
+```text
+Sources: AP, NBC News, Al Jazeera (politics); Yahoo Finance (prices); Bloomberg, Motley Fool, TipRanks (stocks); Washington Post (Binance); CoinGecko
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,542.33 (-0.5% vs the last close)
+Nasdaq: 25,170.95 (-1.0% vs the last close)
+Dow: 51,987.71 (+0.4% vs the last close)
+10-yr yield: 4.89% (-0.03 pts vs the last close)
+Oil (WTI): 96.26 (-7.5% vs the last close)
+Gold: 3,956.60 (+1.5% vs the last close)
+Bitcoin: 76,677.68 (-2.0% vs the last close)
+Ether: 2,248.56 (-1.1% vs the last close)
+Solana: 91.78 (-2.8% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Monday Nov 02)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -90,7 +163,7 @@ Intel just had its steepest one-day drop since 1974, and your 401k may feel it. 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | — | Intel's 28.6% drop and the chip rout |
+| [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
 | [Sun Nov 01](reports/x-posts/2026-11-01.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and exchange trust |
 | [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran war and Hormuz shipping attacks |
 | [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance's suspected $6.3B hack |
@@ -110,7 +183,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | ✅ | · | ✅ | · | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
 | Gold futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
