@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-02 06:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-02 07:52 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-02 06:23 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 days ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -461,66 +461,73 @@ Nvidia is not on the watchlist table. It reports in mid-November.
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-10-30</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-02</b></summary>
 
-### Nasdaq 100 Futures Brief for the New York Session, Fri 2026-10-30
+### Nasdaq 100 futures brief for Monday, Nov 2, 2026
 
-#### 1. What is driving futures
-- US stock futures sank on the last trading day of the month. Amazon and Alphabet earnings this week renewed worries about Big Tech's AI spending.
-- Nasdaq-100 futures fell as much as 2.5%. Dow futures rose 0.1%, and S&P 500 futures dropped 1%.
-- Traders moved out of key AI-related stocks and into more defensive areas.
-- Intel fell 25% in premarket trading after its Q4 outlook came up short. Amazon fell 7% premarket.
-- Amazon still expects about $220 billion in 2026 cash capital spending.
-- A major cyberattack on Binance also hit crypto stocks.
-- Thursday's session was weak too. The Nasdaq Composite fell 1.4% on weak AI-related names. An elevated inflation reading also hurt sentiment.
+#### 1. What is driving the market
+- Stock futures rose Monday as oil fell sharply and tech names rebounded. Investors are bracing for a packed week of earnings, jobs data and the midterm elections.
+- Nasdaq-100 futures gained about 0.8%.
+- This follows a heavy sell-off. Friday's selling hit tech and AI-related stocks. Disappointing tech earnings revived worries about AI spending.
+- The Nasdaq-100 briefly entered a correction.
+- WTI crude fell more than 4% to $99.31. The drop came on hopes of progress in US-Iran talks.
+- Sources disagree on Friday's size. One says the Nasdaq 100 dropped 3.5%. Another shows the Nasdaq Composite down 2.86%. These measure different things, so I'm not treating them as a conflict.
 
 #### 2. Scheduled events (New York time)
-- **8:30 AM:** Q3 Employment Cost Index, expected +0.8% q/q.
-- **9:30 AM:** Regular session opens. ExxonMobil holds its earnings call at 9:30 AM ET.
-- **9:45 AM:** Chicago PMI for October, expected 54.8 (prior 58.8).
-- **Already out:** September PCE came in at 3.6% year over year, in line with the forecast.
-- **Fed:** A Wednesday decision was scheduled. A hold at 3.75%–4.00% was expected. I did not verify the actual outcome.
-- **Not verified:** I found no confirmed Fed speakers for today. One Kiplinger listing at 12:30 pm was cut off, so I can't say what it is.
+- **10:00 AM:** ISM Manufacturing for October.
+- **Speakers:** The Fed's Goolsbee is on the Monday calendar. I could not verify his time.
+- **After the close (outside the session):** Apple and Palantir report after Monday's closing bell. Expect positioning ahead of these.
+- **Coming up:** Midterm elections and JOLTS are on Tuesday. Nonfarm payrolls are due Friday at 8:30 AM.
+- **Fed backdrop:** The Fed held rates at 3.75% to 4% in a 10-2 vote on Oct 28. A stronger jobs report could reinforce expectations of a December rate hike.
 
 #### 3. Key levels (from the price data)
-- **Latest price:** 28,797.50.
-- **Previous session high:** 29,677.00.
-- **Previous session low:** 29,405.00. Price is 607.50 below it, so this level is now overhead resistance.
-- **Previous session close:** 29,566.25.
-- **Highest high of the last 5 sessions:** 30,009.00.
-- **Lowest low of the last 5 sessions:** 28,987.00. Price is also below this, about 189.50 points under.
-- **Since the close:** high 29,593.25 and low 28,762.75.
+- Previous session high: **29,562.00**
+- Previous session low: **28,232.75**
+- Previous close: **28,527.25**
+- 5-session high: **30,009.00**
+- 5-session low: **28,232.75**, which is the same as the previous low
+- Range since the close: **28,517.25 to 28,831.50**
+- Latest price: **28,694.25**
 
-Price is sitting near support, not resistance. It is only 34.75 points above the post-close low of 28,762.75. Every prior-session high and low is above it. If that low breaks, there is no earlier level in the data to point to.
+The price is inside the previous range. It is 461.50 points above the low and 867.75 points below the high. It is closer to support than resistance, but it is not sitting at either level. The 28,831.50 overnight high is the nearest ceiling.
 
 #### 4. Volume
-The previous session traded 1.12x the average of the five sessions before it. That is slightly above average, so participation was modestly firm, not strong. It also describes Thursday, not today. I have no volume figure for today's session yet.
+The previous session traded 1.66x the average of the five sessions before it. That suggests strong participation. In a sell-off, it points to real selling pressure, not a quiet drift. The overnight bounce has no volume figure here, so I can't say how well it is supported.
 
 #### 5. Directional lean
-**Bearish, Confidence: Medium.**
+**Neutral, Low confidence.**
+- Price is in the lower half of a wide range after a sharp drop.
+- The overnight bounce is positive, with lower oil and a tech rebound.
+- High-volume selling last session argues for caution.
+- Apple and Palantir report after the close, and the midterms are Tuesday. That could keep traders from committing in either direction.
 
-Price is below the previous session's low and below the 5-session low. The news is negative: a second day of AI-spending worries with big earnings misses. Thursday's volume was a little above average, which fits a selloff with real participation. These signals mostly point the same way. I am holding back from High confidence because the gap down is already large. Sharp drops like this can bounce, and the price sits close to the post-close low.
+These signals conflict, so Neutral is the fair call.
 
-**What would change the lean:**
-- A recovery back above 28,987.00 and then 29,405.00, with steady buying.
-- Signs that the AI-spending fears are easing, such as strong tech names stabilizing.
-- Weak volume on further selling.
+I would change the lean for these reasons:
+- A move back above the 28,831.50 overnight high that holds, or a firm ISM result and tech strength, would improve the case for Bullish.
+- A drop below the 28,517.25 post-close low, or a break of the 28,232.75 previous low, would improve the case for Bearish.
+- Oil rebounding or the Iran talks souring would also favor Bearish.
 
-This is a probability-based lean, not a prediction or a trade instruction.
+This is a probability-based lean. It is not a prediction or a trade instruction.
 
-#### 6. Event risk: Medium
-Big Tech earnings are done, and today's data (Employment Cost Index, Chicago PMI) is second-tier. But the market is reacting sharply to headlines, and it is month-end.
+#### 6. Event risk
+**High.** Mid-session ISM data, Apple and Palantir results after the close, the midterms tomorrow and Friday's jobs report come on top of a fragile, tech-led sell-off.
 
 #### 7. Sources
 - Yahoo Finance
 - CNBC
-- Bloomberg
-- Investing.com
-- TheStreet
-- Quartz
-- Admi
+- Benzinga
+- Newsquawk
+- Gotrade
+- Yardeni Research
+- TradingKey
+- StockTitan
+- crypto.news
+- Price levels and volume are from the supplied Yahoo Finance data.
 
-[Open the file](reports/2026-10-30-nasdaq-brief.md)
+BIAS: Neutral | CONFIDENCE: Low
+
+[Open the file](reports/2026-11-02-nasdaq-brief.md)
 
 </details>
 
@@ -582,7 +589,7 @@ What would change my lean:
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-10-30 08:39 | ? Unknown | Unknown | Medium | 28797.50 | [read it](reports/2026-10-30-nasdaq-brief.md) |
+| nasdaq | 2026-11-02 07:51 | ◆ Neutral | Low | High | 28694.25 | [read it](reports/2026-11-02-nasdaq-brief.md) |
 | gold | 2026-11-01 18:25 | ? Unknown | Unknown | n/a | 3902.70 | [read it](reports/2026-11-01-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
