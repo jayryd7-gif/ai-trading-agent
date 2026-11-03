@@ -1,16 +1,89 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-03 04:50 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-03 18:10 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-03.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.025 (5 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.029 (6 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Tuesday Nov 03)
+## 🌙 Tonight's thread, ready to copy (Tuesday Nov 03)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (188/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 3 🌙
+
+Midterm polls closed, US strikes on Iran were reported, and a $6B Binance hack is shaking crypto.
+
+What happened today and what to watch Wednesday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (252/280)
+```text
+2/ Politics & world: Midterm polls closed. Early exit poll: 60% disapprove of Trump (Forbes). CBS reports US airstrikes on Iran.
+
+Why it matters: Iran risk can lift oil and gas prices.
+
+Tomorrow: Watch whether results shift Congress and spending plans.
+```
+
+**Post 3 of 5 · 💵 Economy** (259/280)
+```text
+3/ Economy: JOLTS job openings were due at 10:00 AM (forecast 7.11M vs 7.08M prior).
+
+Why it matters: Job data shapes rate expectations for loans and savings.
+
+Tomorrow: Watch ISM Services PMI at 10:00 AM (forecast 54.9). A weak print could ease rate worries.
+```
+
+**Post 4 of 5 · 📈 Stocks** (265/280)
+```text
+4/ Stocks: Markets edged higher as chip stocks rebounded (Motley Fool). S&P 500 at 7,568.58, up 0.4% (Yahoo, delayed).
+
+Why it matters: Retirement accounts often hold these index funds.
+
+Tomorrow: Uber, Joby and AppLovin report earnings. Watch if results move tech.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (246/280)
+```text
+5/ Crypto: Bitcoin at $77,709.23, up 1.3%. Strategy bought 811 bitcoin. CoinDesk ties North Korea to a $6B Binance hack.
+
+Why it matters: Exchange trust drives crypto prices.
+
+Tomorrow: Watch for Binance withdrawal updates.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(183/280)
+```text
+Sources: Forbes, CBS News, Haver Analytics, Motley Fool, CoinDesk, Bitcoin Foundation; Yahoo Finance prices; free economic calendar feed.
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,568.58 (+0.4% vs the last close)
+Nasdaq: 25,365.67 (+0.8% vs the last close)
+Dow: 51,776.67 (-0.4% vs the last close)
+10-yr yield: 4.95% (+0.06 pts vs the last close)
+Oil (WTI): 96.74 (+0.3% vs the last close)
+Gold: 3,940.00 (-0.7% vs the last close)
+Bitcoin: 77,709.23 (+1.3% vs the last close)
+Ether: 2,286.90 (+1.7% vs the last close)
+Solana: 93.21 (+1.5% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Tuesday Nov 03)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -76,7 +149,7 @@ Bitcoin under $77,000 and Iran strikes could hit your wallet today. Here's the m
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | — | Binance hack and Bitcoin below $77,000 |
+| [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and Bitcoin below $77,000 |
 | [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
 | [Sun Nov 01](reports/x-posts/2026-11-01.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and exchange trust |
 | [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran war and Hormuz shipping attacks |
@@ -97,7 +170,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | ✅ | · | ✅ | · | · | ✅ | · |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | ✅ |
 | Gold futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
