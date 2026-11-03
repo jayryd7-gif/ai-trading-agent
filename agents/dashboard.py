@@ -143,6 +143,10 @@ def paper_journal_section(how_many=15):
         import main as rules
         from paper_trader import account_from
         acct = account_from(rows)
+        from paper_trader import opening_range_compare, read_opening_range
+        line = opening_range_compare(rows, read_opening_range())
+        if line:
+            live.append(f"- 📐 {line} [Details](paper-trading/summary.md)")
         if hasattr(acct, "attempts"):            # the Tradeify practice account
             from tradeify import RULES as T, floor, payout_status
             a = acct.a

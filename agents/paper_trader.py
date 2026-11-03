@@ -77,6 +77,17 @@ FIELDS = ["trading_day", "instrument", "session_start", "signal", "direction",
           "worst_dollars", "reentry"]
 CHART_FOLDER = os.path.join(FOLDER, "charts")
 OPEN_TRADES = os.path.join(FOLDER, "open-trades.json")
+# Opening range, TRACKED ONLY (never traded): each finished Nasdaq session is
+# also played with the high and low of its first OR_MINUTES (9:30-10:00) as
+# the key levels, entries from 10:00 for 60 minutes, same confirmation, stop,
+# targets and 1/2/2 size, no account limits. The user asked on 2026-11-02 to
+# compare it with the real rule before deciding (on Nov 2 it would have hit
+# all 3 targets; over the 60 days to Oct 30 it did worse than the real rule).
+OPENING_RANGE_CSV = os.path.join(FOLDER, "opening-range.csv")
+OR_MINUTES = 30
+OR_START_DAY = "2026-11-02"
+OR_FIELDS = ["trading_day", "session_start", "range_high", "range_low", "signal",
+             "direction", "entry_time", "entry", "stop", "exit_time", "net", "events"]
 
 
 trading_day = rules.trading_day
@@ -246,6 +257,59 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
     return rows
 
 
+def opening_range_rows(candles, done, now):
+    """Rows for finished Nasdaq sessions not in done, played with the opening
+    range as the key levels (see OPENING_RANGE_CSV). Tracked only."""
+    config = rules.SESSIONS["nasdaq"]
+    out = []
+    for start, session in rules.group_into_sessions(candles, config).items():
+        key = f"{start:%Y-%m-%d %H:%M}"
+        if (key in done or trading_day(start).isoformat() < OR_START_DAY
+                or start + timedelta(minutes=config["minutes"]) > now):
+            continue
+        cut = start + timedelta(minutes=OR_MINUTES)
+        first = [c for t, c in session if t < cut]
+        if len(first) < OR_MINUTES / 5:
+            continue
+        high, low = rules.find_key_levels(first)
+        r = rules.play_session("nasdaq", config, cut, [(t, c) for t, c in session if t >= cut],
+                               high, low)
+        row = {"trading_day": trading_day(start).isoformat(), "session_start": key,
+               "range_high": round(high, 2), "range_low": round(low, 2), "signal": "no",
+               "net": 0.0, "events": "No confirmed breakout of the opening range by 11:00."}
+        if r:
+            row.update({"signal": "yes", "direction": r["direction"],
+                        "entry_time": f"{r['entry_time']:%H:%M}", "entry": r["entry"],
+                        "stop": r["stop"], "exit_time": f"{r['exit_time']:%H:%M}",
+                        "net": round(r["profit"] - r["contracts"] * COMMISSION_PER_CONTRACT, 2),
+                        "events": "; ".join(f"{t:%H:%M} {x}" for t, x in r["events"])})
+        out.append(row)
+    return out
+
+
+def read_opening_range():
+    if not os.path.exists(OPENING_RANGE_CSV):
+        return []
+    with open(OPENING_RANGE_CSV, newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def opening_range_compare(rows, or_rows):
+    """One line: the tracked opening-range trades vs the real Nasdaq trades
+    over the same sessions."""
+    if not or_rows:
+        return None
+    seen = {r["session_start"] for r in or_rows}
+    real = [r for r in rows if r["instrument"] == "nasdaq" and r["session_start"] in seen]
+    real_net = sum(float(r["net"]) for r in real)
+    taken = [r for r in or_rows if r["signal"] == "yes"]
+    or_net = sum(float(r["net"]) for r in taken)
+    better = "ahead" if or_net > real_net else "behind" if or_net < real_net else "even"
+    return (f"Opening range (9:30-10:00, tracked, not traded): {money(or_net)} over "
+            f"{len(taken)} trades in {len(or_rows)} sessions since {OR_START_DAY}, vs "
+            f"{money(real_net)} for the real Nasdaq rule ({better}).")
+
+
 def fills_of(row):
     try:
         return json.loads(row.get("fills") or "[]")
@@ -368,7 +432,7 @@ def tradeify_section(rows):
     return out
 
 
-def build_summary(rows, now, stopped_on=None):
+def build_summary(rows, now, stopped_on=None, or_rows=()):
     trades = [r for r in rows if r["signal"] == "yes"]
     nets = [float(r["net"]) for r in trades]
     wins = [n for n in nets if n > 0]
@@ -420,6 +484,16 @@ def build_summary(rows, now, stopped_on=None):
                    f"{money(sum(mine))} |")
 
     out += tradeify_section(rows)
+
+    if or_rows:
+        out += ["", "## Opening range (tracked, not traded)", "",
+                opening_range_compare(rows, or_rows), "",
+                "| Day | Range | Trade | Entry | Stop | Out | Result |", "|---|---|---|---|---|---|---|"]
+        for r in reversed(or_rows[-15:]):
+            out.append(f"| {r['trading_day']} | {r['range_low']}-{r['range_high']} | "
+                       f"{r.get('direction') or 'no trade'} | {r.get('entry') or ''} "
+                       f"{r.get('entry_time') or ''} | {r.get('stop') or ''} | "
+                       f"{r.get('exit_time') or ''} | {money(float(r['net']))} |")
 
     out += ["", "## Daily results", "", "| Trading day | Sessions | Result after fees |",
             "|---|---|---|"]
@@ -512,8 +586,18 @@ def main(argv=None, now=None):
     with open(JOURNAL, "w") as f:
         f.write(build_journal(rows, stopped_on))
 
+    or_rows = read_opening_range()
+    if "nasdaq" in loaded:
+        done = {r["session_start"] for r in or_rows}
+        or_rows = sorted(or_rows + opening_range_rows(loaded["nasdaq"], done, now),
+                         key=lambda r: r["session_start"])
+        with open(OPENING_RANGE_CSV, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=OR_FIELDS, restval="", extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(or_rows)
+
     with open(SUMMARY, "w") as f:
-        f.write(build_summary(rows, now, stopped_on))
+        f.write(build_summary(rows, now, stopped_on, or_rows))
 
     alert_phone(rows, added, new_trades)
     save_open_trades(open_now)

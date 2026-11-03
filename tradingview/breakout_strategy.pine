@@ -63,6 +63,7 @@ goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, max
 goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, maxval = 3)
 showLevels = input.bool(true, "Draw the key levels")
 showTrade  = input.bool(true, "Draw entry, stop and targets while a trade is open")
+showOR     = input.bool(true, "Nasdaq: draw the opening range (9:30-10:00, not traded)")
 alertStyle = input.string("Readable", "Alert messages", options = ["Readable", "JSON (for a webhook)"])
 maxDD      = input.float(2000, "Trailing drawdown ($) below the highest end-of-day balance (Tradeify Growth 50K: 2000)", minval = 0)
 dailyLimit = input.float(1250, "Daily loss limit ($): no more trades that trading day (Tradeify Growth 50K: 1250)", minval = 0)
@@ -375,6 +376,22 @@ if strategy.position_size != 0 and inSess and time_close >= sessEnd
 plot(showLevels ? prevHigh : na, "RESEARCH key high", color.new(color.purple, 20), 1, plot.style_circles)
 plot(showLevels ? prevLow  : na, "RESEARCH key low",  color.new(color.purple, 20), 1, plot.style_circles)
 bgcolor(inWindow ? color.new(color.purple, 94) : na, title = "RESEARCH entry window")
+
+// ---- Opening range, DRAWN ONLY (never traded): the Nasdaq 9:30-10:00 high
+// and low, shown from 10:00 to the close. The paper bot tracks what trading
+// its breakouts would have made (paper-trading/opening-range.csv). ----
+inOR = not isGold and not na(time(timeframe.period, "0930-1000:23456", "America/New_York"))
+var float orHigh = na
+var float orLow  = na
+if inOR and not inOR[1]
+    orHigh := high
+    orLow  := low
+else if inOR
+    orHigh := math.max(orHigh, high)
+    orLow  := math.min(orLow, low)
+orShow = showOR and not isGold and inSess and not inOR
+plot(orShow ? orHigh : na, "RESEARCH opening range high", color.new(color.aqua, 0), 1, plot.style_linebr)
+plot(orShow ? orLow  : na, "RESEARCH opening range low",  color.new(color.aqua, 0), 1, plot.style_linebr)
 plot(showLevels and inEarly ? earlyHigh : na, "RESEARCH early high", color.new(color.purple, 50), 1, plot.style_cross)
 plot(showLevels and inEarly ? earlyLow  : na, "RESEARCH early low",  color.new(color.purple, 50), 1, plot.style_cross)
 bgcolor(inEarly ? color.new(color.purple, 97) : na, title = "RESEARCH early watch")

@@ -69,6 +69,27 @@ LIVE = {"start": 50000, "drawdown": 2000, "target": 3000, "consistency": 0.40,
         "stop_day_below": 1000, "plans": ([2, 2, 2], [1, 1, 1], [0, 0, 1])}
 
 
+NASDAQ_LEVELS = [None]   # None, ("pre", minutes) or ("range", minutes): see nasdaq_levels
+
+
+def nasdaq_levels(everything, start, session):
+    """Other Nasdaq key levels to test: ("pre", m) = the high and low of the m
+    minutes before 9:30; ("range", m) = the opening range, the first m minutes
+    after 9:30, with entries looked for from then on.
+    Returns (levels, session, start) or None."""
+    kind, m = NASDAQ_LEVELS[0]
+    if kind == "pre":
+        pre = [c for t, c in everything if start - timedelta(minutes=m) <= t < start]
+        if len(pre) < m / 10:
+            return None
+        return R.find_key_levels(pre), session, start
+    cut = start + timedelta(minutes=m)
+    first = [c for t, c in session if t < cut]
+    if len(first) < m / 5:
+        return None
+    return R.find_key_levels(first), [(t, c) for t, c in session if t >= cut], cut
+
+
 def run_live(cut):
     """The LIVE 50K script's rules on both markets as one real account.
     Returns (trades, passes, breaches)."""
@@ -80,6 +101,12 @@ def run_live(cut):
         starts = list(sessions)
         everything = R.timeline(candles)
         for i in range(1, len(starts)):
+            if instrument == "nasdaq" and NASDAQ_LEVELS[0]:
+                found = nasdaq_levels(everything, starts[i], sessions[starts[i]])
+                if found:
+                    levels, play, play_start = found
+                    plan.append((play_start, instrument, play, *levels, None))
+                continue
             levels = R.key_levels_for(sessions, starts, i, config, everything)
             if levels is not None:
                 plan.append((starts[i], instrument,
