@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "written": "2026-11-03 04:50",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-03-world-brief.md (Tue Nov 03, today)",
+    "Stocks: reports/stocks/2026-11-02-stock-brief.md (Mon Nov 02, NOT today)",
+    "Crypto: reports/crypto/2026-11-03-crypto-brief.md (Tue Nov 03, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-02-nasdaq-brief.md (Mon Nov 02, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-02-gold-brief.md (Mon Nov 02, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 3 ☀️\n\nUS midterm voting, Iran strike and talk headlines, and a crypto selloff after the Binance hack are today's biggest money stories.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: US strikes hit Iran's Qeshm Island Monday, per two US officials, who said it was not a return to major combat.\n\nWhy it matters: Hormuz risk can lift oil and gas prices.\n\nNext: If talks stall, oil may rise. If progress holds, energy could ease."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ JOLTS openings land 10:00 AM today (forecast 7.11M vs 7.08M). Swiss inflation hit 1.5%, above forecasts, on fuel. Why: jobs data and fuel inflation shape rates and prices. Next: If Friday's payrolls beat 63K forecast, rates could stay high."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Intel fell 28.6% on weak Q4 guidance. Nasdaq's biggest drop since June 5. Why: retirement accounts hold these names, so chip weakness reaches savings. Next: AMD reports today after close. If guidance disappoints, watch for tech spillover."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin below $77,000, Fear (26), after Binance hack. Binance spent ~half its SAFU bitcoin (~$580M). Why: exchange trust drives prices; exchange coins carry risk. Next: If staged outflows grow, pressure may persist. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, NBC News, The Wall Street Journal, Yahoo Finance, TechFlow, CoinDesk, FXStreet, CoinGecko live data. Figures are from briefs dated Nov 2 to Nov 3.",
+  "midday": {
+    "story": "Binance hack and Bitcoin below $77,000",
+    "post": "Midday: Bitcoin under $77,000, Fear (26), as Binance staggers withdrawals after its hack. Why: after exchange hacks, withdrawal pace and trust drive prices; exchange coins carry risk. Next: If outflows keep rising, pressure may last longer."
+  },
+  "reply_midday": "Sources: CoinDesk, Analytics Insight, FXStreet, CoinGecko live data. Figures are from today's crypto brief.",
+  "close_watch": "Watch the Nasdaq into the close, with AMD reporting after the bell per TechFlow.",
+  "video": {
+    "script": "Bitcoin under $77,000 and Iran strikes could hit your wallet today. Here's the money link. First, US strikes hit Iran's Qeshm Island Monday, per two US officials. Oil and gas prices can move fast if Hormuz is disrupted. Second, Intel fell 28.6% Friday, and the Nasdaq had its biggest drop since June 5. Many retirement accounts hold those names. Third, Binance is releasing withdrawals in stages after its hack, and Bitcoin sentiment sits at Fear, 26. Watch today's 10 AM JOLTS report and the midterms. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Iran strikes: oil risk",
+      "Intel -28.6% Friday",
+      "Nasdaq: biggest drop since June 5",
+      "Bitcoin under $77K",
+      "Fear Index: 26",
+      "Not financial advice"
+    ]
+  }
+}
