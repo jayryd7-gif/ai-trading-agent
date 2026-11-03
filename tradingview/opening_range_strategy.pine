@@ -1,0 +1,436 @@
+//@version=6
+// OPENING RANGE bot (tracking only, added 2026-11-02): the RESEARCH script's
+// rules, but the key levels are the high and low of the first 30 minutes
+// after each open (Nasdaq 9:30-10:00, gold 8:00-8:30 PM), with breakouts
+// looked for in the hour after. Run it next to the others to compare.
+// Session breakout strategy - the rules in trading-rules.md, for TradingView.
+//
+// HOW TO USE
+// 1. Open a 5-minute chart of MNQ1! (micro Nasdaq) or MGC1! (micro gold).
+// 2. Pine Editor (bottom of the screen) > paste this whole file > Save > Add to chart.
+// 3. The Strategy Tester tab shows every trade it would have taken, and it
+//    keeps adding new trades live as each session plays out. That is your
+//    paper trading record on TradingView. On the chart you see the buy and
+//    sell arrows, plus the entry (blue), stop (red) and targets (green).
+// 4. Alerts: Alerts (clock icon) > Create alert > Condition: this strategy,
+//    "Order fills and alert() function calls" > Notifications: tick "Notify
+//    in app" (phone) and/or "Send email" > Create. Leave the message as
+//    {{strategy.order.alert_message}}. You get one alert per buy and sell.
+// The script picks Nasdaq or gold settings from the chart symbol.
+//
+// THE RULES (same as main.py)
+// - Key levels: the high and low of the 2 hours before the open
+//   (Nasdaq 7:30-9:30 AM New York, gold 6-8 PM New York). The "Key levels" setting switches back to the previous
+//   full session's high and low (the original rule; use a 30-minute window).
+//     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
+//     Gold:   8:00 PM to 4:00 AM New York time, all year (setting).
+// - Early watch (gold only by default): from 90 minutes before the open
+//   (6:30 PM), a CLEAR breakout of the 2 hours before that may be taken early.
+// - In the first 60 minutes, a 5-minute candle closes beyond a key level,
+//   and the NEXT candle also closes beyond it. Enter at that second close.
+// - Stop: the far end of the two candles.
+// - 3 targets, each 30 points (Nasdaq) or 6 points (gold) apart.
+//   Sell 1 / 2 / 2 contracts. At Target 2 the stop moves to Target 1.
+// - At most one trade per session. Anything still open at the session end
+//   is closed.
+// - Tradeify Growth 50K limits: the drawdown floor trails $2,000 below the
+//   highest end-of-day balance, and the daily loss limit is $1,250. Each trade
+//   is sized so its stop cannot break either (full size, else 1 contract per
+//   target, else no trade). After the daily loss limit, no more trades that
+//   day (orange background). Too close to the floor for any trade: a new
+//   evaluation starts, so the strategy never stops for good.
+//
+// One difference from main.py: when a single candle touches both the stop
+// and a target, TradingView guesses the order from the candle's shape, while
+// main.py always assumes the stop was hit first.
+
+// Futures need only a small deposit (margin) per contract, so margin checks
+// are turned off. Without this, TradingView rejects every order because the
+// contracts are worth more than the account balance.
+strategy("OPENING RANGE - Session Breakout (tracking)", overlay = true,
+     process_orders_on_close = true, pyramiding = 0,
+     initial_capital = 50000, margin_long = 0, margin_short = 0,
+     default_qty_type = strategy.fixed, default_qty_value = 5,
+     commission_type = strategy.commission.cash_per_contract, commission_value = 0.0)
+
+// ---------------- SETTINGS ----------------
+market     = input.string("Auto", "Market", options = ["Auto", "Nasdaq", "Gold"])
+levelMode  = input.string("2 hours before the open", "Key levels", options = ["2 hours before the open", "Previous session"])
+orMin      = input.int(30, "Opening range: the high and low of this many minutes after the open", minval = 5)
+windowMin  = input.int(60, "Then look for breakouts for this many minutes", minval = 5)
+goldHour   = input.int(20, "Gold: session starts at this hour (New York time, 0-23)", minval = 0, maxval = 23)
+goldMin    = input.int(0, "Gold: and this minute", options = [0, 30])
+earlyOnIn  = input.string("Off", "Early entries (CLEAR breakouts before the open) on", options = ["Gold only", "Both", "Off"])
+earlyMin   = input.int(90, "Watch this many minutes before the open: early entries on a CLEAR breakout only (0 = off)", minval = 0)
+confirm    = input.bool(true, "Wait for a second candle to confirm")
+goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
+goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
+goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, maxval = 3)
+showLevels = input.bool(true, "Draw the key levels")
+showTrade  = input.bool(true, "Draw entry, stop and targets while a trade is open")
+showOR     = false   // the key levels ARE the opening range here
+alertStyle = input.string("Readable", "Alert messages", options = ["Readable", "JSON (for a webhook)"])
+maxDD      = input.float(2000, "Trailing drawdown ($) below the highest end-of-day balance (Tradeify Growth 50K: 2000)", minval = 0)
+dailyLimit = input.float(1250, "Daily loss limit ($): no more trades that trading day (Tradeify Growth 50K: 1250)", minval = 0)
+riskBuffer = input.float(100, "Spare room ($) kept for slippage when checking a trade's risk", minval = 0)
+reEnter    = input.bool(false, "Re-enter after a fakeout: once per session, 1 contract per target, when a candle closes back beyond the original entry after a stop-out")
+resetBelow = input.float(400, "Start a new evaluation when the account is this close to its floor ($)", minval = 0)
+// ------------------------------------------
+
+if timeframe.period != "5"
+    runtime.error("Use a 5-minute chart. The rules are written for 5-minute candles.")
+
+root    = syminfo.root
+isGold  = market == "Gold" or (market == "Auto" and (root == "MGC" or root == "GC"))
+hhmm(int h, int m) => (h < 10 ? "0" : "") + str.tostring(h) + (m < 10 ? "0" : "") + str.tostring(m)
+gStart  = hhmm(goldHour, goldMin)
+sessStr = isGold ? gStart + "-" + hhmm((goldHour + 8) % 24, goldMin) + ":1234567" : "0930-1600:23456"
+preStr  = isGold ? hhmm((goldHour + 22) % 24, goldMin) + "-" + gStart + ":1234567" : "0730-0930:23456"
+earlyLen = earlyMin > 0 and (earlyOnIn == "Both" or (earlyOnIn == "Gold only" and isGold)) ? earlyMin : 0
+zone    = "America/New_York"
+spacing = isGold ? 6.0 : 30.0
+q1      = isGold ? goldPlan1 : 1
+q2      = isGold ? goldPlan2 : 2
+q3      = isGold ? goldPlan3 : 2
+total   = q1 + q2 + q3
+
+inSess   = not na(time(timeframe.period, sessStr, zone))
+newSess  = inSess and not inSess[1]
+inPre    = not na(time(timeframe.period, preStr, zone))
+newPre   = inPre and not inPre[1]
+usePre   = levelMode == "2 hours before the open"
+
+var float curHigh   = na
+var float curLow    = na
+var float prevHigh  = na
+var float prevLow   = na
+var int   sessStart = 0
+var int   sessEnd   = 0
+var bool  traded    = false
+var int   pending   = 0      // 1 = long breakout waiting for confirmation, -1 = short
+var float pendHigh  = na
+var float pendLow   = na
+var float entryPx   = na
+var int   dir       = 0
+var bool  stopMoved = false
+var int   sessBars  = 0      // candles seen in the current session
+var float preHigh   = na
+var float preLow    = na
+var int   preBars   = 0
+if newPre
+    preHigh := high
+    preLow  := low
+    preBars := 1
+else if inPre
+    preHigh := math.max(preHigh, high)
+    preLow  := math.min(preLow, low)
+    preBars := preBars + 1
+fullBars = (isGold ? 480 : 390) / 5 * 0.75   // shorter sessions are holiday half-days
+
+// ---- Early watch (same as main.py EARLY ENTRIES): from earlyMin minutes
+// before the open, a CLEAR breakout of the high and low of the 2 hours
+// before the watch may be traded early. Still one trade per session. ----
+nyY       = year(time, "America/New_York")
+nyM       = month(time, "America/New_York")
+nyD       = dayofmonth(time, "America/New_York")
+openToday = timestamp("America/New_York", nyY, nyM, nyD, isGold ? goldHour : 9, isGold ? goldMin : 30)
+watchFrom = openToday - earlyLen * 60000
+inEarly   = earlyLen > 0 and not inSess and time >= watchFrom and time < openToday
+newEarly  = inEarly and not inEarly[1]
+inELvl    = earlyLen > 0 and time >= watchFrom - 7200000 and time < watchFrom
+var float eHigh          = na
+var float eLow           = na
+var int   eBars          = 0
+var float earlyHigh      = na
+var float earlyLow       = na
+var int   earlyEntryTime = 0
+if inELvl and not inELvl[1]
+    eHigh := high
+    eLow  := low
+    eBars := 1
+else if inELvl
+    eHigh := math.max(eHigh, high)
+    eLow  := math.min(eLow, low)
+    eBars := eBars + 1
+if newEarly
+    // At least an hour of candles (gold pauses from 5 to 6 PM).
+    earlyHigh := eBars >= 12 ? eHigh : na
+    earlyLow  := eBars >= 12 ? eLow : na
+    eBars     := 0
+    traded    := false
+    pending   := 0
+
+if newSess
+    // A holiday half-day (like Labor Day) is not used as the previous session.
+    if usePre
+        // At least half of the 24 pre-open candles are needed.
+        prevHigh := preBars >= 12 and not na(preHigh) ? preHigh : na
+        prevLow  := preBars >= 12 and not na(preLow) ? preLow : na
+        preBars  := 0
+    else if not na(curHigh) and sessBars >= fullBars
+        prevHigh := curHigh
+        prevLow  := curLow
+    sessBars  := 1
+    curHigh   := high
+    curLow    := low
+    sessStart := time
+    sessEnd   := time + (isGold ? 480 : 390) * 60000
+    // An early trade counts as this session's one trade.
+    traded    := earlyLen > 0 and earlyEntryTime > 0 and time - earlyEntryTime <= earlyLen * 60000
+    pending   := 0
+    stopMoved := strategy.position_size != 0 ? stopMoved : false
+else if inSess
+    sessBars := sessBars + 1
+    curHigh := math.max(curHigh, high)
+    curLow  := math.min(curLow, low)
+
+// ---- Opening range: the key levels are the high and low of the first orMin
+// minutes of the session (Nasdaq 9:30-10:00, gold 8:00-8:30 PM), and entries
+// are looked for after it. Everything else is the RESEARCH rules. ----
+var float orH = na
+var float orL = na
+orDone = inSess and (time - sessStart) >= orMin * 60000
+if newSess
+    orH      := high
+    orL      := low
+    prevHigh := na
+    prevLow  := na
+else if inSess and not orDone
+    orH := math.max(orH, high)
+    orL := math.min(orL, low)
+if orDone and not orDone[1]
+    prevHigh := orH
+    prevLow  := orL
+
+// ---- The Tradeify account (trading days start at 6 PM New York) ----
+// The drawdown floor trails the highest end-of-day balance. Each trade is
+// sized so hitting its stop stays above the floor and inside the daily loss
+// limit (minus a spare buffer): full size, else 1 contract per target, else
+// no trade. When the account gets too close to its floor for any trade, a new
+// evaluation starts (like buying a reset), so the strategy never stops for good.
+var float peakEOD     = strategy.initial_capital
+var float dayStartBal = strategy.initial_capital
+var int   resets      = 0
+closedBalance = strategy.initial_capital + strategy.netprofit
+tradingDay = dayofmonth(time + 6 * 3600000, "America/New_York")
+if tradingDay != tradingDay[1]
+    peakEOD     := math.max(peakEOD, nz(closedBalance[1], strategy.initial_capital))
+    dayStartBal := nz(closedBalance[1], strategy.initial_capital)
+    if closedBalance - (peakEOD - maxDD) < resetBelow
+        peakEOD := closedBalance        // a fresh evaluation from here
+        resets  := resets + 1
+dayPnl    = closedBalance - dayStartBal
+cushion   = closedBalance - (peakEOD - maxDD)
+allowance = math.min(cushion, dailyLimit + dayPnl) - riskBuffer
+dayOver   = dayPnl <= -dailyLimit
+var int tradeQ3 = 0          // contracts for Target 3 in the open trade
+var bool  reArmed  = false   // stopped out at the original stop: watch for a re-entry
+var bool  reDone   = false
+var string curId  = "Long"   // the open position's entry id
+var string curT3  = "T3"     // and its Target 3 exit
+var float firstEntry = na
+var float firstStop  = na
+
+inWindow = inSess and orDone and (time - sessStart) < (orMin + windowMin) * 60000
+haveLevels = not na(prevHigh)
+
+// Levels of the open trade, for drawing
+var float entryLvl = na
+var float stopLvl  = na
+var float t1Lvl    = na
+var float t2Lvl    = na
+var float t3Lvl    = na
+
+px(float p) => str.tostring(p, format.mintick)
+readable = alertStyle == "Readable"
+// Message when an exit order fills: at its target (win) or at the stop.
+winMsg(string tgt, int q, float lvl) =>
+    readable ? syminfo.ticker + " OR paper: " + tgt + " hit, sold " + str.tostring(q) + " at " + px(lvl) : '{"action":"exit","symbol":"' + syminfo.ticker + '","target":"' + tgt + '","qty":' + str.tostring(q) + '}'
+stopMsg(string tgt, int q, float lvl) =>
+    readable ? syminfo.ticker + " OR paper: stop hit, closed " + str.tostring(q) + " at " + px(lvl) + " (" + tgt + " order)" : '{"action":"stop","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(q) + '}'
+
+// Contracts at Target 1, 2 and 3 for a stop this far away: full size if its
+// risk fits today's allowance, else 1 / 1 / 1, else 0 (no trade).
+sizeFor(float stopDist) =>
+    fullRisk  = stopDist * syminfo.pointvalue * (q1 + q2 + q3)
+    smallRisk = stopDist * syminfo.pointvalue * 3
+    fullRisk < allowance ? 1 : smallRisk < allowance ? 2 : 0
+
+enterTrade(int d, float stopPx) =>
+    entry = close
+    plan  = sizeFor(math.abs(entry - stopPx))
+    sz1 = plan == 1 ? q1 : 1
+    sz2 = plan == 1 ? q2 : 1
+    sz3 = plan == 1 ? q3 : 1
+    szTotal = sz1 + sz2 + sz3
+    reduced = plan == 2
+    if math.abs(entry - stopPx) > 0 and plan > 0
+        t1 = entry + d * spacing
+        t2 = entry + d * 2 * spacing
+        t3 = entry + d * 3 * spacing
+        id = d == 1 ? "Long" : "Short"
+        enterMsg = readable ? syminfo.ticker + " OR paper: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(szTotal) + (reduced ? " (small size)" : "") + " at " + px(entry) + ", stop " + px(stopPx) + ", targets " + px(t1) + " / " + px(t2) + " / " + px(t3) : '{"action":"' + (d == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":' + str.tostring(szTotal) + ',"stop":' + str.tostring(stopPx) + '}'
+        strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = szTotal, alert_message = enterMsg,
+             comment = "OR " + (d == 1 ? "BUY " : "SELL ") + str.tostring(szTotal))
+        strategy.exit("T1", id, qty = sz1, limit = t1, stop = stopPx, comment_profit = "OR T1", comment_loss = "OR stop",
+             alert_profit = winMsg("Target 1", sz1, t1), alert_loss = stopMsg("T1", sz1, stopPx))
+        strategy.exit("T2", id, qty = sz2, limit = t2, stop = stopPx, comment_profit = "OR T2", comment_loss = "OR stop",
+             alert_profit = winMsg("Target 2", sz2, t2), alert_loss = stopMsg("T2", sz2, stopPx))
+        strategy.exit("T3", id, qty = sz3, limit = t3, stop = stopPx, comment_profit = "OR T3", comment_loss = "OR stop",
+             alert_profit = winMsg("Target 3", sz3, t3), alert_loss = stopMsg("T3", sz3, stopPx))
+        true
+    else
+        false
+
+// Before the open, only the early levels count, and only a clear breakout:
+// both candles close in the trade's direction, the entry is at most half a
+// target past the level, and no candle in the 30 minutes before swept the
+// level (poked through it and closed back).
+useEarly = inEarly
+lvlHigh  = useEarly ? earlyHigh : prevHigh
+lvlLow   = useEarly ? earlyLow : prevLow
+clearOk(int d, float level) =>
+    ok = d * (close - open) > 0 and d * (close[1] - open[1]) > 0 and d * (close - level) <= spacing / 2
+    for i = 2 to 7
+        if (d == 1 ? high[i] > level : low[i] < level) and d * (close[i] - level) <= 0
+            ok := false
+    ok
+
+// ---- Entries ----
+if (inSess or useEarly) and not na(lvlHigh) and not traded and not dayOver and strategy.position_size == 0
+    handled = false
+    if (confirm or useEarly) and pending != 0
+        stillBeyond = (pending == 1 ? close > lvlHigh : close < lvlLow) and (not useEarly or clearOk(pending, pending == 1 ? lvlHigh : lvlLow))
+        if stillBeyond
+            stopPx = pending == 1 ? math.min(pendLow, low) : math.max(pendHigh, high)
+            if enterTrade(pending, stopPx)
+                traded  := true
+                earlyEntryTime := useEarly ? time : earlyEntryTime
+                dir     := pending
+                entryPx := close
+                entryLvl := close
+                stopLvl  := stopPx
+                firstEntry := close
+                firstStop  := stopPx
+                curId      := pending == 1 ? "Long" : "Short"
+                curT3      := "T3"
+                t1Lvl    := close + pending * spacing
+                t2Lvl    := close + pending * 2 * spacing
+                t3Lvl    := close + pending * 3 * spacing
+                tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
+            handled := true
+        pending := 0
+    if not handled and not traded and (inWindow or useEarly)
+        breakout = close > lvlHigh ? 1 : close < lvlLow ? -1 : 0
+        if breakout != 0
+            if confirm or useEarly
+                pending  := breakout
+                pendHigh := high
+                pendLow  := low
+            else
+                stopPx = breakout == 1 ? low : high
+                if enterTrade(breakout, stopPx)
+                    traded  := true
+                    dir     := breakout
+                    entryPx := close
+                    entryLvl := close
+                    stopLvl  := stopPx
+                    firstEntry := close
+                    firstStop  := stopPx
+                    curId      := breakout == 1 ? "Long" : "Short"
+                    curT3      := "T3"
+                    t1Lvl    := close + breakout * spacing
+                    t2Lvl    := close + breakout * 2 * spacing
+                    t3Lvl    := close + breakout * 3 * spacing
+                    tradeQ3  := sizeFor(math.abs(close - stopPx)) == 1 ? q3 : 1
+
+// ---- Fakeout re-entry (setting): a stop-out at the ORIGINAL stop arms it ----
+if newSess
+    reArmed := false
+    reDone  := false
+if reEnter and not reDone and strategy.closedtrades > nz(strategy.closedtrades[1]) and strategy.position_size == 0 and not stopMoved and traded
+    lastExit = strategy.closedtrades.exit_price(strategy.closedtrades - 1)
+    if math.abs(lastExit - firstStop) <= syminfo.mintick * 2
+        reArmed := true
+if reArmed and inSess and not dayOver and strategy.position_size == 0
+    back = dir == 1 ? close > firstEntry : close < firstEntry
+    if back
+        rStop = dir == 1 ? low : high
+        rRisk = math.abs(close - rStop) * syminfo.pointvalue * 3
+        if rRisk > 0 and rRisk < allowance
+            rid = dir == 1 ? "Re-entry Long" : "Re-entry Short"
+            rt1 = close + dir * spacing
+            rt2 = close + dir * 2 * spacing
+            rt3 = close + dir * 3 * spacing
+            strategy.entry(rid, dir == 1 ? strategy.long : strategy.short, qty = 3, comment = "OR re-entry",
+                 alert_message = readable ? syminfo.ticker + " OR paper: fakeout RE-ENTRY " + (dir == 1 ? "BUY 3" : "SELL SHORT 3") + " at " + px(close) + ", stop " + px(rStop) : '{"action":"' + (dir == 1 ? "buy" : "sell") + '","symbol":"' + syminfo.ticker + '","qty":3,"stop":' + str.tostring(rStop) + '}')
+            strategy.exit("RT1", rid, qty = 1, limit = rt1, stop = rStop, comment_profit = "OR T1", comment_loss = "OR stop", alert_profit = winMsg("Target 1", 1, rt1), alert_loss = stopMsg("RT1", 1, rStop))
+            strategy.exit("RT2", rid, qty = 1, limit = rt2, stop = rStop, comment_profit = "OR T2", comment_loss = "OR stop", alert_profit = winMsg("Target 2", 1, rt2), alert_loss = stopMsg("RT2", 1, rStop))
+            strategy.exit("RT3", rid, qty = 1, limit = rt3, stop = rStop, comment_profit = "OR T3", comment_loss = "OR stop", alert_profit = winMsg("Target 3", 1, rt3), alert_loss = stopMsg("RT3", 1, rStop))
+            entryPx  := close
+            entryLvl := close
+            stopLvl  := rStop
+            t1Lvl    := rt1
+            t2Lvl    := rt2
+            t3Lvl    := rt3
+            tradeQ3  := 1
+            stopMoved := false
+            curId    := rid
+            curT3    := "RT3"
+        reArmed := false
+        reDone  := true
+
+// ---- Manage the open trade: after Target 2, move the stop to Target 1 ----
+if strategy.position_size != 0 and not stopMoved and math.abs(strategy.position_size) <= tradeQ3
+    t1 = entryPx + dir * spacing
+    t3 = entryPx + dir * 3 * spacing
+    strategy.exit(curT3, curId, qty = tradeQ3, limit = t3, stop = t1, comment_profit = "OR T3", comment_loss = "OR stop at T1",
+         alert_profit = winMsg("Target 3", tradeQ3, t3), alert_loss = stopMsg("T3", tradeQ3, t1))
+    stopLvl   := t1
+    stopMoved := true
+
+// ---- Close anything still open at the end of the session ----
+if strategy.position_size != 0 and inSess and time_close >= sessEnd
+    strategy.close_all(comment = "OR session end",
+         alert_message = readable ? syminfo.ticker + " OR paper: session ended, closed the rest at " + px(close) : '{"action":"close_all","symbol":"' + syminfo.ticker + '"}')
+
+// RESEARCH colors (purple / orange / teal), so this script never looks like
+// the LIVE one (blue / red / green) when both are on the same chart.
+plot(showLevels ? prevHigh : na, "OR range high", color.new(color.aqua, 0), 2, plot.style_linebr)
+plot(showLevels ? prevLow  : na, "OR range low",  color.new(color.aqua, 0), 2, plot.style_linebr)
+bgcolor(inWindow ? color.new(color.purple, 94) : na, title = "OR entry window")
+
+// ---- Opening range, DRAWN ONLY (never traded): the Nasdaq 9:30-10:00 high
+// and low, shown from 10:00 to the close. The paper bot tracks what trading
+// its breakouts would have made (paper-trading/opening-range.csv). ----
+inOR = not isGold and not na(time(timeframe.period, "0930-1000:23456", "America/New_York"))
+var float orHigh = na
+var float orLow  = na
+if inOR and not inOR[1]
+    orHigh := high
+    orLow  := low
+else if inOR
+    orHigh := math.max(orHigh, high)
+    orLow  := math.min(orLow, low)
+orShow = showOR and not isGold and inSess and not inOR
+plot(orShow ? orHigh : na, "OR opening range high", color.new(color.aqua, 0), 1, plot.style_linebr)
+plot(orShow ? orLow  : na, "OR opening range low",  color.new(color.aqua, 0), 1, plot.style_linebr)
+plot(showLevels and inEarly ? earlyHigh : na, "OR early high", color.new(color.purple, 50), 1, plot.style_cross)
+plot(showLevels and inEarly ? earlyLow  : na, "OR early low",  color.new(color.purple, 50), 1, plot.style_cross)
+bgcolor(inEarly ? color.new(color.purple, 97) : na, title = "OR early watch")
+
+// The open trade: entry (blue), stop (red, moves to Target 1 after Target 2),
+// targets (green). Buys and sells are marked by TradingView's own trade arrows.
+inTrade = showTrade and (strategy.position_size != 0 or nz(strategy.position_size[1]) != 0)
+plot(inTrade ? entryLvl : na, "OR entry",    color.new(color.purple, 0), 2, plot.style_circles)
+plot(inTrade ? stopLvl  : na, "OR stop",     color.new(color.orange, 0), 2, plot.style_circles)
+plot(inTrade ? t1Lvl    : na, "OR target 1", color.new(color.teal, 30),  1, plot.style_circles)
+plot(inTrade ? t2Lvl    : na, "OR target 2", color.new(color.teal, 15),  1, plot.style_circles)
+plot(inTrade ? t3Lvl    : na, "OR target 3", color.new(color.teal, 0),   2, plot.style_circles)
+bgcolor(dayOver and inSess ? color.new(color.orange, 90) : na, title = "Daily loss limit reached")
+
+// Name tag, so you always know which script you are looking at.
+var table tag = table.new(position.top_left, 1, 2, bgcolor = color.new(color.purple, 15), border_width = 1)
+if barstate.islast
+    table.cell(tag, 0, 0, "OPENING RANGE (tracking only)", text_color = color.white, text_size = size.normal)
+    table.cell(tag, 0, 1, "Not your real account. Trades are marked OR.", text_color = color.white, text_size = size.small)
