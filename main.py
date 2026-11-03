@@ -51,7 +51,7 @@ ENTRY_WINDOW_MINUTES = 60              # only look for breakouts this long
 
 # Where the key levels come from:
 #   "pre_open"          the high and low of the PRE_OPEN_HOURS before the open
-#                       (Nasdaq 7:30-9:30 AM, gold 7-9 PM New York)
+#                       (Nasdaq 7:30-9:30 AM, gold 6-8 PM New York)
 #   "previous_session"  the high and low of the previous full session (the
 #                       original rule, with a 30-minute window)
 # On the 60 days to Oct 19, 2026, "pre_open" with a 60-minute window traded
@@ -65,14 +65,16 @@ PRE_OPEN_HOURS = 2
 CONFIRM_BREAKOUT = {"nasdaq": True, "gold": True}
 
 # "open" is the local time in "zone" (New York if no zone is given). Gold
-# opens at 9:00 PM New York all year (the user's choice on 2026-11-02; it was
-# the Tokyo open, 8 PM in summer and 7 PM in winter). "first_session" keeps
-# the paper trader from replaying older sessions at the new time.
+# opens at 8:00 PM New York all year (chosen 2026-11-02 with
+# experiments/time_test.py; it was the Tokyo open, which is 8 PM in summer but
+# 7 PM in winter). "early": minutes of early watch before the open (see
+# EARLY ENTRIES below; 0 = none). "first_session" keeps the paper trader from
+# replaying older sessions at the new time.
 SESSIONS = {
     "nasdaq": {"label": "New York", "open": (9, 30), "minutes": 390,
-               "name": "Nasdaq (MNQ)"},
-    "gold": {"label": "Asia", "open": (21, 0), "minutes": 480,
-             "name": "Gold (MGC)", "first_session": "2026-11-02 21:00"},
+               "name": "Nasdaq (MNQ)", "early": 0},
+    "gold": {"label": "Asia", "open": (20, 0), "minutes": 480, "early": 90,
+             "name": "Gold (MGC)", "first_session": "2026-11-02 20:00"},
 }
 # Max drawdown, in dollars, across both markets together: if the balance
 # (closed trades) falls this far below its highest end-of-day balance,
@@ -115,14 +117,14 @@ REENTRY = False
 REENTRY_PLAN = [1, 1, 1]
 REENTRY_UNTIL_MINUTES = None   # minutes after the open to stop looking (None: session end)
 
-# Early entries: watch the market EARLY_MINUTES before the open (Nasdaq from
-# 8:00 AM, gold from 7:30 PM). Same rule, against the high and low of the 2
-# hours before that watch starts (Nasdaq 6-8 AM, gold 5:30-7:30 PM), but only
-# on a CLEAR breakout (clear_breakout): both candles close in the trade's
-# direction, the entry is no more than half a target past the level, and no
-# candle in the 30 minutes before swept the level (poked through and closed
-# back). Still one trade per session. 0 = off. Added 2026-11-02.
-EARLY_MINUTES = 90
+# EARLY ENTRIES: a session's "early" minutes before its open (gold: 90, so
+# from 6:30 PM; Nasdaq: off, it waits for 9:30). Same rule, against the high
+# and low of the 2 hours before that watch starts (gold 4:30-6:30 PM, which
+# has data from 6 PM), but only on a CLEAR breakout (clear_breakout): both
+# candles close in the trade's direction, the entry is no more than half a
+# target past the level, and no candle in the 30 minutes before swept the
+# level (poked through and closed back). Still one trade per session. Added
+# 2026-11-02; on the 30 and 60 days to Oct 30 it helped gold and hurt Nasdaq.
 # ------------------------------------------
 
 NEW_YORK = ZoneInfo("America/New_York")
@@ -255,7 +257,8 @@ def _reentry(instrument, direction, entry, session, after, max_loss):
 
 def upcoming_open(now, config):
     """The next session's open when now is in its early watch, else None."""
-    if not EARLY_MINUTES:
+    minutes = config.get("early", 0)
+    if not minutes:
         return None
     zone = ZoneInfo(config.get("zone", "America/New_York"))
     hour, minute = config["open"]
@@ -264,27 +267,27 @@ def upcoming_open(now, config):
         day = local.date() + timedelta(days=days_ahead)
         start = (datetime(day.year, day.month, day.day, hour, minute, tzinfo=zone)
                  .astimezone(NEW_YORK).replace(tzinfo=None))
-        if start - timedelta(minutes=EARLY_MINUTES) <= now < start:
+        if start - timedelta(minutes=minutes) <= now < start:
             return start
     return None
 
 
-def early_levels(everything, start):
+def early_levels(everything, start, config):
     """(high, low) of the 2 hours before the early watch starts, or None."""
-    if not EARLY_MINUTES:
+    if not config.get("early", 0):
         return None
-    watch = start - timedelta(minutes=EARLY_MINUTES)
+    watch = start - timedelta(minutes=config["early"])
     pre = [c for t, c in everything if watch - timedelta(hours=2) <= t < watch]
     if len(pre) < 12:       # at least an hour of candles (gold pauses 5-6 PM)
         return None
     return find_key_levels(pre)
 
 
-def with_early(everything, start, session):
+def with_early(everything, start, session, config):
     """The early-watch candles followed by the session's own."""
-    if not EARLY_MINUTES:
+    if not config.get("early", 0):
         return session
-    watch = start - timedelta(minutes=EARLY_MINUTES)
+    watch = start - timedelta(minutes=config["early"])
     return [(t, c) for t, c in everything if watch <= t < start] + list(session)
 
 
@@ -324,7 +327,7 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
     for index, (moment, candle) in enumerate(session):
         if moment - start >= window:
             break
-        is_early = moment < start          # an early-watch candle (see EARLY_MINUTES)
+        is_early = moment < start          # an early-watch candle (see EARLY ENTRIES)
         if is_early and early is None:
             continue
         high, low = early if is_early else (key_high, key_low)
@@ -590,8 +593,8 @@ def run_account(candles_by_instrument, account=None):
             levels = key_levels_for(sessions, starts, i, config, everything)
             if levels is not None:
                 plan.append((starts[i], instrument,
-                             with_early(everything, starts[i], sessions[starts[i]]),
-                             *levels, early_levels(everything, starts[i])))
+                             with_early(everything, starts[i], sessions[starts[i]], config),
+                             *levels, early_levels(everything, starts[i], config)))
     results = []
     for start, instrument, session, key_high, key_low, early in sorted(plan, key=lambda p: p[0]):
         mode = account.mode(start)

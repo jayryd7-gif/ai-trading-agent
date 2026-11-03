@@ -16,12 +16,12 @@
 //
 // THE RULES (same as main.py)
 // - Key levels: the high and low of the 2 hours before the open
-//   (Nasdaq 7:30-9:30 AM New York, gold 7-9 PM New York). The "Key levels" setting switches back to the previous
+//   (Nasdaq 7:30-9:30 AM New York, gold 6-8 PM New York). The "Key levels" setting switches back to the previous
 //   full session's high and low (the original rule; use a 30-minute window).
 //     Nasdaq: New York, 9:30 AM to 4:00 PM New York time.
-//     Gold:   9:00 PM to 5:00 AM New York time, all year.
-// - Early watch: from 90 minutes before the open (Nasdaq 8:00 AM, gold
-//   7:30 PM), a CLEAR breakout of the 2 hours before that may be taken early.
+//     Gold:   8:00 PM to 4:00 AM New York time, all year (setting).
+// - Early watch (gold only by default): from 90 minutes before the open
+//   (6:30 PM), a CLEAR breakout of the 2 hours before that may be taken early.
 // - In the first 60 minutes, a 5-minute candle closes beyond a key level,
 //   and the NEXT candle also closes beyond it. Enter at that second close.
 // - Stop: the far end of the two candles.
@@ -53,6 +53,9 @@ strategy("RESEARCH - Session Breakout (paper)", overlay = true,
 market     = input.string("Auto", "Market", options = ["Auto", "Nasdaq", "Gold"])
 levelMode  = input.string("2 hours before the open", "Key levels", options = ["2 hours before the open", "Previous session"])
 windowMin  = input.int(60, "Look for breakouts this many minutes after the open", minval = 5)
+goldHour   = input.int(20, "Gold: session starts at this hour (New York time, 0-23)", minval = 0, maxval = 23)
+goldMin    = input.int(0, "Gold: and this minute", options = [0, 30])
+earlyOnIn  = input.string("Gold only", "Early entries (CLEAR breakouts before the open) on", options = ["Gold only", "Both", "Off"])
 earlyMin   = input.int(90, "Watch this many minutes before the open: early entries on a CLEAR breakout only (0 = off)", minval = 0)
 confirm    = input.bool(true, "Wait for a second candle to confirm")
 goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
@@ -73,8 +76,11 @@ if timeframe.period != "5"
 
 root    = syminfo.root
 isGold  = market == "Gold" or (market == "Auto" and (root == "MGC" or root == "GC"))
-sessStr = isGold ? "2100-0500:1234567" : "0930-1600:23456"
-preStr  = isGold ? "1900-2100:1234567" : "0730-0930:23456"
+hhmm(int h, int m) => (h < 10 ? "0" : "") + str.tostring(h) + (m < 10 ? "0" : "") + str.tostring(m)
+gStart  = hhmm(goldHour, goldMin)
+sessStr = isGold ? gStart + "-" + hhmm((goldHour + 8) % 24, goldMin) + ":1234567" : "0930-1600:23456"
+preStr  = isGold ? hhmm((goldHour + 22) % 24, goldMin) + "-" + gStart + ":1234567" : "0730-0930:23456"
+earlyLen = earlyMin > 0 and (earlyOnIn == "Both" or (earlyOnIn == "Gold only" and isGold)) ? earlyMin : 0
 zone    = "America/New_York"
 spacing = isGold ? 6.0 : 30.0
 q1      = isGold ? goldPlan1 : 1
@@ -115,17 +121,17 @@ else if inPre
     preBars := preBars + 1
 fullBars = (isGold ? 480 : 390) / 5 * 0.75   // shorter sessions are holiday half-days
 
-// ---- Early watch (same as main.py EARLY_MINUTES): from earlyMin minutes
+// ---- Early watch (same as main.py EARLY ENTRIES): from earlyMin minutes
 // before the open, a CLEAR breakout of the high and low of the 2 hours
 // before the watch may be traded early. Still one trade per session. ----
 nyY       = year(time, "America/New_York")
 nyM       = month(time, "America/New_York")
 nyD       = dayofmonth(time, "America/New_York")
-openToday = timestamp("America/New_York", nyY, nyM, nyD, isGold ? 21 : 9, isGold ? 0 : 30)
-watchFrom = openToday - earlyMin * 60000
-inEarly   = earlyMin > 0 and not inSess and time >= watchFrom and time < openToday
+openToday = timestamp("America/New_York", nyY, nyM, nyD, isGold ? goldHour : 9, isGold ? goldMin : 30)
+watchFrom = openToday - earlyLen * 60000
+inEarly   = earlyLen > 0 and not inSess and time >= watchFrom and time < openToday
 newEarly  = inEarly and not inEarly[1]
-inELvl    = earlyMin > 0 and time >= watchFrom - 7200000 and time < watchFrom
+inELvl    = earlyLen > 0 and time >= watchFrom - 7200000 and time < watchFrom
 var float eHigh          = na
 var float eLow           = na
 var int   eBars          = 0
@@ -164,7 +170,7 @@ if newSess
     sessStart := time
     sessEnd   := time + (isGold ? 480 : 390) * 60000
     // An early trade counts as this session's one trade.
-    traded    := earlyMin > 0 and earlyEntryTime > 0 and time - earlyEntryTime <= earlyMin * 60000
+    traded    := earlyLen > 0 and earlyEntryTime > 0 and time - earlyEntryTime <= earlyLen * 60000
     pending   := 0
     stopMoved := strategy.position_size != 0 ? stopMoved : false
 else if inSess

@@ -162,8 +162,8 @@ def new_sessions(instrument, candles, recorded, now, open_now=None, history=()):
         if finished and len(sessions[start]) < MIN_SHARE_OF_CANDLES * expected:
             print(f"{instrument} {start}: only {len(sessions[start])} candles, will retry later")
             continue
-        session = rules.with_early(everything, start, sessions[start])
-        early = rules.early_levels(everything, start)
+        session = rules.with_early(everything, start, sessions[start], config)
+        early = rules.early_levels(everything, start, config)
         if not finished:
             # Only use candles that have closed; the newest one may still be forming.
             session = [(t, c) for t, c in session if t + timedelta(minutes=5) <= now]

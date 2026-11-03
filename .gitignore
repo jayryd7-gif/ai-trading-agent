@@ -225,3 +225,4 @@ backtest-journal.md
 tv-latest.csv
 Session_Breakout*.csv
 !tradingview/exports/*.csv
+experiments/.time_test_candles.pkl
