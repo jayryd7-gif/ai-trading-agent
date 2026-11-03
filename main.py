@@ -48,6 +48,7 @@ CSV_FILES = {"nasdaq": "nasdaq.csv", "gold": "gold.csv"}  # used if "csv"
 
 JOURNAL_PATH = "backtest-journal.md"   # kept separate from your real journal
 ENTRY_WINDOW_MINUTES = 60              # only look for breakouts this long
+# (a session can override it with "window"; only experiments do for now)
 
 # Where the key levels come from:
 #   "pre_open"          the high and low of the PRE_OPEN_HOURS before the open
@@ -322,7 +323,7 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
     with the early-watch candles (with_early).
     Returns a result dictionary, or None if no trade was taken.
     """
-    window = timedelta(minutes=ENTRY_WINDOW_MINUTES)
+    window = timedelta(minutes=config.get("window", ENTRY_WINDOW_MINUTES))
 
     for index, (moment, candle) in enumerate(session):
         if moment - start >= window:
