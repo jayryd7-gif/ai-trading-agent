@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-03 03:52 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-03 04:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,10 +17,10 @@ Last updated 2026-11-03 03:52 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 6 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -333,66 +333,72 @@ High - Election Day results and the Iran strikes and talks could both shift rate
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-02</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-03</b></summary>
 
 #### Top things today
 
-1. **Binance hack aftermath.** About $6.3B was stolen from Binance on Oct 29, and about $3B has been frozen. The theft is blamed on North Korea-linked TraderTraitor. Binance says customer losses will be covered. (Bloomberg, CoinDesk) Withdrawals are reopening in phases, starting with bitcoin. Why it matters: it is the largest crypto theft on record, and stolen funds are still moving.
-2. **Market is flat and fearful.** BTC is $78,140 (24h +0.0%, 7d -2.3%) and the Fear and Greed Index is 37. BTC fell more than 4% to about $77,995 on Friday as the hack weighed on the market. (CNBC) Why it matters: BTC has not recovered the post-hack drop.
-3. **Midterms are Tuesday, and the CLARITY Act is stalled.** The Senate vote failed 49-50 on Sept 15, and the bill's path now depends on the Nov 3 midterms. (CoinPaprika) Why it matters: market-structure law probably waits until after the election.
-4. **ETF flows are turning positive.** Spot BTC ETFs took in $17.07M on Oct 29, per SoSoValue. That was the fourth straight day of inflows. (CoinTurk) Why it matters: it is a small but steady sign of demand.
-5. **Strategy hints at another buy.** Michael Saylor posted on Nov 1 that they "found room for even more orange." (Bitcoin.com) Why it matters: Strategy's weekly filing usually lands on Mondays, so it may come today (unconfirmed).
+1. **Binance hack fallout continues.** Bitcoin has dropped below $77,000 and the market is in Fear (26). Binance has spent about half its SAFU bitcoin, roughly $580 million, according to data (CoinDesk). Binance releases more assets for withdrawal from 12:00 AM New York time Tuesday (Analytics Insight). Why it matters: exchange trust and the pace of withdrawals are driving sentiment.
+2. **US midterm voting is today.** Midterm years have historically coincided with Bitcoin corrections (FXStreet). Bitcoin fell as a chip-stock rout pushed the Nasdaq 100 into a correction (Coinbase news feed). Why it matters: macro and election risk are hitting crypto at the same time.
+3. **ETF outflows.** Bitcoin ETFs lost $643 million on Friday (FXStreet). Why it matters: it is a sign of weaker institutional demand.
+4. **More hacks and exploits.** Brazil's Mercado Bitcoin halted withdrawals after $40 million was drained across 10 chains (CoinDesk). ZachXBT says an EU entity may have lost $106 million from exchange accounts (CoinDesk, unconfirmed). Why it matters: security risk is spreading beyond Binance.
+5. **THORChain is in the news.** US agencies urged node operators to block hacker-linked addresses, and a co-founder publicly opposed freezing funds (QUE.com). Why it matters: RUNE is a top gainer and is trending on a governance fight.
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Aria.AI (ARIA) | +51.9% | No news found for today's move. | It crashed 85% on Apr 15, 2026, after a cluster of 8 wallets dumped 45.64M tokens. A failed breakout and extreme token concentration were flagged in August. Tiny market cap rank (752). Pump with no news. |
-| Provenance Blockchain (HASH) | +16.4% | No news found. | $446M market cap but only $66.3K volume. The move is on very thin trading. No news. |
-| Strategy PP Variable xStock (STRCX) | +6.8% | Appears to be a tokenized version of Strategy's STRC preferred stock (unconfirmed). Strategy moved STRC to daily dividends from Nov 1. (Strategy 8-K) | Only $30K volume. A tokenized stock, so it is not a normal coin. |
-| Pearl (PEARL) | +4.5% | No news found. | 7d -12.8%. The bounce follows a weak week, with no news. |
-| Official Trump (TRUMP) | +2.8% | No news found. | Meme coin with $255.7M volume on a $462M market cap. Heavy trading with no cause found. |
-| NEAR Protocol (NEAR) | -5.4% | Trending on CoinGecko. No cause found. | Trending while falling, with no news found. |
+| A7A5 | +576.9% | No news found. | Only $3.6K of 24h volume against a $469.9M market cap. Pump with no news. Price data may be unreliable. |
+| THORChain (RUNE) | +7.1% (+10.7% on trending list) | Possible rebound. It is tied to the hack-related governance dispute. Swaps were reported paused on 12 chains after a refund error (The Defiant, Oct 31). Cause of the bounce is unconfirmed. | Legal and regulatory pressure. Down 7% over 7 days. Swap pauses. |
+| Pieverse (PIEVERSE) | +13.2% | No news found. | Pump with no news. Likely a newer coin (unconfirmed). $14.9M volume is small against a $326.6M market cap. |
+| Rain (RAIN) | +5.2% | No news found. | Price is under a cent. Down 11.6% over 7 days. Pump with no news. |
+| Collector Crypt (CARDS) | +4.7% | No news found. | Down 19.6% over 7 days. Pump with no news. |
+| Cap (CAP) | +3.3% | No news found. | Down 23.1% over 7 days. $114.2M market cap. Pump with no news. |
+
+I found no new meme coin pumping hard. Of the trending names, NEAR (-8.5%), Pearl (-10.6%) and Venice Token (-8.0%) are the weakest.
 
 #### Whale watch
 
-No whale moves found in the last 24 hours. Two larger moves from earlier this week:
-
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Oct 28 | BTC | $35.4M (438.37 BTC) | Whale tracked by Arkham | Onto an exchange (Coinbase Prime) |
-| Date not confirmed (recent) | HYPE | $109M | Two wallets, per Lookonchain | Sold |
+| Nov 3 report, over the past 10 days | AAVE | $25.5M | One whale (Lookonchain) | Onto exchanges (Kraken, OKX, Bybit) |
+| Nov 3 report, over the past 10 days | WLD | $25.85M | Same whale (Lookonchain) | Onto exchanges |
+| Nov 1, 5:39 AM | SOL | $46.35M (485,270 SOL) | Address labeled "Binance Hack 2026" (Whale Alert) | Moved to another wallet. Not confirmed as a sale. |
 
-Both are outside the 24-hour window.
+The AAVE and WLD figures are 10-day totals, not one-day moves. Only the SOL transfer falls inside the last few days.
 
 #### Government and regulation
 
-- **CLARITY Act (H.R. 3633):** It would split crypto oversight between the SEC and CFTC, set registration rules and strengthen anti-money-laundering rules. It is stalled after the failed Senate vote. Congress is in recess ahead of the midterms. (Troutman)
-- **CFTC:** On Sept 17 it sent its proposed "Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets" to the White House for review. (Orrick) Binding rules may still take time.
-- **SEC:** Its proposed Regulation Crypto Assets includes fundraising exemptions of up to $20M and $75M. Comments closed Oct 20. (Troutman)
-- **ICE and Hyperliquid:** ICE's plan to bring Hyperliquid contracts to US traders still needs CFTC approval. (24/7 Wall St)
-- **FBI:** It confirmed North Korea's role in the Binance hack and asked DeFi to block the related addresses. (CoinDesk headline)
-- **Other countries and low-profile bills:** Nothing found in my searches. I did not open "This Week in Crypto Law" (Bitcoin.com, Nov 1).
+- **CLARITY Act (market structure):** The Senate failed to advance it on Sept. 15, voting 49–50 on cloture, short of the 60 needed (Paul Hastings). The CFTC has filed two rule proposals of its own, and the SEC has opened trading in tokenized stocks (CryptoTicker).
+- **Binance hack:** President Trump said officials are looking into the hack, as calls grow for crypto rules (The Block, Oct 30).
+- **Elections:** Voting is underway today, and CoinDesk ran a midterm guide for crypto readers.
+- **Tax:** A House committee approved a federal tax framework for digital assets (Paul Hastings, older item).
+- I found no other-country laws or low-profile amendments in the last few days.
 
 #### Who is buying and adopting
 
-- **Strategy:** It holds 848,517 BTC and bought $14.33B of bitcoin so far in 2026. It made no purchases last week. (Strategy 8-K, Bitcoin.com)
-- **Spot ETF inflows:** About $423.6M came in across Oct 26-28 (HedgeCo, via CoinStats).
-- **Countries and governments:** Nothing found.
-- **Companies adding stablecoin payments:** Nothing found.
+- **Strategy (MSTR):** Bought 811 BTC for $65.5M between Oct 26 and Nov 1. It now holds 849,327 BTC. (Decrypt). The purchase was funded by MSTR stock sales. (Crypto Briefing). It also repurchased $208.2M of STRC preferred stock. (Bitcoin.com)
+- A whale (t1JJnA) bought $3.8M of ZEC spot and opened a 2x long (Lookonchain). This is below the $10M whale threshold.
+- I found no new government purchases or stablecoin payment launches.
 
 #### Next 7 days
 
+All times are New York time where confirmed. Unlock timing is not confirmed, and dollar values are estimates.
+
 | Date | Event | Coin or topic |
 |---|---|---|
-| Mon Nov 2 | Strategy weekly BTC disclosure likely (unconfirmed) | BTC, MSTR |
-| Tue Nov 3 | US midterm elections | CLARITY Act, crypto policy |
-| This week (date not confirmed) | Binance phased withdrawal reopening | BNB, BTC, market liquidity |
-| No date | CFTC decision on ICE-Hyperliquid contracts | HYPE |
+| Nov 3 (today) | 640M KITE unlock (about $78M, 17.4% of supply) (unconfirmed) | KITE |
+| Nov 3 | US midterm elections | Crypto policy and market risk |
+| Nov 4 | Unlocks for MMT and LA | MMT, LA |
+| Nov 5 | Second ENA unlock; KTA unlock | ENA, KTA |
+| Nov 6 | Up to 9.92M HYPE (about $873M headline value); this is a scheduled maximum, not confirmed | HYPE |
+| Nov 6 | Quai and Resolv unlocks | QUAI, RESOLV |
+| Nov 7 | 888.89M STABLE (about $23.3M) | STABLE |
+| Nov 7 | JTO, KGEN, ZTC unlocks | JTO |
+| Nov 8 | AVAX unlock of about $14.42M | AVAX |
 
-I did not find confirmed token unlocks or ETF deadlines for the week. A DropsTab page suggests an ARIA unlock may be happening now, but I could not confirm the date.
+Sources disagree on the HYPE unlock. Some list it at about 9.92M HYPE worth $873M, others at 180,000 HYPE worth $15.7M. They also differ on the date, Nov 5 or Nov 6. Check Tokenomist before relying on either. I found no hearings or ETF deadlines.
 
-[Read the full brief with all the details](reports/crypto/2026-11-02-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-03-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
