@@ -1,10 +1,10 @@
 # Paper trading summary
 
-*Updated 2026-11-02 21:51 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-03 11:15 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$2,376** over 15 trades (22 sessions watched)
+- Total after fees: **-$2,376** over 15 trades (23 sessions watched)
 - Trading days with a trade: **11**, profitable: **3**, losing: 8
 - Win rate: 33%
 - Profit factor: 0.51
@@ -36,7 +36,7 @@ Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trai
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-11-03 | gold no trade | $0 |
+| 2026-11-03 | gold no trade, nasdaq no trade | $0 |
 | 2026-11-02 | nasdaq long | -$1,015 |
 | 2026-10-30 | gold short, nasdaq skipped, risk too big for today's limits | -$265 |
 | 2026-10-29 | gold short, nasdaq skipped, risk too big for today's limits | -$365 |
