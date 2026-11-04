@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-04 06:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-04 06:58 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -19,7 +19,7 @@ Last updated 2026-11-04 06:32 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
@@ -67,7 +67,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $985 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $1,342 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -84,7 +84,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $1.93 so far this month on 18 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $2.50 so far this month on 22 AI runs; on pace for about $19 (budget $50).
 
 ##### Agent health
 
@@ -92,11 +92,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ⏳ 12 of 15 trading days on the paper record
+- ⏳ 13 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.51 (needs 1.3 or more), total $-2,376 over 15 trades
+- ⏳ profit factor 0.59 (needs 1.3 or more), total $-2,018 over 16 trades
 - ✅ worst trading day $-1,071 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
