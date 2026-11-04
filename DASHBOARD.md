@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-04 17:55 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-04 18:35 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-04 17:55 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 10 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 11 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 13 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 14 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -523,74 +523,46 @@ BIAS: Neutral | CONFIDENCE: Low
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-11-03</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-11-04</b></summary>
 
-#### Price data used
+### Gold Futures Brief: Asia Session, Nov 4–5, 2026
 
-```
-PRICE DATA (Gold futures, Yahoo Finance, New York time, may be delayed)
-Latest price: 3938.80 at 2026-11-03 18:15
-Previous Asia session (2026-11-02 20:00 to 04:00): high 3970.80, low 3905.00, close 3905.80, volume 39,974
-Highest high of the last 5 Asia sessions: 4084.10
-Lowest low of the last 5 Asia sessions: 3900.00
-Since that session closed: high 3981.70, low 3904.10.
-Latest price is INSIDE the previous range (32.00 below the high, 33.80 above the low).
-Volume: the previous session traded 1.07x the average of the 5 session(s) before it.
-```
+#### 1. What is driving gold
+Gold is rebounding after a sharp October drop. Gold jumped nearly 3% on Wednesday on a softer dollar and lower Treasury yields after Democrats took control of both houses of Congress. Investors read the result as likely gridlock that could curb further fiscal expansion. The US Dollar Index fell about 0.6% to 101.27, its lowest in roughly a month. Continuing geopolitical uncertainty is also supporting bullion.
 
-**Gold futures brief for the Asia session (starts 8:00 PM NY, Nov 3, 2026)**
+There is a caution. IG says the broader downtrend remains intact. Another source says the early moves on 4 November may reverse once US cash markets trade. I could not verify how the dollar and yields have moved since the US open.
 
-**1. What is driving gold**
-- Gold edged lower on Tuesday as a higher dollar and Treasury yields pressured it, while investors awaited the US midterm results.
-- Traders see a 79% chance of a Fed hike in December, per CME FedWatch. That is the main headwind.
-- Oil matters too. Gold fell toward $3,900 as oil rebounded on reports of a US strike on Iran's Qeshm Island. Selling in tech and AI stocks also weighed on gold.
-- Monday was the opposite. Gold rose more than 1% from a one-year low as oil prices retreated.
-- Kitco noted gold rose an average of 14% in the 12 months after the last 13 midterm elections. That is a long-term stat, not a signal for tonight.
+#### 2. Scheduled events (New York time)
+- **Already out today:** ISM Services PMI came in at 54.5 against an expected 54.8. ADP and the trade balance were also due earlier today. I did not confirm the ADP result.
+- **Wed, Nov 4, evening:** The Newsquawk calendar lists the Riksbank decision, the US Treasury refunding announcement and BoJ minutes. I could not confirm their times. Big US tech earnings (Arm, Qualcomm) were expected after the close.
+- **Fed speaker:** A Logan speech is listed for 7:00 PM. The calendar I found does not make the date clear. Newsquawk lists Logan on Friday. I could not confirm she speaks tonight.
+- **After the session ends (4:00 AM):** Thursday brings US jobless claims and productivity at 8:30 AM, plus Fed speakers, the BoE and ECB. Payrolls are due Friday, Nov 6.
+- **Fed backdrop:** The Fed held rates on Oct 28. One source says Logan said on Oct 30 she sees a need for at least two more hikes. I only saw this in one source.
 
-**2. Scheduled events (New York time)**
-- **Tonight:** US midterm results. Polls favour Democrats to take the House, and the Senate is uncertain. I could not verify when results will be called.
-- AMD and SMCI report Tuesday, per a crypto-news calendar. I could not verify the times.
-- **Wednesday, after the session ends at 4:00 AM:**
-  - ADP jobs at 8:15 AM and ISM Services at 10:00 AM.
-  - The Treasury refunding announcement and the Riksbank, NBP and BCB policy decisions. I could not verify their times.
-- **Later this week:**
-  - Fed's Logan speaks Thursday at 7:00 PM.
-  - October payrolls come Friday at 8:30 AM.
-- I found no Fed speakers scheduled inside tonight's session.
+#### 3. Key levels (from the price data)
+- Previous session high: **4049.20**
+- Previous session low: **3932.70**
+- Previous session close: 4043.70
+- Highest high of the last 5 sessions: **4081.00**
+- Lowest low of the last 5 sessions: **3900.00**
+- High since the previous session closed: 4081.20. That is 0.20 above the 5-session high.
+- Low since the previous session closed: 4038.00
 
-**3. Key levels (from your price data)**
-- Previous session high: **3970.80**. Low: **3905.00**. Close: 3905.80.
-- Since that close: high **3981.70**, low **3904.10**.
-- Last 5 sessions: high **4084.10**, low **3900.00**.
-- Latest price is **3938.80**. It is about 32 below the high and 34 above the low. It sits mid-range, not at resistance or support.
-- Kitco's AM report names a $3,975 to $4,084 resistance zone for spot gold. Its top matches your 5-session high.
+The latest price is **4072.00**. That is 22.80 above the previous session high, so 4049.20 is now a level to watch from above. Price sits **near resistance**, just under the 4081 area, which is a recent high. The nearest support is the previous high and close in the 4043–4049 zone. The previous session low is much further below.
 
-**4. Volume**
-- The previous session traded 1.07x the average of the five sessions before it. That is about normal.
-- It suggests ordinary participation, neither strong nor weak. It does not confirm a breakout in either direction.
+#### 4. Volume
+The previous session traded 2.08x the average of the 5 sessions before it. That is **strong participation**. It suggests the move up came with real interest and was not a thin move. It does not show whether buyers will keep going at the 4081 area.
 
-**5. Directional lean: Neutral | Confidence: Low**
-The signals conflict. Price is mid-range, about 32 points from each edge of the previous range. Volume was average, so it adds no conviction. The news points both ways. Fed-hike bets, a firmer dollar and higher yields weigh on gold. Geopolitical risk and the midterm uncertainty can support it. Gold has also bounced twice off the 3900 area (the 5-session low). A clean break above the previous high (3970.80), or above 3981.70 on rising volume, would push me toward Bullish. A clean break below 3900.00 would push me toward Bearish, particularly if yields and the dollar keep rising. This is a probability-based lean, not a prediction or a trade instruction.
+#### 5. Directional lean
+**Bullish, Confidence: Medium.** Price is above the previous session high. The previous session had strong volume. The news backdrop (weaker dollar, lower yields) is supportive. Together these point up. The lean is held back by price sitting right at the 4081 recent high after a roughly 3% one-day jump. Hawkish Fed comments and Friday's jobs report could also reverse the dollar and yield move. This is a probability lean, not a prediction or a trade instruction.
 
-**6. Event risk: High**
-Midterm results will likely land overnight, and oil and US-Iran headlines have been moving gold by 1% or more in a day.
+**What would change my lean:**
+- Price falling back below the previous session high (4049.20), and especially below the since-close low (4038.00), would move me to Neutral.
+- A rebound in the dollar and yields would move me toward Neutral or Bearish.
+- A hawkish Fed headline would do the same.
+- A clean, sustained move above 4081 on solid vol
 
-**7. Sources**
-- Kitco (Reuters wire and AM Report)
-- Mining.com (Reuters)
-- Trading Economics
-- Yahoo Finance
-- Investing.com
-- Newsquawk
-- Kiplinger
-- Zerohedge
-- Substack (Regulatory Intelligence)
-- Crypto.news
-- Price levels come from the supplied Yahoo Finance data block.
-
-BIAS: Neutral | CONFIDENCE: Low
-
-[Open the file](reports/2026-11-03-gold-brief.md)
+[Open the file](reports/2026-11-04-gold-brief.md)
 
 </details>
 
@@ -599,7 +571,7 @@ BIAS: Neutral | CONFIDENCE: Low
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-11-04 07:50 | ◆ Neutral | Low | High | 28431.75 | [read it](reports/2026-11-04-nasdaq-brief.md) |
-| gold | 2026-11-03 18:29 | ◆ Neutral | Low | High | 3938.80 | [read it](reports/2026-11-03-gold-brief.md) |
+| gold | 2026-11-04 18:34 | ? Unknown | Unknown | n/a | 4072.00 | [read it](reports/2026-11-04-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
