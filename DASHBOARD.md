@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-04 01:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-04 03:50 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-04 01:32 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 18 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 7 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 22 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 21 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 45 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 8 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -260,76 +260,72 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-03, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-04, event risk High</b></summary>
 
 #### Top things for today
-1. **US midterm elections.** Voting is today. The calendar lists a high-impact "Congressional Elections" item at 10:16 AM. Trump said he would not launch strikes on Iran before Tuesday's midterms. Why it matters: policy direction, risk appetite and the dollar.
-2. **US strikes on Iran's Qeshm Island.** The US military carried out limited strikes Monday, according to two US officials (NBC News). The officials said this was not a resumption of major combat operations. Why it matters: Hormuz oil flows, energy prices and gold's safe-haven demand.
-3. **Iran talks.** Trump signaled progress Monday in talks to avoid a return to war. Tehran reported "intensive" exchanges. Separately, an Iranian official said Tehran rejects "excessive" US demands and a deal is still distant (The Jerusalem Post, headline only). Why it matters: oil, inflation expectations and rates.
-4. **JOLTS at 10:00 AM.** Forecast is 7.11M, against 7.08M before. Why it matters: labor-market read before Friday's payrolls.
-5. **Trump, Putin and Xi meeting talk.** The US, Russia and China are discussing a trilateral meeting (Financial Times, headline only). Why it matters: geopolitical risk and trade.
+1. **US strike on Iran's Qeshm Island.** US officials told CNN the US carried out limited strikes on Qeshm Island late Monday. They called the action defensive. Officials told NBC the strikes were not a resumption of major combat operations. Why it matters: Hormuz shipping risk, energy prices and the gold safe-haven bid.
+2. **Iran's Hormuz position.** The US says it is enforcing a naval blockade of Iran's Gulf ports. Iran claims control of the Strait of Hormuz. UKMTO said two vessels reported attacks in the strait on Tuesday. Why it matters: oil supply, inflation expectations and rates.
+3. **US midterm results.** The Washington Post reports a historic swing to Democrats (headline only). CNN reports Trump blamed Fox News for GOP losses (headline only). Why it matters: the outlook for fiscal policy, tariffs and risk appetite.
+4. **ISM Services PMI at 10:00 AM.** The forecast is 54.9, and the previous reading was 54.9. Why it matters: growth, rates and the dollar.
+5. **Bank of England decision Thursday, and US jobs data Friday.** Why it matters: the pound, rates and the dollar.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 10:00 AM | JOLTS Job Openings (forecast 7.11M, previous 7.08M) | USD data | Yes |
-| 10:16 AM | Congressional Elections (high impact) | USA | Yes |
-| Not stated | Trump's Election Day and night plans | Time Magazine story (headline only) | (unconfirmed) |
+| 10:00 AM | ISM Services PMI (forecast 54.9, previous 54.9) | USD | Yes |
+| All day | No Trump public events found | – | – |
 
 Coming up this week:
-- **Wed Nov 4:** 10:00 AM ISM Services PMI (forecast 54.9, previous 54.9).
-- **Thu Nov 5:**
-  - 7:00 AM BOE Bank Rate (forecast 4.00%, previous 3.75%).
-  - 7:00 AM MPC votes (forecast 7-0-2, previous 3-0-6).
-  - 7:00 AM Monetary Policy Summary and Monetary Policy Report.
-  - 7:30 AM BOE Gov Bailey speaks.
-- **Fri Nov 6:**
-  - 8:30 AM US Non-Farm Payrolls (forecast 63K, previous 29K).
-  - 8:30 AM US unemployment rate (forecast 4.2%, previous 4.2%).
-  - 8:30 AM US average hourly earnings (forecast 0.3%, previous 0.1%).
-  - 8:30 AM Canada employment change (forecast 14.5K, previous -68.3K).
-  - 8:30 AM Canada unemployment rate (forecast 6.5%, previous 6.5%).
-  - 11:00 AM BOJ Gov Ueda speaks.
+- **Thu 7:00 AM:** BOE rate decision, with a forecast of 4.00% against a previous 3.75%. The vote split is forecast at 7-0-2, against a previous 3-0-6. The Monetary Policy Report and Summary are also due.
+- **Thu 7:30 AM:** BOE Governor Bailey speaks.
+- **Thu 8:30 AM:** US jobless claims, forecast 197K against a previous 194K.
+- **Fri 8:30 AM:** US payrolls, forecast 63K against a previous 29K. The unemployment rate is forecast at 4.2%, and hourly earnings at 0.3% against a previous 0.1%.
+- **Fri 8:30 AM:** Canada employment change, forecast 14.5K against a previous -68.3K. Canada's unemployment rate is forecast at 6.5%.
+- **Fri 11:00 AM:** BOJ Governor Ueda speaks.
 
 #### Event risk today
-High - Election Day results and the Iran strikes and talks could both shift rate, oil and safe-haven expectations.
+High - Iran and Hormuz tensions are live, the midterm results are fresh, and ISM Services is due at 10:00 AM.
 
 #### Politics and policy
-- **Midterms.** Al Jazeera says the vote will test the limits of Trump's power (headline only). The BBC has a explainer on when results will be known (headline only).
-- **Court ruling.** The Supreme Court rejected Trump's bid over disputed California ballots (Axios, headline only).
-- **Trump on oil.** Trump said Monday that oil prices fell $10, which he called the largest single-day drop in history. (Fox News)
-- **Trump on Iran.** He said he was in no hurry to resume military strikes on Iran. (Fox News)
-- **AI security.** The White House refuses to disclose how it vets AI security threats (The Washington Post, headline only).
-- No Fed, Treasury or executive order items found in the feeds.
+- **Midterms.** The Washington Post says voters punished Trump with a historic swing to Democrats (headline only). The Guardian calls the results a rebuke of Trump's movement (headline only). The New York Times says countries are weighing what Trump will do after the defeat (headline only).
+- **Trump's reaction.** CNN says Trump blamed Fox News for the GOP losses (headline only).
+- **Foreign policy.** CNBC asks what Trump losing power over Congress means for Iran, Ukraine and foreign policy (headline only).
+- **Iran diplomacy.** Vice President Vance said Monday he was optimistic about a "negotiated settlement" with Iran. An Iranian official said the two sides remain far from a deal. Trump told Axios he was in "no rush" to resume strikes. News reports say Trump has been weighing escalation after the midterms.
+- **Senate.** The Anchorage Daily News reports a tight Alaska Senate race between Peltola and Sullivan (headline only).
+- No Treasury or Fed news in the headlines.
 
 #### Economics
-- **Switzerland.** Inflation was 1.5% in October, above forecasts, on fuel costs (Investing.com, headline only). The Swiss franc hit fresh seven-week highs (FXStreet, headline only).
-- **US.** No US data was released overnight.
+- No US data was released overnight.
+- Yahoo Finance says Dutch inflation hit an 18-month high (headline only).
+- Bloomberg says research finds UK rates are not high enough to curb inflation (headline only).
+- The National says Democrats rode an inflation wave back into power (headline only).
 
 #### SEC, CFTC and hearings
-- The SEC and CFTC issued no official press releases in the last 2 days.
-- The CFTC chair said the Binance hack shows a need for US regulation of offshore crypto exchanges (FinanceFeeds, headline only).
-- The SEC chair welcomed disruption from TXSE as exchange competition grows (The Business Journals, headline only).
-- No Fed, Treasury or SEC congressional hearings were found.
+- **SEC:** Nothing in the last 2 days.
+- **CFTC:** Chairman Selig released a statement on equity perpetual futures Tuesday at 8:50 AM. The Defiant says he said equity perps can begin US trading (headline only).
+- **Reaction and lawsuit:** Crypto News Australia says a Citadel Securities-backed group sued the CFTC over the expansion (headline only). finance.biggo.com says Kalshi launched four contracts the same day and was immediately sued (headline only). Moomoo says the move put pressure on Cboe and CME (headline only).
+- **Hearings:** No congressional hearings found.
 
 #### War, trade and tariffs
-- **Qeshm strikes.** US officials told the WSJ the strikes aimed to stop Iranian forces from threatening shipping in the Strait of Hormuz. The island sits near the strait's entrance. It has an underground missile facility, a naval base and a desalination plant.
-- **Iranian claims.** The IRGC claimed it shot down three American drones near Hormuz (per Iran International, citing Tasnim).
-- **Oil.** Early Asian trade had Brent up 0.5% at $105.25 and WTI up 0.5% at $96.93. (The National)
-- **Mediation.** Qatari mediators are pushing a confidence-building plan to revive direct talks. (Fox News)
-- **Airlines.** Ryanair's CEO says to book early because the Iran war could threaten cheap European flights (Fortune, headline only).
-- No new tariff news found.
+- **Qeshm Island.** The island is about 14 miles from Bandar Abbas. About 20 million barrels of oil a day passed through the strait before the war. Iran's Revolutionary Guard claimed it shot down two US reconnaissance drones over the island. It is unclear whether this is linked to the strikes. Why it matters: energy supply and shipping insurance.
+- **Strikes versus Trump's remarks.** NBC says Trump had said the US would not strike Iran before the midterms. On Monday he said the US had not been fighting for months.
+- **Iran's terms.** Iran says it can reopen the strait within two days if Washington meets its seven demands.
+- **Hormuz exemptions.** IranWire says Iran exempted India, China, Iraq and Qatar from Hormuz restrictions (headline only).
+- **Mediation.** Fox says Qatari mediators are awaiting responses.
+- **Oil.** Fox says Trump claimed oil fell $10 in a day, the largest single-day drop in history. This is Trump's claim and I did not verify it.
+- **Gulf markets.** Reuters says Gulf bourses advanced as investors weighed the US midterms and the Iran standoff (headline only).
+- **Tariffs:** No new tariff news found.
 
 #### Country briefs
-- **China:** Apple set new sales highs in China even as higher costs bite (Bloomberg, headline only). The US, Russia and China are discussing a trilateral leaders' meeting (FT, headline only).
-- **European Union:** Schaeffler will cut jobs and close five plants in Europe (Reuters, headline only).
-- **United Kingdom:** The BOE decision is Thursday at 7:00 AM; the calendar forecasts 4.00%, up from 3.75%.
-- **Japan:** BOJ Gov Ueda speaks Friday at 11:00 AM. Nothing else found.
-- **India:** A weak monsoon threatens winter crops and could prolong food inflation (The Japan Times, headline only).
-- **Russia:** The US, Russia and China are discussing a trilateral meeting with Putin (FT, headline only). Russia launched a large attack on Ukraine's energy infrastructure, with Ladyzhyn hit hardest. (UNN)
-- **Canada:** Employment data is due Friday at 8:30 AM. The forecast is +14.5K, after -68.3K before.
+- **China:** Anadolu says Beijing is discussing a possible meeting between Xi, Putin and Trump (headline only).
+- **European Union:** Yahoo Finance says Dutch inflation climbed to an 18-month high (headline only).
+- **United Kingdom:** Bloomberg says research finds UK rates are not high enough to curb inflation (headline only). The BOE decision is due Thursday at 7:00 AM.
+- **Japan:** Nothing found. BOJ Governor Ueda speaks Friday at 11:00 AM.
+- **India:** IranWire says Iran exempted India from Hormuz restrictions (headline only).
+- **Russia:** UNITED24 Media says Moscow forecasts its first industrial decline in five years (headline only). Reuters says Skoda will reassess its ice hockey championship role if Russia takes part (headline only).
+- **Canada:** Nothing found. Canada's jobs report is due Friday at 8:30 AM.
 
-[Read the full brief with all the details](reports/news/2026-11-03-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-04-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
