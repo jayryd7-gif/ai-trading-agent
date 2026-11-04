@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-04",
+  "written": "2026-11-04 04:55",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-04-world-brief.md (Wed Nov 04, today)",
+    "Stocks: reports/stocks/2026-11-04-stock-brief.md (Wed Nov 04, today)",
+    "Crypto: reports/crypto/2026-11-04-crypto-brief.md (Wed Nov 04, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-03-nasdaq-brief.md (Tue Nov 03, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-03-gold-brief.md (Tue Nov 03, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 4 ☀️\n\nOil risk from the Iran standoff and a historic midterm swing to Democrats are the biggest things for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: US officials call Monday's Qeshm Island strikes limited and defensive, not a return to major combat.\n\nWhy it matters: Hormuz oil flows drive fuel prices and inflation.\n\nNext: If talks stall, watch for more strikes and oil swings."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: ISM Services PMI is due 10:00 AM, forecast 54.9, same as last time.\n\nWhy it matters: Strong services can keep rates high, hitting mortgages and savings.\n\nNext: If Friday's payrolls (forecast 63K) run soft, watch for rate-cut bets."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: AMD beat estimates after Tuesday's close and rose 7.5% after hours.\n\nWhy it matters: AI chips sit in many index funds, so this reaches your retirement account.\n\nNext: If AI demand holds, the selloff could ease. ARM and LEU report today."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Democrats reportedly won the Senate, and the CLARITY Act looks stalled.\n\nWhy it matters: Agency rules from the SEC and CFTC may become the main path.\n\nNext: If talks revive before Jan 3, watch for a vote.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: CNN, NBC, Fox, Investing.com, CNBC, Coindoo, Paul Hastings, Trading Economics, Yahoo Finance consensus data.",
+  "midday": {
+    "story": "US strikes on Qeshm Island and the Strait of Hormuz standoff",
+    "post": "Iran's Hormuz standoff is the story to watch for your wallet. Oil moves into gas prices, then into the inflation numbers central banks track. If talks stall, expect bigger price swings. If a deal comes, oil could ease. Not financial advice."
+  },
+  "reply_midday": "Sources: CNN, NBC, Fox, UKMTO, Axios, as cited in today's Cash Flow Brief research.",
+  "close_watch": "Today's close: ISM Services PMI at 10:00 AM (forecast 54.9) is the only scheduled event on today's calendar.",
+  "video": {
+    "script": "Oil could hit your wallet today. Here's why. US officials say they carried out limited strikes on Iran's Qeshm Island, and Iran claims control of the Strait of Hormuz. Oil moves into gas prices, and then into inflation. Second, Democrats posted a historic swing in the midterms, and the CLARITY Act crypto bill looks stalled. That shifts the spotlight to agency rules for crypto. Third, AMD beat estimates and jumped after hours, but AI chip stocks sit in many retirement funds. Watch ISM Services at 10 AM, and the jobs report Friday. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Oil risk: Hormuz standoff",
+      "Qeshm strikes: US calls them limited",
+      "Midterms: historic swing to Democrats",
+      "CLARITY Act looks stalled",
+      "AMD beat, up 7.5% after hours",
+      "Not financial advice"
+    ]
+  }
+}
