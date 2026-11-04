@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-03 20:40 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-03 20:58 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,7 +21,7 @@ Last updated 2026-11-03 20:40 New York time. Everything here is written by softw
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 40 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -29,6 +29,7 @@ Last updated 2026-11-03 20:40 New York time. Everything here is written by softw
 ## 📒 Trade journal (paper)
 
 - **Tradeify 50K evaluation: balance $48,985**, $985 above the drawdown floor, $4,015 to pass; today $0, $1,250 left before the daily loss limit. [Details](paper-trading/summary.md)
+- 🟢 **Open now: Gold long 3 contracts** at 3963.4 (20:15), stop 3936.5. Sold so far: 1 @ 3969.4 (20:25).
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
