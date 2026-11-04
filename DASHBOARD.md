@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-04 04:16 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-04 06:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-04 04:16 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -387,69 +387,70 @@ I found no token unlocks, hearings or ETF deadlines for the week.
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-02</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-04</b></summary>
 
 #### Top things today
-1. Intel fell 28.6% on Friday after a weak Q4 forecast. It was the stock's steepest one-day drop since 1974. Intel guided to $15–16B in Q4 revenue, against a market forecast of $17.07B (Reuters, Bloomberg-style wire coverage). Why it matters: it started the chip rout.
-2. The Nasdaq had its biggest one-day drop since June 5, on Intel and Amazon results and worries about AI spending (Reuters). It sits 7.8% below its Oct 6 record close. Why it matters: the AI trade is under pressure.
-3. The chips index fell 7.2% and is down more than 15% for the month. AMD fell 10.9% and Nvidia fell 4.2% (live data). Why it matters: AMD reports Tuesday and is the next test.
-4. Miners and nuclear names fell with tech. Gold fell 3.6% and copper fell 1.4% overnight (Market Index). Why it matters: the selloff spread beyond AI.
-5. Apple and Palantir report today. Why it matters: both are big AI-linked names after a hard week.
+1. **Midterm results are hitting futures.** Early results pointed to Democrats winning the House, with the Senate leaning their way. Futures and the dollar fell. (Nordfx, Marketindex) Why it matters: investors fear tighter rules on AI and data centers.
+2. **AMD beat estimates and jumped after the close.** Adjusted EPS was $2.09 against about $1.94 expected, and revenue was $13.38B. Shares rose 7.5% after hours to $520.40 from the $483.90 close. (Investing.com) Why it matters: it could relieve the AI-chip selloff, since AMD fell 13.6% over 5 days.
+3. **Super Micro posted a big beat and raised guidance.** Revenue was $19.9B against $16.26B expected. It guided the next quarter above consensus. Shares rose about 6% after hours. (Investing.com) Why it matters: it is more evidence of AI server demand.
+4. **Apple fell on a memory-cost warning, and Palantir slipped after earnings.** Apple dropped about 2% after warning that rising memory-chip costs will squeeze holiday-quarter margins. (Prime Daily) Analysts focused on slower commercial contract value growth at Palantir. (Kiplinger) Why it matters: memory costs and software growth are both being watched closely.
+5. **Nuclear and mining stocks fell sharply over 5 days.** CCJ is down 12.0%, LEU 12.6%, USAR 16.2% and LAC 13.0%. Why it matters: ARM, ALB and LEU report today, and several others report this week.
 
 #### Stocks to research
-
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| AMD | AI chips | -10.9% (1 day) | Reports Nov 3. Street expects about $13.1B revenue and EPS near $1.94. | Big downside gap already. Sentiment is shaky. |
-| INTC | Chips | -28.6% | Weak guidance. BofA cut it to Neutral and lowered its target to $100. | Falling-knife risk. A lower share price could add an accounting gain tied to the US government stake. |
-| CCJ | Uranium | -7.9% | Near a 1-year low (MarketBeat). A Key Lake outage cut output (newsletter). | Latest quarter missed estimates. The sector is selling off with no single fix. |
-| MP | Rare earths | -5.0% | Reports Nov 5. China's suspension of its rare-earth controls lapses about Nov 10. | Loss-making. Policy-driven moves can reverse quickly. |
-| USAR | Rare earths | -8.6% | Reports Nov 5. | Small company. Loss-making. Revenue estimate only $13.6M. |
-| SPCX | New large listing | -6.4% | Space Exploration Technologies is among the most active stocks. Market cap is $1.8T. | I found no news on it, so the move is unexplained. It is a new stock with limited trading history. |
+| AMD | AI chips | +3.7% (day), -13.6% (5 days) | Earnings beat and strong after-hours move | Fell 17% after one earlier beat; the stock has been volatile |
+| SMCI | AI servers | +3.1% (day) | Revenue beat and guidance far above consensus | Cash flow is a concern as it scales (Investing.com); stock is down 33.6% over 12 months |
+| CRWV | AI cloud | +7.2% (day), -9.8% (5 days) | Neoclouds rallied with the AI rebound (CNBC); earnings Nov 10 | Large 5-day swings; earnings risk |
+| ARM | AI chips | +2.9% (day), -10.6% (5 days) | Reports today; EPS estimate $0.48 | Earnings-day volatility |
+| LEU | Uranium and enrichment | +0.8% (day), -12.6% (5 days) | Reports today; EPS estimate -$0.13 | Loss-making; revenue estimate only $55.6M |
+| SPCX | New stock (SpaceX) | +3.6% (day) | Market cap $1.9T; heavy trading volume | I found no fresh catalyst for Tuesday's move. I could not verify the details of the earlier report. |
+
+Other big movers had no news found, so treat them with caution. These were Aehr (AEHR), Fabrinet (FN), and the crypto-miner group (RIOT, CIFR, HUT, WULF, GLXY).
 
 #### AI and tech
-- **Intel rout:** The Q3 results beat Intel's own guidance. The weak Q4 outlook and a PC slowdown warning did the damage (technology.org). Data center and AI revenue still rose 78% to $7.3B.
-- **Spillover:** Qualcomm lost about 11% and SanDisk dropped 13.6%. Dell and HP fell 10.8% and 9.6%. Alphabet is down 12.6% over five days after earnings.
-- **AMD and SMCI report Tuesday:** It is also the day of the US midterm elections. BofA sees weaker PC demand as a possible revenue headwind of up to $750M for AMD, partly offset by server sales.
-- **Politics:** One analysis says tighter data center rules after the midterms could pressure AI supply chains (BigGo). This is speculative.
+- **AI trade rebounded.** The Nasdaq rose 0.8% and the S&P 500 rose 0.4% after a recent selloff over AI spending worries. (Kiplinger, Trading Economics) The Dow fell about 197 points.
+- **AMD's details.** Data center sales nearly doubled, and revenue rose 45%. (CNBC) Another report cites a roughly $17B forecast for next quarter. (Indmoney)
+- **Intel set the tone last week.** Intel fell 29% on Friday over weak guidance. That followed a record drop in Alphabet and weak Amazon results. (CNBC)
+- **Super Micro's guidance.** It guided fiscal 2027 revenue to $72B–$82B and said it has no current plans for an equity raise. (Investing.com)
 
 #### Nuclear and critical minerals
-- **China rare-earth controls:** China's suspension of its extraterritorial controls, including the 0.1% content rule, expires Nov 10. The same source says ex-China NdPr prices sit just above the Pentagon's $110/kg floor in its MP Materials deal.
-- **Copper miners lag the metal:** Southern Copper fell 7.42% and Freeport 5.55% on Friday, both to three-month lows. Freeport cut its 2026 copper sales forecast on Oct 28. LME copper fell 1.5% on Friday.
-- **Rare-earth stocks:** Critical Metals' new shares from its European Lithium deal are due to trade Nov 6. That adds supply to a weak group.
-- **Uranium:** The long-term price hit a record $96 in Q3 (Investing News). Even so, URA is down about 39% over a longer period (Market Index table). Lotus Resources shipped its first uranium from Kayelekera.
+- **Metals stocks lagged the metals in October.** Freeport, Antofagasta and Southern Copper fell 11–16% while copper was still up about 15% for the year. Lithium fell 24% and SQM dropped 15.8% in October. (Thoughts for the Day newsletter, secondary source)
+- **Cameco and uranium.** Spot uranium rose 3.5% in October to $92.55/lb, yet Cameco shares fell 11.1%. (same newsletter)
+- **Asian trading Wednesday.** Uranium, rare earths, lithium and data center stocks bounced in Australia. (Marketindex)
+- **Government deals and export limits.** Nothing new found for today.
 
 #### Earnings
-**Results since yesterday:** Nothing found. The only results I found are last week's Intel and Amazon reports, covered above. Apple, Palantir and BWXT report today.
+**Results since yesterday:**
+- **AMD (after the close Tuesday):** EPS $2.09 vs about $1.94 expected. Revenue was $13.38B vs $13.06B. After-hours reaction was strongly positive. (Investing.com)
+- **SMCI (after the close Tuesday):** EPS $1.81 vs $1.23. Revenue was $19.9B vs $16.26B. Shares closed at $31.46 and rose about 6% after hours. (Investing.com)
+- **PLTR:** It fell 1.7% on Tuesday after reporting. I did not find estimate figures. (Kiplinger)
+
+**Watchlist earnings:**
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 2026-11-02 | AAPL | Not confirmed | $1.99 | $113.4B |
-| 2026-11-02 | BWXT | Not confirmed | $1.19 | $972.4M |
-| 2026-11-02 | PLTR | Not confirmed | $0.41 | $2.2B |
-| 2026-11-03 | AMD | After the close (TechFlow) | $1.94 | $13.1B |
-| 2026-11-03 | SMCI | Not confirmed | $1.23 | $16.3B |
 | 2026-11-04 | ALB | Not confirmed | $2.53 | $1.6B |
 | 2026-11-04 | ARM | Not confirmed | $0.48 | $1.4B |
 | 2026-11-04 | LEU | Not confirmed | -$0.13 | $55.6M |
 | 2026-11-05 | MP | Not confirmed | -$0.01 | $118.9M |
-| 2026-11-05 | SMR | Not confirmed | -$0.12 | $3.8M |
-| 2026-11-05 | USAR | Not confirmed | -$0.15 | $13.6M |
+| 2026-11-05 | SMR | Not confirmed | -$0.12 | $4.0M |
 | 2026-11-06 | OKLO | Not confirmed | -$0.26 | $1.1M |
 | 2026-11-06 | VST | Not confirmed | $3.08 | $6.0B |
 | 2026-11-09 | CEG | Not confirmed | $3.88 | $9.3B |
+| 2026-11-09 | USAR | Not confirmed | -$0.15 | $13.6M |
 | 2026-11-10 | CRWV | Not confirmed | -$1.21 | $3.5B |
 | 2026-11-13 | LAC | Not confirmed | -$0.03 | n/a |
-
-Nvidia is not on the watchlist table. It reports in mid-November.
+| 2026-11-17 | NVDA | Not confirmed | $2.47 | $109.0B |
+| 2026-11-17 | SQM | Not confirmed | $2.08 | $2.2B |
 
 #### Smart money
-- **Intel downgrade:** Bank of America's Vivek Arya cut Intel to Neutral from Buy and lowered the target from $145 to $100.
-- **Cameco:** MarketBeat flagged a new 12-month low on an analyst downgrade, but its snippet doesn't name the firm. It also shows no insider buying or selling in the past three months.
-- **Nvidia insiders:** MarketBeat shows no insider buys in 12 months and 10 insiders selling, about $1.27B.
-- **Congress and Nvidia:** Rep. Daniel Meuser (R-Pa.) recently sold Nvidia shares (Benzinga). Quiver data shows small purchases by Reps. Cleo Fields and Michael Rulli in June. I found no congressional trades in the nuclear or minerals names.
+- A Globe and Mail analyst roundup said the recent weakness in Cameco looks overdone. It named rate hikes and AI worries as headwinds. The analyst's name was not clear in my results. (Globe and Mail)
+- Bernstein picked AMD over Super Micro ahead of earnings, based on a MarketBeat headline. I did not see the details. (MarketBeat)
+- Insider buying: nothing found.
+- Congress trades: nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-02-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-04-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
@@ -604,10 +605,10 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 
 ## Scorecard
 
-- Briefs scored: **18** (Bullish or Bearish calls: 2)
+- Briefs scored: **19** (Bullish or Bearish calls: 2)
 - Right: 1, Wrong: 1, Session ended flat: 0
 - Hit rate when the session was decisive: **50%**
-- For comparison, price went up in 50% of decisive sessions
+- For comparison, price went up in 53% of decisive sessions
 - ⚠️ Only 2 directional calls so far. Treat the numbers as noise until there are at least 30.
 
 By confidence:
@@ -632,6 +633,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-11-03 | gold | ◆ Neutral | Low | Up (2.63%) | Moved |
 | 2026-11-03 | nasdaq | ◆ Neutral | Low | Flat (0.12%) | Calm |
 | 2026-11-02 | nasdaq | ◆ Neutral | Low | Down (-2.04%) | Moved |
 | 2026-10-28 | gold | ◆ Neutral | Low | Down (-0.80%) | Moved |
@@ -641,7 +643,6 @@ By confidence:
 | 2026-10-26 | nasdaq | ◆ Neutral | Low | Up (0.85%) | Moved |
 | 2026-10-23 | nasdaq | ◆ Neutral | Low | Up (0.32%) | Moved |
 | 2026-10-22 | gold | ▼ Bearish | Medium | Down (-0.31%) | Right |
-| 2026-10-21 | gold | ◆ Neutral | Low | Down (-0.94%) | Moved |
 
 ## Your journals
 
