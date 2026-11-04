@@ -1,16 +1,83 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-04 04:55 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-04 18:09 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-04.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.034 (7 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.038 (8 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Wednesday Nov 04)
+## 🌙 Tonight's thread, ready to copy (Wednesday Nov 04)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (179/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 4 🌙
+
+Stocks rallied, oil fell 8.4%, and Democrats took Congress, and each can move your money.
+
+What happened today and what to watch Thursday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (254/280)
+```text
+2/ Politics: Democrats took Congress. Republicans urge Trump to change course (Reuters). Officials call Qeshm strikes limited.
+
+Why it matters: Policy shifts can move tariffs and oil prices.
+
+Tomorrow: No US vote is set. Watch whether Iran talks advance.
+```
+
+**Post 3 of 5 · 💵 Economy** (234/280)
+```text
+3/ Economy: ISM Services PMI was due at 10 AM, forecast 54.9. No result is in our material yet.
+
+Why it matters: Rate bets set mortgage and savings rates.
+
+Tomorrow: BOE rate call at 7 AM, forecast 4.00%. US jobless claims at 8:30 AM.
+```
+
+**Post 4 of 5 · 📈 Stocks** (245/280)
+```text
+4/ Stocks: S&P 500 at 7,688.73 (+1.6%), Dow at 53,357.03 (+3.0%). Wall Street rallied after the midterms (FOX 5).
+
+Why it matters: Index funds and retirement accounts track these moves.
+
+Next: If the rally holds, watch the 10-yr yield, at 4.89%.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (246/280)
+```text
+5/ Bitcoin at 80,363.72 (+3.9%), Ether at 2,427.72 (+6.8%). CoinDesk: crypto rules face uncertainty. Why it matters: SEC/CFTC rules decide what reaches your account. Next: If the judge backs CFTC stock perps, expect appeals. Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(223/280)
+```text
+Sources: Reuters, NBC News, CNN, FOX 5 (politics, markets); Yahoo Finance (prices); Trading Economics calendar; CoinDesk, Bitcoin Magazine (crypto); SEC and CFTC press releases.
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,688.73 (+1.6% vs the last close)
+Nasdaq: 25,739.71 (+1.4% vs the last close)
+Dow: 53,357.03 (+3.0% vs the last close)
+10-yr yield: 4.89% (-0.06 pts vs the last close)
+Oil (WTI): 88.04 (-8.4% vs the last close)
+Gold: 4,072.20 (+3.3% vs the last close)
+Bitcoin: 80,363.72 (+3.9% vs the last close)
+Ether: 2,427.72 (+6.8% vs the last close)
+Solana: 95.65 (+2.9% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Wednesday Nov 04)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -90,7 +157,7 @@ Oil could hit your wallet today. Here's why. US officials say they carried out l
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | — | US strikes on Qeshm Island and the Strait of Hormuz standoff |
+| [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Qeshm Island and the Strait of Hormuz standoff |
 | [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and Bitcoin below $77,000 |
 | [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
 | [Sun Nov 01](reports/x-posts/2026-11-01.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and exchange trust |
@@ -112,7 +179,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | ✅ | · | · | ✅ | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
