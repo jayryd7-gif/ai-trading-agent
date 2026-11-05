@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-05 06:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-05 07:55 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-05 06:59 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 26 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 10 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 27 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 11 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -472,70 +472,67 @@ Other big movers had no news found, so treat them with caution. These were Aehr 
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-04</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-05</b></summary>
 
-### Nasdaq 100 futures brief for Wednesday, Nov 4, 2026 (New York session)
+### Nasdaq 100 futures brief for Thursday, Nov 5, 2026
 
 #### 1. What is driving futures
-- **Midterms.** Democrats won a large victory. Futures rebounded after an initial slide, and the size of the win surprised investors. JPMorgan analysts warned of a possible "AI sell-off on assumed higher regulation."
-- **Overnight swing.** Nasdaq-100 futures rose 929.75 points off their overnight low of 27,615.75, the lowest since July 30.
-- **Chip earnings.** AMD beat estimates and guided Q4 revenue well above expectations. AMD jumped more than 7% before the bell.
-- **Backdrop.** The Nasdaq 100 ended Monday in correction territory, more than 10% below its Oct 6 record. Apple also guided gross margin below estimates (45–46% against 47% expected).
-- **Iran and oil.** Oil fell on hopes of US–Iran peace talks, with Brent near $103.
+- **Chip and AI selling.** Nasdaq futures dropped as chip and data center stocks stayed under pressure, while S&P 500 contracts were little changed after Wednesday's election-driven surge. Investors are weighing what a Democratic midterm win means for AI regulation.
+- **Weak chip earnings.** One report ties the drop to weak Arm and Qualcomm earnings and AI rule worries.
+- **Rotation, not a broad selloff.** The Dow was poised for more gains after its big postelection rally as investors rotated away from key tech stocks. Most large-cap tech stocks built on gains from the last session, because a slower AI buildout was seen as helping them.
+- **Overnight bounce.** The price data shows an overnight low of 28167.75 and a bounce from there. The latest price is 28325.25.
 
 #### 2. Scheduled events (New York time)
-- **8:15 AM:** ADP employment for October. The forecast is 62.5K, against 90K before.
-- **8:30 AM:** Treasury quarterly refunding announcement (focus on longer-maturity coupon plans). The September trade balance is also due.
-- **9:45 AM:** Final S&P Global Services PMI.
-- **10:00 AM:** ISM Services PMI. The prior ISM prices index was 74.0.
-- **Earnings:** McDonald's, Uber and CVS report before the open. Qualcomm reports after the close.
-- **Fed speakers:** None are scheduled. Dallas Fed's Logan speaks at 7 PM, after the session.
-- **Later this week:** The US jobs report comes Friday.
+- **8:30 AM:** Weekly jobless claims. The forecast is 196k, against a prior 194k. Q3 productivity and unit labor costs also come out at 8:30 AM.
+- **8:50 AM:** Fed's Hammack speaks. He preferred a rate hike at the October FOMC meeting.
+- **9:10 AM:** Fed's Barkin speaks in a moderated Q&A.
+- **9:30 AM:** The New York session opens.
+- **7:00 PM:** Fed's Logan speaks, after the Nasdaq session ends.
+- **Friday 8:30 AM:** October payrolls. Consensus is 65k, with a prior of 29k.
+- **Earnings:** I could not confirm any major earnings report scheduled during today's session.
 
 #### 3. Key levels (from the price data)
-- Previous session high: **28,443.50**
-- Previous session low: **28,215.75**
-- Latest price: **28,431.75**, which is 11.75 below the high.
-- Since the close, the high is **28,662.00** and the low is **27,615.75**.
-- 5-session range: high **30,009.00**, low **28,101.75**.
+- Previous session high: **28969.00**
+- Previous session low: **28405.00**
+- Previous close: 28567.25
+- Overnight high: 28649.75
+- Overnight low: 28167.75
+- 5-session low: 28101.75
+- 5-session high: 29677.00
 
-Price is sitting **near resistance** (the previous high). It is inside the previous range, 216.00 above the low. It has also traded above this high overnight (28,662.00) and come back.
+The latest price of 28325.25 is **below the previous session low by 79.75**. It is not sitting at resistance. The 28405.00 low was broken and may now act as resistance. The closest support is the overnight low of 28167.75, then the 5-session low of 28101.75. Price is closer to these lows than to any high.
 
 #### 4. Volume
-Yesterday's volume (416,597) was **0.78x** the average of the five sessions before it. That suggests **weak participation**. Yesterday's moves had less conviction behind them. I can't say what today's volume will be.
+The previous session traded 1.13x the average of the five sessions before it. That is slightly above average. It suggests normal-to-modest participation, not a strong surge. The selling was not a high-conviction panic, but it was not light either.
 
 #### 5. Directional lean
-**Neutral. Confidence: Low.**
+**Bias: Bearish. Confidence: Low.**
 
-Price is pressed against the previous high, which is resistance. It is also well above the previous low and has bounced hard from the overnight low. The news points both ways. The AMD beat supports chips, but the blue-wave AI-regulation worry and a market in correction work against that. Volume was light yesterday, so neither side has shown strong buying or selling. These signals conflict, so I'm not leaning either way.
+Price is below the previous session low. The news flow (chip weakness, AI regulation worries) points the same way. Volume is only slightly above average, so it does not add much conviction. The signals are not fully aligned. Price has bounced off the overnight low. Large-cap tech is holding up, and money is rotating within the market, not leaving it. This is a probability-based lean, not a prediction or a trade instruction.
 
 **What would change the lean:**
-- *More bullish:* a move through the overnight high of 28,662.00 and acceptance above it, with stronger volume and good data.
-- *More bearish:* a drop below the previous low of 28,215.75 and then 28,101.75, especially if AI-regulation worries return or ISM prices run hot.
-
-This is a probability-based lean. It is not a prediction or a trade instruction.
+- Price reclaiming 28405.00 and holding it would move me toward Neutral.
+- Chip stocks stabilizing would also move me toward Neutral.
+- A break below the overnight low (28167.75) or the 5-session low (28101.75) on rising volume would raise confidence in the bearish view.
 
 #### 6. Event risk
-**High.** ADP, the refunding, ISM and the services PMI all land between 8:15 and 10:00 AM, around the open, and futures just swung more than 1,000 points overnight on election news.
+**Medium.** Claims data and two Fed speakers fall before or near the open. Friday's payrolls could also keep traders cautious, and a hot payrolls print would test the market's rate view quickly.
 
 #### 7. Sources
+- Investing.com, including its Reuters report
 - CNBC
 - Yahoo Finance
-- NBC News
-- Reuters (via Investing.com)
-- TheStreet
-- ZeroHedge
-- Kiplinger
-- TradingCharts
-- Stocktwits
-- Benzinga
-- 24/7 Wall St
+- TradingView/Benzinga
+- CoinCentral
+- Seeking Alpha
+- Trading Economics
+- FinancialJuice
+- TraderFactor
+- NEXUS morning note
 
-**Could not verify:** official consensus for ISM Services. One source listed AMD earnings as pending, but several others confirmed it already reported on Tuesday. Price levels come only from the supplied data block.
+BIAS: Bearish | CONFIDENCE: Low
 
-BIAS: Neutral | CONFIDENCE: Low
-
-[Open the file](reports/2026-11-04-nasdaq-brief.md)
+[Open the file](reports/2026-11-05-nasdaq-brief.md)
 
 </details>
 
@@ -587,7 +584,7 @@ The previous session traded 2.08x the average of the 5 sessions before it. That 
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-04 07:50 | ◆ Neutral | Low | High | 28431.75 | [read it](reports/2026-11-04-nasdaq-brief.md) |
+| nasdaq | 2026-11-05 07:54 | ▼ Bearish | Low | Medium | 28325.25 | [read it](reports/2026-11-05-nasdaq-brief.md) |
 | gold | 2026-11-04 18:34 | ? Unknown | Unknown | n/a | 4072.00 | [read it](reports/2026-11-04-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
