@@ -1,16 +1,81 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-05 04:54 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-05 18:09 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-05.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.042 (9 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.046 (10 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Thursday Nov 05)
+## 🌙 Tonight's thread, ready to copy (Thursday Nov 05)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (179/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 5 🌙
+
+Democrats took control of Congress, and US stocks sold off hard, with the Nasdaq down 5.5%.
+
+What happened today and what to watch Friday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (256/280)
+```text
+2/ Politics & world: Democrats took control of Congress. Bloomberg reports Rubio weighs leaving the administration.
+
+Why it matters: Congress shapes spending and tariffs, which feed prices and rates.
+
+Tomorrow: watch whether Democrats' probes move forward.
+```
+
+**Post 3 of 5 · 💵 Economy** (247/280)
+```text
+3/ Economy: BOE due 7:00 AM, forecast 4.00%, up from 3.75%. US jobless claims due 8:30 AM, forecast 197K. Why it matters: UK/US rate signals shape mortgage and loan costs. Tomorrow: watch Friday's 8:30 AM payrolls (forecast 63K) for Fed rate bets.
+```
+
+**Post 4 of 5 · 📈 Stocks** (246/280)
+```text
+4/ Stocks: Nasdaq -5.5%, S&P 500 -4.3%, Dow -3.4%. Boston Globe ties the tech drop to Democrats slowing the AI boom. Why it matters: index funds and 401(k)s hold these; swings hit savings. Tomorrow: watch AI-stock selling into Friday's jobs data.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (255/280)
+```text
+5/ Crypto: Bitcoin fell 6.3% to $75,337.85. CFTC orders exchanges to drop geographic limits within 30 days.
+
+Why it matters: crypto often tracks tech, so holdings may swing with the Nasdaq.
+
+Tomorrow: watch the 30-day CFTC deadline.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(188/280)
+```text
+Sources: WSJ, Bloomberg, PBS, Washington Post, Boston Globe, Cryptonews, Yahoo Finance (prices), Google News headlines, economic calendar feed
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,356.73 (-4.3% vs the last close)
+Nasdaq: 24,327.37 (-5.5% vs the last close)
+Dow: 51,524.13 (-3.4% vs the last close)
+10-yr yield: 4.84% (-0.06 pts vs the last close)
+Oil (WTI): 91.20 (+3.5% vs the last close)
+Gold: 4,097.90 (+0.6% vs the last close)
+Bitcoin: 75,337.85 (-6.3% vs the last close)
+Ether: 2,212.32 (-8.7% vs the last close)
+Solana: 88.92 (-6.9% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Thursday Nov 05)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -88,7 +153,7 @@ Democrats just won control of both chambers of Congress, and that matters for yo
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Thu Nov 05](reports/x-posts/2026-11-05.md) | ✅ | ✅ | ✅ | ✅ | — | Democrats win both chambers of Congress and oil falls to a two-month low |
+| [Thu Nov 05](reports/x-posts/2026-11-05.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Democrats win both chambers of Congress and oil falls to a two-month low |
 | [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Qeshm Island and the Strait of Hormuz standoff |
 | [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and Bitcoin below $77,000 |
 | [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
@@ -111,7 +176,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | ✅ | · | · | ✅ | · | ✅ | · |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting

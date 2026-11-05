@@ -1,4 +1,5 @@
+Shortened 2 post(s) that were over the limit.
 Saved reports/x-posts/2026-11-05.md
-Tokens used: 16056 in, 5433 out
-Estimated cost: $0.0043
+Tokens used: 10669 in, 6881 out
+Estimated cost: $0.0045
 Wrote X-DASHBOARD.md

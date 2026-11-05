@@ -48,5 +48,32 @@
       "ETFs lost $1.16B in 3 sessions",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,356.73 (-4.3% vs the last close)\nNasdaq: 24,327.37 (-5.5% vs the last close)\nDow: 51,524.13 (-3.4% vs the last close)\n10-yr yield: 4.84% (-0.06 pts vs the last close)\nOil (WTI): 91.20 (+3.5% vs the last close)\nGold: 4,097.90 (+0.6% vs the last close)\nBitcoin: 75,337.85 (-6.3% vs the last close)\nEther: 2,212.32 (-8.7% vs the last close)\nSolana: 88.92 (-6.9% vs the last close)",
+    "written": "2026-11-05 18:09",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Nov 5 🌙\n\nDemocrats took control of Congress, and US stocks sold off hard, with the Nasdaq down 5.5%.\n\nWhat happened today and what to watch Friday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Democrats took control of Congress. Bloomberg reports Rubio weighs leaving the administration.\n\nWhy it matters: Congress shapes spending and tariffs, which feed prices and rates.\n\nTomorrow: watch whether Democrats' probes move forward."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: BOE due 7:00 AM, forecast 4.00%, up from 3.75%. US jobless claims due 8:30 AM, forecast 197K. Why it matters: UK/US rate signals shape mortgage and loan costs. Tomorrow: watch Friday's 8:30 AM payrolls (forecast 63K) for Fed rate bets."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: Nasdaq -5.5%, S&P 500 -4.3%, Dow -3.4%. Boston Globe ties the tech drop to Democrats slowing the AI boom. Why it matters: index funds and 401(k)s hold these; swings hit savings. Tomorrow: watch AI-stock selling into Friday's jobs data."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: Bitcoin fell 6.3% to $75,337.85. CFTC orders exchanges to drop geographic limits within 30 days.\n\nWhy it matters: crypto often tracks tech, so holdings may swing with the Nasdaq.\n\nTomorrow: watch the 30-day CFTC deadline.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: WSJ, Bloomberg, PBS, Washington Post, Boston Globe, Cryptonews, Yahoo Finance (prices), Google News headlines, economic calendar feed"
   }
 }
