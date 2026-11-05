@@ -1,0 +1,102 @@
+//@version=6
+// MAMBA NQ - a MambaFX-style breakout scalp on Nasdaq (MNQ1!), built
+// 2026-11-04 from public YouTube tutorials of his breakout strategy and
+// tested in experiments/mamba_test.py. Tracking account: it never sends
+// orders anywhere.
+//
+// THE RULES (5-minute chart, New York time, Monday to Friday)
+// - Watch from "watchBefore" minutes before the 9:30 AM open until
+//   "watchAfter" minutes after it. Entries before 9:30 are allowed.
+// - Structure: the high and low of the last 6 candles (30 minutes).
+// - Enter when a candle CLOSES above that high (long) or below that low
+//   (short), in the trade's direction (green for a long, red for a short),
+//   with a push: its body at least as big as the average body of those
+//   6 candles.
+// - Stop: the far end of the breakout candle (its low for a long).
+// - Target: 1 x the risk (1:1), all contracts at once. In and out.
+// - One trade a day. Anything still open at 3:55 PM is closed.
+// Fees: $0.50 per contract each way, like the LIVE 50K script.
+strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
+     process_orders_on_close = true, pyramiding = 0,
+     initial_capital = 50000, margin_long = 0, margin_short = 0,
+     default_qty_type = strategy.fixed, default_qty_value = 6,
+     commission_type = strategy.commission.cash_per_contract, commission_value = 0.5)
+
+// ---------------- SETTINGS ----------------
+contracts   = input.int(6, "Contracts per trade", minval = 1, maxval = 40)
+lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
+push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
+targetR     = input.float(1.0, "Target: this many times the risk", minval = 0.1, step = 0.1)
+watchBefore = input.int(60, "Watch from this many minutes before 9:30 (60 = 8:30 AM)", minval = 0)
+watchAfter  = input.int(60, "Until this many minutes after 9:30", minval = 5)
+startFrom   = input.time(timestamp("2026-09-04T00:00:00-04:00"), "Count trades from (New York time)")
+showLines   = input.bool(true, "Draw the structure lines while watching")
+// ------------------------------------------
+
+if timeframe.period != "5"
+    runtime.error("Use a 5-minute chart. The rules are written for 5-minute candles.")
+
+NY        = "America/New_York"
+openT     = timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), 9, 30)
+closeT    = timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), 15, 55)
+dow       = dayofweek(time, NY)
+weekday   = dow >= dayofweek.monday and dow <= dayofweek.friday
+inWatch   = weekday and time >= startFrom and time >= openT - watchBefore * 60000 and time < openT + watchAfter * 60000
+
+top     = ta.highest(high, lookback)[1]
+bottom  = ta.lowest(low, lookback)[1]
+avgBody = ta.sma(math.abs(close - open), lookback)[1]
+body    = math.abs(close - open)
+longSig  = close > top and close > open and body >= push * avgBody
+shortSig = close < bottom and close < open and body >= push * avgBody
+
+var bool  traded = false
+var float stopLvl = na
+var float tgtLvl  = na
+var float entLvl  = na
+if ta.change(dayofmonth(time, NY)) != 0
+    traded := false
+
+px(float p) => str.tostring(p, format.mintick)
+
+if inWatch and not traded and strategy.position_size == 0
+    if longSig and close - low > 0
+        risk = close - low
+        tgt  = close + targetR * risk
+        strategy.entry("Long", strategy.long, qty = contracts, comment = "MAMBA BUY " + str.tostring(contracts),
+             alert_message = syminfo.ticker + " MAMBA: BUY " + str.tostring(contracts) + " at " + px(close) + ", stop " + px(low) + ", target " + px(tgt))
+        strategy.exit("Out", "Long", limit = tgt, stop = low, comment_profit = "MAMBA target", comment_loss = "MAMBA stop",
+             alert_profit = syminfo.ticker + " MAMBA: target hit at " + px(tgt), alert_loss = syminfo.ticker + " MAMBA: stop hit at " + px(low))
+        traded  := true
+        entLvl  := close
+        stopLvl := low
+        tgtLvl  := tgt
+    else if shortSig and high - close > 0
+        risk = high - close
+        tgt  = close - targetR * risk
+        strategy.entry("Short", strategy.short, qty = contracts, comment = "MAMBA SELL " + str.tostring(contracts),
+             alert_message = syminfo.ticker + " MAMBA: SELL SHORT " + str.tostring(contracts) + " at " + px(close) + ", stop " + px(high) + ", target " + px(tgt))
+        strategy.exit("Out", "Short", limit = tgt, stop = high, comment_profit = "MAMBA target", comment_loss = "MAMBA stop",
+             alert_profit = syminfo.ticker + " MAMBA: target hit at " + px(tgt), alert_loss = syminfo.ticker + " MAMBA: stop hit at " + px(high))
+        traded  := true
+        entLvl  := close
+        stopLvl := high
+        tgtLvl  := tgt
+
+if strategy.position_size != 0 and time >= closeT
+    strategy.close_all(comment = "MAMBA 3:55 close", alert_message = syminfo.ticker + " MAMBA: closed the rest at " + px(close))
+
+// MAMBA colors (yellow structure, white entry), so it never looks like the
+// RESEARCH (purple) or LIVE (blue/green/red) scripts on the same chart.
+plot(showLines and inWatch ? top : na,    "MAMBA structure high", color.new(color.yellow, 0), 1, plot.style_linebr)
+plot(showLines and inWatch ? bottom : na, "MAMBA structure low",  color.new(color.yellow, 0), 1, plot.style_linebr)
+bgcolor(inWatch ? color.new(color.yellow, 95) : na, title = "MAMBA watch window")
+inTrade = strategy.position_size != 0 or nz(strategy.position_size[1]) != 0
+plot(inTrade ? entLvl : na,  "MAMBA entry",  color.new(color.white, 0), 2, plot.style_circles)
+plot(inTrade ? stopLvl : na, "MAMBA stop",   color.new(color.orange, 0), 2, plot.style_circles)
+plot(inTrade ? tgtLvl : na,  "MAMBA target", color.new(color.lime, 0), 2, plot.style_circles)
+
+// Name tag (top left), so it is clear which script this is.
+var table tag = table.new(position.top_left, 1, 1, bgcolor = color.new(color.yellow, 20))
+if barstate.islast
+    table.cell(tag, 0, 0, "MAMBA NQ (tracking only)", text_color = color.black, text_size = size.normal)

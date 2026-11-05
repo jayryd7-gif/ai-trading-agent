@@ -61,6 +61,16 @@ ENTRY_WINDOW_MINUTES = 60              # only look for breakouts this long
 KEY_LEVELS = "pre_open"
 PRE_OPEN_HOURS = 2
 
+# The buy candle (the second, confirming one) must CLOSE above the previous
+# candle's high (below its low for a short), not just poke through with a wick.
+ENTRY_CLOSE_BEYOND_PREV = False
+# And close strongly: the wick left against the trade (above the close for a
+# long) may be at most this many times the candle's body (None = no check).
+ENTRY_MAX_WICK = None
+# Stop this many points past the two candles' far end, for leeway when price
+# comes back to retest the low (0 = at the low exactly).
+STOP_BUFFER = {"nasdaq": 0, "gold": 0}
+
 # Wait for a second candle to close beyond the level before entering.
 # Tested in experiments/gold_variations.py.
 CONFIRM_BREAKOUT = {"nasdaq": True, "gold": True}
@@ -346,10 +356,19 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
                 continue  # an early breakout must confirm before the open
             if check_breakout(second, high, low) != direction:
                 continue  # the breakout did not hold; keep watching
+            d = 1 if direction == "long" else -1
+            if ENTRY_CLOSE_BEYOND_PREV and \
+                    d * (second.close - (candle.high if d == 1 else candle.low)) <= 0:
+                continue  # only a wick went past the previous candle
+            if ENTRY_MAX_WICK is not None:
+                body = abs(second.close - (second.open if second.open is not None else candle.close))
+                wick = second.high - second.close if d == 1 else second.close - second.low
+                if wick > ENTRY_MAX_WICK * body:
+                    continue  # closed well off its best price: a rejection
             index += 1
             entry = round(second.close, 2)
-            stop = round(min(candle.low, second.low) if direction == "long"
-                         else max(candle.high, second.high), 2)
+            stop = round((min(candle.low, second.low) if direction == "long"
+                          else max(candle.high, second.high)) - d * STOP_BUFFER[instrument], 2)
         if is_early and not clear_breakout(instrument, session, index, direction,
                                            high if direction == "long" else low):
             continue  # not clear enough to go before the open
