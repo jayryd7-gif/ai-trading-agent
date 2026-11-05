@@ -1,155 +1,86 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-04 18:09 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-05 04:54 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-04.md)
-- **Evening thread:** ✅ ready (below), reminder at 7 PM
-- **Claude cost this month:** $0.038 (8 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-05.md)
+- **Evening thread:** ⏳ about 6:30 PM New York time
+- **Claude cost this month:** $0.042 (9 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Wednesday Nov 04)
-
-What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
-
-**Post 1 of 5 · Intro** (179/280)
-```text
-1/ Cash Flow Brief: Evening, Nov 4 🌙
-
-Stocks rallied, oil fell 8.4%, and Democrats took Congress, and each can move your money.
-
-What happened today and what to watch Thursday 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (254/280)
-```text
-2/ Politics: Democrats took Congress. Republicans urge Trump to change course (Reuters). Officials call Qeshm strikes limited.
-
-Why it matters: Policy shifts can move tariffs and oil prices.
-
-Tomorrow: No US vote is set. Watch whether Iran talks advance.
-```
-
-**Post 3 of 5 · 💵 Economy** (234/280)
-```text
-3/ Economy: ISM Services PMI was due at 10 AM, forecast 54.9. No result is in our material yet.
-
-Why it matters: Rate bets set mortgage and savings rates.
-
-Tomorrow: BOE rate call at 7 AM, forecast 4.00%. US jobless claims at 8:30 AM.
-```
-
-**Post 4 of 5 · 📈 Stocks** (245/280)
-```text
-4/ Stocks: S&P 500 at 7,688.73 (+1.6%), Dow at 53,357.03 (+3.0%). Wall Street rallied after the midterms (FOX 5).
-
-Why it matters: Index funds and retirement accounts track these moves.
-
-Next: If the rally holds, watch the 10-yr yield, at 4.89%.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (246/280)
-```text
-5/ Bitcoin at 80,363.72 (+3.9%), Ether at 2,427.72 (+6.8%). CoinDesk: crypto rules face uncertainty. Why it matters: SEC/CFTC rules decide what reaches your account. Next: If the judge backs CFTC stock perps, expect appeals. Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(223/280)
-```text
-Sources: Reuters, NBC News, CNN, FOX 5 (politics, markets); Yahoo Finance (prices); Trading Economics calendar; CoinDesk, Bitcoin Magazine (crypto); SEC and CFTC press releases.
-Not financial advice. News and analysis only.
-```
-
-<details><summary>Prices used</summary>
-
-```text
-S&P 500: 7,688.73 (+1.6% vs the last close)
-Nasdaq: 25,739.71 (+1.4% vs the last close)
-Dow: 53,357.03 (+3.0% vs the last close)
-10-yr yield: 4.89% (-0.06 pts vs the last close)
-Oil (WTI): 88.04 (-8.4% vs the last close)
-Gold: 4,072.20 (+3.3% vs the last close)
-Bitcoin: 80,363.72 (+3.9% vs the last close)
-Ether: 2,427.72 (+6.8% vs the last close)
-Solana: 95.65 (+2.9% vs the last close)
-```
-</details>
-
-## 📋 This morning's posts, ready to copy (Wednesday Nov 04)
+## 📋 Today's posts, ready to copy (Thursday Nov 05)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
-**Post 1 of 5 · Intro** (212/280)
+**Post 1 of 5 · Intro** (183/280)
 ```text
-1/ Cash Flow Brief, Nov 4 ☀️
+1/ Cash Flow Brief, Nov 5 ☀️
 
-Oil risk from the Iran standoff and a historic midterm swing to Democrats are the biggest things for your wallet today.
+Democrats won both chambers of Congress, and oil is sliding as Iran strike talk continues.
 
 What happened, why it matters, and what could happen next 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (242/280)
+**Post 2 of 5 · 🌍 World & politics** (238/280)
 ```text
-2/ Politics: US officials call Monday's Qeshm Island strikes limited and defensive, not a return to major combat.
+2/ Politics: Democrats won both chambers of Congress. Trump said the US has no immediate plans to strike Iran.
 
-Why it matters: Hormuz oil flows drive fuel prices and inflation.
+Why it matters: more say over war and spending can move oil and gas prices.
 
-Next: If talks stall, watch for more strikes and oil swings.
+Next: if Iran talks stall, oil could climb again.
 ```
 
-**Post 3 of 5 · 💵 Economy** (242/280)
+**Post 3 of 5 · 💵 Economy** (230/280)
 ```text
-3/ Economy: ISM Services PMI is due 10:00 AM, forecast 54.9, same as last time.
+3/ Economy: BOE decides at 7:00 AM. A hike to 4.00% is forecast, up from 3.75%.
 
-Why it matters: Strong services can keep rates high, hitting mortgages and savings.
+Why it matters: rates shape the pound, and jobs data feeds Fed bets on your mortgage.
 
-Next: If Friday's payrolls (forecast 63K) run soft, watch for rate-cut bets.
+Next: watch Friday's US payrolls at 8:30 AM for Fed rate bets.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (247/280)
+**Post 4 of 5 · 📈 Stocks** (248/280)
 ```text
-4/ Stocks: AMD beat estimates after Tuesday's close and rose 7.5% after hours.
+4/ Stocks: AMD beat estimates after Tuesday's close, with EPS of $2.09 vs about $1.94 expected.
 
-Why it matters: AI chips sit in many index funds, so this reaches your retirement account.
+Why it matters: AI-chip swings can move index funds and retirement accounts.
 
-Next: If AI demand holds, the selloff could ease. ARM and LEU report today.
+Next: CRWV reports Nov 10, and its large 5-day swings mean earnings risk.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (238/280)
+**Post 5 of 5 · 🪙 Crypto** (251/280)
 ```text
-5/ Crypto: Democrats reportedly won the Senate, and the CLARITY Act looks stalled.
+5/ Crypto: Bitcoin is back above $80K ($80,304) after a midterm swing.
 
-Why it matters: Agency rules from the SEC and CFTC may become the main path.
+Why it matters: spot BTC ETFs lost about $1.16B over three sessions, so the rally may not hold.
 
-Next: If talks revive before Jan 3, watch for a vote.
-
-Not financial advice.
+Next: if the Democrats' draft bill advances, watch oversight shift toward the SEC.
 ```
 
 **Reply under post 5 · sources**
-(163/280)
+(178/280)
 ```text
-Sources: CNN, NBC, Fox, Investing.com, CNBC, Coindoo, Paul Hastings, Trading Economics, Yahoo Finance consensus data.
+Sources: Irish Times, Gulf News, NBC News, Reuters, Morningstar, SEC, CFTC, Yahoo Finance consensus, CryptoBase, CoinGecko live data
 Not financial advice. News and analysis only.
 ```
 
-### Midday take (12-1 PM): US strikes on Qeshm Island and the Strait of Hormuz standoff
+### Midday take (12-1 PM): Democrats win both chambers of Congress and oil falls to a two-month low
 
-(240/280)
+(262/280)
 ```text
-Iran's Hormuz standoff is the story to watch for your wallet. Oil moves into gas prices, then into the inflation numbers central banks track. If talks stall, expect bigger price swings. If a deal comes, oil could ease. Not financial advice.
+Democrats now control both chambers of Congress. Why this matters for your wallet: spending and war policy shape oil, gasoline and inflation. Brent fell to about $93 a barrel on Thursday, its lowest in about two months. If Iran talks stall, oil could rise again.
 ```
 
 <details><summary>🎬 Video script (30-60 sec)</summary>
 
 ```text
-Oil could hit your wallet today. Here's why. US officials say they carried out limited strikes on Iran's Qeshm Island, and Iran claims control of the Strait of Hormuz. Oil moves into gas prices, and then into inflation. Second, Democrats posted a historic swing in the midterms, and the CLARITY Act crypto bill looks stalled. That shifts the spotlight to agency rules for crypto. Third, AMD beat estimates and jumped after hours, but AI chip stocks sit in many retirement funds. Watch ISM Services at 10 AM, and the jobs report Friday. Not financial advice. Follow for tomorrow's brief.
+Democrats just won control of both chambers of Congress, and that matters for your money. Here is what happened and what could come next. Congress now has more say over spending and war policy. Oil is the key link. Brent fell to about $93 a barrel today, its lowest in about two months, after Trump said the US has no immediate plans to strike Iran. Gas prices and inflation follow oil. The Bank of England decides on rates at 7 AM, with a hike to 4 percent forecast. In crypto, bitcoin is back above $80,000, but spot bitcoin ETFs still lost about $1.16 billion over three sessions, so the rally may not hold. Not financial advice. Follow for tomorrow's brief.
 ```
 </details>
 
-**Coming up:** Today's close: ISM Services PMI at 10:00 AM (forecast 54.9) is the only scheduled event on today's calendar.
+**Coming up:** No US data is scheduled after the 8:30 AM jobless claims today; the next event is Friday's 8:30 AM payrolls report.
 
 ## Topics covered, last 14 days
 
@@ -157,6 +88,7 @@ Oil could hit your wallet today. Here's why. US officials say they carried out l
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Thu Nov 05](reports/x-posts/2026-11-05.md) | ✅ | ✅ | ✅ | ✅ | — | Democrats win both chambers of Congress and oil falls to a two-month low |
 | [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Qeshm Island and the Strait of Hormuz standoff |
 | [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and Bitcoin below $77,000 |
 | [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
@@ -174,13 +106,13 @@ Oil could hit your wallet today. Here's why. US officials say they carried out l
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Thu 29 | Fri 30 | Sat 31 | Sun 01 | Mon 02 | Tue 03 | Wed 04 |
+| Brief | Fri 30 | Sat 31 | Sun 01 | Mon 02 | Tue 03 | Wed 04 | Thu 05 |
 |---|---|---|---|---|---|---|---|
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Stocks | · | ✅ | · | · | ✅ | · | ✅ |
+| Stocks | ✅ | · | · | ✅ | · | ✅ | · |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | ✅ |
-| Gold futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | · |
+| Gold futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
 

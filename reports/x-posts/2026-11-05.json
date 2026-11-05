@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-05",
+  "written": "2026-11-05 04:54",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-05-world-brief.md (Thu Nov 05, today)",
+    "Stocks: reports/stocks/2026-11-04-stock-brief.md (Wed Nov 04, NOT today)",
+    "Crypto: reports/crypto/2026-11-05-crypto-brief.md (Thu Nov 05, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-04-nasdaq-brief.md (Wed Nov 04, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-04-gold-brief.md (Wed Nov 04, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 5 ☀️\n\nDemocrats won both chambers of Congress, and oil is sliding as Iran strike talk continues.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Democrats won both chambers of Congress. Trump said the US has no immediate plans to strike Iran.\n\nWhy it matters: more say over war and spending can move oil and gas prices.\n\nNext: if Iran talks stall, oil could climb again."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: BOE decides at 7:00 AM. A hike to 4.00% is forecast, up from 3.75%.\n\nWhy it matters: rates shape the pound, and jobs data feeds Fed bets on your mortgage.\n\nNext: watch Friday's US payrolls at 8:30 AM for Fed rate bets."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: AMD beat estimates after Tuesday's close, with EPS of $2.09 vs about $1.94 expected.\n\nWhy it matters: AI-chip swings can move index funds and retirement accounts.\n\nNext: CRWV reports Nov 10, and its large 5-day swings mean earnings risk."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin is back above $80K ($80,304) after a midterm swing.\n\nWhy it matters: spot BTC ETFs lost about $1.16B over three sessions, so the rally may not hold.\n\nNext: if the Democrats' draft bill advances, watch oversight shift toward the SEC."
+    }
+  ],
+  "reply_thread": "Sources: Irish Times, Gulf News, NBC News, Reuters, Morningstar, SEC, CFTC, Yahoo Finance consensus, CryptoBase, CoinGecko live data",
+  "midday": {
+    "story": "Democrats win both chambers of Congress and oil falls to a two-month low",
+    "post": "Democrats now control both chambers of Congress. Why this matters for your wallet: spending and war policy shape oil, gasoline and inflation. Brent fell to about $93 a barrel on Thursday, its lowest in about two months. If Iran talks stall, oil could rise again."
+  },
+  "reply_midday": "Sources: Irish Times, Gulf News, NBC News",
+  "close_watch": "No US data is scheduled after the 8:30 AM jobless claims today; the next event is Friday's 8:30 AM payrolls report.",
+  "video": {
+    "script": "Democrats just won control of both chambers of Congress, and that matters for your money. Here is what happened and what could come next. Congress now has more say over spending and war policy. Oil is the key link. Brent fell to about $93 a barrel today, its lowest in about two months, after Trump said the US has no immediate plans to strike Iran. Gas prices and inflation follow oil. The Bank of England decides on rates at 7 AM, with a hike to 4 percent forecast. In crypto, bitcoin is back above $80,000, but spot bitcoin ETFs still lost about $1.16 billion over three sessions, so the rally may not hold. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Democrats win Congress",
+      "Brent near $93, 2-month low",
+      "BOE decision at 7:00 AM",
+      "Bitcoin back above $80K",
+      "ETFs lost $1.16B in 3 sessions",
+      "Not financial advice"
+    ]
+  }
+}
