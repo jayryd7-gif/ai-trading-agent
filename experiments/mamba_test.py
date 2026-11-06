@@ -34,21 +34,21 @@ OPENS = {"nasdaq": (9, 30), "gold": (20, 0)}
 
 
 def trade(candles, i, d, stop, target_r, pv):
-    """Play a trade entered at candles[i]'s close. Returns dollars."""
+    """Play a trade entered at candles[i]'s close. Returns (dollars, exit time)."""
     entry = candles[i][1].close
     risk = abs(entry - stop)
     target = entry + d * target_r * risk
     for t, c in candles[i + 1:]:
         if (c.low <= stop) if d == 1 else (c.high >= stop):
-            return -risk * pv * CONTRACTS - FEE * CONTRACTS
+            return -risk * pv * CONTRACTS - FEE * CONTRACTS, t
         if (c.high >= target) if d == 1 else (c.low <= target):
-            return target_r * risk * pv * CONTRACTS - FEE * CONTRACTS
+            return target_r * risk * pv * CONTRACTS - FEE * CONTRACTS, t
     last = candles[-1][1].close
-    return d * (last - entry) * pv * CONTRACTS - FEE * CONTRACTS
+    return d * (last - entry) * pv * CONTRACTS - FEE * CONTRACTS, candles[-1][0]
 
 
 def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
-          target_r=1.0, stop_mode="structure", room=0.0, open_at=None):
+          target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1):
     ev = R.timeline(data[instrument])
     last = ev[-1][0]
     first = (last - timedelta(days=days)).date()
@@ -67,8 +67,11 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
         # candles from the window start to 8 hours after the open (for exits)
         cs = [(t, c) for t, c in ev if lo - timedelta(minutes=5 * lookback) <= t
               <= start + timedelta(hours=8)]
+        taken, busy_until = 0, None
         for i in range(lookback, len(cs)):
             t, c = cs[i]
+            if busy_until is not None and t <= busy_until:
+                continue
             if t < lo:
                 continue
             if t >= hi:
@@ -86,8 +89,12 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
                 stop = (bottom if d == 1 else top) - d * room
             else:                                   # the breakout candle's far end
                 stop = (c.low if d == 1 else c.high) - d * room
-            results.append(trade(cs, i, d, stop, target_r, pv))
-            break
+            net, out_at = trade(cs, i, d, stop, target_r, pv)
+            results.append(net)
+            taken += 1
+            if taken >= max_trades or net > 0:
+                break             # a win ends the day; a loss allows another try
+            busy_until = out_at
     return results
 
 

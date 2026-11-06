@@ -407,8 +407,10 @@ def tradeify_section(rows):
            f"daily loss limit ${r['daily_loss_limit']:,} ends the day. Funded: a payout needs "
            f"${r['payout_balance']:,}, {r['payout_days']} days over ${r['payout_day_min']}, and "
            f"the biggest day at most {r['consistency']:.0%} of the profit. The bot sizes every "
-           f"trade so its stop cannot break a rule, and stops for the day once up "
-           f"${TradeifyAccount.PROFIT_CAP:,}. Check Tradeify's current rules before relying on this.", ""]
+           f"trade so its stop cannot break a rule"
+           + (f", and stops for the day once up ${TradeifyAccount.PROFIT_CAP:,}"
+              if TradeifyAccount.PROFIT_CAP else " (no daily profit cap)")
+           + ". Check Tradeify's current rules before relying on this.", ""]
     if current is not None:
         cushion = current["balance"] - (current["peak_eod"] - r["drawdown"]
                                         if not (current["phase"] == "Funded"

@@ -70,6 +70,9 @@ ENTRY_MAX_WICK = None
 # Stop this many points past the two candles' far end, for leeway when price
 # comes back to retest the low (0 = at the low exactly).
 STOP_BUFFER = {"nasdaq": 0, "gold": 0}
+# Which confirmed-breakout candles set the stop: "both" (the far end of the two
+# candles) or "second" (only the buy candle, tighter after a huge first candle).
+STOP_CANDLES = "both"
 
 # Wait for a second candle to close beyond the level before entering.
 # Tested in experiments/gold_variations.py.
@@ -367,8 +370,9 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
                     continue  # closed well off its best price: a rejection
             index += 1
             entry = round(second.close, 2)
-            stop = round((min(candle.low, second.low) if direction == "long"
-                          else max(candle.high, second.high)) - d * STOP_BUFFER[instrument], 2)
+            far = (second.low if direction == "long" else second.high) if STOP_CANDLES == "second" \
+                else (min(candle.low, second.low) if direction == "long" else max(candle.high, second.high))
+            stop = round(far - d * STOP_BUFFER[instrument], 2)
         if is_early and not clear_breakout(instrument, session, index, direction,
                                            high if direction == "long" else low):
             continue  # not clear enough to go before the open

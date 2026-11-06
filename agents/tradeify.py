@@ -155,7 +155,7 @@ class TradeifyAccount:
     """
 
     BUFFER = 100
-    PROFIT_CAP = 600
+    PROFIT_CAP = None   # was 600; off since 2026-11-05 (the user wants the full paper results)
     RESET_BELOW = 400   # evaluation this close to its floor: reset it (no trade fits)
 
     def __init__(self, rules=RULES):
