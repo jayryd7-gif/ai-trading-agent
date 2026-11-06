@@ -1,14 +1,14 @@
 # 👔 CEO check
 
-*Checked 2026-11-05 20:46 New York time. Plain code, no AI.*
+*Checked 2026-11-06 06:56 New York time. Plain code, no AI.*
 
-**❌ 2 broken rule(s)**: 8 passed, 0 warnings, 2 broken rules.
+**❌ 2 broken rule(s)**: 9 passed, 0 warnings, 2 broken rules.
 
 ### Futures paper trader
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $1,997 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $2,652 above the $2,000 trailing drawdown floor.
 
 ### Your trade journal
 
@@ -25,7 +25,7 @@
 
 ### Costs
 
-- ✅ Spent $3.37 so far this month on 31 AI runs; on pace for about $20 (budget $50).
+- ✅ Spent $3.96 so far this month on 35 AI runs; on pace for about $20 (budget $50).
 
 ### Agent health
 
@@ -33,11 +33,11 @@
 
 ### Ready to run on its own?
 
-- ⏳ 14 of 15 trading days on the paper record
+- ✅ 15 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.72 (needs 1.3 or more), total $-1,364 over 17 trades
+- ⏳ profit factor 0.85 (needs 1.3 or more), total $-708 over 18 trades
 - ✅ worst trading day $-1,071 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
