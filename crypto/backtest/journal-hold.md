@@ -24,9 +24,9 @@ Every trade, oldest first. No real money.
 ## Total
 
 - **Started with:** $1,000.00
-- **Value on 2026-11-04:** $3,123.85
-- **Total profit / loss:** **$2,123.85 (+212.4%)**
+- **Value on 2026-11-05:** $2,926.74
+- **Total profit / loss:** **$1,926.74 (+192.7%)**
   - From coins already sold: $0.00 (0 of 0 sells made money)
-  - On coins still held: $2,123.85
+  - On coins still held: $1,926.74
 - **Fees paid (included above):** $4.00
 - **Trades:** 3 buys, 0 sells
