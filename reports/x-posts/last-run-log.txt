@@ -1,1 +1,5 @@
-Tonight's evening thread is already written, so this run does nothing.
+Shortened 5 post(s) that were over the limit.
+Saved reports/x-posts/2026-11-06.md
+Tokens used: 16997 in, 9611 out
+Estimated cost: $0.0065
+Wrote X-DASHBOARD.md

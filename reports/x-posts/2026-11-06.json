@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-06",
+  "written": "2026-11-06 04:55",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-06-world-brief.md (Fri Nov 06, today)",
+    "Stocks: reports/stocks/2026-11-06-stock-brief.md (Fri Nov 06, today)",
+    "Crypto: reports/crypto/2026-11-06-crypto-brief.md (Fri Nov 06, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-05-nasdaq-brief.md (Thu Nov 05, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-05-gold-brief.md (Thu Nov 05, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 6 ☀️\n\nUS jobs data lands at 8:30 AM, Trump's Iran decision is still open, and chip stocks had a brutal Thursday.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Trump will decide whether to resume all-out war in Iran. Options: strikes, more pressure, or a deal. Why it matters: energy costs feed inflation; oil fell about 9% Wednesday. Next: strikes lift fuel costs; a deal eases them."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: Jobs report due 8:30 AM. Payrolls forecast 63K, unemployment 4.2%. September CPI rose 3.7% y/y, above the 3.6% expected. Why: hot data could keep Fed hike odds alive, pricier loans. Next: wages beat 0.3% forecast; yields may rise."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Thu: Philadelphia semiconductor index fell 12.3%, worst day since March 2020. Nasdaq 100 dropped 6.3%, S&P 500 4.4%. Why: index funds and 401(k)s holding big tech can swing fast. Next: watch Asian selling at US open. Not financial advice."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin fell to ~$75,650 Friday after Nasdaq's biggest drop since April 2025. $1.25B in mostly long positions liquidated. Why: crypto trades like tech. Next: watch crypto follow tech. Crypto bill stalled since Sept. 15. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Axios, Investing.com, Yahoo Finance, CNBC, Crypto Times, CoinGlass via crypto.news, CoinGecko live data. Not advice.",
+  "midday": {
+    "story": "Chip rout: Philadelphia semiconductor index down 12.3% on Thursday",
+    "post": "Chip rout: Philadelphia semiconductor index fell 12.3% Thursday, worst day since March 2020. Why: retirement accounts and index funds hold these AI names, so drops hit savings fast. Next: watch if AI policy fears persist."
+  },
+  "reply_midday": "Sources: CNBC, Yahoo Finance, live market data cited in our stock research brief. Educational only, not advice.",
+  "close_watch": "Watch the 8:30 AM US jobs report (payrolls forecast 63K) and 10:00 AM consumer sentiment as the day's scheduled risks into the close.",
+  "video": {
+    "script": "Your portfolio took a hit Thursday. The Philadelphia semiconductor index fell 12.3%, its worst day since March 2020. Tech sold off, and crypto followed, with Bitcoin near $75,650. Today at 8:30 AM, the US jobs report lands, with payrolls forecast at 63K. A hot number could keep Fed rate-hike odds alive, which means higher loan costs. Trump also says he will soon decide whether to resume war in Iran. Oil swings feed into the prices you pay. If strikes resume, watch fuel costs. Check how much AI stock you hold before you react. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Chip stocks: -12.3% Thu",
+      "Jobs report: 8:30 AM",
+      "Payrolls forecast: 63K",
+      "Bitcoin about $75,650",
+      "Iran decision pending"
+    ]
+  }
+}
