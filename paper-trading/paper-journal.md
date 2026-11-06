@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ✅ 2026-11-06 | Gold (MGC) | Short | $655
+- **Session start (New York):** 2026-11-05 20:00
+- **Why:** two 5-minute candles closed beyond the key low (4080.4)
+- **Entry:** Sold short **5 contracts** at **4072.7** at **20:45** (sell plan 1/2/2)
+- **Stop:** 4085.0
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 20:55 | Target 1 | 1 | 4066.7 | $60 |
+| 22:05 | Target 2 | 2 | 4060.7 | $240 |
+| 22:30 | Target 3 | 2 | 4054.7 | $360 |
+
+- **Exit:** last contract out at **22:30**, average 4059.5
+- **Result:** $660 before fees, **$655 after fees**
+- **What could have gone better:**
+  - Price kept going 6.30 points past Target 3 (by 23:05). Letting the last 2 contract(s) run with a trailing stop could have made up to $126 more.
+  - Biggest move against you while in the trade: 10.40 points ($520 on paper). Best move for you: 19.00 points.
+
+![Chart of this trade](charts/2026-11-05-gold.svg)
+
+[Open Gold (MGC) on TradingView](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ✅ 2026-11-05 | Gold (MGC) | Long | $655
 - **Session start (New York):** 2026-11-04 20:00
 - **Why:** two 5-minute candles closed beyond the key high (4106.4)
@@ -417,8 +441,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$1,364** over 17 trades
-- **Winners:** 7 (41%), **losers:** 10
-- **Before fees:** -$1,284, fees paid: $79
+- **Total profit / loss after fees:** **-$708** over 18 trades
+- **Winners:** 8 (44%), **losers:** 10
+- **Before fees:** -$624, fees paid: $84
 - **Nasdaq (MNQ):** -$1,716 over 8 trades
-- **Gold (MGC):** $353 over 9 trades
+- **Gold (MGC):** $1,008 over 10 trades
