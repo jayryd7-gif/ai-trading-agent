@@ -1,16 +1,89 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-06 04:55 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-06 18:06 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-06.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.053 (11 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.056 (12 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Friday Nov 06)
+## 🌙 Tonight's thread, ready to copy (Friday Nov 06)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (177/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 6 🌙
+
+U.S. jobs grew more than expected, tech stocks rebounded, and Bitcoin sat near $75,790.
+
+What happened today and what to watch Saturday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (252/280)
+```text
+2/ Politics & world: Trump said Susie Wiles is out as chief of staff. Stephen Miller will replace her (ABC13).
+
+Why it matters: White House shifts can change policy that hits prices and rates.
+
+Tomorrow: No events listed. Watch Iran news for oil moves.
+```
+
+**Post 3 of 5 · 💵 Economy** (228/280)
+```text
+3/ Economy: U.S. added 165,000 jobs in October, showing surprising strength (WaPo).
+
+Why it matters: Strong jobs can keep Fed hike talk alive, meaning pricier loans.
+
+Tomorrow: No data listed. Watch whether the Fed debate cools.
+```
+
+**Post 4 of 5 · 📈 Stocks** (258/280)
+```text
+4/ Stocks: Nasdaq rebounded after its worst selloff in 19 months. It rose 1.1%, while the Dow fell 0.5%.
+
+Why it matters: Index funds and 401(k)s hold big tech, so swings hit savings.
+
+Tomorrow: Watch whether chip stocks keep rebounding from Thursday's rout.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (242/280)
+```text
+5/ Crypto: Bitcoin near $75,790, down 0.2%. Ether $2,233.88, Solana $89.95.
+
+Why it matters: Crypto often trades like tech, so a tech swing can reach your coins.
+
+Tomorrow: Watch whether crypto follows the tech rebound.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(187/280)
+```text
+Sources: ABC13, WaPo, Reuters (politics, jobs); Santa Clarita Valley Signal (stocks); Yahoo Finance (prices); CoinGecko, Cryptonews (crypto).
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,374.85 (+0.3% vs the last close)
+Nasdaq: 24,573.21 (+1.1% vs the last close)
+Dow: 51,271.58 (-0.5% vs the last close)
+10-yr yield: 4.86% (+0.02 pts vs the last close)
+Oil (WTI): 90.34 (-0.2% vs the last close)
+Gold: 4,079.50 (-0.8% vs the last close)
+Bitcoin: 75,790.93 (-0.2% vs the last close)
+Ether: 2,233.88 (-0.0% vs the last close)
+Solana: 89.95 (+0.9% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Friday Nov 06)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -72,7 +145,7 @@ Your portfolio took a hit Thursday. The Philadelphia semiconductor index fell 12
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Fri Nov 06](reports/x-posts/2026-11-06.md) | ✅ | ✅ | ✅ | ✅ | — | Chip rout: Philadelphia semiconductor index down 12.3% on Thursday |
+| [Fri Nov 06](reports/x-posts/2026-11-06.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Chip rout: Philadelphia semiconductor index down 12.3% on Thursday |
 | [Thu Nov 05](reports/x-posts/2026-11-05.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Democrats win both chambers of Congress and oil falls to a two-month low |
 | [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Qeshm Island and the Strait of Hormuz standoff |
 | [Tue Nov 03](reports/x-posts/2026-11-03.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and Bitcoin below $77,000 |
@@ -96,7 +169,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | · | ✅ | · | ✅ | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
