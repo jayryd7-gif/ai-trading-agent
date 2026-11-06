@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-06 06:56 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-06 07:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-06 06:56 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -471,67 +471,77 @@ I found no new government deals or export limits this week.
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-05</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-06</b></summary>
 
-### Nasdaq 100 futures brief for Thursday, Nov 5, 2026
+#### Price data used
 
-#### 1. What is driving futures
-- **Chip and AI selling.** Nasdaq futures dropped as chip and data center stocks stayed under pressure, while S&P 500 contracts were little changed after Wednesday's election-driven surge. Investors are weighing what a Democratic midterm win means for AI regulation.
-- **Weak chip earnings.** One report ties the drop to weak Arm and Qualcomm earnings and AI rule worries.
-- **Rotation, not a broad selloff.** The Dow was poised for more gains after its big postelection rally as investors rotated away from key tech stocks. Most large-cap tech stocks built on gains from the last session, because a slower AI buildout was seen as helping them.
-- **Overnight bounce.** The price data shows an overnight low of 28167.75 and a bounce from there. The latest price is 28325.25.
+```
+PRICE DATA (Nasdaq 100 futures, Yahoo Finance, New York time, may be delayed)
+Latest price: 27183.50 at 2026-11-06 07:40
+Previous New York session (2026-11-05 09:30 to 16:00): high 28228.25, low 26718.00, close 26746.25, volume 987,095
+Highest high of the last 5 New York sessions: 29562.00
+Lowest low of the last 5 New York sessions: 26718.00
+Since that session closed: high 27251.50, low 26366.50.
+Latest price is INSIDE the previous range (1044.75 below the high, 465.50 above the low).
+Volume: the previous session traded 1.74x the average of the 5 session(s) before it.
+```
 
-#### 2. Scheduled events (New York time)
-- **8:30 AM:** Weekly jobless claims. The forecast is 196k, against a prior 194k. Q3 productivity and unit labor costs also come out at 8:30 AM.
-- **8:50 AM:** Fed's Hammack speaks. He preferred a rate hike at the October FOMC meeting.
-- **9:10 AM:** Fed's Barkin speaks in a moderated Q&A.
-- **9:30 AM:** The New York session opens.
-- **7:00 PM:** Fed's Logan speaks, after the Nasdaq session ends.
-- **Friday 8:30 AM:** October payrolls. Consensus is 65k, with a prior of 29k.
-- **Earnings:** I could not confirm any major earnings report scheduled during today's session.
+**Nasdaq 100 futures brief for Friday, Nov 6, 2026 (New York session)**
 
-#### 3. Key levels (from the price data)
-- Previous session high: **28969.00**
-- Previous session low: **28405.00**
-- Previous close: 28567.25
-- Overnight high: 28649.75
-- Overnight low: 28167.75
-- 5-session low: 28101.75
-- 5-session high: 29677.00
+**1. What is driving the market**
+- Nasdaq futures rose Friday as chip stocks gained. A tech-led rout had wiped nearly $3 trillion off S&P 500 market value on fears that Democratic control of Congress could mean tougher AI regulation.
+- The Nasdaq 100 fell 6.4% on Thursday, well into correction territory.
+- Nvidia was up 3.6% in premarket trading after its biggest one-day fall since January 2025.
+- A Jefferies strategist called the selloff "reactionary, not a fundamental reset." That is one opinion.
+- Rates matter too. Reuters said traders priced a more than 65% chance of a December hike. Another source said fading December Fed hike bets. These conflict, and I could not reconcile them.
 
-The latest price of 28325.25 is **below the previous session low by 79.75**. It is not sitting at resistance. The 28405.00 low was broken and may now act as resistance. The closest support is the overnight low of 28167.75, then the 5-session low of 28101.75. Price is closer to these lows than to any high.
+**2. Scheduled events (New York time)**
+- **4:30 AM:** NY Fed President Williams joined the ECB's Lane for a discussion in Frankfurt. This is already done.
+- **8:30 AM:** October jobs report. Economists expect 59,000 new jobs and unemployment at 4.2%. Other sources show forecasts of 63,000 to 70,000. Average hourly earnings are expected at 0.3% month on month.
+- **9:10 AM:** St. Louis Fed's Musalem speaks.
+- **12:15 PM:** Fed Vice Chair for Supervision Bowman speaks on supervision and regulation.
+- **Michigan sentiment:** A preliminary November University of Michigan reading is due. I could not verify the time.
+- **Earnings:** I found no major market-moving earnings after the close. Charter, Humana, Vistra and Moderna report before the open.
 
-#### 4. Volume
-The previous session traded 1.13x the average of the five sessions before it. That is slightly above average. It suggests normal-to-modest participation, not a strong surge. The selling was not a high-conviction panic, but it was not light either.
+**3. Key levels (from the price data)**
+- Previous session high: 28,228.25
+- Previous session low: 26,718.00
+- Previous session close: 26,746.25
+- Overnight range since the close: low 26,366.50, high 27,251.50
+- Highest high of the last 5 sessions: 29,562.00
+- Lowest low of the last 5 sessions: 26,718.00 (same as the previous session low)
 
-#### 5. Directional lean
-**Bias: Bearish. Confidence: Low.**
+The latest price is 27,183.50. It is inside the previous range, 1,044.75 below the high and 465.50 above the low. It is closer to the low (support) than the high (resistance). It is also near the top of the overnight range, so it is not clearly at either one.
 
-Price is below the previous session low. The news flow (chip weakness, AI regulation worries) points the same way. Volume is only slightly above average, so it does not add much conviction. The signals are not fully aligned. Price has bounced off the overnight low. Large-cap tech is holding up, and money is rotating within the market, not leaving it. This is a probability-based lean, not a prediction or a trade instruction.
+**4. Volume**
+The previous session traded 987,095 contracts, which was 1.74x the average of the five sessions before it. That is strong participation, but it came on a heavy selling day. It shows many traders are active and moves may carry through. It does not show which way the next move goes.
 
-**What would change the lean:**
-- Price reclaiming 28405.00 and holding it would move me toward Neutral.
-- Chip stocks stabilizing would also move me toward Neutral.
-- A break below the overnight low (28167.75) or the 5-session low (28101.75) on rising volume would raise confidence in the bearish view.
+**5. Directional lean: Neutral, Confidence: Low**
+Price has bounced about 437 points above Thursday's close, which is a bullish sign. But it is still far below the previous high and sits inside a range set during a big selloff. Volume was heavy on that selloff day. The news is mixed: dip-buying in chips against AI-regulation worries and rate-hike uncertainty. The 8:30 AM jobs report can swing the market either way. Because these signals conflict, I stay Neutral.
 
-#### 6. Event risk
-**Medium.** Claims data and two Fed speakers fall before or near the open. Friday's payrolls could also keep traders cautious, and a hot payrolls print would test the market's rate view quickly.
+I would lean Bullish if price holds above the overnight high of 27,251.50 after the jobs report, with solid volume. I would lean Bearish if price breaks below the previous session low of 26,718.00 and stays there. This is a probability-based lean, not a prediction or a trade instruction.
 
-#### 7. Sources
-- Investing.com, including its Reuters report
+**6. Event risk: High**
+The jobs report lands one hour before the open, after a historic selloff, with Fed speakers and unsettled rate-hike expectations on top. The VVIX jumped 49.3% to 134.99 on Thursday. That was its biggest one-day percentage gain since February 2007.
+
+**7. Sources**
 - CNBC
-- Yahoo Finance
-- TradingView/Benzinga
-- CoinCentral
-- Seeking Alpha
+- Investing.com (Reuters)
+- TradingView / Seeking Alpha
+- Stocktwits
+- TheStreet
+- Kiplinger
 - Trading Economics
-- FinancialJuice
-- TraderFactor
-- NEXUS morning note
+- Market Daily
+- Stock Titan
+- Moneta Markets
+- Substack macro notes
 
-BIAS: Bearish | CONFIDENCE: Low
+I could not verify the Michigan release time. I also could not verify which December hike probability is correct.
 
-[Open the file](reports/2026-11-05-nasdaq-brief.md)
+BIAS: Neutral | CONFIDENCE: Low
+
+[Open the file](reports/2026-11-06-nasdaq-brief.md)
 
 </details>
 
@@ -590,7 +600,7 @@ BIAS: Neutral | CONFIDENCE: Low
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-05 07:54 | ▼ Bearish | Low | Medium | 28325.25 | [read it](reports/2026-11-05-nasdaq-brief.md) |
+| nasdaq | 2026-11-06 07:50 | ◆ Neutral | Low | High | 27183.50 | [read it](reports/2026-11-06-nasdaq-brief.md) |
 | gold | 2026-11-05 18:36 | ◆ Neutral | Low | Medium | 4096.60 | [read it](reports/2026-11-05-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
