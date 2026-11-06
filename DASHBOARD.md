@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-06 03:50 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-06 04:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,10 +17,10 @@ Last updated 2026-11-06 03:50 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -347,61 +347,63 @@ High - US and Canadian jobs data hit at 8:30 AM, BOJ Governor Ueda speaks at 11:
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-05</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-06</b></summary>
 
 #### Top things today
-1. **Bitcoin is back above $80K after a midterm swing.** BTC fell to about $75,600 around 10 PM ET Tuesday as results came in, then jumped past $80,000 at the Wall Street open. Shorts lost $378M in one hour. Why it matters: the move looks like a squeeze, so it may not hold.
-2. **Spot bitcoin ETFs are still losing money.** About $1.16B left US spot BTC ETFs over three sessions (Oct 30, Nov 2, Nov 3). Ether funds have a seven-day outflow streak. (CryptoBase) Why it matters: price is rising against fund selling.
-3. **Trump Media moved about $344M of BTC to Crypto.com.** The coins left two wallets Arkham labels "2028 Convertible Notes Collateral." The data does not say why they moved. (Lookonchain, Arkham) Why it matters: it is a large transfer to an exchange with no stated reason.
-4. **Democrats are drafting their own market structure bill.** The bill would build on Maxine Waters' investor-protection amendment, with a bigger SEC role and a smaller CFTC role. (Bitcoin Magazine) Why it matters: it would shift oversight away from the CFTC, which the House-passed bill favors.
-5. **Alts are rallying with no clear news.** ETH is up 4.2% and the top gainers are up 9–29%. I found no specific catalysts for most of them. Why it matters: moves without news tend to fade faster.
+
+1. **Crypto sold off with US tech stocks.** Bitcoin fell to about $75,650 on Friday, Nov. 6, after the Nasdaq's biggest one-day drop since April 2025. The Nasdaq fell 5.52% and the S&P 500 fell 4.36% as investors questioned AI valuations. (Crypto Times, Analytics Insight) Why it matters: crypto is trading as a risk asset tied to tech.
+2. **About $1.25B in positions were liquidated, mostly longs.** Longs were nearly 89% of the total. Totals differ by source and time window; others reported about $1.07–1.09B. (Crypto Times, CoinGlass via crypto.news) Why it matters: leverage was flushed, but the figure depends on the window.
+3. **Support levels are in focus.** Wintermute named $73,000 and $68,000 as possible downside levels. It said a sustained move above $80,000 would show renewed strength. (Bitbase/CoinDesk) Why it matters: these are the levels traders are watching.
+4. **Spot Bitcoin ETF outflows are large, but sources disagree.** Crypto Times reports $430 million in US spot Bitcoin ETF outflows. Bitbase reports roughly $1 billion in outflows after the Binance hack, with about $900 million from BlackRock's IBIT. I could not reconcile the two figures (unconfirmed). Why it matters: it shows institutional demand weakening.
+5. **The US crypto market structure bill is stalled, and the new Congress is a risk.** The Senate voted 49-50 on Sept. 15 against starting consideration, short of the 60 votes needed. Democrats have won Congress. (crypto.news) Why it matters: the bill's timeline is uncertain.
 
 #### Coins to research
+
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Cap (CAP) | +29.1% | No news found. Volume of $68.4M against a $150.2M market cap is high. | Pump with no news. Small market cap. |
-| Fluid (FLUID) | +20.6% (7d +28.0%) | No news found. It is up for the week too. | Pump with no news. Small cap ($220.5M). |
-| Pearl (PEARL) | +13.5% | No news found. It is trending on CoinGecko. | Pump with no news. Down 7.8% on the week. Volume is only about 2% of its cap. |
-| Injective (INJ) | +8.9% | The broad rally is the likely cause. I found no fresh news from today. Older coverage cited burns and USDC integration. | Moves with the market. Not confirmed as news-driven. |
-| Janction (JCT) | +44.1% | No news found. It is trending on CoinGecko. | Rank 346 (small). Huge move with no news. Volume and holders not checked. |
-| Pieverse (PIEVERSE) | +11.1% (7d +29.5%) | No news found. | Team and investor 12-month lockup ends Nov 14. Low volume ($8.0M on a $348.8M cap). |
+| Akedo (AKE) | +78.8% (trending +85.7%) | I found no news for today's jump. Earlier coverage tied rallies to Binance Alpha exposure, short squeezes and one large leveraged long (CoinDesk-style aggregator posts). | 7d is -73.5%. Pump with no news found. A 2.11B-token unlock occurred on Oct. 21. Only 22.8% of supply circulates. An earlier on-chain review flagged wash trading at 92.2% of transfer volume. That review is from September. |
+| DENIM (DENIM) | +46.8% | No news found. | Rank 905, very small. Trending-list pump with no news. |
+| Pieverse (PIEVERSE) | +11.0% | No news found. Up 41.3% over 7 days. | Pump with no news found. Market cap $387.8M against $21.0M volume. |
+| Cap (CAP) | +8.0% | No news found. Up 28.5% over 7 days. | Pump with no news found. |
+| Bitway (BTW) | +7.2% | No news found. | 7d -24.9%. Volume is only $5.4M on a $1.7B market cap, which is thin. |
+| Infinity Ground (AIN) | -64.0% | Not a gainer. It is trending after a crash. No news found. | Rank 840. Very large drop. |
+
+Gains are mostly small against a falling market. Several "gainers" are stablecoins or illiquid tokens, such as USDF, HASH and BTSE, so they carry little signal.
 
 #### Whale watch
+
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| About 9:17 PM ET Nov 4 | BTC (4,259) | About $342–344M | Trump Media (Arkham says about $342M, Lookonchain says $343.67M) | Onto an exchange (Crypto.com) |
+| Nov 6 | BTC (1,286 BTC) | ~$98M | A whale dormant for over a year (Lookonchain) | Off an exchange (Binance) |
+| Nov 6 | USDT | ~$77.8M | Unnamed (ChainCatcher feed) | Onto an exchange (Binance) |
+| Nov 4 | BTC (1,073 BTC) | ~$83M | Whale, per OnchainLens | Moved to a new wallet. Not an exchange flow. |
 
-Other flows I found were older or monthly totals, so I left them out.
+The USDT and Nov 4 rows are outside or at the edge of the last 24 hours, or lack detail. I could not confirm their timing (unconfirmed). Smaller: a UNI whale sent about 1 million UNI (~$7.3M) to Binance over two days (Lookonchain). That is under $10M.
 
 #### Government and regulation
-- **House Democrats' market structure bill (draft):** No text has been released. Details come from industry sources, not lawmakers. It could also limit Trump's own crypto activities. It is aimed at the next Congress (Bitcoin Magazine, CoinGape).
-- **CLARITY Act:** It passed the House in Q2 2026 and was still in the Senate as of October. One CoinGape headline refers to a CLARITY Act failure, so its status is unclear (unconfirmed).
-- **GENIUS Act:** It still takes effect January 18. (CryptoBase)
-- **CFTC:** About a month ago it proposed a federal licensing framework for leveraged crypto trading. The SEC approved six 3x leveraged BTC and ETH ETFs from Volatility Shares. (Finobird)
-- **Thailand:** The consultation on a Bitcoin ETF framework closed in September. A decision is pending.
-- Nothing else found for the last few days. I found no low-profile bills or amendments.
+
+- **CLARITY Act (market structure):** Stalled after the failed Sept. 15 Senate vote. The SEC and CFTC are pursuing separate rules under their existing authority. (crypto.news)
+- **Democratic bill idea:** House Democrats are discussing a bill that would give the SEC more power over trading platforms. No text exists yet. Republicans call it a messaging bill. Any bill still needs 60 Senate votes and Trump's signature. (BeInCrypto, citing Eleanor Terrett)
+- **Related Democratic ideas:** The plan revives rejected rules on 24-hour withdrawals and audited reserves. It would also likely tighten limits on Trump's crypto business.
+- **SEC:** Its 2026 actions include the Regulation Crypto Assets proposal (August), the Innovation Exemption (Sept. 17) and a custody proposal (Oct. 1). (Cryptonomist)
+- **CFTC:** A headline reports it proposed its first crypto rules after CLARITY failed. I did not see details (CoinGape headline).
+- **Other countries:** Nothing found.
 
 #### Who is buying and adopting
-- **Strategy:** It bought 811 BTC for $65.5M in the week ended Nov 1. It now holds 849,327 BTC. (Cryptonews)
-- **Whales:** Santiment says whale wallets added 60,000 BTC in October. (Invezz)
-- **HSBC:** Its Redcoin Hong Kong dollar stablecoin gained 50,000 users in its first week. (Bitcoin.com)
-- **RLUSD:** It expanded to new venues and is growing toward $2.6B in supply. (Crypt0snews)
-- **Payments:** In mid-October, Mastercard, Stripe and Visa each announced services that link stablecoins to normal payment systems. (CoinDesk)
-- No new government bitcoin purchases found.
+
+- **Super League Enterprise:** Bought 8 BTC between Oct. 28 and Nov. 1 at an average of about $78,532. That is small.
+- **Stripe:** US businesses can now send stablecoin payouts to crypto wallets in more than 160 markets. It is in public preview since early November. USDC payouts run on Arbitrum, Avalanche, Ethereum and others. (Crypto Briefing)
+- **Countries and governments:** Nothing found.
 
 #### Next 7 days
+
 | Date | Event | Coin or topic |
 |---|---|---|
-| Nov 6 | Team unlock. The scheduled maximum is not confirmed. About $15.8M is tracked as committed. Sources give very different dollar figures. | HYPE |
-| Nov 7 | About $25M unlock | STABLE |
-| Nov 8 | 1.67M tokens (about $14.5M), Foundation genesis unlock | AVAX |
-| Nov 11 | 204K tokens (about $19M), monthly stake lock ends | SOL |
-| Nov 11 | 160M ALLO cliff unlock | ALLO |
-| Nov 12 | 625M tokens (about $2.8M), monthly release | PUMP |
+| Dec 7 (outside the 7-day window) | SEC custody proposal comments due | SEC / custody |
 
-Unlock dates and dollar values vary by tracker. I found no hearings or ETF deadlines inside this window.
+Otherwise: No scheduled events found. Token unlocks and ETF deadlines were not covered by my searches. Check a unlock calendar for AKE, as its supply schedule is heavy.
 
-[Read the full brief with all the details](reports/crypto/2026-11-05-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-06-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
