@@ -1,6 +1,6 @@
 # Brief scorecard
 
-Updated 2026-11-06 06:25 New York time. Scored briefs: 22. Waiting to be scored: 0.
+Updated 2026-11-06 17:00 New York time. Scored briefs: 23. Waiting to be scored: 0.
 
 > **Too few directional calls to trust any of this yet.** There are 3 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
@@ -11,7 +11,7 @@ Updated 2026-11-06 06:25 New York time. Scored briefs: 22. Waiting to be scored:
 - Session ended flat (neither): 0
 - Hit rate when the session was decisive: **67%**
 
-For comparison: across all scored sessions, price went up in 50% of the decisive ones (10 of 20). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 48% of the decisive ones (10 of 21). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
@@ -31,12 +31,13 @@ For comparison: across all scored sessions, price went up in 50% of the decisive
 ## Neutral calls
 
 - Session stayed calm (flat): 2
-- Session moved up or down anyway: 17
+- Session moved up or down anyway: 18
 
 ## Most recent scored briefs
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-06 | nasdaq | Neutral | Low | 2026-11-06 09:30 | Down (-0.34%) | Moved |
 | 2026-11-05 | gold | Neutral | Low | 2026-11-05 20:00 | Down (-0.38%) | Moved |
 | 2026-11-05 | nasdaq | Bearish | Low | 2026-11-05 09:30 | Down (-5.16%) | Right |
 | 2026-11-04 | nasdaq | Neutral | Low | 2026-11-04 09:30 | Up (0.48%) | Moved |
@@ -51,4 +52,3 @@ For comparison: across all scored sessions, price went up in 50% of the decisive
 | 2026-10-23 | nasdaq | Neutral | Low | 2026-10-23 09:30 | Up (0.32%) | Moved |
 | 2026-10-22 | gold | Bearish | Medium | 2026-10-22 20:00 | Down (-0.31%) | Right |
 | 2026-10-21 | gold | Neutral | Low | 2026-10-21 20:00 | Down (-0.94%) | Moved |
-| 2026-10-21 | nasdaq | Neutral | Low | 2026-10-21 09:30 | Up (0.41%) | Moved |
