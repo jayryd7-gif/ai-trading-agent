@@ -5,8 +5,9 @@
 // orders anywhere.
 //
 // THE RULES (5-minute chart, New York time, Monday to Friday)
-// - Watch from "watchBefore" minutes before the 9:30 AM open until
-//   "watchAfter" minutes after it. Entries before 9:30 are allowed.
+// - Entries only from the 9:30 AM open (never before, the user's rule since
+//   2026-11-05) until "watchAfter" minutes after it (90 = 11:00 AM). The
+//   candles before 9:30 still count as structure.
 // - Structure: the high and low of the last 6 candles (30 minutes).
 // - Enter when a candle CLOSES above that high (long) or below that low
 //   (short), in the trade's direction (green for a long, red for a short),
@@ -27,8 +28,8 @@ contracts   = input.int(6, "Contracts per trade", minval = 1, maxval = 40)
 lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
 push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
 targetR     = input.float(1.0, "Target: this many times the risk", minval = 0.1, step = 0.1)
-watchBefore = input.int(60, "Watch from this many minutes before 9:30 (60 = 8:30 AM)", minval = 0)
-watchAfter  = input.int(60, "Until this many minutes after 9:30", minval = 5)
+watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = never before 9:30)", minval = 0)
+watchAfter  = input.int(90, "Until this many minutes after 9:30 (90 = 11:00 AM)", minval = 5)
 startFrom   = input.time(timestamp("2026-09-04T00:00:00-04:00"), "Count trades from (New York time)")
 showLines   = input.bool(true, "Draw the structure lines while watching")
 // ------------------------------------------
