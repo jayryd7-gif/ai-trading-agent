@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-06 04:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-06 04:36 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,11 +16,11 @@ Last updated 2026-11-06 04:15 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -408,70 +408,65 @@ Otherwise: No scheduled events found. Token unlocks and ETF deadlines were not c
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-04</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-06</b></summary>
 
 #### Top things today
-1. **Midterm results are hitting futures.** Early results pointed to Democrats winning the House, with the Senate leaning their way. Futures and the dollar fell. (Nordfx, Marketindex) Why it matters: investors fear tighter rules on AI and data centers.
-2. **AMD beat estimates and jumped after the close.** Adjusted EPS was $2.09 against about $1.94 expected, and revenue was $13.38B. Shares rose 7.5% after hours to $520.40 from the $483.90 close. (Investing.com) Why it matters: it could relieve the AI-chip selloff, since AMD fell 13.6% over 5 days.
-3. **Super Micro posted a big beat and raised guidance.** Revenue was $19.9B against $16.26B expected. It guided the next quarter above consensus. Shares rose about 6% after hours. (Investing.com) Why it matters: it is more evidence of AI server demand.
-4. **Apple fell on a memory-cost warning, and Palantir slipped after earnings.** Apple dropped about 2% after warning that rising memory-chip costs will squeeze holiday-quarter margins. (Prime Daily) Analysts focused on slower commercial contract value growth at Palantir. (Kiplinger) Why it matters: memory costs and software growth are both being watched closely.
-5. **Nuclear and mining stocks fell sharply over 5 days.** CCJ is down 12.0%, LEU 12.6%, USAR 16.2% and LAC 13.0%. Why it matters: ARM, ALB and LEU report today, and several others report this week.
+1. **Chip rout.** The Philadelphia semiconductor index fell 12.3%, its worst day since March 2020. The Nasdaq 100 dropped 6.3% and the S&P 500 fell 4.4%. Why it matters: it sets the tone for every AI-linked name today.
+2. **Trigger was politics plus AI worries.** Selling grew after Democrats won both the House and Senate, which raised fears of slower data center buildouts. Why it matters: the risk is policy, not weak earnings.
+3. **Asia is falling too.** South Korea's KOSPI fell more than 8% on Friday and tripped its first circuit breaker before paring losses. Why it matters: the selling is global and may carry into the US open.
+4. **AppLovin (APP) bucked the trend.** It rose 31.04% to $356.10 after a strong quarter and outlook. Why it matters: strong earnings still get rewarded in this tape.
+5. **Nuclear, uranium and rare earths fell with AI.** OKLO and SMR dropped 13–15%, and VST fell 6.2% (live data). Why it matters: these names trade as AI-power plays. OKLO and VST report today.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| AMD | AI chips | +3.7% (day), -13.6% (5 days) | Earnings beat and strong after-hours move | Fell 17% after one earlier beat; the stock has been volatile |
-| SMCI | AI servers | +3.1% (day) | Revenue beat and guidance far above consensus | Cash flow is a concern as it scales (Investing.com); stock is down 33.6% over 12 months |
-| CRWV | AI cloud | +7.2% (day), -9.8% (5 days) | Neoclouds rallied with the AI rebound (CNBC); earnings Nov 10 | Large 5-day swings; earnings risk |
-| ARM | AI chips | +2.9% (day), -10.6% (5 days) | Reports today; EPS estimate $0.48 | Earnings-day volatility |
-| LEU | Uranium and enrichment | +0.8% (day), -12.6% (5 days) | Reports today; EPS estimate -$0.13 | Loss-making; revenue estimate only $55.6M |
-| SPCX | New stock (SpaceX) | +3.6% (day) | Market cap $1.9T; heavy trading volume | I found no fresh catalyst for Tuesday's move. I could not verify the details of the earlier report. |
+| APP | AI/ad tech | +31.0% | Q3 EPS was $4.30 against a $4.04 consensus. Q4 revenue guidance was well above expectations. | Still down about 47% year to date. Gap risk after a big one-day move. |
+| MP | Rare earths | -6.0% (close) | Q3 revenue of $147.6M and adjusted EPS of $0.04 beat estimates. Shares were up 2.64% after hours. | Still loss-making. Government stake and possible congressional scrutiny weigh on sentiment. |
+| AMD | AI chips | -17.3% | The drop came days after a record quarter. Lisa Su expects 2027 revenue growth above 80%. | Down 28.6% in 5 days. Policy fears could keep pressure on. |
+| MU | Memory | -17.5% | The DRAM ETF sank almost 18%. | Down 29.7% in 5 days. Sector-wide selling, not company news. |
+| OKLO | Nuclear | -13.2% | Reports earnings today (live data). | Pre-revenue. Estimated revenue is only $1.1M. High volatility. |
+| VST | Nuclear/power | -6.2% | Reports earnings today. Estimates: EPS $3.08, revenue $6.0B (live data). | Down 19.9% in 5 days. |
 
-Other big movers had no news found, so treat them with caution. These were Aehr (AEHR), Fabrinet (FN), and the crypto-miner group (RIOT, CIFR, HUT, WULF, GLXY).
+I found no IPO or new-listing movers in my searches. SPCX (-9.0%, $1.7T market cap) is on the most-active list. I found no news on it.
 
 #### AI and tech
-- **AI trade rebounded.** The Nasdaq rose 0.8% and the S&P 500 rose 0.4% after a recent selloff over AI spending worries. (Kiplinger, Trading Economics) The Dow fell about 197 points.
-- **AMD's details.** Data center sales nearly doubled, and revenue rose 45%. (CNBC) Another report cites a roughly $17B forecast for next quarter. (Indmoney)
-- **Intel set the tone last week.** Intel fell 29% on Friday over weak guidance. That followed a record drop in Alphabet and weak Amazon results. (CNBC)
-- **Super Micro's guidance.** It guided fiscal 2027 revenue to $72B–$82B and said it has no current plans for an equity raise. (Investing.com)
+- **Nvidia and chips.** Nvidia and Qualcomm each fell more than 9%. Nvidia lost almost $450B in market value. (CNBC) Nvidia reports on Nov 17.
+- **Qualcomm guidance.** Qualcomm gave a weak forecast for the current quarter. Phone chip sales fell 26% and missed estimates. The stock closed 9.49% lower.
+- **Policy fear.** Traders worry a Democratic Congress and state officials could tighten AI rules and slow data center construction. (Yahoo Finance)
+- **Neoclouds.** CoreWeave and similar firms fell for a second day. CRWV reports Nov 10.
 
 #### Nuclear and critical minerals
-- **Metals stocks lagged the metals in October.** Freeport, Antofagasta and Southern Copper fell 11–16% while copper was still up about 15% for the year. Lithium fell 24% and SQM dropped 15.8% in October. (Thoughts for the Day newsletter, secondary source)
-- **Cameco and uranium.** Spot uranium rose 3.5% in October to $92.55/lb, yet Cameco shares fell 11.1%. (same newsletter)
-- **Asian trading Wednesday.** Uranium, rare earths, lithium and data center stocks bounced in Australia. (Marketindex)
-- **Government deals and export limits.** Nothing new found for today.
+- **Rare earths.** MP's quarter beat, and it finished GM magnet qualification, with saleable deliveries starting in Q4. (SEC filing)
+- **Uranium.** UEC's US Uranium unit signed long-term sales deals with two US nuclear utilities. (Mining Weekly) UEC still fell 9.9% on Thursday.
+- **Uranium M&A.** Eagle Nuclear Energy signed a binding letter of intent to buy Noble Plains Uranium in an all-stock deal. (Mining.com)
+- **Copper.** Resolution Copper approved a $144M investment in its next phase. (Mining Weekly) FCX and SCCO fell 7.5% and 6.5% on Thursday.
+
+I found no new government deals or export limits this week.
 
 #### Earnings
-**Results since yesterday:**
-- **AMD (after the close Tuesday):** EPS $2.09 vs about $1.94 expected. Revenue was $13.38B vs $13.06B. After-hours reaction was strongly positive. (Investing.com)
-- **SMCI (after the close Tuesday):** EPS $1.81 vs $1.23. Revenue was $19.9B vs $16.26B. Shares closed at $31.46 and rose about 6% after hours. (Investing.com)
-- **PLTR:** It fell 1.7% on Tuesday after reporting. I did not find estimate figures. (Kiplinger)
+**Results since yesterday**
+- **AppLovin (reported after the close Wednesday):** EPS of $4.30 beat the $4.03 consensus. Revenue of $2.18B beat the $2.07B estimate. The stock rose 31%.
+- **MP Materials (reported after the close Thursday):** Revenue of $147.66M beat the $117.47M estimate. EPS of $0.04 beat a $0.02 loss estimate. Shares were up modestly after hours.
+- **Qualcomm:** the forecast disappointed, and the stock fell 9.49%.
 
-**Watchlist earnings:**
+**Watchlist calendar** (Yahoo Finance consensus). Timing is not confirmed in my data, so I've marked it unconfirmed.
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 2026-11-04 | ALB | Not confirmed | $2.53 | $1.6B |
-| 2026-11-04 | ARM | Not confirmed | $0.48 | $1.4B |
-| 2026-11-04 | LEU | Not confirmed | -$0.13 | $55.6M |
-| 2026-11-05 | MP | Not confirmed | -$0.01 | $118.9M |
-| 2026-11-05 | SMR | Not confirmed | -$0.12 | $4.0M |
-| 2026-11-06 | OKLO | Not confirmed | -$0.26 | $1.1M |
-| 2026-11-06 | VST | Not confirmed | $3.08 | $6.0B |
-| 2026-11-09 | CEG | Not confirmed | $3.88 | $9.3B |
-| 2026-11-09 | USAR | Not confirmed | -$0.15 | $13.6M |
-| 2026-11-10 | CRWV | Not confirmed | -$1.21 | $3.5B |
-| 2026-11-13 | LAC | Not confirmed | -$0.03 | n/a |
-| 2026-11-17 | NVDA | Not confirmed | $2.47 | $109.0B |
-| 2026-11-17 | SQM | Not confirmed | $2.08 | $2.2B |
+| 2026-11-06 | OKLO | unconfirmed | $-0.26 | $1.1M |
+| 2026-11-06 | VST | unconfirmed | $3.08 | $6.0B |
+| 2026-11-09 | CEG | unconfirmed | $3.88 | $9.3B |
+| 2026-11-09 | USAR | unconfirmed | $-0.15 | $13.6M |
+| 2026-11-10 | CRWV | unconfirmed | $-1.21 | $3.5B |
+| 2026-11-13 | LAC | unconfirmed | $-0.03 | n/a |
+| 2026-11-17 | NVDA | unconfirmed | $2.47 | $109.0B |
+| 2026-11-17 | SQM | unconfirmed | $2.08 | $2.2B |
 
 #### Smart money
-- A Globe and Mail analyst roundup said the recent weakness in Cameco looks overdone. It named rate hikes and AI worries as headwinds. The analyst's name was not clear in my results. (Globe and Mail)
-- Bernstein picked AMD over Super Micro ahead of earnings, based on a MarketBeat headline. I did not see the details. (MarketBeat)
-- Insider buying: nothing found.
-- Congress trades: nothing found.
+- **APP price targets:** RBC raised its target to $520 from $500 and kept Outperform. BTIG raised its target to $450 and kept Buy. Needham reiterated Buy with a $475 target. (TheStreet, AOL)
+- Insider buying, Congress trades, and analyst actions on the nuclear and mining names: nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-04-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-06-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
