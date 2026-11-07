@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-06 20:36 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-07 03:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-06 20:36 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 26 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 16 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 16 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 33 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 11 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -263,86 +263,67 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-06, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-07, event risk Medium</b></summary>
 
 #### Top things for today
-1. **US jobs report, 8:30 AM.** The calendar shows payrolls forecast at 63K (previous 29K), unemployment at 4.2%, and hourly earnings at 0.3% (previous 0.1%). Why it matters: rate-hike odds, the dollar and gold.
-2. **Trump's Iran decision.** Trump said after meeting his national security advisers Thursday that he will soon decide whether to resume all-out war in Iran. He is weighing three options: new strikes, continued economic pressure, or a deal with significant concessions to Iran. CENTCOM is finalizing preparations to resume major combat operations but has not received a new directive, a US official said (Axios). Why it matters: oil, inflation and safe-haven demand.
-3. **Oil is swinging on Iran news.** Oil fell about 9% on Wednesday (Middle East Eye), and a Fox News live blog headline says oil rose nearly 4% on fresh tanker attacks. Why it matters: energy costs feed inflation and Fed pricing.
-4. **Fed hike expectations.** The Fed held at 3.75%–4.00% on Oct 28, with two officials dissenting in favor of a hike (Investing.com). December hike odds fell to 67% from about 80% earlier this week (investingLive). Why it matters: Treasury yields, the dollar and gold.
-5. **Canada jobs data, 8:30 AM.** Employment change is forecast at 14.5K (previous -68.3K). Why it matters: Canadian dollar and Bank of Canada pricing.
+1. **US strikes on Iran.** Trump said Friday that US forces carried out "minor strikes" on Iranian air defence systems. Iranian state media had reported two missile strikes on Qeshm island in the Strait of Hormuz. (Al Jazeera) Why it matters: energy supply risk and safe-haven demand.
+2. **Hormuz shipping.** Iran's IRGC said two tankers hit mines in and near the Strait of Hormuz. (CBS News) Why it matters: oil and shipping costs feed into inflation and rates.
+3. **Mixed signals from Trump.** He says Washington has made "a lot of progress" in talks with Iran. On Thursday he said the US may have to "destroy" the rest of Iran. (Al Jazeera) Why it matters: headline risk when markets reopen.
+4. **Midterm fallout.** Headlines point to a large Democratic win. (Al Jazeera, headline only) Why it matters: policy and fiscal expectations.
+5. **Crypto rulemaking.** SEC and CFTC signaled swift crypto rulemaking after the CLARITY Act failed. (CoinMarketCap, headline only) Why it matters: regulation and risk appetite.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 8:30 AM | Employment Change (forecast 14.5K, previous -68.3K) | Canada | Yes |
-| 8:30 AM | Unemployment Rate (forecast 6.5%, previous 6.5%) | Canada | Yes |
-| 8:30 AM | Average Hourly Earnings m/m (forecast 0.3%, previous 0.1%) | US | Yes |
-| 8:30 AM | Non-Farm Employment Change (forecast 63K, previous 29K) | US | Yes |
-| 8:30 AM | Unemployment Rate (forecast 4.2%, previous 4.2%) | US | Yes |
-| 10:00 AM | Prelim UoM Consumer Sentiment (forecast 47.8, previous 46.3) | US | Yes |
-| 10:00 AM | Prelim UoM Inflation Expectations (previous 4.7%, no forecast) | US | Yes |
-| 11:00 AM | BOJ Gov Ueda speaks | Japan | Yes |
+| — | No major events listed | — | Yes |
 
-I found no hearings or Trump public events with times today.
-
-Coming up this week: No scheduled events found. The calendar lists nothing major for Saturday Nov 7.
+Coming up this week: No scheduled events found. The calendar lists nothing for Sunday either.
 
 #### Event risk today
-High - US and Canadian jobs data hit at 8:30 AM, BOJ Governor Ueda speaks at 11:00 AM, and Trump's Iran decision could come at any time.
+Medium - Markets are closed and nothing is scheduled, but the Iran strikes and Hormuz incidents could change by Sunday evening's open.
 
 #### Politics and policy
-- **Iran decision:** Trump said "Now we will make a decision" on going further with strikes. He also said he would rather not destroy the rest of the country, "but maybe I will have to" (Axios). CIA Director Ratcliffe, Treasury Secretary Bessent and other advisers want the naval blockade and economic pressure to play out longer (Axios).
-- **Midterm fallout:** Trump said Vance's analysis that the war drove gas prices up and cost votes was "largely true" (Axios). Trump called the midterms "crooked" and demanded Alaska votes go to the Republican candidate (France 24, headline only).
-- **Arch ruling:** A judge halted construction of Trump's arch after a federal panel approved it (The Washington Post, headline only).
-- **Senate counts:** Colom widened her lead over Hyde-Smith with thousands of Mississippi ballots uncounted (The Washington Post, headline only). Hegseth is not under consideration for a Senate appointment (The Washington Post, headline only).
-- **Congress and tariffs:** US Democrats seek to repeal Trump's tariffs on Canadian goods (شبكة تواصل الإخبارية, headline only).
-- **Fed:** Chair Kevin Warsh leads the Fed, and markets had priced another 25bp hike for December (Trading Economics). The Oct 28 dissents are covered under Top things above.
+- Trump spoke to reporters Friday evening in West Palm Beach. He said "I don't want to talk about it" when asked about Qeshm. He also said Iran built a small anti-aircraft device and the US knocked it out in minutes. (CNBC)
+- Trump said "it's not a war." (Al Jazeera, headline only)
+- Florida Gov. Ron DeSantis is planning another White House run. (The Washington Post, headline only)
+- The Economist says Trump "keeps Iran guessing." (headline only)
+- Midterm coverage: Democrats had a big win. (YouGov, NBC News, headline only)
+- A Washington Post headline says investors are dumping AI company stocks after the Democratic sweep. (headline only)
+- Elizabeth Warren is set to lead the Senate Banking Committee. (CoinCodex, headline only)
 
 #### Economics
-- No US data was scheduled overnight. The latest inflation reading is September CPI. CPI rose 3.7% year over year, against 3.6% expected (Yahoo Finance). Core CPI rose 2.6% against 2.5% expected (Yahoo Finance).
-- Energy prices fed into the 3.7% CPI and a 6.3% producer price reading (Investing.com).
-- Treasuries rallied strongly, and markets removed one rate hike from the Fed outlook (ABC Australia).
-- Headline only: "Inflation Just Hit 3.7%" (Yahoo Finance). The New Economics Foundation argues a rate hike would damage the economy (headline only).
+- No data was released overnight.
+- GM flagged a $2B inflation hit, and New York is suing. (TradingView, headline only)
+- ECB candidate de Cos says vigilance is needed on inflation risks. (Bloomberg, headline only)
+- Ukraine's economy slipped into contraction, with inflation at 10%. (IntelliNews, headline only)
+- CFTC data: net non-commercial oil positions rose to 80.3K from 74.3K. (tmgm.com, headline only)
 
 #### SEC, CFTC and hearings
-- **SEC:** It adopted amendments updating the "small entity" definitions for investment companies and advisers on Wed Nov 4 (SEC press release).
-- **CFTC:**
-  - Thursday 5:00 PM: it issued an interpretation of impartial access requirements.
-  - Thursday 1:13 PM: staff addressed the use of trust companies for daily settlements.
-  - Wed Nov 4: it signed an MOU with USDA on agricultural market integrity.
-- **In the news (headlines only):**
-  - CFTC told prediction markets to unblock geofenced states within 30 days (ingame.com).
-  - Anchorage Digital seeks CFTC approval for crypto options (grafa.com).
-  - Hyperliquid Strategies filed for CFTC FCM registration (The Crypto Times).
-  - Warren may lead the Senate Banking Committee (Coinfomania; 富途牛牛).
-- No hearings or open meetings with dates or times were found.
+- SEC: nothing in the last 2 days.
+- CFTC issued an interpretation on impartial access requirements on Thursday at 5:00 PM. (CFTC)
+- CFTC staff also addressed the use of trust companies for daily settlements on Thursday at 1:13 PM. (CFTC)
+- Anchorage Digital is seeking CFTC approval for 1-year Bitcoin and Ether options. (Pluang, headline only)
+- No hearings with dates or times were found.
 
 #### War, trade and tariffs
-- **US-Iran:** See Top things above. Iran's Supreme Leader Mojtaba Khamenei warned the US and Israel against restarting the war, saying Iranian attacks would have no geographic limits (CBS News, from Saturday). Qatari officials returned to Iran to push a deal; Iran wants the US to lift its blockade of Iranian ports and drop sanctions on oil and gas sales first (CBS News).
-- Moscow advises citizens to avoid travel to Iran and to stay away from military sites (IranWire, headline only).
-- **Ukraine:** The White House outlined a broader European security plan ahead of Ukraine peace talks (Radio Free Europe/Radio Liberty, headline only).
-- **Tariffs:** Democrats seek to repeal Trump's tariffs on Canadian goods (headline only, noted above).
+- The New York Times reported that thousands of US forces are poised to resume major combat operations if Trump orders it. (Al Jazeera, citing NYT)
+- CENTCOM said the situation on Qeshm was "relatively calm."
+- An Iranian official told Reuters that Tehran's conditions must be met before Hormuz reopens, and that nuclear talks could only start afterwards. Why it matters: Hormuz is a key route for oil and gas. Traffic there has fallen sharply since the conflict began.
+- Oil prices rebounded slightly as Iran claimed new attacks on ships. (CBS News)
+- The US is offering up to $20M for information on Iran's nuclear program. (i24NEWS, headline only)
+- Russian air bases have been reshaped amid the Ukrainian drone threat. (RFE/RL, headline only)
+- No tariff news found.
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:**
-  - Bomb threats disrupted dozens of flights in Europe (The New York Times, headline only).
-  - The White House outlined a European security plan ahead of Ukraine talks (Radio Free Europe/Radio Liberty, headline only).
+- **China:** The legislature adopted an Antarctica law. A revised water law is in place. (China Daily HK, headline only) An SCMP opinion piece calls for US-China cooperation on AI. (headline only)
+- **European Union:** Nothing found.
 - **United Kingdom:** Nothing found.
-- **Japan:**
-  - Japan-Russia tensions escalate (The Economist, headline only).
-  - BOJ Governor Ueda speaks at 11:00 AM.
+- **Japan:** Putin ordered the seizure of more Japan Tobacco assets in Russia. (Kyodo, headline only)
 - **India:** Nothing found.
-- **Russia:**
-  - Moscow advises citizens to avoid travel to Iran (IranWire, headline only).
-  - The Kyiv Post says the US midterm result could revive Ukraine aid and put Trump's Russia policy under scrutiny (headline only).
-- **Canada:**
-  - Jobs data is due at 8:30 AM.
-  - Markets price a 38% chance of a Bank of Canada hike in December (investingLive).
-  - US Democrats seek to repeal tariffs on Canadian goods (headline only).
+- **Russia:** Putin ordered more Japan Tobacco asset seizures. (Kyodo, headline only)
+- **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-06-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-07-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
