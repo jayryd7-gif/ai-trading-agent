@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-07",
+  "written": "2026-11-07 04:40",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-07-world-brief.md (Sat Nov 07, today)",
+    "Stocks: reports/stocks/2026-11-06-stock-brief.md (Fri Nov 06, NOT today)",
+    "Crypto: reports/crypto/2026-11-07-crypto-brief.md (Sat Nov 07, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-06-nasdaq-brief.md (Fri Nov 06, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-05-gold-brief.md (Thu Nov 05, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 7 ☀️\n\nUS strikes on Iran and reports of tankers hitting mines in Hormuz could push oil and fuel prices up, while crypto law stalls after the midterms.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Trump said US forces carried out \"minor strikes\" on Iranian air defence. Iranian media reported missile strikes on Qeshm island. Why it matters: Hormuz is key oil route; energy risk can lift fuel costs. Next: If strikes continue, oil may swing."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: No data was released overnight. GM flagged a $2B inflation hit. CFTC data shows net oil positions rose to 80.3K from 74.3K.\n\nWhy it matters: Rising costs can reach car and fuel prices.\n\nNext: If oil keeps rising, then pump prices could follow."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Thu: Philadelphia semiconductor index fell 12.3%, worst since March 2020. Nasdaq 100 dropped 6.3%. Why: index funds hold these names, so your 401(k) can feel it. Next: If AI fears persist, chip stocks may stay under pressure. Nvidia reports Nov 17."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin near $76,100; Fear & Greed Index at 25 (Extreme Fear). CLARITY Act failed Senate vote 49-50 in September. Why: crypto rules may restart in January. Next: Warren may chair Senate Banking; then probes are possible. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Al Jazeera, CBS News, Reuters, CNBC, CFTC, Yahoo Finance, CoinGecko live data.",
+  "midday": {
+    "story": "US strikes on Iran and tanker mines in the Strait of Hormuz",
+    "post": "Why this matters for your wallet: US strikes on Iran and reports of tankers hitting mines in Hormuz could push oil and fuel prices up. If Hormuz stays disrupted, then energy costs could feed into inflation and rates."
+  },
+  "reply_midday": "Sources: Al Jazeera, CBS News, Reuters, CNBC. Headlines can change, so check before acting.",
+  "close_watch": "Markets are closed for the weekend and no scheduled events are listed, so watch Iran and Hormuz headlines before the Sunday evening open.",
+  "video": {
+    "script": "Iran strikes and tankers hitting mines in the Strait of Hormuz. That's what's moving your wallet this weekend. Trump said Friday US forces carried out minor strikes on Iranian air defenses, and Iran's IRGC says two tankers hit mines. Hormuz is a key oil route, so if it stays disrupted, fuel prices and inflation could follow. On stocks, Thursday's chip rout sent the semiconductor index down 12.3%, its worst day since March 2020. Index funds hold these names, so your retirement account may feel it. In crypto, Bitcoin sits near $76,100 while fear is extreme, and the CLARITY Act stalled in the Senate. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Iran strikes + Hormuz mines",
+      "Oil and fuel risk",
+      "Chip rout: SOX -12.3% Thursday",
+      "Bitcoin near $76,100",
+      "Fear Index: 25 (Extreme Fear)",
+      "Not financial advice"
+    ]
+  }
+}
