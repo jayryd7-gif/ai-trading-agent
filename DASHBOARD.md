@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-07 20:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-08 03:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-07 20:43 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 37 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 44 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 40 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 28 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 28 hours ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 35 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 35 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -263,67 +263,61 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-07, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-11-08, event risk High</b></summary>
 
 #### Top things for today
-1. **US strikes on Iran.** Trump said Friday that US forces carried out "minor strikes" on Iranian air defence systems. Iranian state media had reported two missile strikes on Qeshm island in the Strait of Hormuz. (Al Jazeera) Why it matters: energy supply risk and safe-haven demand.
-2. **Hormuz shipping.** Iran's IRGC said two tankers hit mines in and near the Strait of Hormuz. (CBS News) Why it matters: oil and shipping costs feed into inflation and rates.
-3. **Mixed signals from Trump.** He says Washington has made "a lot of progress" in talks with Iran. On Thursday he said the US may have to "destroy" the rest of Iran. (Al Jazeera) Why it matters: headline risk when markets reopen.
-4. **Midterm fallout.** Headlines point to a large Democratic win. (Al Jazeera, headline only) Why it matters: policy and fiscal expectations.
-5. **Crypto rulemaking.** SEC and CFTC signaled swift crypto rulemaking after the CLARITY Act failed. (CoinMarketCap, headline only) Why it matters: regulation and risk appetite.
+1. **Iran decision pending.** Trump told reporters Thursday he will decide soon whether to attack Iran again. Gulf states are still bracing for escalation. (CNBC) Gulf markets fell as traders waited for his next move (Reuters, headline only). Why it matters: energy prices, gold safe-haven demand and risk appetite.
+2. **US embassies warn of possible rapid Mideast escalation** (JNS.org, headline only). Why it matters: oil and shipping risk.
+3. **Democrats won Congress.** Democrats took full control of Congress on Tuesday. Their options are limited until they take office in January. Why it matters: fiscal policy, war funding and the legislative agenda.
+4. **US CPI is Tuesday at 8:30 AM.** Why it matters: rates and the dollar.
+5. **Crude oil sold off last week.** Investors hoped the Democratic win would force an end to the war. (CNBC) Why it matters: inflation expectations.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| — | No major events listed | — | Yes |
+| All day | No economic data or central bank events | Calendar | Yes |
+| Not announced | Possible Trump decision on Iran | White House (unconfirmed) | No |
 
-Coming up this week: No scheduled events found. The calendar lists nothing for Sunday either.
+Coming up this week: Tue Nov 10, 8:30 AM: US CPI m/m (forecast 0.3%, previous 0.6%) and Core CPI m/m (forecast 0.2%, previous 0.3%). Thu Nov 12, 2:00 AM: UK GDP m/m (forecast 0.0%, previous 0.1%). Fri Nov 13, 8:30 AM: US PPI m/m (forecast 0.4%, previous 1.3%) and Core PPI m/m (forecast 0.3%, previous 0.7%).
 
 #### Event risk today
-Medium - Markets are closed and nothing is scheduled, but the Iran strikes and Hormuz incidents could change by Sunday evening's open.
+High - Markets are closed, but a possible US decision on new Iran strikes and the embassy warnings could cause gaps at the open.
 
 #### Politics and policy
-- Trump spoke to reporters Friday evening in West Palm Beach. He said "I don't want to talk about it" when asked about Qeshm. He also said Iran built a small anti-aircraft device and the US knocked it out in minutes. (CNBC)
-- Trump said "it's not a war." (Al Jazeera, headline only)
-- Florida Gov. Ron DeSantis is planning another White House run. (The Washington Post, headline only)
-- The Economist says Trump "keeps Iran guessing." (headline only)
-- Midterm coverage: Democrats had a big win. (YouGov, NBC News, headline only)
-- A Washington Post headline says investors are dumping AI company stocks after the Democratic sweep. (headline only)
-- Elizabeth Warren is set to lead the Senate Banking Committee. (CoinCodex, headline only)
+- Democrats flipped deep-red states, including Texas and Kansas. (SCMP) The New York Times says Democrats seized control of Congress (headline only).
+- Vance said the Iran conflict was "the reason we lost." Trump acknowledged that high gas prices contributed. (Asia Times)
+- Schumer said Democrats "are going to end the war," citing Congress's spending power. A war powers resolution is unlikely before January, and Trump can veto one. (CNBC)
+- Shattered.io says the Clarity Act stalled at 49-50 (headline only). Forbes Middle East says Democrats are preparing an affordability push (headline only). Al-Monitor asks whether Democrats will block Trump's push on Turkey F-35s and sanctions relief (headline only).
+- AP says staff at the US AI safety center are reporting to the White House (headline only).
+- No Fed or Treasury news found in the feeds.
 
 #### Economics
-- No data was released overnight.
-- GM flagged a $2B inflation hit, and New York is suing. (TradingView, headline only)
-- ECB candidate de Cos says vigilance is needed on inflation risks. (Bloomberg, headline only)
-- Ukraine's economy slipped into contraction, with inflation at 10%. (IntelliNews, headline only)
-- CFTC data: net non-commercial oil positions rose to 80.3K from 74.3K. (tmgm.com, headline only)
+Nothing found. No data was released overnight. The calendar lists no events.
 
 #### SEC, CFTC and hearings
-- SEC: nothing in the last 2 days.
-- CFTC issued an interpretation on impartial access requirements on Thursday at 5:00 PM. (CFTC)
-- CFTC staff also addressed the use of trust companies for daily settlements on Thursday at 1:13 PM. (CFTC)
-- Anchorage Digital is seeking CFTC approval for 1-year Bitcoin and Ether options. (Pluang, headline only)
-- No hearings with dates or times were found.
+- GuruFocus, citing CFTC data, says gold prices dropped as speculative funds withdrew (headline only).
+- Forex Crunch says the CFTC gave exchanges 30 days to drop access limits (headline only).
+- njtoday.news says a watchdog group claims the CFTC told prediction markets to defy court orders (headline only).
+- InsuranceNewsNet says Elizabeth Warren will lead the Senate Banking Committee (headline only).
+- No SEC or CFTC press releases in the last 2 days. No hearing dates found.
 
 #### War, trade and tariffs
-- The New York Times reported that thousands of US forces are poised to resume major combat operations if Trump orders it. (Al Jazeera, citing NYT)
-- CENTCOM said the situation on Qeshm was "relatively calm."
-- An Iranian official told Reuters that Tehran's conditions must be met before Hormuz reopens, and that nuclear talks could only start afterwards. Why it matters: Hormuz is a key route for oil and gas. Traffic there has fallen sharply since the conflict began.
-- Oil prices rebounded slightly as Iran claimed new attacks on ships. (CBS News)
-- The US is offering up to $20M for information on Iran's nuclear program. (i24NEWS, headline only)
-- Russian air bases have been reshaped amid the Ukrainian drone threat. (RFE/RL, headline only)
-- No tariff news found.
+- US officials acknowledged limited strikes on Iran's Qeshm Island, near the Strait of Hormuz, on November 2. (Asia Times)
+- Trump repeated that Iran will not have a nuclear weapon. (CNBC) JNS.org says Iran's Rezaei told Trump "you lost the war and the election" (headline only).
+- One analyst says the closure of the Strait of Hormuz has a large regional spillover. (SCMP)
+- The Korea Times says potential US data center curbs pose risks to Korea's chip-driven growth (headline only).
+- No new tariff news found.
 
 #### Country briefs
-- **China:** The legislature adopted an Antarctica law. A revised water law is in place. (China Daily HK, headline only) An SCMP opinion piece calls for US-China cooperation on AI. (headline only)
-- **European Union:** Nothing found.
-- **United Kingdom:** Nothing found.
-- **Japan:** Putin ordered the seizure of more Japan Tobacco assets in Russia. (Kyodo, headline only)
+- **China:** SCMP says China is urged to target sugar-rich drinks in its consumption tax overhaul (headline only).
+- **European Union:** Al Jazeera maps how France's protest wave spread across Europe (headline only).
+- **United Kingdom:** Nothing found. GDP is due Thursday at 2:00 AM.
+- **Japan:** Nothing found.
 - **India:** Nothing found.
-- **Russia:** Putin ordered more Japan Tobacco asset seizures. (Kyodo, headline only)
+- **Russia:** Nothing found.
 - **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-07-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-08-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
