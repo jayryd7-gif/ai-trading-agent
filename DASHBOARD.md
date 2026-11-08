@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-08 03:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-08 04:07 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -19,9 +19,9 @@ Last updated 2026-11-08 03:43 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 44 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 35 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 36 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 35 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -322,70 +322,67 @@ Nothing found. No data was released overnight. The calendar lists no events.
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-07</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-08</b></summary>
 
 #### Top things today
 
-1. **Democrats won both chambers on Nov 3, and crypto law is now stalled.** The CLARITY Act failed a Senate procedural vote 49-50 in September. It passed the House 294-134 in July 2025. The Senate has no more votes scheduled on it in 2026. Why it matters: the rules for crypto are likely to start over in January.
-2. **Elizabeth Warren is expected to chair Senate Banking.** The WSJ reported this on Nov 6. (Bitcoin.com) Why it matters: she is crypto's biggest critic in Congress, so probes are possible.
-3. **A dormant whale bought 3,009 BTC (about $228M) on Nov 6, while ETFs bled.** US spot Bitcoin ETFs had $430.2M in net outflows on Nov 5. (Blockonomi, citing Lookonchain) Why it matters: big holders and funds are moving in opposite directions.
-4. **Samsung launched a USDC wallet inside Samsung Wallet on Nov 6.** PYMNTS reports it is spendable by over 80 million consumers. Why it matters: it puts stablecoin payments on a very large phone base.
-5. **Sentiment is Extreme Fear (25) while BTC holds near $76,100.** CoinDesk reported BTC touched about $75,200 on Nov 5 before rebounding. Why it matters: price is steady even though traders are afraid.
+1. **Democrats won Congress, and the CLARITY Act is stalled.** AP projections had Democrats winning the House and Senate on Nov 3. The CLARITY Act has passed the House but not the Senate, where a vote to start debate failed 49 to 50 on Sept 15. (CoinDesk via Tech-Insider; Align Labs) Why it matters: US market-structure rules are unlikely soon.
+2. **A dormant whale bought BTC while ETFs saw outflows.** Lookonchain said a wallet idle for over a year bought 3,009 BTC on Nov 6. US spot Bitcoin ETFs had $430.2M in net outflows on Nov 5. (Blockonomi) Why it matters: big wallets and funds are moving in opposite directions.
+3. **Sentiment is in Fear (28).** BTC is $75,849, down 2.7% on the week. SOL is weaker, down 6.6% on the week. (Live data) Why it matters: altcoins are lagging bitcoin.
+4. **Democrats are drafting a CLARITY successor.** It could give the SEC more power and the CFTC less. Talks are preliminary and no formal bill has been released. (Crypto Times) Why it matters: the SEC-versus-CFTC split may flip.
+5. **Several big unlocks fall in the next week and a half.** Pieverse (PIEVERSE), also a top gainer, has one on Nov 14. (Cryptolaxy) Why it matters: new supply can hit thin markets.
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Akedo (AKE) | +20.8% (7d -43.0%) | No clear news today. An earlier game reward campaign sparked a leverage-fueled spike (AsksurfAI). | One analysis said the top 100 wallets hold over 98% of supply. It fell about 66% in under 48 hours after a Sept 20 peak. 24h volume ($185M) exceeds market cap ($136M). |
-| Geodnet (GEOD) | +19.2% | Nothing found. | Pump with no news found. Volume is only about 12% of market cap. |
-| Kinetiq (KNTQ) | +13.2% (also trending) | Nothing found on the move. | Core contributor and investor cliff unlock is listed for Nov 27 (cryptolaxy). Small market cap. |
-| Lighter (LIT) | +5.1% (7d +29.8%) | Nothing found. Strong week, also trending. | Large 7-day run. No catalyst found. |
-| Harmony (ONE) | +55.3% (trending) | Nothing found. | Rank 674. Sharp spike with no news found. |
-| COGE COIN (COGE) | +460.7% (trending) | Nothing found. | Rank 925. Tiny, very new or unknown, and a huge pump with no news. Treat as high risk. |
+| Yellow (YELLOW) | +10.4% | No news found. | Volume is only $1.3M on a $122.8M cap. The pump has no news. |
+| edgeX (EDGE) | +8.5% | No news found. | EDGE had a token unlock on Nov 2. (TokenPost) It is down 5.2% on the week. Volume is low. |
+| Meteora (MET) | +7.2% | No news found for today. Past rallies tracked protocol fees and rewards. (AMBCrypto) | Volume is good at $54.2M. A rally with no news today. |
+| Cap (CAP) | +7.0% (+37.9% 7d) | No news found. | A 38% weekly run with no known cause. |
+| Pieverse (PIEVERSE) | +3.0% (+38.1% 7d) | AMBCrypto said there was no clear coin-specific catalyst, and chatter pointed to a short squeeze. | A team and investor 12-month lockup ends Nov 14. (Cryptolaxy) |
+| Kinetiq (KNTQ) | +3.8% (+4.6% on the trending list) | No news found. | A core contributor and investor cliff ends Nov 27. (Cryptolaxy) |
 
-Provenance (HASH) and Railgun (RAIL) also rose about 5%. Their 24h volume is only $5.4K and $69.0K, so those prices are thin.
+I found no new meme coin pumping hard. In the trending list, UnifAI (UAI) fell 40.1%, STONK fell 29.3% and Pons (PONS) fell 13.3%. These are very large drops in small coins.
 
 #### Whale watch
 
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 6 | BTC (3,009) | ~$228M | Dormant whale, inactive over a year (Lookonchain) | Bought |
-| Nov 6 | BTC (1,286) | About $98M (my estimate at ~$76K) | Whale (Lookonchain) | Off an exchange (Binance) |
+| Nov 6 (date only, exact time not given) | BTC | ~$228M (3,009 BTC) | Dormant wallet (Lookonchain) | Bought |
+| Nov 6 (date only, exact time not given) | BTC | 1,286 BTC, USD value not stated | Whale (Lookonchain) | Off an exchange (Binance) |
 
-Lookonchain's summary does not independently show how the BTC was acquired.
+These are from Nov 6, not the last 24 hours. I found no confirmed moves of $10M or more from the last day.
 
 #### Government and regulation
 
-- **House Democrats' draft crypto bill (no text yet):** No bill text exists. It would give the SEC more power and the CFTC a limited role. It would add ethics rules aimed at Trump and other officials, monthly proof-of-reserves checks, stricter custody rules, and limits on exchanges trading against customers. It builds on Rep. Maxine Waters' 2025 investor-rights amendment. Republicans call it a messaging bill, and any bill needs 60 Senate votes. (BeInCrypto)
-- **Stablecoin yield:** Tighter limits are a possible difference from the old framework (Bitcoin Foundation).
-- **SEC:** 2026 actions include the August Regulation Crypto Assets proposal, the Sept 17 Innovation Exemption, and the Oct 1 custody proposal. Custody comments are due Dec 7. (Cryptonomist)
-- **Rulemaking continues without Congress:** The SEC and CFTC can keep developing crypto rules (CNBC).
-- Other countries and CFTC actions in the last few days: nothing found.
+- **CLARITY Act (H.R. 3633):** It is a market-structure bill that sets rules for exchanges and digital-asset firms and defines SEC and CFTC roles. The Senate adjourned on Nov 5 until Nov 9. No vote is scheduled. It expires Jan 3 unless the Senate passes it in the lame-duck session. (Align Labs; CryptoTicker)
+- **Possible new House Democratic bill:** It would build on Maxine Waters' 2025 investor-rights amendment. There is no finalized draft or timetable. It is for the next Congress in January 2027. (Bitcoin Foundation; KuCoin News)
+- **SEC:** 2026 actions include the August "Regulation Crypto Assets" proposal, the Sept 17 Innovation Exemption and the Oct 1 custody proposal. Comments on the custody proposal are due Dec 7. (Cryptonomist)
+- **Committees:** Elizabeth Warren is in line to chair Senate Banking. Sherrod Brown could take a senior post on Senate Agriculture, which oversees the CFTC. (CryptoTicker; Crypto Times)
+- **Other countries and CFTC actions:** Nothing found.
 
 #### Who is buying and adopting
 
-- **Strive:** It bought 15,124 BTC in October and holds 43,124 BTC (Cointelegraph).
-- **Strategy:** It bought 811 BTC for $65.5M from Oct 26 to Nov 1, bringing holdings to 849,327 BTC (TCB).
-- **Coinbase:** Its CEO said it acquired its 18,000th BTC for its treasury (TCB).
-- **Samsung:** USDC wallet launch, as above (PYMNTS via OneSafe).
-- **Standard Chartered:** It introduced tokenized deposits in Hong Kong (TCB).
-- Governments buying bitcoin: nothing found.
+- **Whales:** one dormant wallet bought about $228M of BTC (see above). It is not a company or a government.
+- **US government:** The Strategic Bitcoin Reserve is described as a passive vault of seized coins, about 198,000 BTC. The BITCOIN Act remains stalled. This is background from an older article (Tapbit).
+- **Companies and other countries:** I found no new purchases or stablecoin-payment announcements in the last few days.
 
 #### Next 7 days
 
 | Date | Event | Coin or topic |
 |---|---|---|
-| Nov 7 | About $23M unlock (DefiLlama) | STABLE |
-| Nov 8 | About $14M foundation unlock (MrNasDog) | AVAX |
-| Nov 11 | Cliff unlock, about $28M (Bittime) | ALLO |
-| Nov 11 | About $27.5M unlock (DefiLlama) | PUMP |
-| Nov 11 | Stake lock ends, about $19M (MrNasDog) | SOL |
-| Nov 13 | About $4.5M unlock (DefiLlama) | SEI |
-| Nov 13 | About $14.3M unlock (Bittime) | AZTEC |
+| Nov 8 | Avalanche unlock, about $14.33M (Tokenomist via Bittime) | AVAX |
+| Nov 9 | Senate returns from adjournment (Align Labs) | CLARITY Act |
+| Nov 11 | Pump unlock, $27.53M (DefiLlama) | PUMP |
+| Nov 11 | Allora 160M ALLO cliff unlock (Cryptolaxy) | ALLO |
+| Nov 13 | Sei unlock, $4.5M (DefiLlama) | SEI |
+| Nov 13 | Aztec unlock, $14.3M (Tokenomist via Bittime) | AZTEC |
+| Nov 14 | Team and investor lockup ends (Cryptolaxy) | PIEVERSE |
 
-Trackers disagree on some dates and values (for example, PUMP is Nov 11 on DefiLlama and Nov 12 on MrNasDog). Treat dates as unconfirmed. No hearings or ETF deadlines found.
+Unlock dates and dollar values differ between trackers. Treat them as unconfirmed. No ETF deadlines or hearings were found.
 
-[Read the full brief with all the details](reports/crypto/2026-11-07-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-08-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
