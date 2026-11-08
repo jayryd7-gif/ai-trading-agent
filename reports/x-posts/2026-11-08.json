@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-08",
+  "written": "2026-11-08 04:40",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-08-world-brief.md (Sun Nov 08, today)",
+    "Stocks: reports/stocks/2026-11-06-stock-brief.md (Fri Nov 06, NOT today)",
+    "Crypto: reports/crypto/2026-11-08-crypto-brief.md (Sun Nov 08, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-06-nasdaq-brief.md (Fri Nov 06, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-05-gold-brief.md (Thu Nov 05, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 8 ☀️\n\nTrump's Iran decision, a new Congress and a chip-stock rout are the biggest things for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Trump will decide soon on new Iran strikes. Schumer says Democrats will end the war. Why it matters: oil and gas prices track this, hitting your budget. Next: strikes could lift oil and gold. War powers vote unlikely before January."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: No data overnight. US CPI Tuesday 8:30 AM, forecast 0.3% m/m, previous 0.6%. Why it matters: CPI shapes interest rates, mortgage costs and the dollar. Next: CPI above 0.3% could fade rate-cut hopes. Watch Core CPI, forecast 0.2%."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Philadelphia semiconductor index fell 12.3% Thursday, worst day since March 2020. Nasdaq 100 fell 6.3%. Why it matters: index funds and retirement accounts hold these chip names. Next: if Asia's selling continues, US AI stocks may stay pressured."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: BTC $75,849 (-2.7% weekly), Fear (28). Dormant wallet bought 3,009 BTC Nov 6; US spot BTC ETFs saw $430.2M outflows Nov 5. Why: CLARITY Act stalled, so US crypto rules look far off. Next: Senate returns Nov 9; Pieverse lockup ends Nov 14. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, CNBC, CoinDesk, Yahoo Finance, Lookonchain, CoinGecko live data, Fear and Greed Index",
+  "midday": {
+    "story": "Trump's pending decision on new strikes on Iran",
+    "post": "Trump will decide soon on new Iran strikes, and Gulf states are bracing. Why it matters: oil and gas prices hit your wallet first. If strikes happen, fuel and gold could move sharply at the reopen. Watch Monday's open. Not financial advice."
+  },
+  "reply_midday": "Sources: CNBC, Reuters (headline only), JNS.org, Asia Times. Markets are closed for the weekend.",
+  "close_watch": "Markets are closed; watch the US open on Monday Nov 9 for the reaction to any Iran decision, the same day the Senate returns.",
+  "video": {
+    "script": "Your gas bill could feel an Iran decision before the stock market does. Trump told reporters he will decide soon whether to attack Iran again, and Gulf states are bracing. Oil and gold are the first places to watch. Democrats now control Congress, but they have limited options until January, so the war and spending fight is still open. Next up is US CPI on Tuesday at 8:30 AM, forecast at 0.3 percent. That number shapes interest rates, mortgages and prices. On Thursday, chip stocks had their worst day since 2020, and many index funds hold those names. Bitcoin is near 75 thousand dollars, and sentiment is in fear. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Iran decision pending",
+      "Oil and gold to watch",
+      "CPI Tuesday, 8:30 AM",
+      "Chip index -12.3% Thursday",
+      "BTC $75,849 | Fear 28",
+      "Not financial advice"
+    ]
+  }
+}
