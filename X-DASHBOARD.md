@@ -1,16 +1,66 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-07 04:40 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-07 18:59 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-07.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.064 (13 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.067 (14 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Saturday Nov 07)
+## 🌙 Tonight's thread, ready to copy (Saturday Nov 07)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (245/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 7 🌙
+
+Iran tensions around the Strait of Hormuz and the Democratic midterm sweep could move oil prices and policy, while stock markets stay closed for the weekend.
+
+What happened today and what to watch Sunday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (246/280)
+```text
+2/ Politics: Trump said Friday US forces made minor strikes on Iranian air defenses (Al Jazeera). Hormuz is a key oil route, so energy risk can lift fuel costs. Tomorrow: Watch if Iran strikes continue; if so, oil could swing when markets reopen.
+```
+
+**Post 3 of 5 · 💵 Economy** (229/280)
+```text
+3/ Economy: Democrats seek to undo Trump's economic policy and repeal tariffs (Modern Ghana). Tariff changes can shift what imported goods cost you. Tomorrow: Watch if Congress moves on tariffs; no hearings with dates were found.
+```
+
+**Post 4 of 5 · 📈 Stocks** (220/280)
+```text
+4/ Stocks: SpaceX and Tesla shares fell premarket after Democrats swept the midterms (WSJ). If you hold them in a 401(k) or index fund, swings may hit at reopening. Tomorrow: Cisco leads 9 big earnings reports this week.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (242/280)
+```text
+5/ Crypto: Bitcoin was at 75,745.83 and Ether at 2,236.16 (Yahoo, may be delayed). BlackRock ETF clients sold $403M of Bitcoin (Cryptonews.net). ETF outflows may signal cautious demand. Watch if outflows continue Monday. Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(225/280)
+```text
+Sources: Al Jazeera, CBS News, The Hill, Modern Ghana (politics); CFTC (regulators); WSJ, Opening Bell Daily (stocks); Yahoo Finance, Cryptonews.net (crypto prices and ETF flows).
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+Bitcoin: 75,745.83 (-0.0% vs the last close)
+Ether: 2,236.16 (+0.0% vs the last close)
+Solana: 89.66 (-0.4% vs the last close)
+Stock markets: closed for the weekend (crypto trades 24/7)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Saturday Nov 07)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -76,7 +126,7 @@ Iran strikes and tankers hitting mines in the Strait of Hormuz. That's what's mo
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Sat Nov 07](reports/x-posts/2026-11-07.md) | ✅ | ✅ | ✅ | ✅ | — | US strikes on Iran and tanker mines in the Strait of Hormuz |
+| [Sat Nov 07](reports/x-posts/2026-11-07.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Iran and tanker mines in the Strait of Hormuz |
 | [Fri Nov 06](reports/x-posts/2026-11-06.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Chip rout: Philadelphia semiconductor index down 12.3% on Thursday |
 | [Thu Nov 05](reports/x-posts/2026-11-05.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Democrats win both chambers of Congress and oil falls to a two-month low |
 | [Wed Nov 04](reports/x-posts/2026-11-04.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Qeshm Island and the Strait of Hormuz standoff |
