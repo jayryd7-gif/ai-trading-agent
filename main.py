@@ -69,10 +69,16 @@ ENTRY_CLOSE_BEYOND_PREV = False
 ENTRY_MAX_WICK = None
 # Stop this many points past the two candles' far end, for leeway when price
 # comes back to retest the low (0 = at the low exactly).
-STOP_BUFFER = {"nasdaq": 0, "gold": 0}
+STOP_BUFFER = {"nasdaq": 0, "gold": 0.5}   # gold 0.5 since 2026-11-08: better in both the 30 and 60 days
 # Which confirmed-breakout candles set the stop: "both" (the far end of the two
 # candles) or "second" (only the buy candle, tighter after a huge first candle).
 STOP_CANDLES = "both"
+# Or the lowest low (highest high for a short) of the last STOP_SWING candles
+# up to the buy candle, if that is further away: the stop goes under the
+# recent swing low instead of just under the two breakout candles (0 = off).
+STOP_SWING = {"nasdaq": 0, "gold": 0}
+# Or a fixed stop this many points from the entry (0 = off; overrides the above).
+STOP_POINTS = {"nasdaq": 0, "gold": 0}
 
 # Wait for a second candle to close beyond the level before entering.
 # Tested in experiments/gold_variations.py.
@@ -372,7 +378,13 @@ def play_session(instrument, config, start, session, key_high, key_low, size_pla
             entry = round(second.close, 2)
             far = (second.low if direction == "long" else second.high) if STOP_CANDLES == "second" \
                 else (min(candle.low, second.low) if direction == "long" else max(candle.high, second.high))
+            if STOP_SWING[instrument]:
+                swing = [c for _, c in session[max(0, index - STOP_SWING[instrument] + 1):index + 1]]
+                swing_far = min(c.low for c in swing) if d == 1 else max(c.high for c in swing)
+                far = min(far, swing_far) if d == 1 else max(far, swing_far)
             stop = round(far - d * STOP_BUFFER[instrument], 2)
+            if STOP_POINTS[instrument]:
+                stop = round(entry - d * STOP_POINTS[instrument], 2)
         if is_early and not clear_breakout(instrument, session, index, direction,
                                            high if direction == "long" else low):
             continue  # not clear enough to go before the open

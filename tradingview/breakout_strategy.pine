@@ -61,6 +61,7 @@ confirm    = input.bool(true, "Wait for a second candle to confirm")
 goldPlan1  = input.int(1, "Gold: contracts to sell at Target 1", minval = 1, maxval = 3)
 goldPlan2  = input.int(2, "Gold: contracts to sell at Target 2", minval = 1, maxval = 3)
 goldPlan3  = input.int(2, "Gold: contracts to sell at Target 3", minval = 1, maxval = 3)
+goldRoom   = input.float(0.5, "Gold: stop this many points under the breakout candles", minval = 0, step = 0.1)
 showLevels = input.bool(true, "Draw the key levels")
 showTrade  = input.bool(true, "Draw entry, stop and targets while a trade is open")
 showOR     = input.bool(true, "Nasdaq: draw the opening range (9:30-10:00, not traded)")
@@ -279,7 +280,8 @@ if (inSess or useEarly) and not na(lvlHigh) and not traded and not dayOver and s
     if (confirm or useEarly) and pending != 0
         stillBeyond = (pending == 1 ? close > lvlHigh : close < lvlLow) and (not useEarly or clearOk(pending, pending == 1 ? lvlHigh : lvlLow))
         if stillBeyond
-            stopPx = pending == 1 ? math.min(pendLow, low) : math.max(pendHigh, high)
+            room   = isGold ? goldRoom : 0.0
+            stopPx = pending == 1 ? math.min(pendLow, low) - room : math.max(pendHigh, high) + room
             if enterTrade(pending, stopPx)
                 traded  := true
                 earlyEntryTime := useEarly ? time : earlyEntryTime
