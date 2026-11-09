@@ -49,7 +49,7 @@ import anthropic
 
 from research_tools import log_cost, run_call
 from news_feed import calendar_text, fed_text, headlines_text, regulators_text
-from notify import send
+from notify import send, send_brief
 
 # ---------------- SETTINGS ----------------
 SEARCHES = 2              # web searches per run, only for the biggest stories (main cost control)
@@ -218,12 +218,10 @@ def main(now=None):
              priority="high", tags="warning",
              link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
     import re
-    first = re.search(r"^1\.\s*(.+)$", body, re.M)
     risk = re.search(r"Event risk today.{0,60}?\b(Low|Medium|High)\b", body, re.S)
-    send(f"World brief: event risk {risk.group(1) if risk else 'n/a'}",
-         (first.group(1)[:300] if first else "Today's world brief is ready."), priority="low",
-         tags="earth_americas",
-         link=f"https://github.com/jayryd7-gif/ai-trading-agent/blob/main/{path}")
+    send_brief(f"World brief: event risk {risk.group(1) if risk else 'n/a'}", path,
+               [("", r"^## Top things.*$"), ("Event risk", r"^## Event risk.*$"),
+                ("Today's schedule", r"^## Today's schedule.*$")], tags="earth_americas")
     cost = log_cost("world-brief")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
     print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))

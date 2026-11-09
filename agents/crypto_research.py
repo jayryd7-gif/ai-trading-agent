@@ -34,6 +34,7 @@ from zoneinfo import ZoneInfo
 import anthropic
 
 from research_tools import log_cost, run_call
+from notify import send_brief
 
 # ---------------- SETTINGS ----------------
 SEARCHES = 5              # cap on web searches per run (the main cost control)
@@ -207,6 +208,9 @@ def main(now=None):
         f.write(body)
 
     print(f"Saved {path}")
+    send_brief("Crypto brief is ready", path,
+               [("", r"^## Top things.*$"), ("To research", r"^## (Stocks|Coins) to research.*$")],
+               tags="coin")
     cost = log_cost("crypto-brief")
     print(f"Tokens used: {tokens_in} in, {tokens_out} out")
     print(f"Estimated cost: ${cost:.2f}" + ("  (over budget!)" if cost > BUDGET else ""))
