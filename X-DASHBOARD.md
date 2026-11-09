@@ -1,16 +1,85 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-09 04:54 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-09 18:08 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-09.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.082 (17 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.086 (18 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Monday Nov 09)
+## 🌙 Tonight's thread, ready to copy (Monday Nov 09)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (202/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 9 🌙
+
+Oil fell 4.9% to $86.38 and stocks rallied, while tomorrow's 8:30 AM inflation report is the next big money test.
+
+What happened today and what to watch Tuesday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (245/280)
+```text
+2/ Politics & world: Trump says the Iran war is 'effectively over' (Guardian). Why it matters: Iran news moves oil, gas and shipping costs. Tomorrow: watch whether the House impeachment vote for Hegseth, expected this week, goes ahead (Reuters).
+```
+
+**Post 3 of 5 · 💵 Economy** (246/280)
+```text
+3/ Economy: NBC says inflation likely cooled last month as fuel prices fell.
+
+Why it matters: cooler prices ease pressure on your budget and rate outlook.
+
+Tomorrow: 8:30 AM CPI, 0.3% forecast vs 0.6% before. Hot prints could lift mortgage rates.
+```
+
+**Post 4 of 5 · 📈 Stocks** (203/280)
+```text
+4/ Stocks: Nasdaq +2.7%, S&P 500 +2.3%, Dow +2.2%, S&P at 7,549.01.
+
+Why it matters: broad gains lift index funds and 401(k)s.
+
+Tomorrow: watch D-Wave and Rigetti Q3 earnings, due tomorrow (TradingView).
+```
+
+**Post 5 of 5 · 🪙 Crypto** (248/280)
+```text
+5/ Crypto: Bitcoin $75,039.59 (+0.6%). Mexican exchange banned from US financial system over alleged Russia, Iran ties.
+
+Why it matters: bans can limit where US users can trade.
+
+Next: watch if more firms face similar action.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(232/280)
+```text
+Sources: Reuters, The Guardian, NBC News, The Hill (politics, economy); Yahoo Finance (prices); TradingView (earnings); Global Investigations Review (crypto); free economic calendar feed
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,549.01 (+2.3% vs the last close)
+Nasdaq: 25,251.39 (+2.7% vs the last close)
+Dow: 52,388.57 (+2.2% vs the last close)
+10-yr yield: 4.86% (+0.00 pts vs the last close)
+Oil (WTI): 86.38 (-4.9% vs the last close)
+Gold: 4,149.50 (+1.8% vs the last close)
+Bitcoin: 75,039.59 (+0.6% vs the last close)
+Ether: 2,128.67 (+0.4% vs the last close)
+Solana: 86.53 (+0.3% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Monday Nov 09)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -78,7 +147,7 @@ Your gas, mortgage and 401k could move this week. Here's what changed overnight.
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Mon Nov 09](reports/x-posts/2026-11-09.md) | ✅ | ✅ | ✅ | ✅ | — | Iran talks and the Strait of Hormuz |
+| [Mon Nov 09](reports/x-posts/2026-11-09.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran talks and the Strait of Hormuz |
 | [Sun Nov 08](reports/x-posts/2026-11-08.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Trump's pending decision on new strikes on Iran |
 | [Sat Nov 07](reports/x-posts/2026-11-07.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Iran and tanker mines in the Strait of Hormuz |
 | [Fri Nov 06](reports/x-posts/2026-11-06.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Chip rout: Philadelphia semiconductor index down 12.3% on Thursday |
@@ -102,7 +171,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | ✅ | · | ✅ | · | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
 | Gold futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
