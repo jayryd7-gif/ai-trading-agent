@@ -48,5 +48,32 @@
       "BTC $75,849 | Fear 28",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500 futures: 7,395.00 (-0.1% vs the last close)\nNasdaq futures: 26,931.25 (-0.6% vs the last close)\nOil (WTI): 90.37 (-0.5% vs the last close)\nGold: 4,069.30 (-0.1% vs the last close)\nBitcoin: 74,706.28 (-1.4% vs the last close)\nEther: 2,122.91 (-5.1% vs the last close)\nSolana: 86.43 (-3.6% vs the last close)\nStock markets: closed today; futures reopened at 6 PM NY; the stock market opens Monday 9:30 AM NY",
+    "written": "2026-11-08 19:00",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Nov 8 🌙\n\nIran strike talk, rate-hike bets and a weekend crypto dip are the biggest things for your wallet today.\n\nWhat happened today and what to watch Monday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Reuters headline: Trump says fresh Iran attacks 'unlikely'. NBC: Jeffries a 'hard yes' on impeaching Hegseth.\n\nWhy it matters: Iran news moves oil and gas prices.\n\nTomorrow: Watch if Monday's oil open holds. If strikes resume, fuel costs could rise."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: Bloomberg headline: gold holds its decline as US jobs data fans December rate hike bets.\n\nWhy it matters: rate hike bets can mean higher mortgage and loan rates.\n\nTomorrow: No major events Monday. Tuesday 8:30 AM NY: US CPI, forecast 0.3% m/m, previous 0.6%."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: US markets closed today. S&P 500 futures 7,395.00 (-0.1%), Nasdaq futures 26,931.25 (-0.6%).\n\nWhy it matters: index funds and retirement accounts hold these stocks.\n\nTomorrow: Stocks open 9:30 AM NY. Watch if AI trades halt the sell-off, per Moomoo headline."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: BTC 74,706.28 (-1.4%), ETH 2,122.91 (-5.1%), SOL 86.43 (-3.6%). The Defiant: BTC trades below Strategy's $75,451 average purchase price. Why it matters: falling coins can shrink crypto retirement holdings fast. Next: Crypto trades 24/7. Watch whether BTC stays below Strategy's average cost. Not financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Reuters, NBC News, Bloomberg, The National, Moomoo, The Defiant (headlines); Yahoo Finance (futures and prices); CoinGecko; free economic calendar feed"
   }
 }
