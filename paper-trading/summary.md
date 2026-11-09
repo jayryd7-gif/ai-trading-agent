@@ -1,36 +1,36 @@
 # Paper trading summary
 
-*Updated 2026-11-06 16:25 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-08 21:11 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$708** over 18 trades (29 sessions watched)
-- Trading days with a trade: **14**, profitable: **6**, losing: 8
-- Win rate: 44%
-- Profit factor: 0.85
+- Total after fees: **-$786** over 19 trades (30 sessions watched)
+- Trading days with a trade: **15**, profitable: **6**, losing: 9
+- Win rate: 42%
+- Profit factor: 0.84
 - Biggest drop from a high (max drawdown): $4,620
-- Room left before the $4,000 max drawdown: **$1,047**
-- Progress toward a prop demo: **14 of 20** trading days
+- Room left before the $4,000 max drawdown: **$970**
+- Progress toward a prop demo: **15 of 20** trading days
 
 ## By market
 
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
 | nasdaq | 8 | 3 | -$1,716 |
-| gold | 10 | 5 | $1,008 |
+| gold | 11 | 5 | $931 |
 
 ## Tradeify Growth 50K (practice account the bot trades on)
 
-Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trailing drawdown $2,000 below the highest end-of-day balance, and touching it even with an open trade fails the account; daily loss limit $1,250 ends the day. Funded: a payout needs $53,000, 5 days over $150, and the biggest day at most 35% of the profit. The bot sizes every trade so its stop cannot break a rule, and stops for the day once up $600. Check Tradeify's current rules before relying on this.
+Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trailing drawdown $2,000 below the highest end-of-day balance, and touching it even with an open trade fails the account; daily loss limit $1,250 ends the day. Funded: a payout needs $53,000, 5 days over $150, and the biggest day at most 35% of the profit. The bot sizes every trade so its stop cannot break a rule (no daily profit cap). Check Tradeify's current rules before relying on this.
 
-**Now: Evaluation**, balance **$50,652**, $2,000 above the drawdown floor.
-- To pass: $2,348 more profit.
+**Now: Evaluation**, balance **$50,575**, $1,923 above the drawdown floor.
+- To pass: $2,425 more profit.
 
 | # | Account | Started | Ended | Trading days | Balance | Result | Payouts | Note |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Evaluation | 2026-10-19 | 2026-10-27 | 7 | $50,340 | Failed | – | reset on 2026-10-28: only $96 above the floor, too close for any trade |
 | 2 | Evaluation | 2026-10-28 | 2026-10-30 | 3 | $48,299 | Failed | – | reset on 2026-11-02: only $299 above the floor, too close for any trade |
-| 3 | Evaluation | 2026-11-02 | 2026-11-06 | 4 | $50,652 | In progress | – |  |
+| 3 | Evaluation | 2026-11-02 | 2026-11-09 | 5 | $50,575 | In progress | – |  |
 
 ## Opening range (tracked, not traded)
 
@@ -48,6 +48,7 @@ Opening range (9:30-10:00, tracked, not traded): -$515 over 4 trades in 5 sessio
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
+| 2026-11-09 | gold long | -$77 |
 | 2026-11-06 | gold short, nasdaq skipped, daily profit cap reached | $655 |
 | 2026-11-05 | gold long, nasdaq skipped, daily profit cap reached | $655 |
 | 2026-11-04 | gold long, nasdaq skipped, risk too big for today's limits | $357 |
