@@ -1,136 +1,76 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-08 19:00 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-09 04:54 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-08.md)
-- **Evening thread:** ✅ ready (below), reminder at 7 PM
-- **Claude cost this month:** $0.076 (16 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-09.md)
+- **Evening thread:** ⏳ about 6:30 PM New York time
+- **Claude cost this month:** $0.082 (17 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Sunday Nov 08)
-
-What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
-
-**Post 1 of 5 · Intro** (191/280)
-```text
-1/ Cash Flow Brief: Evening, Nov 8 🌙
-
-Iran strike talk, rate-hike bets and a weekend crypto dip are the biggest things for your wallet today.
-
-What happened today and what to watch Monday 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (270/280)
-```text
-2/ Politics & world: Reuters headline: Trump says fresh Iran attacks 'unlikely'. NBC: Jeffries a 'hard yes' on impeaching Hegseth.
-
-Why it matters: Iran news moves oil and gas prices.
-
-Tomorrow: Watch if Monday's oil open holds. If strikes resume, fuel costs could rise.
-```
-
-**Post 3 of 5 · 💵 Economy** (270/280)
-```text
-3/ Economy: Bloomberg headline: gold holds its decline as US jobs data fans December rate hike bets.
-
-Why it matters: rate hike bets can mean higher mortgage and loan rates.
-
-Tomorrow: No major events Monday. Tuesday 8:30 AM NY: US CPI, forecast 0.3% m/m, previous 0.6%.
-```
-
-**Post 4 of 5 · 📈 Stocks** (269/280)
-```text
-4/ Stocks: US markets closed today. S&P 500 futures 7,395.00 (-0.1%), Nasdaq futures 26,931.25 (-0.6%).
-
-Why it matters: index funds and retirement accounts hold these stocks.
-
-Tomorrow: Stocks open 9:30 AM NY. Watch if AI trades halt the sell-off, per Moomoo headline.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (324/280)  ⚠️ **324/280: too long, trim before posting**
-```text
-5/ Crypto: BTC 74,706.28 (-1.4%), ETH 2,122.91 (-5.1%), SOL 86.43 (-3.6%). The Defiant: BTC trades below Strategy's $75,451 average purchase price. Why it matters: falling coins can shrink crypto retirement holdings fast. Next: Crypto trades 24/7. Watch whether BTC stays below Strategy's average cost. Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(206/280)
-```text
-Sources: Reuters, NBC News, Bloomberg, The National, Moomoo, The Defiant (headlines); Yahoo Finance (futures and prices); CoinGecko; free economic calendar feed
-Not financial advice. News and analysis only.
-```
-
-<details><summary>Prices used</summary>
-
-```text
-S&P 500 futures: 7,395.00 (-0.1% vs the last close)
-Nasdaq futures: 26,931.25 (-0.6% vs the last close)
-Oil (WTI): 90.37 (-0.5% vs the last close)
-Gold: 4,069.30 (-0.1% vs the last close)
-Bitcoin: 74,706.28 (-1.4% vs the last close)
-Ether: 2,122.91 (-5.1% vs the last close)
-Solana: 86.43 (-3.6% vs the last close)
-Stock markets: closed today; futures reopened at 6 PM NY; the stock market opens Monday 9:30 AM NY
-```
-</details>
-
-## 📋 This morning's posts, ready to copy (Sunday Nov 08)
+## 📋 Today's posts, ready to copy (Monday Nov 09)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
-**Post 1 of 5 · Intro** (198/280)
+**Post 1 of 5 · Intro** (212/280)
 ```text
-1/ Cash Flow Brief, Nov 8 ☀️
+1/ Cash Flow Brief, Nov 9 ☀️
 
-Trump's Iran decision, a new Congress and a chip-stock rout are the biggest things for your wallet today.
+Iran talks, a reported US strike on an Iranian island, and tomorrow's inflation report are the big money stories today.
 
 What happened, why it matters, and what could happen next 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (245/280)
+**Post 2 of 5 · 🌍 World & politics** (251/280)
 ```text
-2/ Politics: Trump will decide soon on new Iran strikes. Schumer says Democrats will end the war. Why it matters: oil and gas prices track this, hitting your budget. Next: strikes could lift oil and gold. War powers vote unlikely before January.
+2/ Trump says renewed Iran attacks are 'highly unlikely' if talks progress; Rubio called demands 'outrageous and ridiculous.' Why it matters: oil, gas and shipping costs hinge on Strait of Hormuz. Next: if talks stall, expect strikes and an oil spike.
 ```
 
-**Post 3 of 5 · 💵 Economy** (241/280)
+**Post 3 of 5 · 💵 Economy** (250/280)
 ```text
-3/ Economy: No data overnight. US CPI Tuesday 8:30 AM, forecast 0.3% m/m, previous 0.6%. Why it matters: CPI shapes interest rates, mortgage costs and the dollar. Next: CPI above 0.3% could fade rate-cut hopes. Watch Core CPI, forecast 0.2%.
+3/ October CPI lands Tuesday at 8:30 AM. Forecast 0.3% m/m vs 0.6% before; core 0.2% vs 0.3%. Why it matters: cooler inflation eases pressure on prices, mortgages and savings rates. Next: if inflation runs hot, rate-hike bets and mortgage costs rise.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (257/280)
+**Post 4 of 5 · 📈 Stocks** (249/280)
 ```text
-4/ Stocks: Philadelphia semiconductor index fell 12.3% Thursday, worst day since March 2020. Nasdaq 100 fell 6.3%. Why it matters: index funds and retirement accounts hold these chip names. Next: if Asia's selling continues, US AI stocks may stay pressured.
+4/ AMD jumped 11.04% and Intel 7.71% Fri, but the Philadelphia Semiconductor Index fell 15% this week. Index funds and 401(k)s hold these, so swings hit retirement. Next: CoreWeave reports Nov 10. If China's rare earth pause ends, watch MP and USAR.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (271/280)
+**Post 5 of 5 · 🪙 Crypto** (224/280)
 ```text
-5/ Crypto: BTC $75,849 (-2.7% weekly), Fear (28). Dormant wallet bought 3,009 BTC Nov 6; US spot BTC ETFs saw $430.2M outflows Nov 5. Why: CLARITY Act stalled, so US crypto rules look far off. Next: Senate returns Nov 9; Pieverse lockup ends Nov 14. Not financial advice.
+5/ Crypto: Bitcoin fell to $73,708, its lowest since August. Ether dropped about 5%.
+
+Why it matters: your holdings move with tech stocks.
+
+Next: if tech selling continues, watch for more liquidations.
+
+Not financial advice.
 ```
 
 **Reply under post 5 · sources**
-(149/280)
+(158/280)
 ```text
-Sources: Reuters, CNBC, CoinDesk, Yahoo Finance, Lookonchain, CoinGecko live data, Fear and Greed Index
+Sources: Reuters, CNN, Bloomberg, Axios, BigGo Finance, StockTitan, CoinGecko live data, Yahoo Finance consensus
 Not financial advice. News and analysis only.
 ```
 
-### Midday take (12-1 PM): Trump's pending decision on new strikes on Iran
+### Midday take (12-1 PM): Iran talks and the Strait of Hormuz
 
-(240/280)
+(213/280)
 ```text
-Trump will decide soon on new Iran strikes, and Gulf states are bracing. Why it matters: oil and gas prices hit your wallet first. If strikes happen, fuel and gold could move sharply at the reopen. Watch Monday's open. Not financial advice.
+Why this matters for your wallet: Hormuz sets oil prices, and oil feeds gas, shipping and grocery costs. Trump says renewed strikes are 'highly unlikely' if talks progress. Watch for a Hormuz deal or more strikes.
 ```
 
 <details><summary>🎬 Video script (30-60 sec)</summary>
 
 ```text
-Your gas bill could feel an Iran decision before the stock market does. Trump told reporters he will decide soon whether to attack Iran again, and Gulf states are bracing. Oil and gold are the first places to watch. Democrats now control Congress, but they have limited options until January, so the war and spending fight is still open. Next up is US CPI on Tuesday at 8:30 AM, forecast at 0.3 percent. That number shapes interest rates, mortgages and prices. On Thursday, chip stocks had their worst day since 2020, and many index funds hold those names. Bitcoin is near 75 thousand dollars, and sentiment is in fear. Not financial advice. Follow for tomorrow's brief.
+Your gas, mortgage and 401k could move this week. Here's what changed overnight. Trump says renewed attacks on Iran are highly unlikely if talks progress, but Bloomberg reports limited US strikes on an Iranian island in the Strait of Hormuz. Oil and shipping risk are back on the table. In stocks, chips bounced Friday, but the semiconductor index still fell 15% for the week. In crypto, bitcoin hit its lowest level since August, around $73,700. Tomorrow at 8:30 AM, October CPI lands. A hotter number could push rate expectations up, so watch it. Not financial advice. Follow for tomorrow's brief.
 ```
 </details>
 
-**Coming up:** Markets are closed; watch the US open on Monday Nov 9 for the reaction to any Iran decision, the same day the Senate returns.
+**Coming up:** Today's close: no major US economic data is scheduled, so watch Iran and Hormuz headlines; next is Tuesday's 8:30 AM CPI.
 
 ## Topics covered, last 14 days
 
@@ -138,6 +78,7 @@ Your gas bill could feel an Iran decision before the stock market does. Trump to
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Mon Nov 09](reports/x-posts/2026-11-09.md) | ✅ | ✅ | ✅ | ✅ | — | Iran talks and the Strait of Hormuz |
 | [Sun Nov 08](reports/x-posts/2026-11-08.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Trump's pending decision on new strikes on Iran |
 | [Sat Nov 07](reports/x-posts/2026-11-07.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Iran and tanker mines in the Strait of Hormuz |
 | [Fri Nov 06](reports/x-posts/2026-11-06.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Chip rout: Philadelphia semiconductor index down 12.3% on Thursday |
@@ -151,19 +92,18 @@ Your gas bill could feel an Iran decision before the stock market does. Trump to
 | [Thu Oct 29](reports/x-posts/2026-10-29.md) | ✅ | ✅ | ✅ | ✅ | ✅ | The Fed held at 3.75% to 4% with two votes for a hike |
 | [Wed Oct 28](reports/x-posts/2026-10-28.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's Fed and Bank of Canada decisions |
 | [Tue Oct 27](reports/x-posts/2026-10-27.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US-Iran war and oil prices |
-| [Mon Oct 26](reports/x-posts/2026-10-26.md) | ⏭️ | ⏭️ | ⏭️ | ⏭️ | ✅ |  |
 
 ## Are the source briefs working? (last 7 days)
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Mon 02 | Tue 03 | Wed 04 | Thu 05 | Fri 06 | Sat 07 | Sun 08 |
+| Brief | Tue 03 | Wed 04 | Thu 05 | Fri 06 | Sat 07 | Sun 08 | Mon 09 |
 |---|---|---|---|---|---|---|---|
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Stocks | ✅ | · | ✅ | · | ✅ | · | · |
+| Stocks | · | ✅ | · | ✅ | · | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | ✅ | · | · |
-| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | ✅ |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | ✅ | · | · | · |
+| Gold futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
 
