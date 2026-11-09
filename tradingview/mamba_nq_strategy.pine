@@ -14,7 +14,10 @@
 //   with a push: its body at least as big as the average body of those
 //   6 candles.
 // - Stop: the far end of the breakout candle (its low for a long).
-// - Target: 1 x the risk (1:1), all contracts at once. In and out.
+// - Partials (since 2026-11-08, like the main bot): sell 2 contracts at
+//   each of 3 targets, 30 / 60 / 90 points from the entry. After Target 1
+//   the stop moves to the entry (breakeven); after Target 2 it moves to
+//   Target 1.
 // - One trade a day. Anything still open at 3:55 PM is closed.
 // Fees: $0.50 per contract each way, like the LIVE 50K script.
 strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
@@ -24,10 +27,12 @@ strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
      commission_type = strategy.commission.cash_per_contract, commission_value = 0.5)
 
 // ---------------- SETTINGS ----------------
-contracts   = input.int(6, "Contracts per trade", minval = 1, maxval = 40)
+q1          = input.int(2, "Contracts to sell at Target 1", minval = 1, maxval = 10)
+q2          = input.int(2, "Contracts to sell at Target 2", minval = 1, maxval = 10)
+q3          = input.int(2, "Contracts to sell at Target 3", minval = 1, maxval = 10)
+spacing     = input.float(30, "Points between targets", minval = 1)
 lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
 push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
-targetR     = input.float(1.0, "Target: this many times the risk", minval = 0.1, step = 0.1)
 watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = never before 9:30)", minval = 0)
 watchAfter  = input.int(90, "Until this many minutes after 9:30 (90 = 11:00 AM)", minval = 5)
 startFrom   = input.time(timestamp("2026-09-04T00:00:00-04:00"), "Count trades from (New York time)")
@@ -51,38 +56,68 @@ body    = math.abs(close - open)
 longSig  = close > top and close > open and body >= push * avgBody
 shortSig = close < bottom and close < open and body >= push * avgBody
 
-var bool  traded = false
+contracts = q1 + q2 + q3
+var bool  traded  = false
 var float stopLvl = na
-var float tgtLvl  = na
 var float entLvl  = na
+var float t1Lvl   = na
+var float t2Lvl   = na
+var float t3Lvl   = na
+var int   dir     = 0
+var int   entryBar = 0
+var int   moved   = 0      // 1 = stop at breakeven, 2 = stop at Target 1
 if ta.change(dayofmonth(time, NY)) != 0
     traded := false
 
 px(float p) => str.tostring(p, format.mintick)
 
+winMsg(string tgt, int q, float lvl) =>
+    syminfo.ticker + " MAMBA: " + tgt + " hit, sold " + str.tostring(q) + " at " + px(lvl)
+stopMsg(int q, float lvl) =>
+    syminfo.ticker + " MAMBA: stop hit, closed " + str.tostring(q) + " at " + px(lvl)
+
+// Places (or moves) the three exit orders with one stop for all of them.
+setExits(string id, float stopPx, bool all) =>
+    if all
+        strategy.exit("T1", id, qty = q1, limit = t1Lvl, stop = stopPx, comment_profit = "MAMBA T1", comment_loss = "MAMBA stop",
+             alert_profit = winMsg("Target 1", q1, t1Lvl), alert_loss = stopMsg(q1, stopPx))
+    strategy.exit("T2", id, qty = q2, limit = t2Lvl, stop = stopPx, comment_profit = "MAMBA T2", comment_loss = "MAMBA stop",
+         alert_profit = winMsg("Target 2", q2, t2Lvl), alert_loss = stopMsg(q2, stopPx))
+    strategy.exit("T3", id, qty = q3, limit = t3Lvl, stop = stopPx, comment_profit = "MAMBA T3", comment_loss = "MAMBA stop",
+         alert_profit = winMsg("Target 3", q3, t3Lvl), alert_loss = stopMsg(q3, stopPx))
+
 if inWatch and not traded and strategy.position_size == 0
-    if longSig and close - low > 0
-        risk = close - low
-        tgt  = close + targetR * risk
-        strategy.entry("Long", strategy.long, qty = contracts, comment = "MAMBA BUY " + str.tostring(contracts),
-             alert_message = syminfo.ticker + " MAMBA: BUY " + str.tostring(contracts) + " at " + px(close) + ", stop " + px(low) + ", target " + px(tgt))
-        strategy.exit("Out", "Long", limit = tgt, stop = low, comment_profit = "MAMBA target", comment_loss = "MAMBA stop",
-             alert_profit = syminfo.ticker + " MAMBA: target hit at " + px(tgt), alert_loss = syminfo.ticker + " MAMBA: stop hit at " + px(low))
-        traded  := true
-        entLvl  := close
-        stopLvl := low
-        tgtLvl  := tgt
-    else if shortSig and high - close > 0
-        risk = high - close
-        tgt  = close - targetR * risk
-        strategy.entry("Short", strategy.short, qty = contracts, comment = "MAMBA SELL " + str.tostring(contracts),
-             alert_message = syminfo.ticker + " MAMBA: SELL SHORT " + str.tostring(contracts) + " at " + px(close) + ", stop " + px(high) + ", target " + px(tgt))
-        strategy.exit("Out", "Short", limit = tgt, stop = high, comment_profit = "MAMBA target", comment_loss = "MAMBA stop",
-             alert_profit = syminfo.ticker + " MAMBA: target hit at " + px(tgt), alert_loss = syminfo.ticker + " MAMBA: stop hit at " + px(high))
-        traded  := true
-        entLvl  := close
-        stopLvl := high
-        tgtLvl  := tgt
+    d = longSig and close - low > 0 ? 1 : shortSig and high - close > 0 ? -1 : 0
+    if d != 0
+        stopPx = d == 1 ? low : high
+        id     = d == 1 ? "Long" : "Short"
+        t1Lvl  := close + d * spacing
+        t2Lvl  := close + d * 2 * spacing
+        t3Lvl  := close + d * 3 * spacing
+        strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = contracts, comment = "MAMBA " + (d == 1 ? "BUY " : "SELL ") + str.tostring(contracts),
+             alert_message = syminfo.ticker + " MAMBA: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(contracts) + " at " + px(close) + ", stop " + px(stopPx) + ", targets " + px(t1Lvl) + " / " + px(t2Lvl) + " / " + px(t3Lvl))
+        setExits(id, stopPx, true)
+        traded   := true
+        dir      := d
+        entLvl   := close
+        stopLvl  := stopPx
+        entryBar := bar_index
+        moved    := 0
+
+// ---- Manage the open trade: Target 1 touched -> stop to breakeven;
+// Target 2 touched -> stop to Target 1 ----
+if strategy.position_size != 0 and bar_index > entryBar
+    id = dir == 1 ? "Long" : "Short"
+    t2Touched = dir == 1 ? high >= t2Lvl : low <= t2Lvl
+    t1Touched = dir == 1 ? high >= t1Lvl : low <= t1Lvl
+    if moved < 2 and t2Touched
+        setExits(id, t1Lvl, false)
+        stopLvl := t1Lvl
+        moved   := 2
+    else if moved < 1 and t1Touched
+        setExits(id, entLvl, false)
+        stopLvl := entLvl
+        moved   := 1
 
 if strategy.position_size != 0 and time >= closeT
     strategy.close_all(comment = "MAMBA 3:55 close", alert_message = syminfo.ticker + " MAMBA: closed the rest at " + px(close))
@@ -95,7 +130,9 @@ bgcolor(inWatch ? color.new(color.yellow, 95) : na, title = "MAMBA watch window"
 inTrade = strategy.position_size != 0 or nz(strategy.position_size[1]) != 0
 plot(inTrade ? entLvl : na,  "MAMBA entry",  color.new(color.white, 0), 2, plot.style_circles)
 plot(inTrade ? stopLvl : na, "MAMBA stop",   color.new(color.orange, 0), 2, plot.style_circles)
-plot(inTrade ? tgtLvl : na,  "MAMBA target", color.new(color.lime, 0), 2, plot.style_circles)
+plot(inTrade ? t1Lvl : na,   "MAMBA target 1", color.new(color.lime, 40), 1, plot.style_circles)
+plot(inTrade ? t2Lvl : na,   "MAMBA target 2", color.new(color.lime, 20), 1, plot.style_circles)
+plot(inTrade ? t3Lvl : na,   "MAMBA target 3", color.new(color.lime, 0),  2, plot.style_circles)
 
 // Name tag (top left), so it is clear which script this is.
 var table tag = table.new(position.top_left, 1, 1, bgcolor = color.new(color.yellow, 20))

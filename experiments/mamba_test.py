@@ -47,8 +47,34 @@ def trade(candles, i, d, stop, target_r, pv):
     return d * (last - entry) * pv * CONTRACTS - FEE * CONTRACTS, candles[-1][0]
 
 
+def trade_partials(candles, i, d, stop, targets, plan, moves, pv):
+    """Like trade(), but sells plan[n] contracts at targets[n] (prices) and
+    moves the stop after a target: moves = {1: "entry", 2: 1} means
+    breakeven after Target 1, Target 1's price after Target 2."""
+    entry = candles[i][1].close
+    left, banked, hit = sum(plan), 0.0, 0
+    for t, c in candles[i + 1:]:
+        if (c.low <= stop) if d == 1 else (c.high >= stop):
+            banked += d * (stop - entry) * pv * left
+            return banked - FEE * sum(plan), t
+        while hit < len(targets) and ((c.high >= targets[hit]) if d == 1 else (c.low <= targets[hit])):
+            banked += d * (targets[hit] - entry) * pv * plan[hit]
+            left -= plan[hit]
+            hit += 1
+            rule = moves.get(hit)
+            if rule == "entry":
+                stop = entry
+            elif rule is not None:
+                stop = targets[rule - 1]
+        if left == 0:
+            return banked - FEE * sum(plan), t
+    banked += d * (candles[-1][1].close - entry) * pv * left
+    return banked - FEE * sum(plan), candles[-1][0]
+
+
 def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
-          target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1):
+          target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1,
+          exits=None, moves=None):
     ev = R.timeline(data[instrument])
     last = ev[-1][0]
     first = (last - timedelta(days=days)).date()
@@ -89,7 +115,15 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
                 stop = (bottom if d == 1 else top) - d * room
             else:                                   # the breakout candle's far end
                 stop = (c.low if d == 1 else c.high) - d * room
-            net, out_at = trade(cs, i, d, stop, target_r, pv)
+            if exits:
+                kind, steps = exits
+                entry = c.close
+                size = abs(entry - stop) if kind == "R" else 1.0
+                targets = [entry + d * k * size for k in steps]
+                net, out_at = trade_partials(cs, i, d, stop, targets, [2, 2, 2],
+                                             moves or {}, pv)
+            else:
+                net, out_at = trade(cs, i, d, stop, target_r, pv)
             results.append(net)
             taken += 1
             if taken >= max_trades or net > 0:
