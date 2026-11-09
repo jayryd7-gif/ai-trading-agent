@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-08 21:11 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-09 03:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,11 +17,11 @@ Last updated 2026-11-08 21:11 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -262,61 +262,67 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-08, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-09, event risk Medium</b></summary>
 
 #### Top things for today
-1. **Iran decision pending.** Trump told reporters Thursday he will decide soon whether to attack Iran again. Gulf states are still bracing for escalation. (CNBC) Gulf markets fell as traders waited for his next move (Reuters, headline only). Why it matters: energy prices, gold safe-haven demand and risk appetite.
-2. **US embassies warn of possible rapid Mideast escalation** (JNS.org, headline only). Why it matters: oil and shipping risk.
-3. **Democrats won Congress.** Democrats took full control of Congress on Tuesday. Their options are limited until they take office in January. Why it matters: fiscal policy, war funding and the legislative agenda.
-4. **US CPI is Tuesday at 8:30 AM.** Why it matters: rates and the dollar.
-5. **Crude oil sold off last week.** Investors hoped the Democratic win would force an end to the war. (CNBC) Why it matters: inflation expectations.
+1. **Iran talks and Trump's comments.** Trump told CNN on Sunday that renewed attacks are "highly unlikely" if talks progress on the nuclear program and reopening the Strait of Hormuz. Rubio said Iran's demands are unacceptable, and in some cases "outrageous and ridiculous." (CNN) Why it matters: oil, shipping risk and safe-haven demand.
+2. **Limited US strikes on an Iranian island.** Bloomberg reports the US launched limited attacks on an Iranian island in the Strait of Hormuz shortly after Trump's comments. Why it matters: energy and shipping risk.
+3. **US CPI is tomorrow at 8:30 AM.** The forecast for CPI is 0.3% m/m, against 0.6% before. Core is forecast at 0.2%, against 0.3% before. Why it matters: rates, the dollar and gold.
+4. **Midterm fallout.** Iranian hardliners are using the Republican midterm losses to argue that Trump is weaker and will give in on their demands. (CNN) Why it matters: policy risk and the Iran negotiating path.
+5. **Qatar mediation.** Axios reports that Qatar wants more time for Iran diplomacy, and that mediators have proposed a two-day deal. Why it matters: the odds of a Hormuz reopening, and energy.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| All day | No economic data or central bank events | Calendar | Yes |
-| Not announced | Possible Trump decision on Iran | White House (unconfirmed) | No |
+| All day | No major economic data or central bank events | Calendar | Yes |
+| Unconfirmed | G7 foreign ministers' meeting, which Rubio is travelling to attend | France | Unconfirmed (time not given) |
+| Tue 4:00 AM | FOMC Member Waller speaks | US | Yes |
+| Tue 8:30 AM | CPI m/m (forecast 0.3%, previous 0.6%) | US | Yes |
+| Tue 8:30 AM | Core CPI m/m (forecast 0.2%, previous 0.3%) | US | Yes |
 
-Coming up this week: Tue Nov 10, 8:30 AM: US CPI m/m (forecast 0.3%, previous 0.6%) and Core CPI m/m (forecast 0.2%, previous 0.3%). Thu Nov 12, 2:00 AM: UK GDP m/m (forecast 0.0%, previous 0.1%). Fri Nov 13, 8:30 AM: US PPI m/m (forecast 0.4%, previous 1.3%) and Core PPI m/m (forecast 0.3%, previous 0.7%).
+I found no Trump public events for today.
+
+Coming up this week: Thu Nov 12, 2:00 AM, UK GDP m/m (forecast 0.0%, previous 0.1%). Fri Nov 13, 8:30 AM, US PPI m/m (forecast 0.4%, previous 1.3%) and Core PPI m/m (forecast 0.3%, previous 0.7%).
 
 #### Event risk today
-High - Markets are closed, but a possible US decision on new Iran strikes and the embassy warnings could cause gaps at the open.
+Medium - No scheduled data today, but Iran talks, Hormuz incidents and the run-up to tomorrow's CPI could move energy, gold and rate expectations.
 
 #### Politics and policy
-- Democrats flipped deep-red states, including Texas and Kansas. (SCMP) The New York Times says Democrats seized control of Congress (headline only).
-- Vance said the Iran conflict was "the reason we lost." Trump acknowledged that high gas prices contributed. (Asia Times)
-- Schumer said Democrats "are going to end the war," citing Congress's spending power. A war powers resolution is unlikely before January, and Trump can veto one. (CNBC)
-- Shattered.io says the Clarity Act stalled at 49-50 (headline only). Forbes Middle East says Democrats are preparing an affordability push (headline only). Al-Monitor asks whether Democrats will block Trump's push on Turkey F-35s and sanctions relief (headline only).
-- AP says staff at the US AI safety center are reporting to the White House (headline only).
-- No Fed or Treasury news found in the feeds.
+- **Trump on Iran.** He said renewed strikes depend on whether Iran signs "a very strong agreement." He also said Iran's air defenses have been destroyed. (CNN)
+- **Trump on Vance and the midterms.** Trump said "a lot of people didn't like" Vance's comments blaming the Iran war for the midterm defeat. He said he mostly agreed with Vance but does not regret going to war. (Al Jazeera)
+- **Trump's 60 Minutes interview.** He cited the war, rising gasoline prices and public dislike of Israel as factors in the Republican losses. (Iran International)
+- **Immigration.** Trump says his immigration policy was "too tough" for voters (Al Jazeera, headline only).
+- **Press secretary.** Trump says he was "kidding" about a Dana White press secretary offer (BBC, headline only).
+- **Congress.** US Democrats plan probes of Musk, Miller and corporate America after the midterm rout (Tasnim, headline only). Congress returns for a final push on an AM radio bill (Insideradio.com, headline only).
+- **Treasury and Fed.** Nothing found beyond the calendar.
 
 #### Economics
-Nothing found. No data was released overnight. The calendar lists no events.
+- China's October inflation rate stayed below 1% (NHK, headline only).
+- Spain's economy minister is optimistic that de Cos can get the ECB's top job (MarketScreener, headline only).
+- No US data came out overnight.
 
 #### SEC, CFTC and hearings
-- GuruFocus, citing CFTC data, says gold prices dropped as speculative funds withdrew (headline only).
-- Forex Crunch says the CFTC gave exchanges 30 days to drop access limits (headline only).
-- njtoday.news says a watchdog group claims the CFTC told prediction markets to defy court orders (headline only).
-- InsuranceNewsNet says Elizabeth Warren will lead the Senate Banking Committee (headline only).
-- No SEC or CFTC press releases in the last 2 days. No hearing dates found.
+- The SEC and CFTC published no official press releases in the last 2 days.
+- The CFTC says US-regulated exchanges can begin trading individual-stock perpetual futures (TradingView, headline only).
+- Prediction markets face a dilemma over whether to follow the CFTC or the courts (Dimers, headline only). CryptoSlate has a related story on the fight over who can block Kalshi bets (headline only).
+- No US congressional hearings were found for today.
 
 #### War, trade and tariffs
-- US officials acknowledged limited strikes on Iran's Qeshm Island, near the Strait of Hormuz, on November 2. (Asia Times)
-- Trump repeated that Iran will not have a nuclear weapon. (CNBC) JNS.org says Iran's Rezaei told Trump "you lost the war and the election" (headline only).
-- One analyst says the closure of the Strait of Hormuz has a large regional spillover. (SCMP)
-- The Korea Times says potential US data center curbs pose risks to Korea's chip-driven growth (headline only).
-- No new tariff news found.
+- **Iran.** Iran's Revolutionary Guards spokesman denied on Monday that any war mines had been cleared from the Strait of Hormuz. Rubio said diplomacy has so far been unproductive. Why it matters: oil flows and shipping insurance.
+- **Gulf markets.** Reuters says Gulf stocks gained on Trump's signal against renewed Iran strikes (headline only).
+- **Other items (headlines only).** The Iran war is squeezing saffron supplies (FoodNavigator). Iraqis are wary of escalation (Al-Monitor).
+- **Tariffs and trade.** Nothing found.
 
 #### Country briefs
-- **China:** SCMP says China is urged to target sugar-rich drinks in its consumption tax overhaul (headline only).
-- **European Union:** Al Jazeera maps how France's protest wave spread across Europe (headline only).
+- **China:** Inflation stayed below 1% in October (NHK, headline only). China dismissed a spy-plot claim involving Nvidia's CEO as a smear campaign (Washington Post, headline only).
+- **European Union:** Spain's economy minister is optimistic that de Cos can get the ECB's top job (MarketScreener, headline only). DNB reports on the impact of AI on the economy (Global Regulation Tomorrow, headline only).
 - **United Kingdom:** Nothing found. GDP is due Thursday at 2:00 AM.
 - **Japan:** Nothing found.
 - **India:** Nothing found.
 - **Russia:** Nothing found.
 - **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-08-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-09-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
