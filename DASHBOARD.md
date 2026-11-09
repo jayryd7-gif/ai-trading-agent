@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-09 03:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-09 04:41 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -19,9 +19,9 @@ Last updated 2026-11-09 03:59 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 days ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 8 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -327,130 +327,133 @@ Medium - No scheduled data today, but Iran talks, Hormuz incidents and the run-u
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-08</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-09</b></summary>
 
 #### Top things today
 
-1. **Democrats won Congress, and the CLARITY Act is stalled.** AP projections had Democrats winning the House and Senate on Nov 3. The CLARITY Act has passed the House but not the Senate, where a vote to start debate failed 49 to 50 on Sept 15. (CoinDesk via Tech-Insider; Align Labs) Why it matters: US market-structure rules are unlikely soon.
-2. **A dormant whale bought BTC while ETFs saw outflows.** Lookonchain said a wallet idle for over a year bought 3,009 BTC on Nov 6. US spot Bitcoin ETFs had $430.2M in net outflows on Nov 5. (Blockonomi) Why it matters: big wallets and funds are moving in opposite directions.
-3. **Sentiment is in Fear (28).** BTC is $75,849, down 2.7% on the week. SOL is weaker, down 6.6% on the week. (Live data) Why it matters: altcoins are lagging bitcoin.
-4. **Democrats are drafting a CLARITY successor.** It could give the SEC more power and the CFTC less. Talks are preliminary and no formal bill has been released. (Crypto Times) Why it matters: the SEC-versus-CFTC split may flip.
-5. **Several big unlocks fall in the next week and a half.** Pieverse (PIEVERSE), also a top gainer, has one on Nov 14. (Cryptolaxy) Why it matters: new supply can hit thin markets.
+1. **Bitcoin and ether hit two-month lows.** Bitcoin fell to $73,708, its lowest since August, and ether dropped about 5% to $2,223. Reuters-based reports blame fears that a Democratic-led Congress will tighten crypto rules (BigGo, Reuters). Live data shows BTC at $74,114 and ETH at $2,104.73. Why it matters: the move is driven by policy fear, not just price.
+2. **Binance hack aftermath.** Reports disagree on size. One cites a $6 billion theft at Binance. Another says Binance disclosed a $634 million hack, that customer losses will be covered, and that about $2.85 billion was recovered or frozen. I could not reconcile the figures (unconfirmed). Why it matters: exchange trust is still shaky.
+3. **Tech and AI stocks are dragging crypto.** A US tech and AI selloff pushed over $1 billion in liquidations. Bitcoin ETFs also saw heavy outflows. Why it matters: crypto is trading with risk stocks.
+4. **Fresh liquidations.** Another selloff in BTC, ETH and XRP triggered nearly $1 billion in liquidations. The largest single order was an ETH/USDT position of almost $50 million. Why it matters: leveraged longs are being flushed, and ETH is hit hardest.
+5. **US inflation data is due Tuesday.** October CPI comes out Tuesday at 8:30 a.m. ET, the last inflation reading before the Fed's December 9 decision. Why it matters: it could move a fragile market. Fear and Greed is 29.
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Yellow (YELLOW) | +10.4% | No news found. | Volume is only $1.3M on a $122.8M cap. The pump has no news. |
-| edgeX (EDGE) | +8.5% | No news found. | EDGE had a token unlock on Nov 2. (TokenPost) It is down 5.2% on the week. Volume is low. |
-| Meteora (MET) | +7.2% | No news found for today. Past rallies tracked protocol fees and rewards. (AMBCrypto) | Volume is good at $54.2M. A rally with no news today. |
-| Cap (CAP) | +7.0% (+37.9% 7d) | No news found. | A 38% weekly run with no known cause. |
-| Pieverse (PIEVERSE) | +3.0% (+38.1% 7d) | AMBCrypto said there was no clear coin-specific catalyst, and chatter pointed to a short squeeze. | A team and investor 12-month lockup ends Nov 14. (Cryptolaxy) |
-| Kinetiq (KNTQ) | +3.8% (+4.6% on the trending list) | No news found. | A core contributor and investor cliff ends Nov 27. (Cryptolaxy) |
+| Ritual (RITUAL) | +59.4% (7d +230.4%) | Its AI-focused Layer 1 mainnet launched October 26. A Coinbase listing also added energy. No clear news explains today's jump. | Very new. $111M cap. An earlier CoinMarketCap note cited a 63% drop over seven days. Extreme volatility. |
+| Pieverse (PIEVERSE) | +13.7% (7d +55.4%) | No news found. | Pump with no news. Little coverage. |
+| Janction (JCT) | +154.2% (trending) | No news found. | Rank 255. Huge move with no explanation. |
+| Ape and Pepe (APEPE) | +8.8% | Meme coin. It rose with Pepe, but I found no news. | Meme coin. Thin liquidity risk. |
+| BCGame Coin (BC) | +4.4% | No news found. | Only $158.4K in 24h volume against a $127.4M cap. |
+| Pepe (PEPE) | +5.4% | Meme strength in a down market. No news found. | Pure sentiment. Large, so less extreme than the others. |
 
-I found no new meme coin pumping hard. In the trending list, UnifAI (UAI) fell 40.1%, STONK fell 29.3% and Pons (PONS) fell 13.3%. These are very large drops in small coins.
+Note: STONK (-27.1%) and Pons (-10.9%) are trending but falling. Both are small caps.
 
 #### Whale watch
 
+Exact times were not given in the sources, so all times are unconfirmed.
+
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 6 (date only, exact time not given) | BTC | ~$228M (3,009 BTC) | Dormant wallet (Lookonchain) | Bought |
-| Nov 6 (date only, exact time not given) | BTC | 1,286 BTC, USD value not stated | Whale (Lookonchain) | Off an exchange (Binance) |
+| ~Nov 8 (unconfirmed) | ETH | $19.7M | Wallet 0x32c6 (Lookonchain) | Bought |
+| ~Nov 7–8 (unconfirmed) | BTC | $228M | Whale dormant over a year (Lookonchain) | Bought |
+| Nov 7 | USDC | $310M | Unidentified wallets (Whale Alert) | Wallet to wallet |
 
-These are from Nov 6, not the last 24 hours. I found no confirmed moves of $10M or more from the last day.
+The BTC buy may fall outside the last 24 hours. A separate $7 million Hyperliquid deposit for a Bitcoin long was below the $10M cutoff.
 
 #### Government and regulation
 
-- **CLARITY Act (H.R. 3633):** It is a market-structure bill that sets rules for exchanges and digital-asset firms and defines SEC and CFTC roles. The Senate adjourned on Nov 5 until Nov 9. No vote is scheduled. It expires Jan 3 unless the Senate passes it in the lame-duck session. (Align Labs; CryptoTicker)
-- **Possible new House Democratic bill:** It would build on Maxine Waters' 2025 investor-rights amendment. There is no finalized draft or timetable. It is for the next Congress in January 2027. (Bitcoin Foundation; KuCoin News)
-- **SEC:** 2026 actions include the August "Regulation Crypto Assets" proposal, the Sept 17 Innovation Exemption and the Oct 1 custody proposal. Comments on the custody proposal are due Dec 7. (Cryptonomist)
-- **Committees:** Elizabeth Warren is in line to chair Senate Banking. Sherrod Brown could take a senior post on Senate Agriculture, which oversees the CFTC. (CryptoTicker; Crypto Times)
-- **Other countries and CFTC actions:** Nothing found.
+- **CLARITY Act (market structure):** It stalled in the Senate in September. Paradigm's Justin Slaughter calls it dead in the lame-duck session (Unchained).
+- **House Democratic draft (unnamed):** House Democrats are discussing a broader bill for the next Congress. It would expand the SEC's role, narrow the CFTC's, and add ethics limits on Trump and other officials. These remain ideas, not adopted rules. (TokenPost, Bitbase)
+- **Committee leadership:** Elizabeth Warren is poised to chair Senate Banking. Maxine Waters is the likely House Financial Services chair (Unchained).
+- **SEC:** Comments on the SEC custody proposal are due December 7, 2026. (Cryptonomist) The SEC's proposed Regulation Crypto Assets includes startup and fundraising exemptions. (crypto.news)
+- **CFTC:** Nothing new found in the last few days.
+- **Russia:** From December 1, retail investors can buy up to 300,000 rubles a year of BTC, ETH and USDT through a Moscow Exchange intermediary. (Altcoin Buzz)
+- **EU:** The EU formed a sanctions task force. I found no further details.
 
 #### Who is buying and adopting
 
-- **Whales:** one dormant wallet bought about $228M of BTC (see above). It is not a company or a government.
-- **US government:** The Strategic Bitcoin Reserve is described as a passive vault of seized coins, about 198,000 BTC. The BITCOIN Act remains stalled. This is background from an older article (Tapbit).
-- **Companies and other countries:** I found no new purchases or stablecoin-payment announcements in the last few days.
+- **Strategy:** It bought 811 BTC from Oct. 26 to Nov. 1 for $65.5 million, at an average of $80,846. Holdings were 849,327 BTC as of Nov. 1. Saylor's Nov. 8 chart disclosed no new purchase. (TokenPost)
+- **Coinbase:** CEO Brian Armstrong said the company reached 18,000 BTC in its corporate treasury. (The Crypto Basic)
+- **Standard Chartered:** It launched tokenized bank deposits for eligible corporate clients in Hong Kong.
+- **Countries and governments buying bitcoin:** Nothing found.
 
 #### Next 7 days
 
 | Date | Event | Coin or topic |
 |---|---|---|
-| Nov 8 | Avalanche unlock, about $14.33M (Tokenomist via Bittime) | AVAX |
-| Nov 9 | Senate returns from adjournment (Align Labs) | CLARITY Act |
-| Nov 11 | Pump unlock, $27.53M (DefiLlama) | PUMP |
-| Nov 11 | Allora 160M ALLO cliff unlock (Cryptolaxy) | ALLO |
-| Nov 13 | Sei unlock, $4.5M (DefiLlama) | SEI |
-| Nov 13 | Aztec unlock, $14.3M (Tokenomist via Bittime) | AZTEC |
-| Nov 14 | Team and investor lockup ends (Cryptolaxy) | PIEVERSE |
+| Nov 10, 8:30 a.m. | October CPI release | Macro |
+| Nov 11, 3:00 | io.net unlock of about $1.21M | IO |
+| Nov 11 | Allora unlock of 160.22M ALLO, about $23.14M (pending verification) | ALLO |
+| Nov 13 | Aztec unlock of 797.5M AZTEC (pending verification) | AZTEC |
+| Nov 15 | Connex unlock of 1.32M CONX (pending verification) | CONX |
+| Nov 9–15 | About $144M across 15 altcoins, including YZY, Babylon and Aptos | Unlocks |
+| Date unconfirmed | Starknet unlock of 127M STRK (Tokenomist) | STRK |
 
-Unlock dates and dollar values differ between trackers. Treat them as unconfirmed. No ETF deadlines or hearings were found.
+The io.net unlock time as printed in the source is not clearly in New York time (unconfirmed). Mercado Bitcoin was scheduled to reopen view-only on Nov 9 (Altcoin Buzz).
 
-[Read the full brief with all the details](reports/crypto/2026-11-08-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-09-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-06</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-09</b></summary>
 
 #### Top things today
-1. **Chip rout.** The Philadelphia semiconductor index fell 12.3%, its worst day since March 2020. The Nasdaq 100 dropped 6.3% and the S&P 500 fell 4.4%. Why it matters: it sets the tone for every AI-linked name today.
-2. **Trigger was politics plus AI worries.** Selling grew after Democrats won both the House and Senate, which raised fears of slower data center buildouts. Why it matters: the risk is policy, not weak earnings.
-3. **Asia is falling too.** South Korea's KOSPI fell more than 8% on Friday and tripped its first circuit breaker before paring losses. Why it matters: the selling is global and may carry into the US open.
-4. **AppLovin (APP) bucked the trend.** It rose 31.04% to $356.10 after a strong quarter and outlook. Why it matters: strong earnings still get rewarded in this tape.
-5. **Nuclear, uranium and rare earths fell with AI.** OKLO and SMR dropped 13–15%, and VST fell 6.2% (live data). Why it matters: these names trade as AI-power plays. OKLO and VST report today.
+1. **China's rare earth pause ends Tomorrow, Nov. 10.** The legal text still ends the suspension on that date. China's commerce ministry said a wider US-China arrangement runs to Jan. 10, 2027, but it did not name rare earths (Carra Globe). Whether rare earths are covered is unconfirmed. Why it matters: it could hit MP, USAR and REMX quickly.
+2. **CoreWeave reports on Nov. 10.** The market will watch whether AI infrastructure demand and memory price outlook stay solid for the chip rally to continue (BigGo Finance). Why it matters: it is the next test for AI infrastructure names.
+3. **Chips bounced, but the week was ugly.** AMD gained 11.04% and Intel 7.71%, yet the Philadelphia Semiconductor Index fell 15% for the week. Many see the bounce as short covering and dip buying, not a confirmed bottom (BigGo Finance). Why it matters: the move may not hold.
+4. **Constellation Energy reports before the open.** The report is at 7:00 a.m. Management has said it will revisit its 2026 guidance of $11.50 to $12.50 per share (TIKR). Why it matters: it sets the tone for nuclear power names.
+5. **Nuclear stocks jumped on Friday.** Better results from Oklo and NuScale, strong Vistra earnings and a rebound after losses drove the rally (Seeking Alpha). Why it matters: it was a sector-wide move.
 
 #### Stocks to research
+
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| APP | AI/ad tech | +31.0% | Q3 EPS was $4.30 against a $4.04 consensus. Q4 revenue guidance was well above expectations. | Still down about 47% year to date. Gap risk after a big one-day move. |
-| MP | Rare earths | -6.0% (close) | Q3 revenue of $147.6M and adjusted EPS of $0.04 beat estimates. Shares were up 2.64% after hours. | Still loss-making. Government stake and possible congressional scrutiny weigh on sentiment. |
-| AMD | AI chips | -17.3% | The drop came days after a record quarter. Lisa Su expects 2027 revenue growth above 80%. | Down 28.6% in 5 days. Policy fears could keep pressure on. |
-| MU | Memory | -17.5% | The DRAM ETF sank almost 18%. | Down 29.7% in 5 days. Sector-wide selling, not company news. |
-| OKLO | Nuclear | -13.2% | Reports earnings today (live data). | Pre-revenue. Estimated revenue is only $1.1M. High volatility. |
-| VST | Nuclear/power | -6.2% | Reports earnings today. Estimates: EPS $3.08, revenue $6.0B (live data). | Down 19.9% in 5 days. |
-
-I found no IPO or new-listing movers in my searches. SPCX (-9.0%, $1.7T market cap) is on the most-active list. I found no news on it.
+| OKLO | Nuclear | +22.7% (5d -6.7%) | Narrower-than-expected Q3 loss. It also reserved capacity for large reactor parts at a planned factory. | About $2.3B raised through share offerings in nine months. Down about 68% this year. |
+| AMD | AI chips | +11.0% (5d -11.0%) | Strong earnings and data-center outlook. | The bounce looks like short covering. |
+| CEG | Nuclear power | +4.3% | Reports before the open today. EPS estimate $3.89. | Event risk. Shares fell about 17% in the month before (TIKR). |
+| USAR | Rare earths | +10.8% (5d -14.5%) | Reports today. Rare earth pause ends Nov. 10. | Small company. Revenue estimate only $13.6M. Loss expected. |
+| CRWV | AI cloud | +6.3% (5d -15.4%) | Reports Nov. 10. EPS estimate -$1.21. | Loss-making. Big swings around earnings. |
+| LEU | Uranium fuel | +17.5% | Moved with the nuclear rally. No company-specific catalyst was established for NNE or X-Energy. I found none for LEU. | Move with no news. |
+| SPCX | New stock | +8.6%, $134.27 | Space Exploration Technologies, $1.8T market cap, among the most active stocks. | I found no news on it. Limited trading history. |
 
 #### AI and tech
-- **Nvidia and chips.** Nvidia and Qualcomm each fell more than 9%. Nvidia lost almost $450B in market value. (CNBC) Nvidia reports on Nov 17.
-- **Qualcomm guidance.** Qualcomm gave a weak forecast for the current quarter. Phone chip sales fell 26% and missed estimates. The stock closed 9.49% lower.
-- **Policy fear.** Traders worry a Democratic Congress and state officials could tighten AI rules and slow data center construction. (Yahoo Finance)
-- **Neoclouds.** CoreWeave and similar firms fell for a second day. CRWV reports Nov 10.
+- **Selloff and rebound.** Stocks closed sharply lower on Nov. 5, their worst day since April 2025, as chip selling spread (CNBC via StockTitan). Thursday's drop was tied to fears that Democratic control of Congress could bring tougher AI rules (Reuters via StockTitan). Friday brought a bounce.
+- **Why the selling came.** The market blames hedge fund deleveraging and mechanical selling more than weaker AI fundamentals. Data center rules and lower Anthropic and OpenAI valuation hopes keep investors cautious (BigGo Finance).
+- **Nvidia headline.** A Yahoo Finance item referenced Nvidia probing a case involving CEO Jensen Huang. I could not confirm details.
+- **Weekly scoreboard.** Nvidia fell 8.8% on the week while Amazon rose 7.9%. Friday's bounce came on less than half the volume and faded through the session (Substack).
 
 #### Nuclear and critical minerals
-- **Rare earths.** MP's quarter beat, and it finished GM magnet qualification, with saleable deliveries starting in Q4. (SEC filing)
-- **Uranium.** UEC's US Uranium unit signed long-term sales deals with two US nuclear utilities. (Mining Weekly) UEC still fell 9.9% on Thursday.
-- **Uranium M&A.** Eagle Nuclear Energy signed a binding letter of intent to buy Noble Plains Uranium in an all-stock deal. (Mining.com)
-- **Copper.** Resolution Copper approved a $144M investment in its next phase. (Mining Weekly) FCX and SCCO fell 7.5% and 6.5% on Thursday.
-
-I found no new government deals or export limits this week.
+- **Nuclear rebound.** Oklo rose about 23% and NuScale 16% after their results (TradingView/Seeking Alpha). Meta's Ohio campus deal with Oklo is non-binding (24/7 Wall St.).
+- **China export deadline.** Licences are still required for seven heavy rare earths, including dysprosium and terbium, because that regime was never suspended (Technology.org). The gallium, germanium and antimony suspension lapses Nov. 27 (CES Intelligence).
+- **China buying mines abroad.** Beijing is pushing state-linked firms to take bigger stakes in overseas mines (CNBC).
+- **Brazil.** Brazil approved a list of 27 critical minerals on Nov. 5 (Mattos Filho).
+- I found no new US government deals today.
 
 #### Earnings
-**Results since yesterday**
-- **AppLovin (reported after the close Wednesday):** EPS of $4.30 beat the $4.03 consensus. Revenue of $2.18B beat the $2.07B estimate. The stock rose 31%.
-- **MP Materials (reported after the close Thursday):** Revenue of $147.66M beat the $117.47M estimate. EPS of $0.04 beat a $0.02 loss estimate. Shares were up modestly after hours.
-- **Qualcomm:** the forecast disappointed, and the stock fell 9.49%.
-
-**Watchlist calendar** (Yahoo Finance consensus). Timing is not confirmed in my data, so I've marked it unconfirmed.
+**Recent results:**
+- **Karman (KRMN):** EPS of 19 cents beat the 15-cent consensus, and sales of $201.6M beat $194.7M (Benzinga). It also raised its full-year sales guidance. The stock closed up 42.1%.
+- **JFrog (FROG):** Adjusted EPS of $0.32 on $179.2M revenue beat estimates of $0.23 and $165.8M (Investing.com). The stock rose 35.3%.
+- **Oklo:** the loss was narrower than expected, and the stock rose about 23%.
+- **Snap:** Q3 revenue missed expectations, and the reaction was negative (Yahoo Finance).
 
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 2026-11-06 | OKLO | unconfirmed | $-0.26 | $1.1M |
-| 2026-11-06 | VST | unconfirmed | $3.08 | $6.0B |
-| 2026-11-09 | CEG | unconfirmed | $3.88 | $9.3B |
-| 2026-11-09 | USAR | unconfirmed | $-0.15 | $13.6M |
-| 2026-11-10 | CRWV | unconfirmed | $-1.21 | $3.5B |
-| 2026-11-13 | LAC | unconfirmed | $-0.03 | n/a |
-| 2026-11-17 | NVDA | unconfirmed | $2.47 | $109.0B |
-| 2026-11-17 | SQM | unconfirmed | $2.08 | $2.2B |
+| 2026-11-09 | CEG | Before the open (7:00 a.m.) | $3.89 | $9.3B |
+| 2026-11-09 | USAR | Not found | -$0.15 | $13.6M |
+| 2026-11-10 | CRWV | Not found | -$1.21 | $3.5B |
+| 2026-11-13 | LAC | Not found | -$0.03 | n/a |
+| 2026-11-17 | NVDA | Not found | $2.47 | $109.0B |
+| 2026-11-17 | SQM | Not found | $2.16 | $2.2B |
 
 #### Smart money
-- **APP price targets:** RBC raised its target to $520 from $500 and kept Outperform. BTIG raised its target to $450 and kept Buy. Needham reiterated Buy with a $475 target. (TheStreet, AOL)
-- Insider buying, Congress trades, and analyst actions on the nuclear and mining names: nothing found.
+- **Analysts and insiders:** nothing found in the three themes.
+- **Congress trades:** nothing found.
+- **Outside the themes:** after Karman's results, Piper Sandler raised its target to $60 and Needham cut its to $50 (Benzinga).
 
-[Read the full brief with all the details](reports/stocks/2026-11-06-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-09-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
