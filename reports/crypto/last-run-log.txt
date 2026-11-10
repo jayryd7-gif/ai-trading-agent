@@ -1,3 +1,3 @@
-Saved reports/crypto/2026-11-09-crypto-brief.md
-Tokens used: 83798 in, 3612 out
-Estimated cost: $0.25
+Saved reports/crypto/2026-11-10-crypto-brief.md
+Tokens used: 84152 in, 3869 out
+Estimated cost: $0.26
