@@ -1,10 +1,10 @@
 # Paper trading summary
 
-*Updated 2026-11-09 16:27 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-09 21:51 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$786** over 19 trades (31 sessions watched)
+- Total after fees: **-$786** over 19 trades (32 sessions watched)
 - Trading days with a trade: **15**, profitable: **6**, losing: 9
 - Win rate: 42%
 - Profit factor: 0.84
@@ -30,7 +30,7 @@ Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trai
 |---|---|---|---|---|---|---|---|---|
 | 1 | Evaluation | 2026-10-19 | 2026-10-27 | 7 | $50,340 | Failed | – | reset on 2026-10-28: only $96 above the floor, too close for any trade |
 | 2 | Evaluation | 2026-10-28 | 2026-10-30 | 3 | $48,299 | Failed | – | reset on 2026-11-02: only $299 above the floor, too close for any trade |
-| 3 | Evaluation | 2026-11-02 | 2026-11-09 | 5 | $50,575 | In progress | – |  |
+| 3 | Evaluation | 2026-11-02 | 2026-11-10 | 5 | $50,575 | In progress | – |  |
 
 ## Opening range (tracked, not traded)
 
@@ -49,6 +49,7 @@ Opening range (9:30-10:00, tracked, not traded): $140 over 5 trades in 6 session
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
+| 2026-11-10 | gold no trade | $0 |
 | 2026-11-09 | gold long, nasdaq skipped, risk too big for today's limits | -$77 |
 | 2026-11-06 | gold short, nasdaq skipped, daily profit cap reached | $655 |
 | 2026-11-05 | gold long, nasdaq skipped, daily profit cap reached | $655 |
