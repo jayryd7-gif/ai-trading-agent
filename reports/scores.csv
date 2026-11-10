@@ -23,3 +23,4 @@ date,time_ny,instrument,bias,confidence,session_start,outcome,move_pct,move_poin
 2026-11-05,18:36,gold,Neutral,Low,2026-11-05 20:00,Down,-0.38,-15.50,Moved,no,yes
 2026-11-06,07:50,nasdaq,Neutral,Low,2026-11-06 09:30,Down,-0.34,-91.50,Moved,no,no
 2026-11-09,18:30,gold,Neutral,Low,2026-11-09 20:00,Down,-0.26,-10.90,Moved,yes,no
+2026-11-10,07:51,nasdaq,Neutral,Low,2026-11-10 09:30,Up,0.33,92.00,Moved,no,no

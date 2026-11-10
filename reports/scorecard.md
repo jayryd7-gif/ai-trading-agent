@@ -1,6 +1,6 @@
 # Brief scorecard
 
-Updated 2026-11-10 06:20 New York time. Scored briefs: 24. Waiting to be scored: 0.
+Updated 2026-11-10 17:02 New York time. Scored briefs: 25. Waiting to be scored: 0.
 
 > **Too few directional calls to trust any of this yet.** There are 3 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
@@ -11,7 +11,7 @@ Updated 2026-11-10 06:20 New York time. Scored briefs: 24. Waiting to be scored:
 - Session ended flat (neither): 0
 - Hit rate when the session was decisive: **67%**
 
-For comparison: across all scored sessions, price went up in 45% of the decisive ones (10 of 22). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 48% of the decisive ones (11 of 23). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
@@ -31,12 +31,13 @@ For comparison: across all scored sessions, price went up in 45% of the decisive
 ## Neutral calls
 
 - Session stayed calm (flat): 2
-- Session moved up or down anyway: 19
+- Session moved up or down anyway: 20
 
 ## Most recent scored briefs
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-10 | nasdaq | Neutral | Low | 2026-11-10 09:30 | Up (0.33%) | Moved |
 | 2026-11-09 | gold | Neutral | Low | 2026-11-09 20:00 | Down (-0.26%) | Moved |
 | 2026-11-06 | nasdaq | Neutral | Low | 2026-11-06 09:30 | Down (-0.34%) | Moved |
 | 2026-11-05 | gold | Neutral | Low | 2026-11-05 20:00 | Down (-0.38%) | Moved |
@@ -51,4 +52,3 @@ For comparison: across all scored sessions, price went up in 45% of the decisive
 | 2026-10-27 | nasdaq | Neutral | Low | 2026-10-27 09:30 | Up (0.85%) | Moved |
 | 2026-10-26 | nasdaq | Neutral | Low | 2026-10-27 09:30 | Up (0.85%) | Moved |
 | 2026-10-23 | nasdaq | Neutral | Low | 2026-10-23 09:30 | Up (0.32%) | Moved |
-| 2026-10-22 | gold | Bearish | Medium | 2026-10-22 20:00 | Down (-0.31%) | Right |
