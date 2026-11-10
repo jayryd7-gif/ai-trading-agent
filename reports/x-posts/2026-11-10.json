@@ -48,5 +48,32 @@
       "Bitcoin ~$74K | ETF outflows $1.177B last week",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,522.27 (-0.4% vs the last close)\nNasdaq: 25,069.79 (-0.7% vs the last close)\nDow: 52,233.73 (-0.3% vs the last close)\n10-yr yield: 4.98% (+0.12 pts vs the last close)\nOil (WTI): 86.44 (-0.5% vs the last close)\nGold: 4,040.50 (-1.8% vs the last close)\nBitcoin: 73,537.21 (-2.2% vs the last close)\nEther: 2,043.06 (-4.1% vs the last close)\nSolana: 82.68 (-4.5% vs the last close)",
+    "written": "2026-11-10 18:04",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Nov 10 🌙\n\nToday's 8:30 AM CPI inflation report matters most for your wallet. WaPo said the pace slowed in October, while Bloomberg said prices kept rising.\n\nWhat happened today and what to watch Wednesday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Republicans elected Jim Jordan House minority leader. Russia and Ukraine began US-backed talks in Abu Dhabi.\n\nWhy it matters: energy supply risk can move fuel prices.\n\nTomorrow: Watch day 2 of Abu Dhabi talks for oil moves."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: CPI headlines conflict. WaPo says the pace slowed in October; Bloomberg says prices keep rising.\n\nWhy it matters: the 10-yr yield rose to 4.98%, which can push mortgage rates up.\n\nTomorrow: Watch if yields hold. Friday's PPI lands at 8:30 AM."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: S&P 500 7,522.27 (-0.4%), Nasdaq 25,069.79 (-0.7%). Nvidia plunged 5.5% amid a CEO scandal, per Globe and Mail.\n\nWhy it matters: tech swings can move 401(k)s fast.\n\nTomorrow: AMC, monday.com and Sanmina report. Watch if Nvidia's coming earnings steady chips."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Crypto: Bitcoin 73,537.21 (-2.2%), Ether 2,043.06 (-4.1%). Reports say the CFTC may charge Kalshi.\n\nWhy it matters: prediction-market rules can shape which products you can trade.\n\nTomorrow: Watch for any CFTC move on Kalshi.\n\nNot financial advice."
+      }
+    ],
+    "reply_evening": "Sources: WaPo, Bloomberg, The Guardian, Globe and Mail, Motley Fool (headlines); Yahoo Finance (prices, may be delayed); Seeking Alpha, NY Post (Kalshi); CFTC and SEC press releases."
   }
 }

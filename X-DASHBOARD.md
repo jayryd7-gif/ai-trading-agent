@@ -1,16 +1,89 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-10 04:50 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-10 18:04 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-10.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.091 (19 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.094 (20 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Tuesday Nov 10)
+## 🌙 Tonight's thread, ready to copy (Tuesday Nov 10)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (237/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 10 🌙
+
+Today's 8:30 AM CPI inflation report matters most for your wallet. WaPo said the pace slowed in October, while Bloomberg said prices kept rising.
+
+What happened today and what to watch Wednesday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (244/280)
+```text
+2/ Politics & world: Republicans elected Jim Jordan House minority leader. Russia and Ukraine began US-backed talks in Abu Dhabi.
+
+Why it matters: energy supply risk can move fuel prices.
+
+Tomorrow: Watch day 2 of Abu Dhabi talks for oil moves.
+```
+
+**Post 3 of 5 · 💵 Economy** (254/280)
+```text
+3/ Economy: CPI headlines conflict. WaPo says the pace slowed in October; Bloomberg says prices keep rising.
+
+Why it matters: the 10-yr yield rose to 4.98%, which can push mortgage rates up.
+
+Tomorrow: Watch if yields hold. Friday's PPI lands at 8:30 AM.
+```
+
+**Post 4 of 5 · 📈 Stocks** (269/280)
+```text
+4/ Stocks: S&P 500 7,522.27 (-0.4%), Nasdaq 25,069.79 (-0.7%). Nvidia plunged 5.5% amid a CEO scandal, per Globe and Mail.
+
+Why it matters: tech swings can move 401(k)s fast.
+
+Tomorrow: AMC, monday.com and Sanmina report. Watch if Nvidia's coming earnings steady chips.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (251/280)
+```text
+5/ Crypto: Bitcoin 73,537.21 (-2.2%), Ether 2,043.06 (-4.1%). Reports say the CFTC may charge Kalshi.
+
+Why it matters: prediction-market rules can shape which products you can trade.
+
+Tomorrow: Watch for any CFTC move on Kalshi.
+
+Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(228/280)
+```text
+Sources: WaPo, Bloomberg, The Guardian, Globe and Mail, Motley Fool (headlines); Yahoo Finance (prices, may be delayed); Seeking Alpha, NY Post (Kalshi); CFTC and SEC press releases.
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,522.27 (-0.4% vs the last close)
+Nasdaq: 25,069.79 (-0.7% vs the last close)
+Dow: 52,233.73 (-0.3% vs the last close)
+10-yr yield: 4.98% (+0.12 pts vs the last close)
+Oil (WTI): 86.44 (-0.5% vs the last close)
+Gold: 4,040.50 (-1.8% vs the last close)
+Bitcoin: 73,537.21 (-2.2% vs the last close)
+Ether: 2,043.06 (-4.1% vs the last close)
+Solana: 82.68 (-4.5% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Tuesday Nov 10)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -90,7 +163,7 @@ Inflation day is here, and it could touch your mortgage and savings. At 8:30 AM 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Tue Nov 10](reports/x-posts/2026-11-10.md) | ✅ | ✅ | ✅ | ✅ | — | Today's 8:30 AM US CPI inflation report |
+| [Tue Nov 10](reports/x-posts/2026-11-10.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's 8:30 AM US CPI inflation report |
 | [Mon Nov 09](reports/x-posts/2026-11-09.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran talks and the Strait of Hormuz |
 | [Sun Nov 08](reports/x-posts/2026-11-08.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Trump's pending decision on new strikes on Iran |
 | [Sat Nov 07](reports/x-posts/2026-11-07.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US strikes on Iran and tanker mines in the Strait of Hormuz |
@@ -114,7 +187,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | ✅ | · | ✅ | · | · | ✅ | · |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | · |
+| Nasdaq futures (macro backdrop) | ✅ | ✅ | ✅ | · | · | ✅ | ✅ |
 | Gold futures (macro backdrop) | ✅ | ✅ | · | · | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
