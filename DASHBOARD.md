@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-10 17:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-10 18:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-10 17:51 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 10 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 11 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 37 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 1 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 38 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -512,58 +512,64 @@ BIAS: Neutral | CONFIDENCE: Low
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-11-09</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-11-10</b></summary>
 
-### Gold futures brief: Asia session, Nov 9–10, 2026
+### Gold Futures Brief: Asia Session, Nov 10–11, 2026
 
 #### 1. What is driving gold
-- Gold is bouncing hard. It rose about 5% in the week of Nov 1–7, its strongest week in more than two months.
-- Today's rally came from a weaker dollar and falling oil. Spot gold topped $4,100 as the dollar slid. Gold futures settled at $4,149.65.
-- Rate-hike worries are still a headwind. Traders price 78% odds of a quarter-point Fed hike in December. That came after a strong October jobs report.
-- The bigger picture is still a correction. Gold hit an all-time high near $5,600 at the end of January. One analyst said it is "too early to know" whether the bottom is in.
+- Gold briefly rose above $4,100 on Monday and early Tuesday. A weaker dollar and falling crude on US-Iran diplomacy hopes helped it.
+- Then US October inflation came in hot. Headline CPI rose 0.4% and core CPI 0.3%, both 0.1 point above consensus.
+- Futures markets now fully price a 25bp Fed hike in December.
+- Fed speakers added pressure. Waller said a 50bp move should be considered if core CPI rose about 0.3% or more. Logan said the Fed needs "at least two more" quarter-point hikes.
+- The 10-year yield rose about 10bp to 4.99%, and the Dollar Index gained 0.6%. Higher rates make non-yielding gold less attractive.
 
 #### 2. Scheduled events (New York time)
-- **Mon Nov 9, daytime:** Fed speakers Bowman (8:40 AM), Goolsbee (10:00 AM) and Barkin (12:15 PM). Those times are from The Weekend Spread.
-- **Tue Nov 10, about 4:00 AM:** Fed Governor Waller speaks at 04:00 AM. That is right at the end of the session.
-- **Tue Nov 10, 8:30 AM:** October CPI is released. It is the last inflation read before the December 8–9 FOMC. This falls after the Asia session ends.
-- **Tue Nov 10, later:** Logan, Bowman and Schmid speak after CPI.
-- **Not verified:** I could not confirm any Fed speaker between 8:00 PM and 4:00 AM tonight. The sources show different time zones and conflict with each other. Check a live calendar.
+- **6:00 PM:** Japan Reuters Tankan. It is listed at 11:00 pm GMT.
+- **6:30 PM:** Fed's Bowman speaks. Investing.com lists it at 6:30 PM ET. Finviz also lists 6:30 PM. One source said 3:30 pm ET, and I could not fully reconcile the two times. She may be a repeat appearance. Check the time before you rely on it.
+- **7:30 PM:** Australia Home Loans. It is listed at 12:30 am GMT.
+- Finviz also shows a Fed Williams speech at 6:30 PM, but I could not confirm which day. It may be Wednesday.
+- I did not find any big earnings reports relevant to gold.
 
-#### 3. Key levels (from your price data)
-- Previous Asia session high: **4143.30**
-- Previous Asia session low: **4092.30**
+#### 3. Key levels (from the price data)
+- Previous Asia session high: **4150.70**
+- Previous Asia session low: **4117.20**
+- Previous Asia session close: **4122.20**
 - Highest high of the last 5 Asia sessions: **4155.80**
-- Highest high since the last session closed: **4157.70**
-- Lowest low since the last session closed: **4074.90**
-- Lowest low of the last 5 Asia sessions: **3905.00**
-- Latest price is **4153.30**. It is 10.00 above the previous session high.
-- Price is sitting **near resistance**. It is just under the 5-session high (4155.80) and the recent high (4157.70). It is not near support.
+- Lowest low of the last 5 Asia sessions: **3932.70**
+- High since the last close: **4121.90**
+- Low since the last close: **4020.80**
+- Latest price is **4039.10**, which is **78.10 below** the previous session low.
+- Price is nowhere near resistance. It is closer to support, about 18 points above the recent low of 4020.80. The 5-session low is further down.
 
 #### 4. Volume
-Last session's volume was 0.74x the average of the five sessions before it. That is **weak participation**. The move up has not been backed by strong volume, so a breakout here is less convincing.
+- The previous session traded **0.60x** the average of the 5 sessions before it. That is weak participation.
+- The move up into 4150 happened on thin volume. That means it had little backing and was easy to reverse.
+- This number says nothing about tonight's volume.
 
 #### 5. Directional lean
-**Neutral, Low confidence.**
-- Price is above the previous session high. The news backs gold: the dollar is weaker, oil is lower, and the weekly trend is up.
-- But price is pressed against the 5-session high and the recent high of 4157.70. Volume was light.
-- CPI and the December hike odds could reverse the dollar move quickly.
-- The signals conflict, so I stay neutral.
-- **What would change the lean:**
-  - A clean hold above 4157.70 with rising volume would move me toward Bullish.
-  - A drop back below the previous session high of 4143.30, and then toward 4092.30, would move me toward Bearish.
-  - A sharp dollar or yield move would also change it.
-
-This is a probability-based lean, not a prediction or a trade instruction.
+**Bearish, Confidence: Medium.**
+Price is well below the previous session's low. The news is hawkish: hot CPI, higher yields, a stronger dollar and Fed hike talk. The prior rally came on light volume, so it looks fragile. These signals point the same way. The drop is already large, so a bounce toward the old range is possible. I would change the lean if price reclaims the previous low (4117.20) and holds it. I would also change it if yields and the dollar fall back. A calmer Fed message or a new Iran headline could do that. Price falling to the 5-session low and bouncing hard on rising volume would also weaken it. This is a probability-based lean, not a prediction or a trade instruction.
 
 #### 6. Event risk
-**Medium.** CPI comes after the session, but traders may position early, and Fed speakers around the session could move the dollar.
+**High.** The Fed is repricing rate hikes, and a Bowman speech may land at 6:30 PM, inside your early-entry window.
 
 #### 7. Sources
-Investing.com, FXStreet, Mitrade, Kitco, Fortune, Diamond Banc, Gold-Eagle, Kiplinger, CNBC, The Weekend Spread, Zerohedge, Trading Economics, Finobird, and Yahoo Finance (price data).
+- Yahoo Finance (price data and gold report)
+- Invezz
+- Babypips
+- Kitco
+- Mitrade
+- Investing.com
+- Finviz
+- XTB
+- TheStreet
+- FinancialJuice
 
-BIAS: Neutral | CONFIDENCE: Low
+I could not verify the exact Bowman time from a single source.
 
-[Open the file](reports/2026-11-09-gold-brief.md)
+BIAS: Bearish | CONFIDENCE: Medium
+
+[Open the file](reports/2026-11-10-gold-brief.md)
 
 </details>
 
@@ -572,7 +578,7 @@ BIAS: Neutral | CONFIDENCE: Low
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-11-10 07:51 | ◆ Neutral | Low | High | 27907.75 | [read it](reports/2026-11-10-nasdaq-brief.md) |
-| gold | 2026-11-09 18:30 | ◆ Neutral | Low | Medium | 4153.30 | [read it](reports/2026-11-09-gold-brief.md) |
+| gold | 2026-11-10 18:25 | ▼ Bearish | Medium | High | 4039.10 | [read it](reports/2026-11-10-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
