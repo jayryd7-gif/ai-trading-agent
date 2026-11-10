@@ -1,1 +1,17 @@
-{}
+{
+ "nasdaq 2026-11-10 09:30": {
+  "instrument": "nasdaq",
+  "session_start": "2026-11-10 09:30",
+  "direction": "long",
+  "contracts": 3,
+  "entry": 28054.0,
+  "entry_time": "10:00",
+  "stop": 27868.75,
+  "sell_plan": [
+   1,
+   1,
+   1
+  ],
+  "sold_so_far": []
+ }
+}
