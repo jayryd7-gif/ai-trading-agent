@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-11 04:37 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-11 06:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-11 04:37 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 12 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -586,18 +586,18 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 
 ## Scorecard
 
-- Briefs scored: **25** (Bullish or Bearish calls: 3)
-- Right: 2, Wrong: 1, Session ended flat: 0
-- Hit rate when the session was decisive: **67%**
-- For comparison, price went up in 48% of decisive sessions
-- ⚠️ Only 3 directional calls so far. Treat the numbers as noise until there are at least 30.
+- Briefs scored: **26** (Bullish or Bearish calls: 4)
+- Right: 2, Wrong: 2, Session ended flat: 0
+- Hit rate when the session was decisive: **50%**
+- For comparison, price went up in 50% of decisive sessions
+- ⚠️ Only 4 directional calls so far. Treat the numbers as noise until there are at least 30.
 
 By confidence:
 
 | Confidence | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
 | High | 0 | 0 | 0 | n/a |
-| Medium | 1 | 0 | 0 | 100% |
+| Medium | 1 | 1 | 0 | 50% |
 | Low | 1 | 1 | 0 | 50% |
 
 [Full scorecard](reports/scorecard.md)
@@ -614,6 +614,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-11-10 | gold | ▼ Bearish | Medium | Up (0.64%) | Wrong |
 | 2026-11-10 | nasdaq | ◆ Neutral | Low | Up (0.33%) | Moved |
 | 2026-11-09 | gold | ◆ Neutral | Low | Down (-0.26%) | Moved |
 | 2026-11-06 | nasdaq | ◆ Neutral | Low | Down (-0.34%) | Moved |
@@ -623,7 +624,6 @@ By confidence:
 | 2026-11-03 | gold | ◆ Neutral | Low | Up (2.63%) | Moved |
 | 2026-11-03 | nasdaq | ◆ Neutral | Low | Flat (0.12%) | Calm |
 | 2026-11-02 | nasdaq | ◆ Neutral | Low | Down (-2.04%) | Moved |
-| 2026-10-28 | gold | ◆ Neutral | Low | Down (-0.80%) | Moved |
 
 ## Your journals
 
