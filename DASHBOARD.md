@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-11 03:50 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-11 04:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,10 +17,10 @@ Last updated 2026-11-11 03:50 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -329,64 +329,60 @@ Medium - No major US data is scheduled, but the Iran-linked base threats and the
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-10</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-11</b></summary>
 
 #### Top things today
-1. **Bitcoin is under pressure near $74K.** Risk-off mood followed last week's Democratic midterm sweep, with worries about crypto rules and AI. A strong US jobs report also pushed rate expectations around. BTC is eyeing a fifth weekly loss (FXStreet). Why it matters: the Fear and Greed Index is 32, so the mood is cautious.
-2. **ETF money is leaving.** Spot Bitcoin ETFs saw $1.177 billion in net outflows last week (SoSoValue via Analytics Insight). Other tallies put it at about $1.28B. Weekend liquidations topped $1 billion. Why it matters: institutional demand is weak.
-3. **US inflation data is out today.** October CPI arrives Tuesday, and producer prices follow Friday, Nov 13 (crypto.news). Why it matters: it can move rate expectations and risk assets.
-4. **Initia (INIT) is up sharply while its chain is halted.** INIT rose 80% over 24 hours on Nov. 10 while the Layer 1 stayed offline. The project paused it at 1:18 a.m. ET. (TokenPost). Why it matters: it is a pump during an active security incident.
-5. **Large token unlocks are due this week.** About $620 million is scheduled for release this week. RAIN unlocks about $195M today, and Pieverse unlocks about $127M (31.4% of market cap) on Nov 14. (KuCoin/Tokenpost) Why it matters: supply could hit thin markets.
+
+1. **Hot US inflation hit crypto.** Bitcoin fell to about $73,700 after hotter inflation data, with $723M in liquidations. About $570M of that came from leveraged longs. (crypto.news) Why it matters: leverage is being flushed, and the Fear and Greed Index is at 29.
+2. **Bitcoin ETF outflows keep going.** US spot Bitcoin ETFs shed $201M on Monday, and BlackRock's IBIT has had seven straight days of withdrawals totaling $1.66B. (Cointelegraph) Why it matters: ETF demand is the main sign of institutional appetite, and it is weak.
+3. **Zcash is down sharply.** ZEC is down 15.24% in 24 hours, with losses of over 20% across five days. One outlet found no Zcash-specific news behind Tuesday's plunge. Others cite long liquidations, Grayscale Zcash Trust redemptions and selling after the NU7 upgrade. Why it matters: it is a top-10 coin with a leverage unwind.
+4. **The CLARITY Act is stalled, and Democrats won Congress.** Democrats won the House and Senate on Nov. 3. The bill expires Jan. 3 unless the Senate passes it in the lame-duck session. (CryptoTicker) Why it matters: US market-structure rules now depend on the lame-duck session or the next Congress.
+5. **Stablecoins keep moving into banking.** PNC and Coinbase announced a pilot letting corporate clients receive USDC. (The Crypto Basic) Why it matters: it is real adoption, even while investment demand is weak.
 
 #### Coins to research
+
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Pieverse (PIEVERSE) | +26.6% (+80.6% 7d) | One outlet credits the AI-altcoin narrative and positioning before the unlock (InteractiveCrypto). | RSI of 88.5, which is overbought. 25 whales held 96.73% of market cap as of Nov 3. Unlock on Nov 14. |
-| Initia (INIT) | +57% (trending, rank 454) | Rebound while the Layer 1 is halted after an exploit (TokenPost). | Compromised rollup keys were used to forge IBC transfers. A separate $2.7M exploit hit on Oct 23. Small cap. |
-| Provenance (HASH) | +23.9% | No news found. | $126.5K volume against a $444.6M market cap. Pump with no news. |
-| Janction (JCT) | -28.1% (trending) | JCT is on today's unlock list (TokenPost). | Small rank (329). Falling, not pumping. |
-| edgeX (EDGE) | +14.7% | No news found. | EDGE had an unlock on Nov 2. Cause of the move is unclear. |
-| Pi Network (PI) | +9.1% (-5.9% 7d) | Bounce. FXStreet noted PI hit a record low. | Bounce inside a downtrend. |
+| Quantix Finance (QFI) | +31056.3% | No news found. | Pump with no news. $18.8K volume on a $411.6M market cap. Price is $999. Looks illiquid or manipulated. |
+| A7A5 (A7A5) | +196.4% | No news found. | Only $873 volume on a $476.7M market cap. Pump with no news. |
+| Initia (INIT) | +14.0% | Initia was attacked and halted its Layer 1 network. The token rose about 15% on speculation and a short squeeze. (KuCoin) | Network halt and security incident. Squeeze-driven. Small cap (rank 418). |
+| Lighter (LIT) | +6.5% | Continued buybacks, including a larger repurchase volume. (KuCoin) | Only 7 days of data show +0.4%. Mid-cap of $841M. |
+| Onyxcoin (XCN) | +17.2% | No news found. | Pump with no news. |
+| Bitway (BTW) | +13.5% | No news found. | Pump with no news. It fell 16.74% in a recent 24-hour session. (Pluang, about 20 days old) Very volatile. |
 
-Other gainers (CARDS, BR, STABLE, GRAM, JUP, ETHFI, PYTH, SPX) had no news found. STABLE had an unlock on Nov 7 (KuCoin).
+Zcash, Venice (VVV), Pearl and Collector Crypt are trending but falling. I found no specific cause for VVV or Pearl.
 
 #### Whale watch
-No whale moves found for the last 24 hours. Older items for context:
-- Lookonchain said a dormant whale bought 3,009 BTC (about $228M) on Nov 6. Another whale pulled 1,286 BTC from Binance the same day.
-- Cardano whales sold about 50 million ADA (Analytics Insight). No USD value was given.
-- BlackRock moved about $482.66M in BTC and ETH to Coinbase Prime (Cryptorank). The date was not stated.
+
+| When | Coin | Amount (USD) | Who | Direction |
+|---|---|---|---|---|
+| Nov 6 (older than 1 day) | BTC | ~$228M (3,009 BTC) | Dormant whale (Lookonchain) | Bought |
+
+I found no confirmed moves of $10M or more from the last 24 hours. The Nov 6 item is included for context. Cardano whales were also reported selling 50M ADA (Analytics Insight, USD value and date not confirmed).
 
 #### Government and regulation
-- **CLARITY Act (market structure):** It passed the House in July 2025, 294-134. It failed a Senate procedural vote 49-50 in September 2026. It could still pass in the lame-duck session, but one expert called that unlikely (CNBC).
-- **Midterms:** Democrats retook both the Senate and House on Nov 3 (Four Pillars via TechFlow).
-- **CFTC:** On Nov 3, Chair Selig said individual-stock perpetual futures can trade on CFTC-registered exchanges that also meet SEC rules. Coinbase, Kalshi, Payward and others asked a court to file a brief backing the CFTC. A lawsuit seeks to overturn the approval. (The Block) On Nov 5 the CFTC issued guidance on exchanges' equal-access duties. (Bitcoin.com)
-- **SEC:** On Nov 2 it added three FAQs on its crypto framework. On Nov 3 it gave Canton Coin a no-action response. Its Regulation Crypto Assets proposal comment period closed Oct 20.
-- **GENIUS Act rules:** Regulators missed the July 18 deadline. The OCC targets November for final rules. (crypto.news)
-- **Bitcoin reserve bills:** The Senate BITCOIN Act has sat in committee since March 2025. The House bill reported Sept 16, 2026 orders a study, not purchases.
-- Other countries: nothing found.
+
+- **CLARITY Act (H.R. 3633):** It would split crypto oversight between the SEC and CFTC. It failed a Senate procedural vote 49–50 on Sept. 15. It is stalled, not formally dead. (FinTech Weekly)
+- **Democratic plan:** House Democrats plan to expand Maxine Waters' consumer-protection amendment into a broader market-structure bill. It would widen SEC oversight and reduce the CFTC's role. They plan to move it in the next Congress. (CoinPaprika)
+- **CFTC:** It sent its crypto rulemaking to the White House for review on Sept. 17. Binding rules may be more than a year away. (Orrick)
+- **Kalshi:** crypto.news headlines say Kalshi could face CFTC charges over how it launched prediction markets. (unconfirmed, headline only)
+- Nothing found on laws in other countries this week.
 
 #### Who is buying and adopting
-- **Strategy:** It bought 1,036 BTC for about $82M in the week of Nov 2-8, at an average of $79,012. Most of its raise ($188.3M) went to buying back STRC preferred shares. (Crypto Briefing)
-- **BlackRock:** It said demand to swap held bitcoin for IBIT shares is at a record, driven by security fears. (Barron's via Bitcoin Magazine) These swaps are a custody shift, not new open-market buying.
-- **US government:** As of October 2026, no open-market purchases had been announced.
-- **Visa and Google:** headlines mention Visa expanding stablecoin payments and Google testing custody (Analytics Insight). I did not find details.
+
+- **Strategy:** It bought 1,036 BTC (about $81.9M) from Nov. 2 to 8 and now holds 850,364 BTC. (The Crypto Basic) It also spent $188.3M repurchasing STRC preferred shares.
+- **Bitmine:** It bought 8,573 ETH in the week ending Nov. 1. (Motley Fool)
+- **Sellers:** Listed companies have sold over 108,000 BTC (about $8.08B) in 2026. (crypto.news)
+- **Visa:** Partners can now settle in stablecoins seven days a week. (Crypto Briefing)
+- **PNC/Coinbase:** USDC payment pilot, as above.
+- **NYSE:** a headline says it selected Avalanche. I found no details.
+- No new country or government bitcoin purchases found.
 
 #### Next 7 days
-All times New York. Exact hours were not found, so dates only.
 
-| Date | Event | Coin or topic |
-|---|---|---|
-| Nov 10 (today) | US October CPI. RAIN unlock of about $195M (35.9B tokens). JCT, LAYER, BABY unlocks. | Macro, RAIN, JCT |
-| Nov 11 | ALLO unlock of about $23M (65.5% of released supply). APT, IO unlocks. | ALLO, APT |
-| Nov 12 | PEAQ, RAVE unlocks | Altcoins |
-| Nov 13 | US producer prices. AZTEC unlock of about $10M (unconfirmed). | Macro, AZTEC |
-| Nov 14 | PIEVERSE unlock of about $127M. PUMP unlock of about $25M. YZY unlock of about $8M. | PIEVERSE, PUMP |
-| Nov 15 | CONX unlock of about $17.7M (unconfirmed) | CONX |
-| This week | MARA, Bitdeer, Gemini earnings. Arbitrum DAO votes. | Miners, ARB |
+No scheduled events found. I did not find confirmed unlock dates, hearings or ETF deadlines. The Waller-backed December rate hike talk is also a watch item (The Defiant, headline only; no date confirmed).
 
-Sources: KuCoin, TokenPost, crypto.news. Unlock sizes vary by tracker, and some are marked "pending verification."
-
-[Read the full brief with all the details](reports/crypto/2026-11-10-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-11-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
