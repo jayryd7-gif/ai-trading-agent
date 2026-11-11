@@ -18,8 +18,11 @@
 //   each of 3 targets, 30 / 60 / 90 points from the entry.
 // - Stop moves (since 2026-11-10): when a candle touches Target 1, the stop
 //   moves to 5 points under THAT candle's low (above its high for a short);
-//   when a candle touches Target 2, to 5 points under that candle's low. The
-//   stop only ever moves in the trade's favour.
+//   when a candle touches Target 2 (and Target 3), to 5 points under that
+//   candle's low. The stop only ever moves in the trade's favour.
+// - Runner (since 2026-11-10): sell 2 / 2 / 1 at the three targets and keep
+//   1 contract running to "runnerPts" (300 points), or until the moved stop
+//   or the 3:55 PM close.
 // - One trade a day. Anything still open at 3:55 PM is closed.
 // Fees: $0.50 per contract each way, like the LIVE 50K script.
 strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
@@ -31,9 +34,11 @@ strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
 // ---------------- SETTINGS ----------------
 q1          = input.int(2, "Contracts to sell at Target 1", minval = 1, maxval = 10)
 q2          = input.int(2, "Contracts to sell at Target 2", minval = 1, maxval = 10)
-q3          = input.int(2, "Contracts to sell at Target 3", minval = 1, maxval = 10)
+q3          = input.int(1, "Contracts to sell at Target 3", minval = 1, maxval = 10)
+q4          = input.int(1, "Runner: contracts kept after Target 3", minval = 0, maxval = 10)
+runnerPts   = input.float(300, "Runner: sell at this many points from the entry", minval = 1)
 spacing     = input.float(30, "Points between targets", minval = 1)
-trailRoom   = input.float(5, "After Target 1 and 2: stop this many points under that candle's low", minval = 0)
+trailRoom   = input.float(5, "After Targets 1, 2 and 3: stop this many points under that candle's low", minval = 0)
 lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
 push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
 watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = never before 9:30)", minval = 0)
@@ -59,16 +64,17 @@ body    = math.abs(close - open)
 longSig  = close > top and close > open and body >= push * avgBody
 shortSig = close < bottom and close < open and body >= push * avgBody
 
-contracts = q1 + q2 + q3
+contracts = q1 + q2 + q3 + q4
 var bool  traded  = false
 var float stopLvl = na
 var float entLvl  = na
 var float t1Lvl   = na
 var float t2Lvl   = na
 var float t3Lvl   = na
+var float t4Lvl   = na
 var int   dir     = 0
 var int   entryBar = 0
-var int   moved   = 0      // 1 = stop at breakeven, 2 = stop at Target 1
+var int   moved   = 0      // the last target whose candle moved the stop
 if ta.change(dayofmonth(time, NY)) != 0
     traded := false
 
@@ -79,15 +85,22 @@ winMsg(string tgt, int q, float lvl) =>
 stopMsg(int q, float lvl) =>
     syminfo.ticker + " MAMBA: stop hit, closed " + str.tostring(q) + " at " + px(lvl)
 
-// Places (or moves) the three exit orders with one stop for all of them.
+// Places the exit orders (all = true, at the entry) or moves the stop of
+// the ones not filled yet, so a filled target is never placed again.
 setExits(string id, float stopPx, bool all) =>
-    if all
+    rem = math.abs(strategy.position_size)
+    if all or rem > q2 + q3 + q4
         strategy.exit("T1", id, qty = q1, limit = t1Lvl, stop = stopPx, comment_profit = "MAMBA T1", comment_loss = "MAMBA stop",
              alert_profit = winMsg("Target 1", q1, t1Lvl), alert_loss = stopMsg(q1, stopPx))
-    strategy.exit("T2", id, qty = q2, limit = t2Lvl, stop = stopPx, comment_profit = "MAMBA T2", comment_loss = "MAMBA stop",
-         alert_profit = winMsg("Target 2", q2, t2Lvl), alert_loss = stopMsg(q2, stopPx))
-    strategy.exit("T3", id, qty = q3, limit = t3Lvl, stop = stopPx, comment_profit = "MAMBA T3", comment_loss = "MAMBA stop",
-         alert_profit = winMsg("Target 3", q3, t3Lvl), alert_loss = stopMsg(q3, stopPx))
+    if all or rem > q3 + q4
+        strategy.exit("T2", id, qty = q2, limit = t2Lvl, stop = stopPx, comment_profit = "MAMBA T2", comment_loss = "MAMBA stop",
+             alert_profit = winMsg("Target 2", q2, t2Lvl), alert_loss = stopMsg(q2, stopPx))
+    if all or rem > q4
+        strategy.exit("T3", id, qty = q3, limit = t3Lvl, stop = stopPx, comment_profit = "MAMBA T3", comment_loss = "MAMBA stop",
+             alert_profit = winMsg("Target 3", q3, t3Lvl), alert_loss = stopMsg(q3, stopPx))
+    if q4 > 0 and (all or rem > 0)
+        strategy.exit("Runner", id, qty = q4, limit = t4Lvl, stop = stopPx, comment_profit = "MAMBA runner", comment_loss = "MAMBA runner stop",
+             alert_profit = winMsg("Runner target", q4, t4Lvl), alert_loss = stopMsg(q4, stopPx))
 
 if inWatch and not traded and strategy.position_size == 0
     d = longSig and close - low > 0 ? 1 : shortSig and high - close > 0 ? -1 : 0
@@ -97,6 +110,7 @@ if inWatch and not traded and strategy.position_size == 0
         t1Lvl  := close + d * spacing
         t2Lvl  := close + d * 2 * spacing
         t3Lvl  := close + d * 3 * spacing
+        t4Lvl  := close + d * runnerPts
         strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = contracts, comment = "MAMBA " + (d == 1 ? "BUY " : "SELL ") + str.tostring(contracts),
              alert_message = syminfo.ticker + " MAMBA: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(contracts) + " at " + px(close) + ", stop " + px(stopPx) + ", targets " + px(t1Lvl) + " / " + px(t2Lvl) + " / " + px(t3Lvl))
         setExits(id, stopPx, true)
@@ -111,14 +125,13 @@ if inWatch and not traded and strategy.position_size == 0
 // moves the stop to trailRoom points past that candle's far end ----
 if strategy.position_size != 0 and bar_index > entryBar
     id = dir == 1 ? "Long" : "Short"
-    t2Touched = dir == 1 ? high >= t2Lvl : low <= t2Lvl
-    t1Touched = dir == 1 ? high >= t1Lvl : low <= t1Lvl
+    reached = (dir == 1 ? high >= t3Lvl : low <= t3Lvl) ? 3 : (dir == 1 ? high >= t2Lvl : low <= t2Lvl) ? 2 : (dir == 1 ? high >= t1Lvl : low <= t1Lvl) ? 1 : 0
     newStop = dir == 1 ? low - trailRoom : high + trailRoom
-    if (moved < 2 and t2Touched) or (moved < 1 and t1Touched)
+    if reached > moved
         if dir * (newStop - stopLvl) > 0
             setExits(id, newStop, false)
             stopLvl := newStop
-        moved := t2Touched ? 2 : 1
+        moved := reached
 
 if strategy.position_size != 0 and time >= closeT
     strategy.close_all(comment = "MAMBA 3:55 close", alert_message = syminfo.ticker + " MAMBA: closed the rest at " + px(close))
@@ -134,6 +147,7 @@ plot(inTrade ? stopLvl : na, "MAMBA stop",   color.new(color.orange, 0), 2, plot
 plot(inTrade ? t1Lvl : na,   "MAMBA target 1", color.new(color.lime, 40), 1, plot.style_circles)
 plot(inTrade ? t2Lvl : na,   "MAMBA target 2", color.new(color.lime, 20), 1, plot.style_circles)
 plot(inTrade ? t3Lvl : na,   "MAMBA target 3", color.new(color.lime, 0),  2, plot.style_circles)
+plot(inTrade and q4 > 0 ? t4Lvl : na, "MAMBA runner target", color.new(color.aqua, 0), 2, plot.style_circles)
 
 // Name tag (top left), so it is clear which script this is.
 var table tag = table.new(position.top_left, 1, 1, bgcolor = color.new(color.yellow, 20))

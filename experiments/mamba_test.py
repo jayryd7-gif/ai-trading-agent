@@ -80,7 +80,7 @@ def trade_partials(candles, i, d, stop, targets, plan, moves, pv):
 
 def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
           target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1,
-          exits=None, moves=None):
+          exits=None, moves=None, plan=(2, 2, 2)):
     ev = R.timeline(data[instrument])
     last = ev[-1][0]
     first = (last - timedelta(days=days)).date()
@@ -126,7 +126,7 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
                 entry = c.close
                 size = abs(entry - stop) if kind == "R" else 1.0
                 targets = [entry + d * k * size for k in steps]
-                net, out_at = trade_partials(cs, i, d, stop, targets, [2, 2, 2],
+                net, out_at = trade_partials(cs, i, d, stop, targets, list(plan),
                                              moves or {}, pv)
             else:
                 net, out_at = trade(cs, i, d, stop, target_r, pv)
