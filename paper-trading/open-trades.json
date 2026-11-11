@@ -1,1 +1,25 @@
-{}
+{
+ "nasdaq 2026-11-11 09:30": {
+  "instrument": "nasdaq",
+  "session_start": "2026-11-11 09:30",
+  "direction": "short",
+  "contracts": 5,
+  "entry": 28246.75,
+  "entry_time": "09:45",
+  "stop": 28362.0,
+  "sell_plan": [
+   1,
+   2,
+   2
+  ],
+  "sold_so_far": [
+   {
+    "time": "09:50",
+    "what": "Target 1",
+    "contracts": 1,
+    "price": 28216.75,
+    "profit": 60.0
+   }
+  ]
+ }
+}
