@@ -1,24 +1,24 @@
 # Brief scorecard
 
-Updated 2026-11-10 17:02 New York time. Scored briefs: 25. Waiting to be scored: 0.
+Updated 2026-11-11 06:26 New York time. Scored briefs: 26. Waiting to be scored: 0.
 
-> **Too few directional calls to trust any of this yet.** There are 3 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
+> **Too few directional calls to trust any of this yet.** There are 4 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
 ## Directional calls (Bullish or Bearish)
 
 - Right: 2
-- Wrong: 1
+- Wrong: 2
 - Session ended flat (neither): 0
-- Hit rate when the session was decisive: **67%**
+- Hit rate when the session was decisive: **50%**
 
-For comparison: across all scored sessions, price went up in 48% of the decisive ones (11 of 23). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 50% of the decisive ones (12 of 24). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
 | Confidence | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
 | High | 0 | 0 | 0 | n/a |
-| Medium | 1 | 0 | 0 | 100% |
+| Medium | 1 | 1 | 0 | 50% |
 | Low | 1 | 1 | 0 | 50% |
 
 ## By instrument
@@ -26,7 +26,7 @@ For comparison: across all scored sessions, price went up in 48% of the decisive
 | Instrument | Right | Wrong | Flat | Hit rate |
 |---|---|---|---|---|
 | nasdaq | 1 | 1 | 0 | 50% |
-| gold | 1 | 0 | 0 | 100% |
+| gold | 1 | 1 | 0 | 50% |
 
 ## Neutral calls
 
@@ -37,6 +37,7 @@ For comparison: across all scored sessions, price went up in 48% of the decisive
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-10 | gold | Bearish | Medium | 2026-11-10 20:00 | Up (0.64%) | Wrong |
 | 2026-11-10 | nasdaq | Neutral | Low | 2026-11-10 09:30 | Up (0.33%) | Moved |
 | 2026-11-09 | gold | Neutral | Low | 2026-11-09 20:00 | Down (-0.26%) | Moved |
 | 2026-11-06 | nasdaq | Neutral | Low | 2026-11-06 09:30 | Down (-0.34%) | Moved |
@@ -51,4 +52,3 @@ For comparison: across all scored sessions, price went up in 48% of the decisive
 | 2026-10-27 | gold | Neutral | Low | 2026-10-27 20:00 | Down (-0.44%) | Moved |
 | 2026-10-27 | nasdaq | Neutral | Low | 2026-10-27 09:30 | Up (0.85%) | Moved |
 | 2026-10-26 | nasdaq | Neutral | Low | 2026-10-27 09:30 | Up (0.85%) | Moved |
-| 2026-10-23 | nasdaq | Neutral | Low | 2026-10-23 09:30 | Up (0.32%) | Moved |
