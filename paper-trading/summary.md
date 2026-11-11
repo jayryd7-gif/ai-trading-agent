@@ -1,36 +1,36 @@
 # Paper trading summary
 
-*Updated 2026-11-11 00:42 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-11 01:46 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$1,452** over 20 trades (33 sessions watched)
-- Trading days with a trade: **16**, profitable: **6**, losing: 10
-- Win rate: 40%
-- Profit factor: 0.74
+- Total after fees: **-$798** over 21 trades (34 sessions watched)
+- Trading days with a trade: **17**, profitable: **7**, losing: 10
+- Win rate: 43%
+- Profit factor: 0.86
 - Biggest drop from a high (max drawdown): $4,620
-- Room left before the $4,000 max drawdown: **$303**
-- Progress toward a prop demo: **16 of 20** trading days
+- Room left before the $4,000 max drawdown: **$958**
+- Progress toward a prop demo: **17 of 20** trading days
 
 ## By market
 
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
 | nasdaq | 9 | 3 | -$2,384 |
-| gold | 11 | 5 | $931 |
+| gold | 12 | 6 | $1,586 |
 
 ## Tradeify Growth 50K (practice account the bot trades on)
 
 Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trailing drawdown $2,000 below the highest end-of-day balance, and touching it even with an open trade fails the account; daily loss limit $1,250 ends the day. Funded: a payout needs $53,000, 5 days over $150, and the biggest day at most 35% of the profit. The bot sizes every trade so its stop cannot break a rule (no daily profit cap). Check Tradeify's current rules before relying on this.
 
-**Now: Evaluation**, balance **$49,908**, $1,256 above the drawdown floor.
-- To pass: $3,092 more profit.
+**Now: Evaluation**, balance **$50,563**, $1,911 above the drawdown floor.
+- To pass: $2,437 more profit.
 
 | # | Account | Started | Ended | Trading days | Balance | Result | Payouts | Note |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Evaluation | 2026-10-19 | 2026-10-27 | 7 | $50,340 | Failed | – | reset on 2026-10-28: only $96 above the floor, too close for any trade |
 | 2 | Evaluation | 2026-10-28 | 2026-10-30 | 3 | $48,299 | Failed | – | reset on 2026-11-02: only $299 above the floor, too close for any trade |
-| 3 | Evaluation | 2026-11-02 | 2026-11-10 | 6 | $49,908 | In progress | – |  |
+| 3 | Evaluation | 2026-11-02 | 2026-11-11 | 7 | $50,563 | In progress | – |  |
 
 ## Opening range (tracked, not traded)
 
@@ -50,6 +50,7 @@ Opening range (9:30-10:00, tracked, not traded): -$405 over 6 trades in 7 sessio
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
+| 2026-11-11 | gold long | $655 |
 | 2026-11-10 | gold no trade, nasdaq long | -$667 |
 | 2026-11-09 | gold long, nasdaq skipped, risk too big for today's limits | -$77 |
 | 2026-11-06 | gold short, nasdaq skipped, daily profit cap reached | $655 |
