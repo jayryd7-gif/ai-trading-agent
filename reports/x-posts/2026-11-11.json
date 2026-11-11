@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-11",
+  "written": "2026-11-11 04:52",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-11-world-brief.md (Wed Nov 11, today)",
+    "Stocks: reports/stocks/2026-11-11-stock-brief.md (Wed Nov 11, today)",
+    "Crypto: reports/crypto/2026-11-11-crypto-brief.md (Wed Nov 11, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-10-nasdaq-brief.md (Tue Nov 10, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-10-gold-brief.md (Tue Nov 10, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 11 ☀️\n\nHot inflation lifted December rate-hike bets and pushed Bitcoin lower.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: WSJ reports US aircraft left UK base RAF Mildenhall over an Iran threat. Ukraine peace talks reportedly resumed.\n\nWhy it matters: Oil and gas prices can jump on Mideast news.\n\nNext: If Iran tensions rise, watch energy prices climb."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ October CPI came in hot. 2-year Treasury yield rose 17 bp; Kalshi gives ~97% odds of a December hike.\nWhy it matters: Higher rates mean pricier mortgages, car loans, credit cards.\nNext: Friday's 8:30 AM PPI could boost hike bets if core runs hot."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Nvidia fell 5.5% Tuesday on an unverified report of CEO Jensen Huang's alleged Chinese intelligence link.\n\nWhy it matters: AI stocks sit in many retirement accounts.\n\nNext: Nvidia reports Nov. 17. If the probe grows, AI stocks may slide more."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin fell to about $73,700 after hot inflation data, with $723M in liquidations.\n\nWhy it matters: IBIT saw seven straight days of outflows, $1.66B total.\n\nNext: If outflows continue, watch for more bitcoin pressure.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: WSJ via Reuters, Kyiv Post, Capp Notes, Kalshi odds, The Information, Motley Fool, Cointelegraph, crypto.news, CoinGecko live data",
+  "midday": {
+    "story": "Hot October inflation and rising December rate-hike odds",
+    "post": "Why this matters for your wallet: October inflation ran hot, and Kalshi priced about 97% odds of a December hike. Higher rates can mean pricier mortgages, car loans and credit cards. If inflation keeps running hot, watch Treasury yields and hike odds."
+  },
+  "reply_midday": "Sources: Capp Notes (CPI, Treasury yields), Kalshi (December hike odds), Yahoo Finance consensus for upcoming data",
+  "close_watch": "Today's close: no major US data is scheduled, so watch Nvidia's move and Bitcoin ETF flows; US jobless claims come Thursday at 8:30 AM New York time.",
+  "video": {
+    "script": "Hot inflation just pushed December rate-hike odds to about 97%. Here's what that could mean for your money. First, October's inflation data came in hot. Treasury yields jumped, and higher yields can mean pricier mortgages, car loans and credit cards. Second, Bitcoin slid to about 73,700 dollars, with 723 million dollars in liquidations, and BlackRock's bitcoin ETF saw seven straight days of outflows. Third, Nvidia fell 5.5% Tuesday on an unverified report about its CEO's alleged Chinese intelligence link. Nvidia reports November 17. Watch Friday's producer prices at 8:30 AM. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Hot CPI: rate-hike odds ~97%",
+      "2-yr yield up 17 bp",
+      "Bitcoin ~$73,700",
+      "$723M liquidated",
+      "Nvidia -5.5% (Tuesday)",
+      "Not financial advice"
+    ]
+  }
+}
