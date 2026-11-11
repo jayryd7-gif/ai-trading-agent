@@ -15,9 +15,11 @@
 //   6 candles.
 // - Stop: the far end of the breakout candle (its low for a long).
 // - Partials (since 2026-11-08, like the main bot): sell 2 contracts at
-//   each of 3 targets, 30 / 60 / 90 points from the entry. After Target 1
-//   the stop moves to the entry (breakeven); after Target 2 it moves to
-//   Target 1.
+//   each of 3 targets, 30 / 60 / 90 points from the entry.
+// - Stop moves (since 2026-11-10): when a candle touches Target 1, the stop
+//   moves to 5 points under THAT candle's low (above its high for a short);
+//   when a candle touches Target 2, to 5 points under that candle's low. The
+//   stop only ever moves in the trade's favour.
 // - One trade a day. Anything still open at 3:55 PM is closed.
 // Fees: $0.50 per contract each way, like the LIVE 50K script.
 strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
@@ -31,6 +33,7 @@ q1          = input.int(2, "Contracts to sell at Target 1", minval = 1, maxval =
 q2          = input.int(2, "Contracts to sell at Target 2", minval = 1, maxval = 10)
 q3          = input.int(2, "Contracts to sell at Target 3", minval = 1, maxval = 10)
 spacing     = input.float(30, "Points between targets", minval = 1)
+trailRoom   = input.float(5, "After Target 1 and 2: stop this many points under that candle's low", minval = 0)
 lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
 push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
 watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = never before 9:30)", minval = 0)
@@ -104,20 +107,18 @@ if inWatch and not traded and strategy.position_size == 0
         entryBar := bar_index
         moved    := 0
 
-// ---- Manage the open trade: Target 1 touched -> stop to breakeven;
-// Target 2 touched -> stop to Target 1 ----
+// ---- Manage the open trade: a candle touching Target 1 (then Target 2)
+// moves the stop to trailRoom points past that candle's far end ----
 if strategy.position_size != 0 and bar_index > entryBar
     id = dir == 1 ? "Long" : "Short"
     t2Touched = dir == 1 ? high >= t2Lvl : low <= t2Lvl
     t1Touched = dir == 1 ? high >= t1Lvl : low <= t1Lvl
-    if moved < 2 and t2Touched
-        setExits(id, t1Lvl, false)
-        stopLvl := t1Lvl
-        moved   := 2
-    else if moved < 1 and t1Touched
-        setExits(id, entLvl, false)
-        stopLvl := entLvl
-        moved   := 1
+    newStop = dir == 1 ? low - trailRoom : high + trailRoom
+    if (moved < 2 and t2Touched) or (moved < 1 and t1Touched)
+        if dir * (newStop - stopLvl) > 0
+            setExits(id, newStop, false)
+            stopLvl := newStop
+        moved := t2Touched ? 2 : 1
 
 if strategy.position_size != 0 and time >= closeT
     strategy.close_all(comment = "MAMBA 3:55 close", alert_message = syminfo.ticker + " MAMBA: closed the rest at " + px(close))

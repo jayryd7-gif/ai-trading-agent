@@ -63,9 +63,15 @@ def trade_partials(candles, i, d, stop, targets, plan, moves, pv):
             hit += 1
             rule = moves.get(hit)
             if rule == "entry":
-                stop = entry
+                new = entry
+            elif isinstance(rule, tuple):         # ("candle", room): under this candle's low
+                new = (c.low if d == 1 else c.high) - d * rule[1]
             elif rule is not None:
-                stop = targets[rule - 1]
+                new = targets[rule - 1]
+            else:
+                continue
+            if d * (new - stop) > 0:              # only ever tighten the stop
+                stop = new
         if left == 0:
             return banked - FEE * sum(plan), t
     banked += d * (candles[-1][1].close - entry) * pv * left
