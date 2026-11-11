@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-11 04:15 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-11 04:37 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-11 04:15 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 12 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -387,62 +387,62 @@ No scheduled events found. I did not find confirmed unlock dates, hearings or ET
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-09</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-11</b></summary>
 
 #### Top things today
-1. **China's rare earth pause ends Tomorrow, Nov. 10.** The legal text still ends the suspension on that date. China's commerce ministry said a wider US-China arrangement runs to Jan. 10, 2027, but it did not name rare earths (Carra Globe). Whether rare earths are covered is unconfirmed. Why it matters: it could hit MP, USAR and REMX quickly.
-2. **CoreWeave reports on Nov. 10.** The market will watch whether AI infrastructure demand and memory price outlook stay solid for the chip rally to continue (BigGo Finance). Why it matters: it is the next test for AI infrastructure names.
-3. **Chips bounced, but the week was ugly.** AMD gained 11.04% and Intel 7.71%, yet the Philadelphia Semiconductor Index fell 15% for the week. Many see the bounce as short covering and dip buying, not a confirmed bottom (BigGo Finance). Why it matters: the move may not hold.
-4. **Constellation Energy reports before the open.** The report is at 7:00 a.m. Management has said it will revisit its 2026 guidance of $11.50 to $12.50 per share (TIKR). Why it matters: it sets the tone for nuclear power names.
-5. **Nuclear stocks jumped on Friday.** Better results from Oklo and NuScale, strong Vistra earnings and a rebound after losses drove the rally (Seeking Alpha). Why it matters: it was a sector-wide move.
+1. Nvidia fell 5.5% on Nov. 10 after The Information reported that Jensen Huang's alleged link to a Chinese intelligence asset may have helped move at least $7.5B of chips to Chinese firms. Reuters could not verify the report. The FBI is also investigating. (Motley Fool, The Information) Why it matters: NVDA reports Nov. 17 with a governance and export-control cloud over it.
+2. Hot October CPI hit stocks. Treasury yields jumped and December rate-hike bets rose. The 2-year yield rose 17 bp, and Kalshi priced about 97% odds of a December hike. (Capp Notes) Why it matters: higher rates pressured tech, miners and nuclear names all at once.
+3. CoreWeave beat on Q3 and raised its 2026 revenue guidance to $13.0–13.3B. Revenue was $3.66B versus $3.55B expected. After-hours gains ranged from about 2% to 8% across sources. (Benzinga, Investing.com) Why it matters: it's a read on AI cloud demand after the chip selloff.
+4. AAON jumped 19% on a big beat and a higher outlook. Its data-center cooling unit BASX grew 218%. (Startup Fortune) Why it matters: money is flowing into AI power and cooling names, not just chips.
+5. Nuclear, uranium and miners all fell 3–10% yesterday in the live data. Uranium prices stayed firm. Uranium futures were reported near a nine-month high above $91/lb. (Len Watson newsletter) Why it matters: the equity selloff is not matching the commodity price.
 
 #### Stocks to research
-
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| OKLO | Nuclear | +22.7% (5d -6.7%) | Narrower-than-expected Q3 loss. It also reserved capacity for large reactor parts at a planned factory. | About $2.3B raised through share offerings in nine months. Down about 68% this year. |
-| AMD | AI chips | +11.0% (5d -11.0%) | Strong earnings and data-center outlook. | The bounce looks like short covering. |
-| CEG | Nuclear power | +4.3% | Reports before the open today. EPS estimate $3.89. | Event risk. Shares fell about 17% in the month before (TIKR). |
-| USAR | Rare earths | +10.8% (5d -14.5%) | Reports today. Rare earth pause ends Nov. 10. | Small company. Revenue estimate only $13.6M. Loss expected. |
-| CRWV | AI cloud | +6.3% (5d -15.4%) | Reports Nov. 10. EPS estimate -$1.21. | Loss-making. Big swings around earnings. |
-| LEU | Uranium fuel | +17.5% | Moved with the nuclear rally. No company-specific catalyst was established for NNE or X-Energy. I found none for LEU. | Move with no news. |
-| SPCX | New stock | +8.6%, $134.27 | Space Exploration Technologies, $1.8T market cap, among the most active stocks. | I found no news on it. Limited trading history. |
+| NVDA | AI | -5.5% (-18.3% in 5 days) | CEO scandal, FBI probe, earnings Nov. 17 | Headline-driven; outcome unknown |
+| CRWV | AI cloud | -0.5%, higher after hours | Q3 beat, guidance raised, backlog about $132.5B | Net loss of $709M; interest expense of $846M. Heavy debt |
+| AAON | AI cooling | +19.3% | Record sales, raised outlook | Big one-day move already done |
+| LEU | Nuclear fuel | -6.4% (+14.8% in 5 days) | Big 5-day run, sharp pullback | No news found; volatile |
+| NEM | Gold | -4.2% (+11.6% in 5 days) | Strong 5-day run | No news found |
+| MARA | Bitcoin miner | +10.5% | Top gainer, heavy volume | No news found; small cap |
+
+New stocks making big moves: SPCX (Space Exploration Technologies, $143.09, +0.7%, $1.9T market cap) was among the most active stocks by volume. I found no news on it. PEPG (+92.9%), TTEC (+72.0%) and HUMA (+29.6%) are tiny caps with big moves. I found no news on them, so treat those moves as unexplained.
 
 #### AI and tech
-- **Selloff and rebound.** Stocks closed sharply lower on Nov. 5, their worst day since April 2025, as chip selling spread (CNBC via StockTitan). Thursday's drop was tied to fears that Democratic control of Congress could bring tougher AI rules (Reuters via StockTitan). Friday brought a bounce.
-- **Why the selling came.** The market blames hedge fund deleveraging and mechanical selling more than weaker AI fundamentals. Data center rules and lower Anthropic and OpenAI valuation hopes keep investors cautious (BigGo Finance).
-- **Nvidia headline.** A Yahoo Finance item referenced Nvidia probing a case involving CEO Jensen Huang. I could not confirm details.
-- **Weekly scoreboard.** Nvidia fell 8.8% on the week while Amazon rose 7.9%. Friday's bounce came on less than half the volume and faded through the session (Substack).
+- **Chip and server stocks:** Super Micro fell 4% as Nvidia's slide dragged AI server stocks. Dell dropped 6%. (MarketBeat) NVDA's five-day drop is -18.3%, and MU is -15.2% over five days in the live data.
+- **Nvidia valuation:** The stock is about 29% below its October 52-week high of $239.24. (TradingView) Coverage also points to a broader tech selloff. (Motley Fool)
+- **Analysts:** Citigroup trimmed its Nvidia price target. Dan Ives warned of more downside without Huang. (MarketBeat)
+- **CoreWeave:** It expects about $9B in customer prepayments over the next three months. (Rollingout) The low end of its capex guidance rose to $37B. (KuCoin)
 
 #### Nuclear and critical minerals
-- **Nuclear rebound.** Oklo rose about 23% and NuScale 16% after their results (TradingView/Seeking Alpha). Meta's Ohio campus deal with Oklo is non-binding (24/7 Wall St.).
-- **China export deadline.** Licences are still required for seven heavy rare earths, including dysprosium and terbium, because that regime was never suspended (Technology.org). The gallium, germanium and antimony suspension lapses Nov. 27 (CES Intelligence).
-- **China buying mines abroad.** Beijing is pushing state-linked firms to take bigger stakes in overseas mines (CNBC).
-- **Brazil.** Brazil approved a list of 27 critical minerals on Nov. 5 (Mattos Filho).
-- I found no new US government deals today.
+- **Japan rare earth shortage:** Shin-Etsu stopped accepting orders for some dysprosium magnets as inventories dwindle. TDK called rare earth buying "extremely difficult." (Reuters via SMM) USAR fell 9.6% and MP fell 3.4% anyway.
+- **Copper:** COMEX copper hit a four-month low of $6.20/lb on Nov. 10 on hot CPI. It recovered to $6.31 on Nov. 11. The source also says the odds of new copper tariffs fell. (Len Watson newsletter) FCX fell 3.2% and SCCO fell 3.2%.
+- **Uranium:** Cameco realized $66/lb in Q3 versus an average $123 spot. One analyst cut his Cameco target to $130 from $150. (Globe and Mail) The same note stayed positive on the supply outlook. CCJ fell 3.3%.
+- **Brazil:** Brazil published a list of 27 critical minerals. Rare earths, lithium, copper and uranium are top priority. (SMM)
+
+I found no new U.S. export-limit or government-deal news for today.
 
 #### Earnings
-**Recent results:**
-- **Karman (KRMN):** EPS of 19 cents beat the 15-cent consensus, and sales of $201.6M beat $194.7M (Benzinga). It also raised its full-year sales guidance. The stock closed up 42.1%.
-- **JFrog (FROG):** Adjusted EPS of $0.32 on $179.2M revenue beat estimates of $0.23 and $165.8M (Investing.com). The stock rose 35.3%.
-- **Oklo:** the loss was narrower than expected, and the stock rose about 23%.
-- **Snap:** Q3 revenue missed expectations, and the reaction was negative (Yahoo Finance).
+**Results since yesterday**
+- **AAON:** Sales were $707.4M versus $601.2M expected. Adjusted EPS was $0.83 versus $0.57. The stock rose 19.3% (CNBC, FactSet).
+- **Take-Two (TTWO):** Adjusted EPS was $1.00 on $1.60B revenue, a beat. Net bookings fell 18%. It kept its FY27 bookings outlook at $8–8.2B. The stock rose 8.3% (SEC filing, CNBC). GTA VI launches Nov. 19.
+- **CoreWeave (CRWV):** reported after the close. Adjusted loss was $1.27 per share versus a $1.55 loss expected. The stock rose after hours. (Investing.com, Rollingout)
+- **Others:** Janus International fell 29% on a double miss. Sanmina rose about 11% on a strong beat. (Everhint, TheStreet)
 
+**Watchlist earnings**
 | Date | Ticker | Timing | EPS est. | Revenue est. |
 |---|---|---|---|---|
-| 2026-11-09 | CEG | Before the open (7:00 a.m.) | $3.89 | $9.3B |
-| 2026-11-09 | USAR | Not found | -$0.15 | $13.6M |
-| 2026-11-10 | CRWV | Not found | -$1.21 | $3.5B |
-| 2026-11-13 | LAC | Not found | -$0.03 | n/a |
-| 2026-11-17 | NVDA | Not found | $2.47 | $109.0B |
-| 2026-11-17 | SQM | Not found | $2.16 | $2.2B |
+| 2026-11-13 | LAC | Not confirmed | $-0.03 | n/a |
+| 2026-11-17 | NVDA | Not confirmed | $2.47 | $109.0B |
+| 2026-11-17 | SQM | Not confirmed | $2.12 | $2.2B |
 
 #### Smart money
-- **Analysts and insiders:** nothing found in the three themes.
-- **Congress trades:** nothing found.
-- **Outside the themes:** after Karman's results, Piper Sandler raised its target to $60 and Needham cut its to $50 (Benzinga).
+- Cameco: an analyst cut his target to $130 from $150 but stayed positive on uranium. (Globe and Mail)
+- Nvidia: Citigroup lowered its price target before earnings. (MarketBeat)
+- Ivanhoe Mines hit a 52-week low after broker downgrades on copper and Platreef. (Len Watson newsletter, secondary source)
+- Insider buying and Congress trades: Nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-09-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-11-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
