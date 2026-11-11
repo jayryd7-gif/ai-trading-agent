@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-11 06:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-11 07:54 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-11 06:59 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 6 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -447,69 +447,68 @@ I found no new U.S. export-limit or government-deal news for today.
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-10</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-11</b></summary>
 
-#### Price data used
+### Nasdaq 100 Futures Brief for Wed, Nov 11, 2026
 
-```
-PRICE DATA (Nasdaq 100 futures, Yahoo Finance, New York time, may be delayed)
-Latest price: 27907.75 at 2026-11-10 07:40
-Previous New York session (2026-11-09 09:30 to 16:00): high 28129.25, low 27316.25, close 28004.75, volume 527,042
-Highest high of the last 5 New York sessions: 28969.00
-Lowest low of the last 5 New York sessions: 26718.00
-Since that session closed: high 28109.00, low 27869.00.
-Latest price is INSIDE the previous range (221.50 below the high, 591.50 above the low).
-Volume: the previous session traded 0.85x the average of the 5 session(s) before it.
-```
+#### 1. What is driving futures
+- **Rebound after a CPI selloff.** Futures tracking the S&P 500 and Nasdaq 100 bounced back on Wednesday after strong results from CoreWeave. CoreWeave said it expects to turn profitable on an adjusted basis in the first half of 2028, which eased worries about its debt.
+- **Hot inflation.** October CPI rose 0.4% on the month, and core CPI rose 0.3%. Analysts expected 0.3% and 0.2%. Markets now price a 91% chance of a 25-basis-point Fed hike in December. The odds of a 50-basis-point hike are 10%.
+- **Nvidia.** Two days of steep losses wiped roughly $430 billion off Nvidia's market value before it stabilized. Its earnings call is a week from today.
+- **Tug of war.** Worries about slower data center deployment are pitted against an appetite to buy the dip.
 
-**Nasdaq 100 futures brief for Tuesday, Nov 10, 2026 (New York session)**
+#### 2. Scheduled events (New York time)
+- No major economic data is scheduled. NYSE is open.
+- The US bond market is closed for Veterans Day. The bond market is not trading, so a signal from yields is missing.
+- MBA Mortgage Applications are due at 12:00 GMT. That is 7:00 AM New York time, which I converted myself.
+- 12:00 PM: Fed's Daly speaks.
+- 1:30 PM: Fed's Schmid speaks.
+- 7:00 PM: Fed Vice Chair Jefferson speaks. That is after the session.
+- US earnings today are mostly smaller companies. I found no big Nasdaq 100 earnings in the session.
+- One calendar site listed different Fed speaker times. I treated it as unreliable.
 
-**1. What is driving the market**
-- Monday was Wall Street's strongest session since April. The Nasdaq 100 jumped 3.4% as falling oil prices helped restore confidence after last week's sharp selloff.
-- Early Tuesday, Nasdaq 100 futures fell as investors assessed the controversy around Nvidia CEO Jensen Huang and details of Anthropic's IPO. The Huang reports are allegations. The reported investigation does not itself establish wrongdoing.
-- Anthropic's IPO details are unsettled. Anthropic told bankers its pricing details were inaccurate and that updated documents would follow.
-- Oil is falling on Iran peace hopes. Benzinga cites 82.2% market odds of a December Fed hike. I only saw this figure from one source.
-- Leadership is split. Nasdaq futures were down 0.22% while S&P and Dow futures were up.
+#### 3. Key levels (from the price data)
+- Latest price: 28387.00.
+- Previous session high: 28090.00. Price is 297.00 above it.
+- Previous session low: 27516.00.
+- Previous close: 27835.25.
+- Overnight (since close) high: 28397.50. Price is just under it.
+- Overnight low: 27823.75.
+- 5-session high: 28969.00.
+- 5-session low: 26718.00.
 
-**2. Scheduled events (New York time)**
-- **8:30 AM: October CPI.** Headline is expected at +0.3% month over month, down from 0.6%. Core is expected at +0.2%. Year-over-year is forecast at 3.9% headline and 2.8% core.
-- **Fed speakers:** Sources disagree on timing, so check your calendar.
-  - Waller: one source says 4:00 AM, while another says after CPI. I could not confirm which.
-  - Logan: one source lists 9:35 AM, but the XTB calendar's 16:50 CET converts to about 10:50 AM.
-  - Schmid: 1:30 PM.
-  - Bowman: 3:30 PM.
-  - Paulson: 6:30 PM.
-- **1:00 PM:** 10-year note auction. ZeroHedge lists it as $42bn.
-- **JOLTS at 10:00 AM:** One source lists it. I could not verify it elsewhere.
-- **After the close:** CoreWeave's earnings call is at 5:00 PM ET, after the session ends. It could affect overnight AI sentiment. Nvidia reports later: Nov 17.
+Price sits **near resistance**. It is just under the overnight high of 28397.50. It is also well above the previous session high, which could now act as support. The 5-session high of 28969.00 is the next higher marker.
 
-**3. Key levels (from the price data)**
-- Previous session high: **28129.25**. Low: **27316.25**. Close: **28004.75**.
-- Highest high of the last 5 sessions: **28969.00**. Lowest low: **26718.00**.
-- Range since the close: **28109.00** high, **27869.00** low. The overnight high sits just under the previous session high.
-- Latest price is **27907.75**. That is 221.50 below the previous high and 591.50 above the low. It is closer to resistance than support, but not at it. It is in the middle-to-upper part of the range, just above the bottom of the overnight range.
+#### 4. Volume
+The previous session traded 0.79x the average of the five sessions before it. That is **weak participation**. The big move up overnight did not follow a high-volume session. Rallies on thin volume are less reliable.
 
-**4. Volume**
-Yesterday's volume of 527,042 was **0.85x** the average of the 5 sessions before it. That is somewhat light participation. Monday's big rally had less volume than recent days, so the move is less convincing.
+#### 5. Directional lean
+**Neutral, Low confidence.**
+The signals conflict. Price is above the previous session high and just under the overnight high, which leans bullish. Volume was light, so the move lacks confirmation. The news is mixed: strong CoreWeave results against a hot CPI and a likely Fed hike. The bond market is also closed, so there is no yield signal. The move is a bounce in a tug-of-war market, not a clear trend.
 
-**5. Directional lean: Neutral | Confidence: Low**
-Price is inside yesterday's range, not at a high or a low. Volume was below average, which weakens the case for a continued rally. The news points both ways. Falling oil and peace hopes support risk appetite, but Nvidia and Anthropic headlines and the Dow-versus-Nasdaq split weigh on tech. CPI at 8:30 AM is a coin flip against a Fed-hike market. With signals in conflict, I stay neutral.
-
-What would change the lean:
-- **More bullish:** a soft CPI, with price holding above 28129.25 on stronger volume.
-- **More bearish:** a hot CPI, or price breaking below 27316.25.
+**What would change the lean:**
+- Toward bullish: a hold above 28090.00 with a clean break of 28397.50, and stronger volume once the session opens.
+- Toward bearish: a drop back below 28090.00, or hawkish Fed comments about a 50-basis-point hike.
 
 This is a probability-based lean, not a prediction or a trade instruction.
 
-**6. Event risk: High**
-CPI lands one hour before the open, with several Fed speakers after it. The market is also pricing a possible December hike, and Nvidia headlines are live.
+#### 6. Event risk: Medium
+There is no major data and the bond market is closed. The market is sensitive to Fed hike talk, though, and Daly and Schmid both speak during the session.
 
-**7. Sources**
-Yahoo Finance, Reuters (via Yahoo/MarketScreener), TipRanks, Saxo, Investing.com, XTB, ZeroHedge, TheStreet, Finviz, Benzinga (via BizToc), CoreWeave investor relations, BigGo Finance. All price levels and volume come from the supplied price data.
+#### 7. Sources
+- Price data block (Yahoo Finance)
+- Reuters via Investing.com
+- Investing.com / Yahoo Finance
+- InvestingLive
+- Charles Schwab
+- ZeroHedge
+- XTB
+
+Unverified: I could not confirm the exact overnight news timeline, or whether other speakers appear today beyond the ones listed.
 
 BIAS: Neutral | CONFIDENCE: Low
 
-[Open the file](reports/2026-11-10-nasdaq-brief.md)
+[Open the file](reports/2026-11-11-nasdaq-brief.md)
 
 </details>
 
@@ -579,7 +578,7 @@ BIAS: Bearish | CONFIDENCE: Medium
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-10 07:51 | ◆ Neutral | Low | High | 27907.75 | [read it](reports/2026-11-10-nasdaq-brief.md) |
+| nasdaq | 2026-11-11 07:53 | ◆ Neutral | Low | Medium | 28387.00 | [read it](reports/2026-11-11-nasdaq-brief.md) |
 | gold | 2026-11-10 18:25 | ▼ Bearish | Medium | High | 4039.10 | [read it](reports/2026-11-10-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
