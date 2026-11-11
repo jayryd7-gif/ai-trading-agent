@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-11-11 | Nasdaq (MNQ) | Short | -$867
+- **Session start (New York):** 2026-11-11 09:30
+- **Why:** two 5-minute candles closed beyond the key low (28311.75)
+- **Entry:** Sold short **5 contracts** at **28246.75** at **09:45** (sell plan 1/2/2)
+- **Stop:** 28362.0
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 09:50 | Target 1 | 1 | 28216.75 | $60 |
+| 10:25 | Stop | 4 | 28362.0 | -$922 |
+
+- **Exit:** last contract out at **10:25**, average 28332.95
+- **Result:** -$862 before fees, **-$867 after fees**
+- **What could have gone better:**
+  - Target 1 paid $60, but the stop stayed at the start. Moving it to breakeven after Target 1 would have ended this trade at about $60 instead of -$862.
+  - The entry was 65.00 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Biggest move against you while in the trade: 141.75 points ($1,418 on paper). Best move for you: 47.75 points.
+
+![Chart of this trade](charts/2026-11-11-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ✅ 2026-11-11 | Gold (MGC) | Long | $655
 - **Session start (New York):** 2026-11-10 20:00
 - **Why:** two 5-minute candles closed beyond the key high (4049.5)
@@ -514,8 +538,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$798** over 21 trades
-- **Winners:** 9 (43%), **losers:** 12
-- **Before fees:** -$700, fees paid: $97
-- **Nasdaq (MNQ):** -$2,384 over 9 trades
+- **Total profit / loss after fees:** **-$1,664** over 22 trades
+- **Winners:** 9 (41%), **losers:** 13
+- **Before fees:** -$1,562, fees paid: $102
+- **Nasdaq (MNQ):** -$3,250 over 10 trades
 - **Gold (MGC):** $1,586 over 12 trades
