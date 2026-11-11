@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-11 01:46 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-11 03:50 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-11 01:46 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 18 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 7 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 22 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 22 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 45 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 9 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -264,62 +264,67 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-10, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-11, event risk Medium</b></summary>
 
 #### Top things for today
-1. **US CPI at 8:30 AM.** Headline CPI is forecast at 0.3% m/m (previous 0.6%). Core CPI is forecast at 0.2% (previous 0.3%). Why it matters: rates, the dollar and the Fed path.
-2. **Iran.** Trump told CNN a strike resumption is "highly unlikely" if talks progress and a strong deal is signed. He met Qatar's PM on Monday. Why it matters: oil, gold safe-haven demand, Gulf shipping.
-3. **Russia-Ukraine talks in Abu Dhabi.** These are the first trilateral talks since February. They run for two days. Why it matters: energy and Europe risk.
-4. **Waller speaks at 4:00 AM.** Why it matters: Fed rate expectations. The topic isn't given.
-5. **Rate-hike talk.** ING says US inflation is likely "too hot" (headline only). A Futu headline says CPI could decide whether the Fed raises rates in December (headline only). Why it matters: rates and the dollar.
+1. **US aircraft moved out of a second UK base over an Iran threat.** The WSJ reported that the US military moved aircraft out of a second British airbase on Monday after an Iran threat (Reuters relaying WSJ). The exact threat to RAF Mildenhall is still under discussion among US officials. Why it matters: Middle East risk, oil and safe-haven demand.
+2. **Ukraine, Russia and the US reportedly resumed peace talks.** The Kyiv Post says a 1,500-for-1,500 POW swap and a ceasefire are being discussed (headline only). Why it matters: energy supply and risk appetite.
+3. **Trump was reportedly briefed on the Nvidia chief's ties to an alleged Chinese spy.** This is from Anadolu, which says the briefing came aboard Air Force One en route to Beijing (headline only). I could not confirm the timing of any Beijing trip. Why it matters: US-China relations and chip-sector sentiment.
+4. **US PPI is due Friday.** Core PPI is forecast at 0.3% (previous 0.7%) and headline PPI at 0.4% (previous 1.3%). Why it matters: inflation and Fed rate expectations.
+5. **The CFTC has warned Kalshi of possible charges over how it filed contracts.** Several outlets reported this, including FinanceFeeds and Cryptopolitan (headline only). Why it matters: regulation of prediction markets and derivatives.
 
 #### Today's schedule (New York time)
-| Time | Event | Who or where | Confirmed? |
-|---|---|---|---|
-| 4:00 AM | FOMC Member Waller speaks (Medium impact) | USD | Yes |
-| 8:30 AM | CPI m/m (forecast 0.3%, previous 0.6%) | USD | Yes |
-| 8:30 AM | Core CPI m/m (forecast 0.2%, previous 0.3%) | USD | Yes |
-| Day (time unconfirmed) | Russia-Ukraine-US talks, day 1 of 2 | Abu Dhabi | Talks confirmed; times (unconfirmed) |
+No scheduled events found. The calendar lists no major events today. I found no confirmed Trump public events or hearings today.
 
-Coming up this week: Thu Nov 12, 2:00 AM, UK GDP m/m (forecast 0.0%, previous 0.1%). Fri Nov 13, 8:30 AM, US Core PPI m/m (forecast 0.3%, previous 0.7%) and PPI m/m (forecast 0.4%, previous 1.3%). Wed Nov 11 has no major events.
+Coming up this week: Thu Nov 12, 2:00 AM, GBP GDP m/m (forecast 0.0%, previous 0.1%, high impact). Thu Nov 12, 8:30 AM, US Unemployment Claims (forecast 194K, previous 189K, medium impact). Fri Nov 13, 8:30 AM, US Core PPI m/m (forecast 0.3%, previous 0.7%) and PPI m/m (forecast 0.4%, previous 1.3%), both high impact.
 
 #### Event risk today
-High - CPI is a high-impact release. Inflation worries are already in the headlines, and Iran and Ukraine talks are running at the same time.
+Medium - No major US data is scheduled, but the Iran-linked base threats and the Ukraine talks could move energy and gold headlines.
 
 #### Politics and policy
-- Trump signaled new Iran strikes look unnecessary after meeting Qatar's PM (Bloomberg, headline only). UPI says they discussed US-Iran negotiations (headline only).
-- Trump has said he told Netanyahu a strike on Iran would be inappropriate while a solution is close. This is from an undated PBS page, so it may not be from last night.
-- Trump said at a Monday White House briefing that Washington sees growing willingness to end the Ukraine war (CNBC).
-- The Washington Post says Republicans, after losing Congress, have one last shot to pass their agenda (headline only).
-- The Washington Post says the Supreme Court allowed a major part of Trump's Texas border project (headline only).
-- Reuters says Musk is expected to join Trump at APEC, and Huang's participation is in doubt (headline only).
+- **Midterms:** Several outlets are still covering the results. U.S. News says some races remain undecided (headline only). The Washington Post reports House Republicans elected Jim Jordan minority leader for next year (headline only).
+- **Trump and the BBC:** NBC News reports a US judge ruled Trump's $10 billion defamation case against the BBC can proceed (headline only). RFI reports the same ruling (headline only).
+- **Food stamps:** KATU reports a new administration rule could remove 6.3 million people from food stamp benefits (headline only).
+- **Tariffs:** Global Atlanta reports a Belgian firm raised its Georgia investment to $50M. It says Trump officials credit tariffs with bringing factories home (headline only).
+- **Trump overnight:** The New York Times reports Jimmy Kimmel picked apart Trump's impromptu call-in (headline only). A Reuters-linked page also carries a Trump line that the US sees a "strong inclination" to end Russia's war in Ukraine. Why it matters: Ukraine headlines can move energy prices.
+- **Fed and Treasury:** Nothing found.
 
 #### Economics
-- No major US data was released overnight. Today's CPI is the main event.
-- Investing.com says the dollar held its losses ahead of the data (headline only).
-- WSJ says Treasury yields edged up ahead of the data (headline only).
-- ING says US inflation is likely too hot for comfort (headline only).
+- Germany's October inflation was confirmed at 2.8% (WHBL News, headline only).
+- Bundesbank's Nagel said the German economy is on the mend, though reforms are needed (Bloomberg, headline only).
+- Bloomberg also reports an Allianz CIO says markets underestimate an inflation surge (headline only). Why it matters: inflation expectations, rates and gold.
+- No US data was released overnight.
 
 #### SEC, CFTC and hearings
-- The SEC and CFTC issued no press releases in the last 2 days.
-- Several outlets say Coinbase, Kalshi, Kraken's parent and others back the CFTC in a lawsuit over stock perpetual contracts (The Defiant, Coin Edition, Crypto News; headline only).
-- No congressional hearings were found.
+- **SEC:** Nothing here is from search. The SEC announced its fiscal year 2026 enforcement results on Tue Nov 10 at 11:15 AM (official press release).
+- **CFTC and Kalshi:** The CFTC has warned Kalshi of possible charges over contract filings (FinanceFeeds, RG.org, Cryptopolitan, The Crypto Times, headlines only). FinanceFeeds adds that Democrats are preparing tougher prediction market oversight.
+- **Stock perps:** AMBCrypto says Coinbase, Kalshi and Kraken's parent want to back the CFTC in a fight over stock perpetuals (headline only).
+- **Supreme Court:** The Washington Post reports the court heard arguments on federal agencies' power to impose fines (headline only). Why it matters: it could limit how agencies enforce penalties.
+- **Hearings:** No congressional hearings found.
 
 #### War, trade and tariffs
-- **Iran:** Gulf bourses opened higher as Trump held off on strikes (Reuters, headline only). Iranian media reported US strikes on Qeshm Island overnight, and Iran has attacked tankers in the Gulf and Strait of Hormuz this month. The NBC article doesn't say when the Qeshm strikes happened. Senior US and Gulf officials doubt an imminent deal. Why it matters: oil and shipping risk.
-- **Russia-Ukraine:** Talks began Tuesday, according to Ukrainian state media and RIA Novosti. Witkoff and Kushner lead the US side. Russia demands the Donetsk areas it doesn't hold. Ukraine has ruled out withdrawing. Russia carried out one of its deadliest strikes yet before the talks. Why it matters: energy supply and risk appetite.
-- No new tariff news was found.
+- **Iran:** CNN's source says US intelligence has picked up "varied, extensive, and specific" Iranian plots against American targets in recent weeks. The WSJ and The War Zone say the US raised the threat level at RAF Mildenhall and RAF Lakenheath to "FPCON Charlie." RAF Fairford bombers had been withdrawn after five men were arrested outside that base on September 27. Iran's ambassador to Britain denies involvement in any plot. A Middle East Eye live-blog title says Trump said the Iran war could end "fairly soon" but the US is "locked and loaded." UPI reports Iran designated Argentina's navy and air force as terrorist organizations (headline only). Why it matters: oil, shipping and gold.
+- **Ukraine:** Peace talks reportedly resumed (Kyiv Post, headline only). Anadolu reports two people were killed in a Ukrainian drone attack on Smolensk. It also says Leningrad region was hit by the largest attack this year (headline only).
+- **Tariffs and trade:** Nothing new beyond the Global Atlanta item above. Al Jazeera runs a piece on China's $1 trillion trade surplus (headline only).
 
 #### Country briefs
-- **China:** Reuters, citing SCMP, says Musk is expected at APEC with Trump (headline only).
-- **European Union:** EU and NATO officials will hold separate talks with Kyiv's team in Abu Dhabi.
-- **United Kingdom:** National security advisers from Britain, France and Germany are expected in Abu Dhabi. UK GDP is due Thursday at 2:00 AM.
+- **China:**
+  - Al Jazeera examines why the $1 trillion trade surplus is not all good news for the economy (headline only).
+  - Anadolu's Nvidia-chief report involves China (see above).
+- **European Union:**
+  - The EU Ukraine training mission has reached 100,000 soldiers trained (EU NEIGHBOURS east, headline only).
+  - German inflation was confirmed at 2.8% (WHBL News, headline only).
+- **United Kingdom:**
+  - US aircraft left RAF Mildenhall over the Iran threat (see above). The UK Ministry of Defence says it does not routinely comment on other nations' activity (via CNN).
+  - GDP is due Thursday at 2:00 AM.
 - **Japan:** Nothing found.
 - **India:** Nothing found.
-- **Russia:** Moscow and Kyiv continue to attack each other's energy sites. Riddle Russia reports on a Russian financial bid to entrench control over occupied Ukraine (headline only).
+- **Russia:**
+  - Ukrainian drone attacks hit Smolensk and Leningrad regions (Anadolu, headline only).
+  - Russia is reported to be in peace talks with Ukraine and the US (Kyiv Post, headline only).
 - **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-10-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-11-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
