@@ -39,3 +39,4 @@ date,time_ny,instrument,bias,confidence,price_at_brief
 2026-11-10,18:25,gold,Bearish,Medium,4039.10
 2026-11-11,07:53,nasdaq,Neutral,Low,28387.00
 2026-11-11,18:40,gold,Bearish,Medium,3986.60
+2026-11-12,07:55,nasdaq,Unknown,Unknown,28204.25
