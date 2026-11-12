@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-12 03:52 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-12 04:20 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,10 +17,10 @@ Last updated 2026-11-12 03:52 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 24 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -331,60 +331,56 @@ Medium - Claims is the only US data today, but the Putin meeting, Iran diplomacy
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-11</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-12</b></summary>
 
 #### Top things today
-
-1. **Hot US inflation hit crypto.** Bitcoin fell to about $73,700 after hotter inflation data, with $723M in liquidations. About $570M of that came from leveraged longs. (crypto.news) Why it matters: leverage is being flushed, and the Fear and Greed Index is at 29.
-2. **Bitcoin ETF outflows keep going.** US spot Bitcoin ETFs shed $201M on Monday, and BlackRock's IBIT has had seven straight days of withdrawals totaling $1.66B. (Cointelegraph) Why it matters: ETF demand is the main sign of institutional appetite, and it is weak.
-3. **Zcash is down sharply.** ZEC is down 15.24% in 24 hours, with losses of over 20% across five days. One outlet found no Zcash-specific news behind Tuesday's plunge. Others cite long liquidations, Grayscale Zcash Trust redemptions and selling after the NU7 upgrade. Why it matters: it is a top-10 coin with a leverage unwind.
-4. **The CLARITY Act is stalled, and Democrats won Congress.** Democrats won the House and Senate on Nov. 3. The bill expires Jan. 3 unless the Senate passes it in the lame-duck session. (CryptoTicker) Why it matters: US market-structure rules now depend on the lame-duck session or the next Congress.
-5. **Stablecoins keep moving into banking.** PNC and Coinbase announced a pilot letting corporate clients receive USDC. (The Crypto Basic) Why it matters: it is real adoption, even while investment demand is weak.
+1. **Bitcoin is $73,287, down 8.4% over 7 days, and Fear and Greed is 28.** Ether is down 15.1% and Solana 13.4% over the same week. Why it matters: the selloff is wider in alts than in BTC.
+2. **Spot Bitcoin ETFs have had three straight days of outflows, led by IBIT.** That streak is the key flow metric to watch. BlackRock's ETHA also saw $129.8M of withdrawals on Nov 11 (Farside, via crypto.news). Why it matters: ETF demand is not supporting price.
+3. **The CLARITY Act is stalled.** It failed a Senate cloture vote 49-50 on Sept 15, short of the 60 needed. After the midterms, Democrats want to expand the SEC's role and narrow the CFTC's. Why it matters: any new bill will probably be tougher, and not before 2027.
+4. **GRAM (formerly Toncoin) is up about 6% against a weak tape.** Telegram's built-in wallet drew a wave of sign-ups, and Durov credited auto-activation of wallets for the surge (Cryptonews). Why it matters: it is a news-driven move, but wallet counts may be inflated by auto-creation.
+5. **Small caps are swinging hard.** Ozone Chain rose 67% while Initia fell 55.4% (CoinGabbar). Why it matters: risk sits in thin small caps right now.
 
 #### Coins to research
-
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Quantix Finance (QFI) | +31056.3% | No news found. | Pump with no news. $18.8K volume on a $411.6M market cap. Price is $999. Looks illiquid or manipulated. |
-| A7A5 (A7A5) | +196.4% | No news found. | Only $873 volume on a $476.7M market cap. Pump with no news. |
-| Initia (INIT) | +14.0% | Initia was attacked and halted its Layer 1 network. The token rose about 15% on speculation and a short squeeze. (KuCoin) | Network halt and security incident. Squeeze-driven. Small cap (rank 418). |
-| Lighter (LIT) | +6.5% | Continued buybacks, including a larger repurchase volume. (KuCoin) | Only 7 days of data show +0.4%. Mid-cap of $841M. |
-| Onyxcoin (XCN) | +17.2% | No news found. | Pump with no news. |
-| Bitway (BTW) | +13.5% | No news found. | Pump with no news. It fell 16.74% in a recent 24-hour session. (Pluang, about 20 days old) Very volatile. |
-
-Zcash, Venice (VVV), Pearl and Collector Crypt are trending but falling. I found no specific cause for VVV or Pearl.
+| Ozone Chain (OZO) | +67.0% | BingX listed OZO/USDT on Nov 10 at 12:00 UTC (7:00 AM NY) (CoinGabbar). That is the only catalyst I found. | Market cap $210M but only $295K volume. Pump with thin trading. Holder concentration not checked. |
+| Gram (GRAM) | +5.9% | Telegram wallet rollout and Durov comments (Cryptonews, Bitcoin Foundation). | Wallet growth has not yet shown up in TON on-chain liquidity. Other tokens share the GRAM ticker. |
+| Midnight (NIGHT) | +7.3% | Mainnet transactions passed 1M in October after smart-contract deployment opened (Cryptonews). | A Cardano partner-chain token. Up on 7d, but the cause of today's move is not confirmed. |
+| Initia (INIT) | -43.1% (trending) | Large drop, on about $84M volume (CoinGabbar). Cause not found. | Falling hard with no news found. Market cap rank 645. |
+| Epic Private Internet Cash (EPIC) | +16.7% | No news found. | Rank 932, tiny cap, pump with no news. |
+| Provenance (HASH) | +7.5% | No news found. | $445M cap but only $3.2K 24h volume. Prices on that volume are unreliable. |
 
 #### Whale watch
-
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 6 (older than 1 day) | BTC | ~$228M (3,009 BTC) | Dormant whale (Lookonchain) | Bought |
-
-I found no confirmed moves of $10M or more from the last 24 hours. The Nov 6 item is included for context. Cardano whales were also reported selling 50M ADA (Analytics Insight, USD value and date not confirmed).
+| Nov 10, ~4:07 PM | BTC (7,655) | ~$566M | Unknown wallet (Whale Alert) | Wallet to new wallet. Not an exchange move. |
+| Nov 12, ~1:16 AM | ETH (6,532) | ~$13.6M | Wallet 0x69A8 (Lookonchain) | Sent to a Galaxy Digital deposit address. Lookonchain's follow-up says the holder sold at a loss of about $3.1M (crypto.news). |
 
 #### Government and regulation
-
-- **CLARITY Act (H.R. 3633):** It would split crypto oversight between the SEC and CFTC. It failed a Senate procedural vote 49–50 on Sept. 15. It is stalled, not formally dead. (FinTech Weekly)
-- **Democratic plan:** House Democrats plan to expand Maxine Waters' consumer-protection amendment into a broader market-structure bill. It would widen SEC oversight and reduce the CFTC's role. They plan to move it in the next Congress. (CoinPaprika)
-- **CFTC:** It sent its crypto rulemaking to the White House for review on Sept. 17. Binding rules may be more than a year away. (Orrick)
-- **Kalshi:** crypto.news headlines say Kalshi could face CFTC charges over how it launched prediction markets. (unconfirmed, headline only)
-- Nothing found on laws in other countries this week.
+- **CLARITY Act (market structure):** A motion to reconsider was filed, so the bill could return, but it is not law. House Democrats are reportedly drafting an SEC-led bill that curbs the CFTC and adds Trump ethics rules (CryptoBriefing). The next Congress is seated in January 2027.
+- **SEC:** "Regulation Crypto Assets" would give some crypto firms exemptions from normal securities registration when raising capital. In October the SEC also proposed custody rules (KuCoin). Both are proposals, not final rules.
+- **CFTC:** It is seeking public input on a federal framework for leveraged crypto trading (American Banker). Ex-Rep. McHenry said Congress would need to give Chair Selig spot-market authority through legislation (TokenPost).
+- **Stablecoins:** The OCC finalized rules implementing the GENIUS Act (KuCoin).
+- **Other countries:** a headline says Hong Kong is advancing a virtual asset framework. I found no details.
+- **Low-profile bills or amendments:** Nothing found.
 
 #### Who is buying and adopting
-
-- **Strategy:** It bought 1,036 BTC (about $81.9M) from Nov. 2 to 8 and now holds 850,364 BTC. (The Crypto Basic) It also spent $188.3M repurchasing STRC preferred shares.
-- **Bitmine:** It bought 8,573 ETH in the week ending Nov. 1. (Motley Fool)
-- **Sellers:** Listed companies have sold over 108,000 BTC (about $8.08B) in 2026. (crypto.news)
-- **Visa:** Partners can now settle in stablecoins seven days a week. (Crypto Briefing)
-- **PNC/Coinbase:** USDC payment pilot, as above.
-- **NYSE:** a headline says it selected Avalanche. I found no details.
-- No new country or government bitcoin purchases found.
+Nothing found. My adoption search did not return results, so there are no confirmed new government or corporate bitcoin buys or stablecoin payment launches for today. The 7,655 BTC wallet transfer above is not a confirmed purchase.
 
 #### Next 7 days
+Unlock dates come from trackers and are projections. Tokenomist lists several as pending verification. Times were not given, so I haven't converted any to New York time.
 
-No scheduled events found. I did not find confirmed unlock dates, hearings or ETF deadlines. The Waller-backed December rate hike talk is also a watch item (The Defiant, headline only; no date confirmed).
+| Date | Event | Coin or topic |
+|---|---|---|
+| Nov 13 | Unlock of about 797.5M tokens, about 31.8% of released supply (~$10M) (unconfirmed) | AZTEC |
+| Nov 14 | Unlock of about 86.4M tokens, about 31.4% of market cap (~$127M) (unconfirmed) | PIEVERSE |
+| Nov 14 | Unlock of about 6.87B tokens (~$25M, 1.5% of market cap) | PUMP |
+| Nov 14 | Unlock of about 29.2M tokens (~$8.4M) | YZY |
+| Nov 15 | Unlocks (small): STRK about 127M tokens (~$5M); SEI about 55.6M tokens (~$2.5M); CONX about 1.32M tokens (~$19M by one tracker) | STRK, SEI, CONX |
 
-[Read the full brief with all the details](reports/crypto/2026-11-11-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+I found no hearings or ETF deadlines for this window.
+
+[Read the full brief with all the details](reports/crypto/2026-11-12-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
