@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-12",
+  "written": "2026-11-12 04:53",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-12-world-brief.md (Thu Nov 12, today)",
+    "Stocks: reports/stocks/2026-11-11-stock-brief.md (Wed Nov 11, NOT today)",
+    "Crypto: reports/crypto/2026-11-12-crypto-brief.md (Thu Nov 12, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-11-nasdaq-brief.md (Wed Nov 11, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-11-gold-brief.md (Wed Nov 11, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 12 ☀️\n\nUS envoys head to Moscow, inflation ran hotter than expected, and Bitcoin is down this week.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Kushner and Witkoff head to Moscow to meet Putin after Abu Dhabi Ukraine talks ended without a breakthrough.\n\nWhy it matters: Energy prices and sanctions could move.\n\nNext: If a deal emerges, oil may ease; if not, risk stays high."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: US inflation beat expectations and Treasury yields rose.\n\nWhy it matters: Higher yields can push up mortgage and loan rates.\n\nNext: Jobless claims at 8:30 AM New York time (forecast 194K). If they top it, watch the job market."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Nvidia fell 5.5% on Nov. 10 after an unverified report tied CEO Jensen Huang to a Chinese intelligence asset.\n\nWhy it matters: Nvidia is a large part of many index funds.\n\nNext: If the FBI probe grows, AI stocks may stay under pressure."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Crypto: Bitcoin is $73,287, down 8.4% over 7 days, and Fear and Greed reads 28.\n\nWhy it matters: ETF outflows show weak demand, and the CLARITY Act is stalled.\n\nNext: If outflows continue, watch whether BTC keeps sliding.\n\nNot financial advice."
+    }
+  ],
+  "reply_thread": "Sources: CNN, Axios, Traders Union, Motley Fool, The Information, Reuters, Farside via crypto.news, CryptoBriefing, CoinGecko live data.",
+  "midday": {
+    "story": "US envoys meet Putin in Moscow",
+    "post": "Kushner and Witkoff are heading to Moscow after Abu Dhabi Ukraine talks ended without a breakthrough. Why this matters for your wallet: energy prices and sanctions expectations can shift fast, and that can reach gas and fuel costs. Watch for the meeting's outcome."
+  },
+  "reply_midday": "Sources: CNN, Axios, Newsquawk. Meeting time not announced; the date is confirmed by CNN.",
+  "close_watch": "Today's close: watch the 8:30 AM New York time jobless claims release (forecast 194K, previous 189K).",
+  "video": {
+    "script": "US envoys are heading to Moscow to meet Putin, and that could move the energy prices you pay. The Abu Dhabi Ukraine talks ended without a breakthrough, so watch oil and sanctions headlines. Next, US inflation came in above expectations and Treasury yields rose. Higher yields can push up mortgage and loan rates. Bitcoin is down 8.4% this week at $73,287, and spot Bitcoin ETFs have had three straight days of outflows. If those outflows continue, crypto demand may stay weak. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "US envoys to Moscow",
+      "Inflation beat expectations",
+      "Yields up, loans may cost more",
+      "BTC $73,287, down 8.4% in 7 days",
+      "3 days of ETF outflows",
+      "Not financial advice"
+    ]
+  }
+}
