@@ -1,3 +1,4 @@
-Saved reports/crypto/2026-11-11-crypto-brief.md
-Tokens used: 79106 in, 2811 out
+Web search errors: max_uses_exceeded
+Saved reports/crypto/2026-11-12-crypto-brief.md
+Tokens used: 76927 in, 3442 out
 Estimated cost: $0.24
