@@ -48,5 +48,32 @@
       "3 days of ETF outflows",
       "Not financial advice"
     ]
+  },
+  "evening": {
+    "numbers": "S&P 500: 7,591.86 (-0.4% vs the last close)\nNasdaq: 25,363.75 (-0.4% vs the last close)\nDow: 52,294.12 (-0.4% vs the last close)\n10-yr yield: 5.10% (+0.10 pts vs the last close)\nOil (WTI): 88.70 (+2.5% vs the last close)\nGold: 3,881.70 (-3.0% vs the last close)\nBitcoin: 71,429.31 (-3.4% vs the last close)\nEther: 2,017.55 (-1.9% vs the last close)\nSolana: 81.61 (-2.1% vs the last close)",
+    "written": "2026-11-12 18:09",
+    "thread": [
+      {
+        "section": "Intro",
+        "post": "1/ Cash Flow Brief: Evening, Nov 12 🌙\n\nStocks slipped, the 10-yr yield rose to 5.10%, and oil gained 2.5%, all of which can touch your loan rates and gas costs.\n\nWhat happened today and what to watch Friday 🧵"
+      },
+      {
+        "section": "Politics",
+        "post": "2/ Politics & world: Senate Democrats weigh a Dec. funding deadline to force an end to the Iran war (The Hill).\n\nWhy it matters: Oil and war costs can reach gas prices.\n\nTomorrow: Watch whether the Dec. deadline gains support."
+      },
+      {
+        "section": "Economy",
+        "post": "3/ Economy: Traders Union reports US inflation beat expectations and Treasury yields rose. The 10-yr is at 5.10%.\n\nWhy it matters: Higher yields can lift mortgage and loan rates.\n\nTomorrow: PPI at 8:30 AM NY Fri (forecast 0.4%). If it tops that, watch yields."
+      },
+      {
+        "section": "Stocks",
+        "post": "4/ Stocks: Wall Street ends lower as Nvidia CEO resigns (TradingView). S&P 500 at 7,591.86, down 0.4%.\n\nWhy it matters: Index funds and retirement accounts often hold Nvidia.\n\nTomorrow: Watch whether Nvidia's leadership change keeps weighing on tech."
+      },
+      {
+        "section": "Crypto",
+        "post": "5/ Bitcoin fell 3.4% to 71,429.31; Ether down 1.9% to 2,017.55. Losses can hit wallets fast; hacks add risk. Tomorrow: watch follow-up on CoinDesk's report DOJ got court approval to seize $1.2B tied to North Korea's Binance hack. Not financial advice."
+      }
+    ],
+    "reply_evening": "Sources: Reuters, WSJ, The Hill, Traders Union (politics, economy); TradingView (stocks); CoinDesk (crypto); Yahoo Finance prices; NY-time economic calendar."
   }
 }
