@@ -1,3 +1,3 @@
-Saved reports/news/2026-11-11-world-brief.md
-Tokens used: 40949 in, 3395 out
-Estimated cost: $0.14
+Saved reports/news/2026-11-12-world-brief.md
+Tokens used: 20232 in, 3295 out
+Estimated cost: $0.08
