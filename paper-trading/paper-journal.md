@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-11-12 | Gold (MGC) | Long | -$355
+- **Session start (New York):** 2026-11-11 20:00
+- **Why:** two 5-minute candles closed beyond the key high (4000.7)
+- **Entry:** Bought **5 contracts** at **4004.4** at **20:15** (sell plan 1/2/2)
+- **Stop:** 3997.4
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 20:30 | Stop | 5 | 3997.4 | -$350 |
+
+- **Exit:** last contract out at **20:30**, average 3997.4
+- **Result:** -$350 before fees, **-$355 after fees**
+- **What could have gone better:**
+  - Price never reached Target 1: the best it did was +0.70 points, and Target 1 needed 6.
+  - The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.
+  - The entry was 3.70 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Biggest move against you while in the trade: 7.40 points ($370 on paper). Best move for you: 0.70 points.
+
+![Chart of this trade](charts/2026-11-11-gold.svg)
+
+[Open Gold (MGC) on TradingView](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ❌ 2026-11-11 | Nasdaq (MNQ) | Short | -$867
 - **Session start (New York):** 2026-11-11 09:30
 - **Why:** two 5-minute candles closed beyond the key low (28311.75)
@@ -538,8 +562,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$1,664** over 22 trades
-- **Winners:** 9 (41%), **losers:** 13
-- **Before fees:** -$1,562, fees paid: $102
+- **Total profit / loss after fees:** **-$2,020** over 23 trades
+- **Winners:** 9 (39%), **losers:** 14
+- **Before fees:** -$1,912, fees paid: $107
 - **Nasdaq (MNQ):** -$3,250 over 10 trades
-- **Gold (MGC):** $1,586 over 12 trades
+- **Gold (MGC):** $1,231 over 13 trades
