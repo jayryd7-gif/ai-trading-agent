@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-12 17:55 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-12 18:33 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-12 17:55 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 10 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 11 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | under an hour ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 15 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 37 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 1 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 38 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -487,55 +487,60 @@ The news points down: the Nvidia turmoil, China chip worries and rate-hike fears
 </details>
 
 <details>
-<summary><b>📊 Gold futures market brief, 2026-11-11</b></summary>
+<summary><b>📊 Gold futures market brief, 2026-11-12</b></summary>
 
-### Gold Futures Brief: Asia Session, Nov 11, 2026
+### Gold Futures Brief: Asia Session, Nov 12–13, 2026
 
 #### 1. What is driving gold
-Gold is falling on rate-hike fears. Gold fell more than 2% on Tuesday after hotter-than-expected US inflation lifted the dollar and Treasury yields. Headline CPI rose 0.4% and core CPI rose 0.3%, both 0.1 point above consensus. Markets fully price a 25 bp December hike. Bets on a 50 bp hike rose to 13.2% from 0%, and the dollar hit a four-week high. The selling continued Wednesday on hawkish Fed comments. One analyst said central bank buying has kept a floor under gold. I could not verify the size of that buying beyond this comment.
+- Gold is under pressure from rate-hike worries. A hot inflation report on Tuesday put a December hike on the table. CME FedWatch showed a December hike fully priced.
+- Fed speakers added to this today. Hammack said rates need to go higher. Daly said further tightening will be needed.
+- Bond yields rose. The 30-year Treasury auction cleared at 5.441%. Babypips' headline calls it a bond selloff that sank gold.
+- Kitco shows spot gold down $107 on the day, with a low of $3,852.10.
 
 #### 2. Scheduled events (New York time)
-- 3:30 PM: Fed's Bowman speaks on the economic outlook. This is before the session.
-- 6:30 PM: Philadelphia Fed's Paulson (FOMC voter) speaks. This is when early entries can start.
-- Other Fed speakers (Waller, Williams, Bowman again) appear on some calendars for about 11:00–11:30 PM. The sources conflict on dates, so I could not confirm them.
-- No major economic data releases are scheduled Wednesday.
-- Holidays in France, Canada and the US may affect liquidity in the later sessions.
+- **6:30 PM tonight:** NY Fed President Williams speaks. Kiplinger lists him at 6:30 pm. This is the same time the bot may start entering.
+- **Friday 8:30 AM:** Core PPI. Forecast 0.3%, previous 0.7%. This is after the session ends, but the market may position for it.
+- **Friday 7:00 PM:** Fed Vice Chair Jefferson speaks. This falls after tonight's session.
+- **Weekend:** Headlines on Iran and the Houthis may also decide where oil opens on Sunday evening.
+- I did not verify any big earnings or other central bank speakers for tonight's window.
 
 #### 3. Key levels (from the price data)
-- Previous session high: 4074.70
-- Previous session low: 4034.10
-- Previous close: 4066.70
-- 5-session high: 4155.80
-- 5-session low: 4034.10 (same as the previous low)
-- Since the close: high 4067.40, low 3986.00
-- Latest price: 3986.60
+- Latest price: 3881.40.
+- Previous Asia session high: 4005.90.
+- Previous Asia session low: 3933.00. This is also the lowest low of the last 5 sessions.
+- Highest high of the last 5 sessions: 4150.70.
+- Since the last close: high 3961.10, low 3856.70.
 
-Price is 47.50 below the previous session low. It sits just above the post-close low of 3986.00, so it is near fresh support. The previous low of 4034.10 and the previous close now sit above as possible resistance. News reports also call $4,000 the immediate test for bullion. That round number is not in the price data.
+Price is 51.60 below the previous session low. That low (3933.00) is now overhead and may act as resistance. Price is also only 24.70 above the 3856.70 recent low, so it sits **near support, not resistance**. If that low breaks, there is no earlier low in the data to point to.
 
 #### 4. Volume
-The previous session traded 0.67x the average of the 5 sessions before it. That is weak participation. The move was not backed by heavy trading in that session. The selloff came mostly during the US day, so this number does not fully show how active the drop was.
+The previous session traded 0.92x the average of the 5 sessions before it. That is slightly below average. Participation was a bit light, not strong. Light volume on a drop can mean the move lacks conviction. That signal is weak, though.
 
 #### 5. Directional lean
-**Bearish, Confidence: Medium.**
-Price is below the previous session low and near the bottom of the recent range. The news is also negative: hot inflation, a stronger dollar and rising hike odds. Weak volume in the last Asia session lowers my confidence. Central bank buying and the nearby 3986 low could slow the drop. Both price and news point down, so I did not choose Neutral.
+**Bearish, Medium confidence.** Price has broken below the previous session low and is trading near the recent low. The news is hawkish: a hike is priced in, and yields are rising. Volume was only slightly light, so it does not clearly confirm or contradict the move. The main risk is that the drop is already large, so a bounce toward 3933.00 is possible. Williams speaks at 6:30 PM, which could cause a sharp move either way.
 
-I would change the lean if price recovers above 4034.10 and holds. A softer tone from the Fed speakers, or falling yields and a weaker dollar, would also change it. A clean break below 3986.00 on rising volume would raise my confidence. This is a probability-based lean, not a prediction or a trade instruction.
+What would change my lean:
+- Price reclaims 3933.00 and holds above it.
+- Fed speakers sound less hawkish.
+- Yields fall back.
 
-#### 6. Event risk
-**Medium.** Paulson speaks at the start of the session and the market is very sensitive to Fed hike talk. There is no major data release, and holiday-thin liquidity can still cause sharp moves.
+Any of these would move me toward Neutral. This is a probability-based lean, not a prediction or a trade instruction.
+
+#### 6. Event risk: Medium
+Williams speaks right as entries may begin and rate-hike pricing is driving gold. The big data, Core PPI, comes after the session ends.
 
 #### 7. Sources
-- CNBC (gold price and futures reports)
-- Reuters via MarketScreener and Mining.com
-- Invezz
-- ZeroHedge (event calendar)
-- IC.com (week-ahead)
-- Trading Economics and Metacap (calendars, with conflicting dates)
-- Yahoo Finance price data (provided)
+- Price data block (Yahoo Finance)
+- Kitco
+- Babypips
+- Investing.com
+- Kiplinger
+- Finviz
+- Macrobullseye
 
 BIAS: Bearish | CONFIDENCE: Medium
 
-[Open the file](reports/2026-11-11-gold-brief.md)
+[Open the file](reports/2026-11-12-gold-brief.md)
 
 </details>
 
@@ -544,7 +549,7 @@ BIAS: Bearish | CONFIDENCE: Medium
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
 | nasdaq | 2026-11-12 07:55 | ? Unknown | Unknown | n/a | 28204.25 | [read it](reports/2026-11-12-nasdaq-brief.md) |
-| gold | 2026-11-11 18:40 | ▼ Bearish | Medium | Medium | 3986.60 | [read it](reports/2026-11-11-gold-brief.md) |
+| gold | 2026-11-12 18:32 | ▼ Bearish | Medium | Medium | 3881.40 | [read it](reports/2026-11-12-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
 
