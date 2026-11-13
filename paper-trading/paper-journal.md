@@ -4,6 +4,31 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ✅ 2026-11-13 | Nasdaq (MNQ) | Short | $237
+- **Session start (New York):** 2026-11-13 09:30
+- **Why:** two 5-minute candles closed beyond the key low (28356.75)
+- **Entry:** Sold short **3 contracts** at **28266.0** at **09:35** (sell plan 1/1/1)
+- **Stop:** 28399.0
+- **Small size:** less than $1,500 was left before the $4,000 max drawdown, so it traded 1 contract per target.
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 09:40 | Target 1 | 1 | 28236.0 | $60 |
+| 09:40 | Target 2 | 1 | 28206.0 | $120 |
+| 09:45 | Stop | 1 | 28236.0 | $60 |
+
+- **Exit:** last contract out at **09:45**, average 28226.0
+- **Result:** $240 before fees, **$237 after fees**
+- **What could have gone better:**
+  - The last contracts were stopped at Target 1, then price reached Target 3 by 10:00. A looser stop after Target 2 would have caught it.
+  - Biggest move against you while in the trade: 39.00 points ($234 on paper). Best move for you: 111.00 points.
+
+![Chart of this trade](charts/2026-11-13-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ✅ 2026-11-13 | Gold (MGC) | Long | $655
 - **Session start (New York):** 2026-11-12 20:00
 - **Why:** two 5-minute candles closed beyond the key high (3895.2)
@@ -586,8 +611,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$1,364** over 24 trades
-- **Winners:** 10 (42%), **losers:** 14
-- **Before fees:** -$1,252, fees paid: $112
-- **Nasdaq (MNQ):** -$3,250 over 10 trades
+- **Total profit / loss after fees:** **-$1,128** over 25 trades
+- **Winners:** 11 (44%), **losers:** 14
+- **Before fees:** -$1,012, fees paid: $115
+- **Nasdaq (MNQ):** -$3,014 over 11 trades
 - **Gold (MGC):** $1,886 over 14 trades
