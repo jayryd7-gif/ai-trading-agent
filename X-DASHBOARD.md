@@ -1,155 +1,82 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-12 18:09 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-13 04:52 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
-- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-12.md)
-- **Evening thread:** ✅ ready (below), reminder at 7 PM
-- **Claude cost this month:** $0.113 (24 run(s) this month)
+- **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-13.md)
+- **Evening thread:** ⏳ about 6:30 PM New York time
+- **Claude cost this month:** $0.117 (25 run(s) this month)
 
-## 🌙 Tonight's thread, ready to copy (Thursday Nov 12)
-
-What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
-
-**Post 1 of 5 · Intro** (210/280)
-```text
-1/ Cash Flow Brief: Evening, Nov 12 🌙
-
-Stocks slipped, the 10-yr yield rose to 5.10%, and oil gained 2.5%, all of which can touch your loan rates and gas costs.
-
-What happened today and what to watch Friday 🧵
-```
-
-**Post 2 of 5 · 🌍 World & politics** (226/280)
-```text
-2/ Politics & world: Senate Democrats weigh a Dec. funding deadline to force an end to the Iran war (The Hill).
-
-Why it matters: Oil and war costs can reach gas prices.
-
-Tomorrow: Watch whether the Dec. deadline gains support.
-```
-
-**Post 3 of 5 · 💵 Economy** (259/280)
-```text
-3/ Economy: Traders Union reports US inflation beat expectations and Treasury yields rose. The 10-yr is at 5.10%.
-
-Why it matters: Higher yields can lift mortgage and loan rates.
-
-Tomorrow: PPI at 8:30 AM NY Fri (forecast 0.4%). If it tops that, watch yields.
-```
-
-**Post 4 of 5 · 📈 Stocks** (250/280)
-```text
-4/ Stocks: Wall Street ends lower as Nvidia CEO resigns (TradingView). S&P 500 at 7,591.86, down 0.4%.
-
-Why it matters: Index funds and retirement accounts often hold Nvidia.
-
-Tomorrow: Watch whether Nvidia's leadership change keeps weighing on tech.
-```
-
-**Post 5 of 5 · 🪙 Crypto** (251/280)
-```text
-5/ Bitcoin fell 3.4% to 71,429.31; Ether down 1.9% to 2,017.55. Losses can hit wallets fast; hacks add risk. Tomorrow: watch follow-up on CoinDesk's report DOJ got court approval to seize $1.2B tied to North Korea's Binance hack. Not financial advice.
-```
-
-**Reply under post 5 · sources**
-(203/280)
-```text
-Sources: Reuters, WSJ, The Hill, Traders Union (politics, economy); TradingView (stocks); CoinDesk (crypto); Yahoo Finance prices; NY-time economic calendar.
-Not financial advice. News and analysis only.
-```
-
-<details><summary>Prices used</summary>
-
-```text
-S&P 500: 7,591.86 (-0.4% vs the last close)
-Nasdaq: 25,363.75 (-0.4% vs the last close)
-Dow: 52,294.12 (-0.4% vs the last close)
-10-yr yield: 5.10% (+0.10 pts vs the last close)
-Oil (WTI): 88.70 (+2.5% vs the last close)
-Gold: 3,881.70 (-3.0% vs the last close)
-Bitcoin: 71,429.31 (-3.4% vs the last close)
-Ether: 2,017.55 (-1.9% vs the last close)
-Solana: 81.61 (-2.1% vs the last close)
-```
-</details>
-
-## 📋 This morning's posts, ready to copy (Thursday Nov 12)
+## 📋 Today's posts, ready to copy (Friday Nov 13)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
-**Post 1 of 5 · Intro** (186/280)
+**Post 1 of 5 · Intro** (213/280)
 ```text
-1/ Cash Flow Brief, Nov 12 ☀️
+1/ Cash Flow Brief, Nov 13 ☀️
 
-US envoys head to Moscow, inflation ran hotter than expected, and Bitcoin is down this week.
+Nvidia's CEO exit, a key inflation report at 8:30 AM and Bitcoin under $70,000 are the big items for your wallet today.
 
 What happened, why it matters, and what could happen next 🧵
 ```
 
-**Post 2 of 5 · 🌍 World & politics** (243/280)
+**Post 2 of 5 · 🌍 World & politics** (262/280)
 ```text
-2/ Politics: Kushner and Witkoff head to Moscow to meet Putin after Abu Dhabi Ukraine talks ended without a breakthrough.
+2/ Politics: Iran says it hit a US radar in Bahrain, unconfirmed. Senate Banking wants Huang to testify Dec. 3, Lutnick Dec. 10.
 
-Why it matters: Energy prices and sanctions could move.
+Why it matters: Gulf tension can lift oil and gas prices.
 
-Next: If a deal emerges, oil may ease; if not, risk stays high.
+Next: If strikes continue, energy costs may stay high. Watch Qatar talks.
 ```
 
-**Post 3 of 5 · 💵 Economy** (238/280)
+**Post 3 of 5 · 💵 Economy** (236/280)
 ```text
-3/ Economy: US inflation beat expectations and Treasury yields rose.
+3/ Economy: US PPI at 8:30 AM, forecast 0.4% vs 1.3% before. France's October inflation hit 3.7%.
 
-Why it matters: Higher yields can push up mortgage and loan rates.
+Why it matters: Producer costs can feed into prices you pay.
 
-Next: Jobless claims at 8:30 AM New York time (forecast 194K). If they top it, watch the job market.
+Next: If PPI beats forecast, rate-hike bets may grow. Watch the 8:30 print.
 ```
 
-**Post 4 of 5 · 📈 Stocks** (247/280)
+**Post 4 of 5 · 📈 Stocks** (242/280)
 ```text
-4/ Stocks: Nvidia fell 5.5% on Nov. 10 after an unverified report tied CEO Jensen Huang to a Chinese intelligence asset.
+4/ Stocks: Thursday, Nvidia fell 4.3% after CEO Jensen Huang resigned. AMD rose 5.9%. Nebius fell about 17%.
 
-Why it matters: Nvidia is a large part of many index funds.
+Why it matters: AI stocks sit in many index funds and 401(k)s.
 
-Next: If the FBI probe grows, AI stocks may stay under pressure.
+Next: Nvidia reports Nov 17, timing unconfirmed. Watch its guidance.
 ```
 
-**Post 5 of 5 · 🪙 Crypto** (247/280)
+**Post 5 of 5 · 🪙 Crypto** (244/280)
 ```text
-5/ Crypto: Bitcoin is $73,287, down 8.4% over 7 days, and Fear and Greed reads 28.
-
-Why it matters: ETF outflows show weak demand, and the CLARITY Act is stalled.
-
-Next: If outflows continue, watch whether BTC keeps sliding.
-
-Not financial advice.
+5/ Bitcoin broke below $70,000, first time since August. Long liquidations: $1.2B to $1.65B. Why it matters: Macro, not crypto news, drives it. Next: Hot inflation could add pressure. Watch Nov 30 MSCI removal of Strategy. Not financial advice.
 ```
 
 **Reply under post 5 · sources**
-(182/280)
+(126/280)
 ```text
-Sources: CNN, Axios, Traders Union, Motley Fool, The Information, Reuters, Farside via crypto.news, CryptoBriefing, CoinGecko live data.
+Sources: Reuters, Bloomberg, NBC News, CNBC, Yahoo Finance, CoinGecko live data.
 Not financial advice. News and analysis only.
 ```
 
-### Midday take (12-1 PM): US envoys meet Putin in Moscow
+### Midday take (12-1 PM): Nvidia CEO Jensen Huang resigns
 
-(264/280)
+(236/280)
 ```text
-Kushner and Witkoff are heading to Moscow after Abu Dhabi Ukraine talks ended without a breakthrough. Why this matters for your wallet: energy prices and sanctions expectations can shift fast, and that can reach gas and fuel costs. Watch for the meeting's outcome.
+Nvidia just lost its CEO days before earnings. Why this matters for your wallet: AI stocks sit in many index funds and 401(k)s. If the leadership gap drags on, index-heavy portfolios feel it. Watch the Nov 17 report, timing unconfirmed.
 ```
 
 <details><summary>🎬 Video script (30-60 sec)</summary>
 
 ```text
-US envoys are heading to Moscow to meet Putin, and that could move the energy prices you pay. The Abu Dhabi Ukraine talks ended without a breakthrough, so watch oil and sanctions headlines. Next, US inflation came in above expectations and Treasury yields rose. Higher yields can push up mortgage and loan rates. Bitcoin is down 8.4% this week at $73,287, and spot Bitcoin ETFs have had three straight days of outflows. If those outflows continue, crypto demand may stay weak. Not financial advice. Follow for tomorrow's brief.
+Nvidia just lost its CEO days before earnings. Here is what that means for your money. Thursday, Nvidia fell 4.3% after Jensen Huang resigned, while AMD rose 5.9%. Many index funds and 401(k)s hold these AI stocks, so this shock reaches ordinary portfolios. Second, Bitcoin broke below $70,000 for the first time since August, with long liquidations estimated at $1.2 to $1.65 billion. Third, US producer prices hit at 8:30 AM, forecast at 0.4 percent. If they run hotter, rate-hike bets could grow, and that touches savings and mortgages. Not financial advice. Follow for tomorrow's brief.
 ```
 </details>
 
-**Coming up:** Today's close: watch the 8:30 AM New York time jobless claims release (forecast 194K, previous 189K).
+**Coming up:** Today's close: the only scheduled US event is the 8:30 AM PPI and Core PPI release, so watch how stocks and Bitcoin react.
 
 ## Topics covered, last 14 days
 
@@ -157,6 +84,7 @@ US envoys are heading to Moscow to meet Putin, and that could move the energy pr
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
+| [Fri Nov 13](reports/x-posts/2026-11-13.md) | ✅ | ✅ | ✅ | ✅ | — | Nvidia CEO Jensen Huang resigns |
 | [Thu Nov 12](reports/x-posts/2026-11-12.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US envoys meet Putin in Moscow |
 | [Wed Nov 11](reports/x-posts/2026-11-11.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Hot October inflation and rising December rate-hike odds |
 | [Tue Nov 10](reports/x-posts/2026-11-10.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's 8:30 AM US CPI inflation report |
@@ -170,19 +98,18 @@ US envoys are heading to Moscow to meet Putin, and that could move the energy pr
 | [Mon Nov 02](reports/x-posts/2026-11-02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Intel's 28.6% drop and the chip rout |
 | [Sun Nov 01](reports/x-posts/2026-11-01.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance hack and exchange trust |
 | [Sat Oct 31](reports/x-posts/2026-10-31.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Iran war and Hormuz shipping attacks |
-| [Fri Oct 30](reports/x-posts/2026-10-30.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Binance's suspected $6.3B hack |
 
 ## Are the source briefs working? (last 7 days)
 
 The X posts can only talk about what these briefs found. ✅ worked · 🟡 live prices only (its news search failed) · ❌ empty · · not run that day (the stock brief runs Mon/Wed/Fri, Nasdaq Mon-Fri, gold Sun-Thu evenings)
 
-| Brief | Fri 06 | Sat 07 | Sun 08 | Mon 09 | Tue 10 | Wed 11 | Thu 12 |
+| Brief | Sat 07 | Sun 08 | Mon 09 | Tue 10 | Wed 11 | Thu 12 | Fri 13 |
 |---|---|---|---|---|---|---|---|
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Stocks | ✅ | · | · | ✅ | · | ✅ | · |
+| Stocks | · | · | ✅ | · | ✅ | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | ✅ | · | · | ✅ | ✅ | ✅ | ✅ |
-| Gold futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
+| Gold futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
 

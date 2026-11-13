@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-13",
+  "written": "2026-11-13 04:52",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-13-world-brief.md (Fri Nov 13, today)",
+    "Stocks: reports/stocks/2026-11-13-stock-brief.md (Fri Nov 13, today)",
+    "Crypto: reports/crypto/2026-11-13-crypto-brief.md (Fri Nov 13, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-12-nasdaq-brief.md (Thu Nov 12, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-12-gold-brief.md (Thu Nov 12, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 13 ☀️\n\nNvidia's CEO exit, a key inflation report at 8:30 AM and Bitcoin under $70,000 are the big items for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: Iran says it hit a US radar in Bahrain, unconfirmed. Senate Banking wants Huang to testify Dec. 3, Lutnick Dec. 10.\n\nWhy it matters: Gulf tension can lift oil and gas prices.\n\nNext: If strikes continue, energy costs may stay high. Watch Qatar talks."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ Economy: US PPI at 8:30 AM, forecast 0.4% vs 1.3% before. France's October inflation hit 3.7%.\n\nWhy it matters: Producer costs can feed into prices you pay.\n\nNext: If PPI beats forecast, rate-hike bets may grow. Watch the 8:30 print."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Thursday, Nvidia fell 4.3% after CEO Jensen Huang resigned. AMD rose 5.9%. Nebius fell about 17%.\n\nWhy it matters: AI stocks sit in many index funds and 401(k)s.\n\nNext: Nvidia reports Nov 17, timing unconfirmed. Watch its guidance."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Bitcoin broke below $70,000, first time since August. Long liquidations: $1.2B to $1.65B. Why it matters: Macro, not crypto news, drives it. Next: Hot inflation could add pressure. Watch Nov 30 MSCI removal of Strategy. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters, Bloomberg, NBC News, CNBC, Yahoo Finance, CoinGecko live data.",
+  "midday": {
+    "story": "Nvidia CEO Jensen Huang resigns",
+    "post": "Nvidia just lost its CEO days before earnings. Why this matters for your wallet: AI stocks sit in many index funds and 401(k)s. If the leadership gap drags on, index-heavy portfolios feel it. Watch the Nov 17 report, timing unconfirmed."
+  },
+  "reply_midday": "Sources: NBC News, CNBC, Yahoo Finance. Nvidia reporting date not confirmed.",
+  "close_watch": "Today's close: the only scheduled US event is the 8:30 AM PPI and Core PPI release, so watch how stocks and Bitcoin react.",
+  "video": {
+    "script": "Nvidia just lost its CEO days before earnings. Here is what that means for your money. Thursday, Nvidia fell 4.3% after Jensen Huang resigned, while AMD rose 5.9%. Many index funds and 401(k)s hold these AI stocks, so this shock reaches ordinary portfolios. Second, Bitcoin broke below $70,000 for the first time since August, with long liquidations estimated at $1.2 to $1.65 billion. Third, US producer prices hit at 8:30 AM, forecast at 0.4 percent. If they run hotter, rate-hike bets could grow, and that touches savings and mortgages. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Nvidia CEO resigns",
+      "Nvidia -4.3% Thursday",
+      "Bitcoin below $70K",
+      "PPI at 8:30 AM",
+      "Not financial advice"
+    ]
+  }
+}
