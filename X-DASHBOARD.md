@@ -1,16 +1,71 @@
 # 𝕏 Cash Flow Brief Dashboard (@cashflowbrief00)
 
-*Updated 2026-11-13 04:52 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
+*Updated 2026-11-13 18:06 New York time by the X drafts agent (agents/x_posts.py). Drafts only: nothing is posted automatically. News and analysis, not financial advice.*
 
 [← Main dashboard](DASHBOARD.md)
 
 ## Today
 
 - **Morning thread:** ✅ ready → [open today's drafts](reports/x-posts/2026-11-13.md)
-- **Evening thread:** ⏳ about 6:30 PM New York time
-- **Claude cost this month:** $0.117 (25 run(s) this month)
+- **Evening thread:** ✅ ready (below), reminder at 7 PM
+- **Claude cost this month:** $0.122 (26 run(s) this month)
 
-## 📋 Today's posts, ready to copy (Friday Nov 13)
+## 🌙 Tonight's thread, ready to copy (Friday Nov 13)
+
+What happened today and what to watch tomorrow. Post it in one go (post 1, tap **+** for each next post, **Post all**), then reply to post 5 with the sources reply.
+
+**Post 1 of 5 · Intro** (206/280)
+```text
+1/ Cash Flow Brief: Evening, Nov 13 🌙
+
+Bitcoin fell below $70,000 and US producer prices were due at 8:30 AM, the two biggest items for your wallet today.
+
+What happened today and what to watch Saturday 🧵
+```
+
+**Post 2 of 5 · 🌍 World & politics** (242/280)
+```text
+2/ Iran says it hit a US radar in Bahrain. Unconfirmed by Bahrain or US (Reuters). Why it matters: Gulf tension can push oil and gas prices up. Tomorrow: No events scheduled. If strikes continue, energy costs may stay high. Watch Qatar talks.
+```
+
+**Post 3 of 5 · 💵 Economy** (235/280)
+```text
+3/ US PPI was due at 8:30 AM, forecast 0.4% vs 1.3% before. Core PPI forecast 0.3%, previous 0.7%. Why it matters: Producer costs can feed into prices you pay. Tomorrow: No US data Saturday. If PPI runs hotter, rate-hike bets may grow.
+```
+
+**Post 4 of 5 · 📈 Stocks** (250/280)
+```text
+4/ Stocks: S&P 500 at 7,560.87 (-0.4%), Nasdaq 25,130.26 (-0.9%) per Yahoo Finance. Chips slid again, but S&P 500 still ends the week up 2.5% (RealMoney Pro). Why it matters: Index funds and 401(k)s hold these stocks. Watch if chip weakness persists.
+```
+
+**Post 5 of 5 · 🪙 Crypto** (248/280)
+```text
+5/ Bitcoin fell below $70,000 for the first time since August (CNBC). Yahoo Finance: $67,855.47 (-4.9%), Ether $1,915.87 (-5.0%). Why it matters: Weak prices can hit crypto savings. Watch if Bitcoin holds $70,000 this weekend. Not financial advice.
+```
+
+**Reply under post 5 · sources**
+(203/280)
+```text
+Sources: Reuters, CNBC, Indiana Gazette, RealMoney Pro, Cryptonews (politics, stocks, crypto); Yahoo Finance prices (may be delayed); economic calendar feed.
+Not financial advice. News and analysis only.
+```
+
+<details><summary>Prices used</summary>
+
+```text
+S&P 500: 7,560.87 (-0.4% vs the last close)
+Nasdaq: 25,130.26 (-0.9% vs the last close)
+Dow: 52,342.03 (+0.1% vs the last close)
+10-yr yield: 5.15% (+0.05 pts vs the last close)
+Oil (WTI): 88.92 (+0.2% vs the last close)
+Gold: 3,887.60 (+0.1% vs the last close)
+Bitcoin: 67,855.47 (-4.9% vs the last close)
+Ether: 1,915.87 (-5.0% vs the last close)
+Solana: 77.17 (-5.5% vs the last close)
+```
+</details>
+
+## 📋 This morning's posts, ready to copy (Friday Nov 13)
 
 Each box has a copy button (top right on GitHub). **Before work:** post 1 and 2 as a thread (post 1, tap **+**, post 2, **Post all**). **On your 8-9 AM break:** open post 2, tap Reply and post 3, then reply to post 3 with post 4, and post 4 with post 5, so they join the same thread. Then reply to post 5 with the sources reply. (Or post all 5 at once before work.)
 
@@ -84,7 +139,7 @@ Nvidia just lost its CEO days before earnings. Here is what that means for your 
 
 | Date | 🌍 World & politics | 💵 Economy | 📈 Stocks | 🪙 Crypto | Evening | Biggest story |
 |---|---|---|---|---|---|---|
-| [Fri Nov 13](reports/x-posts/2026-11-13.md) | ✅ | ✅ | ✅ | ✅ | — | Nvidia CEO Jensen Huang resigns |
+| [Fri Nov 13](reports/x-posts/2026-11-13.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Nvidia CEO Jensen Huang resigns |
 | [Thu Nov 12](reports/x-posts/2026-11-12.md) | ✅ | ✅ | ✅ | ✅ | ✅ | US envoys meet Putin in Moscow |
 | [Wed Nov 11](reports/x-posts/2026-11-11.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Hot October inflation and rising December rate-hike odds |
 | [Tue Nov 10](reports/x-posts/2026-11-10.md) | ✅ | ✅ | ✅ | ✅ | ✅ | Today's 8:30 AM US CPI inflation report |
@@ -108,7 +163,7 @@ The X posts can only talk about what these briefs found. ✅ worked · 🟡 live
 | World, politics and the presidency | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Stocks | · | · | ✅ | · | ✅ | · | ✅ |
 | Crypto | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | · |
+| Nasdaq futures (macro backdrop) | · | · | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Gold futures (macro backdrop) | · | ✅ | ✅ | ✅ | ✅ | ✅ | · |
 
 ## 🚀 When to turn on auto-posting
