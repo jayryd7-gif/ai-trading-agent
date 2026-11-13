@@ -120,9 +120,10 @@ def check_paper_trader(r):
         seen.add(key)
         start = datetime.strptime(t["session_start"], "%Y-%m-%d %H:%M")
         entry = datetime.strptime(f"{start:%Y-%m-%d} {t['entry_time']}", "%Y-%m-%d %H:%M")
-        if entry < start:
+        early = rules.SESSIONS.get(t["instrument"], {}).get("early", 0)
+        if entry < start - timedelta(minutes=early):   # past midnight, not an early entry
             entry += timedelta(days=1)
-        late = (entry - start).total_seconds() / 60
+        late = (entry - start).total_seconds() / 60     # negative: an allowed early entry
         if late > window:
             r.add(BAD, f"{t['instrument']} {t['session_start']}: entered {late:.0f} minutes "
                        f"after the open (the window is {rules.ENTRY_WINDOW_MINUTES}).")
