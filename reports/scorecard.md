@@ -1,6 +1,6 @@
 # Brief scorecard
 
-Updated 2026-11-13 06:25 New York time. Scored briefs: 29. Waiting to be scored: 0.
+Updated 2026-11-13 17:07 New York time. Scored briefs: 30. Waiting to be scored: 0.
 
 > **Too few directional calls to trust any of this yet.** There are 6 Bullish or Bearish calls scored. Treat results as noise until there are at least 30, and preferably many more.
 
@@ -11,7 +11,7 @@ Updated 2026-11-13 06:25 New York time. Scored briefs: 29. Waiting to be scored:
 - Session ended flat (neither): 0
 - Hit rate when the session was decisive: **50%**
 
-For comparison: across all scored sessions, price went up in 52% of the decisive ones (14 of 27). A lean has to beat that, and beat 50%, to be worth anything.
+For comparison: across all scored sessions, price went up in 50% of the decisive ones (14 of 28). A lean has to beat that, and beat 50%, to be worth anything.
 
 ## By confidence
 
@@ -31,12 +31,13 @@ For comparison: across all scored sessions, price went up in 52% of the decisive
 ## Neutral calls
 
 - Session stayed calm (flat): 2
-- Session moved up or down anyway: 21
+- Session moved up or down anyway: 22
 
 ## Most recent scored briefs
 
 | Brief date | Instrument | Lean | Confidence | Session | Move | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-13 | nasdaq | Neutral | Low | 2026-11-13 09:30 | Down (-1.24%) | Moved |
 | 2026-11-12 | gold | Bearish | Medium | 2026-11-12 20:00 | Up (0.29%) | Wrong |
 | 2026-11-11 | gold | Bearish | Medium | 2026-11-11 20:00 | Down (-1.65%) | Right |
 | 2026-11-11 | nasdaq | Neutral | Low | 2026-11-11 09:30 | Up (0.46%) | Moved |
@@ -51,4 +52,3 @@ For comparison: across all scored sessions, price went up in 52% of the decisive
 | 2026-11-03 | nasdaq | Neutral | Low | 2026-11-03 09:30 | Flat (0.12%) | Calm |
 | 2026-11-02 | nasdaq | Neutral | Low | 2026-11-02 09:30 | Down (-2.04%) | Moved |
 | 2026-10-28 | gold | Neutral | Low | 2026-10-28 20:00 | Down (-0.80%) | Moved |
-| 2026-10-28 | nasdaq | Neutral | Low | 2026-10-28 09:30 | Up (0.20%) | Moved |
