@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-13 04:17 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-13 04:37 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,11 +16,11 @@ Last updated 2026-11-13 04:17 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 10 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
@@ -391,62 +391,54 @@ No token unlocks, hearings or ETF deadlines were found for the next 7 days. Stra
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-11</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-13</b></summary>
 
 #### Top things today
-1. Nvidia fell 5.5% on Nov. 10 after The Information reported that Jensen Huang's alleged link to a Chinese intelligence asset may have helped move at least $7.5B of chips to Chinese firms. Reuters could not verify the report. The FBI is also investigating. (Motley Fool, The Information) Why it matters: NVDA reports Nov. 17 with a governance and export-control cloud over it.
-2. Hot October CPI hit stocks. Treasury yields jumped and December rate-hike bets rose. The 2-year yield rose 17 bp, and Kalshi priced about 97% odds of a December hike. (Capp Notes) Why it matters: higher rates pressured tech, miners and nuclear names all at once.
-3. CoreWeave beat on Q3 and raised its 2026 revenue guidance to $13.0–13.3B. Revenue was $3.66B versus $3.55B expected. After-hours gains ranged from about 2% to 8% across sources. (Benzinga, Investing.com) Why it matters: it's a read on AI cloud demand after the chip selloff.
-4. AAON jumped 19% on a big beat and a higher outlook. Its data-center cooling unit BASX grew 218%. (Startup Fortune) Why it matters: money is flowing into AI power and cooling names, not just chips.
-5. Nuclear, uranium and miners all fell 3–10% yesterday in the live data. Uranium prices stayed firm. Uranium futures were reported near a nine-month high above $91/lb. (Len Watson newsletter) Why it matters: the equity selloff is not matching the commodity price.
+1. **Nvidia CEO Jensen Huang resigned effective immediately.** The stock dove as much as 16% at the low but ended down 4.3% amid multiple scandals around him (NBC News). Why it matters: the biggest AI stock has no CEO days before earnings.
+2. **Nvidia reports Tuesday, Nov 17.** Yahoo consensus is $2.47 EPS on $108.8B revenue. Timing is not confirmed. Why it matters: it is the first report after the leadership shock.
+3. **AMD (+5.9%) and Broadcom (+5.5%) rose as Nvidia fell.** CNBC noted AMD is the only other company that makes a full rack-scale AI system. Why it matters: money is moving to Nvidia's rivals.
+4. **Super Micro fell 11.3% on a DOJ probe.** The DOJ is investigating compliance with export rules for related servers (reported by Semafor, per CNBC). Why it matters: it is an export-control risk for AI server makers.
+5. **AI cloud names sold off.** Nebius fell about 17% and CoreWeave 6.9%, with IREN down 6.5%. Why it matters: the neocloud group is trading on guidance and capex worries.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| NVDA | AI | -5.5% (-18.3% in 5 days) | CEO scandal, FBI probe, earnings Nov. 17 | Headline-driven; outcome unknown |
-| CRWV | AI cloud | -0.5%, higher after hours | Q3 beat, guidance raised, backlog about $132.5B | Net loss of $709M; interest expense of $846M. Heavy debt |
-| AAON | AI cooling | +19.3% | Record sales, raised outlook | Big one-day move already done |
-| LEU | Nuclear fuel | -6.4% (+14.8% in 5 days) | Big 5-day run, sharp pullback | No news found; volatile |
-| NEM | Gold | -4.2% (+11.6% in 5 days) | Strong 5-day run | No news found |
-| MARA | Bitcoin miner | +10.5% | Top gainer, heavy volume | No news found; small cap |
+| NVDA | AI | -4.3% (5d -8.5%) | CEO resigned; earnings Nov 17 | Headed for a sixth straight weekly drop; leadership unclear |
+| AMD | AI | +5.9% (5d +44.7%) | Seen as a Nvidia rival gaining share | Up about 45% in 5 days; move is partly sentiment |
+| AVGO | AI | +5.5% (5d +25.0%) | Rose alongside AMD | Same sympathy move; no company-specific news found |
+| SMCI | AI servers | -11.3% | DOJ export probe | Legal risk; one customer drove 44% of quarterly revenue |
+| NBIS | AI cloud | -16.8% | Cut full-year revenue guidance, shifted some December revenue to 2027, raised capex | Guidance cut despite an earnings beat |
+| LEU | Nuclear fuel | -7.4% (5d +16.7%) | Roth upgraded it to Buy on Nov 6 (Daily Trade Alert) | Volatile; no news found for Thursday's drop |
 
-New stocks making big moves: SPCX (Space Exploration Technologies, $143.09, +0.7%, $1.9T market cap) was among the most active stocks by volume. I found no news on it. PEPG (+92.9%), TTEC (+72.0%) and HUMA (+29.6%) are tiny caps with big moves. I found no news on them, so treat those moves as unexplained.
+No new IPO or new stock with a big move turned up. SPCX (Space Exploration Technologies, a large, actively traded name) was flat at +0.1%.
 
 #### AI and tech
-- **Chip and server stocks:** Super Micro fell 4% as Nvidia's slide dragged AI server stocks. Dell dropped 6%. (MarketBeat) NVDA's five-day drop is -18.3%, and MU is -15.2% over five days in the live data.
-- **Nvidia valuation:** The stock is about 29% below its October 52-week high of $239.24. (TradingView) Coverage also points to a broader tech selloff. (Motley Fool)
-- **Analysts:** Citigroup trimmed its Nvidia price target. Dan Ives warned of more downside without Huang. (MarketBeat)
-- **CoreWeave:** It expects about $9B in customer prepayments over the next three months. (Rollingout) The low end of its capex guidance rose to $37B. (KuCoin)
+- **Nvidia turmoil.** The board removed Huang, pushing Nvidia's market cap below $4 trillion (KuCoin News). Shares are down roughly 30% over the past month (Yahoo Finance). CNBC also reports a roughly $2 trillion loss in value since the early-October peak.
+- **Super Micro probe.** Dell and HPE had already been hit earlier in the week. A board probe into Huang's alleged ties to a Chinese spy had dragged on AI server names (24/7 Wall St).
+- **Neoclouds.** CoreWeave gave back some of the prior session's gains from a strong quarterly print (Yahoo Finance). Nebius and IREN fell with it.
+- **Other chip moves.** TSM fell 1.9% and Intel 2%. The Philadelphia semiconductor index fell 0.5%, and a memory-supplier ETF fell 2.6% (NBC News).
 
 #### Nuclear and critical minerals
-- **Japan rare earth shortage:** Shin-Etsu stopped accepting orders for some dysprosium magnets as inventories dwindle. TDK called rare earth buying "extremely difficult." (Reuters via SMM) USAR fell 9.6% and MP fell 3.4% anyway.
-- **Copper:** COMEX copper hit a four-month low of $6.20/lb on Nov. 10 on hot CPI. It recovered to $6.31 on Nov. 11. The source also says the odds of new copper tariffs fell. (Len Watson newsletter) FCX fell 3.2% and SCCO fell 3.2%.
-- **Uranium:** Cameco realized $66/lb in Q3 versus an average $123 spot. One analyst cut his Cameco target to $130 from $150. (Globe and Mail) The same note stayed positive on the supply outlook. CCJ fell 3.3%.
-- **Brazil:** Brazil published a list of 27 critical minerals. Rare earths, lithium, copper and uranium are top priority. (SMM)
-
-I found no new U.S. export-limit or government-deal news for today.
+- **Nuclear and uranium stocks fell Thursday.** Examples: CCJ -3.4%, OKLO -5.5%, SMR -7.8%, LEU -7.4%, URA -3.8%. Most are still up over five days. I found no single catalyst for the drop.
+- **Copper and lithium are weak.** Copper broke below its 200-day moving average, and uranium and lithium prices also remain under pressure in the short term (FXEmpire). Chinese battery-grade lithium carbonate rose Friday. US PPI data is due Friday.
+- **Government support for nuclear.** The US planned to lend $4.2 billion to Vistra to boost nuclear output, a source said on Oct 4 (Mining.com). VST is up 19.2% over five days.
+- **Rare earths and export limits.** Nothing new found for today. MP rose 2.0%.
 
 #### Earnings
-**Results since yesterday**
-- **AAON:** Sales were $707.4M versus $601.2M expected. Adjusted EPS was $0.83 versus $0.57. The stock rose 19.3% (CNBC, FactSet).
-- **Take-Two (TTWO):** Adjusted EPS was $1.00 on $1.60B revenue, a beat. Net bookings fell 18%. It kept its FY27 bookings outlook at $8–8.2B. The stock rose 8.3% (SEC filing, CNBC). GTA VI launches Nov. 19.
-- **CoreWeave (CRWV):** reported after the close. Adjusted loss was $1.27 per share versus a $1.55 loss expected. The stock rose after hours. (Investing.com, Rollingout)
-- **Others:** Janus International fell 29% on a double miss. Sanmina rose about 11% on a strong beat. (Everhint, TheStreet)
+**Results since yesterday:** Nebius reported and beat earnings estimates. The stock still fell 17% (NBC News). The cause was lower revenue guidance and higher capex. I found no other notable results in these themes.
 
-**Watchlist earnings**
-| Date | Ticker | Timing | EPS est. | Revenue est. |
+| Date | Ticker | Timing | EPS estimate | Revenue estimate |
 |---|---|---|---|---|
-| 2026-11-13 | LAC | Not confirmed | $-0.03 | n/a |
-| 2026-11-17 | NVDA | Not confirmed | $2.47 | $109.0B |
-| 2026-11-17 | SQM | Not confirmed | $2.12 | $2.2B |
+| 2026-11-17 | NVDA | Not confirmed | $2.47 | $108.8B |
+| 2026-11-17 | SQM | Not confirmed | $2.03 | $2.2B |
 
 #### Smart money
-- Cameco: an analyst cut his target to $130 from $150 but stayed positive on uranium. (Globe and Mail)
-- Nvidia: Citigroup lowered its price target before earnings. (MarketBeat)
-- Ivanhoe Mines hit a 52-week low after broker downgrades on copper and Platreef. (Len Watson newsletter, secondary source)
-- Insider buying and Congress trades: Nothing found.
+- **Roth Capital** upgraded Centrus Energy (LEU) from Neutral to Buy on Nov 6 (Daily Trade Alert).
+- **Jones Trading** upgraded IREN from Hold to Buy on Nov 6 (Chartmill). The stock fell 6.5% Thursday.
+- **Congress:** Rep. John McGuire disclosed several small Micron purchases and a partial Broadcom sale, each $1K–$15K, with trades dated in late September and early October (Benzinga). Nothing found for nuclear or minerals.
+- **Insider buying:** Nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-11-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-13-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
