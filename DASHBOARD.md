@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-12 21:08 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-13 03:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-12 21:08 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 17 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 41 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 9 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 24 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 7 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -266,68 +266,66 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-12, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-11-13, event risk Medium</b></summary>
 
 #### Top things for today
-1. **US envoys meet Putin in Moscow.** Jared Kushner said he and Steve Witkoff would go to Moscow after the Abu Dhabi Ukraine talks ended with no clear breakthrough (CNN). They plan to work on humanitarian relief and prisoner swaps, and to push for European countries to join the talks. Why it matters: energy, risk appetite and sanctions expectations.
-2. **Nvidia chip fallout ahead of a Trump–Xi meeting.** Bloomberg says the Nvidia fallout is testing the trade truce as Xi welcomes Trump (headline only). Axios reported Trump authorized a crackdown on firms suspected of diverting Nvidia AI chips to China. Axios also reported that Commerce Secretary Lutnick stalled that crackdown. Why it matters: US-China tariff risk and the dollar.
-3. **Iran war diplomacy.** Crude futures fell after a report that VP Vance is considering face-to-face talks with Iran's security chief Rezaei (Newsquawk). Trump said the US has won in Iran and the conflict would end soon. A Jerusalem Center item says Iran denies talks and is hardening its stance (headline only). Why it matters: oil, gold safe-haven demand and shipping.
-4. **US inflation above expectations.** Traders Union reports US inflation exceeded expectations and Treasury yields rose (headline only; the measure is not named). Why it matters: rate expectations and the dollar.
-5. **Tariff refunds.** Fortune says importers are a step closer to receiving $166 billion in universal tariff refunds (headline only). Why it matters: Treasury cash needs and trade policy.
+1. **Iran says it hit a US radar in Bahrain.** Iran's Revolutionary Guards said they targeted a US early-warning radar in Bahrain. It was the first such claim against US assets in a Gulf country since early September (Reuters). Neither Bahrain nor the US had confirmed it at first. Why it matters: energy prices and Strait of Hormuz shipping risk.
+2. **US PPI at 8:30 AM.** The calendar shows PPI m/m forecast at 0.4% (previous 1.3%) and Core PPI m/m forecast at 0.3% (previous 0.7%). Why it matters: inflation data feeds rate expectations and the dollar.
+3. **Oil is on track for a second weekly fall.** Brent was at $95.54 a barrel early Friday as Trump kept the Iran blockade in place. Why it matters: energy costs feed inflation.
+4. **Senate Banking wants Huang and Lutnick to testify.** Chair Tim Scott asked Huang to appear Dec. 3 and Lutnick Dec. 10. Why it matters: US-China chip export-control policy.
+5. **French inflation hit 3.7% in October.** It is the highest since December 2023 (Reuters via Investing.com, headline only). Why it matters: global inflation and rate expectations.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 2:00 AM | GDP m/m (forecast 0.0%, previous 0.1%); already out, result not in my sources | UK (GBP) | Yes |
-| 8:30 AM | Unemployment Claims (forecast 194K, previous 189K) | US (USD) | Yes |
-| Time not announced | Kushner and Witkoff meet Putin | Moscow | Date confirmed by CNN; time (unconfirmed) |
+| 8:30 AM | PPI m/m (forecast 0.4%, previous 1.3%) | US data release | Yes |
+| 8:30 AM | Core PPI m/m (forecast 0.3%, previous 0.7%) | US data release | Yes |
 
-No Trump public events or hearings were found for today.
+No hearings or Trump events with a time were found for today.
 
-Coming up this week: Fri Nov 13, 8:30 AM: Core PPI m/m (forecast 0.3%, previous 0.7%) and PPI m/m (forecast 0.4%, previous 1.3%).
+Coming up this week: No scheduled events found. The calendar lists nothing for Saturday, Nov 14.
 
 #### Event risk today
-Medium - Claims is the only US data today, but the Putin meeting, Iran diplomacy and the Nvidia/China dispute could all produce headlines.
+Medium - PPI is high impact and the Iran-Bahrain claim adds Gulf and energy risk. The Bahrain claim is unconfirmed and comes during a fragile lull.
 
 #### Politics and policy
-- Trump envoys are meeting Putin (see above). Trump has recently announced significant concessions to Moscow, which has worried European capitals (CNN).
-- Nvidia export enforcement is unsettled (see above). Sen. Warren's office said the administration must preserve all records on Nvidia's chip exports to China (Newsquawk).
-- Reuters: Democrats are planning how to challenge Trump's immigration agenda (headline only).
-- Inside Higher Ed: a Trump official who cracked down on DEI will lead the DOJ's civil rights office (headline only).
-- Midterm counts continue. Axios says Scott Colom ousted Cindy Hyde-Smith in Mississippi (headline only). The Nome Nugget says Peltola leads in the Alaska Senate race (headline only).
-- Nothing found on the Fed or Treasury beyond the tariff-refund headline.
+- Lutnick agreed on Nov. 12 to testify voluntarily before the Senate Banking Committee. Huang resigned Thursday as Nvidia CEO. Why it matters: export-control policy and China chip sales.
+- Trump posted on Truth Social that Huang had done a "fantastic job."
+- Trump compared rising anti-Semitism in the US to Nazi Germany in 1938 (The Media Line, headline only).
+- The US reported record deportations and arrests in 2026 (Al Jazeera, headline only).
+- Trump praised Colom after an upset Mississippi Senate win (Newser, headline only).
+- Rechenberg wrote that tariffs aren't driving inflation (Boston Herald, headline only).
+- The Fed: nothing found in the feeds beyond the PPI data.
 
 #### Economics
-- Traders Union: US inflation exceeded expectations and Treasury yields rose (headline only).
-- News On Japan: Japan's wholesale inflation topped 7% (headline only).
-- Business Review: Romania's October inflation rose to 6.94% (headline only).
-- TradingView: Turkey's central bank raised its end-2027 inflation forecast to 21% (headline only).
-- Sky News: AI rollout is boosting the economy while slowdown fears mount (headline only).
-- The UK GDP result was released at 2:00 AM, but it is not in my sources.
+- French inflation rose to 3.7% in October, the highest since December 2023 (Reuters, headline only).
+- Hong Kong upgraded its growth outlook (Bloomberg, headline only).
+- Bloomberg ran a headline on rate hike fears testing India's stock rally as inflation rises (headline only).
+- WSJ ran a headline saying the global economy looks vulnerable to an AI bust (headline only).
+- No US data was released overnight.
 
 #### SEC, CFTC and hearings
-- SEC: it announced fiscal 2026 enforcement annual results on Tue Nov 10, 11:15 AM.
-- Court fight over perpetual futures on US stocks: Finance Magnates, Crypto Briefing and Traders Union report the SEC backed the CFTC (headline only).
-- Kalshi: Bitcoin News says a judge said a CFTC Kalshi order "smacks of a collusive effort" in the Novig ruling (headline only). CryptoPotato says the CFTC threatened possible enforcement action (headline only). MyNorthwest says a Bellevue man is suing Kalshi for $580,000 as the CFTC investigates (headline only).
-- CFTC press releases: nothing in the last 2 days.
-- No congressional hearings were found.
+- The SEC and CFTC issued no press releases in the last 2 days.
+- Trump named 4 SEC and CFTC nominees (Crypto News, headline only).
+- Senate Banking hearings are requested for Dec. 3 (Huang) and Dec. 10 (Lutnick). Lutnick has agreed to appear. Huang's appearance is not confirmed. Times are unconfirmed.
+- Scott's letter said a subpoena would be issued if Huang does not appear voluntarily.
+- A House committee requested a Dec. 1 transcribed interview with Huang. Its date and venue are still being negotiated.
 
 #### War, trade and tariffs
-- **Ukraine:** The Abu Dhabi talks ended without a breakthrough. Axios said it was the first time Russian and Ukrainian officials met with US mediators present since February, when talks were suspended because of the Iran war. EA WorldView quotes Zelensky calling this a "window of opportunity" (headline only).
-- **Iran:** The Jerusalem Post says Iran's military industrial capacity is at 50% and it makes 50 ballistic missiles a month (headline only). See also the top items above.
-- **US-China:** Trump is expected to go to Shenzhen to meet Xi for the third time this year; the fragile trade truce is set to expire in January (NBC). Disputes over tariffs, Chinese purchases, rare earths and tech restrictions remain unresolved (Jerusalem Post). Trump said he thought he would meet Xi and Putin in Shenzhen to discuss ending the Iran war.
-- **Tariffs:** The $166 billion refund headline is above (Fortune, headline only).
+- **Iran:** The Guards said the radar strike was retaliation for an attack on a communications tower in Sirik. Trump said he held off further strikes at Gulf allies' request. Qatar is mediating indirect talks. Iran is demanding the US lift its port blockade and suspend oil sanctions. Iranian media said four tankers were hit by explosions in the Strait of Hormuz on Thursday. Why it matters: oil and gas supply and shipping insurance.
+- **Russia-Ukraine:** Kushner said the US is working toward the "largest prisoner exchange" of the war (The Moscow Times, headline only).
+- No new tariff news was found.
 
 #### Country briefs
-- **China:** Al Jazeera says Xi said Taiwan "reunification" must happen (headline only). The State Department said Rubio and Wang Yi had a positive call and discussed a possible trilateral leaders' meeting with Russia.
-- **European Union:** Axios reports Washington is seeking a Ukraine deal alongside a broader Russia–Europe security arrangement.
-- **United Kingdom:** GDP m/m was due at 2:00 AM (forecast 0.0%), but the result is not in my sources. Nothing else found.
-- **Japan:** Wholesale inflation topped 7% (News On Japan, headline only).
-- **India:** Nothing found.
-- **Russia:** Putin is due to meet US envoys in Moscow (Jerusalem Post, headline only; CNN confirms Thursday).
+- **China:** Reports say lawmakers are examining Commerce's review of China chip sales and Nvidia-linked China ties. No other China news found.
+- **European Union:** Storm Charles caused floods and flight cancellations across southern Europe (The Guardian, headline only). A European Commission headline covered the REGIOSTARS 2026 awards in Prague (headline only).
+- **United Kingdom:** Nothing found.
+- **Japan:** Nothing found.
+- **India:** Rate hike fears are testing the stock rally as inflation rises (Bloomberg, headline only).
+- **Russia:** A second car bomb in two days hit a target in Russia, aimed at an exiled Ukrainian political aide (Reuters, headline only). Kushner's prisoner exchange comment is also above (The Moscow Times, headline only).
 - **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-12-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-13-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
