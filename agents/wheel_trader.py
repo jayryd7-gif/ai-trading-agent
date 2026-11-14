@@ -37,6 +37,7 @@ from zoneinfo import ZoneInfo
 
 import yfinance as yf
 
+import wheel_charts
 import wheel_rules as R
 from notify import send
 
@@ -179,6 +180,8 @@ def manage(state, closes, today):
                 if itm and o["kind"] == "put":
                     state["cash"] -= o["K"] * 100
                     p["shares"], p["basis"] = 100, o["K"] - o["credit"]
+                    p["bought"], p["paid"] = o["exp"], o["K"]
+                    p["first_put"] = o.get("opened", "")
                     record(state, "put", t, "ASSIGNED", o, o["K"],
                            note=f"Bought 100 shares (stock closed ${S_exp:.2f}). Cost basis ${p['basis']:.2f}.")
                 elif itm:
@@ -291,27 +294,66 @@ def open_new(state, closes, today):
                     f"Stock ${S:.2f}. Ties up ${o['K'] * 100:,.0f}.")
 
 
-def write_summary(state, closes):
+def short(d):
+    return d[5:] if d else "-"
+
+
+def holding_rows(state, closes):
+    """Each open holding: what it is, when it was sold / bought, and its P/L now."""
+    rows = []
+    for t, p in sorted(state["positions"].items()):
+        o = p.get("opt") or {}
+        S = float(closes[t].dropna().iloc[-1])
+        mark = o.get("mark", o.get("credit", 0.0)) if o else 0.0
+        if p.get("shares"):
+            pnl = (S - p["basis"]) * 100 - mark * 100
+            capital = p.get("paid", p["basis"]) * 100
+            what = f"100 shares" + (f" + call ${o['K']:g}" if o else "")
+            label = f"{t} shares (bought {short(p.get('bought'))})"
+        else:
+            pnl = (o["credit"] - mark) * 100 - R.FEE
+            capital = o["K"] * 100
+            what = f"put ${o['K']:g}"
+            label = f"{t} put ${o['K']:g} (sold {short(o.get('opened'))})"
+        rows.append({"ticker": t, "what": what, "label": label, "S": S, "o": o, "p": p, "mark": mark,
+                     "pnl_usd": pnl, "pnl_cad": pnl / state["fx"], "pct": pnl / capital * 100})
+    return rows
+
+
+def write_summary(state, closes, today):
     eq = equity(state, closes)
     pnl = eq - state["start_usd"]
+    hist = [h for h in state.setdefault("history", []) if h["date"] != today.isoformat()]
+    hist.append({"date": today.isoformat(), "equity_usd": round(eq, 2), "start_usd": state["start_usd"]})
+    state["history"] = hist
+    rows = holding_rows(state, closes)
+    secured = sum(p["opt"]["K"] * 100 for p in state["positions"].values()
+                  if p.get("opt") and p["opt"]["kind"] == "put")
+    if not DRY:
+        wheel_charts.save(FOLDER, hist, state["fx"], rows)
     lines = ["# Wheel paper account ($10K CAD)", "",
              f"Updated {datetime.now(NY):%Y-%m-%d %H:%M} New York. Started {state['started']}.", "",
              "| | |", "|---|---|",
              f"| Account value | **${eq / state['fx']:,.0f} CAD** (${eq:,.0f} USD) |",
-             f"| Profit / loss | **{pnl / state['fx']:+,.0f} CAD** ({pnl / state['start_usd'] * 100:+.1f}%) |",
+             f"| Up / down | **{pnl / state['fx']:+,.0f} CAD** ({round(pnl / state['start_usd'] * 100, 1) + 0.0:+.1f}%) |",
              f"| Closed trades | {state['wins']} wins, {state['losses']} losses |",
-             f"| Cash | ${state['cash']:,.0f} USD |", "",
-             "## Open positions", "",
-             "| Stock | Shares | Cost basis | Stock now | Option | Strike | Expiry | Sold for | Worth now |",
-             "|---|---|---|---|---|---|---|---|---|"]
-    for t, p in sorted(state["positions"].items()):
-        o = p.get("opt") or {}
-        S = float(closes[t].dropna().iloc[-1])
-        lines.append(f"| {t} | {p.get('shares', 0)} | {'$%.2f' % p['basis'] if p.get('shares') else '-'} | "
-                     f"${S:.2f} | {o.get('kind', '-')} | {o.get('K', '-')} | {o.get('exp', '-')} | "
-                     f"{'$%.2f' % o['credit'] if o else '-'} | {'$%.2f' % o.get('mark', o['credit']) if o else '-'} |")
-    if not state["positions"]:
-        lines.append("| (none yet) | | | | | | | | |")
+             f"| Cash | ${state['cash'] / state['fx']:,.0f} CAD, of which ${secured / state['fx']:,.0f} CAD is set "
+             f"aside to cover the puts |", "",
+             "![Account profit / loss](value.svg)", "",
+             "## What it holds now", "",
+             "![Holdings profit / loss](holdings.svg)", "",
+             "| Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now "
+             "| Expiry | Up / down CAD | Up / down % |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
+    for r in rows:
+        o, p = r["o"], r["p"]
+        first_put = p.get("first_put") or o.get("opened", "")
+        got = (f"paid ${p['paid']:.2f}/share" if p.get("shares") else f"got ${o['credit']:.2f}")
+        lines.append(f"| {r['ticker']} | {r['what']} | {first_put or '-'} | {p.get('bought', '-') if p.get('shares') else '-'} "
+                     f"| {got} | {'$%.2f' % r['mark'] if o else '-'} | ${r['S']:.2f} | {o.get('exp', '-')} "
+                     f"| {'🟢' if r['pnl_cad'] >= 0 else '🔴'} {r['pnl_cad']:+,.0f} | {r['pct']:+.1f}% |")
+    if not rows:
+        lines.append("| (none yet) | | | | | | | | | |")
     lines += ["", "Prices from Yahoo Finance option chains. Paper only: no real orders. "
               "Rules: agents/wheel_rules.py. Every move: [journal.md](journal.md)."]
     if not DRY:
@@ -330,7 +372,7 @@ def main():
     closes = yf.download(tickers, period="3mo", progress=False)["Close"]
     manage(state, closes, today)
     open_new(state, closes, today)
-    eq = write_summary(state, closes)
+    eq = write_summary(state, closes, today)
     print(f"\nAccount: ${eq / state['fx']:,.0f} CAD, {len(state['positions'])} positions.")
     if DRY:
         print("(dry run: nothing saved, no phone alerts)")

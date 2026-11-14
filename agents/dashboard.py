@@ -338,6 +338,29 @@ def open_reminders():
     return [m.group(1).strip() for m in re.finditer(r"^\s*- \[ \]\s+(.+)$", text, re.M)]
 
 
+def wheel_section():
+    """The options wheel paper account: headline numbers, both charts, the holdings table."""
+    folder = os.path.join("paper-trading", "wheel")
+    summary = os.path.join(folder, "summary.md")
+    out = ["## 🎡 Options wheel (paper, $10K CAD)", ""]
+    if not os.path.exists(summary):
+        return out + ["Starts trading on the first weekday run (2:37 PM New York).", ""]
+    text = open(summary).read()
+    table = re.search(r"^\| \| \|\n\|---\|---\|\n(?:\|.*\n)+", text, re.M)
+    holdings = re.search(r"^\| Stock \| Holding.*\n(?:\|.*\n)+", text, re.M)
+    updated = re.search(r"^Updated .*$", text, re.M)
+    out += [updated.group(0) if updated else "", ""]
+    if table:
+        out += [table.group(0)]
+    out += ["![Wheel account profit / loss](paper-trading/wheel/value.svg)", "",
+            "![Wheel holdings](paper-trading/wheel/holdings.svg)", ""]
+    if holdings:
+        out += [holdings.group(0)]
+    out += ["[Wheel account](paper-trading/wheel/summary.md) · [Every move](paper-trading/wheel/journal.md) · "
+            "[Rules and research](experiments/wheel-strategy-research.md)", ""]
+    return out
+
+
 def build_dashboard(now):
     briefs = read_csv(os.path.join(REPORT_FOLDER, "bias-log.csv"))
     scores = read_csv(os.path.join(REPORT_FOLDER, "scores.csv"))
@@ -433,6 +456,9 @@ def build_dashboard(now):
                 "[TradingView strategy](tradingview/breakout_strategy.pine)", ""]
     else:
         out += ["No paper trades yet.", ""]
+
+    # ---- Options wheel (paper) ----
+    out += wheel_section()
 
     # ---- TradingView ----
     out += tradingview_section()
