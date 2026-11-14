@@ -1,0 +1,58 @@
+name: Wheel Paper Trading
+
+# Paper trades the options wheel ($10K CAD practice account) once each weekday
+# during market hours, with real Yahoo option prices. No AI, no broker, $0.
+# Every move is sent to your phone (ntfy). Code: agents/wheel_trader.py
+on:
+  schedule:
+    - cron: "37 19 * * 1-5"   # 2:37 PM New York in winter, 3:37 PM in summer
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wheel-paper
+  cancel-in-progress: false
+
+jobs:
+  wheel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: pip install yfinance
+
+      - name: Run the wheel paper trader
+        run: python agents/wheel_trader.py
+        env:
+          PYTHONPATH: agents
+
+      - name: Save the results
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "wheel-paper-trader"
+          git config user.email "wheel-paper-trader@users.noreply.github.com"
+          git add paper-trading/wheel
+          git commit -m "Wheel paper trades $(date -u +'%F')" || { echo "Nothing new"; exit 0; }
+          for attempt in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
+
+      - name: Phone alert if this run failed
+        if: failure()
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -H "Title: Wheel Paper Trading failed" -H "Priority: high" -H "Tags: warning" \
+              -H "Click: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "The wheel paper trader run on GitHub failed. Tap to see what went wrong." "https://ntfy.sh/$NTFY_TOPIC" > /dev/null
+          fi
