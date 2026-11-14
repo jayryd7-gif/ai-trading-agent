@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-13 20:41 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-14 03:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-13 20:41 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 13 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 26 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 17 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 16 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 16 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 33 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -267,66 +267,60 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-13, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-11-14, event risk Low</b></summary>
 
 #### Top things for today
-1. **Iran says it hit a US radar in Bahrain.** Iran's Revolutionary Guards said they targeted a US early-warning radar in Bahrain. It was the first such claim against US assets in a Gulf country since early September (Reuters). Neither Bahrain nor the US had confirmed it at first. Why it matters: energy prices and Strait of Hormuz shipping risk.
-2. **US PPI at 8:30 AM.** The calendar shows PPI m/m forecast at 0.4% (previous 1.3%) and Core PPI m/m forecast at 0.3% (previous 0.7%). Why it matters: inflation data feeds rate expectations and the dollar.
-3. **Oil is on track for a second weekly fall.** Brent was at $95.54 a barrel early Friday as Trump kept the Iran blockade in place. Why it matters: energy costs feed inflation.
-4. **Senate Banking wants Huang and Lutnick to testify.** Chair Tim Scott asked Huang to appear Dec. 3 and Lutnick Dec. 10. Why it matters: US-China chip export-control policy.
-5. **French inflation hit 3.7% in October.** It is the highest since December 2023 (Reuters via Investing.com, headline only). Why it matters: global inflation and rate expectations.
+1. **US-China trade council met.** The two sides discussed tariff cuts and farm trade at their first trade council meeting on Friday, Nov 13. China's Commerce Ministry reported it Saturday. It said a leaders' meeting in Shenzhen is expected next week. The proposed $60 billion package of reciprocal tariff cuts has not been finalised. (Reuters via Press News Agency) Why it matters: tariffs, the dollar and risk appetite.
+2. **Trump extended a Jones Act waiver, reportedly.** Hawaii News Now says debate continues over the impact on savings (headline only). Why it matters: shipping costs and energy transport.
+3. **Rubio on Iran.** i24NEWS carried a live blog of Rubio warning that a nuclear-armed Iran could hold the US and the Middle East hostage (headline only). Why it matters: Middle East risk and energy.
+4. **CFTC sued Louisiana and Arkansas** over prediction-market jurisdiction (CFTC press releases). Why it matters: regulation of futures-style venues.
+5. **Senate leadership.** The New York Times reports Chris Van Hollen is set to challenge Chuck Schumer for Senate Majority Leader (headline only). Why it matters: the fiscal and legislative outlook.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 8:30 AM | PPI m/m (forecast 0.4%, previous 1.3%) | US data release | Yes |
-| 8:30 AM | Core PPI m/m (forecast 0.3%, previous 0.7%) | US data release | Yes |
+| – | No major events listed | Economic calendar | Yes |
 
-No hearings or Trump events with a time were found for today.
+No scheduled events found. Sunday Nov 15 also has no major events listed.
 
-Coming up this week: No scheduled events found. The calendar lists nothing for Saturday, Nov 14.
+Coming up this week: the calendar lists nothing. A Trump-Xi meeting in Shenzhen is expected next week (date and time unconfirmed).
 
 #### Event risk today
-Medium - PPI is high impact and the Iran-Bahrain claim adds Gulf and energy risk. The Bahrain claim is unconfirmed and comes during a fragile lull.
+Low - Markets are closed and the calendar is empty, but the US-China trade talks and Iran rhetoric could produce weekend headlines.
 
 #### Politics and policy
-- Lutnick agreed on Nov. 12 to testify voluntarily before the Senate Banking Committee. Huang resigned Thursday as Nvidia CEO. Why it matters: export-control policy and China chip sales.
-- Trump posted on Truth Social that Huang had done a "fantastic job."
-- Trump compared rising anti-Semitism in the US to Nazi Germany in 1938 (The Media Line, headline only).
-- The US reported record deportations and arrests in 2026 (Al Jazeera, headline only).
-- Trump praised Colom after an upset Mississippi Senate win (Newser, headline only).
-- Rechenberg wrote that tariffs aren't driving inflation (Boston Herald, headline only).
-- The Fed: nothing found in the feeds beyond the PPI data.
+- The Washington Post reports that Canada's PM Carney reported progress in trade talks with Trump (headline only).
+- THV11 reports the White House Correspondents' Dinner shooting suspect is charged with terrorism. Law Commentary says the DOJ added a terrorism charge against a Trump assassination suspect (both headline only).
+- The Washington Post reports Brian Monahan is out as attending physician to Congress amid a Pentagon probe (headline only).
+- The Supreme Court is considering a case on religious schools and public funding (Every CRS Report, headline only).
+- Nothing found on the Fed, Treasury, executive orders or overnight Trump quotes.
 
 #### Economics
-- French inflation rose to 3.7% in October, the highest since December 2023 (Reuters, headline only).
-- Hong Kong upgraded its growth outlook (Bloomberg, headline only).
-- Bloomberg ran a headline on rate hike fears testing India's stock rally as inflation rises (headline only).
-- WSJ ran a headline saying the global economy looks vulnerable to an AI bust (headline only).
-- No US data was released overnight.
+Nothing found. No data was released overnight.
+
+Fortune reports a $300 million logistics hub in Vietnam (headline only).
 
 #### SEC, CFTC and hearings
-- The SEC and CFTC issued no press releases in the last 2 days.
-- Trump named 4 SEC and CFTC nominees (Crypto News, headline only).
-- Senate Banking hearings are requested for Dec. 3 (Huang) and Dec. 10 (Lutnick). Lutnick has agreed to appear. Huang's appearance is not confirmed. Times are unconfirmed.
-- Scott's letter said a subpoena would be issued if Huang does not appear voluntarily.
-- A House committee requested a Dec. 1 transcribed interview with Huang. Its date and venue are still being negotiated.
+- SEC: no source detail beyond the title – the SEC proposed executive and director compensation disclosure reforms on Friday at 11:57 AM (SEC).
+- CFTC: it sued Louisiana on Friday at 4:00 PM after a state court blocked CFTC-regulated exchanges. It sued Arkansas on Friday at 10:46 AM over its jurisdiction over prediction markets (CFTC). Law360 says the Arkansas suit targets the state's Kalshi enforcement action (headline only). RG.org says the DOJ joined the Louisiana suit (headline only).
+- Startup Fortune says CFTC Chair Selig reports crypto firms are signing up for CFTC rules while Congress stalls (headline only).
+- No hearings found.
 
 #### War, trade and tariffs
-- **Iran:** The Guards said the radar strike was retaliation for an attack on a communications tower in Sirik. Trump said he held off further strikes at Gulf allies' request. Qatar is mediating indirect talks. Iran is demanding the US lift its port blockade and suspend oil sanctions. Iranian media said four tankers were hit by explosions in the Strait of Hormuz on Thursday. Why it matters: oil and gas supply and shipping insurance.
-- **Russia-Ukraine:** Kushner said the US is working toward the "largest prisoner exchange" of the war (The Moscow Times, headline only).
-- No new tariff news was found.
+- US-China: see the top item. A Reuters analysis found Chinese purchases of US farm goods other than soybeans are on track for a seven-year low, despite a $17 billion annual purchase pledge. China has urged Washington to implement the tariff-reduction deal, calling it a prerequisite for more farm purchases. Why it matters: trade policy and the dollar.
+- Ukraine: UNITED24 Media reports daily Russian losses of 1,710 troops, 6 tanks and 33 artillery systems (headline only).
+- Iran: see Rubio above.
 
 #### Country briefs
-- **China:** Reports say lawmakers are examining Commerce's review of China chip sales and Nvidia-linked China ties. No other China news found.
-- **European Union:** Storm Charles caused floods and flight cancellations across southern Europe (The Guardian, headline only). A European Commission headline covered the REGIOSTARS 2026 awards in Prague (headline only).
+- **China:** The trade council met by video, and a leaders' meeting is expected next week (Reuters via Press News Agency).
+- **European Union:** Nothing found.
 - **United Kingdom:** Nothing found.
 - **Japan:** Nothing found.
-- **India:** Rate hike fears are testing the stock rally as inflation rises (Bloomberg, headline only).
-- **Russia:** A second car bomb in two days hit a target in Russia, aimed at an exiled Ukrainian political aide (Reuters, headline only). Kushner's prisoner exchange comment is also above (The Moscow Times, headline only).
-- **Canada:** Nothing found.
+- **India:** Nothing found.
+- **Russia:** UNITED24 Media reports daily losses of 1,710 troops (headline only).
+- **Canada:** Carney reports progress in trade talks with Trump while expanding ties with Asia (The Washington Post, headline only).
 
-[Read the full brief with all the details](reports/news/2026-11-13-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-14-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
