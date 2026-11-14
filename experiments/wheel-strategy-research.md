@@ -89,3 +89,30 @@ Neither filter helped in this down market, so the paper trader starts with versi
 - CBOE indexes: [Callan BXM study](https://cdn.cboe.com/resources/education/research_publications/Callan_CBOE.pdf), [First Trust on BXM](https://www.ftportfolios.com/Blogs/MarketBlog/2021/5/18/this-covered-call-index-tends-to-outperform-the-sp-500-when-stock-returns-are-modest-or-negative), [Dividend.com on BXM/PUT](https://www.dividend.com/options-and-income-channel/is-options-upside-becoming-capped/)
 - Backtests: [Apexvol cash-secured put](https://apexvol.com/strategies/cash-secured-put/backtest), [Lambda Finance SPY wheel](https://www.lambdafin.com/articles/wheel-strategy-spy-backtest), [FlashAlpha put spreads](https://flashalpha.com/articles/spy-put-credit-spread-active-backtest-mm-fills-vrp-signal-drawdown-breaker)
 - Screening tips: [QuantWheel expiration selection](https://quantwheel.com/learn/options-expiration-selection), [wheel mistakes](https://wheelstrategy.substack.com/p/wheel-strategy-mistakes)
+
+## Options With Ryan's wheel (checked 2026-11-14)
+His rules, as summarized by a third-party write-up of his CRDO wheel video ([CandleChasers](https://candlechasers.com/wheel-options-premium-assignment-risk/)). They are not verified from the video itself.
+- **Puts:** about 0.25-0.30 delta, 25-35 days out.
+- **Calls:** about 0.30 delta, 15-25 days out, at or above the cost basis.
+- **Take profit:** close at about 80% profit, or roll.
+- **Stock filter:** up for about 1.5 years, earnings beats, P/E under 100, and at least about 2.5% premium per 30 days.
+- **Sizing:** at most about 10% of the account per company, with about 20-25% kept in cash.
+- **His stocks** (CRDO, NVDA, HOOD, BE, PLTR, AMD) cost $78-$534 a share. One put on the cheapest (HOOD) ties up about $7,800 USD, which is more than the whole $10K CAD account.
+
+Backtest (`PYTHONPATH=agents python3 experiments/wheel_backtest.py --ryan`):
+
+| Window | Ours, our stocks, $10K CAD | Ryan's rules, our stocks, $10K CAD | Ryan's rules, his stocks, $200K USD | Holding his stocks |
+|---|---|---|---|---|
+| 90 days | -0.2% (worst drop 5.5%) | +0.2% (worst drop 1.6%, only 3 trades) | +1.2% (worst drop 5.8%) | -19.1% |
+| 60 days | -0.8% | +0.2% | -2.1% | -14.5% |
+| 30 days | -2.0% | 0.0% | -2.3% | -19.8% |
+
+With $10K CAD, Ryan's rules on his own stocks made **0 trades**, because nothing fits.
+
+### Ryan-style paper account (from 2026-11-16)
+At the user's request, a second paper account runs next to ours so the two can be compared by %:
+- **Money:** pretend $200,000 USD, on his stocks (CRDO, NVDA, HOOD, BE, PLTR, AMD).
+- **His rules** (`ryan` in `agents/wheel_rules.py`): puts at 0.28 delta, 25-35 days; calls 15-25 days, at or above cost; take profit at 80%; uptrend over 1.5 years; P/E between 0 and 100; at least 2.5% premium per 30 days; at most 10% per company (several contracts); keep 20% in cash.
+- **Earnings:** his earnings rule isn't stated, so this account does not skip earnings.
+- **Files and alerts:** results in `paper-trading/wheel-ryan/`. Its phone alerts are low priority.
+- **First test run (Nov 14):** it sold 2 HOOD $72 puts and 1 NVDA $150 put. BE and PLTR were skipped for P/E above 100, and AMD was too big for a 10% slot.

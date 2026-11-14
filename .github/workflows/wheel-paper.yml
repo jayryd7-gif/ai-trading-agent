@@ -1,6 +1,7 @@
 name: Wheel Paper Trading
 
-# Paper trades the options wheel ($10K CAD practice account) once each weekday
+# Paper trades the options wheel once each weekday: our $10K CAD account and a
+# Ryan-style $200K USD account on his stocks, side by side for comparison,
 # during market hours, with real Yahoo option prices. No AI, no broker, $0.
 # Every move is sent to your phone (ntfy). Code: agents/wheel_trader.py
 on:
@@ -31,8 +32,14 @@ jobs:
       - name: Install tools
         run: pip install yfinance
 
-      - name: Run the wheel paper trader
+      - name: Run our wheel paper account ($10K CAD)
         run: python agents/wheel_trader.py
+        env:
+          PYTHONPATH: agents
+
+      - name: Run the Ryan-style wheel paper account ($200K USD, his stocks)
+        if: ${{ !cancelled() }}
+        run: python agents/wheel_trader.py --account ryan
         env:
           PYTHONPATH: agents
 
@@ -41,7 +48,7 @@ jobs:
         run: |
           git config user.name "wheel-paper-trader"
           git config user.email "wheel-paper-trader@users.noreply.github.com"
-          git add paper-trading/wheel
+          git add paper-trading/
           git commit -m "Wheel paper trades $(date -u +'%F')" || { echo "Nothing new"; exit 0; }
           for attempt in 1 2 3; do
             git pull --rebase && git push && break

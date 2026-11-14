@@ -66,3 +66,41 @@ def strike_for_delta(S, T, vol, kind, delta=TARGET_DELTA):
 def slot_size(equity):
     """Most cash one stock may tie up."""
     return equity * MAX_PER_STOCK
+
+
+# ---------------- PAPER ACCOUNTS ----------------
+# Two paper accounts run side by side so they can be compared:
+#   ours  - the rules above, $10K CAD, cheaper stocks
+#   ryan  - Options With Ryan's wheel (as summarized from his CRDO wheel video,
+#           see experiments/wheel-strategy-research.md), pretend $200K USD, his stocks
+ACCOUNTS = {
+    "ours": {
+        "title": "Wheel paper account ($10K CAD)", "short": "Wheel",
+        "folder": "paper-trading/wheel", "start_cad": START_CAD, "start_usd": None, "currency": "CAD",
+        "universe": UNIVERSE, "max_pos": MAX_POSITIONS, "slot": MAX_PER_STOCK, "cash_reserve": 0.0,
+        "min_price": MIN_PRICE, "delta": TARGET_DELTA,
+        "put_dte": (DTE_MIN, DTE_MAX, DTE_IDEAL), "call_dte": (DTE_MIN, DTE_MAX, DTE_IDEAL),
+        "prefer_monthly": True, "tp": TAKE_PROFIT, "time_exit": TIME_EXIT_DTE,
+        "trend_days": TREND_DAYS if USE_TREND_FILTER else None, "uptrend_days": None,
+        "min_yield30": 0.0, "max_pe": None, "iv_cap": MAX_IV if USE_IV_CAP else None,
+        "skip_earnings": True, "multi_contracts": False,   # 1 contract per stock, as backtested
+    },
+    "ryan": {
+        "title": "Ryan-style wheel paper account ($200K USD)", "short": "Ryan wheel",
+        "folder": "paper-trading/wheel-ryan", "start_cad": None, "start_usd": 200_000.0, "currency": "USD",
+        "universe": ["CRDO", "NVDA", "HOOD", "BE", "PLTR", "AMD"],
+        "max_pos": 8, "slot": 0.10,            # about 10% of the account per company (several contracts)
+        "cash_reserve": 0.20,                  # keep about 20% cash
+        "min_price": 5.0, "delta": 0.28,       # puts about 0.25-0.30 delta
+        "put_dte": (25, 35, 30), "call_dte": (15, 25, 21),
+        "prefer_monthly": False,
+        "tp": 0.20,                            # buy back at about 80% profit
+        "time_exit": None,                     # no 21-day exit: hold or take 80%
+        "trend_days": None, "uptrend_days": 548,   # up over about 1.5 years
+        "min_yield30": 0.025,                  # at least about 2.5% premium per 30 days
+        "max_pe": 100,                         # positive P/E under 100
+        "iv_cap": None,
+        "multi_contracts": True,
+        "skip_earnings": False,                # his earnings rule isn't stated, so this account doesn't skip them
+    },
+}

@@ -338,13 +338,11 @@ def open_reminders():
     return [m.group(1).strip() for m in re.finditer(r"^\s*- \[ \]\s+(.+)$", text, re.M)]
 
 
-def wheel_section():
-    """The options wheel paper account: headline numbers, both charts, the holdings table."""
-    folder = os.path.join("paper-trading", "wheel")
+def _wheel_block(folder, heading, empty):
     summary = os.path.join(folder, "summary.md")
-    out = ["## 🎡 Options wheel (paper, $10K CAD)", ""]
+    out = [heading, ""]
     if not os.path.exists(summary):
-        return out + ["Starts trading on the first weekday run (2:37 PM New York).", ""]
+        return out + [empty, ""]
     text = open(summary).read()
     table = re.search(r"^\| \| \|\n\|---\|---\|\n(?:\|.*\n)+", text, re.M)
     holdings = re.search(r"^\| Stock \| Holding.*\n(?:\|.*\n)+", text, re.M)
@@ -352,12 +350,42 @@ def wheel_section():
     out += [updated.group(0) if updated else "", ""]
     if table:
         out += [table.group(0)]
-    out += ["![Wheel account profit / loss](paper-trading/wheel/value.svg)", "",
-            "![Wheel holdings](paper-trading/wheel/holdings.svg)", ""]
+    out += [f"![Account profit / loss]({folder}/value.svg)", "",
+            f"![Holdings]({folder}/holdings.svg)", ""]
     if holdings:
         out += [holdings.group(0)]
-    out += ["[Wheel account](paper-trading/wheel/summary.md) · [Every move](paper-trading/wheel/journal.md) · "
-            "[Rules and research](experiments/wheel-strategy-research.md)", ""]
+    out += [f"[Account]({folder}/summary.md) · [Every move]({folder}/journal.md)", ""]
+    return out
+
+
+def _wheel_pct(folder):
+    try:
+        st = json.load(open(os.path.join(folder, "state.json")))
+        last = st["history"][-1]["equity_usd"]
+        return round((last / st["start_usd"] - 1) * 100, 1) + 0.0, st["wins"], st["losses"], len(st["positions"]), st["started"]
+    except (OSError, ValueError, KeyError, IndexError):
+        return None
+
+
+def wheel_section():
+    """Both options wheel paper accounts: a comparison line, then each one's charts and holdings."""
+    out = ["## 🎡 Options wheel (paper)", "",
+           "Two paper accounts run side by side: **ours** ($10K CAD, cheaper stocks) and a "
+           "**Ryan-style** copy (Options With Ryan's rules, pretend $200K USD on his stocks). "
+           "Compare them by **%**, since the sizes differ. "
+           "[Rules and research](experiments/wheel-strategy-research.md)", ""]
+    rows = [("Ours ($10K CAD)", "paper-trading/wheel"), ("Ryan-style ($200K USD)", "paper-trading/wheel-ryan")]
+    stats = [(name, _wheel_pct(folder)) for name, folder in rows]
+    if any(st for _, st in stats):
+        out += ["| Account | Up / down % | Wins / losses | Open | Since |", "|---|---|---|---|---|"]
+        for name, st in stats:
+            out.append(f"| {name} | " + (f"**{st[0]:+.1f}%** | {st[1]} / {st[2]} | {st[3]} | {st[4]} |"
+                                        if st else "not started | | | |"))
+        out.append("")
+    out += _wheel_block("paper-trading/wheel", "### Ours ($10K CAD)",
+                        "Starts trading on the first weekday run (2:37 PM New York).")
+    out += _wheel_block("paper-trading/wheel-ryan", "### Ryan-style ($200K USD, his stocks)",
+                        "Starts trading on the first weekday run (2:37 PM New York).")
     return out
 
 

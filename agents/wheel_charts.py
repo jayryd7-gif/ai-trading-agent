@@ -25,11 +25,11 @@ def _money(v):
     return f"{'+' if v >= 0 else '-'}${abs(v):,.0f}"
 
 
-def value_chart(history, fx):
+def value_chart(history, fx, cur="CAD", start_label="$10,000 CAD"):
     """history: [{"date": "YYYY-MM-DD", "equity_usd": float}, ...]; start = first value."""
     h = 300
     if not history:
-        return _frame("Account profit / loss (CAD)", "No runs yet", _message("Starts after the first run"))
+        return _frame(f"Account profit / loss ({cur})", "No runs yet", _message("Starts after the first run"))
     start = history[0].get("start_usd", history[0]["equity_usd"])
     pts = [(r["date"], (r["equity_usd"] - start) / fx) for r in history]
     lo, hi = min(0, *(p for _, p in pts)), max(0, *(p for _, p in pts))
@@ -60,19 +60,19 @@ def value_chart(history, fx):
                 f'stroke="#ffffff" stroke-width="2"/>')
     body.append(f'<text x="{min(x(len(pts) - 1) + 8, right - 4):.1f}" y="{y(last) - 10:.1f}" font-size="12" '
                 f'font-weight="bold" text-anchor="{"end" if len(pts) > 1 else "start"}" fill="{TEXT}">'
-                f'{_money(last)} CAD</text>')
+                f'{_money(last)} {cur}</text>')
     if len(pts) > 1:
         body.append(f'<text x="{left}" y="{h - 16}" font-size="11" fill="{SUBTLE}">{pts[0][0]}</text>')
         body.append(f'<text x="{right}" y="{h - 16}" font-size="11" text-anchor="end" fill="{SUBTLE}">{pts[-1][0]}</text>')
     else:
         body.append(f'<text x="{x(0):.1f}" y="{h - 16}" font-size="11" text-anchor="middle" fill="{SUBTLE}">{pts[0][0]}</text>')
     pct = (history[-1]["equity_usd"] / start - 1) * 100
-    return _frame("Account profit / loss (CAD)",
-                  f"Started at $10,000 CAD · now {_money(last)} CAD ({_pct(pct)}) · {len(pts)} day(s) of trading",
+    return _frame(f"Account profit / loss ({cur})",
+                  f"Started at {start_label} · now {_money(last)} {cur} ({_pct(pct)}) · {len(pts)} day(s) of trading",
                   "".join(body), height=h)
 
 
-def holdings_chart(rows):
+def holdings_chart(rows, cur="CAD"):
     """rows: [{"label": "SOFI put $14 (sold 11-16)", "pnl_cad": float, "pct": float}, ...]"""
     if not rows:
         return _frame("What it holds: profit / loss now", "Nothing open",
@@ -97,11 +97,11 @@ def holdings_chart(rows):
                     f'text-anchor="end" fill="{TEXT}">{_money(v)} ({_pct(r["pct"])})</text>')
     total = sum(r["pnl_cad"] for r in rows)
     return _frame("What it holds: profit / loss now",
-                  f"{len(rows)} open · together {_money(total)} CAD · green = up, red = down",
+                  f"{len(rows)} open · together {_money(total)} {cur} · green = up, red = down",
                   "".join(body), height=h)
 
 
-def save(folder, history, fx, rows):
+def save(folder, history, fx, rows, cur="CAD", start_label="$10,000 CAD"):
     os.makedirs(folder, exist_ok=True)
-    open(os.path.join(folder, "value.svg"), "w").write(value_chart(history, fx))
-    open(os.path.join(folder, "holdings.svg"), "w").write(holdings_chart(rows))
+    open(os.path.join(folder, "value.svg"), "w").write(value_chart(history, fx, cur, start_label))
+    open(os.path.join(folder, "holdings.svg"), "w").write(holdings_chart(rows, cur))

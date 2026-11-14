@@ -16,6 +16,7 @@ Three versions are compared:
 """
 
 import math
+import sys
 from datetime import timedelta
 
 import yfinance as yf
@@ -31,7 +32,16 @@ def friday_near(day, days_out):
     return target + timedelta(days=(4 - target.weekday()) % 7)
 
 
-def simulate(closes, start_usd, days, trend, ivcap):
+OURS = {"tp": R.TAKE_PROFIT, "put_dte": R.DTE_IDEAL, "call_dte": R.DTE_IDEAL, "time_exit": R.TIME_EXIT_DTE,
+        "min_yield30": 0.0, "uptrend": False, "slot": R.MAX_PER_STOCK, "max_pos": R.MAX_POSITIONS}
+# Options With Ryan's wheel, as summarized from his CRDO wheel video (CandleChasers write-up):
+# puts ~0.30 delta 25-35 days, calls ~0.30 delta 15-25 days at/above cost, take profit ~80%,
+# at least ~2.5% premium per 30 days, ~1.5 years of uptrend, max ~10% of the account per company.
+RYAN = {"tp": 0.20, "put_dte": 30, "call_dte": 21, "time_exit": None,
+        "min_yield30": 0.025, "uptrend": True, "slot": 0.10, "max_pos": 8}
+
+
+def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
     rets = closes.pct_change()
     sma = closes.rolling(R.TREND_DAYS).mean()
     cash = start_usd
@@ -71,7 +81,8 @@ def simulate(closes, start_usd, days, trend, ivcap):
                     p["opt"] = None
                 else:
                     price = opt_value(t, d, o)
-                    if price <= o["credit"] * R.TAKE_PROFIT or (dte <= R.TIME_EXIT_DTE and not itm):
+                    late = cfg["time_exit"] is not None and dte <= cfg["time_exit"] and not itm
+                    if price <= o["credit"] * cfg["tp"] or late:
                         cost = (price + SLIP) * 100 + R.FEE
                         cash -= cost
                         stats["wins" if o["credit"] * 100 >= cost else "losses"] += 1
@@ -81,7 +92,7 @@ def simulate(closes, start_usd, days, trend, ivcap):
                 continue
             # covered call on shares we own
             if p["shares"] and not p["opt"] and d < days[-1] - timedelta(days=3):
-                exp = friday_near(d, R.DTE_IDEAL)
+                exp = friday_near(d, cfg["call_dte"])
                 T = (exp - d).days / 365
                 K = max(R.strike_for_delta(S, T, vol(t, d), "call"), math.ceil(p["basis"] * 2) / 2)
                 credit = R.bs_price(S, K, T, vol(t, d), "call") - SLIP
@@ -98,10 +109,10 @@ def simulate(closes, start_usd, days, trend, ivcap):
         maxdd = max(maxdd, (peak - eq) / peak)
 
         # 2) fill empty slots with new puts
-        if len(pos) < R.MAX_POSITIONS and d < days[-1] - timedelta(days=3):
+        if len(pos) < cfg["max_pos"] and d < days[-1] - timedelta(days=3):
             secured = sum(p["opt"]["K"] * 100 for p in pos.values() if p["opt"] and p["opt"]["kind"] == "put")
             free = cash - secured
-            exp = friday_near(d, R.DTE_IDEAL)
+            exp = friday_near(d, cfg["put_dte"])
             T = (exp - d).days / 365
             ideas = []
             for t in closes.columns:
@@ -115,15 +126,19 @@ def simulate(closes, start_usd, days, trend, ivcap):
                     continue
                 if ivcap and v > R.MAX_IV:
                     continue
+                if cfg["uptrend"]:
+                    past = closes[t].loc[:d - timedelta(days=548)]
+                    if past.empty or not S > float(past.iloc[-1]):
+                        continue
                 K = R.strike_for_delta(S, T, v, "put")
-                if K * 100 > R.slot_size(eq):
+                if K * 100 > eq * cfg["slot"]:
                     continue
                 credit = R.bs_price(S, K, T, v, "put") - SLIP
-                if credit < R.MIN_CREDIT:
+                if credit < R.MIN_CREDIT or credit / K < cfg["min_yield30"] * (T * 365 / 30):
                     continue
                 ideas.append((credit / K, t, K, credit))
             for _, t, K, credit in sorted(ideas, reverse=True):
-                if len(pos) >= R.MAX_POSITIONS or K * 100 > free:
+                if len(pos) >= cfg["max_pos"] or K * 100 > free:
                     continue
                 cash += credit * 100 - R.FEE
                 free -= K * 100
@@ -155,5 +170,33 @@ def main():
         print()
 
 
+def ryan_compare():
+    """Ours vs Ryan's rules on our cheap stocks ($10K CAD), and Ryan's rules on his own stocks."""
+    fx = float(yf.download("CADUSD=X", period="5d", progress=False)["Close"].dropna().iloc[-1].iloc[0])
+    usd = R.START_CAD * fx
+    ours = yf.download(R.UNIVERSE, period="3y", progress=False)["Close"].dropna(axis=1, how="all").ffill()
+    his_list = ["CRDO", "NVDA", "HOOD", "BE", "PLTR", "AMD"]
+    his = yf.download(his_list, period="3y", progress=False)["Close"].dropna(axis=1, how="all").ffill()
+    print(f"{'Window':8}{'Version':44}{'Return':>8}{'P/L':>12}{'Max DD':>8}{'W/L':>7}{'Assigned':>9}")
+    for window in (90, 60, 30):
+        for name, closes, start, cfg, cur in (
+                ("Ours, our stocks, $10K CAD", ours, usd, OURS, "CAD"),
+                ("Ryan's rules, our stocks, $10K CAD", ours, usd, RYAN, "CAD"),
+                ("Ryan's rules, his stocks, $200K USD", his, 200_000, RYAN, "USD"),
+                ("Ryan's rules, his stocks, $10K CAD", his, usd, RYAN, "CAD")):
+            begin = closes.index[-1] - timedelta(days=window)
+            days = [d for d in closes.index if d >= begin]
+            eq, dd, s, pos = simulate(closes, start, days, False, False, cfg)
+            pnl = (eq - start) / (fx if cur == "CAD" else 1)
+            print(f"{window:>4} d  {name:44}{(eq/start-1)*100:7.1f}%{pnl:>9,.0f} {cur}{dd*100:7.1f}%"
+                  f"{s['wins']:>4}/{s['losses']:<2}{s['assigned']:>8}")
+        hold = (his.iloc[-1] / his.loc[[d for d in his.index if d >= his.index[-1] - timedelta(days=window)][0]] - 1).mean() * 100
+        print(f"        (holding his 6 stocks equally: {hold:+.1f}%)")
+        print()
+
+
 if __name__ == "__main__":
-    main()
+    if "--ryan" in sys.argv:
+        ryan_compare()
+    else:
+        main()
