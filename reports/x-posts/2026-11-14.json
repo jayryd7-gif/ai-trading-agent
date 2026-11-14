@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-14",
+  "written": "2026-11-14 04:39",
+  "skipped": [],
+  "used": [
+    "World, politics and the presidency: reports/news/2026-11-14-world-brief.md (Sat Nov 14, today)",
+    "Stocks: reports/stocks/2026-11-13-stock-brief.md (Fri Nov 13, NOT today)",
+    "Crypto: reports/crypto/2026-11-14-crypto-brief.md (Sat Nov 14, today)",
+    "Nasdaq futures (macro backdrop): reports/2026-11-13-nasdaq-brief.md (Fri Nov 13, NOT today)",
+    "Gold futures (macro backdrop): reports/2026-11-12-gold-brief.md (Thu Nov 12, NOT today)"
+  ],
+  "thread": [
+    {
+      "section": "Intro",
+      "post": "1/ Cash Flow Brief, Nov 14 ☀️\n\nBitcoin's slide into Extreme Fear, Nvidia's CEO exit and US-China tariff talks are the biggest things for your wallet today.\n\nWhat happened, why it matters, and what could happen next 🧵"
+    },
+    {
+      "section": "Politics",
+      "post": "2/ Politics: The US-China trade council met Friday on tariff cuts and farm trade, China said Saturday.\n\nWhy it matters: Tariffs can move the prices you pay and the dollar.\n\nNext: If the $60B tariff-cut deal is finalised next week, watch import prices."
+    },
+    {
+      "section": "Economy",
+      "post": "3/ CFTC sued Louisiana and Arkansas over prediction-market rules. SEC proposed pay-disclosure reforms Friday. Why it matters: Who regulates prediction markets decides which platforms you can use. Next: If courts side with states, access could shift."
+    },
+    {
+      "section": "Stocks",
+      "post": "4/ Stocks: Nvidia fell 4.3% Thursday after CEO Jensen Huang resigned. AMD rose 5.9%.\n\nWhy it matters: Nvidia is a big slice of many index funds, so your 401(k) feels it.\n\nNext: Watch Nvidia's earnings, due Nov 17 (timing unconfirmed)."
+    },
+    {
+      "section": "Crypto",
+      "post": "5/ Fear & Greed hit 13 (Extreme Fear) as Bitcoin fell below $68,000 on Nov 13. $1.65B liquidated in 24 hours. Why: Bitcoin ETFs: $1.9B net outflows this month. Next: Staying under $68,000 through Sunday's close adds pressure. Not financial advice."
+    }
+  ],
+  "reply_thread": "Sources: Reuters via Press News Agency, China's Commerce Ministry, CFTC press releases, NBC News, Yahoo Finance, CoinDesk via KuCoin, CoinGecko live data.",
+  "midday": {
+    "story": "Bitcoin's slide into Extreme Fear",
+    "post": "Bitcoin fell below $68,000 on Nov 13, its lowest since Aug 19, and Fear and Greed hit 13. Why this matters for your wallet: crypto swings can be sharp, and Bitcoin ETFs saw $1.9B of net outflows this month. Not financial advice."
+  },
+  "reply_midday": "Sources: CoinDesk via KuCoin, CoinGlass, Bloomingbit, CoinGecko live data. Figures as of the morning brief.",
+  "close_watch": "Markets are closed for the weekend; watch Sunday's weekly Bitcoin close and Nvidia's earnings, due Nov 17 with timing unconfirmed, when stocks reopen.",
+  "video": {
+    "script": "Bitcoin just dropped below $68,000, and fear hit its deepest level in months. Here's what it means for your money. First, Nvidia's CEO resigned and the stock fell 4.3% Thursday. Nvidia sits in many index funds, so your retirement account feels that. Second, the US and China met on tariffs. A $60 billion cut is not final yet, and that could change what you pay for goods. Third, the CFTC sued Louisiana and Arkansas over prediction markets. Rules here decide which platforms you can use. Watch Nvidia's earnings on November 17 and the weekend Bitcoin close. Not financial advice. Follow for tomorrow's brief.",
+    "on_screen": [
+      "Cash Flow Brief, Nov 14",
+      "Bitcoin below $68K",
+      "Fear index: 13",
+      "Nvidia CEO resigns",
+      "US-China tariff talks",
+      "Not financial advice"
+    ]
+  }
+}
