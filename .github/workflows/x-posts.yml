@@ -1,21 +1,24 @@
 name: X Post Drafts
 
 on:
-  schedule:
+  # Switched OFF on 2026-11-14 at the user's request (it uses Claude, about
+  # $0.30/month). To turn it back on, delete the "#" in front of "schedule:" and
+  # in front of each "- cron:" line below.
+  # schedule:
     # Time is UTC. 09:00 UTC is about 4-5 AM New York time, after the world,
     # crypto and stock briefs, so the drafts are on X-DASHBOARD.md before 6 AM
     # (GitHub sometimes starts scheduled runs up to ~20 minutes late).
-    - cron: "0 9 * * *"
+    # - cron: "0 9 * * *"
     # Evening thread at 6:30 PM New York time (what happened today, what to watch
     # tomorrow), so it is ready before the 7 PM reminder. Two UTC times so it is
     # 6:30 PM in both summer and winter time; the run that isn't 6 PM in New
     # York stops at once.
-    - cron: "30 22 * * *"
-    - cron: "30 23 * * *"
+    # - cron: "30 22 * * *"
+    # - cron: "30 23 * * *"
     # Phone reminder at 7 PM New York time to post the evening thread (no AI, $0).
     # Same two-time trick for summer and winter time.
-    - cron: "0 23 * * *"
-    - cron: "0 0 * * *"
+    # - cron: "0 23 * * *"
+    # - cron: "0 0 * * *"
   # All can still be run by hand from the Actions tab.
   workflow_dispatch:
     inputs:
