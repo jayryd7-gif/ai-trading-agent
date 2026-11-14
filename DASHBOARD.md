@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-14 04:06 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-14 17:40 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-14 04:06 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 34 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 47 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 37 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 23 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 25 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -442,63 +442,77 @@ No new IPO or new stock with a big move turned up. SPCX (Space Exploration Techn
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-13</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-14</b></summary>
 
-### Nasdaq 100 futures brief: Friday, Nov 13, 2026
+### Nasdaq 100 futures brief for Monday, Nov 16, 2026
 
-**1. What is driving the market**
-- Nvidia is the main story. Its shares lost about 11% this week through Thursday, when CEO Jensen Huang quit after reports of alleged extramarital affairs. The stock is still on course for its longest streak of weekly losses since October 2012. It was up 1.8% in premarket trading on Friday.
-- The Nasdaq 100 lost 0.3% on Thursday. U.S. crude rose 2.6% that day. WTI is above $88 a barrel.
-- Rates are the second driver. October CPI came in hot. CME FedWatch put the odds of a 25 bp hike on Dec 9 at around 85% to 90%. Reuters says traders are fully pricing in a hike. The 10-year yield was reported at 5.103%.
-- Early Friday, futures were flat to slightly lower. Nasdaq 100 E-minis were down 0.11% at 5:03 a.m. ET. Strong earnings have at times kept the negative mood in check this week.
+Today is Saturday. The next New York session is Monday. I could not check weekend news, so Friday's close is the latest information.
 
-**2. Scheduled events (New York time)**
-- **8:30 AM:** October PPI. Consensus is +0.4% on the month and +0.3% for core. It could be crucial in determining how much the Fed raises rates next month. This comes before the 9:30 open.
-- **9:10 AM:** Fed's Collins. Logan is listed at 9:40 AM, but only one source shows this.
-- **10:50 AM:** Fed's Bowman.
-- **12:00 PM:** Fed's Daly.
-- **7:00 PM:** Fed's Jefferson, after the session.
-- I found no major Nasdaq 100 earnings reports today. The only earnings I saw listed were for Richemont, which is not a US company.
+#### 1. What is driving the market
+- **Nvidia turmoil.** CFO Colette Kress is interim CEO after Jensen Huang left the company. Nvidia fell 2% Friday, after a drop of more than 4% the day before.
+- **Chip selloff.** The Nasdaq-100 index fell 1.22%, the weakest of the major indexes. AMD fell 10.95%.
+- **Inflation.** Producer prices rose 6.5% from a year earlier, the largest annual rise since November 2022.
+- **Weekly picture.** The S&P 500 and Nasdaq still snapped four-week losing streaks.
+- **Fear gauge.** The VIX rose 3.21% to 19.30, a second straight gain.
 
-**3. Key levels (from the price data)**
-- Previous session high: **28652.25**.
-- Previous session low: **28044.50**.
-- Previous close: **28388.25**.
-- Last-5-session high: **28697.00**.
-- Last-5-session low: **26988.50**.
-- Since the close, the range is **28243.25 to 28607.75**.
-- The latest price of **28398.00** is mid-range. It is not near a high or a low. It is 254.25 below the high and 353.50 above the low, and it sits almost on the previous close. The nearest levels are the overnight high (28607.75) above and the overnight low (28243.25) below.
+#### 2. Scheduled events (New York time)
+Monday, Nov 16:
+- **8:30 AM:** Empire State manufacturing survey. Sources disagree on the forecast. One says 19. Another says 10.0.
+- **9:05 AM:** New York Fed President John Williams speaks.
+- **12:00 PM:** One calendar lists Fed Chair Kevin Warsh giving remarks. I found only that source, so this is unverified.
+- **After the close:** Several small earnings reports. I saw no mega-cap Nasdaq names on the list.
 
-**4. Volume**
-Yesterday's volume was 0.83x the average of the five sessions before it. That is below average. It suggests weaker participation, so the pullback was not driven by heavy selling. The market also showed little conviction either way.
+Later in the week:
+- **Tuesday, after the close (about 4:20 PM):** Nvidia is confirmed to report. Options imply a move of about 10.8%. This falls after Monday's session, but traders may position for it.
+- **Wednesday:** Minutes of the Fed's latest meeting.
 
-**5. Directional lean**
-**Neutral. Confidence: Low.** Price sits in the middle of the previous range, so neither a high nor a low gives an edge. Volume was light, which fits a market waiting for news. The news conflicts. Nvidia is bouncing and earnings have been supportive. Against that, rate-hike pricing, high yields and oil are headwinds. The 8:30 PPI and several Fed speakers could change the picture quickly. This is a probability-based lean, not a prediction or a trade instruction.
+I could not confirm the exact date of the next CPI release. The sources conflict.
 
-I would shift toward **Bullish** if PPI comes in cool and price holds above the previous high of 28652.25 on rising volume. I would shift toward **Bearish** if PPI is hot and price falls below the previous low of 28044.50. A move past 28697.00, the last-5-session high, would also matter.
+#### 3. Key levels (from the price data)
+- Previous session high: **28399.00**
+- Previous session low: **27695.25**
+- Previous session close: **28038.25**
+- 5-session high: **28697.00**
+- 5-session low: **27316.25**
+- Since the close: high 28044.50, low 27766.50
 
-**6. Event risk: High.** PPI lands before the open and is followed by three or four Fed speakers. Rate-hike expectations are already running at about 85% to 90%.
+The latest price is 28034.75. It is in the middle of the previous range, 364.25 below the high and 339.50 above the low. It is not near resistance or support. The data is stale (last candle Friday 16:55), and Monday may open with a gap.
 
-**7. Sources**
+#### 4. Volume
+The previous session traded 1.18x the average of the five sessions before it. That is moderately above average. It came on a down day led by chip stocks. This suggests real participation in the selling, though not an extreme surge.
+
+#### 5. Directional lean
+**Neutral. Confidence: Low.**
+
+The signals conflict. Price sits mid-range, so it gives no edge. Above-average volume on a down day and the Nvidia news lean bearish. The weekly gain and the broad market strength lean the other way. Nvidia's earnings on Tuesday and the Fed speakers add uncertainty. The data is also stale, so a weekend gap could change the picture.
+
+**What would change the lean:**
+- A move above 28399.00 with strong volume would shift it toward bullish.
+- A break below 27695.25 with strong volume would shift it toward bearish.
+- Weekend news on Nvidia's leadership, or a hawkish Fed tone, could also change it.
+
+This is a probability-based lean, not a prediction or a trade instruction.
+
+#### 6. Event risk
+**High.** The Nvidia leadership crisis, hot inflation data, Fed speakers, and Nvidia's earnings the next evening could all move the market.
+
+#### 7. Sources
+- CappNotes
+- TheStreet
 - CNBC
-- Reuters (via Investing.com and MarketScreener)
 - Yahoo Finance
-- Stocktwits/Benzinga
-- Newsquawk
-- TheStreet Pro
-- Kiplinger
-- ZeroHedge
-- Investing.com
-- StockTitan
-- CoinGabbar
-- investingLive
-- JournalArta
-
-**Unverified:** I could not confirm Logan's 9:40 AM time from a second source. The Reuters pre-market moves were taken at 5:03 a.m. ET and may be out of date.
+- Investrade
+- Economic Weekly (Substack)
+- KuCoin News (calendar)
+- eOption
+- LiteFinance
+- Earnings Whispers
+- EarningsWatcher
+- Price levels came from the supplied Yahoo Finance futures data.
 
 BIAS: Neutral | CONFIDENCE: Low
 
-[Open the file](reports/2026-11-13-nasdaq-brief.md)
+[Open the file](reports/2026-11-14-nasdaq-brief.md)
 
 </details>
 
@@ -564,7 +578,7 @@ BIAS: Bearish | CONFIDENCE: Medium
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-13 07:53 | ◆ Neutral | Low | High | 28398.00 | [read it](reports/2026-11-13-nasdaq-brief.md) |
+| nasdaq | 2026-11-14 17:40 | ◆ Neutral | Low | High | 28034.75 | [read it](reports/2026-11-14-nasdaq-brief.md) |
 | gold | 2026-11-12 18:32 | ▼ Bearish | Medium | Medium | 3881.40 | [read it](reports/2026-11-12-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
