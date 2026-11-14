@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-13 10:10 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-14 04:06 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,20 +16,20 @@ Last updated 2026-11-13 10:10 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 2 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 16 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 6 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 6 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 6 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 4 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 34 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 23 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
 ## 📒 Trade journal (paper)
 
 - **Tradeify 50K evaluation: balance $50,233**, $1,581 above the drawdown floor, $2,767 to pass; today $892, $2,142 left before the daily loss limit. [Details](paper-trading/summary.md)
-- 📐 Opening range (9:30-10:00, tracked, not traded): $665 over 8 trades in 9 sessions since 2026-11-02, vs -$2,549 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
+- 📐 Opening range (9:30-10:00, tracked, not traded): $1,320 over 9 trades in 10 sessions since 2026-11-02, vs -$2,312 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
@@ -69,7 +69,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 - ❌ gold 2026-11-12 20:00: entered 1370 minutes after the open (the window is 60).
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $1,344 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $1,581 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -86,7 +86,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $8.07 so far this month on 76 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $8.17 so far this month on 78 AI runs; on pace for about $19 (budget $50).
 
 ##### Agent health
 
@@ -98,7 +98,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 - ⏳ 3 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.80 (needs 1.3 or more), total $-1,364 over 24 trades
+- ⏳ profit factor 0.84 (needs 1.3 or more), total $-1,128 over 25 trades
 - ✅ worst trading day $-1,071 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
@@ -267,127 +267,125 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-13, event risk Medium</b></summary>
+<summary><b>🌍 World news brief, 2026-11-14, event risk Low</b></summary>
 
 #### Top things for today
-1. **Iran says it hit a US radar in Bahrain.** Iran's Revolutionary Guards said they targeted a US early-warning radar in Bahrain. It was the first such claim against US assets in a Gulf country since early September (Reuters). Neither Bahrain nor the US had confirmed it at first. Why it matters: energy prices and Strait of Hormuz shipping risk.
-2. **US PPI at 8:30 AM.** The calendar shows PPI m/m forecast at 0.4% (previous 1.3%) and Core PPI m/m forecast at 0.3% (previous 0.7%). Why it matters: inflation data feeds rate expectations and the dollar.
-3. **Oil is on track for a second weekly fall.** Brent was at $95.54 a barrel early Friday as Trump kept the Iran blockade in place. Why it matters: energy costs feed inflation.
-4. **Senate Banking wants Huang and Lutnick to testify.** Chair Tim Scott asked Huang to appear Dec. 3 and Lutnick Dec. 10. Why it matters: US-China chip export-control policy.
-5. **French inflation hit 3.7% in October.** It is the highest since December 2023 (Reuters via Investing.com, headline only). Why it matters: global inflation and rate expectations.
+1. **US-China trade council met.** The two sides discussed tariff cuts and farm trade at their first trade council meeting on Friday, Nov 13. China's Commerce Ministry reported it Saturday. It said a leaders' meeting in Shenzhen is expected next week. The proposed $60 billion package of reciprocal tariff cuts has not been finalised. (Reuters via Press News Agency) Why it matters: tariffs, the dollar and risk appetite.
+2. **Trump extended a Jones Act waiver, reportedly.** Hawaii News Now says debate continues over the impact on savings (headline only). Why it matters: shipping costs and energy transport.
+3. **Rubio on Iran.** i24NEWS carried a live blog of Rubio warning that a nuclear-armed Iran could hold the US and the Middle East hostage (headline only). Why it matters: Middle East risk and energy.
+4. **CFTC sued Louisiana and Arkansas** over prediction-market jurisdiction (CFTC press releases). Why it matters: regulation of futures-style venues.
+5. **Senate leadership.** The New York Times reports Chris Van Hollen is set to challenge Chuck Schumer for Senate Majority Leader (headline only). Why it matters: the fiscal and legislative outlook.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 8:30 AM | PPI m/m (forecast 0.4%, previous 1.3%) | US data release | Yes |
-| 8:30 AM | Core PPI m/m (forecast 0.3%, previous 0.7%) | US data release | Yes |
+| – | No major events listed | Economic calendar | Yes |
 
-No hearings or Trump events with a time were found for today.
+No scheduled events found. Sunday Nov 15 also has no major events listed.
 
-Coming up this week: No scheduled events found. The calendar lists nothing for Saturday, Nov 14.
+Coming up this week: the calendar lists nothing. A Trump-Xi meeting in Shenzhen is expected next week (date and time unconfirmed).
 
 #### Event risk today
-Medium - PPI is high impact and the Iran-Bahrain claim adds Gulf and energy risk. The Bahrain claim is unconfirmed and comes during a fragile lull.
+Low - Markets are closed and the calendar is empty, but the US-China trade talks and Iran rhetoric could produce weekend headlines.
 
 #### Politics and policy
-- Lutnick agreed on Nov. 12 to testify voluntarily before the Senate Banking Committee. Huang resigned Thursday as Nvidia CEO. Why it matters: export-control policy and China chip sales.
-- Trump posted on Truth Social that Huang had done a "fantastic job."
-- Trump compared rising anti-Semitism in the US to Nazi Germany in 1938 (The Media Line, headline only).
-- The US reported record deportations and arrests in 2026 (Al Jazeera, headline only).
-- Trump praised Colom after an upset Mississippi Senate win (Newser, headline only).
-- Rechenberg wrote that tariffs aren't driving inflation (Boston Herald, headline only).
-- The Fed: nothing found in the feeds beyond the PPI data.
+- The Washington Post reports that Canada's PM Carney reported progress in trade talks with Trump (headline only).
+- THV11 reports the White House Correspondents' Dinner shooting suspect is charged with terrorism. Law Commentary says the DOJ added a terrorism charge against a Trump assassination suspect (both headline only).
+- The Washington Post reports Brian Monahan is out as attending physician to Congress amid a Pentagon probe (headline only).
+- The Supreme Court is considering a case on religious schools and public funding (Every CRS Report, headline only).
+- Nothing found on the Fed, Treasury, executive orders or overnight Trump quotes.
 
 #### Economics
-- French inflation rose to 3.7% in October, the highest since December 2023 (Reuters, headline only).
-- Hong Kong upgraded its growth outlook (Bloomberg, headline only).
-- Bloomberg ran a headline on rate hike fears testing India's stock rally as inflation rises (headline only).
-- WSJ ran a headline saying the global economy looks vulnerable to an AI bust (headline only).
-- No US data was released overnight.
+Nothing found. No data was released overnight.
+
+Fortune reports a $300 million logistics hub in Vietnam (headline only).
 
 #### SEC, CFTC and hearings
-- The SEC and CFTC issued no press releases in the last 2 days.
-- Trump named 4 SEC and CFTC nominees (Crypto News, headline only).
-- Senate Banking hearings are requested for Dec. 3 (Huang) and Dec. 10 (Lutnick). Lutnick has agreed to appear. Huang's appearance is not confirmed. Times are unconfirmed.
-- Scott's letter said a subpoena would be issued if Huang does not appear voluntarily.
-- A House committee requested a Dec. 1 transcribed interview with Huang. Its date and venue are still being negotiated.
+- SEC: no source detail beyond the title – the SEC proposed executive and director compensation disclosure reforms on Friday at 11:57 AM (SEC).
+- CFTC: it sued Louisiana on Friday at 4:00 PM after a state court blocked CFTC-regulated exchanges. It sued Arkansas on Friday at 10:46 AM over its jurisdiction over prediction markets (CFTC). Law360 says the Arkansas suit targets the state's Kalshi enforcement action (headline only). RG.org says the DOJ joined the Louisiana suit (headline only).
+- Startup Fortune says CFTC Chair Selig reports crypto firms are signing up for CFTC rules while Congress stalls (headline only).
+- No hearings found.
 
 #### War, trade and tariffs
-- **Iran:** The Guards said the radar strike was retaliation for an attack on a communications tower in Sirik. Trump said he held off further strikes at Gulf allies' request. Qatar is mediating indirect talks. Iran is demanding the US lift its port blockade and suspend oil sanctions. Iranian media said four tankers were hit by explosions in the Strait of Hormuz on Thursday. Why it matters: oil and gas supply and shipping insurance.
-- **Russia-Ukraine:** Kushner said the US is working toward the "largest prisoner exchange" of the war (The Moscow Times, headline only).
-- No new tariff news was found.
+- US-China: see the top item. A Reuters analysis found Chinese purchases of US farm goods other than soybeans are on track for a seven-year low, despite a $17 billion annual purchase pledge. China has urged Washington to implement the tariff-reduction deal, calling it a prerequisite for more farm purchases. Why it matters: trade policy and the dollar.
+- Ukraine: UNITED24 Media reports daily Russian losses of 1,710 troops, 6 tanks and 33 artillery systems (headline only).
+- Iran: see Rubio above.
 
 #### Country briefs
-- **China:** Reports say lawmakers are examining Commerce's review of China chip sales and Nvidia-linked China ties. No other China news found.
-- **European Union:** Storm Charles caused floods and flight cancellations across southern Europe (The Guardian, headline only). A European Commission headline covered the REGIOSTARS 2026 awards in Prague (headline only).
+- **China:** The trade council met by video, and a leaders' meeting is expected next week (Reuters via Press News Agency).
+- **European Union:** Nothing found.
 - **United Kingdom:** Nothing found.
 - **Japan:** Nothing found.
-- **India:** Rate hike fears are testing the stock rally as inflation rises (Bloomberg, headline only).
-- **Russia:** A second car bomb in two days hit a target in Russia, aimed at an exiled Ukrainian political aide (Reuters, headline only). Kushner's prisoner exchange comment is also above (The Moscow Times, headline only).
-- **Canada:** Nothing found.
+- **India:** Nothing found.
+- **Russia:** UNITED24 Media reports daily losses of 1,710 troops (headline only).
+- **Canada:** Carney reports progress in trade talks with Trump while expanding ties with Asia (The Washington Post, headline only).
 
-[Read the full brief with all the details](reports/news/2026-11-13-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-14-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-13</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-14</b></summary>
 
 #### Top things today
 
-1. **Bitcoin broke below $70,000 for the first time since August.** Inflation and higher-rate worries drove it, and the two-day slide reached as much as 9%. (Bloomberg) Why it matters: macro, not crypto news, is driving this move.
-2. **Heavy long liquidations.** Estimates range from $1.2B to $1.65B depending on the source. Leveraged longs were over 90% of the liquidations. (ETHNews) Why it matters: the drop was forced selling, and positioning is now cleaner.
-3. **Tech stocks are adding pressure.** Reports tie the drop to Nvidia's CEO exit, $299.9M in ETF outflows and $325.28M in liquidations. (BingX) The market is also waiting for US producer-price data. (CryptoTicker, Bloomberg) Why it matters: PPI could move rate expectations today.
-4. **Strategy is leaving MSCI indexes.** MSCI will remove Strategy from its USA Index at the close on Nov. 30, so tracking funds must sell the shares. (TokenPost) Why it matters: it could weaken a key source of Bitcoin-buying funds.
-5. **Futures are weak, but spot is steadier.** One analyst said selling is concentrated in derivatives while spot activity is comparatively resilient. (Bitunix via Newsy Today) Thin books add risk: Talos put 1% BTC depth at $72M on Nov. 9, about 33% below normal. Why it matters: moves can overshoot in both directions.
+1. **Fear and Greed fell to 13 (Extreme Fear).** The index dropped from 20 to 13. Bitcoin fell below $68,000 on Nov 13, its lowest since Aug 19 (CoinDesk via KuCoin). Why it matters: it is the deepest fear reading in months.
+2. **Leveraged longs were flushed.** CoinGlass counted $1.65 billion in liquidations over 24 hours. Talos says Bitcoin order-book depth is thin and leverage is high. Why it matters: thin books can make moves sharper.
+3. **Institutions are pulling money.** Strategy and other treasury firms were removed from MSCI indexes, the dollar is stronger, and Bitcoin ETFs have had $1.9B of net outflows this month (Bloomingbit). Nvidia CEO Jensen Huang's resignation was also cited as a trigger. Why it matters: these are the stated drivers of the selloff.
+4. **The White House nominated four SEC and CFTC commissioners.** The SEC nominees have a Senate Banking hearing on Nov 19. Why it matters: both agencies are short-staffed while the market-structure bill is stalled.
+5. **Akedo (AKE) is the only big pump.** It is up 162.7% on our data with no clear news found. Why it matters: it is a speculative outlier in a falling market.
 
 #### Coins to research
 
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| A7A5 | +187.4% | No news found. | Volume is only $1.9K against a $463.9M market cap. The price data looks unreliable. A pump with no news. |
-| Akedo (AKE) | +85.0% | No news found for today. Earlier pumps tied to a Binance Alpha Box airdrop and OKX perps. (Coingabbar) | BscScan data showed the top 100 wallets held 98.82% of supply. (Coingabbar) One report called an earlier rally leverage-driven. (SunCrypto) It crashed about 66% after its Sept. 20 peak. (Coincu) |
-| Sanctum (SANC) | +121.7% | Cause not found. Another source puts the gain at 156%. (CoinGabbar) | Rank 438, so a small cap. A pump with no news. |
-| Useless Coin (USELESS) | +8.8% | No news found. | Meme-style coin. Market cap is $135M. |
-| Pons (PONS) | +5.2% | No news found. | Down 16.4% over 7 days. Market cap is about $105M. |
-| Jupiter (JUP) | +3.7% | No news found. | Gain is small and against a falling market. Up 5.4% over 7 days. |
+| Akedo (AKE) | +162.7% (live data) | I found no news for today. It is a gaming token on BNB Chain. Its 24h range ran from $0.002576 to $0.01369 (CoinGabbar). Outlets quote different gains (370%, 382%), so the figure is unconfirmed. | Pump with no news. 24h volume ($523M) is larger than market cap ($307M). It sat about 77% below its Sept 20 peak in October. It has monthly unlocks of about 2.1B tokens (CoinDelx). Earlier coverage flagged whale concentration (unconfirmed). |
+| Pearl (PEARL) | +12.1% | No reason found. | Down 12.5% over 7 days. Volume is small next to the pump. |
+| Pieverse (PIEVERSE) | +9.0% | No reason found. | Up 24.2% in 7 days. No news. |
+| Midnight (NIGHT) | +8.3% | No reason found. | Up 16% in 7 days with no news found. |
+| Injective (INJ) | +4.9% | No reason found. It is also trending. | Small move. Still down 4% in 7 days. |
+| Ozone Chain (OZO) | +3.7% | No reason found. | 24h volume is only $351.6K. It is up 65.1% in 7 days. Thin liquidity. |
 
 #### Whale watch
 
-Nothing in the last 24 hours at $10M or more was confirmed. These are the nearest items.
-
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 12, about 9:16 AM ET (from a 14:16 timestamp, timezone unconfirmed) | ETH | $13.6M | Unnamed whale (Lookonchain) | Onto an exchange or custodian: sent to a Galaxy Digital deposit address |
-| Nov 10 (more than 24h ago) | ETH | $151.4M | BlackRock-linked wallets (Lookonchain, Arkham) | Onto an exchange: sent to Coinbase Prime. These are wallet moves, not verified ETF withdrawals. |
+| Nov 12 (about 8 hours before the report; exact time not given) | BTC | ~$73.78M (1,000 BTC) | A whale dormant four years (Lookonchain via PANews) | Onto an exchange (Binance) |
+| Nov 13, 1:22 AM ET (06:22 UTC) | ETH | ~$19.91M (10,380 ETH) | Wallet 0x4cee (Lookonchain) | Received. This is not confirmed as a purchase. |
+| Nov 13 (time not given) | ETH | ~$32.3M (16,700 ETH) | Wallet 0xBE4 (Lookonchain) | Sold |
+| Nov 13 (time not given) | BTC and ETH | Wallet 0x6046 lost exposure to about $25.2M of ETH and $38.77M of BTC | Wallet 0x6046 (Lookonchain) | Liquidated |
 
-A whale with $140M in BTC and ETH longs lost $17.69M in a two-day liquidation. (BingX) This is a loss, not a transfer, so it isn't in the table.
+The two Nov 13 wallet rows are from reports with no exact times.
 
 #### Government and regulation
 
-- **CLARITY Act (US market-structure bill):** It would split oversight between the SEC and CFTC. A Senate cloture vote failed 49-50 on Sept. 15. (Crypto Briefing) Sticking points were ethics rules on officials' crypto holdings and limits on stablecoin yield. (Bit.com)
-- **House Democrats:** They are reportedly drafting an SEC-led market-structure bill that would curb the CFTC's role and add ethics rules. No official text has been released. (Crypto Briefing, Nov. 11)
-- **SEC:** On Aug. 18 it proposed Regulation Crypto Assets, with offering exemptions up to $75M a year. (Bit.com)
-- **CFTC:** It sent its crypto markets rulemaking to the White House for review on Sept. 17. (Bit.com) These items are older than the last few days. I found no new SEC or CFTC action dated this week.
-- **Thailand:** The SEC proposed capping daily stablecoin deposits and withdrawals at 5 million baht ($148,000) each per customer. The draft would also bar transfers to third-party wallets. (Cointelegraph, Nov. 12)
-- **Other:** A headline said the US froze $2.7 billion in assets stolen from Binance (Finway headline only, unconfirmed). Hong Kong was reported to be advancing a virtual asset framework, but I found no details. (KuCoin)
+- **SEC and CFTC nominees:** Nathan Anonick and Matthew Rowland were nominated to the CFTC. Kristin Johnson and Steven Levine were nominated to the SEC. The SEC has two of five seats filled. The CFTC has only Chair Selig. Confirmation is expected before Democrats take the Senate in January 2027. (The Block, Crypto Briefing)
+- **Clarity Act:** It stalled in the Senate on Sept 15 on a 49-50 procedural vote. Passage this Congress is seen as unlikely. (Startup Fortune)
+- **CFTC rules:** Regulation CTX and CAM, floated Oct 5, would give crypto exchanges a federal route that skips state licences. Selig says firms are opting in. (CNBC via Startup Fortune)
+- **House Democrats' draft:** They are reportedly drafting an SEC-led market-structure bill that would curb the CFTC's role and add Trump ethics rules. It is a draft only. (Crypto Briefing)
+- **France:** The Senate begins budget debate Nov 20 and takes up revenue articles from Nov 23, where crypto tax amendments could be revived. The Assembly had stripped them. (Wisdom of Wallets)
 
 #### Who is buying and adopting
 
-- **Strategy:** It bought 1,036 BTC between Nov. 2 and 8, bringing holdings to 850,364 BTC. (Cryptometer) Its average cost is about $75,456, which is above today's price. It raised $283.8M from share sales but put only $81.9M into Bitcoin. (Crypto Economy)
-- **Treasury selling:** One report said selling by bitcoin treasury firms hit a rare level. (KuCoin)
-- **Metaplanet** was also flagged as at risk from MSCI's rules. (KuCoin) I found no new buys by countries or stablecoin payment launches today.
+- **Strategy:** It bought 1,036 BTC (Nov 2–8) at about $79,012 each and now holds 850,364 BTC. That is well above today's price. (TCB)
+- **Coinbase:** Armstrong said its treasury reached 18,000 BTC.
+- **PNC and Coinbase:** A pilot lets eligible corporate customers receive payments in USDC.
+- **Other:** NYSE selected Avalanche. I found no new country purchases.
 
 #### Next 7 days
 
 | Date | Event | Coin or topic |
 |---|---|---|
-| Today, Nov 13 | US producer-price data | Macro, BTC |
-| Nov 30 (outside 7 days) | MSCI removal of Strategy takes effect at the close | MSTR, BTC |
+| Nov 14, 3:00 AM (time zone not stated) | Unlock of about $1.7M (Chainbase) | C |
+| Nov 15, 3:00 PM (time zone not stated) | Unlock of about $5.07M (Starknet) | STRK |
+| Nov 15 (Sunday) | Weekly close; the next test is $69,555 (Coinspeaker) | BTC |
+| Nov 19 | Senate Banking hearing for SEC nominees (hearing time not found) | SEC / regulation |
+| Nov 20 | French Senate budget debate begins | France crypto tax |
+| Nov 23 | French Senate takes up revenue articles | France crypto tax |
 
-No token unlocks, hearings or ETF deadlines were found for the next 7 days. Strategy's weekly purchase filing is typically on Mondays (unconfirmed for this week).
+The unlock times come from a source that doesn't state its time zone, so treat them as unconfirmed. I found no ETF deadlines.
 
-[Read the full brief with all the details](reports/crypto/2026-11-13-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-14-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
@@ -573,10 +571,10 @@ A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  
 
 ## Scorecard
 
-- Briefs scored: **29** (Bullish or Bearish calls: 6)
+- Briefs scored: **30** (Bullish or Bearish calls: 6)
 - Right: 3, Wrong: 3, Session ended flat: 0
 - Hit rate when the session was decisive: **50%**
-- For comparison, price went up in 52% of decisive sessions
+- For comparison, price went up in 50% of decisive sessions
 - ⚠️ Only 6 directional calls so far. Treat the numbers as noise until there are at least 30.
 
 By confidence:
@@ -601,6 +599,7 @@ By confidence:
 
 | Brief | Market | Lean | Confidence | Session moved | Result |
 |---|---|---|---|---|---|
+| 2026-11-13 | nasdaq | ◆ Neutral | Low | Down (-1.24%) | Moved |
 | 2026-11-12 | gold | ▼ Bearish | Medium | Up (0.29%) | Wrong |
 | 2026-11-11 | gold | ▼ Bearish | Medium | Down (-1.65%) | Right |
 | 2026-11-11 | nasdaq | ◆ Neutral | Low | Up (0.46%) | Moved |
@@ -610,7 +609,6 @@ By confidence:
 | 2026-11-06 | nasdaq | ◆ Neutral | Low | Down (-0.34%) | Moved |
 | 2026-11-05 | gold | ◆ Neutral | Low | Down (-0.38%) | Moved |
 | 2026-11-05 | nasdaq | ▼ Bearish | Low | Down (-5.16%) | Right |
-| 2026-11-04 | nasdaq | ◆ Neutral | Low | Up (0.48%) | Moved |
 
 ## Your journals
 
