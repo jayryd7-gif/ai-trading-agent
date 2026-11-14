@@ -1,0 +1,27 @@
+name: Credits Reminder
+
+# Phone reminder (ntfy, no AI, $0) to add Anthropic credits, every day at about
+# 9 AM New York time from Sun Nov 15 to Fri Nov 20, 2026. After Nov 20 it does
+# nothing; delete this file any time to stop it early.
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 14:00 UTC = 9 AM New York (winter time)
+  workflow_dispatch:
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+    steps:
+      - name: Send the reminder (only until Fri Nov 20)
+        run: |
+          TODAY="$(TZ=America/New_York date +%F)"
+          if [[ "$TODAY" > "2026-11-20" ]]; then echo "Past Nov 20, nothing to send."; exit 0; fi
+          if [ -z "$NTFY_TOPIC" ]; then echo "No NTFY_TOPIC secret set."; exit 0; fi
+          curl -s -H "Title: Reminder: add Anthropic credits" -H "Priority: high" -H "Tags: money_with_wings" \
+            -H "Click: https://console.anthropic.com/settings/billing" \
+            -d "Your Claude balance was about \$3 on Nov 14. Bots use about \$0.25-0.60 a day, so add credits before they stop: console.anthropic.com > Billing. Already done? Tell Claude to delete this reminder." \
+            "https://ntfy.sh/$NTFY_TOPIC" > /dev/null
+          echo "Reminder sent for $TODAY."
