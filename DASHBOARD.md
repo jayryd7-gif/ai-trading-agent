@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-15 10:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 17:28 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-15 10:43 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 17 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 24 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 40 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 42 hours ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 7 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 7 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 47 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -85,7 +85,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $8.64 so far this month on 82 AI runs; on pace for about $17 (budget $50).
+- ✅ Spent $8.99 so far this month on 84 AI runs; on pace for about $18 (budget $50).
 
 ##### Agent health
 
@@ -108,28 +108,31 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ## 📅 Weekly report
 
 <details>
-<summary><b>Week ending 2026-11-08</b></summary>
+<summary><b>Week ending 2026-11-15</b></summary>
 
 #### The week in one look
 
-- **Futures paper:** +$652 this week
+- **Futures paper:** -$419 this week
 - **Rotation bot:** $0.00 this week
-- **Buy-and-hold bot:** -$30.12 this week
-- **AI costs:** $4.21 this week
+- **Buy-and-hold bot:** -$145.27 this week
+- **AI costs:** $4.14 this week
 
 #### Futures paper trading
 
-- **This week:** +$652 after fees, 4 trades (3 wins, 1 losses), 5 sessions with no trade
-- **Since paper trading began:** -$708 over 18 trades
-- Nasdaq (MNQ): -$1,015 over 1 trades
-- Gold (MGC): +$1,667 over 3 trades
+- **This week:** -$419 after fees, 7 trades (3 wins, 4 losses), 3 sessions with no trade
+- **Since paper trading began:** -$1,128 over 25 trades
+- Nasdaq (MNQ): -$1,297 over 3 trades
+- Gold (MGC): +$878 over 4 trades
 
 | Day | Market | Side | Entry | Result |
 |---|---|---|---|---|
-| 2026-11-02 | nasdaq | long | 28886.75 at 10:25 | -$1,015 |
-| 2026-11-04 | gold | long | 3963.4 at 20:15 | +$357 |
-| 2026-11-05 | gold | long | 4118.4 at 20:15 | +$655 |
-| 2026-11-06 | gold | short | 4072.7 at 20:45 | +$655 |
+| 2026-11-09 | gold | long | 4115.0 at 20:15 | -$77 |
+| 2026-11-10 | nasdaq | long | 28049.75 at 10:00 | -$667 |
+| 2026-11-11 | gold | long | 4055.3 at 20:35 | +$655 |
+| 2026-11-11 | nasdaq | short | 28246.75 at 09:45 | -$867 |
+| 2026-11-12 | gold | long | 4004.4 at 20:15 | -$355 |
+| 2026-11-13 | gold | long | 3886.5 at 18:50 | +$655 |
+| 2026-11-13 | nasdaq | short | 28266.0 at 09:35 | +$237 |
 
 #### TradingView strategy
 
@@ -145,14 +148,14 @@ Export the List of trades from each chart and say "update TradingView" to refres
 | Bot | Start of week | End of week | Change | Since it started ($1,000) |
 |---|---|---|---|---|
 | Rotation bot | $979.35 | $979.35 | $0.00 (+0.0%) | -$20.65 |
-| Buy-and-hold bot | $936.92 | $906.80 | -$30.12 (-3.2%) | -$93.20 |
+| Buy-and-hold bot | $876.58 | $731.31 | -$145.27 (-16.6%) | -$268.69 |
 
 **Alpaca copy:** 0 order(s) this week.
 
 #### Market briefs (Nasdaq and gold)
 
-- 7 briefs scored; 1 gave a direction, 1 of those were right.
-- 6 were Neutral.
+- 7 briefs scored; 3 gave a direction, 1 of those were right.
+- 4 were Neutral.
 
 #### CEO check
 
@@ -162,13 +165,13 @@ Export the List of trades from each chart and say "update TradingView" to refres
 
 | Agent | Runs | Cost |
 |---|---|---|
-| crypto-brief | 7 | $1.74 |
-| market-brief-nasdaq | 5 | $0.66 |
-| stock-brief | 3 | $0.59 |
-| world-brief | 7 | $0.58 |
-| market-brief-gold | 4 | $0.57 |
-| x-posts | 13 | $0.06 |
-| **Total** | 39 | **$4.21** |
+| crypto-brief | 7 | $1.78 |
+| market-brief-nasdaq | 6 | $0.72 |
+| world-brief | 7 | $0.61 |
+| stock-brief | 3 | $0.54 |
+| market-brief-gold | 4 | $0.43 |
+| x-posts | 12 | $0.06 |
+| **Total** | 39 | **$4.14** |
 
 At this pace: about $18 a month.
 
