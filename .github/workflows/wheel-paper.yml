@@ -1,7 +1,8 @@
 name: Wheel Paper Trading
 
 # Paper trades the options wheel once each weekday: our $10K CAD account and a
-# Ryan-style $200K USD account on his stocks, side by side for comparison,
+# Ryan-style $200K USD account on his stocks, side by side for comparison, plus
+# the $10K CAD iron condor income account (agents/condor_trader.py),
 # during market hours, with real Yahoo option prices. No AI, no broker, $0.
 # Every move is sent to your phone (ntfy). Code: agents/wheel_trader.py
 on:
@@ -40,6 +41,12 @@ jobs:
       - name: Run the Ryan-style wheel paper account ($200K USD, his stocks)
         if: ${{ !cancelled() }}
         run: python agents/wheel_trader.py --account ryan
+        env:
+          PYTHONPATH: agents
+
+      - name: Run the iron condor income account ($10K CAD, SPY/QQQ)
+        if: ${{ !cancelled() }}
+        run: python agents/condor_trader.py
         env:
           PYTHONPATH: agents
 

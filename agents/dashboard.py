@@ -386,6 +386,31 @@ def wheel_section():
                         "Starts trading on the first weekday run (2:37 PM New York).")
     out += _wheel_block("paper-trading/wheel-ryan", "### Ryan-style ($200K USD, his stocks)",
                         "Starts trading on the first weekday run (2:37 PM New York).")
+    out += condor_section()
+    return out
+
+
+def condor_section():
+    """The $10K CAD iron condor income account: headline, charts, open condors, cash flow by month."""
+    folder = "paper-trading/condor"
+    summary = os.path.join(folder, "summary.md")
+    out = ["## 💰 Iron condor income account (paper, $10K CAD)", "",
+           "A separate cash-flow test: SPY/QQQ iron condors, about 30 days out. "
+           "Backtest: about $100-250 CAD a month, with drops of 16-30% along the way.", ""]
+    if not os.path.exists(summary):
+        return out + ["Starts trading on the first weekday run (2:37 PM New York).", ""]
+    text = open(summary).read()
+    for pattern in (r"^Updated .*$", r"^\| \| \|\n\|---\|---\|\n(?:\|.*\n)+"):
+        m = re.search(pattern, text, re.M)
+        if m:
+            out += [m.group(0), ""]
+    out += [f"![Condor account profit / loss]({folder}/value.svg)", "",
+            f"![Open condors]({folder}/holdings.svg)", ""]
+    for pattern in (r"^\| Underlying \|.*\n(?:\|.*\n)+", r"^\| Month \| Profit / loss \|\n(?:\|.*\n)+"):
+        m = re.search(pattern, text, re.M)
+        if m:
+            out += [m.group(0)]
+    out += [f"[Account]({folder}/summary.md) · [Every move]({folder}/journal.md)", ""]
     return out
 
 

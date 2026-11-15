@@ -164,3 +164,12 @@ What it shows:
 - **Sustainable approaches made about $75-250 CAD a month**, with 15-35% drops along the way.
 - **Results swing a lot with small setting changes.** Iron condors at 0.16 delta lost money where 0.20 delta made money, so these are fragile. Paper trading should come before trusting any of them.
 - **Wealthsimple:** spreads and iron condors need multi-leg orders. One review says Wealthsimple doesn't support them, so check the app first.
+
+## Iron condor income paper account (live from 2026-11-16)
+`agents/condor_trader.py` runs in the same daily job as the wheel accounts. It's a separate $10K CAD cash-flow test.
+- **What it trades:** SPY and QQQ iron condors, one each, about 30 days out. Short strikes at 0.20 delta, wings about 2% wide (about $14-15).
+- **Exits:** close at 50% profit, at 14 days left, or at a 2x stop.
+- **Risk:** about 15% of the account per condor. A single contract may risk up to 18%, because one SPY condor risks about 16% of $10K CAD. All open condors together risk at most 36%.
+- **Tested alternatives:** $5-wide wings lost money over 1, 3 and 5 years, and 1.5%-wide wings made much less, so the wings stay about 2%.
+- **First test run (Nov 15):** SPY 706/721 + 782/797 for a $3.67 credit, and QQQ 620/635 + 723/737 for $4.16. About $780 of max gain for about $2,220 of max loss.
+- **Files:** results in `paper-trading/condor/` (monthly cash-flow table included). Phone alerts are titled "Condor: …".
