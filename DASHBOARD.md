@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-14 17:40 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 17:28 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-14 17:40 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 47 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 37 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 23 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 25 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 24 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 7 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 7 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 47 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -59,14 +59,13 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**❌ 3 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**❌ 2 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
 
 ##### Futures paper trader
 
-- ❌ gold 2026-11-12 20:00: entered 1370 minutes after the open (the window is 60).
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
 - ✅ Tradeify practice evaluation: $1,581 above the $2,000 trailing drawdown floor.
@@ -86,7 +85,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $8.17 so far this month on 78 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $8.99 so far this month on 84 AI runs; on pace for about $18 (budget $50).
 
 ##### Agent health
 
@@ -95,7 +94,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ##### Ready to run on its own?
 
 - ✅ 20 of 15 trading days on the paper record
-- ⏳ 3 rule problem(s) in the paper trader above
+- ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
 - ⏳ profit factor 0.84 (needs 1.3 or more), total $-1,128 over 25 trades
@@ -109,28 +108,31 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ## 📅 Weekly report
 
 <details>
-<summary><b>Week ending 2026-11-08</b></summary>
+<summary><b>Week ending 2026-11-15</b></summary>
 
 #### The week in one look
 
-- **Futures paper:** +$652 this week
+- **Futures paper:** -$419 this week
 - **Rotation bot:** $0.00 this week
-- **Buy-and-hold bot:** -$30.12 this week
-- **AI costs:** $4.21 this week
+- **Buy-and-hold bot:** -$145.27 this week
+- **AI costs:** $4.14 this week
 
 #### Futures paper trading
 
-- **This week:** +$652 after fees, 4 trades (3 wins, 1 losses), 5 sessions with no trade
-- **Since paper trading began:** -$708 over 18 trades
-- Nasdaq (MNQ): -$1,015 over 1 trades
-- Gold (MGC): +$1,667 over 3 trades
+- **This week:** -$419 after fees, 7 trades (3 wins, 4 losses), 3 sessions with no trade
+- **Since paper trading began:** -$1,128 over 25 trades
+- Nasdaq (MNQ): -$1,297 over 3 trades
+- Gold (MGC): +$878 over 4 trades
 
 | Day | Market | Side | Entry | Result |
 |---|---|---|---|---|
-| 2026-11-02 | nasdaq | long | 28886.75 at 10:25 | -$1,015 |
-| 2026-11-04 | gold | long | 3963.4 at 20:15 | +$357 |
-| 2026-11-05 | gold | long | 4118.4 at 20:15 | +$655 |
-| 2026-11-06 | gold | short | 4072.7 at 20:45 | +$655 |
+| 2026-11-09 | gold | long | 4115.0 at 20:15 | -$77 |
+| 2026-11-10 | nasdaq | long | 28049.75 at 10:00 | -$667 |
+| 2026-11-11 | gold | long | 4055.3 at 20:35 | +$655 |
+| 2026-11-11 | nasdaq | short | 28246.75 at 09:45 | -$867 |
+| 2026-11-12 | gold | long | 4004.4 at 20:15 | -$355 |
+| 2026-11-13 | gold | long | 3886.5 at 18:50 | +$655 |
+| 2026-11-13 | nasdaq | short | 28266.0 at 09:35 | +$237 |
 
 #### TradingView strategy
 
@@ -146,14 +148,14 @@ Export the List of trades from each chart and say "update TradingView" to refres
 | Bot | Start of week | End of week | Change | Since it started ($1,000) |
 |---|---|---|---|---|
 | Rotation bot | $979.35 | $979.35 | $0.00 (+0.0%) | -$20.65 |
-| Buy-and-hold bot | $936.92 | $906.80 | -$30.12 (-3.2%) | -$93.20 |
+| Buy-and-hold bot | $876.58 | $731.31 | -$145.27 (-16.6%) | -$268.69 |
 
 **Alpaca copy:** 0 order(s) this week.
 
 #### Market briefs (Nasdaq and gold)
 
-- 7 briefs scored; 1 gave a direction, 1 of those were right.
-- 6 were Neutral.
+- 7 briefs scored; 3 gave a direction, 1 of those were right.
+- 4 were Neutral.
 
 #### CEO check
 
@@ -163,13 +165,13 @@ Export the List of trades from each chart and say "update TradingView" to refres
 
 | Agent | Runs | Cost |
 |---|---|---|
-| crypto-brief | 7 | $1.74 |
-| market-brief-nasdaq | 5 | $0.66 |
-| stock-brief | 3 | $0.59 |
-| world-brief | 7 | $0.58 |
-| market-brief-gold | 4 | $0.57 |
-| x-posts | 13 | $0.06 |
-| **Total** | 39 | **$4.21** |
+| crypto-brief | 7 | $1.78 |
+| market-brief-nasdaq | 6 | $0.72 |
+| world-brief | 7 | $0.61 |
+| stock-brief | 3 | $0.54 |
+| market-brief-gold | 4 | $0.43 |
+| x-posts | 12 | $0.06 |
+| **Total** | 39 | **$4.14** |
 
 At this pace: about $18 a month.
 
@@ -232,6 +234,10 @@ At this pace: about $18 a month.
 
 [Paper trading journal](paper-trading/paper-journal.md) · [TradingView strategy](tradingview/breakout_strategy.pine)
 
+## 🎡 Options wheel (paper, $10K CAD)
+
+Starts trading on the first weekday run (2:37 PM New York).
+
 ## 📈 TradingView strategy results
 
 From the latest **List of trades** export of each chart. One trade = one entry (TradingView counts each target as a separate trade). Forward test = trades from 2026-10-19 on.
@@ -267,125 +273,127 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-14, event risk Low</b></summary>
+<summary><b>🌍 World news brief, 2026-11-15, event risk High</b></summary>
 
 #### Top things for today
-1. **US-China trade council met.** The two sides discussed tariff cuts and farm trade at their first trade council meeting on Friday, Nov 13. China's Commerce Ministry reported it Saturday. It said a leaders' meeting in Shenzhen is expected next week. The proposed $60 billion package of reciprocal tariff cuts has not been finalised. (Reuters via Press News Agency) Why it matters: tariffs, the dollar and risk appetite.
-2. **Trump extended a Jones Act waiver, reportedly.** Hawaii News Now says debate continues over the impact on savings (headline only). Why it matters: shipping costs and energy transport.
-3. **Rubio on Iran.** i24NEWS carried a live blog of Rubio warning that a nuclear-armed Iran could hold the US and the Middle East hostage (headline only). Why it matters: Middle East risk and energy.
-4. **CFTC sued Louisiana and Arkansas** over prediction-market jurisdiction (CFTC press releases). Why it matters: regulation of futures-style venues.
-5. **Senate leadership.** The New York Times reports Chris Van Hollen is set to challenge Chuck Schumer for Senate Majority Leader (headline only). Why it matters: the fiscal and legislative outlook.
+1. **Hormuz tanker incidents.** Iran's Revolutionary Guards (IRGC) say two more tankers hit mines in the southern Strait of Hormuz. ISNA says one carried over two million barrels of crude and sank. The claims have not been independently verified. Why it matters: energy prices and safe-haven demand (gold).
+2. **Iran strikes on Bahrain.** Bahrain says its air defences destroyed several Iranian aerial attacks. Iran says it targeted a radar at al-Riffa air base, in retaliation for a U.S. strike in Sirik last week. Why it matters: Gulf escalation and risk appetite.
+3. **Fed Chair Warsh speaks Monday at 12:00 PM.** Why it matters: rate expectations and the dollar.
+4. **Trump on the FAA ground stop.** Trump urged Congress to fund an air traffic control overhaul (Anadolu, headline only). Why it matters: possible spending debate.
+5. **Russia-Ukraine talks stalled.** The two sides traded air attacks (Radio Free Europe/Radio Liberty, headline only). Why it matters: energy and risk sentiment.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| – | No major events listed | Economic calendar | Yes |
+| All day | No major economic events | Calendar | Yes |
 
-No scheduled events found. Sunday Nov 15 also has no major events listed.
-
-Coming up this week: the calendar lists nothing. A Trump-Xi meeting in Shenzhen is expected next week (date and time unconfirmed).
+Coming up this week: Mon 8:30 AM Canada CPI m/m (forecast 0.3%, previous 0.1%), median CPI y/y (2.0%, 1.9%) and trimmed CPI y/y (1.9%, 1.8%). Mon 12:00 PM Fed Chair Warsh speaks. Tue 8:30 AM US retail sales (0.2%, previous 0.8%) and core retail sales (0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC minutes.
 
 #### Event risk today
-Low - Markets are closed and the calendar is empty, but the US-China trade talks and Iran rhetoric could produce weekend headlines.
+High - Markets are closed, but the Hormuz and Bahrain events are unresolved and could be reflected in prices when trading reopens.
 
 #### Politics and policy
-- The Washington Post reports that Canada's PM Carney reported progress in trade talks with Trump (headline only).
-- THV11 reports the White House Correspondents' Dinner shooting suspect is charged with terrorism. Law Commentary says the DOJ added a terrorism charge against a Trump assassination suspect (both headline only).
-- The Washington Post reports Brian Monahan is out as attending physician to Congress amid a Pentagon probe (headline only).
-- The Supreme Court is considering a case on religious schools and public funding (Every CRS Report, headline only).
-- Nothing found on the Fed, Treasury, executive orders or overnight Trump quotes.
+- Trump broke his silence on the nationwide ground stop and asked Congress for more money (KSL News, headline only). He also blamed Biden for an aviation "disaster" (TRT World, headline only).
+- Trump criticized a judge's two-week halt to his Washington golf project and said the administration will appeal (Your Valley, headline only).
+- A Trump team is preparing a "tough response" to Democratic investigations (NYT, via The New Voice of Ukraine, headline only).
+- Van Hollen said claims he can't win Senate majority leader are nonsense (The Hill, headline only).
 
 #### Economics
-Nothing found. No data was released overnight.
-
-Fortune reports a $300 million logistics hub in Vietnam (headline only).
+Nothing found on overnight data. No major releases are listed for the weekend.
 
 #### SEC, CFTC and hearings
-- SEC: no source detail beyond the title – the SEC proposed executive and director compensation disclosure reforms on Friday at 11:57 AM (SEC).
-- CFTC: it sued Louisiana on Friday at 4:00 PM after a state court blocked CFTC-regulated exchanges. It sued Arkansas on Friday at 10:46 AM over its jurisdiction over prediction markets (CFTC). Law360 says the Arkansas suit targets the state's Kalshi enforcement action (headline only). RG.org says the DOJ joined the Louisiana suit (headline only).
-- Startup Fortune says CFTC Chair Selig reports crypto firms are signing up for CFTC rules while Congress stalls (headline only).
-- No hearings found.
+- Senate Ag panel set a Nov. 17 hearing for CFTC nominees (RG.org, headline only; time not given, unconfirmed).
+- Trump named CFTC and SEC nominees for the first time in a year (Hoodline, headline only).
+- The CFTC sued Louisiana and Arkansas over prediction markets (CFTC releases, Fri Nov 13). Louisiana: a state court blocked CFTC-regulated exchanges.
+- The CFTC is weighing action against Kalshi over contract filing procedures (디지털투데이, headline only).
+- The SEC proposed executive and director compensation disclosure reforms (SEC, Fri).
+- CLARITY Act is unlikely to advance (Crypto News, headline only).
 
 #### War, trade and tariffs
-- US-China: see the top item. A Reuters analysis found Chinese purchases of US farm goods other than soybeans are on track for a seven-year low, despite a $17 billion annual purchase pledge. China has urged Washington to implement the tariff-reduction deal, calling it a prerequisite for more farm purchases. Why it matters: trade policy and the dollar.
-- Ukraine: UNITED24 Media reports daily Russian losses of 1,710 troops, 6 tanks and 33 artillery systems (headline only).
-- Iran: see Rubio above.
+- **Iran/Hormuz:** The U.S. has imposed a naval blockade on Iranian ports and helped tankers move through the strait, which normally carries about one-fifth of global oil. The IRGC says the strait is closed. UKMTO said traffic was about 65% below pre-war levels. Considerable doubts remain about Iran's mine claims. A British maritime monitor was aware of an Indian authority report of a tanker attack, but it was unclear if this was the same incident. Why it matters: oil supply, shipping costs, inflation.
+- **Russia-Ukraine:** Air attacks continued as US-mediated talks failed to break the deadlock (RFE/RL, headline only). Zelenskyy warned that Starshield restrictions threaten Ukraine's energy defenses (LEX 18, headline only).
+- **Israel:** The election race between Eisenkot and Netanyahu to build a government continues (Jerusalem Post, headline only).
+- **Trade:** ASEAN Digital Economy Framework Agreement signed in Manila (IndexBox, headline only).
 
 #### Country briefs
-- **China:** The trade council met by video, and a leaders' meeting is expected next week (Reuters via Press News Agency).
+- **China:** Nothing found.
 - **European Union:** Nothing found.
-- **United Kingdom:** Nothing found.
+- **United Kingdom:** UK CPI is due Wednesday at 2:00 AM (forecast 3.6%).
 - **Japan:** Nothing found.
-- **India:** Nothing found.
-- **Russia:** UNITED24 Media reports daily losses of 1,710 troops (headline only).
-- **Canada:** Carney reports progress in trade talks with Trump while expanding ties with Asia (The Washington Post, headline only).
+- **India:** Bloomberg ran a feature on India's $130 billion wedding economy (headline only).
+- **Russia:** Air attacks with Ukraine continue (RFE/RL, headline only).
+- **Canada:** CPI is due Monday at 8:30 AM (calendar figures above).
 
-[Read the full brief with all the details](reports/news/2026-11-14-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-15-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-14</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-15</b></summary>
 
 #### Top things today
 
-1. **Fear and Greed fell to 13 (Extreme Fear).** The index dropped from 20 to 13. Bitcoin fell below $68,000 on Nov 13, its lowest since Aug 19 (CoinDesk via KuCoin). Why it matters: it is the deepest fear reading in months.
-2. **Leveraged longs were flushed.** CoinGlass counted $1.65 billion in liquidations over 24 hours. Talos says Bitcoin order-book depth is thin and leverage is high. Why it matters: thin books can make moves sharper.
-3. **Institutions are pulling money.** Strategy and other treasury firms were removed from MSCI indexes, the dollar is stronger, and Bitcoin ETFs have had $1.9B of net outflows this month (Bloomingbit). Nvidia CEO Jensen Huang's resignation was also cited as a trigger. Why it matters: these are the stated drivers of the selloff.
-4. **The White House nominated four SEC and CFTC commissioners.** The SEC nominees have a Senate Banking hearing on Nov 19. Why it matters: both agencies are short-staffed while the market-structure bill is stalled.
-5. **Akedo (AKE) is the only big pump.** It is up 162.7% on our data with no clear news found. Why it matters: it is a speculative outlier in a falling market.
+1. **Crypto is in extreme fear.** The Fear & Greed Index fell to 10 from 13 on Saturday and 20 on Friday. Bitcoin touched $62,080.91 before climbing back above $65,000. (BigGo/Alternative.me) Why it matters: this is the weakest sentiment reading in this stretch.
+2. **Spot Bitcoin ETFs keep bleeding.** They had $2.35 billion in net outflows over two straight weeks. BlackRock's iShares Bitcoin Trust extended its outflow streak to 11 sessions. (Cointelegraph via BigGo) Why it matters: the institutional bid is missing.
+3. **Leveraged longs got hit.** Long liquidations were about $1.2 billion in the slide. (Crypto Briefing) Why it matters: forced selling can speed up drops.
+4. **A disputed $123M SOL deposit.** Lookonchain tied a $123M SOL deposit at Coinbase Prime to Forward Industries via Arkham labels. Forward says it made no such transfer. (Solana Compass) Why it matters: it is a possible large seller, and ownership is unconfirmed.
+5. **US crypto law is stalled.** The CLARITY Act remains stalled as Democrats prepare to control Congress. (crypto.news) Why it matters: the SEC and CFTC are setting rules on their own.
 
 #### Coins to research
 
+I found no news for most of these moves. Treat them as unexplained.
+
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Akedo (AKE) | +162.7% (live data) | I found no news for today. It is a gaming token on BNB Chain. Its 24h range ran from $0.002576 to $0.01369 (CoinGabbar). Outlets quote different gains (370%, 382%), so the figure is unconfirmed. | Pump with no news. 24h volume ($523M) is larger than market cap ($307M). It sat about 77% below its Sept 20 peak in October. It has monthly unlocks of about 2.1B tokens (CoinDelx). Earlier coverage flagged whale concentration (unconfirmed). |
-| Pearl (PEARL) | +12.1% | No reason found. | Down 12.5% over 7 days. Volume is small next to the pump. |
-| Pieverse (PIEVERSE) | +9.0% | No reason found. | Up 24.2% in 7 days. No news. |
-| Midnight (NIGHT) | +8.3% | No reason found. | Up 16% in 7 days with no news found. |
-| Injective (INJ) | +4.9% | No reason found. It is also trending. | Small move. Still down 4% in 7 days. |
-| Ozone Chain (OZO) | +3.7% | No reason found. | 24h volume is only $351.6K. It is up 65.1% in 7 days. Thin liquidity. |
+| Ultima (ULTIMA) | +37.0% | No news found. | Pump with no news. Volume is $6.3M against a $99.9M market cap. 7d is -2.2%. |
+| Kite (KITE) | +6.3% (7d +26.1%) | No news found for today. A Nov 3 unlock was about 46% of its market cap. (TokenPost) | Large recent unlock. Mid-size cap of $326.1M. |
+| Derive (DRV) | +8.4% | No news found. | 7d is -12.3%. Volume is small at $16.4M. |
+| Venice Token (VVV) | +10.1% | No news found. | 7d is -5.8%. No catalyst found. |
+| EVAA Protocol (EVAA) | +41.2% | No news found. It is trending on CoinGecko. | Rank 837, so tiny. Pump with no news. |
+| AudaCity (DACITYCOIN) | +261.9% | No news found. It is trending on CoinGecko. | Rank 961, very small. Likely a meme coin. Extreme move. Holder concentration not checked. |
+
+Also trending: Gato The Cat (GATO, +39.4%, rank 850) and Identity.md (IMD, +21.2%, rank 868). Same red flags: tiny caps and no news found.
 
 #### Whale watch
 
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 12 (about 8 hours before the report; exact time not given) | BTC | ~$73.78M (1,000 BTC) | A whale dormant four years (Lookonchain via PANews) | Onto an exchange (Binance) |
-| Nov 13, 1:22 AM ET (06:22 UTC) | ETH | ~$19.91M (10,380 ETH) | Wallet 0x4cee (Lookonchain) | Received. This is not confirmed as a purchase. |
-| Nov 13 (time not given) | ETH | ~$32.3M (16,700 ETH) | Wallet 0xBE4 (Lookonchain) | Sold |
-| Nov 13 (time not given) | BTC and ETH | Wallet 0x6046 lost exposure to about $25.2M of ETH and $38.77M of BTC | Wallet 0x6046 (Lookonchain) | Liquidated |
-
-The two Nov 13 wallet rows are from reports with no exact times.
+| About 6:41 PM, Nov 14 | SOL | ~$123M | Wallets Arkham links to Forward Industries. Forward denies it. Owner unconfirmed. (Lookonchain/Arkham via Solana Compass) | Onto an exchange (Coinbase Prime deposit address) |
+| Nov 12 (older than one day) | BTC | ~$73.78M (1,000 BTC) | A whale dormant for four years (PANews/Lookonchain) | Onto an exchange (Binance). Sale not confirmed. |
 
 #### Government and regulation
 
-- **SEC and CFTC nominees:** Nathan Anonick and Matthew Rowland were nominated to the CFTC. Kristin Johnson and Steven Levine were nominated to the SEC. The SEC has two of five seats filled. The CFTC has only Chair Selig. Confirmation is expected before Democrats take the Senate in January 2027. (The Block, Crypto Briefing)
-- **Clarity Act:** It stalled in the Senate on Sept 15 on a 49-50 procedural vote. Passage this Congress is seen as unlikely. (Startup Fortune)
-- **CFTC rules:** Regulation CTX and CAM, floated Oct 5, would give crypto exchanges a federal route that skips state licences. Selig says firms are opting in. (CNBC via Startup Fortune)
-- **House Democrats' draft:** They are reportedly drafting an SEC-led market-structure bill that would curb the CFTC's role and add Trump ethics rules. It is a draft only. (Crypto Briefing)
-- **France:** The Senate begins budget debate Nov 20 and takes up revenue articles from Nov 23, where crypto tax amendments could be revived. The Assembly had stripped them. (Wisdom of Wallets)
+- **CLARITY Act (market structure bill):** it would divide SEC and CFTC oversight of crypto. It needed 60 votes to proceed. It failed in September. Status: stalled. Democrats won both chambers in the Nov 3 midterms. (crypto.news, American Banker)
+- **Nominations:** Trump nominated Kristin Johnson and Steven Levine to the SEC, and Nathan Anonick and Matthew Rowland to the CFTC. They await Senate confirmation hearings. No hearing date found. (crypto.news)
+- **SEC:** "Regulation Crypto Assets" is a proposal with two exemptions that let some crypto firms raise capital without full securities registration. (American Banker)
+- **CFTC:** It is seeking public input on a federal framework for leveraged crypto trading. (American Banker)
+- **Possible deal areas:** Industry groups see narrower agreements possible on crypto taxation, stablecoin yields and illicit-finance safeguards. (crypto.news)
+- **Low-profile item:** crypto.news mentions a data-center permitting bill that bitcoin miners are weighing. I found no details.
+- **Other countries:** Nothing found.
 
 #### Who is buying and adopting
 
-- **Strategy:** It bought 1,036 BTC (Nov 2–8) at about $79,012 each and now holds 850,364 BTC. That is well above today's price. (TCB)
-- **Coinbase:** Armstrong said its treasury reached 18,000 BTC.
-- **PNC and Coinbase:** A pilot lets eligible corporate customers receive payments in USDC.
-- **Other:** NYSE selected Avalanche. I found no new country purchases.
+- **Strategy:** bought another 1,036 BTC from Nov 2 to 8, bringing holdings to 850,364 BTC. (BigGo)
+- **Sellers and stress:** MARA sold 13,597 BTC for about $1.1B, using $750M to repay loans. Nakamoto pushed a $60M USDT repayment from December 2026 to December 2027. Nakamoto also sold 184 BTC in Q3. (BigGo, CryptoNews)
+- **Governments:** Nothing new found. The US Strategic Bitcoin Reserve dates from a March 6, 2025 order, funded initially with forfeited bitcoin. (Bitcoin.com)
+- **Stablecoin payments by companies:** Nothing found.
 
 #### Next 7 days
 
+All times New York (EST). Token-unlock times were converted from Beijing time. Unlock figures are projections.
+
 | Date | Event | Coin or topic |
 |---|---|---|
-| Nov 14, 3:00 AM (time zone not stated) | Unlock of about $1.7M (Chainbase) | C |
-| Nov 15, 3:00 PM (time zone not stated) | Unlock of about $5.07M (Starknet) | STRK |
-| Nov 15 (Sunday) | Weekly close; the next test is $69,555 (Coinspeaker) | BTC |
-| Nov 19 | Senate Banking hearing for SEC nominees (hearing time not found) | SEC / regulation |
-| Nov 20 | French Senate budget debate begins | France crypto tax |
-| Nov 23 | French Senate takes up revenue articles | France crypto tax |
+| Nov 15 (today) | STRK, SEI, SIGN and CYBER unlocks (about $25M total, TokenPost). Connex also unlocks. | STRK, SEI, SIGN, CYBER, CONX |
+| Nov 16, 6:03 AM | ~1.17B CRO unlock, about 2.3% of circulating supply, worth ~$51.4M (PANews) | CRO |
+| Nov 16, 8:00 AM | 92.65M ARB unlock, ~$12.5M (Phemex) | ARB |
+| Nov 20, 6:00 AM | ~23.29M ZRO unlock, ~$34.7M (PANews) | LayerZero (ZRO) |
+| Nov 20, ~7:00 AM (unconfirmed time zone) | KAITO unlock of 17.6M tokens (~$3M). Bedrock (BR) also unlocks ~$2M that day. | KAITO, BR |
+| Nov 22, ~7:00 AM (unconfirmed time zone) | MBG unlock of ~23.6M tokens (~$2.4M) | MBG |
 
-The unlock times come from a source that doesn't state its time zone, so treat them as unconfirmed. I found no ETF deadlines.
+No hearings or ETF deadlines found.
 
-[Read the full brief with all the details](reports/crypto/2026-11-14-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-15-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 

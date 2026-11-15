@@ -1,12 +1,11 @@
 # 👔 CEO check
 
-*Checked 2026-11-13 20:41 New York time. Plain code, no AI.*
+*Checked 2026-11-15 17:28 New York time. Plain code, no AI.*
 
-**❌ 3 broken rule(s)**: 9 passed, 0 warnings, 3 broken rules.
+**❌ 2 broken rule(s)**: 9 passed, 0 warnings, 2 broken rules.
 
 ### Futures paper trader
 
-- ❌ gold 2026-11-12 20:00: entered 1370 minutes after the open (the window is 60).
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
 - ✅ Tradeify practice evaluation: $1,581 above the $2,000 trailing drawdown floor.
@@ -26,7 +25,7 @@
 
 ### Costs
 
-- ✅ Spent $8.17 so far this month on 78 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $8.99 so far this month on 84 AI runs; on pace for about $18 (budget $50).
 
 ### Agent health
 
@@ -35,7 +34,7 @@
 ### Ready to run on its own?
 
 - ✅ 20 of 15 trading days on the paper record
-- ⏳ 3 rule problem(s) in the paper trader above
+- ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
 - ⏳ profit factor 0.84 (needs 1.3 or more), total $-1,128 over 25 trades
