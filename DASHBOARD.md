@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-15 02:05 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 10:25 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-15 02:05 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 22 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 22 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 45 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 31 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 33 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 17 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 30 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 40 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 41 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -270,60 +270,58 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-14, event risk Low</b></summary>
+<summary><b>🌍 World news brief, 2026-11-15, event risk High</b></summary>
 
 #### Top things for today
-1. **US-China trade council met.** The two sides discussed tariff cuts and farm trade at their first trade council meeting on Friday, Nov 13. China's Commerce Ministry reported it Saturday. It said a leaders' meeting in Shenzhen is expected next week. The proposed $60 billion package of reciprocal tariff cuts has not been finalised. (Reuters via Press News Agency) Why it matters: tariffs, the dollar and risk appetite.
-2. **Trump extended a Jones Act waiver, reportedly.** Hawaii News Now says debate continues over the impact on savings (headline only). Why it matters: shipping costs and energy transport.
-3. **Rubio on Iran.** i24NEWS carried a live blog of Rubio warning that a nuclear-armed Iran could hold the US and the Middle East hostage (headline only). Why it matters: Middle East risk and energy.
-4. **CFTC sued Louisiana and Arkansas** over prediction-market jurisdiction (CFTC press releases). Why it matters: regulation of futures-style venues.
-5. **Senate leadership.** The New York Times reports Chris Van Hollen is set to challenge Chuck Schumer for Senate Majority Leader (headline only). Why it matters: the fiscal and legislative outlook.
+1. **Hormuz tanker incidents.** Iran's Revolutionary Guards (IRGC) say two more tankers hit mines in the southern Strait of Hormuz. ISNA says one carried over two million barrels of crude and sank. The claims have not been independently verified. Why it matters: energy prices and safe-haven demand (gold).
+2. **Iran strikes on Bahrain.** Bahrain says its air defences destroyed several Iranian aerial attacks. Iran says it targeted a radar at al-Riffa air base, in retaliation for a U.S. strike in Sirik last week. Why it matters: Gulf escalation and risk appetite.
+3. **Fed Chair Warsh speaks Monday at 12:00 PM.** Why it matters: rate expectations and the dollar.
+4. **Trump on the FAA ground stop.** Trump urged Congress to fund an air traffic control overhaul (Anadolu, headline only). Why it matters: possible spending debate.
+5. **Russia-Ukraine talks stalled.** The two sides traded air attacks (Radio Free Europe/Radio Liberty, headline only). Why it matters: energy and risk sentiment.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| – | No major events listed | Economic calendar | Yes |
+| All day | No major economic events | Calendar | Yes |
 
-No scheduled events found. Sunday Nov 15 also has no major events listed.
-
-Coming up this week: the calendar lists nothing. A Trump-Xi meeting in Shenzhen is expected next week (date and time unconfirmed).
+Coming up this week: Mon 8:30 AM Canada CPI m/m (forecast 0.3%, previous 0.1%), median CPI y/y (2.0%, 1.9%) and trimmed CPI y/y (1.9%, 1.8%). Mon 12:00 PM Fed Chair Warsh speaks. Tue 8:30 AM US retail sales (0.2%, previous 0.8%) and core retail sales (0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC minutes.
 
 #### Event risk today
-Low - Markets are closed and the calendar is empty, but the US-China trade talks and Iran rhetoric could produce weekend headlines.
+High - Markets are closed, but the Hormuz and Bahrain events are unresolved and could be reflected in prices when trading reopens.
 
 #### Politics and policy
-- The Washington Post reports that Canada's PM Carney reported progress in trade talks with Trump (headline only).
-- THV11 reports the White House Correspondents' Dinner shooting suspect is charged with terrorism. Law Commentary says the DOJ added a terrorism charge against a Trump assassination suspect (both headline only).
-- The Washington Post reports Brian Monahan is out as attending physician to Congress amid a Pentagon probe (headline only).
-- The Supreme Court is considering a case on religious schools and public funding (Every CRS Report, headline only).
-- Nothing found on the Fed, Treasury, executive orders or overnight Trump quotes.
+- Trump broke his silence on the nationwide ground stop and asked Congress for more money (KSL News, headline only). He also blamed Biden for an aviation "disaster" (TRT World, headline only).
+- Trump criticized a judge's two-week halt to his Washington golf project and said the administration will appeal (Your Valley, headline only).
+- A Trump team is preparing a "tough response" to Democratic investigations (NYT, via The New Voice of Ukraine, headline only).
+- Van Hollen said claims he can't win Senate majority leader are nonsense (The Hill, headline only).
 
 #### Economics
-Nothing found. No data was released overnight.
-
-Fortune reports a $300 million logistics hub in Vietnam (headline only).
+Nothing found on overnight data. No major releases are listed for the weekend.
 
 #### SEC, CFTC and hearings
-- SEC: no source detail beyond the title – the SEC proposed executive and director compensation disclosure reforms on Friday at 11:57 AM (SEC).
-- CFTC: it sued Louisiana on Friday at 4:00 PM after a state court blocked CFTC-regulated exchanges. It sued Arkansas on Friday at 10:46 AM over its jurisdiction over prediction markets (CFTC). Law360 says the Arkansas suit targets the state's Kalshi enforcement action (headline only). RG.org says the DOJ joined the Louisiana suit (headline only).
-- Startup Fortune says CFTC Chair Selig reports crypto firms are signing up for CFTC rules while Congress stalls (headline only).
-- No hearings found.
+- Senate Ag panel set a Nov. 17 hearing for CFTC nominees (RG.org, headline only; time not given, unconfirmed).
+- Trump named CFTC and SEC nominees for the first time in a year (Hoodline, headline only).
+- The CFTC sued Louisiana and Arkansas over prediction markets (CFTC releases, Fri Nov 13). Louisiana: a state court blocked CFTC-regulated exchanges.
+- The CFTC is weighing action against Kalshi over contract filing procedures (디지털투데이, headline only).
+- The SEC proposed executive and director compensation disclosure reforms (SEC, Fri).
+- CLARITY Act is unlikely to advance (Crypto News, headline only).
 
 #### War, trade and tariffs
-- US-China: see the top item. A Reuters analysis found Chinese purchases of US farm goods other than soybeans are on track for a seven-year low, despite a $17 billion annual purchase pledge. China has urged Washington to implement the tariff-reduction deal, calling it a prerequisite for more farm purchases. Why it matters: trade policy and the dollar.
-- Ukraine: UNITED24 Media reports daily Russian losses of 1,710 troops, 6 tanks and 33 artillery systems (headline only).
-- Iran: see Rubio above.
+- **Iran/Hormuz:** The U.S. has imposed a naval blockade on Iranian ports and helped tankers move through the strait, which normally carries about one-fifth of global oil. The IRGC says the strait is closed. UKMTO said traffic was about 65% below pre-war levels. Considerable doubts remain about Iran's mine claims. A British maritime monitor was aware of an Indian authority report of a tanker attack, but it was unclear if this was the same incident. Why it matters: oil supply, shipping costs, inflation.
+- **Russia-Ukraine:** Air attacks continued as US-mediated talks failed to break the deadlock (RFE/RL, headline only). Zelenskyy warned that Starshield restrictions threaten Ukraine's energy defenses (LEX 18, headline only).
+- **Israel:** The election race between Eisenkot and Netanyahu to build a government continues (Jerusalem Post, headline only).
+- **Trade:** ASEAN Digital Economy Framework Agreement signed in Manila (IndexBox, headline only).
 
 #### Country briefs
-- **China:** The trade council met by video, and a leaders' meeting is expected next week (Reuters via Press News Agency).
+- **China:** Nothing found.
 - **European Union:** Nothing found.
-- **United Kingdom:** Nothing found.
+- **United Kingdom:** UK CPI is due Wednesday at 2:00 AM (forecast 3.6%).
 - **Japan:** Nothing found.
-- **India:** Nothing found.
-- **Russia:** UNITED24 Media reports daily losses of 1,710 troops (headline only).
-- **Canada:** Carney reports progress in trade talks with Trump while expanding ties with Asia (The Washington Post, headline only).
+- **India:** Bloomberg ran a feature on India's $130 billion wedding economy (headline only).
+- **Russia:** Air attacks with Ukraine continue (RFE/RL, headline only).
+- **Canada:** CPI is due Monday at 8:30 AM (calendar figures above).
 
-[Read the full brief with all the details](reports/news/2026-11-14-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-15-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
