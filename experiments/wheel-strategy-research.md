@@ -141,3 +141,26 @@ What it shows:
 - Both gave back gains after the summer, because they were left holding shares of falling stocks.
 - Ryan's "147 wins, 0 losses" hides the losses: they sit in the assigned shares, not in closed trades.
 - Ryan's P/E filter couldn't be tested (no past P/E data).
+
+## Can $10K CAD make $500-2,000 CAD a month? (tested 2026-11-15)
+That goal means 60-240% a year. Run: `PYTHONPATH=agents:experiments python3 experiments/income_strategies.py`. All option prices are estimated.
+
+Average CAD per month, with the worst drop from a high in brackets:
+
+| Approach | Last 1 year | Last 3 years | Last 5 years |
+|---|---|---|---|
+| Wheel, current rules | $76 (13%) | $81 (16%) | - |
+| Wheel, 0.40 delta, 30 days | -$189 (29%) | $161 (12%) | - |
+| Weekly wheel | -$81 (22%) | $154 (19%) | - |
+| Put spreads SPY/QQQ/IWM, 45 days, 10% risk | $49 (6%) | $393 (36%) | - |
+| Weekly put spreads, 20% risk | -$341 (**87%**) | $2,394 (**95%**) | - |
+| Put spreads on volatile big stocks | -$554 (**76%**) | - | - |
+| **Iron condors SPY/QQQ, 30 days, 0.20 delta, 15% risk, 2x stop** | **$244 (16%)** | **$187 (26%)** | **$99 (30%)** |
+| Iron condors, same but 25% risk | $291 (31%) | $1,317 (45%) | $128 (**56%**) |
+| Put spreads 42 days, 15% risk, 45% max | $333 (29%) | $770 (56%) | $174 (**59%**) |
+
+What it shows:
+- **Hitting $500+ a month needed so much risk that the account could drop 45-95%.** Those approaches only "worked" in some years.
+- **Sustainable approaches made about $75-250 CAD a month**, with 15-35% drops along the way.
+- **Results swing a lot with small setting changes.** Iron condors at 0.16 delta lost money where 0.20 delta made money, so these are fragile. Paper trading should come before trusting any of them.
+- **Wealthsimple:** spreads and iron condors need multi-leg orders. One review says Wealthsimple doesn't support them, so check the app first.

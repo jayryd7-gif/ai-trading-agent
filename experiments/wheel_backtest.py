@@ -98,7 +98,8 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
             if p["shares"] and not p["opt"] and d < days[-1] - timedelta(days=3):
                 exp = friday_near(d, cfg["call_dte"])
                 T = (exp - d).days / 365
-                K = max(R.strike_for_delta(S, T, vol(t, d), "call"), math.ceil(p["basis"] * 2) / 2)
+                K = max(R.strike_for_delta(S, T, vol(t, d), "call", cfg.get("delta", R.TARGET_DELTA)),
+                        math.ceil(p["basis"] * 2) / 2)
                 credit = R.bs_price(S, K, T, vol(t, d), "call") - SLIP
                 if credit >= 0.05:
                     q = p["shares"] // 100
@@ -138,7 +139,7 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                     past = closes[t].loc[:d - timedelta(days=548)]
                     if past.empty or not S > float(past.iloc[-1]):
                         continue
-                K = R.strike_for_delta(S, T, v, "put")
+                K = R.strike_for_delta(S, T, v, "put", cfg.get("delta", R.TARGET_DELTA))
                 if K * 100 > eq * cfg["slot"]:
                     continue
                 credit = R.bs_price(S, K, T, v, "put") - SLIP
