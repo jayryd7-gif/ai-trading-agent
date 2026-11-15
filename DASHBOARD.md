@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-14 17:40 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 02:05 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-14 17:40 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 47 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 14 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 14 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 37 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 23 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 25 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 days ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 22 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 22 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 45 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 31 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 33 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -59,14 +59,13 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**❌ 3 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**❌ 2 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
 
 ##### Futures paper trader
 
-- ❌ gold 2026-11-12 20:00: entered 1370 minutes after the open (the window is 60).
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
 - ✅ Tradeify practice evaluation: $1,581 above the $2,000 trailing drawdown floor.
@@ -86,7 +85,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $8.17 so far this month on 78 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $8.64 so far this month on 82 AI runs; on pace for about $17 (budget $50).
 
 ##### Agent health
 
@@ -95,7 +94,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ##### Ready to run on its own?
 
 - ✅ 20 of 15 trading days on the paper record
-- ⏳ 3 rule problem(s) in the paper trader above
+- ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
 - ⏳ profit factor 0.84 (needs 1.3 or more), total $-1,128 over 25 trades
@@ -231,6 +230,10 @@ At this pace: about $18 a month.
 </details>
 
 [Paper trading journal](paper-trading/paper-journal.md) · [TradingView strategy](tradingview/breakout_strategy.pine)
+
+## 🎡 Options wheel (paper, $10K CAD)
+
+Starts trading on the first weekday run (2:37 PM New York).
 
 ## 📈 TradingView strategy results
 
