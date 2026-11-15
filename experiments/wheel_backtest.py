@@ -33,12 +33,14 @@ def friday_near(day, days_out):
 
 
 OURS = {"tp": R.TAKE_PROFIT, "put_dte": R.DTE_IDEAL, "call_dte": R.DTE_IDEAL, "time_exit": R.TIME_EXIT_DTE,
-        "min_yield30": 0.0, "uptrend": False, "slot": R.MAX_PER_STOCK, "max_pos": R.MAX_POSITIONS}
+        "min_yield30": 0.0, "uptrend": False, "slot": R.MAX_PER_STOCK, "max_pos": R.MAX_POSITIONS,
+        "multi": False, "reserve": 0.0}
 # Options With Ryan's wheel, as summarized from his CRDO wheel video (CandleChasers write-up):
 # puts ~0.30 delta 25-35 days, calls ~0.30 delta 15-25 days at/above cost, take profit ~80%,
 # at least ~2.5% premium per 30 days, ~1.5 years of uptrend, max ~10% of the account per company.
 RYAN = {"tp": 0.20, "put_dte": 30, "call_dte": 21, "time_exit": None,
-        "min_yield30": 0.025, "uptrend": True, "slot": 0.10, "max_pos": 8}
+        "min_yield30": 0.025, "uptrend": True, "slot": 0.10, "max_pos": 8,
+        "multi": True, "reserve": 0.20}
 
 
 def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
@@ -46,7 +48,7 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
     sma = closes.rolling(R.TREND_DAYS).mean()
     cash = start_usd
     pos = {}             # ticker -> {"shares", "basis", "opt"}
-    stats = {"wins": 0, "losses": 0, "assigned": 0, "called": 0, "trades": 0}
+    stats = {"wins": 0, "losses": 0, "assigned": 0, "called": 0, "trades": 0, "history": [], "premium": 0.0}
     peak, maxdd, eq = start_usd, 0.0, start_usd
 
     def vol(t, d):
@@ -66,13 +68,14 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
             if o:
                 dte = (o["exp"] - d).days
                 itm = S < o["K"] if o["kind"] == "put" else S > o["K"]
+                q = o.get("q", 1)
                 if d >= o["exp"]:
                     if itm and o["kind"] == "put":
-                        p["shares"], p["basis"] = 100, o["K"] - o["credit"]
-                        cash -= o["K"] * 100
+                        p["shares"], p["basis"] = 100 * q, o["K"] - o["credit"]
+                        cash -= o["K"] * 100 * q
                         stats["assigned"] += 1
                     elif itm and o["kind"] == "call":
-                        cash += o["K"] * 100
+                        cash += o["K"] * 100 * q
                         stats["called"] += 1
                         stats["wins" if o["K"] >= p["basis"] else "losses"] += 1
                         p["shares"] = 0
@@ -84,7 +87,8 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                     late = cfg["time_exit"] is not None and dte <= cfg["time_exit"] and not itm
                     if price <= o["credit"] * cfg["tp"] or late:
                         cost = (price + SLIP) * 100 + R.FEE
-                        cash -= cost
+                        cash -= cost * q
+                        stats["premium"] -= cost * q
                         stats["wins" if o["credit"] * 100 >= cost else "losses"] += 1
                         p["opt"] = None
             if p["shares"] == 0 and not p["opt"]:
@@ -97,21 +101,25 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                 K = max(R.strike_for_delta(S, T, vol(t, d), "call"), math.ceil(p["basis"] * 2) / 2)
                 credit = R.bs_price(S, K, T, vol(t, d), "call") - SLIP
                 if credit >= 0.05:
-                    cash += credit * 100 - R.FEE
+                    q = p["shares"] // 100
+                    cash += (credit * 100 - R.FEE) * q
+                    stats["premium"] += (credit * 100 - R.FEE) * q
                     p["basis"] -= credit
-                    p["opt"] = {"kind": "call", "K": K, "exp": exp, "credit": credit}
+                    p["opt"] = {"kind": "call", "K": K, "exp": exp, "credit": credit, "q": q}
                     stats["trades"] += 1
 
         # account value today
         eq = cash + sum(p["shares"] * float(closes[t].loc[d]) for t, p in pos.items())
-        eq -= sum(opt_value(t, d, p["opt"]) * 100 for t, p in pos.items() if p["opt"])
+        eq -= sum(opt_value(t, d, p["opt"]) * 100 * p["opt"].get("q", 1) for t, p in pos.items() if p["opt"])
+        stats["history"].append((d, eq))
         peak = max(peak, eq)
         maxdd = max(maxdd, (peak - eq) / peak)
 
         # 2) fill empty slots with new puts
         if len(pos) < cfg["max_pos"] and d < days[-1] - timedelta(days=3):
-            secured = sum(p["opt"]["K"] * 100 for p in pos.values() if p["opt"] and p["opt"]["kind"] == "put")
-            free = cash - secured
+            secured = sum(p["opt"]["K"] * 100 * p["opt"].get("q", 1) for p in pos.values()
+                          if p["opt"] and p["opt"]["kind"] == "put")
+            free = cash - secured - cfg.get("reserve", 0.0) * eq
             exp = friday_near(d, cfg["put_dte"])
             T = (exp - d).days / 365
             ideas = []
@@ -138,12 +146,16 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                     continue
                 ideas.append((credit / K, t, K, credit))
             for _, t, K, credit in sorted(ideas, reverse=True):
-                if len(pos) >= cfg["max_pos"] or K * 100 > free:
+                q = max(1, int(eq * cfg["slot"] // (K * 100))) if cfg.get("multi") else 1
+                while q > 1 and K * 100 * q > free:
+                    q -= 1
+                if len(pos) >= cfg["max_pos"] or K * 100 * q > free:
                     continue
-                cash += credit * 100 - R.FEE
-                free -= K * 100
+                cash += (credit * 100 - R.FEE) * q
+                stats["premium"] += (credit * 100 - R.FEE) * q
+                free -= K * 100 * q
                 pos[t] = {"shares": 0, "basis": 0.0,
-                          "opt": {"kind": "put", "K": K, "exp": exp, "credit": credit}}
+                          "opt": {"kind": "put", "K": K, "exp": exp, "credit": credit, "q": q}}
                 stats["trades"] += 1
     return eq, maxdd, stats, pos
 

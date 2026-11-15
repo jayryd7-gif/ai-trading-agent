@@ -116,3 +116,28 @@ At the user's request, a second paper account runs next to ours so the two can b
 - **Earnings:** his earnings rule isn't stated, so this account does not skip earnings.
 - **Files and alerts:** results in `paper-trading/wheel-ryan/`. Its phone alerts are low priority.
 - **First test run (Nov 14):** it sold 2 HOOD $72 puts and 1 NVDA $150 put. BE and PLTR were skipped for P/E above 100, and AMD was too big for a 10% slot.
+
+## 1-year backtest on volatile, heavily traded stocks (2025-11-13 to 2026-11-13)
+Run: `PYTHONPATH=agents:experiments python3 experiments/wheel_year_backtest.py`. Option prices are estimates. Stocks were picked using only data from before the year started: the 10 most-traded with annual volatility of 50%+ (cheap) or 45%+ (big). Leveraged ETFs were left out.
+
+| | Ours ($10K CAD) | Ryan-style ($200K USD) |
+|---|---|---|
+| Stocks | OPEN, MARA, SOUN, BBAI, SNAP, CIFR, RIVN, JOBY, QS, RIOT | PLTR, HOOD, INTC, BABA, RGTI, OKLO, SOFI, IONQ, MRVL, HIMS |
+| Year result | **+9.9% (+$989 CAD)** | **+4.1% (+$8,253 USD)** |
+| Best point in the year | +24.7% (Jun 1) | +18.6% (Sep 24) |
+| Worst drop from a high | 13.5% | 15.7% |
+| Premium collected | $3,736 CAD | $93,973 USD |
+| Options closed at a profit / loss | 82 / 9 | 147 / 0 |
+| Times assigned shares | 4 | 15 |
+| Up months | 9 of 13 | 7 of 13 |
+| Best / worst month | +6.5% / -5.0% | +9.7% / -7.8% |
+| Holding at the end | shares of OPEN, BBAI, JOBY, QS | shares of 7 stocks, 1 put |
+| Just holding the same 10 stocks | **-50.3%** | **-19.9%** |
+| Just holding SPY | +13.5% | +13.5% |
+
+What it shows:
+- Both wheels beat holding the same volatile stocks by a lot.
+- Neither beat simply holding SPY.
+- Both gave back gains after the summer, because they were left holding shares of falling stocks.
+- Ryan's "147 wins, 0 losses" hides the losses: they sit in the assigned shares, not in closed trades.
+- Ryan's P/E filter couldn't be tested (no past P/E data).
