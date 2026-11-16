@@ -512,12 +512,11 @@ def build_dashboard(now):
     out += ["## Paper trading", ""]
     if glance:
         out += [glance, ""]
-        if os.path.exists(os.path.join("reports", "charts", "nasdaq-scripts.svg")):
-            out += ["![Nasdaq scripts: MAMBA, Opening Range, Session Breakout](reports/charts/nasdaq-scripts.svg)", "",
-                    "*Nasdaq: your three TradingView scripts, from their List of trades exports. To refresh: export each "
-                    "script's List of trades, then double-click `tradingview/update-exports.command`.*", ""]
-        if os.path.exists(os.path.join("reports", "charts", "futures-trades.svg")):
-            out += ["![Gold paper trades](reports/charts/futures-trades.svg)", ""]
+        for chart, label in (("nasdaq-scripts.svg", "Nasdaq"), ("gold-scripts.svg", "Gold")):
+            if os.path.exists(os.path.join("reports", "charts", chart)):
+                out += [f"![{label}: MAMBA, Opening Range, Session Breakout](reports/charts/{chart})", ""]
+        out += ["*Your three TradingView scripts on Nasdaq and gold, read from TradingView's Strategy Tester "
+                "(saved in `tradingview/script-trades/`). Ask Claude to refresh them.*", ""]
         out += details("Challenge simulation, results by market, and daily results", rest)
         out += ["[Paper trading journal](paper-trading/paper-journal.md) · "
                 "[TradingView strategy](tradingview/breakout_strategy.pine)", ""]

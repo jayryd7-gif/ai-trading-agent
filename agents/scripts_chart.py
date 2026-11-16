@@ -1,25 +1,24 @@
 """
-nasdaq_scripts_chart.py - Overview chart of your three Nasdaq TradingView scripts, from their
-"List of trades" exports in tradingview/exports/:
+scripts_chart.py - Overview charts of your three TradingView scripts on Nasdaq and on gold:
 
-  MAMBA NQ - Breakout Scalp (50K tracking)          (with the retest entry)
+  MAMBA NQ - Breakout Scalp (50K tracking)   (with the retest entry)
   OPENING RANGE - Session Breakout (tracking)
-  Session Breakout - Tradeify 50K Auto
+  Session Breakout - Tradeify 50K
 
-Running profit per script with the best / worst trades marked, a card per script (best and
+The trades come straight from TradingView's Strategy Tester (read by Claude from your chart
+layout, saved in tradingview/script-trades/<date>.json, newest file wins). For each market:
+running profit per script with the best / worst trades marked, a card per script (best and
 worst trades: % of the 50K account, contracts, how far it went against you, minutes in the
 trade) and a card with the best entry times across all three.
 
-    python3 agents/nasdaq_scripts_chart.py
+    python3 agents/scripts_chart.py
 
-Export each script in TradingView: Strategy Tester > List of trades > download (CSV), then
-double-click tradingview/update-exports.command. Writes reports/charts/nasdaq-scripts.svg.
+Writes reports/charts/nasdaq-scripts.svg and reports/charts/gold-scripts.svg.
 """
 
-import csv
 import glob
+import json
 import os
-import re
 import sys
 from collections import defaultdict
 from datetime import date, datetime
@@ -27,14 +26,13 @@ from datetime import date, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import overview_chart as C  # noqa: E402
 
-EXPORTS = os.path.join("tradingview", "exports")
-OUT = os.path.join("reports", "charts", "nasdaq-scripts.svg")
+DATA = os.path.join("tradingview", "script-trades")
 ACCOUNT = 50_000
-BAR_MINUTES = 5
-SCRIPTS = [  # (how to recognise the export file name, card name, short line label, colour)
-    (lambda n: "MAMBA" in n.upper(), "MAMBA NQ (retest)", "MAMBA", C.BLUE),
-    (lambda n: "OPENING_RANGE" in n.upper() or "OPENING RANGE" in n.upper(), "Opening Range", "Opening Range", C.ORANGE),
-    (lambda n: "SESSION_BREAKOUT" in n.upper() and "TRADEIFY" in n.upper(), "Session Breakout 50K", "Session BO", C.AQUA),
+MARKETS = [("MNQ", "Nasdaq", "nasdaq-scripts.svg"), ("MGC", "Gold", "gold-scripts.svg")]
+SCRIPTS = [  # (TradingView name, card name, short line label, colour)
+    ("MAMBA NQ - Breakout Scalp (50K tracking)", "MAMBA (retest)", "MAMBA", C.BLUE),
+    ("OPENING RANGE - Session Breakout (tracking)", "Opening Range", "Opening Range", C.ORANGE),
+    ("Session Breakout - Tradeify 50K", "Session Breakout 50K", "Session BO", C.AQUA),
 ]
 
 
@@ -43,53 +41,20 @@ def money(v):
     return f"{'+' if v >= 0 else '−'}${abs(v):,}"
 
 
-def newest(match):
-    files = [p for p in glob.glob(os.path.join(EXPORTS, "*MNQ1!*.csv")) if match(os.path.basename(p))]
-    if not files:
-        return None
-
-    def key(p):
-        d = re.search(r"(\d{4}-\d{2}-\d{2})", os.path.basename(p))
-        return (d.group(1) if d else "", os.path.getmtime(p))
-    return max(files, key=key)
+def load():
+    files = sorted(glob.glob(os.path.join(DATA, "*.json")))
+    return json.load(open(files[-1])) if files else None
 
 
-def trades(path):
-    """One position per trade number: entry, exit, contracts, net, how far it went against, bars."""
-    by = defaultdict(dict)
-    with open(path, encoding="utf-8-sig", newline="") as f:
-        for r in csv.DictReader(f):
-            t = by[r["Trade number"]]
-            if r["Type"].startswith("Entry"):
-                t["entry"] = r["Date and time"]
-                t["side"] = r["Type"].split()[1]
-                t["contracts"] = int(float(r["Size (qty)"] or 0))
-                t["net"] = float(r["Net PnL USD"] or 0)
-                t["against"] = abs(float(r.get("Adverse excursion USD") or 0))
-                t["bars"] = int(float(r.get("Duration (bars)") or 0))
-            else:
-                t["exit"] = r["Date and time"]
-    out = [t for t in by.values() if "entry" in t]
-    # TradingView lists each target as its own "trade": merge rows with the same entry time and side
-    merged = {}
-    for t in out:
-        k = (t["entry"], t["side"])
-        m = merged.setdefault(k, dict(t, contracts=0, net=0.0, against=0.0, bars=0))
-        m["contracts"] += t["contracts"]
-        m["net"] += t["net"]
-        m["against"] = max(m["against"], t["against"])
-        m["bars"] = max(m["bars"], t["bars"])
-        m["exit"] = max(m.get("exit", ""), t.get("exit", ""))
-    rows = sorted(merged.values(), key=lambda t: t["entry"])
-    for t in rows:
-        t["day"] = t["entry"][:10]
-        t["pct"] = t["net"] / ACCOUNT * 100
-        t["min"] = t["bars"] * BAR_MINUTES if t["bars"] else None
-        try:
-            mins = (datetime.fromisoformat(t["exit"]) - datetime.fromisoformat(t["entry"])).total_seconds() / 60
-            t["min"] = int(mins) if mins >= 0 else t["min"]
-        except (KeyError, ValueError):
-            pass
+def trades(raw):
+    """[entry 'YYYY-MM-DD HH:MM', exit 'HH:MM', 'l'/'s', contracts, net, against] -> dicts."""
+    rows = []
+    for e, x, side, ct, net, against in raw:
+        a = datetime.strptime(e[11:16], "%H:%M")
+        b = datetime.strptime(x, "%H:%M")
+        m = int((b - a).total_seconds() / 60)
+        rows.append({"entry": e, "day": e[:10], "side": "long" if side == "l" else "short", "contracts": ct,
+                     "net": net, "pct": net / ACCOUNT * 100, "against": against, "min": m + 1440 if m < 0 else m})
     return rows
 
 
@@ -99,11 +64,11 @@ def length_text(m):
     return f"{m} min" if m < 90 else f"{m / 60:.1f} h"
 
 
-def build():
+def build(market_data):
     accounts, everything, period = [], [], []
-    for match, name, short, color in SCRIPTS:
-        path = newest(match)
-        ts = trades(path) if path else []
+    for tv_name, name, short, color in SCRIPTS:
+        ts = trades(market_data[tv_name]["trades"]) if market_data and tv_name in market_data else []
+        tv_dd = market_data[tv_name].get("dd") if market_data and tv_name in market_data else None
         everything += [(short, t) for t in ts]
         series, run = [], 0.0
         for t in ts:
@@ -134,6 +99,7 @@ def build():
             run2 += t["net"]
             peak = max(peak, run2)
             dd = max(dd, peak - run2)
+        dd = tv_dd or dd                  # TradingView's own max drawdown (counts moves inside open trades)
         accounts.append({
             "name": name, "short": short, "color": color, "two_line": True,
             "sub": (f"{len(ts)} trades · {ts[0]['day'][5:]} to {ts[-1]['day'][5:]}" if ts else "no export yet"),
@@ -168,7 +134,7 @@ def build():
     top = max(everything, key=lambda st: st[1]["pct"]) if everything else None
     accounts.append({
         "name": "Best times & trade length", "short": "", "color": C.NEUTRAL, "series": [], "markers": [],
-        "sub": "all three scripts · entry time (chart time)",
+        "sub": "all three scripts · entry time in New York",
         "headline": f"{top[1]['pct']:+.1f}%" if top else "—",
         "headline_sub": f"best trade ({top[0]}, {top[1]['day'][5:]})" if top else "",
         "chips": [c for c in (f"winners avg {length_text(round(sum(win_m) / len(win_m)))}" if win_m else "",
@@ -181,16 +147,19 @@ def build():
 
 
 def main():
-    accounts, period = build()
-    sub = (f"Running profit per script · {period[0]} to {period[-1]} · from TradingView's List of trades · "
-           f"% = share of the 50K account" if period else "Export each script's List of trades from TradingView")
-    svg = C.draw("Nasdaq scripts: MAMBA vs Opening Range vs Session Breakout", sub, accounts, unit="$",
-                 footnote="went against = the furthest the trade moved against you before it closed · "
-                          "TradingView backtest/forward results, not real money.",
-                 empty="Waiting for the TradingView exports (List of trades) of the three scripts")
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    open(OUT, "w").write(svg)
-    print(f"wrote {OUT}: " + ", ".join(f"{a['name']} {a['headline']}" for a in accounts[:3]))
+    data = load()
+    for key, label, out in MARKETS:
+        accounts, period = build(data.get(key) if data else None)
+        sub = (f"Running profit per script · {period[0]} to {period[-1]} · from TradingView's Strategy Tester · "
+               f"% = share of the 50K account" if period else "No TradingView trades saved yet")
+        svg = C.draw(f"{label} scripts: MAMBA vs Opening Range vs Session Breakout", sub, accounts, unit="$",
+                     footnote="went against = the furthest the trade moved against you before it closed · "
+                              "TradingView backtest results, not real money.",
+                     empty="No trades saved yet")
+        path = os.path.join("reports", "charts", out)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        open(path, "w").write(svg)
+        print(f"wrote {path}: " + ", ".join(f"{a['name']} {a['headline']}" for a in accounts[:3]))
 
 
 if __name__ == "__main__":

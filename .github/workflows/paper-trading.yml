@@ -50,7 +50,6 @@ jobs:
             echo "No new sessions recorded"
             exit 0
           fi
-          python agents/futures_chart.py
           python agents/dashboard.py
           git config user.name "paper-trader"
           git config user.email "paper-trader@users.noreply.github.com"
