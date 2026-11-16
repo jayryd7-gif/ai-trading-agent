@@ -434,3 +434,61 @@ var table tag = table.new(position.top_left, 1, 2, bgcolor = color.new(color.pur
 if barstate.islast
     table.cell(tag, 0, 0, "OPENING RANGE (tracking only)", text_color = color.white, text_size = size.normal)
     table.cell(tag, 0, 1, "Not your real account. Trades are marked OR.", text_color = color.white, text_size = size.small)
+
+
+// ---- Stats panel (grey box): this script's own results since "statsFrom".
+// Partial exits of one trade count as one trade. ----
+statsFrom  = input.time(timestamp("2026-11-02T00:00:00-05:00"), "Stats panel: count trades from (New York time)")
+showStats  = input.bool(true, "Show the stats panel")
+statsWhere = input.string("Bottom right", "Stats panel position", options = ["Top right", "Middle right", "Bottom right", "Bottom left"])
+var table stats = table.new(statsWhere == "Top right" ? position.top_right : statsWhere == "Middle right" ? position.middle_right : statsWhere == "Bottom right" ? position.bottom_right : position.bottom_left, 2, 8, bgcolor = color.new(color.black, 15), border_width = 1)
+statMoney(float v) => (v < 0 ? "-$" : "$") + str.tostring(math.abs(v), "#,###")
+statRow(int i, string k, string v, color c) =>
+    table.cell(stats, 0, i, k, text_color = color.silver, text_size = size.small, text_halign = text.align_left)
+    table.cell(stats, 1, i, v, text_color = c, text_size = size.small, text_halign = text.align_right)
+if showStats and barstate.islast
+    float net   = 0.0
+    float gw    = 0.0
+    float gl    = 0.0
+    float best  = na
+    float worst = na
+    float today = 0.0
+    float grp   = 0.0
+    int   n     = 0
+    int   won   = 0
+    int   last  = -1
+    dayStart = timestamp("America/New_York", year(timenow, "America/New_York"), month(timenow, "America/New_York"), dayofmonth(timenow, "America/New_York"), 0, 0)
+    if strategy.closedtrades > 0
+        for i = 0 to strategy.closedtrades - 1
+            et = strategy.closedtrades.entry_time(i)
+            if et >= statsFrom
+                if et != last and last != -1
+                    n     += 1
+                    won   += grp > 0 ? 1 : 0
+                    gw    += grp > 0 ? grp : 0
+                    gl    += grp < 0 ? -grp : 0
+                    best  := na(best) ? grp : math.max(best, grp)
+                    worst := na(worst) ? grp : math.min(worst, grp)
+                    grp   := 0.0
+                last := et
+                p = strategy.closedtrades.profit(i)
+                grp += p
+                net += p
+                if strategy.closedtrades.exit_time(i) >= dayStart
+                    today += p
+    if last != -1
+        n     += 1
+        won   += grp > 0 ? 1 : 0
+        gw    += grp > 0 ? grp : 0
+        gl    += grp < 0 ? -grp : 0
+        best  := na(best) ? grp : math.max(best, grp)
+        worst := na(worst) ? grp : math.min(worst, grp)
+    sinceTxt = str.format_time(statsFrom, "MMM d", "America/New_York")
+    statRow(0, "OPENING RANGE (tracking)", "since " + sinceTxt, color.yellow)
+    statRow(1, "Net profit / loss", statMoney(net), net < 0 ? color.red : color.lime)
+    statRow(2, "Balance", statMoney(50000 + net), color.white)
+    statRow(3, "Trades / won", str.tostring(n) + " / " + str.tostring(won) + (n > 0 ? " (" + str.tostring(won * 100.0 / n, "#") + "%)" : ""), color.white)
+    statRow(4, "Profit factor", gl > 0 ? str.tostring(gw / gl, "#.##") : n > 0 ? "no losses" : "-", color.white)
+    statRow(5, "Best / worst trade", n > 0 ? statMoney(best) + " / " + statMoney(worst) : "-", color.white)
+    statRow(6, "Today (closed)", statMoney(today), today < 0 ? color.red : color.white)
+    statRow(7, "Open trade", strategy.position_size != 0 ? statMoney(strategy.openprofit) : "none", strategy.openprofit < 0 ? color.red : color.white)
