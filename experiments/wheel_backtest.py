@@ -48,7 +48,9 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
     sma = closes.rolling(R.TREND_DAYS).mean()
     cash = start_usd
     pos = {}             # ticker -> {"shares", "basis", "opt"}
-    stats = {"wins": 0, "losses": 0, "assigned": 0, "called": 0, "trades": 0, "history": [], "premium": 0.0}
+    stats = {"wins": 0, "losses": 0, "assigned": 0, "called": 0, "trades": 0, "history": [], "premium": 0.0,
+             "tvals": []}
+    tcash = {}           # cash in/out per stock, so each day's P/L can be split by stock
     peak, maxdd, eq = start_usd, 0.0, start_usd
 
     def vol(t, d):
@@ -73,9 +75,11 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                     if itm and o["kind"] == "put":
                         p["shares"], p["basis"] = 100 * q, o["K"] - o["credit"]
                         cash -= o["K"] * 100 * q
+                        tcash[t] = tcash.get(t, 0) - o["K"] * 100 * q
                         stats["assigned"] += 1
                     elif itm and o["kind"] == "call":
                         cash += o["K"] * 100 * q
+                        tcash[t] = tcash.get(t, 0) + o["K"] * 100 * q
                         stats["called"] += 1
                         stats["wins" if o["K"] >= p["basis"] else "losses"] += 1
                         p["shares"] = 0
@@ -88,6 +92,7 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                     if price <= o["credit"] * cfg["tp"] or late:
                         cost = (price + SLIP) * 100 + R.FEE
                         cash -= cost * q
+                        tcash[t] = tcash.get(t, 0) - cost * q
                         stats["premium"] -= cost * q
                         stats["wins" if o["credit"] * 100 >= cost else "losses"] += 1
                         p["opt"] = None
@@ -104,6 +109,7 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                 if credit >= 0.05:
                     q = p["shares"] // 100
                     cash += (credit * 100 - R.FEE) * q
+                    tcash[t] = tcash.get(t, 0) + (credit * 100 - R.FEE) * q
                     stats["premium"] += (credit * 100 - R.FEE) * q
                     p["basis"] -= credit
                     p["opt"] = {"kind": "call", "K": K, "exp": exp, "credit": credit, "q": q}
@@ -113,6 +119,12 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
         eq = cash + sum(p["shares"] * float(closes[t].loc[d]) for t, p in pos.items())
         eq -= sum(opt_value(t, d, p["opt"]) * 100 * p["opt"].get("q", 1) for t, p in pos.items() if p["opt"])
         stats["history"].append((d, eq))
+        tv = dict(tcash)
+        for t, p in pos.items():
+            tv[t] = tv.get(t, 0) + p["shares"] * float(closes[t].loc[d])
+            if p["opt"]:
+                tv[t] -= opt_value(t, d, p["opt"]) * 100 * p["opt"].get("q", 1)
+        stats["tvals"].append(tv)
         peak = max(peak, eq)
         maxdd = max(maxdd, (peak - eq) / peak)
 
@@ -153,6 +165,7 @@ def simulate(closes, start_usd, days, trend, ivcap, cfg=OURS):
                 if len(pos) >= cfg["max_pos"] or K * 100 * q > free:
                     continue
                 cash += (credit * 100 - R.FEE) * q
+                tcash[t] = tcash.get(t, 0) + (credit * 100 - R.FEE) * q
                 stats["premium"] += (credit * 100 - R.FEE) * q
                 free -= K * 100 * q
                 pos[t] = {"shares": 0, "basis": 0.0,

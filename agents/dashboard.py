@@ -374,6 +374,10 @@ def wheel_section():
            "**Ryan-style** copy (Options With Ryan's rules, pretend $200K USD on his stocks). "
            "Compare them by **%**, since the sizes differ. "
            "[Rules and research](experiments/wheel-strategy-research.md)", ""]
+    if os.path.exists(os.path.join("reports", "charts", "options-accounts-year.svg")):
+        out += ["![All three options accounts over the past year](reports/charts/options-accounts-year.svg)", "",
+                "*Past-year backtest of all three accounts (wheel, Ryan-style, iron condors) with their best and "
+                "worst days. Rebuild it with `PYTHONPATH=agents:experiments python3 experiments/options_accounts_chart.py`.*", ""]
     rows = [("Ours ($10K CAD)", "paper-trading/wheel"), ("Ryan-style ($200K USD)", "paper-trading/wheel-ryan")]
     stats = [(name, _wheel_pct(folder)) for name, folder in rows]
     if any(st for _, st in stats):

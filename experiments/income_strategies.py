@@ -36,6 +36,7 @@ def spreads(closes, start_usd, days, under, dte, delta, width_pct, tp, time_exit
     rets = closes.pct_change()
     cash, open_ = start_usd, {}
     hist, wins, losses = [], 0, 0
+    tcash, tvals = {}, []
 
     def vol(t, d):
         return max(float(rets[t].loc[:d].tail(20).std() * math.sqrt(252) * IV_MULT), 0.12)
@@ -64,12 +65,17 @@ def spreads(closes, start_usd, days, under, dte, delta, width_pct, tp, time_exit
                 legs = 2 * len(o["pairs"])
                 cost = (val + (SLIP * legs if d < o["exp"] else 0)) * 100 * o["n"] + (FEE * legs * o["n"] if d < o["exp"] else 0)
                 cash -= cost
+                tcash[t] = tcash.get(t, 0) - cost
                 pnl = o["credit"] * 100 * o["n"] - cost
                 wins += pnl >= 0
                 losses += pnl < 0
                 del open_[t]
         eq = cash - sum(value(t, d, o) * 100 * o["n"] for t, o in open_.items())
         hist.append((d, eq))
+        tv = dict(tcash)
+        for t, o in open_.items():
+            tv[t] = tv.get(t, 0) - value(t, d, o) * 100 * o["n"]
+        tvals.append(tv)
         risk_now = sum(o["risk"] for o in open_.values())
         if d > days[-1] - timedelta(days=3):
             continue
@@ -95,8 +101,10 @@ def spreads(closes, start_usd, days, under, dte, delta, width_pct, tp, time_exit
             if n < 1:
                 continue
             cash += credit * 100 * n - FEE * 2 * len(pairs) * n
+            tcash[t] = tcash.get(t, 0) + credit * 100 * n - FEE * 2 * len(pairs) * n
             open_[t] = {"exp": exp, "pairs": pairs, "credit": credit, "n": n, "risk": risk1 * n}
             risk_now += risk1 * n
+    spreads.tvals = tvals            # per-underlying values each day (for charts)
     return hist, wins, losses
 
 
