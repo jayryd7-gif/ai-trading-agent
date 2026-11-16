@@ -4,6 +4,31 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ✅ 2026-11-16 | Nasdaq (MNQ) | Short | $237
+- **Session start (New York):** 2026-11-16 09:30
+- **Why:** two 5-minute candles closed beyond the key low (27554.0)
+- **Entry:** Sold short **3 contracts** at **27437.0** at **10:00** (sell plan 1/1/1)
+- **Stop:** 27644.75
+- **Small size:** less than $1,500 was left before the $4,000 max drawdown, so it traded 1 contract per target.
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 10:05 | Target 1 | 1 | 27407.0 | $60 |
+| 10:05 | Target 2 | 1 | 27377.0 | $120 |
+| 10:10 | Stop | 1 | 27407.0 | $60 |
+
+- **Exit:** last contract out at **10:10**, average 27397.0
+- **Result:** $240 before fees, **$237 after fees**
+- **What could have gone better:**
+  - The last contracts were stopped at Target 1, then price reached Target 3 by 13:35. A looser stop after Target 2 would have caught it.
+  - Biggest move against you while in the trade: 32.25 points ($194 on paper). Best move for you: 62.00 points.
+
+![Chart of this trade](charts/2026-11-16-nasdaq.svg)
+
+[Open Nasdaq (MNQ) on TradingView](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ✅ 2026-11-16 | Gold (MGC) | Short | $655
 - **Session start (New York):** 2026-11-15 20:00
 - **Why:** two 5-minute candles closed beyond the key low (3880.5)
@@ -635,8 +660,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$472** over 26 trades
-- **Winners:** 12 (46%), **losers:** 14
-- **Before fees:** -$352, fees paid: $120
-- **Nasdaq (MNQ):** -$3,014 over 11 trades
+- **Total profit / loss after fees:** **-$236** over 27 trades
+- **Winners:** 13 (48%), **losers:** 14
+- **Before fees:** -$112, fees paid: $123
+- **Nasdaq (MNQ):** -$2,776 over 12 trades
 - **Gold (MGC):** $2,541 over 15 trades
