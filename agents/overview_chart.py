@@ -116,6 +116,7 @@ def draw(title, subtitle, accounts, unit="%", footnote="", empty="Starts with th
             parts.append(f'<text x="{right + 10}" y="{yy:.1f}" font-size="12" font-weight="700" fill="{INK}">'
                          f'{escape(a.get("short", a["name"]))}</text>')
             parts.append(f'<text x="{right + 10}" y="{yy + 14:.1f}" font-size="12" fill="{INK2}">{_fmt(v, unit)}</text>')
+            boxes.append((right + 4, yy - 13, right + 130, yy + 18))     # keep marker labels off the end labels
 
     def free_spot(cx, ty, txt):
         w = 6.2 * len(txt)
