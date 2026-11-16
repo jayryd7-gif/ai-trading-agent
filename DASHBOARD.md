@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-16 09:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-16 13:00 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-16 09:51 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 15 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 23 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 4 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 6 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 3 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 18 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 26 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 8 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 9 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 6 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -307,58 +307,66 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-15, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-16, event risk High</b></summary>
 
 #### Top things for today
-1. **Hormuz tanker incidents.** Iran's Revolutionary Guards (IRGC) say two more tankers hit mines in the southern Strait of Hormuz. ISNA says one carried over two million barrels of crude and sank. The claims have not been independently verified. Why it matters: energy prices and safe-haven demand (gold).
-2. **Iran strikes on Bahrain.** Bahrain says its air defences destroyed several Iranian aerial attacks. Iran says it targeted a radar at al-Riffa air base, in retaliation for a U.S. strike in Sirik last week. Why it matters: Gulf escalation and risk appetite.
-3. **Fed Chair Warsh speaks Monday at 12:00 PM.** Why it matters: rate expectations and the dollar.
-4. **Trump on the FAA ground stop.** Trump urged Congress to fund an air traffic control overhaul (Anadolu, headline only). Why it matters: possible spending debate.
-5. **Russia-Ukraine talks stalled.** The two sides traded air attacks (Radio Free Europe/Radio Liberty, headline only). Why it matters: energy and risk sentiment.
+1. **Trump's Asia trip and the Xi/Putin meetings.** Trump's trip has stops in the Philippines and China, where he is expected to meet Xi and Putin. Time reports he is due to arrive in China Wednesday for the APEC summit sidelines. Officials expect no concrete agreement and call the three-way meeting an initial conversation on denuclearization (ABC News). Why it matters: US-China trade ties, risk appetite, and the dollar.
+2. **New AI chip rule.** The administration moved Monday to limit Chinese firms' remote access to advanced AI chips, closing what many saw as an export-control loophole (Washington Post). The rule gives Commerce Secretary Lutnick more discretion over AI chip sales to certain countries (Time). Why it matters: tech export controls and the US-China trade backdrop.
+3. **Nvidia scandal.** Jensen Huang resigned from Nvidia's board and as CEO on Nov. 12 (ABC). A White House official told NPR that Trump is not expected to raise the affair with Xi. Why it matters: US-China tech tensions and risk appetite.
+4. **Fed Chair Warsh speaks at 12:00 PM.** MarketWatch says Warsh is discussing how the Fed is working through AI's effect on the economy (headline only). Crypto Briefing also mentions potential rate hikes (headline only). Why it matters: rate expectations and the dollar.
+5. **Canada CPI at 8:30 AM.** The forecast is for a rise in inflation. Why it matters: Bank of Canada policy and the Canadian dollar.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| All day | No major economic events | Calendar | Yes |
+| 8:30 AM | CPI m/m (forecast 0.3%, previous 0.1%) | Canada | Yes |
+| 8:30 AM | Median CPI y/y (forecast 2.0%, previous 1.9%) | Canada | Yes |
+| 8:30 AM | Trimmed CPI y/y (forecast 1.9%, previous 1.8%) | Canada | Yes |
+| 12:00 PM | Fed Chairman Warsh speaks | US | Yes |
+| Time (unconfirmed) | Trump departing for Asia; he left the White House this morning | Philippines, then China | Unconfirmed |
 
-Coming up this week: Mon 8:30 AM Canada CPI m/m (forecast 0.3%, previous 0.1%), median CPI y/y (2.0%, 1.9%) and trimmed CPI y/y (1.9%, 1.8%). Mon 12:00 PM Fed Chair Warsh speaks. Tue 8:30 AM US retail sales (0.2%, previous 0.8%) and core retail sales (0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC minutes.
+Coming up this week: Tue 8:30 AM US Retail Sales m/m (forecast 0.2%, previous 0.8%) and Core Retail Sales m/m (forecast 0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (forecast 3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC Minutes.
 
 #### Event risk today
-High - Markets are closed, but the Hormuz and Bahrain events are unresolved and could be reflected in prices when trading reopens.
+High - Fed Chair Warsh speaks, Canadian CPI is released, and Trump is heading into Xi and Putin meetings amid new chip curbs.
 
 #### Politics and policy
-- Trump broke his silence on the nationwide ground stop and asked Congress for more money (KSL News, headline only). He also blamed Biden for an aviation "disaster" (TRT World, headline only).
-- Trump criticized a judge's two-week halt to his Washington golf project and said the administration will appeal (Your Valley, headline only).
-- A Trump team is preparing a "tough response" to Democratic investigations (NYT, via The New Voice of Ukraine, headline only).
-- Van Hollen said claims he can't win Senate majority leader are nonsense (The Hill, headline only).
+- Leaving the White House Monday morning, Trump said he "may" meet North Korea's Kim Jong Un in China, though it would be Xi's decision (ABC).
+- Elon Musk will join Trump for parts of the China travel (ABC).
+- C-SPAN: Trump said the US is not at risk because of the Nvidia scandal (headline only).
+- The Guardian: several companies are using Trump tariff refunds for corporate bonuses (headline only).
+- Federal News Network: Congress must decide whether to keep blocking the administration's planned federal grantmaking rules (headline only).
+- Los Angeles Times: allies and aides will urge Trump to push back against Beijing (headline only).
+- Federal Reserve: see Warsh at 12:00 PM above (MarketWatch, headline only).
 
 #### Economics
-Nothing found on overnight data. No major releases are listed for the weekend.
+Nothing found. No major data was released overnight in the calendar.
+- Financial Post asks whether the Bank of Canada moved too soon on its inflation "smoking gun" (headline only).
+- INDIA New England News: fewer international students could cost the US economy $2.4 billion and 31,000 jobs (headline only).
 
 #### SEC, CFTC and hearings
-- Senate Ag panel set a Nov. 17 hearing for CFTC nominees (RG.org, headline only; time not given, unconfirmed).
-- Trump named CFTC and SEC nominees for the first time in a year (Hoodline, headline only).
-- The CFTC sued Louisiana and Arkansas over prediction markets (CFTC releases, Fri Nov 13). Louisiana: a state court blocked CFTC-regulated exchanges.
-- The CFTC is weighing action against Kalshi over contract filing procedures (디지털투데이, headline only).
-- The SEC proposed executive and director compensation disclosure reforms (SEC, Fri).
-- CLARITY Act is unlikely to advance (Crypto News, headline only).
+- The SEC and CFTC issued no official press releases in the last 2 days.
+- Tokenpost: the CFTC registered Backpack Clearing as a derivatives clearing organization (headline only).
+- Cryptonews.net: Democratic senators urged the CFTC to stay out of state lawsuits over prediction markets (headline only).
+- CoinGape: Hyperliquid's policy center backs the CFTC approach of separating prediction markets from gambling (headline only).
+- No congressional hearings found.
 
 #### War, trade and tariffs
-- **Iran/Hormuz:** The U.S. has imposed a naval blockade on Iranian ports and helped tankers move through the strait, which normally carries about one-fifth of global oil. The IRGC says the strait is closed. UKMTO said traffic was about 65% below pre-war levels. Considerable doubts remain about Iran's mine claims. A British maritime monitor was aware of an Indian authority report of a tanker attack, but it was unclear if this was the same incident. Why it matters: oil supply, shipping costs, inflation.
-- **Russia-Ukraine:** Air attacks continued as US-mediated talks failed to break the deadlock (RFE/RL, headline only). Zelenskyy warned that Starshield restrictions threaten Ukraine's energy defenses (LEX 18, headline only).
-- **Israel:** The election race between Eisenkot and Netanyahu to build a government continues (Jerusalem Post, headline only).
-- **Trade:** ASEAN Digital Economy Framework Agreement signed in Manila (IndexBox, headline only).
+- Trump is expected to discuss the war in Iran with Xi and Putin (ABC). The Economist asks whether America or Iran will blink first (headline only).
+- Nikkei Asia: the EU set tariffs on steel from India, Japan, Taiwan, Turkey and Vietnam (headline only).
+- Al Jazeera: a cargo ship capsized off Bulgaria's Black Sea coast (headline only).
+- Why it matters: energy and shipping risk, and trade policy.
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:** Nothing found.
-- **United Kingdom:** UK CPI is due Wednesday at 2:00 AM (forecast 3.6%).
-- **Japan:** Nothing found.
-- **India:** Bloomberg ran a feature on India's $130 billion wedding economy (headline only).
-- **Russia:** Air attacks with Ukraine continue (RFE/RL, headline only).
-- **Canada:** CPI is due Monday at 8:30 AM (calendar figures above).
+- **China:** The US chip rule and the Nvidia scandal come before Trump's visit (Time, PBS). Trump's bilateral meeting and working lunch with Xi is Thursday afternoon, local time (ABC).
+- **European Union:** Nikkei Asia: new steel tariffs on five countries (headline only).
+- **United Kingdom:** No news in the headlines. UK CPI is due Wednesday at 2:00 AM.
+- **Japan:** Japan is among the countries facing the EU steel tariffs (Nikkei Asia, headline only).
+- **India:** India is among the countries facing the EU steel tariffs (Nikkei Asia, headline only).
+- **Russia:** Putin will join the first-ever US-China-Russia trilateral meeting at APEC in China (ABC). The Washington Post ran an opinion piece on the Russian Orthodox Church (headline only).
+- **Canada:** CPI is due at 8:30 AM. Financial Post questions the timing of the Bank of Canada's latest move (headline only).
 
-[Read the full brief with all the details](reports/news/2026-11-15-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-16-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
