@@ -50,12 +50,16 @@ jobs:
         env:
           PYTHONPATH: agents
 
+      - name: Draw the live chart of all three accounts
+        if: ${{ !cancelled() }}
+        run: python agents/options_live_chart.py
+
       - name: Save the results
         if: ${{ !cancelled() }}
         run: |
           git config user.name "wheel-paper-trader"
           git config user.email "wheel-paper-trader@users.noreply.github.com"
-          git add paper-trading/
+          git add paper-trading/ reports/charts/options-accounts-live.svg
           git commit -m "Wheel paper trades $(date -u +'%F')" || { echo "Nothing new"; exit 0; }
           for attempt in 1 2 3; do
             git pull --rebase && git push && break
