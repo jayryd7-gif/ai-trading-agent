@@ -12,6 +12,14 @@
    2,
    2
   ],
-  "sold_so_far": []
+  "sold_so_far": [
+   {
+    "time": "21:00",
+    "what": "Target 1",
+    "contracts": 1,
+    "price": 3869.3,
+    "profit": 60.0
+   }
+  ]
  }
 }

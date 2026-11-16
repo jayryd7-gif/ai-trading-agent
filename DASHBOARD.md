@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-15 20:22 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 21:25 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,10 +16,10 @@ Last updated 2026-11-15 20:22 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 27 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 10 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 10 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 28 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 11 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 11 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
@@ -29,7 +29,7 @@ Last updated 2026-11-15 20:22 New York time. Everything here is written by softw
 ## 📒 Trade journal (paper)
 
 - **Tradeify 50K evaluation: balance $50,233**, $1,581 above the drawdown floor, $2,767 to pass; today $892, $2,142 left before the daily loss limit. [Details](paper-trading/summary.md)
-- 🟢 **Open now: Gold short 5 contracts** at 3875.3 (20:05), stop 3893.1. Sold so far: nothing yet.
+- 🟢 **Open now: Gold short 5 contracts** at 3875.3 (20:05), stop 3893.1. Sold so far: 1 @ 3869.3 (21:00).
 - 📐 Opening range (9:30-10:00, tracked, not traded): $1,320 over 9 trades in 10 sessions since 2026-11-02, vs -$2,312 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
@@ -192,6 +192,12 @@ At this pace: about $18 a month.
 - Room left before the $4,000 max drawdown: **$628**
 - Progress toward a prop demo: **19 of 20** trading days
 
+![Nasdaq: MAMBA, Opening Range, Session Breakout](reports/charts/nasdaq-scripts.svg)
+
+![Gold: MAMBA, Opening Range, Session Breakout](reports/charts/gold-scripts.svg)
+
+*Your three TradingView scripts on Nasdaq and gold, read from TradingView's Strategy Tester (saved in `tradingview/script-trades/`). Ask Claude to refresh them.*
+
 <details>
 <summary><b>Challenge simulation, results by market, and daily results</b></summary>
 
@@ -238,6 +244,19 @@ At this pace: about $18 a month.
 ## 🎡 Options wheel (paper)
 
 Two paper accounts run side by side: **ours** ($10K CAD, cheaper stocks) and a **Ryan-style** copy (Options With Ryan's rules, pretend $200K USD on his stocks). Compare them by **%**, since the sizes differ. [Rules and research](experiments/wheel-strategy-research.md)
+
+![All three options accounts, live](reports/charts/options-accounts-live.svg)
+
+*Live paper results, updated every weekday after the 2:37 PM run.*
+
+<details>
+<summary><b>Past-year backtest of all three accounts</b></summary>
+
+![All three options accounts over the past year](reports/charts/options-accounts-year.svg)
+
+*Backtest with estimated option prices. Rebuild it with `PYTHONPATH=agents:experiments python3 experiments/options_accounts_chart.py`.*
+
+</details>
 
 ### Ours ($10K CAD)
 
