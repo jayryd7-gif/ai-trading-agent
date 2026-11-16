@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-15 20:22 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-15 20:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -192,6 +192,18 @@ At this pace: about $18 a month.
 - Room left before the $4,000 max drawdown: **$628**
 - Progress toward a prop demo: **19 of 20** trading days
 
+![Nasdaq since Nov 15: MAMBA, Opening Range, Session Breakout](reports/charts/nasdaq-scripts-live.svg)
+
+![Gold since Nov 15: MAMBA, Opening Range, Session Breakout](reports/charts/gold-scripts-live.svg)
+
+*Your three TradingView scripts on Nasdaq and gold from Nov 15 on, read from TradingView's Strategy Tester (saved in `tradingview/script-trades/`). Ask Claude to refresh them.*
+
+**Results so far (Sep 20 - Nov 15):**
+
+![nasdaq-scripts.svg](reports/charts/nasdaq-scripts.svg)
+
+![gold-scripts.svg](reports/charts/gold-scripts.svg)
+
 <details>
 <summary><b>Challenge simulation, results by market, and daily results</b></summary>
 
@@ -238,6 +250,19 @@ At this pace: about $18 a month.
 ## 🎡 Options wheel (paper)
 
 Two paper accounts run side by side: **ours** ($10K CAD, cheaper stocks) and a **Ryan-style** copy (Options With Ryan's rules, pretend $200K USD on his stocks). Compare them by **%**, since the sizes differ. [Rules and research](experiments/wheel-strategy-research.md)
+
+![All three options accounts, live](reports/charts/options-accounts-live.svg)
+
+*Live paper results, updated every weekday after the 2:37 PM run.*
+
+<details>
+<summary><b>Past-year backtest of all three accounts</b></summary>
+
+![All three options accounts over the past year](reports/charts/options-accounts-year.svg)
+
+*Backtest with estimated option prices. Rebuild it with `PYTHONPATH=agents:experiments python3 experiments/options_accounts_chart.py`.*
+
+</details>
 
 ### Ours ($10K CAD)
 

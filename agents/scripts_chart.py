@@ -28,7 +28,8 @@ import overview_chart as C  # noqa: E402
 
 DATA = os.path.join("tradingview", "script-trades")
 ACCOUNT = 50_000
-MARKETS = [("MNQ", "Nasdaq", "nasdaq-scripts.svg"), ("MGC", "Gold", "gold-scripts.svg")]
+MARKETS = [("MNQ", "Nasdaq", "nasdaq-scripts"), ("MGC", "Gold", "gold-scripts")]
+LIVE_FROM = "2026-11-15"      # the "since today" charts count only trades from this date on
 SCRIPTS = [  # (TradingView name, card name, short line label, colour)
     ("MAMBA NQ - Breakout Scalp (50K tracking)", "MAMBA (retest)", "MAMBA", C.BLUE),
     ("OPENING RANGE - Session Breakout (tracking)", "Opening Range", "Opening Range", C.ORANGE),
@@ -64,11 +65,13 @@ def length_text(m):
     return f"{m} min" if m < 90 else f"{m / 60:.1f} h"
 
 
-def build(market_data):
+def build(market_data, since=None):
     accounts, everything, period = [], [], []
     for tv_name, name, short, color in SCRIPTS:
         ts = trades(market_data[tv_name]["trades"]) if market_data and tv_name in market_data else []
-        tv_dd = market_data[tv_name].get("dd") if market_data and tv_name in market_data else None
+        if since:
+            ts = [t for t in ts if t["day"] >= since]
+        tv_dd = market_data[tv_name].get("dd") if market_data and tv_name in market_data and not since else None
         everything += [(short, t) for t in ts]
         series, run = [], 0.0
         for t in ts:
@@ -148,18 +151,28 @@ def build(market_data):
 
 def main():
     data = load()
+    saved = data.get("period", ["", ""])[1] if data else ""
     for key, label, out in MARKETS:
-        accounts, period = build(data.get(key) if data else None)
-        sub = (f"Running profit per script · {period[0]} to {period[-1]} · from TradingView's Strategy Tester · "
-               f"% = share of the 50K account" if period else "No TradingView trades saved yet")
-        svg = C.draw(f"{label} scripts: MAMBA vs Opening Range vs Session Breakout", sub, accounts, unit="$",
-                     footnote="went against = the furthest the trade moved against you before it closed · "
-                              "TradingView backtest results, not real money.",
-                     empty="No trades saved yet")
-        path = os.path.join("reports", "charts", out)
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        open(path, "w").write(svg)
-        print(f"wrote {path}: " + ", ".join(f"{a['name']} {a['headline']}" for a in accounts[:3]))
+        for since, suffix in ((None, ""), (LIVE_FROM, "-live")):
+            accounts, period = build(data.get(key) if data else None, since)
+            if since:
+                d = date.fromisoformat(since)
+                title = f"{label} scripts since {d:%b} {d.day}: MAMBA vs Opening Range vs Session Breakout"
+                sub = (f"Forward results from {since} · read from TradingView (latest read {saved}) · "
+                       f"% = share of the 50K account")
+                empty = f"Starts with the first trade from {d:%b} {d.day} on · ask Claude to refresh from TradingView"
+            else:
+                title = f"{label} scripts: MAMBA vs Opening Range vs Session Breakout"
+                sub = (f"Running profit per script · {period[0]} to {period[-1]} · from TradingView's Strategy Tester · "
+                       f"% = share of the 50K account" if period else "No TradingView trades saved yet")
+                empty = "No trades saved yet"
+            svg = C.draw(title, sub, accounts, unit="$",
+                         footnote="went against = the furthest the trade moved against you before it closed · "
+                                  "TradingView strategy results, not real money.", empty=empty)
+            path = os.path.join("reports", "charts", out + suffix + ".svg")
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            open(path, "w").write(svg)
+            print(f"wrote {path}: " + ", ".join(f"{a['name']} {a['headline']}" for a in accounts[:3]))
 
 
 if __name__ == "__main__":

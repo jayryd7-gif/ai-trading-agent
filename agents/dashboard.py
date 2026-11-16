@@ -512,11 +512,16 @@ def build_dashboard(now):
     out += ["## Paper trading", ""]
     if glance:
         out += [glance, ""]
-        for chart, label in (("nasdaq-scripts.svg", "Nasdaq"), ("gold-scripts.svg", "Gold")):
+        for chart, label in (("nasdaq-scripts-live.svg", "Nasdaq since Nov 15"), ("gold-scripts-live.svg", "Gold since Nov 15")):
             if os.path.exists(os.path.join("reports", "charts", chart)):
                 out += [f"![{label}: MAMBA, Opening Range, Session Breakout](reports/charts/{chart})", ""]
-        out += ["*Your three TradingView scripts on Nasdaq and gold, read from TradingView's Strategy Tester "
-                "(saved in `tradingview/script-trades/`). Ask Claude to refresh them.*", ""]
+        out += ["*Your three TradingView scripts on Nasdaq and gold from Nov 15 on, read from TradingView's "
+                "Strategy Tester (saved in `tradingview/script-trades/`). Ask Claude to refresh them.*", ""]
+        backtests = [c for c in ("nasdaq-scripts.svg", "gold-scripts.svg")
+                     if os.path.exists(os.path.join("reports", "charts", c))]
+        if backtests:
+            out += ["**Results so far (Sep 20 - Nov 15):**", ""]
+            out += [f"![{c}](reports/charts/{c})\n" for c in backtests]
         out += details("Challenge simulation, results by market, and daily results", rest)
         out += ["[Paper trading journal](paper-trading/paper-journal.md) · "
                 "[TradingView strategy](tradingview/breakout_strategy.pine)", ""]
