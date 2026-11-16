@@ -1,22 +1,33 @@
 #!/bin/bash
 # Double-click this file after exporting the "List of trades" from your
-# TradingView charts (MNQ1! and MGC1!). It copies the newest exports from
-# Downloads into the project, saves them in a commit, and opens GitHub
-# Desktop so you only have to click "Push origin".
+# TradingView strategies (Strategy Tester > List of trades > download icon).
+# It copies the newest export of EVERY strategy on MNQ1! and MGC1! from
+# Downloads into the project (MAMBA NQ, OPENING RANGE, Session Breakout...),
+# redraws the Nasdaq scripts chart, saves it all in a commit, and opens
+# GitHub Desktop so you only have to click "Push origin".
 cd "$(dirname "$0")/.." || exit 1
 copied=0
 for symbol in "MNQ1!" "MGC1!"; do
-  newest=$(ls -t ~/Downloads/*"$symbol"*.csv 2>/dev/null | head -1)
-  if [ -n "$newest" ]; then
-    cp "$newest" tradingview/exports/
-    echo "Copied: $(basename "$newest")"
+  found=0
+  # newest file first; keep only the newest export of each strategy name
+  seen=""
+  while IFS= read -r file; do
+    [ -z "$file" ] && continue
+    name=$(basename "$file")
+    strategy="${name%%_CME*}"
+    strategy="${strategy%%_COMEX*}"
+    case "|$seen|" in *"|$strategy|"*) continue ;; esac
+    seen="$seen|$strategy"
+    cp "$file" tradingview/exports/
+    echo "Copied: $name"
     copied=1
-  else
-    echo "No $symbol export found in Downloads."
-  fi
+    found=1
+  done < <(ls -t ~/Downloads/*"$symbol"*.csv 2>/dev/null)
+  [ "$found" = 0 ] && echo "No $symbol export found in Downloads."
 done
 if [ "$copied" = 1 ]; then
-  git add tradingview/exports
+  python3 agents/nasdaq_scripts_chart.py && echo "Redrew the Nasdaq scripts chart."
+  git add tradingview/exports reports/charts/nasdaq-scripts.svg 2>/dev/null
   git commit -q -m "Update TradingView exports $(date +%F)" && echo "Saved in a commit."
   open -a "GitHub Desktop" .
   echo

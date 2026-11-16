@@ -19,8 +19,9 @@ import overview_chart as C
 TRADES = os.path.join("paper-trading", "trades.csv")
 OUT = os.path.join("reports", "charts", "futures-trades.svg")
 ACCOUNT = 50_000          # the Tradeify 50K practice account the paper trader sizes for
-MARKETS = [("nasdaq", "Nasdaq", "MNQ micro futures · paper", C.BLUE),
-           ("gold", "Gold", "MGC micro futures · paper", C.ORANGE)]
+# Nasdaq now comes from the three TradingView scripts (agents/nasdaq_scripts_chart.py);
+# this chart shows the gold paper trades.
+MARKETS = [("gold", "Gold", "MGC micro futures · paper", C.ORANGE)]
 
 
 def money(v):
@@ -52,7 +53,8 @@ def load():
         t["_min"] = minutes(t)
         # the session the trade belongs to: gold's evening session counts on its start date
         t["_day"] = (t.get("session_start") or t["trading_day"])[:10]
-        rows.append(t)
+        if t["instrument"] in {m[0] for m in MARKETS}:
+            rows.append(t)
     return rows
 
 
@@ -130,7 +132,7 @@ def build(trades):
     losses = [t for t in trades if t["_net"] < 0 and t["_min"] is not None]
     best_pct = max(trades, key=lambda t: t["_pct"]) if trades else None
     accounts.append({
-        "name": "Best times & trade length", "short": "", "sub": "both markets · entry time in New York",
+        "name": "Best times & trade length", "short": "", "sub": "entry time in New York",
         "color": C.AQUA, "series": [], "markers": [],
         "headline": f"{best_pct['_pct']:+.1f}%" if best_pct else "—",
         "headline_sub": (f"best single trade ({best_pct['instrument']}, {best_pct['_day'][5:]})" if best_pct else ""),
@@ -151,7 +153,7 @@ def main():
     days = sorted({t["_day"] for t in trades})
     sub = (f"Running profit per market · {days[0]} to {days[-1]} · ▲▼ = best / worst trades · "
            "% = share of the 50K practice account" if days else "Running profit per market")
-    svg = C.draw("Nasdaq & gold paper trades", sub, lines + [accounts[-1]] if lines else accounts, unit="$",
+    svg = C.draw("Gold paper trades", sub, lines + [accounts[-1]] if lines else accounts, unit="$",
                  footnote="ct = contracts · risk = money lost if the stop is hit · paper trades from "
                           "agents/paper_trader.py, not real money.")
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

@@ -147,22 +147,22 @@ def draw(title, subtitle, accounts, unit="%", footnote="", empty="Starts with th
                  f'<polygon points="{left + 60},{ly + 3} {left + 54},{ly - 7} {left + 66},{ly - 7}" fill="{INK2}"/>'
                  f'<text x="{left + 72}" y="{ly}" font-size="11" fill="{INK2}">worst</text>')
 
-    # ---- cards ----
+    # ---- cards (one row of up to 3; more than 3 go in rows of 2) ----
     n = len(accounts)
-    c_top, gap = a_top + a_h + 48, 16
-    c_w = (W - 48 - (n - 1) * gap) / n
-    card_parts, card_h = [], 0
-    for k, a in enumerate(accounts):
-        cx0 = 24 + k * (c_w + gap)
+    cols = n if n <= 3 else 2
+    gap = 16
+    c_w = (W - 48 - (cols - 1) * gap) / cols
+
+    def card(a, cx0, top):
         tx = cx0 + 18
         body = []
-        body.append(f'<text x="{tx:.1f}" y="{c_top + 32}" font-size="15" font-weight="700" fill="{INK}">{escape(a["name"])}</text>')
-        body.append(f'<text x="{tx:.1f}" y="{c_top + 50}" font-size="11" fill="{INK2}">{escape(a.get("sub", ""))}</text>')
-        body.append(f'<text x="{tx:.1f}" y="{c_top + 80}" font-size="22" font-weight="700" fill="{INK}">'
+        body.append(f'<text x="{tx:.1f}" y="{top + 32}" font-size="15" font-weight="700" fill="{INK}">{escape(a["name"])}</text>')
+        body.append(f'<text x="{tx:.1f}" y="{top + 50}" font-size="11" fill="{INK2}">{escape(a.get("sub", ""))}</text>')
+        body.append(f'<text x="{tx:.1f}" y="{top + 80}" font-size="22" font-weight="700" fill="{INK}">'
                     f'{escape(a.get("headline", ""))}</text>')
         hw = 14 * len(a.get("headline", "")) + 8
-        body.append(f'<text x="{tx + hw:.1f}" y="{c_top + 80}" font-size="12" fill="{INK2}">{escape(a.get("headline_sub", ""))}</text>')
-        chip_x, chip_y = tx, c_top + 98
+        body.append(f'<text x="{tx + hw:.1f}" y="{top + 80}" font-size="12" fill="{INK2}">{escape(a.get("headline_sub", ""))}</text>')
+        chip_x, chip_y = tx, top + 98
         for t in a.get("chips", []):
             wdt = 10 + 6.6 * len(t)
             if chip_x + wdt > cx0 + c_w - 14:
@@ -172,7 +172,7 @@ def draw(title, subtitle, accounts, unit="%", footnote="", empty="Starts with th
             body.append(f'<text x="{chip_x + wdt / 2:.1f}" y="{chip_y + 13.5}" text-anchor="middle" font-size="11" '
                         f'font-weight="600" fill="{INK}">{escape(t)}</text>')
             chip_x += wdt + 6
-        yy = (chip_y + 46) if a.get("chips") else c_top + 112
+        yy = (chip_y + 46) if a.get("chips") else top + 112
         for title_s, rows in a.get("sections", []):
             body.append(f'<text x="{tx:.1f}" y="{yy}" font-size="11" font-weight="700" fill="{INK2}" '
                         f'letter-spacing="0.6">{escape(title_s.upper())}</text>')
@@ -184,22 +184,29 @@ def draw(title, subtitle, accounts, unit="%", footnote="", empty="Starts with th
                 if a.get("two_line"):
                     body.append(f'<text x="{tx:.1f}" y="{yy}" font-size="12" fill="{a["color"]}">{escape(arrow)}</text>'
                                 f'<text x="{tx + 16:.1f}" y="{yy}" font-size="12" fill="{INK2}">{escape(c1)}</text>'
-                                f'<text x="{tx + 0.26 * c_w:.1f}" y="{yy}" font-size="12" font-weight="600" fill="{INK}">{escape(c2)}</text>'
+                                f'<text x="{tx + min(0.26 * c_w, 80):.1f}" y="{yy}" font-size="12" font-weight="600" fill="{INK}">{escape(c2)}</text>'
                                 f'<text x="{tx + 16:.1f}" y="{yy + 15}" font-size="11" fill="{MUTED}">{escape(c3)}</text>')
                     yy += 36
                     continue
                 body.append(f'<text x="{tx:.1f}" y="{yy}" font-size="12" fill="{a["color"]}">{escape(arrow)}</text>'
                             f'<text x="{tx + 16:.1f}" y="{yy}" font-size="12" fill="{INK2}">{escape(c1)}</text>'
-                            f'<text x="{tx + 0.36 * c_w:.1f}" y="{yy}" font-size="12" font-weight="600" fill="{INK}">{escape(c2)}</text>'
+                            f'<text x="{tx + min(0.36 * c_w, 150):.1f}" y="{yy}" font-size="12" font-weight="600" fill="{INK}">{escape(c2)}</text>'
                             f'<text x="{cx0 + c_w - 18:.1f}" y="{yy}" text-anchor="end" font-size="11" fill="{INK2}">{escape(c3)}</text>')
                 yy += 18
             yy += 10
-        card_h = max(card_h, yy - c_top + 6)
-        card_parts.append((cx0, a, body))
-    for cx0, a, body in card_parts:
-        parts.append(f'<rect x="{cx0:.1f}" y="{c_top}" width="{c_w:.1f}" height="{card_h}" rx="12" fill="#ffffff" stroke="{GRID}"/>')
-        parts.append(f'<rect x="{cx0:.1f}" y="{c_top}" width="{c_w:.1f}" height="6" rx="3" fill="{a["color"]}"/>')
-        parts += body
+        return body, yy - top + 6
+
+    top = a_top + a_h + 48
+    for r0 in range(0, n, cols):
+        row = accounts[r0:r0 + cols]
+        made = [card(a, 24 + k * (c_w + gap), top) + (24 + k * (c_w + gap), a) for k, a in enumerate(row)]
+        h = max(m[1] for m in made)
+        for body, _, cx0, a in made:
+            parts.append(f'<rect x="{cx0:.1f}" y="{top}" width="{c_w:.1f}" height="{h}" rx="12" fill="#ffffff" stroke="{GRID}"/>')
+            parts.append(f'<rect x="{cx0:.1f}" y="{top}" width="{c_w:.1f}" height="6" rx="3" fill="{a["color"]}"/>')
+            parts += body
+        top += h + gap
+    c_top, card_h = top - gap, 0
     H = c_top + card_h + 40
     head = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
             f'font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">'
