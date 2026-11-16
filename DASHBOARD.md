@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-15 20:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-16 17:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,26 +16,27 @@ Last updated 2026-11-15 20:43 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 27 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 2 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 10 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 10 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 5 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 12 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
 ## 📒 Trade journal (paper)
 
-- **Tradeify 50K evaluation: balance $50,233**, $1,581 above the drawdown floor, $2,767 to pass; today $892, $2,142 left before the daily loss limit. [Details](paper-trading/summary.md)
-- 🟢 **Open now: Gold short 5 contracts** at 3875.3 (20:05), stop 3893.1. Sold so far: nothing yet.
-- 📐 Opening range (9:30-10:00, tracked, not traded): $1,320 over 9 trades in 10 sessions since 2026-11-02, vs -$2,312 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
+- **Tradeify 50K evaluation: balance $51,125**, $2,473 above the drawdown floor, $1,875 to pass; today $892, $2,142 left before the daily loss limit. [Details](paper-trading/summary.md)
+- 📐 Opening range (9:30-10:00, tracked, not traded): $1,975 over 10 trades in 11 sessions since 2026-11-02, vs -$2,075 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
 | Date | Market | Side | Lots | Entry | Target 1 | Target 2 | Target 3 / out | Result | What could have gone better | See it |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-16 | Nasdaq | short | 3 | 27437.0 @ 10:00<br>stop 27644.75 | 1 @ 27407.0, 10:05 ($60) | 1 @ 27377.0, 10:05 ($120) | stop: 1 @ 27407.0, 10:10 ($60) | ✅ **$237**<br>out 10:10 | • The last contracts were stopped at Target 1, then price reached Target 3 by 13:35. A looser stop after Target 2 would have caught it. | [📈 chart](paper-trading/charts/2026-11-16-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
+| 2026-11-16 | Gold | short | 5 | 3875.3 @ 20:05<br>stop 3893.1 | 1 @ 3869.3, 21:00 ($60) | 2 @ 3863.3, 00:45 ($240) | 2 @ 3857.3, 00:45 ($360) | ✅ **$655**<br>out 00:45 | • Price kept going 22.10 points past Target 3 (by 00:55). Letting the last 2 contract(s) run with a trailing stop could have made up to $442 more. | [📈 chart](paper-trading/charts/2026-11-15-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-13 | Nasdaq | short | 3 | 28266.0 @ 09:35<br>stop 28399.0 | 1 @ 28236.0, 09:40 ($60) | 1 @ 28206.0, 09:40 ($120) | stop: 1 @ 28236.0, 09:45 ($60) | ✅ **$237**<br>out 09:45 | • The last contracts were stopped at Target 1, then price reached Target 3 by 10:00. A looser stop after Target 2 would have caught it. | [📈 chart](paper-trading/charts/2026-11-13-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-11-13 | Gold | long | 5 | 3886.5 @ 18:50<br>stop 3882.3 | 1 @ 3892.5, 19:05 ($60) | 2 @ 3898.5, 20:15 ($240) | 2 @ 3904.5, 20:15 ($360) | ✅ **$655**<br>out 20:15 | • Price kept going 15.90 points past Target 3 (by 20:20). Letting the last 2 contract(s) run with a trailing stop could have made up to $318 more. | [📈 chart](paper-trading/charts/2026-11-12-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-12 | Nasdaq | – | 0 | skipped: risk too big | | | | $0 | Breakout long at 09:40, but even the small size risked $808 and only $589 could be lost today without breaking the daily loss limit or the drawdown, so it was skipped. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
@@ -49,12 +50,10 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 | 2026-11-06 | Nasdaq | – | 0 | skipped: daily profit cap | | | | $0 | Not taken: this trading day was already up $600, the daily profit cap that keeps the biggest day small for the 35% consistency rule. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-11-06 | Gold | short | 5 | 4072.7 @ 20:45<br>stop 4085.0 | 1 @ 4066.7, 20:55 ($60) | 2 @ 4060.7, 22:05 ($240) | 2 @ 4054.7, 22:30 ($360) | ✅ **$655**<br>out 22:30 | • Price kept going 6.30 points past Target 3 (by 23:05). Letting the last 2 contract(s) run with a trailing stop could have made up to $126 more. | [📈 chart](paper-trading/charts/2026-11-05-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-05 | Nasdaq | – | 0 | skipped: daily profit cap | | | | $0 | Not taken: this trading day was already up $600, the daily profit cap that keeps the biggest day small for the 35% consistency rule. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
-| 2026-11-05 | Gold | long | 5 | 4118.4 @ 20:15<br>stop 4104.3 | 1 @ 4124.4, 20:20 ($60) | 2 @ 4130.4, 20:35 ($240) | 2 @ 4136.4, 20:45 ($360) | ✅ **$655**<br>out 20:45 | • Price kept going 8.00 points past Target 3 (by 20:50). Letting the last 2 contract(s) run with a trailing stop could have made up to $160 more. | [📈 chart](paper-trading/charts/2026-11-04-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
-| 2026-11-04 | Nasdaq | – | 0 | skipped: risk too big | | | | $0 | Breakout long at 09:40, but even the small size risked $2,352 and only $1,242 could be lost today without breaking the daily loss limit or the drawdown, so it was skipped. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 
 **Latest trade:**
 
-![Latest paper trade](paper-trading/charts/2026-11-13-nasdaq.svg)
+![Latest paper trade](paper-trading/charts/2026-11-16-nasdaq.svg)
 
 [Full journal with every fill](paper-trading/paper-journal.md)
 
@@ -69,7 +68,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $1,581 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $2,236 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -86,7 +85,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $8.99 so far this month on 84 AI runs; on pace for about $18 (budget $50).
+- ✅ Spent $9.30 so far this month on 86 AI runs; on pace for about $17 (budget $50).
 
 ##### Agent health
 
@@ -94,11 +93,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ✅ 20 of 15 trading days on the paper record
+- ✅ 21 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.84 (needs 1.3 or more), total $-1,128 over 25 trades
+- ⏳ profit factor 0.93 (needs 1.3 or more), total $-472 over 26 trades
 - ✅ worst trading day $-1,071 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
@@ -184,13 +183,13 @@ At this pace: about $18 a month.
 
 ## Paper trading
 
-- Total after fees: **-$1,128** over 25 trades (39 sessions watched)
-- Trading days with a trade: **19**, profitable: **7**, losing: 12
-- Win rate: 44%
-- Profit factor: 0.84
+- Total after fees: **-$236** over 27 trades (41 sessions watched)
+- Trading days with a trade: **20**, profitable: **8**, losing: 12
+- Win rate: 48%
+- Profit factor: 0.97
 - Biggest drop from a high (max drawdown): $4,620
-- Room left before the $4,000 max drawdown: **$628**
-- Progress toward a prop demo: **19 of 20** trading days
+- Room left before the $4,000 max drawdown: **$1,520**
+- Progress toward a prop demo: **20 of 20** trading days
 
 ![Nasdaq since Nov 15: MAMBA, Opening Range, Session Breakout](reports/charts/nasdaq-scripts-live.svg)
 
@@ -211,14 +210,15 @@ At this pace: about $18 a month.
 
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
-| nasdaq | 11 | 4 | -$3,014 |
-| gold | 14 | 7 | $1,886 |
+| nasdaq | 12 | 5 | -$2,776 |
+| gold | 15 | 8 | $2,541 |
 
 
 #### Daily results
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
+| 2026-11-16 | gold short, nasdaq short | $892 |
 | 2026-11-13 | gold long, nasdaq short | $892 |
 | 2026-11-12 | gold long, nasdaq skipped, risk too big for today's limits | -$355 |
 | 2026-11-11 | gold long, nasdaq short | -$212 |
@@ -313,254 +313,232 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-15, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-16, event risk High</b></summary>
 
 #### Top things for today
-1. **Hormuz tanker incidents.** Iran's Revolutionary Guards (IRGC) say two more tankers hit mines in the southern Strait of Hormuz. ISNA says one carried over two million barrels of crude and sank. The claims have not been independently verified. Why it matters: energy prices and safe-haven demand (gold).
-2. **Iran strikes on Bahrain.** Bahrain says its air defences destroyed several Iranian aerial attacks. Iran says it targeted a radar at al-Riffa air base, in retaliation for a U.S. strike in Sirik last week. Why it matters: Gulf escalation and risk appetite.
-3. **Fed Chair Warsh speaks Monday at 12:00 PM.** Why it matters: rate expectations and the dollar.
-4. **Trump on the FAA ground stop.** Trump urged Congress to fund an air traffic control overhaul (Anadolu, headline only). Why it matters: possible spending debate.
-5. **Russia-Ukraine talks stalled.** The two sides traded air attacks (Radio Free Europe/Radio Liberty, headline only). Why it matters: energy and risk sentiment.
+1. **Trump's Asia trip and the Xi/Putin meetings.** Trump's trip has stops in the Philippines and China, where he is expected to meet Xi and Putin. Time reports he is due to arrive in China Wednesday for the APEC summit sidelines. Officials expect no concrete agreement and call the three-way meeting an initial conversation on denuclearization (ABC News). Why it matters: US-China trade ties, risk appetite, and the dollar.
+2. **New AI chip rule.** The administration moved Monday to limit Chinese firms' remote access to advanced AI chips, closing what many saw as an export-control loophole (Washington Post). The rule gives Commerce Secretary Lutnick more discretion over AI chip sales to certain countries (Time). Why it matters: tech export controls and the US-China trade backdrop.
+3. **Nvidia scandal.** Jensen Huang resigned from Nvidia's board and as CEO on Nov. 12 (ABC). A White House official told NPR that Trump is not expected to raise the affair with Xi. Why it matters: US-China tech tensions and risk appetite.
+4. **Fed Chair Warsh speaks at 12:00 PM.** MarketWatch says Warsh is discussing how the Fed is working through AI's effect on the economy (headline only). Crypto Briefing also mentions potential rate hikes (headline only). Why it matters: rate expectations and the dollar.
+5. **Canada CPI at 8:30 AM.** The forecast is for a rise in inflation. Why it matters: Bank of Canada policy and the Canadian dollar.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| All day | No major economic events | Calendar | Yes |
+| 8:30 AM | CPI m/m (forecast 0.3%, previous 0.1%) | Canada | Yes |
+| 8:30 AM | Median CPI y/y (forecast 2.0%, previous 1.9%) | Canada | Yes |
+| 8:30 AM | Trimmed CPI y/y (forecast 1.9%, previous 1.8%) | Canada | Yes |
+| 12:00 PM | Fed Chairman Warsh speaks | US | Yes |
+| Time (unconfirmed) | Trump departing for Asia; he left the White House this morning | Philippines, then China | Unconfirmed |
 
-Coming up this week: Mon 8:30 AM Canada CPI m/m (forecast 0.3%, previous 0.1%), median CPI y/y (2.0%, 1.9%) and trimmed CPI y/y (1.9%, 1.8%). Mon 12:00 PM Fed Chair Warsh speaks. Tue 8:30 AM US retail sales (0.2%, previous 0.8%) and core retail sales (0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC minutes.
+Coming up this week: Tue 8:30 AM US Retail Sales m/m (forecast 0.2%, previous 0.8%) and Core Retail Sales m/m (forecast 0.4%, previous 0.9%). Wed 2:00 AM UK CPI y/y (forecast 3.6%, previous 3.5%). Wed 2:30 AM and 10:00 AM BOE Gov Bailey speaks. Wed 2:00 PM FOMC Minutes.
 
 #### Event risk today
-High - Markets are closed, but the Hormuz and Bahrain events are unresolved and could be reflected in prices when trading reopens.
+High - Fed Chair Warsh speaks, Canadian CPI is released, and Trump is heading into Xi and Putin meetings amid new chip curbs.
 
 #### Politics and policy
-- Trump broke his silence on the nationwide ground stop and asked Congress for more money (KSL News, headline only). He also blamed Biden for an aviation "disaster" (TRT World, headline only).
-- Trump criticized a judge's two-week halt to his Washington golf project and said the administration will appeal (Your Valley, headline only).
-- A Trump team is preparing a "tough response" to Democratic investigations (NYT, via The New Voice of Ukraine, headline only).
-- Van Hollen said claims he can't win Senate majority leader are nonsense (The Hill, headline only).
+- Leaving the White House Monday morning, Trump said he "may" meet North Korea's Kim Jong Un in China, though it would be Xi's decision (ABC).
+- Elon Musk will join Trump for parts of the China travel (ABC).
+- C-SPAN: Trump said the US is not at risk because of the Nvidia scandal (headline only).
+- The Guardian: several companies are using Trump tariff refunds for corporate bonuses (headline only).
+- Federal News Network: Congress must decide whether to keep blocking the administration's planned federal grantmaking rules (headline only).
+- Los Angeles Times: allies and aides will urge Trump to push back against Beijing (headline only).
+- Federal Reserve: see Warsh at 12:00 PM above (MarketWatch, headline only).
 
 #### Economics
-Nothing found on overnight data. No major releases are listed for the weekend.
+Nothing found. No major data was released overnight in the calendar.
+- Financial Post asks whether the Bank of Canada moved too soon on its inflation "smoking gun" (headline only).
+- INDIA New England News: fewer international students could cost the US economy $2.4 billion and 31,000 jobs (headline only).
 
 #### SEC, CFTC and hearings
-- Senate Ag panel set a Nov. 17 hearing for CFTC nominees (RG.org, headline only; time not given, unconfirmed).
-- Trump named CFTC and SEC nominees for the first time in a year (Hoodline, headline only).
-- The CFTC sued Louisiana and Arkansas over prediction markets (CFTC releases, Fri Nov 13). Louisiana: a state court blocked CFTC-regulated exchanges.
-- The CFTC is weighing action against Kalshi over contract filing procedures (디지털투데이, headline only).
-- The SEC proposed executive and director compensation disclosure reforms (SEC, Fri).
-- CLARITY Act is unlikely to advance (Crypto News, headline only).
+- The SEC and CFTC issued no official press releases in the last 2 days.
+- Tokenpost: the CFTC registered Backpack Clearing as a derivatives clearing organization (headline only).
+- Cryptonews.net: Democratic senators urged the CFTC to stay out of state lawsuits over prediction markets (headline only).
+- CoinGape: Hyperliquid's policy center backs the CFTC approach of separating prediction markets from gambling (headline only).
+- No congressional hearings found.
 
 #### War, trade and tariffs
-- **Iran/Hormuz:** The U.S. has imposed a naval blockade on Iranian ports and helped tankers move through the strait, which normally carries about one-fifth of global oil. The IRGC says the strait is closed. UKMTO said traffic was about 65% below pre-war levels. Considerable doubts remain about Iran's mine claims. A British maritime monitor was aware of an Indian authority report of a tanker attack, but it was unclear if this was the same incident. Why it matters: oil supply, shipping costs, inflation.
-- **Russia-Ukraine:** Air attacks continued as US-mediated talks failed to break the deadlock (RFE/RL, headline only). Zelenskyy warned that Starshield restrictions threaten Ukraine's energy defenses (LEX 18, headline only).
-- **Israel:** The election race between Eisenkot and Netanyahu to build a government continues (Jerusalem Post, headline only).
-- **Trade:** ASEAN Digital Economy Framework Agreement signed in Manila (IndexBox, headline only).
+- Trump is expected to discuss the war in Iran with Xi and Putin (ABC). The Economist asks whether America or Iran will blink first (headline only).
+- Nikkei Asia: the EU set tariffs on steel from India, Japan, Taiwan, Turkey and Vietnam (headline only).
+- Al Jazeera: a cargo ship capsized off Bulgaria's Black Sea coast (headline only).
+- Why it matters: energy and shipping risk, and trade policy.
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:** Nothing found.
-- **United Kingdom:** UK CPI is due Wednesday at 2:00 AM (forecast 3.6%).
-- **Japan:** Nothing found.
-- **India:** Bloomberg ran a feature on India's $130 billion wedding economy (headline only).
-- **Russia:** Air attacks with Ukraine continue (RFE/RL, headline only).
-- **Canada:** CPI is due Monday at 8:30 AM (calendar figures above).
+- **China:** The US chip rule and the Nvidia scandal come before Trump's visit (Time, PBS). Trump's bilateral meeting and working lunch with Xi is Thursday afternoon, local time (ABC).
+- **European Union:** Nikkei Asia: new steel tariffs on five countries (headline only).
+- **United Kingdom:** No news in the headlines. UK CPI is due Wednesday at 2:00 AM.
+- **Japan:** Japan is among the countries facing the EU steel tariffs (Nikkei Asia, headline only).
+- **India:** India is among the countries facing the EU steel tariffs (Nikkei Asia, headline only).
+- **Russia:** Putin will join the first-ever US-China-Russia trilateral meeting at APEC in China (ABC). The Washington Post ran an opinion piece on the Russian Orthodox Church (headline only).
+- **Canada:** CPI is due at 8:30 AM. Financial Post questions the timing of the Bank of Canada's latest move (headline only).
 
-[Read the full brief with all the details](reports/news/2026-11-15-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-16-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-15</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-16</b></summary>
 
 #### Top things today
 
-1. **Crypto is in extreme fear.** The Fear & Greed Index fell to 10 from 13 on Saturday and 20 on Friday. Bitcoin touched $62,080.91 before climbing back above $65,000. (BigGo/Alternative.me) Why it matters: this is the weakest sentiment reading in this stretch.
-2. **Spot Bitcoin ETFs keep bleeding.** They had $2.35 billion in net outflows over two straight weeks. BlackRock's iShares Bitcoin Trust extended its outflow streak to 11 sessions. (Cointelegraph via BigGo) Why it matters: the institutional bid is missing.
-3. **Leveraged longs got hit.** Long liquidations were about $1.2 billion in the slide. (Crypto Briefing) Why it matters: forced selling can speed up drops.
-4. **A disputed $123M SOL deposit.** Lookonchain tied a $123M SOL deposit at Coinbase Prime to Forward Industries via Arkham labels. Forward says it made no such transfer. (Solana Compass) Why it matters: it is a possible large seller, and ownership is unconfirmed.
-5. **US crypto law is stalled.** The CLARITY Act remains stalled as Democrats prepare to control Congress. (crypto.news) Why it matters: the SEC and CFTC are setting rules on their own.
+1. **Extreme fear persists.** The Fear and Greed Index is at 10, unchanged from the prior session and well below 29 a week earlier. Bitcoin is about 49% below its peak. Why it matters: it shows heavy risk-off mood, but a low reading alone does not mean sellers are done (Cointelegraph via SpendNode, TokenPost).
+2. **ETF outflows are steady.** November outflows had reached $1.58B for Bitcoin ETFs and $551M for Ethereum ETFs as of a few days ago. Spot Bitcoin ETFs saw a net outflow of $187.29M on Nov 14. Why it matters: institutional demand is still leaving (KuCoin News, CoinGabbar).
+3. **Fed speech and minutes.** Fed Chair Kevin Warsh speaks at noon ET today. Wednesday brings the Fed minutes, and the December 9 rate decision follows. Why it matters: rate-hike worries are weighing on risk assets (CoinGabbar).
+4. **CLARITY Act is stalled.** The Senate vote to end debate failed 49–50 on September 15. Democrats won both chambers in the November 3 midterms. Why it matters: market-structure rules will likely come from agencies, not Congress (crypto.news).
+5. **Treasury companies are under strain.** MSCI's review will remove Strategy and Metaplanet from the MSCI USA Index. Strategy's bitcoin stack is reported $6.85B underwater. Why it matters: forced index selling and weak treasury balance sheets add pressure (U.Today, SpendNode).
 
 #### Coins to research
 
-I found no news for most of these moves. Treat them as unexplained.
-
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Ultima (ULTIMA) | +37.0% | No news found. | Pump with no news. Volume is $6.3M against a $99.9M market cap. 7d is -2.2%. |
-| Kite (KITE) | +6.3% (7d +26.1%) | No news found for today. A Nov 3 unlock was about 46% of its market cap. (TokenPost) | Large recent unlock. Mid-size cap of $326.1M. |
-| Derive (DRV) | +8.4% | No news found. | 7d is -12.3%. Volume is small at $16.4M. |
-| Venice Token (VVV) | +10.1% | No news found. | 7d is -5.8%. No catalyst found. |
-| EVAA Protocol (EVAA) | +41.2% | No news found. It is trending on CoinGecko. | Rank 837, so tiny. Pump with no news. |
-| AudaCity (DACITYCOIN) | +261.9% | No news found. It is trending on CoinGecko. | Rank 961, very small. Likely a meme coin. Extreme move. Holder concentration not checked. |
+| Rain (RAIN) | +72.2% (7d +50.2%) | No news found for today's move (unconfirmed cause). Earlier rallies followed foundation liquidity injections and token burns (Invezz, Mainstream Crypto News). | Pump with no news found. Huge supply: 1.15 trillion max supply. Volume ($23M) is small against a $4.6B market cap. |
+| Internet Computer (ICP) | +15.7% | No clear catalyst found. It bounced along with BTC's weekend move from $62k to $65k (AMBCrypto). | Bearish bias across timeframes. The bounce hit a former demand zone around $2.20–$2.25, which now acts as supply. |
+| Pieverse (PIEVERSE) | +20.2% | No news found. | Pump with no news. Small cap ($577.6M) and thin volume ($19M). |
+| EVAA Protocol (EVAA) | +30.3% | No news found. | Rank 699. Small cap. Pump with no news. |
+| Macca the Gator (MACCA) | +31.8% | No news found. Trending on CoinGecko. | Rank 783. Meme coin. Tiny cap. No news. |
+| Gato The Cat (GATO) | +19.5% | No news found. Trending on CoinGecko. | Rank 787. Meme coin. Tiny cap. No news. |
 
-Also trending: Gato The Cat (GATO, +39.4%, rank 850) and Identity.md (IMD, +21.2%, rank 868). Same red flags: tiny caps and no news found.
+Holder concentration was not checked for any of these coins.
 
 #### Whale watch
 
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| About 6:41 PM, Nov 14 | SOL | ~$123M | Wallets Arkham links to Forward Industries. Forward denies it. Owner unconfirmed. (Lookonchain/Arkham via Solana Compass) | Onto an exchange (Coinbase Prime deposit address) |
-| Nov 12 (older than one day) | BTC | ~$73.78M (1,000 BTC) | A whale dormant for four years (PANews/Lookonchain) | Onto an exchange (Binance). Sale not confirmed. |
+| Nov 14 (some tallies cumulative) | ETH | $125.27M (63,540 ETH) | Wallets Arkham labels "Erik Voorhees-linked" (unverified) (Lookonchain) | Bought. Lookonchain's tally also counts exchange withdrawals, so not all of it is new buying. |
+| Nov 14 (some tallies cumulative) | ETH | $60.88M (31,484 ETH) | "7 Siblings" (Lookonchain) | Bought |
+| Past 24h (unconfirmed timing) | BTC, ETH, SOL | $143.89M in positions liquidated | Four large traders (Lookonchain) | Forced selling (liquidations) |
+
+Timing for some of these is approximate, and the search snippets did not give New York times. Another report said whales send a net $55M a day to exchanges (SpendNode).
 
 #### Government and regulation
 
-- **CLARITY Act (market structure bill):** it would divide SEC and CFTC oversight of crypto. It needed 60 votes to proceed. It failed in September. Status: stalled. Democrats won both chambers in the Nov 3 midterms. (crypto.news, American Banker)
-- **Nominations:** Trump nominated Kristin Johnson and Steven Levine to the SEC, and Nathan Anonick and Matthew Rowland to the CFTC. They await Senate confirmation hearings. No hearing date found. (crypto.news)
-- **SEC:** "Regulation Crypto Assets" is a proposal with two exemptions that let some crypto firms raise capital without full securities registration. (American Banker)
-- **CFTC:** It is seeking public input on a federal framework for leveraged crypto trading. (American Banker)
-- **Possible deal areas:** Industry groups see narrower agreements possible on crypto taxation, stablecoin yields and illicit-finance safeguards. (crypto.news)
-- **Low-profile item:** crypto.news mentions a data-center permitting bill that bitcoin miners are weighing. I found no details.
+- **CLARITY Act (market structure):** The House passed it in July 2025. The Senate is stuck after the failed vote. On Nov 15, Sen. Cynthia Lummis criticized Democrats over it. The dispute centers on an SEC registration step for token issuers. Industry expects little progress before the new Congress in January (crypto.news, TronWeekly).
+- **Nominees:** Trump nominated two SEC and two CFTC commissioners, one Democrat in each pair. The Senate Banking Committee has scheduled a hearing for the SEC nominees. Senate Agriculture plans a CFTC hearing soon. I found no hearing date (TokenPost).
+- **Data-center permitting bill:** A bipartisan bill affecting data centers and miners cleared an initial Senate hurdle. (TokenPost)
+- **GENIUS Act rules:** The OCC issued a final rule for payment stablecoin issuers on Oct. 21. It takes effect Jan. 18, 2027. The Fed separately sought comment on proposals for the issuers it supervises. (TokenPost)
+- **SEC and CFTC:** The SEC has proposed "Regulation Crypto Assets," with two exemptions that let some crypto firms raise capital without full registration. The CFTC has opened an advance notice of proposed rulemaking on retail crypto commodity transactions. (American Banker, TokenPost)
 - **Other countries:** Nothing found.
 
 #### Who is buying and adopting
 
-- **Strategy:** bought another 1,036 BTC from Nov 2 to 8, bringing holdings to 850,364 BTC. (BigGo)
-- **Sellers and stress:** MARA sold 13,597 BTC for about $1.1B, using $750M to repay loans. Nakamoto pushed a $60M USDT repayment from December 2026 to December 2027. Nakamoto also sold 184 BTC in Q3. (BigGo, CryptoNews)
-- **Governments:** Nothing new found. The US Strategic Bitcoin Reserve dates from a March 6, 2025 order, funded initially with forfeited bitcoin. (Bitcoin.com)
-- **Stablecoin payments by companies:** Nothing found.
+- Nothing found on new government or country bitcoin purchases.
+- Strategy and Metaplanet face removal from the MSCI USA Index (see above). U.Today also lists a headline that "Nakamoto Sells More Bitcoin." I did not open the details.
+- Stablecoin payment adoption: nothing found.
 
 #### Next 7 days
 
-All times New York (EST). Token-unlock times were converted from Beijing time. Unlock figures are projections.
-
 | Date | Event | Coin or topic |
 |---|---|---|
-| Nov 15 (today) | STRK, SEI, SIGN and CYBER unlocks (about $25M total, TokenPost). Connex also unlocks. | STRK, SEI, SIGN, CYBER, CONX |
-| Nov 16, 6:03 AM | ~1.17B CRO unlock, about 2.3% of circulating supply, worth ~$51.4M (PANews) | CRO |
-| Nov 16, 8:00 AM | 92.65M ARB unlock, ~$12.5M (Phemex) | ARB |
-| Nov 20, 6:00 AM | ~23.29M ZRO unlock, ~$34.7M (PANews) | LayerZero (ZRO) |
-| Nov 20, ~7:00 AM (unconfirmed time zone) | KAITO unlock of 17.6M tokens (~$3M). Bedrock (BR) also unlocks ~$2M that day. | KAITO, BR |
-| Nov 22, ~7:00 AM (unconfirmed time zone) | MBG unlock of ~23.6M tokens (~$2.4M) | MBG |
+| Mon Nov 16, noon ET | Fed Chair Warsh speaks in San Francisco | Macro (CoinGabbar) |
+| Wed Nov 18 | Fed minutes | Macro (CoinGabbar) |
+| Date not found | Senate Banking hearing for SEC nominees | Regulation (TokenPost) |
 
-No hearings or ETF deadlines found.
+No token unlocks or ETF deadlines were found. The Fed's December 9 decision falls outside this window.
 
-[Read the full brief with all the details](reports/crypto/2026-11-15-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-16-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-13</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-16</b></summary>
 
 #### Top things today
-1. **Nvidia CEO Jensen Huang resigned effective immediately.** The stock dove as much as 16% at the low but ended down 4.3% amid multiple scandals around him (NBC News). Why it matters: the biggest AI stock has no CEO days before earnings.
-2. **Nvidia reports Tuesday, Nov 17.** Yahoo consensus is $2.47 EPS on $108.8B revenue. Timing is not confirmed. Why it matters: it is the first report after the leadership shock.
-3. **AMD (+5.9%) and Broadcom (+5.5%) rose as Nvidia fell.** CNBC noted AMD is the only other company that makes a full rack-scale AI system. Why it matters: money is moving to Nvidia's rivals.
-4. **Super Micro fell 11.3% on a DOJ probe.** The DOJ is investigating compliance with export rules for related servers (reported by Semafor, per CNBC). Why it matters: it is an export-control risk for AI server makers.
-5. **AI cloud names sold off.** Nebius fell about 17% and CoreWeave 6.9%, with IREN down 6.5%. Why it matters: the neocloud group is trading on guidance and capex worries.
+1. **Nvidia reports Tuesday after the close, its first report since CEO Jensen Huang resigned.** Huang stepped down a day before Friday's drop. The stock fell 13% last week, its biggest weekly slide since April 2025 (CNBC). Why it matters: it is the main test for the whole AI chip group.
+2. **Anthropic's IPO prices Wednesday, Nov. 18, and trades Thursday, Nov. 19.** The Nasdaq ticker is "ANT" (Yahoo Finance). The range is $70 to $78 for 825 million shares. Why it matters: it is a big test of AI demand and could affect AI names and the OpenAI IPO.
+3. **Money rotated out of Nvidia, then partly reversed on Friday.** AMD fell 8.8% and Broadcom fell 4.8% (live data). The Philadelphia semiconductor index fell 3.4% (Reuters). Why it matters: the rotation trade reversed hard.
+4. **Copper is weak.** Copper hit a near four-month low and was heading for a fifth straight weekly loss. The decline was tied to unwinding AI-linked positions, not physical supply (The Doctor's Daily, a newsletter). Why it matters: miners are trading with AI sentiment.
+5. **Nvidia-adjacent AI infrastructure names jumped on company news.** Cerebras, Modine and Fermi all rose strongly. Why it matters: the market is still rewarding concrete AI demand.
+
+Note: the "gainers" and move data are from Friday, Nov. 13, the last completed session.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| NVDA | AI | -4.3% (5d -8.5%) | CEO resigned; earnings Nov 17 | Headed for a sixth straight weekly drop; leadership unclear |
-| AMD | AI | +5.9% (5d +44.7%) | Seen as a Nvidia rival gaining share | Up about 45% in 5 days; move is partly sentiment |
-| AVGO | AI | +5.5% (5d +25.0%) | Rose alongside AMD | Same sympathy move; no company-specific news found |
-| SMCI | AI servers | -11.3% | DOJ export probe | Legal risk; one customer drove 44% of quarterly revenue |
-| NBIS | AI cloud | -16.8% | Cut full-year revenue guidance, shifted some December revenue to 2027, raised capex | Guidance cut despite an earnings beat |
-| LEU | Nuclear fuel | -7.4% (5d +16.7%) | Roth upgraded it to Buy on Nov 6 (Daily Trade Alert) | Volatile; no news found for Thursday's drop |
-
-No new IPO or new stock with a big move turned up. SPCX (Space Exploration Technologies, a large, actively traded name) was flat at +0.1%.
+| NVDA | AI | -2.0% day, -12.7% 5d | Earnings Tuesday after the close; CEO exit; HSBC downgrade | Event risk. Huge volume. |
+| AMD | AI | -8.8% day, +18.9% 5d | Fell after a rally driven by the Nvidia turmoil | Very sharp swings. One writer cites a P/E of about 202. |
+| CBRS | AI IPO | +11.2%, $108.72 | Record Q3 revenue and a raised outlook. Core revenue rose 70% to $230.9M. Microsoft signed as a customer (Reuters). | Still about 47% below its May IPO price of $185 as of Thursday. Recent IPO. |
+| MOD | AI data center cooling | +27.9%, $135.66 | Bloomberg reported Samsung is in talks to buy it, possibly within weeks. | Deal talk only (unconfirmed). Could fade if talks fail. |
+| FRMI | AI power/data centers | +26.7%, $2.61 | A $200M customer prepayment for Project Matador, but no lease is signed. | Q3 loss of 22 cents vs. a 9-cent loss expected. Heavy stock-based pay and stock-paid fees. Friday's extra move: no news found. |
+| MP | Rare earths | +3.5% day, +9.5% 5d | Rose while most miners fell | No news found for Friday's move. |
 
 #### AI and tech
-- **Nvidia turmoil.** The board removed Huang, pushing Nvidia's market cap below $4 trillion (KuCoin News). Shares are down roughly 30% over the past month (Yahoo Finance). CNBC also reports a roughly $2 trillion loss in value since the early-October peak.
-- **Super Micro probe.** Dell and HPE had already been hit earlier in the week. A board probe into Huang's alleged ties to a Chinese spy had dragged on AI server names (24/7 Wall St).
-- **Neoclouds.** CoreWeave gave back some of the prior session's gains from a strong quarterly print (Yahoo Finance). Nebius and IREN fell with it.
-- **Other chip moves.** TSM fell 1.9% and Intel 2%. The Philadelphia semiconductor index fell 0.5%, and a memory-supplier ETF fell 2.6% (NBC News).
+- **Nvidia leadership and earnings.** HSBC cut Nvidia to Hold with a $170 target, citing succession uncertainty and U.S. chip export limits (TradingKey). It was Nvidia's sixth straight weekly decline, the longest since 2012 (CNBC via Gotrade). Analysts expect nearly 100% year-over-year earnings and revenue growth (CNBC).
+- **Challengers rallied, then reversed.** AMD and Broadcom had gained 30% and 24% as money moved to other chipmakers. Then both sold off Friday (live data).
+- **Cerebras beat and raised.** It guided Q4 revenue to about $320M, above the $271.2M estimate (Bloomberg). It raised its 2026 revenue forecast to $940M–$960M (JournalArta).
+- **Anthropic IPO.** Reuters reported the book was about six times oversubscribed after three roadshow days. It also plans $26B in private placements to Google, Nvidia, Microsoft and others (The Conversation).
 
 #### Nuclear and critical minerals
-- **Nuclear and uranium stocks fell Thursday.** Examples: CCJ -3.4%, OKLO -5.5%, SMR -7.8%, LEU -7.4%, URA -3.8%. Most are still up over five days. I found no single catalyst for the drop.
-- **Copper and lithium are weak.** Copper broke below its 200-day moving average, and uranium and lithium prices also remain under pressure in the short term (FXEmpire). Chinese battery-grade lithium carbonate rose Friday. US PPI data is due Friday.
-- **Government support for nuclear.** The US planned to lend $4.2 billion to Vistra to boost nuclear output, a source said on Oct 4 (Mining.com). VST is up 19.2% over five days.
-- **Rare earths and export limits.** Nothing new found for today. MP rose 2.0%.
+- **Nuclear fuel demand.** Advanced reactor developers are pre-paying for U.S. high-assay low-enriched uranium capacity that does not exist yet. Centrus's orders far exceed its near-term output (newsletter, medium confidence). That is relevant to LEU.
+- **Government financing.** The U.S. is to lend $4.2B to Vistra to boost nuclear output, a source said (Mining.com, Oct. 4). This is older news but still relevant to VST.
+- **Rare earths and the Pentagon.** A first commercial-scale rare earth shipment from a Brazilian mine went to a U.S. buyer. The newsletter says this shows the Defense Department acting as a price-setter through guaranteed offtake. The producer was not named.
+- **Copper.** Three-month LME copper was down 0.5% at $13,519 a ton on Friday. Nothing found today on new export limits. LAC fell 8.6% Friday with no news found.
 
 #### Earnings
-**Results since yesterday:** Nebius reported and beat earnings estimates. The stock still fell 17% (NBC News). The cause was lower revenue guidance and higher capex. I found no other notable results in these themes.
+**Since yesterday:** Nothing found for Sunday or Monday. The most relevant recent report was Cerebras on Nov. 12 (see above). It beat expectations, and the stock rose 11.2% Friday.
 
 | Date | Ticker | Timing | EPS estimate | Revenue estimate |
 |---|---|---|---|---|
-| 2026-11-17 | NVDA | Not confirmed | $2.47 | $108.8B |
-| 2026-11-17 | SQM | Not confirmed | $2.03 | $2.2B |
+| 2026-11-17 | NVDA | After the close (Reuters) | $2.47 | $108.7B |
+| 2026-11-17 | SQM | Not found | $2.08 | $2.2B |
+| 2026-11-30 | NNE | Not found | $-0.26 | $1.5M |
 
 #### Smart money
-- **Roth Capital** upgraded Centrus Energy (LEU) from Neutral to Buy on Nov 6 (Daily Trade Alert).
-- **Jones Trading** upgraded IREN from Hold to Buy on Nov 6 (Chartmill). The stock fell 6.5% Thursday.
-- **Congress:** Rep. John McGuire disclosed several small Micron purchases and a partial Broadcom sale, each $1K–$15K, with trades dated in late September and early October (Benzinga). Nothing found for nuclear or minerals.
-- **Insider buying:** Nothing found.
+- **HSBC** downgraded Nvidia to Hold from Buy on Nov. 13, with a $170 target. Barclays trimmed its target from $275 to $210 and kept Overweight (TradingKey).
+- Insider buying: Nothing found.
+- Congress trades: Nothing found.
+- Other analyst changes in nuclear or minerals: Nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-13-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-16-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-14</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-16</b></summary>
 
-### Nasdaq 100 futures brief for Monday, Nov 16, 2026
+### Nasdaq 100 Futures Brief for Monday, Nov 16, 2026 (New York session)
 
-Today is Saturday. The next New York session is Monday. I could not check weekend news, so Friday's close is the latest information.
-
-#### 1. What is driving the market
-- **Nvidia turmoil.** CFO Colette Kress is interim CEO after Jensen Huang left the company. Nvidia fell 2% Friday, after a drop of more than 4% the day before.
-- **Chip selloff.** The Nasdaq-100 index fell 1.22%, the weakest of the major indexes. AMD fell 10.95%.
-- **Inflation.** Producer prices rose 6.5% from a year earlier, the largest annual rise since November 2022.
-- **Weekly picture.** The S&P 500 and Nasdaq still snapped four-week losing streaks.
-- **Fear gauge.** The VIX rose 3.21% to 19.30, a second straight gain.
+#### 1. What is driving futures
+Tech is leading a risk-off start to the week.
+- Nasdaq 100 and S&P 500 futures slid as AI-related stocks came under pressure before Nvidia's earnings later this week. Nvidia's turbulent run since CEO Jensen Huang's exit is also weighing on sentiment.
+- Intel and AMD each fell 5.2%, Broadcom fell 3.7% and Micron fell 5.3% in premarket.
+- A selloff in Asian chip stocks deepened overnight.
+- Rates are also a pressure point. The market has more than fully priced a 25 basis point Fed hike in December. One source reports a stronger-than-expected October core PPI. I found this in only one source.
+- Anthropic's market debut is also a focus later this week. I could not verify the exact date.
 
 #### 2. Scheduled events (New York time)
-Monday, Nov 16:
-- **8:30 AM:** Empire State manufacturing survey. Sources disagree on the forecast. One says 19. Another says 10.0.
-- **9:05 AM:** New York Fed President John Williams speaks.
-- **12:00 PM:** One calendar lists Fed Chair Kevin Warsh giving remarks. I found only that source, so this is unverified.
-- **After the close:** Several small earnings reports. I saw no mega-cap Nasdaq names on the list.
+- **9:05 AM:** Fed's Williams speaks. This is already past.
+- **12:00 PM:** Fed Chair Warsh gives opening remarks. This is the main event today.
+- **About 2:15 PM:** Fed's Hammack (a voter). This comes from a GMT listing that I converted to New York time. Another source says only "this afternoon."
+- **After the session:** Barkin speaks in the evening. Sources give 5:00 PM and 6:10 PM.
+- **Tomorrow, Tuesday:** Retail sales and industrial production are due. I did not verify the release time.
+- **Tuesday after the close:** Nvidia reports on Nov 17 after the close. The expected time is 4:20 PM ET. Options price about a ±9.2% move.
+- **Wednesday:** FOMC minutes.
 
-Later in the week:
-- **Tuesday, after the close (about 4:20 PM):** Nvidia is confirmed to report. Options imply a move of about 10.8%. This falls after Monday's session, but traders may position for it.
-- **Wednesday:** Minutes of the Fed's latest meeting.
+Nvidia's report is not in today's session. Traders may still position ahead of it.
 
-I could not confirm the exact date of the next CPI release. The sources conflict.
-
-#### 3. Key levels (from the price data)
+#### 3. Key levels (from price data)
 - Previous session high: **28399.00**
 - Previous session low: **27695.25**
-- Previous session close: **28038.25**
+- Previous close: **28038.25**
+- Overnight range since that close: high **28279.25**, low **27485.75**
 - 5-session high: **28697.00**
 - 5-session low: **27316.25**
-- Since the close: high 28044.50, low 27766.50
 
-The latest price is 28034.75. It is in the middle of the previous range, 364.25 below the high and 339.50 above the low. It is not near resistance or support. The data is stale (last candle Friday 16:55), and Monday may open with a gap.
+The latest price is **27600.50**. That is **94.75 below the previous session low**, so price is sitting at or under support. The prior low is now the nearest overhead level, and the overnight low is just below. The 5-session low is the next level further down.
 
 #### 4. Volume
-The previous session traded 1.18x the average of the five sessions before it. That is moderately above average. It came on a down day led by chip stocks. This suggests real participation in the selling, though not an extreme surge.
+The previous session traded **1.18x** the average of the five sessions before it. That is slightly above average, so participation was moderate. It was not a strong surge. Friday's selling had a little extra weight behind it, but this is not a high-conviction volume signal. Today's volume is not in the data.
 
 #### 5. Directional lean
-**Neutral. Confidence: Low.**
+**Bearish, Medium confidence.**
 
-The signals conflict. Price sits mid-range, so it gives no edge. Above-average volume on a down day and the Nvidia news lean bearish. The weekly gain and the broad market strength lean the other way. Nvidia's earnings on Tuesday and the Fed speakers add uncertainty. The data is also stale, so a weekend gap could change the picture.
+Price is below the previous session low. Volume was modestly above average on the prior session. News is risk-off, with chip weakness, rate-hike pricing and Nvidia uncertainty. Those three signals point the same way. Confidence is not higher because volume was only mildly elevated, and Warsh's noon speech and Nvidia's report can cause sharp reversals.
 
-**What would change the lean:**
-- A move above 28399.00 with strong volume would shift it toward bullish.
-- A break below 27695.25 with strong volume would shift it toward bearish.
-- Weekend news on Nvidia's leadership, or a hawkish Fed tone, could also change it.
+I would change the lean to Neutral if price reclaims 27695.25 and holds. I would change it to Bullish if price reclaims and holds well above that, for example back toward the previous close. A calmer-than-feared Warsh speech could trigger that. A move below the 5-session low with fast selling would raise my bearish confidence. This is a probability-based lean, not a prediction or a trade instruction.
 
-This is a probability-based lean, not a prediction or a trade instruction.
+#### 6. Event
 
-#### 6. Event risk
-**High.** The Nvidia leadership crisis, hot inflation data, Fed speakers, and Nvidia's earnings the next evening could all move the market.
-
-#### 7. Sources
-- CappNotes
-- TheStreet
-- CNBC
-- Yahoo Finance
-- Investrade
-- Economic Weekly (Substack)
-- KuCoin News (calendar)
-- eOption
-- LiteFinance
-- Earnings Whispers
-- EarningsWatcher
-- Price levels came from the supplied Yahoo Finance futures data.
-
-BIAS: Neutral | CONFIDENCE: Low
-
-[Open the file](reports/2026-11-14-nasdaq-brief.md)
+[Open the file](reports/2026-11-16-nasdaq-brief.md)
 
 </details>
 
@@ -612,7 +590,7 @@ Price is under the previous session low and near a 5-session low. The news backs
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-14 17:40 | ◆ Neutral | Low | High | 28034.75 | [read it](reports/2026-11-14-nasdaq-brief.md) |
+| nasdaq | 2026-11-16 09:51 | ? Unknown | Unknown | n/a | 27600.50 | [read it](reports/2026-11-16-nasdaq-brief.md) |
 | gold | 2026-11-15 18:36 | ? Unknown | Unknown | n/a | 3883.00 | [read it](reports/2026-11-15-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
