@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-16 17:51 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-16 21:37 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-16 17:51 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 8 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 23 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 5 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 12 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 11 hours ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 12 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 27 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 9 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 8 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 16 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 15 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -264,19 +264,87 @@ Two paper accounts run side by side: **ours** ($10K CAD, cheaper stocks) and a *
 
 </details>
 
+| Account | Up / down % | Wins / losses | Open | Since |
+|---|---|---|---|---|
+| Ours ($10K CAD) | **+0.0%** | 0 / 0 | 4 | 2026-11-16 |
+| Ryan-style ($200K USD) | **+0.0%** | 0 / 0 | 3 | 2026-11-16 |
+
 ### Ours ($10K CAD)
 
-Starts trading on the first weekday run (2:37 PM New York).
+Updated 2026-11-16 21:35 New York. Started 2026-11-16.
+
+| | |
+|---|---|
+| Account value | **$9,996 CAD** ($6,984 USD) |
+| Up / down | **-4 CAD** (+0.0%) |
+| Closed trades | 0 wins, 0 losses |
+| Cash | $10,217 CAD, of which $6,011 CAD is set aside to cover the puts |
+
+![Account profit / loss](paper-trading/wheel/value.svg)
+
+![Holdings](paper-trading/wheel/holdings.svg)
+
+| Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now | Expiry | Up / down CAD | Up / down % |
+|---|---|---|---|---|---|---|---|---|---|
+| NU | 1 put $12 | 2026-11-16 | - | got $0.37 | $0.37 | $12.68 | 2026-12-18 | 🔴 -1 | -0.1% |
+| RIG | 1 put $5 | 2026-11-16 | - | got $0.18 | $0.18 | $5.22 | 2026-12-18 | 🔴 -1 | -0.1% |
+| RIVN | 1 put $11 | 2026-11-16 | - | got $0.44 | $0.44 | $12.10 | 2026-12-18 | 🔴 -1 | -0.1% |
+| SOFI | 1 put $14 | 2026-11-16 | - | got $0.55 | $0.55 | $14.85 | 2026-12-18 | 🔴 -1 | -0.0% |
+
+[Account](paper-trading/wheel/summary.md) · [Every move](paper-trading/wheel/journal.md)
 
 ### Ryan-style ($200K USD, his stocks)
 
-Starts trading on the first weekday run (2:37 PM New York).
+Updated 2026-11-16 21:35 New York. Started 2026-11-16.
+
+| | |
+|---|---|
+| Account value | **$199,997 USD** |
+| Up / down | **-3 USD** (+0.0%) |
+| Closed trades | 0 wins, 0 losses |
+| Cash | $202,343 USD, of which $44,200 USD is set aside to cover the puts |
+
+![Account profit / loss](paper-trading/wheel-ryan/value.svg)
+
+![Holdings](paper-trading/wheel-ryan/holdings.svg)
+
+| Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now | Expiry | Up / down USD | Up / down % |
+|---|---|---|---|---|---|---|---|---|---|
+| CRDO | 1 put $105 | 2026-11-16 | - | got $8.90 | $8.90 | $120.71 | 2026-12-18 | 🔴 -1 | -0.0% |
+| HOOD | 3 puts $65 | 2026-11-16 | - | got $3.02 | $3.02 | $72.06 | 2026-12-18 | 🔴 -2 | -0.0% |
+| NVDA | 1 put $142 | 2026-11-16 | - | got $5.49 | $5.49 | $156.14 | 2026-12-18 | 🔴 -1 | -0.0% |
+
+[Account](paper-trading/wheel-ryan/summary.md) · [Every move](paper-trading/wheel-ryan/journal.md)
 
 ## 💰 Iron condor income account (paper, $10K CAD)
 
 A separate cash-flow test: SPY/QQQ iron condors, about 30 days out. Backtest: about $100-250 CAD a month, with drops of 16-30% along the way.
 
-Starts trading on the first weekday run (2:37 PM New York).
+Updated 2026-11-16 21:35 New York. Started 2026-11-16. Goal: steady monthly cash flow from SPY/QQQ iron condors.
+
+| | |
+|---|---|
+| Account value | **$9,993 CAD** ($6,982 USD) |
+| Up / down | **-7 CAD** (-0.1%) |
+| Closed this month (2026-11) | **+0 CAD** |
+| Closed trades | 0 wins, 0 losses |
+| Money at risk now | $3,154 CAD (limit 36% of the account) |
+
+
+![Condor account profit / loss](paper-trading/condor/value.svg)
+
+![Open condors](paper-trading/condor/holdings.svg)
+
+| Underlying | Condor | Opened | Price then / now | Credit | Worth now | Up / down CAD | Max loss CAD |
+|---|---|---|---|---|---|---|---|
+| QQQ | 1x 600/615 puts + 708/721 calls exp 2026-12-18 | 2026-11-16 | $661.75 / $661.75 | $4.31 | $4.31 | 🔴 -4 | 1,534 |
+| SPY | 1x 690/703 puts + 772/787 calls exp 2026-12-18 | 2026-11-16 | $739.95 / $739.95 | $3.71 | $3.71 | 🔴 -4 | 1,620 |
+
+| Month | Profit / loss |
+|---|---|
+| (no closed trades yet) | |
+
+[Account](paper-trading/condor/summary.md) · [Every move](paper-trading/condor/journal.md)
 
 ## 📈 TradingView strategy results
 
