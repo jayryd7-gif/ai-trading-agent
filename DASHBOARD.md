@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-17 16:37 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-17 16:43 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,7 +21,7 @@ Last updated 2026-11-17 16:37 New York time. Everything here is written by softw
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 35 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 5 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -29,7 +29,7 @@ Last updated 2026-11-17 16:37 New York time. Everything here is written by softw
 ## 📒 Trade journal (paper)
 
 - **Tradeify 50K evaluation: balance $49,978**, $852 above the drawdown floor, $3,022 to pass; today -$1,148, $102 left before the daily loss limit. [Details](paper-trading/summary.md)
-- 📐 Opening range (9:30-10:00, tracked, not traded): $1,975 over 10 trades in 11 sessions since 2026-11-02, vs -$2,075 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
+- 📐 Opening range (9:30-10:00, tracked, not traded): $1,605 over 11 trades in 12 sessions since 2026-11-02, vs -$2,838 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
