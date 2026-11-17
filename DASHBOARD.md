@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-16 23:25 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-16 23:28 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -68,7 +68,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $2,236 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $1,615 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -85,7 +85,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $9.30 so far this month on 86 AI runs; on pace for about $17 (budget $50).
+- ✅ Spent $9.75 so far this month on 89 AI runs; on pace for about $18 (budget $50).
 
 ##### Agent health
 
@@ -93,11 +93,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ✅ 21 of 15 trading days on the paper record
+- ✅ 22 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.93 (needs 1.3 or more), total $-472 over 26 trades
+- ⏳ profit factor 0.91 (needs 1.3 or more), total $-620 over 28 trades
 - ✅ worst trading day $-1,071 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
