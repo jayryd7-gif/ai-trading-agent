@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-17 14:48 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-17 15:32 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-17 14:48 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 29 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 15 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 33 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 16 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 34 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -570,52 +570,45 @@ Note: the "gainers" and move data are from Friday, Nov. 13, the last completed s
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-16</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-17</b></summary>
 
-### Nasdaq 100 Futures Brief for Monday, Nov 16, 2026 (New York session)
+### Nasdaq 100 Futures Brief, Nov 17, 2026
 
-#### 1. What is driving futures
-Tech is leading a risk-off start to the week.
-- Nasdaq 100 and S&P 500 futures slid as AI-related stocks came under pressure before Nvidia's earnings later this week. Nvidia's turbulent run since CEO Jensen Huang's exit is also weighing on sentiment.
-- Intel and AMD each fell 5.2%, Broadcom fell 3.7% and Micron fell 5.3% in premarket.
-- A selloff in Asian chip stocks deepened overnight.
-- Rates are also a pressure point. The market has more than fully priced a 25 basis point Fed hike in December. One source reports a stronger-than-expected October core PPI. I found this in only one source.
-- Anthropic's market debut is also a focus later this week. I could not verify the exact date.
+**Timing note:** The latest price is stamped 3:20 PM ET on Nov 17. That means today's cash session is nearly over. The next full New York session is Wednesday, Nov 18, and the "previous session" levels below are from Monday, Nov 16.
+
+#### 1. What is driving the market
+- Monday's Nasdaq Composite fell 2.5% and closed more than 10% below its October high, which is correction territory. Chip stocks led, with the Philadelphia Semiconductor Index down 5.3%.
+- Tuesday brought more selling. Stocks dropped on renewed chip selling as traders braced for Nvidia's earnings. The Dow fell about 1,000 points.
+- Strategists cited several worries for tech and AI, including Nvidia's CEO resignation and the upcoming Anthropic IPO.
+- Core retail sales for October rose 0.6%, twice the estimate. Strong data can keep rate worries alive. I could not verify how rates reacted.
 
 #### 2. Scheduled events (New York time)
-- **9:05 AM:** Fed's Williams speaks. This is already past.
-- **12:00 PM:** Fed Chair Warsh gives opening remarks. This is the main event today.
-- **About 2:15 PM:** Fed's Hammack (a voter). This comes from a GMT listing that I converted to New York time. Another source says only "this afternoon."
-- **After the session:** Barkin speaks in the evening. Sources give 5:00 PM and 6:10 PM.
-- **Tomorrow, Tuesday:** Retail sales and industrial production are due. I did not verify the release time.
-- **Tuesday after the close:** Nvidia reports on Nov 17 after the close. The expected time is 4:20 PM ET. Options price about a ±9.2% move.
-- **Wednesday:** FOMC minutes.
+- **Tonight, Tue:** Nvidia reports around 4:20 PM, with its call at 5:00 PM. Revenue is expected near $109 billion.
+- **Wed, Nov 18, before and during the session:**
+  - Housing Starts at 8:30 AM.
+  - Fed's Barr at 1:35 PM and Williams at 2:30 PM.
+  - FOMC minutes at 2:00 PM.
+  - Kashkari at 4:15 PM.
+- **Wed evening:** Anthropic is set to price its IPO. Trading is expected to start Thursday, Nov 19. Dates could move.
+- Williams spoke Tuesday at 2:25 PM. I did not find what he said.
 
-Nvidia's report is not in today's session. Traders may still position ahead of it.
-
-#### 3. Key levels (from price data)
-- Previous session high: **28399.00**
-- Previous session low: **27695.25**
-- Previous close: **28038.25**
-- Overnight range since that close: high **28279.25**, low **27485.75**
-- 5-session high: **28697.00**
-- 5-session low: **27316.25**
-
-The latest price is **27600.50**. That is **94.75 below the previous session low**, so price is sitting at or under support. The prior low is now the nearest overhead level, and the overnight low is just below. The 5-session low is the next level further down.
+#### 3. Key levels (from the price data)
+- Previous session (Nov 16) high: **27,716.25**
+- Previous session low: **27,234.75**. This is also the lowest low of the last 5 sessions.
+- Previous close: **27,291.75**
+- Highest high of the last 5 sessions: **28,697.00**
+- Since the Nov 16 close: high **27,498.00**, low **26,658.50**
+- Latest price: **26,940.25**. It is 294.50 below the previous low. It sits closer to support (the 26,658.50 low) than to any high.
+- The broken 27,234.75 low is the nearest overhead reference.
 
 #### 4. Volume
-The previous session traded **1.18x** the average of the five sessions before it. That is slightly above average, so participation was moderate. It was not a strong surge. Friday's selling had a little extra weight behind it, but this is not a high-conviction volume signal. Today's volume is not in the data.
+Monday traded 648,959 contracts, **1.27x** the average of the prior 5 sessions. That is above-average participation, and it came on a big down day. The selling looks real, not thin. I do not have volume for Tuesday.
 
 #### 5. Directional lean
-**Bearish, Medium confidence.**
+**Bearish, Low confidence.**
+Price is below the previous session's low and below its close, so the structure is weak. Monday's volume was strong on the decline, and the news flow is negative for tech. The Nvidia report comes after the bell, though, so tomorrow's open could gap sharply either way. That limits my confidence. A strong Nvidia report, or a quick recovery above 27,234.75 that holds, would weaken the bearish lean. A weak report with no bounce would strengthen it. This is a probability-based lean, not a prediction or a trade instruction
 
-Price is below the previous session low. Volume was modestly above average on the prior session. News is risk-off, with chip weakness, rate-hike pricing and Nvidia uncertainty. Those three signals point the same way. Confidence is not higher because volume was only mildly elevated, and Warsh's noon speech and Nvidia's report can cause sharp reversals.
-
-I would change the lean to Neutral if price reclaims 27695.25 and holds. I would change it to Bullish if price reclaims and holds well above that, for example back toward the previous close. A calmer-than-feared Warsh speech could trigger that. A move below the 5-session low with fast selling would raise my bearish confidence. This is a probability-based lean, not a prediction or a trade instruction.
-
-#### 6. Event
-
-[Open the file](reports/2026-11-16-nasdaq-brief.md)
+[Open the file](reports/2026-11-17-nasdaq-brief.md)
 
 </details>
 
@@ -687,7 +680,7 @@ BIAS: Neutral | CONFIDENCE: Low
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-16 09:51 | ? Unknown | Unknown | n/a | 27600.50 | [read it](reports/2026-11-16-nasdaq-brief.md) |
+| nasdaq | 2026-11-17 15:32 | ? Unknown | Unknown | n/a | 26940.25 | [read it](reports/2026-11-17-nasdaq-brief.md) |
 | gold | 2026-11-16 23:56 | ◆ Neutral | Low | Medium | 3874.10 | [read it](reports/2026-11-16-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
