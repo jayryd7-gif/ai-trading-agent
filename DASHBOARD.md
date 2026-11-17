@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-17 12:26 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-17 12:41 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -19,10 +19,10 @@ Last updated 2026-11-17 12:26 New York time. Everything here is written by softw
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 27 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 13 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 31 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 13 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 14 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -459,65 +459,60 @@ Nothing found. The calendar shows no results yet for overnight releases. Retail 
 </details>
 
 <details>
-<summary><b>🪙 Crypto brief, 2026-11-16</b></summary>
+<summary><b>🪙 Crypto brief, 2026-11-17</b></summary>
 
 #### Top things today
-
-1. **Extreme fear persists.** The Fear and Greed Index is at 10, unchanged from the prior session and well below 29 a week earlier. Bitcoin is about 49% below its peak. Why it matters: it shows heavy risk-off mood, but a low reading alone does not mean sellers are done (Cointelegraph via SpendNode, TokenPost).
-2. **ETF outflows are steady.** November outflows had reached $1.58B for Bitcoin ETFs and $551M for Ethereum ETFs as of a few days ago. Spot Bitcoin ETFs saw a net outflow of $187.29M on Nov 14. Why it matters: institutional demand is still leaving (KuCoin News, CoinGabbar).
-3. **Fed speech and minutes.** Fed Chair Kevin Warsh speaks at noon ET today. Wednesday brings the Fed minutes, and the December 9 rate decision follows. Why it matters: rate-hike worries are weighing on risk assets (CoinGabbar).
-4. **CLARITY Act is stalled.** The Senate vote to end debate failed 49–50 on September 15. Democrats won both chambers in the November 3 midterms. Why it matters: market-structure rules will likely come from agencies, not Congress (crypto.news).
-5. **Treasury companies are under strain.** MSCI's review will remove Strategy and Metaplanet from the MSCI USA Index. Strategy's bitcoin stack is reported $6.85B underwater. Why it matters: forced index selling and weak treasury balance sheets add pressure (U.Today, SpendNode).
+1. **Market is deep in fear.** The Fear and Greed Index is 12, and BTC is down 13.1% over 7 days. CoinDesk reported Bitcoin hit a 3-month low below $63,000 a few days ago. Why it matters: sentiment is at a washed-out extreme.
+2. **Rates are the driver.** Traders see over an 86% chance of a December Fed rate hike (U.Today). Wintermute says it stays defensive until BTC reclaims $68,000 and ETF inflows return. Why it matters: macro, not crypto news, is setting direction.
+3. **ETF money keeps leaving.** US spot Bitcoin ETFs lost $1.065B on Nov 9–13, a third straight week of outflows (CoinMarketCap). Why it matters: the institutional bid is weak.
+4. **Backpack (BP) leads gainers on a US licence.** The CFTC approved Backpack's US derivatives exchange and clearing operations on Nov 16 (CoinCentral). Why it matters: it is a real catalyst in a down market.
+5. **Senate hearings on SEC and CFTC nominees this week.** The CFTC nominees are first, on Tuesday (Crypto In America). Why it matters: both agencies are thinly staffed and are writing the crypto rules.
 
 #### Coins to research
-
 | Coin | 24h move | Why it is moving | Red flags |
 |---|---|---|---|
-| Rain (RAIN) | +72.2% (7d +50.2%) | No news found for today's move (unconfirmed cause). Earlier rallies followed foundation liquidity injections and token burns (Invezz, Mainstream Crypto News). | Pump with no news found. Huge supply: 1.15 trillion max supply. Volume ($23M) is small against a $4.6B market cap. |
-| Internet Computer (ICP) | +15.7% | No clear catalyst found. It bounced along with BTC's weekend move from $62k to $65k (AMBCrypto). | Bearish bias across timeframes. The bounce hit a former demand zone around $2.20–$2.25, which now acts as supply. |
-| Pieverse (PIEVERSE) | +20.2% | No news found. | Pump with no news. Small cap ($577.6M) and thin volume ($19M). |
-| EVAA Protocol (EVAA) | +30.3% | No news found. | Rank 699. Small cap. Pump with no news. |
-| Macca the Gator (MACCA) | +31.8% | No news found. Trending on CoinGecko. | Rank 783. Meme coin. Tiny cap. No news. |
-| Gato The Cat (GATO) | +19.5% | No news found. Trending on CoinGecko. | Rank 787. Meme coin. Tiny cap. No news. |
+| Backpack (BP) | +21.8% | CFTC approval gives it a base to run a US derivatives exchange (Cryptonews). No US launch date yet. | Already ran hard in past months. Reports of the size of the move vary. |
+| Ozone Chain (OZO) | +18.3% | No news found. | Pump with no news. Only $330K daily volume against a $245M cap. Up 88.6% in 7 days. |
+| Lighter (LIT) | +8.1% | No news found. Trending on CoinGecko. | No clear catalyst. Still down 14.3% over 7 days. |
+| Injective (INJ) | +6.1% | No news found. Trending. | No catalyst found. Down 6.9% over 7 days. |
+| Brevis (BREV) | +86.1% | Cause not found. Trending, rank 627. | Small cap. Huge pump with no news found. |
+| Provenance (HASH) | +9.6% | No news found. | Only $133K volume against a $452.7M cap. |
 
-Holder concentration was not checked for any of these coins.
+I found no other new alt or meme coin pumping hard.
 
 #### Whale watch
+Times are not confirmed for these items. Details are from Nov 17 reports.
 
 | When | Coin | Amount (USD) | Who | Direction |
 |---|---|---|---|---|
-| Nov 14 (some tallies cumulative) | ETH | $125.27M (63,540 ETH) | Wallets Arkham labels "Erik Voorhees-linked" (unverified) (Lookonchain) | Bought. Lookonchain's tally also counts exchange withdrawals, so not all of it is new buying. |
-| Nov 14 (some tallies cumulative) | ETH | $60.88M (31,484 ETH) | "7 Siblings" (Lookonchain) | Bought |
-| Past 24h (unconfirmed timing) | BTC, ETH, SOL | $143.89M in positions liquidated | Four large traders (Lookonchain) | Forced selling (liquidations) |
-
-Timing for some of these is approximate, and the search snippets did not give New York times. Another report said whales send a net $55M a day to exchanges (SpendNode).
+| Nov 17 (time unconfirmed) | XRP | $127M | Whales (U.Today) | Off an exchange (Binance) |
+| Nov 17 (time unconfirmed) | ETH | $16.67M (9,256 ETH) | An Ethereum whale (Phemex) | Staked on the Beacon Chain, not a buy or sell |
 
 #### Government and regulation
-
-- **CLARITY Act (market structure):** The House passed it in July 2025. The Senate is stuck after the failed vote. On Nov 15, Sen. Cynthia Lummis criticized Democrats over it. The dispute centers on an SEC registration step for token issuers. Industry expects little progress before the new Congress in January (crypto.news, TronWeekly).
-- **Nominees:** Trump nominated two SEC and two CFTC commissioners, one Democrat in each pair. The Senate Banking Committee has scheduled a hearing for the SEC nominees. Senate Agriculture plans a CFTC hearing soon. I found no hearing date (TokenPost).
-- **Data-center permitting bill:** A bipartisan bill affecting data centers and miners cleared an initial Senate hurdle. (TokenPost)
-- **GENIUS Act rules:** The OCC issued a final rule for payment stablecoin issuers on Oct. 21. It takes effect Jan. 18, 2027. The Fed separately sought comment on proposals for the issuers it supervises. (TokenPost)
-- **SEC and CFTC:** The SEC has proposed "Regulation Crypto Assets," with two exemptions that let some crypto firms raise capital without full registration. The CFTC has opened an advance notice of proposed rulemaking on retail crypto commodity transactions. (American Banker, TokenPost)
-- **Other countries:** Nothing found.
+- **SEC and CFTC nominees.** Trump announced four nominations on Nov 12. Nathan Anonick (R) and Matthew Rowland (D) face the Senate Agriculture Committee Tuesday. SEC nominees Kristin Johnson (D) and Steven Levine (R) face the Senate Banking Committee Thursday. Republicans hold the Senate only until January 3.
+- **CLARITY Act.** It remains stuck after failing to advance in the Senate (Coinpedia). CoinDesk says narrower options are being discussed. They include crypto tax treatment, new CFTC spot-market powers, and illicit-finance and stablecoin-yield terms.
+- **Prediction markets.** Senate Democrats told the CFTC to back off its demand on prediction markets (CoinDesk).
+- **Custodia.** The Supreme Court rejected Custodia's appeal for a Fed master account (Eleanor Terrett).
+- **CFTC approvals.** Chairman Selig approved Backpack and tZERO to run regulated derivatives exchanges and clearinghouses on blockchain rails (Decrypt).
+- **Other countries.** Nothing found, apart from Hong Kong and Swift testing tokenized deposits (CoinDesk).
 
 #### Who is buying and adopting
-
-- Nothing found on new government or country bitcoin purchases.
-- Strategy and Metaplanet face removal from the MSCI USA Index (see above). U.Today also lists a headline that "Nakamoto Sells More Bitcoin." I did not open the details.
-- Stablecoin payment adoption: nothing found.
+- **Strategy.** It disclosed a 485 BTC purchase, taking holdings to 850,849 BTC as of Nov 15 (CoinMarketCap). Its removal from MSCI indexes is due Nov 30 (U.Today).
+- **Banks.** Wells Fargo doubled its BlackRock IBIT position to $2.35B. Goldman Sachs raised its stake to $1.28B and Brevan Howard to $1.06B (13F filings).
+- **Canada's PSP Investments.** It newly added 1.01M Strategy shares, worth about $154M (Phemex).
+- **Governments or stablecoin payments.** Nothing found.
 
 #### Next 7 days
-
 | Date | Event | Coin or topic |
 |---|---|---|
-| Mon Nov 16, noon ET | Fed Chair Warsh speaks in San Francisco | Macro (CoinGabbar) |
-| Wed Nov 18 | Fed minutes | Macro (CoinGabbar) |
-| Date not found | Senate Banking hearing for SEC nominees | Regulation (TokenPost) |
+| Nov 17, 3:00 PM ET | Senate Agriculture hearing on CFTC nominees | Regulation |
+| Nov 18, 2:00 PM ET | Fed minutes from the Oct 27–28 meeting | Macro, BTC |
+| Nov 19, 10:00 AM ET | Senate Banking hearing on SEC nominees | Regulation |
+| Nov 30 | Strategy's MSCI index removal (just outside the 7-day window) | MSTR, BTC |
 
-No token unlocks or ETF deadlines were found. The Fed's December 9 decision falls outside this window.
+I found no token unlocks or ETF deadlines.
 
-[Read the full brief with all the details](reports/crypto/2026-11-16-crypto-brief.md) · [All crypto briefs](reports/crypto/)
+[Read the full brief with all the details](reports/crypto/2026-11-17-crypto-brief.md) · [All crypto briefs](reports/crypto/)
 
 </details>
 
