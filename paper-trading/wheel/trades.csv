@@ -1,0 +1,5 @@
+time_ny,ticker,action,type,strike,expiry,contracts,price,pnl_usd,cash_usd,note
+2026-11-16 21:35,RIVN,SOLD,put,11.0,2026-12-18,1,0.44,,7030.19,"1 cash-secured put, delta 0.27, IV 65%, 32 days. Stock $12.10. Ties up $1,100."
+2026-11-16 21:35,SOFI,SOLD,put,14.0,2026-12-18,1,0.55,,7084.54,"1 cash-secured put, delta 0.32, IV 54%, 32 days. Stock $14.85. Ties up $1,400."
+2026-11-16 21:35,RIG,SOLD,put,5.0,2026-12-18,1,0.18,,7102.39,"1 cash-secured put, delta 0.36, IV 54%, 32 days. Stock $5.22. Ties up $500."
+2026-11-16 21:35,NU,SOLD,put,12.0,2026-12-18,1,0.37,,7138.49,"1 cash-secured put, delta 0.31, IV 46%, 32 days. Stock $12.68. Ties up $1,200."

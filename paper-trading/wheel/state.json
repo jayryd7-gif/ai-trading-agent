@@ -1,0 +1,65 @@
+{
+ "started": "2026-11-16",
+ "fx": 0.6987094879150391,
+ "start_usd": 6987.09,
+ "cash": 7138.490000000002,
+ "positions": {
+  "RIVN": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 11.0,
+    "exp": "2026-12-18",
+    "credit": 0.4375,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  },
+  "SOFI": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 14.0,
+    "exp": "2026-12-18",
+    "credit": 0.55,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  },
+  "RIG": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 5.0,
+    "exp": "2026-12-18",
+    "credit": 0.185,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  },
+  "NU": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 12.0,
+    "exp": "2026-12-18",
+    "credit": 0.3675,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  }
+ },
+ "wins": 0,
+ "losses": 0,
+ "history": [
+  {
+   "date": "2026-11-16",
+   "equity_usd": 6984.49,
+   "start_usd": 6987.09
+  }
+ ]
+}

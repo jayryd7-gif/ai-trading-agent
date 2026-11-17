@@ -1,0 +1,53 @@
+{
+ "started": "2026-11-16",
+ "fx": 1.0,
+ "start_usd": 200000.0,
+ "cash": 202343.0,
+ "positions": {
+  "CRDO": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 105.0,
+    "exp": "2026-12-18",
+    "credit": 8.899999999999999,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  },
+  "HOOD": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 65.0,
+    "exp": "2026-12-18",
+    "credit": 3.025,
+    "opened": "2026-11-16",
+    "qty": 3
+   }
+  },
+  "NVDA": {
+   "shares": 0,
+   "basis": 0.0,
+   "opt": {
+    "kind": "put",
+    "K": 142.0,
+    "exp": "2026-12-18",
+    "credit": 5.487500000000001,
+    "opened": "2026-11-16",
+    "qty": 1
+   }
+  }
+ },
+ "wins": 0,
+ "losses": 0,
+ "history": [
+  {
+   "date": "2026-11-16",
+   "equity_usd": 199996.75,
+   "start_usd": 200000.0
+  }
+ ]
+}
