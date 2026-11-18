@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-18 11:33 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-18 11:59 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -18,7 +18,7 @@ Last updated 2026-11-18 11:33 New York time. Everything here is written by softw
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 20 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 36 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 23 hours ago | daily about 5-6 AM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 23 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
@@ -383,79 +383,82 @@ To refresh: export the List of trades from each chart in TradingView, double-cli
 Click a brief to read it here. The summary is at the top of each.
 
 <details>
-<summary><b>🌍 World news brief, 2026-11-17, event risk High</b></summary>
+<summary><b>🌍 World news brief, 2026-11-18, event risk High</b></summary>
 
 #### Top things for today
-1. **US-Iran fighting around Hormuz.** An Iranian official said the US struck Iran's Qeshm Island on Tuesday. This came hours after Iran said it targeted a US radar in Bahrain. US Central Command said the attack drones were all intercepted. There was no immediate US confirmation of the Qeshm strike. (CBS News) Why it matters: energy prices, shipping risk and gold safe-haven demand.
-2. **Ships hit near Hormuz.** Al Jazeera's live blog reports at least five vessels hit in and around the strait. Iran warned ships off "fake American routes." Why it matters: oil flows and tanker insurance costs.
-3. **US retail sales at 8:30 AM.** Forecasts are 0.2% for headline and 0.4% for core. Previous readings were 0.8% and 0.9%. Why it matters: rate expectations and the dollar.
-4. **Fed governor Lisa Cook will skip the White House tribunal on her firing** (Axios, headline only). Why it matters: Fed independence and rates.
-5. **FOMC minutes Wednesday at 2:00 PM, and UK CPI Wednesday at 2:00 AM.** Why it matters: the rate path and the dollar.
+1. **Iran-Gulf escalation.** Iran said it targeted US drone and missile sites at Kuwait's Ali Al Salem base overnight. This followed a US strike on Qeshm Island in the Strait of Hormuz, and Bahrain also reported intercepting attacks (Reuters, AP). Why it matters: oil and shipping risk, and safe-haven demand.
+2. **Trump–Xi–Putin summit.** Trump landed in Shenzhen for APEC. The three-way talks are set for Thursday, with hopes for a trade truce beyond January 2027 (CNBC). Why it matters: US-China trade, tariffs and risk appetite.
+3. **FOMC minutes at 2:00 PM.** Why it matters: rate expectations and the dollar.
+4. **UK inflation and Bailey.** UK inflation hit a one-year high (Yahoo Finance UK, headline only), and BOE Governor Bailey speaks twice today. Why it matters: global rate expectations and the pound.
+5. **US tech outages.** Vance scrapped his schedule to address the outages, and the administration says they are not linked (CNBC, headline only). Why it matters: operational risk for banks and infrastructure.
 
 #### Today's schedule (New York time)
 | Time | Event | Who or where | Confirmed? |
 |---|---|---|---|
-| 8:30 AM | Retail Sales m/m (forecast 0.2%, previous 0.8%) | USD, US data | Yes |
-| 8:30 AM | Core Retail Sales m/m (forecast 0.4%, previous 0.9%) | USD, US data | Yes |
-| Time not given | Senate hearing on Navy secretary nominee Hung Cao (The Washington Post, headline only) | Senate | Time (unconfirmed) |
+| 2:00 AM | CPI y/y (forecast 3.6%, previous 3.5%) | UK (GBP) | Yes (already released) |
+| 2:30 AM | BOE Governor Bailey speaks | UK (GBP) | Yes |
+| 10:00 AM | BOE Governor Bailey speaks | UK (GBP) | Yes |
+| 2:00 PM | FOMC Meeting Minutes | US (USD) | Yes |
+| Not announced | Trump at APEC summit | Shenzhen, China | Event confirmed; times (unconfirmed) |
+| Thursday, time (unconfirmed) | Trump–Xi–Putin trilateral; Trump–Putin one-on-one (a US official confirmed this to CNN) | Shenzhen, China | Trilateral planned; times (unconfirmed) |
 
-Coming up this week: Wed Nov 18 – UK CPI y/y at 2:00 AM (forecast 3.6%, previous 3.5%). BOE Gov Bailey speaks at 2:30 AM and 10:00 AM. FOMC Meeting Minutes at 2:00 PM.
-
-I found no scheduled Trump events for today.
+Coming up this week: The calendar lists no further high-impact events. Thursday Nov 19 has two medium-impact US releases at 8:30 AM:
+- Philly Fed Manufacturing Index (forecast 19.2, previous 20.9).
+- Unemployment Claims (forecast 199K, previous 200K).
 
 #### Event risk today
-High - Retail sales are a high-impact release, and US-Iran clashes around Hormuz are still active.
+High - The FOMC minutes and Bailey's two speeches fall on the same day as active US-Iran strikes and Trump's China summit.
 
 #### Politics and policy
-- **Fed and the White House:** A White House official downplayed a CNN report that Iran might plan a dirty bomb or chemical attack on administration officials in Washington. (CBS News)
-- **Fed:** Lisa Cook will skip the White House tribunal on her firing (Axios, headline only). Tech leaders told Fed chairman Warsh how AI could change the economy (Axios, headline only).
-- **Trump:** He arrived as a Southeast Asian summit was ending but still looms over the talks (The Washington Post, headline only).
-- **Trump and Iran:** Earlier this week Trump called the war "effectively over" and "won." He said he was unlikely to order fresh attacks while talks go well. (The Hill)
-- **Courts:** A US judge blocked a Trump policy limiting foreign student work options (Reuters, headline only).
+- **Trump in China:** Xi greeted Trump on the tarmac, which was a rare move (CNN, NBC). Trump has said he wants to discuss nuclear weapons and Ukraine, though aides had earlier said Ukraine was not on the agenda (TNND). Why it matters: trade and geopolitics.
+- **Iran:** Trump said the US takes seriously a possible Iranian plot, after a CNN report on a possible dirty-bomb scheme (Reuters). He has also said the conflict is "effectively over" while not ruling out major combat (The Hill). AP says he is sending a third carrier and more troops.
+- **Philippines:** Philippine officials said no deal is signed yet, tempering Trump's claim of a "very big" trade pact (KTUL, headline only).
 - **Congress:**
-  - House Republicans threaten to cut the defense bill's Ukraine provisions to block stronger Pentagon oversight (NBC News, headline only).
-  - Senate Democrats want answers on what caused the grounding of planes (Monterey Herald, headline only).
-  - A Democratic senator urges quick passage of the farm bill after the midterms (Civil Eats, headline only).
-- **Prediction markets:** Kalshi will halt bets based on Trump's remarks (WSJ, headline only).
-- **Trump, other:** Maryland and Virginia are competing to host Trump's new space academy (Axios, headline only).
+  - Democrat Mary Peltola flipped the Alaska Senate seat, giving Democrats a 56-44 edge (Washington Post, headline only).
+  - A leading House Democrat is targeting Trump's inner circle in first investigations (Washington Post, headline only).
+  - A Senate panel advanced Trump's FCC nominee (Reuters, headline only).
+- **Fed/Treasury:** Nothing found beyond today's FOMC minutes.
 
 #### Economics
-Nothing found. The calendar shows no results yet for overnight releases. Retail sales are due at 8:30 AM. StoneX says the Canadian dollar remains under pressure after inflation data (headline only).
+- **UK:** Inflation hit a one-year high (Yahoo Finance UK, headline only). The exact figure is not in the sources. The calendar forecast was 3.6%.
+- **Italy:** Prometeia says growth is slowing as inflation hits 5.4% (FinTech Global, headline only).
+- **Europe:** Breakingthenews.net reported that Europe closed after inflation data (headline only).
+- **US:** No US data was released overnight.
 
 #### SEC, CFTC and hearings
 - **SEC:** Nothing in the last 2 days.
-- **CFTC:** It announced the agenda for a December roundtable on 24/7 trading (CFTC press release, Nov 17, 10:18 AM). The date and time were not given.
-- **CFTC and crypto:** A CFTC approval opens the US crypto futures market to Backpack Copy (CryptoRank, headline only).
-- **CFTC and Kalshi:** Kalshi pauses Trump mention markets amid CFTC manipulation concerns (Traders Union, headline only).
-- **Hearings:**
-  - Jensen Huang agreed to testify before Congress (UPI, South China Morning Post, headline only).
-  - The Washington Examiner says he will appear before three committees. The headlines give no date.
-  - Hung Cao, the Navy secretary nominee, faced tough questions in a Senate hearing (The Washington Post, headline only).
+- **CFTC:** It announced the agenda for a December roundtable on 24/7 trading (official release, Tue Nov 17). The date and time were not in the feed.
+- **Nvidia/Commerce:** Sen. Tim Scott says Nvidia CEO Jensen Huang and Commerce Secretary Lutnick agreed to testify before the Senate (CNBC, headline only). UPI also reports that Huang will testify (headline only). The date and time are (unconfirmed).
+- **CFTC nominees:** They declined to give a verdict on sports betting at a hearing (DeFi Rate, headline only).
 
 #### War, trade and tariffs
-- **Iran:**
-  - The US struck Qeshm Island in the Strait of Hormuz on Tuesday, according to an Iranian official. (CBS News)
-  - The Iranian official said the strikes caused no damage to residential, commercial or infrastructure sites.
-  - Diplomatic attempts to end the conflict have stalled. (The Hill)
-  - The Atlantic says the war has slipped into a "dangerous limbo" (headline only).
-- **Bahrain:** Iran stepped up attacks on Hormuz and Bahrain (Al-Monitor, headline only).
-- **Ukraine:** Ukrainian drones and missiles struck the Kerch Bridge linking Russia and Crimea (WCAX, headline only). Aviation Week says the strikes closed the bridge (headline only).
-- **Tariffs:** Medical Economics argues that medical device tariffs would hurt US manufacturers (headline only).
+- **US-Iran:** The US hit an Iranian missile launch site on Qeshm Island on Tuesday evening. It said this was in response to Iranian attacks on US assets (Reuters).
+  - Iran then fired on Kuwait, its first attack on Kuwait since September. Bahrain said it intercepted Iranian attacks for a third time in a week (Reuters).
+  - Neither country reported damage (AP).
+  - Iran's army chief said any response to new US attacks would be "more devastating" (New Arab).
+  - Qatar has been mediating indirect talks. Gulf leaders reportedly asked Trump not to attack Iran (New Arab).
+  - Why it matters: Hormuz shipping and energy risk.
+- **US-China:** Trump and Xi will hold bilateral talks, with hopes for a trade truce beyond January 2027. Expectations for concrete outcomes are low (CNBC). Calls to curb Nvidia chip sales are also in the background (CNBC).
+- **Lebanon:** A World Bank official said reconstruction is making slow progress (Al Jazeera, headline only).
 
 #### Country briefs
-- **China:** Nothing found.
-- **European Union:** Nothing found.
+- **China:**
+  - Shenzhen hosts APEC. Xi opened the summit with calls for free trade and AI cooperation (CNBC).
+  - Xi and Putin met ahead of Trump's arrival (NBC).
+- **European Union:**
+  - Italy's inflation hit 5.4% (FinTech Global, headline only).
+  - Europe closed after inflation data (Breakingthenews.net, headline only).
 - **United Kingdom:**
-  - UK CPI is due Wednesday at 2:00 AM, with a forecast of 3.6% against 3.5% before.
-  - Goldman Sachs asks whether the UK economy will beat expectations again in 2027 (headline only).
+  - Inflation hit a one-year high, and mining stocks dragged the FTSE 100 lower (Yahoo Finance UK, headline only).
+  - Bailey speaks at 2:30 AM and 10:00 AM.
 - **Japan:** Nothing found.
 - **India:** Nothing found.
 - **Russia:**
-  - Ukrainian strikes hit the Kerch Bridge to Crimea (WCAX, headline only).
-  - A mother described sheltering during Russian strikes on a Kyiv bridge (BBC, headline only).
-- **Canada:** The Canadian dollar remains under pressure after inflation data (StoneX, headline only).
+  - Putin is in Shenzhen and held talks with Xi (NBC).
+  - Trump may meet him one-on-one on Thursday. A US official confirmed this to CNN, but it was not on the original schedule (TNND, CNN).
+- **Canada:** Nothing found.
 
-[Read the full brief with all the details](reports/news/2026-11-17-world-brief.md) · [All news briefs](reports/news/)
+[Read the full brief with all the details](reports/news/2026-11-18-world-brief.md) · [All news briefs](reports/news/)
 
 </details>
 
