@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-18 14:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-18 15:04 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-18 14:23 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 23 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 38 hours ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | under an hour ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 39 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 3 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 3 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 3 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -579,45 +579,68 @@ I found no token unlocks or ETF deadlines in the next 7 days.
 </details>
 
 <details>
-<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-17</b></summary>
+<summary><b>📊 Nasdaq 100 futures market brief, 2026-11-18</b></summary>
 
-### Nasdaq 100 Futures Brief, Nov 17, 2026
+#### Price data used
 
-**Timing note:** The latest price is stamped 3:20 PM ET on Nov 17. That means today's cash session is nearly over. The next full New York session is Wednesday, Nov 18, and the "previous session" levels below are from Monday, Nov 16.
+```
+PRICE DATA (Nasdaq 100 futures, Yahoo Finance, New York time, may be delayed)
+Latest price: 27130.25 at 2026-11-18 14:50
+Previous New York session (2026-11-17 09:30 to 16:00): high 27351.00, low 26658.50, close 27086.25, volume 714,186
+Highest high of the last 5 New York sessions: 28697.00
+Lowest low of the last 5 New York sessions: 26658.50
+Since that session closed: high 27609.75, low 26921.75.
+Latest price is INSIDE the previous range (220.75 below the high, 471.75 above the low).
+Volume: the previous session traded 1.34x the average of the 5 session(s) before it.
+```
 
-#### 1. What is driving the market
-- Monday's Nasdaq Composite fell 2.5% and closed more than 10% below its October high, which is correction territory. Chip stocks led, with the Philadelphia Semiconductor Index down 5.3%.
-- Tuesday brought more selling. Stocks dropped on renewed chip selling as traders braced for Nvidia's earnings. The Dow fell about 1,000 points.
-- Strategists cited several worries for tech and AI, including Nvidia's CEO resignation and the upcoming Anthropic IPO.
-- Core retail sales for October rose 0.6%, twice the estimate. Strong data can keep rate worries alive. I could not verify how rates reacted.
+**Nasdaq 100 futures brief, Wed Nov 18, 2026**
 
-#### 2. Scheduled events (New York time)
-- **Tonight, Tue:** Nvidia reports around 4:20 PM, with its call at 5:00 PM. Revenue is expected near $109 billion.
-- **Wed, Nov 18, before and during the session:**
-  - Housing Starts at 8:30 AM.
-  - Fed's Barr at 1:35 PM and Williams at 2:30 PM.
-  - FOMC minutes at 2:00 PM.
-  - Kashkari at 4:15 PM.
-- **Wed evening:** Anthropic is set to price its IPO. Trading is expected to start Thursday, Nov 19. Dates could move.
-- Williams spoke Tuesday at 2:25 PM. I did not find what he said.
+**Timing note:** Your price block's latest print is 14:50 on Nov 18. That is still inside today's cash session. I cover the rest of today and the next session on Thursday, Nov 19, 9:30 AM.
 
-#### 3. Key levels (from the price data)
-- Previous session (Nov 16) high: **27,716.25**
-- Previous session low: **27,234.75**. This is also the lowest low of the last 5 sessions.
-- Previous close: **27,291.75**
-- Highest high of the last 5 sessions: **28,697.00**
-- Since the Nov 16 close: high **27,498.00**, low **26,658.50**
-- Latest price: **26,940.25**. It is 294.50 below the previous low. It sits closer to support (the 26,658.50 low) than to any high.
-- The broken 27,234.75 low is the nearest overhead reference.
+**1. What is driving the market**
+- Nasdaq and S&P 500 futures rose Wednesday after Nvidia beat third-quarter estimates and gave a strong revenue outlook.
+- Nvidia raised its guidance for the fiscal year ending January 2028, projecting 75% year-on-year growth.
+- This follows a weak Tuesday. The Nasdaq Composite fell 0.7% and touched its lowest level since April.
+- Rates are a headwind. Odds of a December hike are near 95%. Sources differ on the exact pricing.
+- Investors are also focused on the Anthropic IPO. It is set to price Wednesday and start trading Thursday.
+- I could not verify how markets reacted to the 2:00 PM FOMC minutes.
 
-#### 4. Volume
-Monday traded 648,959 contracts, **1.27x** the average of the prior 5 sessions. That is above-average participation, and it came on a big down day. The selling looks real, not thin. I do not have volume for Tuesday.
+**2. Scheduled events (New York time)**
+- Today, Wed Nov 18:
+  - FOMC minutes at 2:00 PM. These are already out, but I did not find the reaction.
+  - Williams at 2:30 PM and Kashkari at 4:15 PM.
+  - Palo Alto Networks reports after the close.
+  - Anthropic IPO pricing is expected after the US close.
+- Thu Nov 19:
+  - Philly Fed (forecast 19.2) and jobless claims (forecast 199K), both at 8:30 AM.
+  - Walmart reports at 7:00 AM.
+  - Fed speakers: Jefferson, Goolsbee, Barkin and Barr. I did not verify their times.
+  - Anthropic (ANT) begins trading Thursday. I did not verify the exact time.
+  - Intuit reports after the close.
 
-#### 5. Directional lean
-**Bearish, Low confidence.**
-Price is below the previous session's low and below its close, so the structure is weak. Monday's volume was strong on the decline, and the news flow is negative for tech. The Nvidia report comes after the bell, though, so tomorrow's open could gap sharply either way. That limits my confidence. A strong Nvidia report, or a quick recovery above 27,234.75 that holds, would weaken the bearish lean. A weak report with no bounce would strengthen it. This is a probability-based lean, not a prediction or a trade instruction
+**3. Key levels (from your price data)**
+- Previous session high: 27351.00
+- Previous session low: 26658.50
+- Previous session close: 27086.25
+- Since that close: high 27609.75, low 26921.75
+- Five-session high: 28697.00
+- Latest price: 27130.25. It sits mid-range, a little closer to the high (220.75 away) than the low (471.75 away). It is near neither resistance nor support. It is also close to the prior close.
+- Price traded above the previous high since that close, then came back inside the range.
 
-[Open the file](reports/2026-11-17-nasdaq-brief.md)
+**4. Volume**
+The previous session traded 714,186 contracts, which is 1.34x the average of the five sessions before it. That signals strong participation. Tuesday was a down day, so the heavy volume points to real selling. Volume alone does not show direction.
+
+**5. Directional lean: Neutral | Confidence: Low**
+The signals conflict. The Nvidia beat is a positive, and price has bounced from the 26921.75 low. But price is mid-range after failing to hold above the previous high. The prior session was heavy-volume and down. Rate-hike fears and the AI-IPO supply worry remain. The lean would turn Bullish if price held above 27351.00 and above the since-close high of 27609.75, with strong volume and a calm Anthropic debut. It would turn Bearish if price lost 26658.50 on heavy volume or Thursday's data and Fed speakers pushed rate-hike fears higher. This is a probability-based lean, not a prediction or a trade instruction.
+
+**6. Event risk: High**
+Thursday has Walmart, jobless claims, Philly Fed, Fed speakers and the Anthropic debut, all with a December rate hike priced in.
+
+**7. Sources**
+CNBC, Trad
+
+[Open the file](reports/2026-11-18-nasdaq-brief.md)
 
 </details>
 
@@ -689,7 +712,7 @@ BIAS: Neutral | CONFIDENCE: Low
 
 | Market | Brief written | Lean | Confidence | Event risk | Price then | Full brief |
 |---|---|---|---|---|---|---|
-| nasdaq | 2026-11-17 15:32 | ? Unknown | Unknown | n/a | 26940.25 | [read it](reports/2026-11-17-nasdaq-brief.md) |
+| nasdaq | 2026-11-18 15:03 | ? Unknown | Unknown | High | 27130.25 | [read it](reports/2026-11-18-nasdaq-brief.md) |
 | gold | 2026-11-16 23:56 | ◆ Neutral | Low | Medium | 3874.10 | [read it](reports/2026-11-16-gold-brief.md) |
 
 A lean is a probability-based view, not a prediction. ▲ Bullish  ▼ Bearish  ◆ Neutral
