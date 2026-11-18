@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-18 12:20 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-18 12:34 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,12 +17,12 @@ Last updated 2026-11-18 12:20 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 21 hours ago | weekdays about 7-8 AM New York time |
-| 🟢 | Market brief: gold | Writes the brief before the Asia session | 36 hours ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟢 | Market brief: gold | Writes the brief before the Asia session | 37 hours ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | under an hour ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | under an hour ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 14 hours ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | under an hour ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 1 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 15 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -526,55 +526,55 @@ I found no token unlocks or ETF deadlines in the next 7 days.
 </details>
 
 <details>
-<summary><b>📈 Stocks brief, 2026-11-16</b></summary>
+<summary><b>📈 Stocks brief, 2026-11-18</b></summary>
 
 #### Top things today
-1. **Nvidia reports Tuesday after the close, its first report since CEO Jensen Huang resigned.** Huang stepped down a day before Friday's drop. The stock fell 13% last week, its biggest weekly slide since April 2025 (CNBC). Why it matters: it is the main test for the whole AI chip group.
-2. **Anthropic's IPO prices Wednesday, Nov. 18, and trades Thursday, Nov. 19.** The Nasdaq ticker is "ANT" (Yahoo Finance). The range is $70 to $78 for 825 million shares. Why it matters: it is a big test of AI demand and could affect AI names and the OpenAI IPO.
-3. **Money rotated out of Nvidia, then partly reversed on Friday.** AMD fell 8.8% and Broadcom fell 4.8% (live data). The Philadelphia semiconductor index fell 3.4% (Reuters). Why it matters: the rotation trade reversed hard.
-4. **Copper is weak.** Copper hit a near four-month low and was heading for a fifth straight weekly loss. The decline was tied to unwinding AI-linked positions, not physical supply (The Doctor's Daily, a newsletter). Why it matters: miners are trading with AI sentiment.
-5. **Nvidia-adjacent AI infrastructure names jumped on company news.** Cerebras, Modine and Fermi all rose strongly. Why it matters: the market is still rewarding concrete AI demand.
-
-Note: the "gainers" and move data are from Friday, Nov. 13, the last completed session.
+1. **Nvidia beat, then faded.** Nvidia topped Q3 expectations, announced a $150 billion buyback, and gave a stronger Q4 outlook than analysts expected. The stock then fell over 2%, extending a rout that has erased $2 trillion from its October record, and the S&P 500 fell for a fifth straight day (Bloomberg). Why it matters: good news is not lifting AI stocks.
+2. **Anthropic prices its IPO tonight.** It is offering 825 million shares at $70 to $78 each (Benzinga). The WSJ reported it could price above $80. Why it matters: it tests demand for AI.
+3. **SEC inquiry into Nvidia.** The WSJ reported a civil inquiry into whether Nvidia's disclosures misled investors. This follows CEO Jensen Huang's Nov. 12 resignation (Motley Fool). Why it matters: leadership and governance risk sits on the biggest AI stock.
+4. **Copper and gold sold off hard.** Copper had its heaviest selloff in eight months as AI-linked bets unwound (Mining.com). Why it matters: FCX, SCCO and NEM fell 5% to 6% in the live data.
+5. **Security software and TJX jumped.** TJX rose on strong sales and higher guidance, and BellRing also gained (Benzinga). Why it matters: money is moving to stocks with clear results.
 
 #### Stocks to research
 | Ticker | Theme | Move | Why | Red flags |
 |---|---|---|---|---|
-| NVDA | AI | -2.0% day, -12.7% 5d | Earnings Tuesday after the close; CEO exit; HSBC downgrade | Event risk. Huge volume. |
-| AMD | AI | -8.8% day, +18.9% 5d | Fell after a rally driven by the Nvidia turmoil | Very sharp swings. One writer cites a P/E of about 202. |
-| CBRS | AI IPO | +11.2%, $108.72 | Record Q3 revenue and a raised outlook. Core revenue rose 70% to $230.9M. Microsoft signed as a customer (Reuters). | Still about 47% below its May IPO price of $185 as of Thursday. Recent IPO. |
-| MOD | AI data center cooling | +27.9%, $135.66 | Bloomberg reported Samsung is in talks to buy it, possibly within weeks. | Deal talk only (unconfirmed). Could fade if talks fail. |
-| FRMI | AI power/data centers | +26.7%, $2.61 | A $200M customer prepayment for Project Matador, but no lease is signed. | Q3 loss of 22 cents vs. a 9-cent loss expected. Heavy stock-based pay and stock-paid fees. Friday's extra move: no news found. |
-| MP | Rare earths | +3.5% day, +9.5% 5d | Rose while most miners fell | No news found for Friday's move. |
+| MP | Rare earths | +5.2% (5d -0.1%) | Bounced while peers fell. Needham resumed coverage (Quantisnow). Trump-Xi meeting is a catalyst. | Cause of the bounce not confirmed. Sector is volatile. |
+| USAR | Rare earths | +3.2% (5d -17.2%) | Holds $1.2B cash. | Q3 revenue of $3M missed the $13.55M consensus. Down 37% in a month. |
+| NNE | Nuclear | +0.3% (5d -9.2%) | Only watchlist earnings date: Nov. 30. | Small company. Pre-revenue. Sector weak. |
+| TENB | Cybersecurity | +13.4% | Moved with QLYS, S and NTSK (all up 9% to 11%). | I found no company-specific news. |
+| BRBR | Consumer | +23.7% | Better-than-expected quarterly sales (Benzinga). | Small cap ($1.6B). Big one-day jump. |
+| ANT (Anthropic) | AI IPO | Not yet trading | Offering roughly eight times oversubscribed (Insider Paper). | New stock. Pricing and first-day volatility unknown. |
 
 #### AI and tech
-- **Nvidia leadership and earnings.** HSBC cut Nvidia to Hold with a $170 target, citing succession uncertainty and U.S. chip export limits (TradingKey). It was Nvidia's sixth straight weekly decline, the longest since 2012 (CNBC via Gotrade). Analysts expect nearly 100% year-over-year earnings and revenue growth (CNBC).
-- **Challengers rallied, then reversed.** AMD and Broadcom had gained 30% and 24% as money moved to other chipmakers. Then both sold off Friday (live data).
-- **Cerebras beat and raised.** It guided Q4 revenue to about $320M, above the $271.2M estimate (Bloomberg). It raised its 2026 revenue forecast to $940M–$960M (JournalArta).
-- **Anthropic IPO.** Reuters reported the book was about six times oversubscribed after three roadshow days. It also plans $26B in private placements to Google, Nvidia, Microsoft and others (The Conversation).
+- **Nvidia results.** Revenue grew more than 100% year over year to $115.84 billion, yet the stock traded 2.12% lower at midday (Motley Fool). Q4 revenue guidance is about $130 billion. Semiconductor ETFs were up about 2.8% in premarket trading (CNBC). Live data shows AMD, AVGO and SMCI up 3% to 4% at the last close.
+- **Nvidia governance.** The board created a National Security and Export Control Oversight Committee (Benzinga). Huang said many people have asked him to return as CEO. The scope of the SEC probe includes scrutiny of chip sales in Asia (newsletter).
+- **Anthropic private placement.** Seven tech companies, including Google, Nvidia, AMD and Microsoft, agreed to buy $26 billion of non-voting shares at the IPO price (AFP).
+- **AI financing strain.** Nvidia-backed Nscale said in an amended prospectus that it will need more financing to meet 2027 obligations. That fits the weak CRWV and SMCI five-day moves.
 
 #### Nuclear and critical minerals
-- **Nuclear fuel demand.** Advanced reactor developers are pre-paying for U.S. high-assay low-enriched uranium capacity that does not exist yet. Centrus's orders far exceed its near-term output (newsletter, medium confidence). That is relevant to LEU.
-- **Government financing.** The U.S. is to lend $4.2B to Vistra to boost nuclear output, a source said (Mining.com, Oct. 4). This is older news but still relevant to VST.
-- **Rare earths and the Pentagon.** A first commercial-scale rare earth shipment from a Brazilian mine went to a U.S. buyer. The newsletter says this shows the Defense Department acting as a price-setter through guaranteed offtake. The producer was not named.
-- **Copper.** Three-month LME copper was down 0.5% at $13,519 a ton on Friday. Nothing found today on new export limits. LAC fell 8.6% Friday with no news found.
+- **Metals selloff.** London copper fell as much as 4% to $12,700 a ton, a seven-month low (Bloomberg, via Price Group). Eleven large copper-exposed miners have lost a combined $141 billion in a month (Mining.com). December COMEX gold was down $92.80 to $3,771.40. A firmer dollar and higher-for-longer rate expectations weigh on gold.
+- **Rare earths.** The selloff came ahead of a Trump-Xi meeting, with no company-specific news (24/7 Wall St). Chinese suppliers were also reported refusing some U.S. buyers. Today's bounce in MP and USAR has no news I could find.
+- **Uranium and nuclear.** Cameco fell 12% in a week to a 52-week low with no news of its own, as AI-linked nuclear stocks sold off (Yahoo Finance). Long-term uranium hit a record $96/lb in early October, yet shares fell. NuScale hit a 52-week low in an earlier session.
+- **Government deals and export limits.** Nothing new found today. Earlier this month, Constellation highlighted a conditional Energy Department loan commitment of up to $5 billion for nuclear uprates.
 
 #### Earnings
-**Since yesterday:** Nothing found for Sunday or Monday. The most relevant recent report was Cerebras on Nov. 12 (see above). It beat expectations, and the stock rose 11.2% Friday.
+**Results since yesterday**
+- **Nvidia (after the close Tuesday):** revenue was $115.84B against roughly $109B expected. Wall Street expected about $109 billion (Coinpaper). It rose after hours, then fell more than 2% Wednesday. I did not find the EPS comparison.
+- **TJX (before the open):** EPS of $1.34 met consensus, and sales of $15.952B beat $15.839B (Benzinga). FY27 adjusted EPS guidance is now $5.17 to $5.20 (Investing.com). The stock rose about 11%.
+- **BellRing:** sales beat estimates and the stock jumped about 24%. I did not find the figures.
+- **Cybersecurity names (TENB, QLYS, S, NTSK):** all rose 9% to 13%. I could not confirm a catalyst.
 
 | Date | Ticker | Timing | EPS estimate | Revenue estimate |
 |---|---|---|---|---|
-| 2026-11-17 | NVDA | After the close (Reuters) | $2.47 | $108.7B |
-| 2026-11-17 | SQM | Not found | $2.08 | $2.2B |
-| 2026-11-30 | NNE | Not found | $-0.26 | $1.5M |
+| 2026-11-30 | NNE | Not known | $-0.26 | $1.5M |
 
 #### Smart money
-- **HSBC** downgraded Nvidia to Hold from Buy on Nov. 13, with a $170 target. Barclays trimmed its target from $275 to $210 and kept Overweight (TradingKey).
-- Insider buying: Nothing found.
-- Congress trades: Nothing found.
-- Other analyst changes in nuclear or minerals: Nothing found.
+- **Duquesne (Druckenmiller) 13F:** New Q3 stakes worth $129.1M in three major gold miners, and exits from copper, steel, aluminum and semiconductor stocks (regulatory filing). It also sold out of Southern Copper (Mining.com).
+- **Oklo:** Shares fell 3.8% after an analyst downgrade (Defense World). I could not confirm which firm issued it.
+- **Rare earths:** Needham resumed coverage of MP Materials with a new price target (Quantisnow). I did not find the target.
+- Insider buying and Congress trades: nothing found.
 
-[Read the full brief with all the details](reports/stocks/2026-11-16-stock-brief.md) · [All stocks briefs](reports/stocks/)
+[Read the full brief with all the details](reports/stocks/2026-11-18-stock-brief.md) · [All stocks briefs](reports/stocks/)
 
 </details>
 
