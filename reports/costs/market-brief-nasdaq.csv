@@ -22,3 +22,4 @@ time_utc,agent,tokens_in,tokens_out,searches,cost_usd
 2026-11-14 22:40,market-brief-nasdaq,32095,2525,3,0.1194
 2026-11-16 14:51,market-brief-nasdaq,32839,2777,3,0.1234
 2026-11-17 20:32,market-brief-nasdaq,81550,3501,5,0.2481
+2026-11-18 20:03,market-brief-nasdaq,77986,3416,5,0.2401
