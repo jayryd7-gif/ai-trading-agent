@@ -1,6 +1,6 @@
 # Paper trading summary
 
-*Updated 2026-11-19 11:39 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-19 16:25 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
@@ -34,10 +34,11 @@ Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trai
 
 ## Opening range (tracked, not traded)
 
-Opening range (9:30-10:00, tracked, not traded): $1,605 over 11 trades in 13 sessions since 2026-11-02, vs -$2,838 for the real Nasdaq rule (ahead).
+Opening range (9:30-10:00, tracked, not traded): $2,260 over 12 trades in 14 sessions since 2026-11-02, vs -$2,838 for the real Nasdaq rule (ahead).
 
 | Day | Range | Trade | Entry | Stop | Out | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-19 | 27620.0-27838.0 | short | 27459.25 10:15 | 27698.25 | 10:25 | $655 |
 | 2026-11-18 | 26951.75-27317.75 | no trade |   |  |  | $0 |
 | 2026-11-17 | 27197.0-27351.0 | short | 27179.25 10:20 | 27215.75 | 10:25 | -$370 |
 | 2026-11-16 | 27485.75-27716.25 | short | 27436.5 10:05 | 27535.0 | 10:25 | $655 |
