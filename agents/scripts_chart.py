@@ -42,9 +42,11 @@ def money(v):
     return f"{'+' if v >= 0 else '−'}${abs(v):,}"
 
 
-def load():
+def load(first=False):
+    """The newest saved read (or the first one, which holds the Sep 20 - Nov 15 results
+    before TradingView dropped the oldest bars)."""
     files = sorted(glob.glob(os.path.join(DATA, "*.json")))
-    return json.load(open(files[-1])) if files else None
+    return json.load(open(files[0 if first else -1])) if files else None
 
 
 def trades(raw):
@@ -150,11 +152,12 @@ def build(market_data, since=None):
 
 
 def main():
-    data = load()
+    data, first = load(), load(first=True)
     saved = data.get("period", ["", ""])[1] if data else ""
     for key, label, out in MARKETS:
         for since, suffix in ((None, ""), (LIVE_FROM, "-live")):
-            accounts, period = build(data.get(key) if data else None, since)
+            source = data if since else first      # the full-period chart stays the first read
+            accounts, period = build(source.get(key) if source else None, since)
             if since:
                 d = date.fromisoformat(since)
                 title = f"{label} scripts since {d:%b} {d.day}: MAMBA vs Opening Range vs Session Breakout"

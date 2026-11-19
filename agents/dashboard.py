@@ -118,6 +118,42 @@ def _money(value):
     return f"-${-value:,.0f}" if value < 0 else f"${value:,.0f}"
 
 
+def scoreboard_section(since="2026-11-15"):
+    """Profit so far, like the tables in chat: each TradingView script since Nov 15
+    (from the latest read in tradingview/script-trades/) and MAMBA's permanent log."""
+    out = []
+    files = sorted(glob.glob(os.path.join("tradingview", "script-trades", "*.json")))
+    if files:
+        data = json.load(open(files[-1]))
+        out += [f"### 🏁 Scoreboard: your TradingView scripts since {since[5:7]}/{since[8:]} "
+                f"(read {os.path.basename(files[-1])[:10]})", "",
+                "| Market | Script | Trades | Won | Profit factor | Total |", "|---|---|---|---|---|---|"]
+        for key, market in (("MNQ", "Nasdaq"), ("MGC", "Gold")):
+            for name, short in (("MAMBA NQ - Breakout Scalp (50K tracking)", "MAMBA"),
+                                ("OPENING RANGE - Session Breakout (tracking)", "Opening Range"),
+                                ("Session Breakout - Tradeify 50K", "Session Breakout 50K")):
+                nets = [t[4] for t in data.get(key, {}).get(name, {}).get("trades", []) if t[0] >= since]
+                if not nets:
+                    continue
+                won = sum(n > 0 for n in nets)
+                gw, gl = sum(n for n in nets if n > 0), -sum(n for n in nets if n < 0)
+                pf = f"{gw / gl:.2f}" if gl else "no losses"
+                out.append(f"| {market} | {short} | {len(nets)} | {won} ({won / len(nets):.0%}) | {pf} | "
+                           f"**{_money(sum(nets))}** |")
+        out += ["", "*Ask Claude to refresh from TradingView.*", ""]
+    try:
+        import mamba_log
+        lines = mamba_log.summary(mamba_log.read_rows())
+    except Exception:
+        lines = []
+    if lines:
+        out += ["### 🐍 MAMBA, every trade kept forever (since Sep 20, updates by itself)", "",
+                "| Market | Trades | Won | Profit factor | Total |", "|---|---|---|---|---|"] + lines + [
+                "", "[Every MAMBA trade](paper-trading/mamba.csv) · Yahoo prices, can differ a little "
+                "from TradingView", ""]
+    return out
+
+
 def paper_journal_section(how_many=15):
     """Every recent paper session as one table row: entry, each sale, exit,
     result, what could have gone better, and links to the chart and TradingView."""
@@ -520,6 +556,7 @@ def build_dashboard(now):
     # ---- Paper trading ----
     glance, rest = paper_section()
     out += ["## Paper trading", ""]
+    out += scoreboard_section()
     if glance:
         out += [glance, ""]
         for chart, label in (("nasdaq-scripts-live.svg", "Nasdaq since Nov 15"), ("gold-scripts-live.svg", "Gold since Nov 15")):

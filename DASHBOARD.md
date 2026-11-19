@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-19 16:25 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-19 18:49 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,13 +16,13 @@ Last updated 2026-11-19 16:25 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 25 hours ago | weekdays about 7-8 AM New York time |
+| 🟢 | Market brief: nasdaq | Writes the brief before the New York session | 28 hours ago | weekdays about 7-8 AM New York time |
 | 🟢 | Market brief: gold | Writes the brief before the Asia session | 3 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 28 hours ago | daily about 5-6 AM New York time |
-| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 28 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 28 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 2 hours ago | after each session ends |
+| 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 31 hours ago | daily about 5-6 AM New York time |
+| 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 30 hours ago | daily about 5:30-6:30 AM New York time |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 30 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 5 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -37,6 +37,7 @@ Open the repo's Actions tab on GitHub for more detail.
 
 - **Tradeify 50K evaluation: balance $50,392**, $1,268 above the drawdown floor, $2,608 to pass; today $0, $1,250 left before the daily loss limit. [Details](paper-trading/summary.md)
 - 📐 Opening range (9:30-10:00, tracked, not traded): $2,260 over 12 trades in 14 sessions since 2026-11-02, vs -$2,838 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
+- 🐍 **MAMBA (tracking, kept forever): $10,859** over 88 trades since 2026-09-20, 52 won. Last: 2026-11-19 nasdaq short $1,137. [Every trade](paper-trading/mamba.csv)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
@@ -190,6 +191,29 @@ At this pace: about $18 a month.
 [All weekly reports](reports/weekly/)
 
 ## Paper trading
+
+### 🏁 Scoreboard: your TradingView scripts since 11/15 (read 2026-11-19)
+
+| Market | Script | Trades | Won | Profit factor | Total |
+|---|---|---|---|---|---|
+| Nasdaq | MAMBA | 4 | 2 (50%) | 1.23 | **$302** |
+| Nasdaq | Opening Range | 3 | 2 (67%) | 2.65 | **$635** |
+| Nasdaq | Session Breakout 50K | 4 | 2 (50%) | 1.31 | **$244** |
+| Gold | MAMBA | 4 | 3 (75%) | 15.18 | **$1,106** |
+| Gold | Opening Range | 2 | 2 (100%) | no losses | **$840** |
+| Gold | Session Breakout 50K | 2 | 1 (50%) | 2.54 | **$400** |
+
+*Ask Claude to refresh from TradingView.*
+
+### 🐍 MAMBA, every trade kept forever (since Sep 20, updates by itself)
+
+| Market | Trades | Won | Profit factor | Total |
+|---|---|---|---|---|
+| Nasdaq | 44 | 27 (61%) | 1.44 | $5,572 |
+| Gold (night) | 44 | 25 (57%) | 1.90 | $5,287 |
+| **Total** | 88 | 52 (59%) | 1.59 | $10,859 |
+
+[Every MAMBA trade](paper-trading/mamba.csv) · Yahoo prices, can differ a little from TradingView
 
 - Total after fees: **-$968** over 30 trades (47 sessions watched)
 - Trading days with a trade: **22**, profitable: **9**, losing: 13
