@@ -39,6 +39,12 @@ q4          = input.int(1, "Runner: contracts kept after Target 3", minval = 0, 
 runnerPts   = input.float(300, "Runner: sell at this many points from the entry", minval = 1)
 spacing     = input.float(30, "Points between targets", minval = 1)
 trailRoom   = input.float(5, "After Targets 1, 2 and 3: stop this many points under that candle's low", minval = 0)
+gG          = "Gold chart (MGC): night session"
+gOpenHour   = input.int(20, "Gold: session opens at this hour (New York)", minval = 0, maxval = 23, group = gG)
+gWatch      = input.int(120, "Gold: look for entries this many minutes after the open (120 = 8-10 PM)", minval = 5, group = gG)
+gSpacing    = input.float(6, "Gold: points between targets", minval = 0.5, group = gG)
+gRunner     = input.float(60, "Gold: runner sells at this many points", minval = 1, group = gG)
+gRoom       = input.float(1, "Gold: stop this many points past the target candle", minval = 0, group = gG)
 lookback    = input.int(6, "Structure: the last this many 5-minute candles", minval = 2)
 push        = input.float(1.0, "Push: breakout body at least this many times the average body", minval = 0)
 watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = never before 9:30)", minval = 0)
@@ -50,12 +56,20 @@ showLines   = input.bool(true, "Draw the structure lines while watching")
 if timeframe.period != "5"
     runtime.error("Use a 5-minute chart. The rules are written for 5-minute candles.")
 
+// On a gold chart (since 2026-11-19) MAMBA trades the gold NIGHT session
+// (8-10 PM New York, Sunday to Thursday) with gold-sized targets; on the
+// Nasdaq chart nothing changes.
 NY        = "America/New_York"
-openT     = timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), 9, 30)
-closeT    = timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), 15, 55)
+isGold    = syminfo.root == "MGC" or syminfo.root == "GC"
+openT     = timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), isGold ? gOpenHour : 9, isGold ? 0 : 30)
 dow       = dayofweek(time, NY)
-weekday   = dow >= dayofweek.monday and dow <= dayofweek.friday
-inWatch   = weekday and time >= startFrom and time >= openT - watchBefore * 60000 and time < openT + watchAfter * 60000
+weekday   = isGold ? dow != dayofweek.friday and dow != dayofweek.saturday : dow >= dayofweek.monday and dow <= dayofweek.friday
+watchEnd  = isGold ? gWatch : watchAfter
+inWatch   = weekday and time >= startFrom and time >= openT - (isGold ? 0 : watchBefore) * 60000 and time < openT + watchEnd * 60000
+step      = isGold ? gSpacing : spacing
+runPts    = isGold ? gRunner : runnerPts
+room      = isGold ? gRoom : trailRoom
+var int closeAt = 0          // the open trade is closed here (3:55 PM Nasdaq, 8 hours after the gold open)
 
 top     = ta.highest(high, lookback)[1]
 bottom  = ta.lowest(low, lookback)[1]
@@ -107,10 +121,11 @@ if inWatch and not traded and strategy.position_size == 0
     if d != 0
         stopPx = d == 1 ? low : high
         id     = d == 1 ? "Long" : "Short"
-        t1Lvl  := close + d * spacing
-        t2Lvl  := close + d * 2 * spacing
-        t3Lvl  := close + d * 3 * spacing
-        t4Lvl  := close + d * runnerPts
+        t1Lvl  := close + d * step
+        t2Lvl  := close + d * 2 * step
+        t3Lvl  := close + d * 3 * step
+        t4Lvl  := close + d * runPts
+        closeAt := isGold ? openT + 8 * 3600000 - 300000 : timestamp(NY, year(time, NY), month(time, NY), dayofmonth(time, NY), 15, 55)
         strategy.entry(id, d == 1 ? strategy.long : strategy.short, qty = contracts, comment = "MAMBA " + (d == 1 ? "BUY " : "SELL ") + str.tostring(contracts),
              alert_message = syminfo.ticker + " MAMBA: " + (d == 1 ? "BUY " : "SELL SHORT ") + str.tostring(contracts) + " at " + px(close) + ", stop " + px(stopPx) + ", targets " + px(t1Lvl) + " / " + px(t2Lvl) + " / " + px(t3Lvl))
         setExits(id, stopPx, true)
@@ -126,14 +141,14 @@ if inWatch and not traded and strategy.position_size == 0
 if strategy.position_size != 0 and bar_index > entryBar
     id = dir == 1 ? "Long" : "Short"
     reached = (dir == 1 ? high >= t3Lvl : low <= t3Lvl) ? 3 : (dir == 1 ? high >= t2Lvl : low <= t2Lvl) ? 2 : (dir == 1 ? high >= t1Lvl : low <= t1Lvl) ? 1 : 0
-    newStop = dir == 1 ? low - trailRoom : high + trailRoom
+    newStop = dir == 1 ? low - room : high + room
     if reached > moved
         if dir * (newStop - stopLvl) > 0
             setExits(id, newStop, false)
             stopLvl := newStop
         moved := reached
 
-if strategy.position_size != 0 and time >= closeT
+if strategy.position_size != 0 and time >= closeAt
     strategy.close_all(comment = "MAMBA 3:55 close", alert_message = syminfo.ticker + " MAMBA: closed the rest at " + px(close))
 
 // MAMBA colors (yellow structure, white entry), so it never looks like the

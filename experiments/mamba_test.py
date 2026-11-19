@@ -80,7 +80,7 @@ def trade_partials(candles, i, d, stop, targets, plan, moves, pv):
 
 def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
           target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1,
-          exits=None, moves=None, plan=(2, 2, 2)):
+          exits=None, moves=None, plan=(2, 2, 2), levels="structure", margin=0.0):
     ev = R.timeline(data[instrument])
     last = ev[-1][0]
     first = (last - timedelta(days=days)).date()
@@ -112,6 +112,13 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
             if len(prior) < lookback or (prior and (t - cs[i - lookback][0]) > timedelta(minutes=5 * lookback + 70)):
                 continue     # a gap (market closed) inside the structure
             top, bottom = max(x.high for x in prior), min(x.low for x in prior)
+            if levels in ("key", "both"):           # the 2 hours before the open
+                pre = [x for tt, x in ev if start - timedelta(hours=2) <= tt < start]
+                if len(pre) < 12:
+                    break
+                kt, kb = max(x.high for x in pre), min(x.low for x in pre)
+                top, bottom = (kt, kb) if levels == "key" else (max(top, kt), min(bottom, kb))
+            top, bottom = top + margin, bottom - margin
             body = abs(c.close - (c.open if c.open is not None else prior[-1].close))
             avg = sum(abs(x.close - (x.open if x.open is not None else x.close)) for x in prior) / lookback
             d = 1 if c.close > top else -1 if c.close < bottom else 0
