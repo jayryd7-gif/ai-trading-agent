@@ -1,6 +1,6 @@
 # 👔 CEO check
 
-*Checked 2026-11-18 14:23 New York time. Plain code, no AI.*
+*Checked 2026-11-18 22:25 New York time. Plain code, no AI.*
 
 **❌ 2 broken rule(s)**: 9 passed, 0 warnings, 2 broken rules.
 
@@ -25,7 +25,7 @@
 
 ### Costs
 
-- ✅ Spent $11.13 so far this month on 96 AI runs; on pace for about $19 (budget $50).
+- ✅ Spent $11.37 so far this month on 97 AI runs; on pace for about $19 (budget $50).
 
 ### Agent health
 
@@ -33,7 +33,7 @@
 
 ### Ready to run on its own?
 
-- ✅ 23 of 15 trading days on the paper record
+- ✅ 24 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
