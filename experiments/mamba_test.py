@@ -87,6 +87,7 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
     pv = INSTRUMENTS[instrument]["point_value"]
     hour, minute = open_at or OPENS[instrument]
     results = []
+    mamba.details = []      # one dict per trade (day, side, entry, stop, net, times)
     by_day = {}
     for t, c in ev:
         by_day.setdefault(t.date(), []).append((t, c))
@@ -144,6 +145,10 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
             else:
                 net, out_at = trade(cs, i, d, stop, target_r, pv)
             results.append(net)
+            mamba.details.append({"day": day, "direction": "long" if d == 1 else "short",
+                                  "entry_time": t, "entry": round(c.close, 2),
+                                  "stop": round(stop, 2), "exit_time": out_at,
+                                  "net": round(net, 2)})
             taken += 1
             if taken >= max_trades or net > 0:
                 break             # a win ends the day; a loss allows another try

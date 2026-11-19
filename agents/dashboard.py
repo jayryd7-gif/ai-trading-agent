@@ -147,6 +147,16 @@ def paper_journal_section(how_many=15):
         line = opening_range_compare(rows, read_opening_range())
         if line:
             live.append(f"- 📐 {line} [Details](paper-trading/summary.md)")
+        import mamba_log
+        mrows = mamba_log.read_rows()
+        if mrows:
+            mnet = sum(float(r["net"]) for r in mrows)
+            mwon = sum(float(r["net"]) > 0 for r in mrows)
+            last = mrows[-1]
+            live.append(f"- 🐍 **MAMBA (tracking, kept forever): {_money(mnet)}** over {len(mrows)} "
+                        f"trades since {mrows[0]['day']}, {mwon} won. Last: {last['day']} "
+                        f"{last['market']} {last['direction']} {_money(float(last['net']))}. "
+                        "[Every trade](paper-trading/mamba.csv)")
         if hasattr(acct, "attempts"):            # the Tradeify practice account
             from tradeify import RULES as T, floor, payout_status
             a = acct.a

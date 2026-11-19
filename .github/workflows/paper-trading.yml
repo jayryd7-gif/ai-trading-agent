@@ -40,12 +40,18 @@ jobs:
         env:
           PYTHONPATH: .
 
+      - name: Add finished MAMBA trades to its permanent log
+        if: ${{ !cancelled() }}
+        run: python agents/mamba_log.py
+        env:
+          PYTHONPATH: .
+
       - name: Save new results and refresh the dashboard
         if: ${{ !cancelled() }}
         run: |
           # The summary's timestamp changes every run; only save real changes.
           if git diff --quiet -- paper-trading/trades.csv paper-trading/paper-journal.md \
-                                 paper-trading/open-trades.json paper-trading/opening-range.csv \
+                                 paper-trading/open-trades.json paper-trading/opening-range.csv paper-trading/mamba.csv \
              && git ls-files --error-unmatch paper-trading/trades.csv >/dev/null 2>&1; then
             echo "No new sessions recorded"
             exit 0
