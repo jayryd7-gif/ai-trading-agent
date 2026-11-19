@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-19 14:07 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-19 14:28 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,7 +21,7 @@ Last updated 2026-11-19 14:07 New York time. Everything here is written by softw
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 26 hours ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 26 hours ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 26 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 3 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -66,7 +66,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**❌ 2 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**❌ 4 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
@@ -96,7 +96,8 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Agent health
 
-- ✅ Every research brief worked on its last run.
+- ❌ World brief failed on its last run. See its last-run-log.txt.
+- ❌ Crypto brief failed on its last run. See its last-run-log.txt.
 
 ##### Ready to run on its own?
 
