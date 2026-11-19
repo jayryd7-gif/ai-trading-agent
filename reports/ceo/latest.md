@@ -1,8 +1,8 @@
 # 👔 CEO check
 
-*Checked 2026-11-19 02:50 New York time. Plain code, no AI.*
+*Checked 2026-11-19 14:28 New York time. Plain code, no AI.*
 
-**❌ 2 broken rule(s)**: 9 passed, 0 warnings, 2 broken rules.
+**❌ 4 broken rule(s)**: 8 passed, 0 warnings, 4 broken rules.
 
 ### Futures paper trader
 
@@ -29,7 +29,8 @@
 
 ### Agent health
 
-- ✅ Every research brief worked on its last run.
+- ❌ World brief failed on its last run. See its last-run-log.txt.
+- ❌ Crypto brief failed on its last run. See its last-run-log.txt.
 
 ### Ready to run on its own?
 
