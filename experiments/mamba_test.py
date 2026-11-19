@@ -80,7 +80,7 @@ def trade_partials(candles, i, d, stop, targets, plan, moves, pv):
 
 def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
           target_r=1.0, stop_mode="structure", room=0.0, open_at=None, max_trades=1,
-          exits=None, moves=None, plan=(2, 2, 2), levels="structure", margin=0.0):
+          exits=None, moves=None, plan=(2, 2, 2), levels="structure", margin=0.0, near_key=0.0):
     ev = R.timeline(data[instrument])
     last = ev[-1][0]
     first = (last - timedelta(days=days)).date()
@@ -124,6 +124,12 @@ def mamba(instrument, data, days, lookback=12, push=1.0, before=60, after=60,
             d = 1 if c.close > top else -1 if c.close < bottom else 0
             if d == 0 or body < push * avg or d * (c.close - (c.open or c.close)) <= 0:
                 continue
+            if near_key:          # skip a close just past the 2-hour key level (not clear)
+                pre = [x for tt, x in ev if start - timedelta(hours=2) <= tt < start]
+                if pre:
+                    key = max(x.high for x in pre) if d == 1 else min(x.low for x in pre)
+                    if 0 <= d * (c.close - key) < near_key:
+                        continue
             if stop_mode == "structure":
                 stop = (bottom if d == 1 else top) - d * room
             else:                                   # the breakout candle's far end

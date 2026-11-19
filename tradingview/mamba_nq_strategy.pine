@@ -23,6 +23,8 @@
 // - Runner (since 2026-11-10): sell 2 / 2 / 1 at the three targets and keep
 //   1 contract running to "runnerPts" (300 points), or until the moved stop
 //   or the 3:55 PM close.
+// - Not clear (since 2026-11-19): on Nasdaq a breakout candle that closes
+//   less than 10 points past the 7:30-9:30 high/low is skipped.
 // - One trade a day. Anything still open at 3:55 PM is closed.
 // Fees: $0.50 per contract each way, like the LIVE 50K script.
 strategy("MAMBA NQ - Breakout Scalp (50K tracking)", overlay = true,
@@ -51,6 +53,7 @@ watchBefore = input.int(0, "Entries from this many minutes before 9:30 (0 = neve
 watchAfter  = input.int(90, "Until this many minutes after 9:30 (90 = 11:00 AM)", minval = 5)
 startFrom   = input.time(timestamp("2026-09-04T00:00:00-04:00"), "Count trades from (New York time)")
 showLines   = input.bool(true, "Draw the structure lines while watching")
+nearKey     = input.float(10, "Nasdaq: skip a breakout that closes less than this many points past the 7:30-9:30 high/low (0 = off)", minval = 0)
 // ------------------------------------------
 
 if timeframe.period != "5"
@@ -70,6 +73,18 @@ step      = isGold ? gSpacing : spacing
 runPts    = isGold ? gRunner : runnerPts
 room      = isGold ? gRoom : trailRoom
 var int closeAt = 0          // the open trade is closed here (3:55 PM Nasdaq, 8 hours after the gold open)
+
+// The 2 hours before the open (the "blue line" key levels). On Nasdaq a
+// breakout that closes only just past them is not clear (since 2026-11-19).
+inPre = weekday and time >= openT - 7200000 and time < openT
+var float keyHi = na
+var float keyLo = na
+if inPre and not inPre[1]
+    keyHi := high
+    keyLo := low
+else if inPre
+    keyHi := math.max(keyHi, high)
+    keyLo := math.min(keyLo, low)
 
 top     = ta.highest(high, lookback)[1]
 bottom  = ta.lowest(low, lookback)[1]
@@ -117,7 +132,10 @@ setExits(string id, float stopPx, bool all) =>
              alert_profit = winMsg("Runner target", q4, t4Lvl), alert_loss = stopMsg(q4, stopPx))
 
 if inWatch and not traded and strategy.position_size == 0
-    d = longSig and close - low > 0 ? 1 : shortSig and high - close > 0 ? -1 : 0
+    d0 = longSig and close - low > 0 ? 1 : shortSig and high - close > 0 ? -1 : 0
+    keyNow = d0 == 1 ? keyHi : keyLo
+    unclear = not isGold and nearKey > 0 and d0 != 0 and not na(keyNow) and d0 * (close - keyNow) >= 0 and d0 * (close - keyNow) < nearKey
+    d = unclear ? 0 : d0
     if d != 0
         stopPx = d == 1 ? low : high
         id     = d == 1 ? "Long" : "Short"
