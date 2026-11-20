@@ -1,8 +1,29 @@
-
-1 Failed download:
-['SQM']: OperationalError('database is locked')
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: REMX"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: URA"}}}
-Saved reports/stocks/2026-11-18-stock-brief.md
-Tokens used: 84983 in, 4207 out
-Estimated cost: $0.26
+Traceback (most recent call last):
+  File "/home/runner/work/ai-trading-agent/ai-trading-agent/agents/stock_research.py", line 243, in <module>
+    main()
+  File "/home/runner/work/ai-trading-agent/ai-trading-agent/agents/stock_research.py", line 220, in main
+    body, tokens_in, tokens_out = build_brief(client, now)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ai-trading-agent/ai-trading-agent/agents/stock_research.py", line 205, in build_brief
+    text, tokens_in, tokens_out, cut = run_call(client, prompt, use_search=True,
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ai-trading-agent/ai-trading-agent/agents/research_tools.py", line 145, in run_call
+    response = client.messages.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/anthropic/resources/messages/messages.py", line 1289, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChEZS3yNsK68uCJqstKe4'}
