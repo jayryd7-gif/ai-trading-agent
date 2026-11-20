@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-20 13:45 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-20 14:05 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -68,7 +68,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**❌ 4 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**❌ 5 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
@@ -77,7 +77,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $1,682 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $1,920 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -100,6 +100,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ World brief failed on its last run. See its last-run-log.txt.
 - ❌ Crypto brief failed on its last run. See its last-run-log.txt.
+- ❌ Stock brief failed on its last run. See its last-run-log.txt.
 
 ##### Ready to run on its own?
 
@@ -107,7 +108,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.93 (needs 1.3 or more), total $-553 over 31 trades
+- ⏳ profit factor 0.96 (needs 1.3 or more), total $-316 over 32 trades
 - ✅ worst trading day $-1,148 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
