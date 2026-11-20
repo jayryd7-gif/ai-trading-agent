@@ -1,6 +1,6 @@
 # 👔 CEO check
 
-*Checked 2026-11-19 22:13 New York time. Plain code, no AI.*
+*Checked 2026-11-20 02:41 New York time. Plain code, no AI.*
 
 **❌ 4 broken rule(s)**: 8 passed, 0 warnings, 4 broken rules.
 
@@ -25,7 +25,7 @@
 
 ### Costs
 
-- ✅ Spent $11.37 so far this month on 97 AI runs; on pace for about $18 (budget $50).
+- ✅ Spent $11.37 so far this month on 97 AI runs; on pace for about $17 (budget $50).
 
 ### Agent health
 
