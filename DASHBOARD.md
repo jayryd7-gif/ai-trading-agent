@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-20 12:00 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-20 12:17 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -20,8 +20,8 @@ Last updated 2026-11-20 12:00 New York time. Everything here is written by softw
 | 🟡 | Market brief: gold | Writes the brief before the Asia session | 4 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 days ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 48 hours ago | daily about 5:30-6:30 AM New York time |
-| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 47 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 48 hours ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 1 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 15 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -30,6 +30,7 @@ Last updated 2026-11-20 12:00 New York time. Everything here is written by softw
 
 - ❌ **World news brief** failed on its last run: `anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & B` ([full log](reports/news/last-run-log.txt))
 - ❌ **Crypto brief** failed on its last run: `anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & B` ([full log](reports/crypto/last-run-log.txt))
+- ❌ **Stock brief** failed on its last run: `anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & B` ([full log](reports/stocks/last-run-log.txt))
 
 Open the repo's Actions tab on GitHub for more detail.
 
