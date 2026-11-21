@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-20 16:01 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-20 19:56 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,8 +21,8 @@ Last updated 2026-11-20 16:01 New York time. Everything here is written by softw
 | 🟢 | World news brief | Overnight news and today's events: politics, economy, war, trade | 2 days ago | daily about 5-6 AM New York time |
 | 🟢 | Crypto research brief | Pumping coins, whales, government and adoption news | 2 days ago | daily about 5:30-6:30 AM New York time |
 | 🟢 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 2 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 2 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 6 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -304,17 +304,17 @@ Two paper accounts run side by side: **ours** ($10K CAD, cheaper stocks) and a *
 
 | Account | Up / down % | Wins / losses | Open | Since |
 |---|---|---|---|---|
-| Ours ($10K CAD) | **-1.9%** | 0 / 0 | 4 | 2026-11-16 |
-| Ryan-style ($200K USD) | **-0.2%** | 0 / 0 | 3 | 2026-11-16 |
+| Ours ($10K CAD) | **-4.5%** | 0 / 0 | 4 | 2026-11-16 |
+| Ryan-style ($200K USD) | **-1.9%** | 0 / 0 | 4 | 2026-11-16 |
 
 ### Ours ($10K CAD)
 
-Updated 2026-11-19 20:25 New York. Started 2026-11-16.
+Updated 2026-11-20 19:56 New York. Started 2026-11-16.
 
 | | |
 |---|---|
-| Account value | **$9,815 CAD** ($6,857 USD) |
-| Up / down | **-185 CAD** (-1.9%) |
+| Account value | **$9,553 CAD** ($6,674 USD) |
+| Up / down | **-447 CAD** (-4.5%) |
 | Closed trades | 0 wins, 0 losses |
 | Cash | $10,217 CAD, of which $6,011 CAD is set aside to cover the puts |
 
@@ -324,23 +324,23 @@ Updated 2026-11-19 20:25 New York. Started 2026-11-16.
 
 | Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now | Expiry | Up / down CAD | Up / down % |
 |---|---|---|---|---|---|---|---|---|---|
-| NU | 1 put $12 | 2026-11-16 | - | got $0.37 | $0.69 | $12.08 | 2026-12-18 | 🔴 -46 | -2.7% |
-| RIG | 1 put $5 | 2026-11-16 | - | got $0.18 | $0.39 | $5.03 | 2026-12-18 | 🔴 -30 | -4.1% |
-| RIVN | 1 put $11 | 2026-11-16 | - | got $0.44 | $0.65 | $11.80 | 2026-12-18 | 🔴 -31 | -2.0% |
-| SOFI | 1 put $14 | 2026-11-16 | - | got $0.55 | $1.09 | $14.11 | 2026-12-18 | 🔴 -78 | -3.9% |
+| NU | 1 put $12 | 2026-11-16 | - | got $0.37 | $1.01 | $11.27 | 2026-12-18 | 🔴 -93 | -5.4% |
+| RIG | 1 put $5 | 2026-11-16 | - | got $0.18 | $0.48 | $4.64 | 2026-12-18 | 🔴 -43 | -6.0% |
+| RIVN | 1 put $11 | 2026-11-16 | - | got $0.44 | $1.29 | $10.33 | 2026-12-18 | 🔴 -124 | -7.9% |
+| SOFI | 1 put $14 | 2026-11-16 | - | got $0.55 | $1.85 | $12.48 | 2026-12-18 | 🔴 -188 | -9.4% |
 
 [Account](paper-trading/wheel/summary.md) · [Every move](paper-trading/wheel/journal.md)
 
 ### Ryan-style ($200K USD, his stocks)
 
-Updated 2026-11-19 20:25 New York. Started 2026-11-16.
+Updated 2026-11-20 19:56 New York. Started 2026-11-16.
 
 | | |
 |---|---|
-| Account value | **$199,523 USD** |
-| Up / down | **-477 USD** (-0.2%) |
+| Account value | **$196,280 USD** |
+| Up / down | **-3,720 USD** (-1.9%) |
 | Closed trades | 0 wins, 0 losses |
-| Cash | $202,343 USD, of which $44,200 USD is set aside to cover the puts |
+| Cash | $203,471 USD, of which $56,700 USD is set aside to cover the puts |
 
 ![Account profit / loss](paper-trading/wheel-ryan/value.svg)
 
@@ -348,9 +348,10 @@ Updated 2026-11-19 20:25 New York. Started 2026-11-16.
 
 | Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now | Expiry | Up / down USD | Up / down % |
 |---|---|---|---|---|---|---|---|---|---|
-| CRDO | 1 put $105 | 2026-11-16 | - | got $8.90 | $9.45 | $122.94 | 2026-12-18 | 🔴 -56 | -0.5% |
-| HOOD | 3 puts $65 | 2026-11-16 | - | got $3.02 | $3.95 | $69.17 | 2026-12-18 | 🔴 -279 | -1.4% |
-| NVDA | 1 put $142 | 2026-11-16 | - | got $5.49 | $6.90 | $150.96 | 2026-12-18 | 🔴 -142 | -1.0% |
+| BE | 1 put $125 | 2026-11-20 | - | got $11.29 | $11.29 | $142.39 | 2026-12-18 | 🔴 -1 | -0.0% |
+| CRDO | 1 put $105 | 2026-11-16 | - | got $8.90 | $18.10 | $99.86 | 2026-12-18 | 🔴 -921 | -8.8% |
+| HOOD | 3 puts $65 | 2026-11-16 | - | got $3.02 | $7.35 | $62.17 | 2026-12-18 | 🔴 -1,299 | -6.7% |
+| NVDA | 1 put $142 | 2026-11-16 | - | got $5.49 | $20.48 | $125.53 | 2026-12-18 | 🔴 -1,499 | -10.6% |
 
 [Account](paper-trading/wheel-ryan/summary.md) · [Every move](paper-trading/wheel-ryan/journal.md)
 
@@ -358,12 +359,12 @@ Updated 2026-11-19 20:25 New York. Started 2026-11-16.
 
 A separate cash-flow test: SPY/QQQ iron condors, about 30 days out. Backtest: about $100-250 CAD a month, with drops of 16-30% along the way.
 
-Updated 2026-11-19 20:25 New York. Started 2026-11-16. Goal: steady monthly cash flow from SPY/QQQ iron condors.
+Updated 2026-11-20 19:56 New York. Started 2026-11-16. Goal: steady monthly cash flow from SPY/QQQ iron condors.
 
 | | |
 |---|---|
-| Account value | **$9,926 CAD** ($6,935 USD) |
-| Up / down | **-74 CAD** (-0.7%) |
+| Account value | **$9,524 CAD** ($6,655 USD) |
+| Up / down | **-476 CAD** (-4.8%) |
 | Closed this month (2026-11) | **+0 CAD** |
 | Closed trades | 0 wins, 0 losses |
 | Money at risk now | $3,154 CAD (limit 36% of the account) |
@@ -375,8 +376,8 @@ Updated 2026-11-19 20:25 New York. Started 2026-11-16. Goal: steady monthly cash
 
 | Underlying | Condor | Opened | Price then / now | Credit | Worth now | Up / down CAD | Max loss CAD |
 |---|---|---|---|---|---|---|---|
-| QQQ | 1x 600/615 puts + 708/721 calls exp 2026-12-18 | 2026-11-16 | $661.75 / $659.51 | $4.31 | $4.44 | 🔴 -23 | 1,534 |
-| SPY | 1x 690/703 puts + 772/787 calls exp 2026-12-18 | 2026-11-16 | $739.95 / $730.20 | $3.71 | $4.04 | 🔴 -52 | 1,620 |
+| QQQ | 1x 600/615 puts + 708/721 calls exp 2026-12-18 | 2026-11-16 | $661.75 / $608.45 | $4.31 | $6.09 | 🔴 -259 | 1,534 |
+| SPY | 1x 690/703 puts + 772/787 calls exp 2026-12-18 | 2026-11-16 | $739.95 / $689.81 | $3.71 | $5.20 | 🔴 -217 | 1,620 |
 
 | Month | Profit / loss |
 |---|---|
