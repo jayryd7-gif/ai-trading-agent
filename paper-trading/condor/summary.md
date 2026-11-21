@@ -1,11 +1,11 @@
 # Iron condor paper account ($10K CAD)
 
-Updated 2026-11-19 20:25 New York. Started 2026-11-16. Goal: steady monthly cash flow from SPY/QQQ iron condors.
+Updated 2026-11-20 19:56 New York. Started 2026-11-16. Goal: steady monthly cash flow from SPY/QQQ iron condors.
 
 | | |
 |---|---|
-| Account value | **$9,926 CAD** ($6,935 USD) |
-| Up / down | **-74 CAD** (-0.7%) |
+| Account value | **$9,524 CAD** ($6,655 USD) |
+| Up / down | **-476 CAD** (-4.8%) |
 | Closed this month (2026-11) | **+0 CAD** |
 | Closed trades | 0 wins, 0 losses |
 | Money at risk now | $3,154 CAD (limit 36% of the account) |
@@ -18,8 +18,8 @@ Updated 2026-11-19 20:25 New York. Started 2026-11-16. Goal: steady monthly cash
 
 | Underlying | Condor | Opened | Price then / now | Credit | Worth now | Up / down CAD | Max loss CAD |
 |---|---|---|---|---|---|---|---|
-| QQQ | 1x 600/615 puts + 708/721 calls exp 2026-12-18 | 2026-11-16 | $661.75 / $659.51 | $4.31 | $4.44 | 🔴 -23 | 1,534 |
-| SPY | 1x 690/703 puts + 772/787 calls exp 2026-12-18 | 2026-11-16 | $739.95 / $730.20 | $3.71 | $4.04 | 🔴 -52 | 1,620 |
+| QQQ | 1x 600/615 puts + 708/721 calls exp 2026-12-18 | 2026-11-16 | $661.75 / $608.45 | $4.31 | $6.09 | 🔴 -259 | 1,534 |
+| SPY | 1x 690/703 puts + 772/787 calls exp 2026-12-18 | 2026-11-16 | $739.95 / $689.81 | $3.71 | $5.20 | 🔴 -217 | 1,620 |
 
 ## Cash flow by month (closed trades, CAD)
 
