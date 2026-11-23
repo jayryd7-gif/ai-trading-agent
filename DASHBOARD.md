@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-22 21:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-22 21:29 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,7 +21,7 @@ Last updated 2026-11-22 21:13 New York time. Everything here is written by softw
 | 🟡 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 days ago | daily about 5-6 AM New York time |
 | 🟡 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 days ago | daily about 5:30-6:30 AM New York time |
 | 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 4 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 days ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 48 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -36,7 +36,7 @@ Open the repo's Actions tab on GitHub for more detail.
 
 ## 📒 Trade journal (paper)
 
-- **Tradeify 50K evaluation: balance $51,044**, $1,920 above the drawdown floor, $1,956 to pass; today $652, $1,902 left before the daily loss limit. [Details](paper-trading/summary.md)
+- **Tradeify 50K evaluation: balance $50,440**, $1,314 above the drawdown floor, $2,560 to pass; today -$605, $645 left before the daily loss limit. [Details](paper-trading/summary.md)
 - 📐 Opening range (9:30-10:00, tracked, not traded): $2,675 over 13 trades in 15 sessions since 2026-11-02, vs -$2,600 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
 - 🐍 **MAMBA (tracking, kept forever): $10,819** over 90 trades since 2026-09-20, 53 won. Last: 2026-11-20 nasdaq short -$355. [Every trade](paper-trading/mamba.csv)
 
@@ -44,6 +44,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 | Date | Market | Side | Lots | Entry | Target 1 | Target 2 | Target 3 / out | Result | What could have gone better | See it |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | Gold | long | 3 | 3618.1 @ 20:10<br>stop 3585.0 | 1 @ 3624.1, 20:15 ($60) | – | stop: 2 @ 3585.0, 21:10 (-$662) | ❌ **-$605**<br>out 21:10 | • Target 1 paid $60, but the stop stayed at the start. Moving it to breakeven after Target 1 would have ended this trade at about $60 instead of -$602.<br>• The entry was 30.10 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-11-22-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-20 | Nasdaq | long | 3 | 26432.0 @ 09:55<br>stop 26189.0 | 1 @ 26462.0, 10:00 ($60) | 1 @ 26492.0, 10:00 ($120) | stop: 1 @ 26462.0, 10:05 ($60) | ✅ **$237**<br>out 10:05 | • Moving the stop to Target 1 after Target 2 locked in the profit; price never reached Target 3 afterwards. | [📈 chart](paper-trading/charts/2026-11-20-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-11-20 | Gold | short | 5 | 3576.0 @ 20:25<br>stop 3592.3 | 1 @ 3570.0, 20:40 ($60) | 2 @ 3564.0, 20:40 ($240) | stop: 2 @ 3570.0, 20:45 ($120) | ✅ **$415**<br>out 20:45 | • The last contracts were stopped at Target 1, then price reached Target 3 by 21:20. A looser stop after Target 2 would have caught it. | [📈 chart](paper-trading/charts/2026-11-19-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-19 | Nasdaq | – | 0 | skipped: risk too big | | | | $0 | Breakout short at 10:15, but even the small size risked $1,434 and only $1,150 could be lost today without breaking the daily loss limit or the drawdown, so it was skipped. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
@@ -58,11 +59,10 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 | 2026-11-13 | Gold | long | 5 | 3886.5 @ 18:50<br>stop 3882.3 | 1 @ 3892.5, 19:05 ($60) | 2 @ 3898.5, 20:15 ($240) | 2 @ 3904.5, 20:15 ($360) | ✅ **$655**<br>out 20:15 | • Price kept going 15.90 points past Target 3 (by 20:20). Letting the last 2 contract(s) run with a trailing stop could have made up to $318 more. | [📈 chart](paper-trading/charts/2026-11-12-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
 | 2026-11-12 | Nasdaq | – | 0 | skipped: risk too big | | | | $0 | Breakout long at 09:40, but even the small size risked $808 and only $589 could be lost today without breaking the daily loss limit or the drawdown, so it was skipped. | [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 | 2026-11-12 | Gold | long | 5 | 4004.4 @ 20:15<br>stop 3997.4 | – | – | stop: 5 @ 3997.4, 20:30 (-$350) | ❌ **-$355**<br>out 20:30 | • Price never reached Target 1: the best it did was +0.70 points, and Target 1 needed 6.<br>• The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.<br>• The entry was 3.70 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-11-11-gold.svg) · [TV](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) |
-| 2026-11-11 | Nasdaq | short | 5 | 28246.75 @ 09:45<br>stop 28362.0 | 1 @ 28216.75, 09:50 ($60) | – | stop: 4 @ 28362.0, 10:25 (-$922) | ❌ **-$867**<br>out 10:25 | • Target 1 paid $60, but the stop stayed at the start. Moving it to breakeven after Target 1 would have ended this trade at about $60 instead of -$862.<br>• The entry was 65.00 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk. | [📈 chart](paper-trading/charts/2026-11-11-nasdaq.svg) · [TV](https://www.tradingview.com/chart/?symbol=CME_MINI%3AMNQ1%21&interval=5) |
 
 **Latest trade:**
 
-![Latest paper trade](paper-trading/charts/2026-11-20-nasdaq.svg)
+![Latest paper trade](paper-trading/charts/2026-11-22-gold.svg)
 
 [Full journal with every fill](paper-trading/paper-journal.md)
 
@@ -216,13 +216,13 @@ At this pace: about $10 a month.
 
 [Every MAMBA trade](paper-trading/mamba.csv) · Yahoo prices, can differ a little from TradingView
 
-- Total after fees: **-$316** over 32 trades (49 sessions watched)
-- Trading days with a trade: **23**, profitable: **10**, losing: 13
-- Win rate: 50%
-- Profit factor: 0.96
+- Total after fees: **-$921** over 33 trades (50 sessions watched)
+- Trading days with a trade: **24**, profitable: **10**, losing: 14
+- Win rate: 48%
+- Profit factor: 0.89
 - Biggest drop from a high (max drawdown): $4,620
-- Room left before the $4,000 max drawdown: **$1,440**
-- Progress toward a prop demo: **23 of 20** trading days
+- Room left before the $4,000 max drawdown: **$834**
+- Progress toward a prop demo: **24 of 20** trading days
 
 ![Nasdaq since Nov 15: MAMBA, Opening Range, Session Breakout](reports/charts/nasdaq-scripts-live.svg)
 
@@ -244,13 +244,14 @@ At this pace: about $10 a month.
 | Market | Trades | Wins | Total after fees |
 |---|---|---|---|
 | nasdaq | 14 | 6 | -$3,302 |
-| gold | 18 | 10 | $2,986 |
+| gold | 19 | 10 | $2,381 |
 
 
 #### Daily results
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
+| 2026-11-23 | gold long | -$605 |
 | 2026-11-20 | gold short, nasdaq long | $652 |
 | 2026-11-19 | gold no trade, nasdaq skipped, risk too big for today's limits | $0 |
 | 2026-11-18 | gold short, nasdaq skipped, risk too big for today's limits | $415 |
