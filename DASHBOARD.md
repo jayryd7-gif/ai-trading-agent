@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-22 11:23 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-22 21:13 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -17,12 +17,12 @@ Last updated 2026-11-22 11:23 New York time. Everything here is written by softw
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
 | 🟡 | Market brief: nasdaq | Writes the brief before the New York session | 4 days ago | weekdays about 7-8 AM New York time |
-| 🟡 | Market brief: gold | Writes the brief before the Asia session | 5 days ago | Sun-Thu evenings about 6-7 PM New York time |
+| 🟡 | Market brief: gold | Writes the brief before the Asia session | 6 days ago | Sun-Thu evenings about 6-7 PM New York time |
 | 🟡 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 days ago | daily about 5-6 AM New York time |
 | 🟡 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 days ago | daily about 5:30-6:30 AM New York time |
 | 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 4 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 43 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 38 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 2 days ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 48 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -119,31 +119,31 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 ## 📅 Weekly report
 
 <details>
-<summary><b>Week ending 2026-11-15</b></summary>
+<summary><b>Week ending 2026-11-22</b></summary>
 
 #### The week in one look
 
-- **Futures paper:** -$419 this week
+- **Futures paper:** +$812 this week
 - **Rotation bot:** $0.00 this week
-- **Buy-and-hold bot:** -$145.27 this week
-- **AI costs:** $4.14 this week
+- **Buy-and-hold bot:** -$49.50 this week
+- **AI costs:** $2.29 this week
 
 #### Futures paper trading
 
-- **This week:** -$419 after fees, 7 trades (3 wins, 4 losses), 3 sessions with no trade
-- **Since paper trading began:** -$1,128 over 25 trades
-- Nasdaq (MNQ): -$1,297 over 3 trades
-- Gold (MGC): +$878 over 4 trades
+- **This week:** +$812 after fees, 7 trades (5 wins, 2 losses), 3 sessions with no trade
+- **Since paper trading began:** -$316 over 32 trades
+- Nasdaq (MNQ): -$288 over 3 trades
+- Gold (MGC): +$1,100 over 4 trades
 
 | Day | Market | Side | Entry | Result |
 |---|---|---|---|---|
-| 2026-11-09 | gold | long | 4115.0 at 20:15 | -$77 |
-| 2026-11-10 | nasdaq | long | 28049.75 at 10:00 | -$667 |
-| 2026-11-11 | gold | long | 4055.3 at 20:35 | +$655 |
-| 2026-11-11 | nasdaq | short | 28246.75 at 09:45 | -$867 |
-| 2026-11-12 | gold | long | 4004.4 at 20:15 | -$355 |
-| 2026-11-13 | gold | long | 3886.5 at 18:50 | +$655 |
-| 2026-11-13 | nasdaq | short | 28266.0 at 09:35 | +$237 |
+| 2026-11-16 | gold | short | 3875.3 at 20:05 | +$655 |
+| 2026-11-16 | nasdaq | short | 27437.0 at 10:00 | +$237 |
+| 2026-11-17 | gold | short | 3849.2 at 20:20 | -$385 |
+| 2026-11-17 | nasdaq | short | 27266.75 at 09:35 | -$762 |
+| 2026-11-18 | gold | short | 3810.4 at 20:45 | +$415 |
+| 2026-11-20 | gold | short | 3576.0 at 20:25 | +$415 |
+| 2026-11-20 | nasdaq | long | 26432.0 at 09:55 | +$237 |
 
 #### TradingView strategy
 
@@ -159,32 +159,31 @@ Export the List of trades from each chart and say "update TradingView" to refres
 | Bot | Start of week | End of week | Change | Since it started ($1,000) |
 |---|---|---|---|---|
 | Rotation bot | $979.35 | $979.35 | $0.00 (+0.0%) | -$20.65 |
-| Buy-and-hold bot | $876.58 | $731.31 | -$145.27 (-16.6%) | -$268.69 |
+| Buy-and-hold bot | $753.33 | $703.83 | -$49.50 (-6.6%) | -$296.17 |
 
 **Alpaca copy:** 0 order(s) this week.
 
 #### Market briefs (Nasdaq and gold)
 
-- 7 briefs scored; 3 gave a direction, 1 of those were right.
-- 4 were Neutral.
+- 2 briefs scored; 0 gave a direction, 0 of those were right.
+- 2 were Neutral.
 
 #### CEO check
 
-**❌ Rules were broken this week.** 17 checks ran. [Latest CEO check](../ceo/latest.md)
+**❌ Rules were broken this week.** 18 checks ran. [Latest CEO check](../ceo/latest.md)
 
 #### AI costs this week
 
 | Agent | Runs | Cost |
 |---|---|---|
-| crypto-brief | 7 | $1.78 |
-| market-brief-nasdaq | 6 | $0.72 |
-| world-brief | 7 | $0.61 |
-| stock-brief | 3 | $0.54 |
-| market-brief-gold | 4 | $0.43 |
-| x-posts | 12 | $0.06 |
-| **Total** | 39 | **$4.14** |
+| crypto-brief | 3 | $0.72 |
+| market-brief-nasdaq | 3 | $0.61 |
+| stock-brief | 2 | $0.48 |
+| world-brief | 3 | $0.30 |
+| market-brief-gold | 1 | $0.17 |
+| **Total** | 12 | **$2.29** |
 
-At this pace: about $18 a month.
+At this pace: about $10 a month.
 
 [Main dashboard](../../DASHBOARD.md) · [Crypto dashboard](../../CRYPTO-DASHBOARD.md)
 
