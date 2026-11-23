@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-22 22:29 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-23 03:06 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -16,12 +16,12 @@ Last updated 2026-11-22 22:29 New York time. Everything here is written by softw
 
 | | Agent | What it does | Last ran | Runs |
 |---|---|---|---|---|
-| 🟡 | Market brief: nasdaq | Writes the brief before the New York session | 4 days ago | weekdays about 7-8 AM New York time |
+| 🟡 | Market brief: nasdaq | Writes the brief before the New York session | 5 days ago | weekdays about 7-8 AM New York time |
 | 🟡 | Market brief: gold | Writes the brief before the Asia session | 6 days ago | Sun-Thu evenings about 6-7 PM New York time |
-| 🟡 | World news brief | Overnight news and today's events: politics, economy, war, trade | 4 days ago | daily about 5-6 AM New York time |
-| 🟡 | Crypto research brief | Pumping coins, whales, government and adoption news | 4 days ago | daily about 5:30-6:30 AM New York time |
-| 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 4 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 1 hours ago | after each session ends |
+| 🟡 | World news brief | Overnight news and today's events: politics, economy, war, trade | 5 days ago | daily about 5-6 AM New York time |
+| 🟡 | Crypto research brief | Pumping coins, whales, government and adoption news | 5 days ago | daily about 5:30-6:30 AM New York time |
+| 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 5 days ago | Mon, Wed, Fri about 6-7 AM New York time |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 6 hours ago | after each session ends |
 | 🟢 | Scorer | Checks each lean against what price did | 2 days ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
@@ -77,7 +77,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ✅ Tradeify practice evaluation: $1,920 above the $2,000 trailing drawdown floor.
+- ✅ Tradeify practice evaluation: $1,314 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -94,7 +94,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Costs
 
-- ✅ Spent $11.37 so far this month on 97 AI runs; on pace for about $16 (budget $50).
+- ✅ Spent $11.37 so far this month on 97 AI runs; on pace for about $15 (budget $50).
 
 ##### Agent health
 
@@ -104,11 +104,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ✅ 25 of 15 trading days on the paper record
+- ✅ 26 of 15 trading days on the paper record
 - ⏳ 2 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.96 (needs 1.3 or more), total $-316 over 32 trades
+- ⏳ profit factor 0.89 (needs 1.3 or more), total $-921 over 33 trades
 - ✅ worst trading day $-1,148 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
