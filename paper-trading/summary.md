@@ -1,10 +1,10 @@
 # Paper trading summary
 
-*Updated 2026-11-22 21:29 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-23 14:27 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$921** over 33 trades (50 sessions watched)
+- Total after fees: **-$921** over 33 trades (51 sessions watched)
 - Trading days with a trade: **24**, profitable: **10**, losing: 14
 - Win rate: 48%
 - Profit factor: 0.89
@@ -58,7 +58,7 @@ Opening range (9:30-10:00, tracked, not traded): $2,675 over 13 trades in 15 ses
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-11-23 | gold long | -$605 |
+| 2026-11-23 | gold long, nasdaq skipped, risk too big for today's limits | -$605 |
 | 2026-11-20 | gold short, nasdaq long | $652 |
 | 2026-11-19 | gold no trade, nasdaq skipped, risk too big for today's limits | $0 |
 | 2026-11-18 | gold short, nasdaq skipped, risk too big for today's limits | $415 |
