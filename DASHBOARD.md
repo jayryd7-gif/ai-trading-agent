@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-23 18:28 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-23 19:45 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -21,8 +21,8 @@ Last updated 2026-11-23 18:28 New York time. Everything here is written by softw
 | 🟡 | World news brief | Overnight news and today's events: politics, economy, war, trade | 5 days ago | daily about 5-6 AM New York time |
 | 🟡 | Crypto research brief | Pumping coins, whales, government and adoption news | 5 days ago | daily about 5:30-6:30 AM New York time |
 | 🟡 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 5 days ago | Mon, Wed, Fri about 6-7 AM New York time |
-| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 4 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
+| 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 3 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
@@ -37,8 +37,8 @@ Open the repo's Actions tab on GitHub for more detail.
 ## 📒 Trade journal (paper)
 
 - **Tradeify 50K evaluation: balance $50,440**, $1,314 above the drawdown floor, $2,560 to pass; today -$605, $645 left before the daily loss limit. [Details](paper-trading/summary.md)
-- 📐 Opening range (9:30-10:00, tracked, not traded): $2,675 over 13 trades in 15 sessions since 2026-11-02, vs -$2,600 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
-- 🐍 **MAMBA (tracking, kept forever): $11,346** over 91 trades since 2026-09-20, 54 won. Last: 2026-11-22 gold long $527. [Every trade](paper-trading/mamba.csv)
+- 📐 Opening range (9:30-10:00, tracked, not traded): $2,675 over 13 trades in 16 sessions since 2026-11-02, vs -$2,600 for the real Nasdaq rule (ahead). [Details](paper-trading/summary.md)
+- 🐍 **MAMBA (tracking, kept forever): $11,718** over 92 trades since 2026-09-20, 55 won. Last: 2026-11-23 nasdaq short $372. [Every trade](paper-trading/mamba.csv)
 
 Newest first. Times are New York time. Each sale shows contracts @ price, time. The 📈 link opens a chart of the trade; TV opens the same market on TradingView (add [the strategy](tradingview/breakout_strategy.pine) to see each trade marked).
 
@@ -210,9 +210,9 @@ At this pace: about $10 a month.
 
 | Market | Trades | Won | Profit factor | Total |
 |---|---|---|---|---|
-| Nasdaq | 45 | 27 (60%) | 1.40 | $5,216 |
+| Nasdaq | 46 | 28 (61%) | 1.43 | $5,589 |
 | Gold (night) | 46 | 27 (59%) | 2.05 | $6,129 |
-| **Total** | 91 | 54 (59%) | 1.60 | $11,346 |
+| **Total** | 92 | 55 (60%) | 1.62 | $11,718 |
 
 [Every MAMBA trade](paper-trading/mamba.csv) · Yahoo prices, can differ a little from TradingView
 
