@@ -4,6 +4,30 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ---
 
+### ❌ 2026-11-24 | Gold (MGC) | Long | -$680
+- **Session start (New York):** 2026-11-23 20:00
+- **Why:** two 5-minute candles closed beyond the key high (3669.0)
+- **Entry:** Bought **5 contracts** at **3674.1** at **20:35** (sell plan 1/2/2)
+- **Stop:** 3660.6
+
+| Time | What | Contracts | Price | Profit |
+|---|---|---|---|---|
+| 20:50 | Stop | 5 | 3660.6 | -$675 |
+
+- **Exit:** last contract out at **20:50**, average 3660.6
+- **Result:** -$675 before fees, **-$680 after fees**
+- **What could have gone better:**
+  - Price never reached Target 1: the best it did was +2.60 points, and Target 1 needed 6.
+  - The breakout failed and price kept going the other way, so the stop did its job and kept the loss small.
+  - The entry was 5.10 points past the key level, chasing a stretched move. Waiting for a pullback toward the level would have meant a better price and a smaller risk.
+  - Biggest move against you while in the trade: 14.00 points ($700 on paper). Best move for you: 2.60 points.
+
+![Chart of this trade](charts/2026-11-23-gold.svg)
+
+[Open Gold (MGC) on TradingView](https://www.tradingview.com/chart/?symbol=COMEX_MINI%3AMGC1%21&interval=5) (add tradingview/breakout_strategy.pine to see this trade marked)
+
+---
+
 ### ❌ 2026-11-23 | Gold (MGC) | Long | -$605
 - **Session start (New York):** 2026-11-22 20:00
 - **Why:** two 5-minute candles closed beyond the key high (3588.0)
@@ -807,8 +831,8 @@ Written automatically by paper_trader.py as each paper trade closes. Nothing her
 
 ## Total
 
-- **Total profit / loss after fees:** **-$921** over 33 trades
-- **Winners:** 16 (48%), **losers:** 17
-- **Before fees:** -$772, fees paid: $149
+- **Total profit / loss after fees:** **-$1,601** over 34 trades
+- **Winners:** 16 (47%), **losers:** 18
+- **Before fees:** -$1,447, fees paid: $154
 - **Nasdaq (MNQ):** -$3,302 over 14 trades
-- **Gold (MGC):** $2,381 over 19 trades
+- **Gold (MGC):** $1,701 over 20 trades
