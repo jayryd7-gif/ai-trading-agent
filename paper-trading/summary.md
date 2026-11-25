@@ -1,10 +1,10 @@
 # Paper trading summary
 
-*Updated 2026-11-24 23:51 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
+*Updated 2026-11-25 17:27 New York time. Paper results from real 5-minute candles with perfect fills at target and stop prices, after $1.00 per contract in fees. Real fills can be worse.*
 
 ## At a glance
 
-- Total after fees: **-$1,911** over 35 trades (54 sessions watched)
+- Total after fees: **-$1,911** over 35 trades (55 sessions watched)
 - Trading days with a trade: **26**, profitable: **10**, losing: 16
 - Win rate: 46%
 - Profit factor: 0.80
@@ -34,10 +34,11 @@ Rules from Tradeify's help center (Oct 2026): evaluation passes at $53,000; trai
 
 ## Opening range (tracked, not traded)
 
-Opening range (9:30-10:00, tracked, not traded): $3,090 over 14 trades in 17 sessions since 2026-11-02, vs -$2,600 for the real Nasdaq rule (ahead).
+Opening range (9:30-10:00, tracked, not traded): $3,090 over 14 trades in 18 sessions since 2026-11-02, vs -$2,600 for the real Nasdaq rule (ahead).
 
 | Day | Range | Trade | Entry | Stop | Out | Result |
 |---|---|---|---|---|---|---|
+| 2026-11-25 | 25027.5-25477.25 | no trade |   |  |  | $0 |
 | 2026-11-24 | 26192.0-26501.75 | short | 26108.0 10:45 | 26237.75 | 11:05 | $415 |
 | 2026-11-23 | 26450.25-27137.0 | no trade |   |  |  | $0 |
 | 2026-11-20 | 26116.75-26451.25 | short | 25995.75 10:20 | 26237.25 | 10:40 | $415 |
@@ -52,13 +53,12 @@ Opening range (9:30-10:00, tracked, not traded): $3,090 over 14 trades in 17 ses
 | 2026-11-09 | 27316.25-27797.5 | long | 27841.25 10:15 | 27749.0 | 10:50 | $655 |
 | 2026-11-06 | 27037.75-27425.0 | no trade |   |  |  | $0 |
 | 2026-11-05 | 27457.5-28228.25 | short | 27344.0 10:10 | 27508.75 | 10:20 | $655 |
-| 2026-11-04 | 28405.0-28868.5 | long | 28941.25 10:10 | 28837.75 | 10:20 | -$1,040 |
 
 ## Daily results
 
 | Trading day | Sessions | Result after fees |
 |---|---|---|
-| 2026-11-25 | gold short | -$310 |
+| 2026-11-25 | gold short, nasdaq skipped, risk too big for today's limits | -$310 |
 | 2026-11-24 | gold long, nasdaq skipped, risk too big for today's limits | -$680 |
 | 2026-11-23 | gold long, nasdaq skipped, risk too big for today's limits | -$605 |
 | 2026-11-20 | gold short, nasdaq long | $652 |

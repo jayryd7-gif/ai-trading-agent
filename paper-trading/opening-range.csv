@@ -16,3 +16,4 @@ trading_day,session_start,range_high,range_low,signal,direction,entry_time,entry
 2026-11-20,2026-11-20 09:30,26451.25,26116.75,yes,short,10:20,25995.75,26237.25,10:40,415.0,"10:25 sold 1 at Target 1 (25965.75, $60.0); 10:35 sold 2 at Target 2 (25935.75, $240.0); 10:35 moved stop to Target 1 (25965.75); 10:40 stop hit, sold 2 at 25965.75 ($120.0)"
 2026-11-23,2026-11-23 09:30,27137.0,26450.25,no,,,,,,0.0,No confirmed breakout of the opening range by 11:00.
 2026-11-24,2026-11-24 09:30,26501.75,26192.0,yes,short,10:45,26108.0,26237.75,11:05,415.0,"11:00 sold 1 at Target 1 (26078.0, $60.0); 11:00 sold 2 at Target 2 (26048.0, $240.0); 11:00 moved stop to Target 1 (26078.0); 11:05 stop hit, sold 2 at 26078.0 ($120.0)"
+2026-11-25,2026-11-25 09:30,25477.25,25027.5,no,,,,,,0.0,No confirmed breakout of the opening range by 11:00.
