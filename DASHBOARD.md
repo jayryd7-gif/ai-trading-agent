@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-25 15:27 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-25 16:09 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -22,7 +22,7 @@ Last updated 2026-11-25 15:27 New York time. Everything here is written by softw
 | 🔴 | Crypto research brief | Pumping coins, whales, government and adoption news | 7 days ago | daily about 5:30-6:30 AM New York time |
 | 🔴 | Stock research brief | Movers, AI, nuclear, minerals, earnings dates and estimates | 7 days ago | Mon, Wed, Fri about 6-7 AM New York time |
 | 🟢 | Paper trader | Paper trades every session with your rules and runs a practice prop challenge | 16 hours ago | after each session ends |
-| 🟢 | Scorer | Checks each lean against what price did | under an hour ago | after each session ends |
+| 🟢 | Scorer | Checks each lean against what price did | 1 hours ago | after each session ends |
 
 🟢 ran recently  🟡 a bit late  🔴 check it  ⚪ never ran
 
