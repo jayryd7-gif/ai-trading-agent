@@ -1,6 +1,6 @@
 # Agent dashboard
 
-Last updated 2026-11-25 23:04 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
+Last updated 2026-11-25 23:09 New York time. Everything here is written by software and AI agents. It can be wrong, so check anything you plan to act on.
 
 **[🪙 Open the Crypto Dashboard →](CRYPTO-DASHBOARD.md)** · **[𝕏 Open the X Brief Dashboard →](X-DASHBOARD.md)**
 
@@ -68,7 +68,7 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ## 👔 CEO check
 
-**❌ 5 broken rule(s)** ([read the full check](reports/ceo/latest.md))
+**❌ 6 broken rule(s)** ([read the full check](reports/ceo/latest.md))
 
 <details>
 <summary><b>What the CEO checked</b></summary>
@@ -77,7 +77,8 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 - ❌ Tradeify practice evaluation failed: reset on 2026-10-28: only $96 above the floor, too close for any trade.
 - ❌ Tradeify practice evaluation failed: reset on 2026-11-02: only $299 above the floor, too close for any trade.
-- ⚠️ Tradeify practice evaluation: $324 above the $2,000 trailing drawdown floor.
+- ❌ Tradeify practice evaluation failed: reset on 2026-11-26: only $324 above the floor, too close for any trade.
+- ✅ Tradeify practice evaluation: $1,430 above the $2,000 trailing drawdown floor.
 
 ##### Your trade journal
 
@@ -104,11 +105,11 @@ Newest first. Times are New York time. Each sale shows contracts @ price, time. 
 
 ##### Ready to run on its own?
 
-- ✅ 28 of 15 trading days on the paper record
-- ⏳ 2 rule problem(s) in the paper trader above
+- ✅ 29 of 15 trading days on the paper record
+- ⏳ 3 rule problem(s) in the paper trader above
 - ⏳ the Tradeify practice account never failed
 - ⏳ the Tradeify practice evaluation has not passed yet
-- ⏳ profit factor 0.80 (needs 1.3 or more), total $-1,911 over 35 trades
+- ⏳ profit factor 0.76 (needs 1.3 or more), total $-2,481 over 36 trades
 - ✅ worst trading day $-1,148 (needs $-1,250 or better)
 - ⏳ You: Tradeify confirms in writing that TradersPost automation is allowed on the Select 50K
 - ⏳ You: 2+ weeks of the live 50K alerts traded by hand with no rule broken
