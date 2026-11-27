@@ -73,6 +73,11 @@
    "date": "2026-11-25",
    "equity_usd": 6993.64,
    "start_usd": 6987.09
+  },
+  {
+   "date": "2026-11-26",
+   "equity_usd": 6993.64,
+   "start_usd": 6987.09
   }
  ],
  "months": {}
