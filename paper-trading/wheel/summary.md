@@ -1,13 +1,13 @@
 # Wheel paper account ($10K CAD)
 
-Updated 2026-11-26 21:22 New York. Started 2026-11-16.
+Updated 2026-11-27 21:07 New York. Started 2026-11-16.
 
 | | |
 |---|---|
-| Account value | **$9,860 CAD** ($6,889 USD) |
-| Up / down | **-140 CAD** (-1.4%) |
-| Closed trades | 0 wins, 0 losses |
-| Cash | $10,217 CAD, of which $6,011 CAD is set aside to cover the puts |
+| Account value | **$9,937 CAD** ($6,943 USD) |
+| Up / down | **-63 CAD** (-0.6%) |
+| Closed trades | 2 wins, 1 losses |
+| Cash | $10,239 CAD, of which $6,440 CAD is set aside to cover the puts |
 
 ![Account profit / loss](value.svg)
 
@@ -17,9 +17,9 @@ Updated 2026-11-26 21:22 New York. Started 2026-11-16.
 
 | Stock | Holding | Sold put on | Bought shares on | Got / paid | Option worth now | Stock now | Expiry | Up / down CAD | Up / down % |
 |---|---|---|---|---|---|---|---|---|---|
-| NU | 1 put $12 | 2026-11-16 | - | got $0.37 | $0.42 | $12.36 | 2026-12-18 | 🔴 -8 | -0.5% |
-| RIG | 1 put $5 | 2026-11-16 | - | got $0.18 | $0.23 | $5.03 | 2026-12-18 | 🔴 -8 | -1.1% |
-| RIVN | 1 put $11 | 2026-11-16 | - | got $0.44 | $0.54 | $11.71 | 2026-12-18 | 🔴 -15 | -0.9% |
-| SOFI | 1 put $14 | 2026-11-16 | - | got $0.55 | $1.31 | $13.07 | 2026-12-18 | 🔴 -110 | -5.5% |
+| AAL | 1 put $11 | 2026-11-27 | - | got $0.28 | $0.28 | $12.57 | 2027-01-15 | 🔴 -1 | -0.1% |
+| RIVN | 1 put $11 | 2026-11-27 | - | got $0.59 | $0.59 | $11.71 | 2027-01-15 | 🔴 -1 | -0.1% |
+| SOFI | 1 put $14 | 2026-11-16 | - | got $0.55 | $1.08 | $13.07 | 2026-12-18 | 🔴 -77 | -3.8% |
+| VALE | 1 put $9 | 2026-11-27 | - | got $0.16 | $0.16 | $9.81 | 2027-01-15 | 🔴 -1 | -0.1% |
 
 Prices from Yahoo Finance option chains. Paper only: no real orders. Rules: agents/wheel_rules.py (account "ours"). Every move: [journal.md](journal.md).
